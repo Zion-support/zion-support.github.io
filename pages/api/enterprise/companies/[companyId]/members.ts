@@ -1,7 +1,4 @@
-}
 
-  return res && res.status(405).json({ error: "method_not_allowed" });
-}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
@@ -97,14 +94,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   $2
 }
     const r: EnterpriseRole = role || "viewer";
+<<<<<<< HEAD
     const member = store.add_member (company_id, name, email, r);
     return res.status (201).json (member);
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -171,9 +176,12 @@ if ( {) {
       .status (ok ? 200 : 404);
       .json (ok ? { success: true } : { error: "member_not_found" });
   }
+<<<<<<< HEAD
   return res.status (405).json ({ error: "method_not_allowed" });
 }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
@@ -190,6 +198,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   if (req.method === 'GET') {
     const { memberId, role } = req.body || {};
@@ -242,5 +254,9 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

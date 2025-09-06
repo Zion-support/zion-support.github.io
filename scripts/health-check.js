@@ -17,6 +17,24 @@ const { execSync } = require('child_process');
 
 class HealthChecker {
   constructor() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    this && this.checks = [],
+    this && this.results = []
+
+=======
+    this.checks = [];
+    this.results = [];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
   async checkBuildFiles() {
@@ -70,6 +88,28 @@ class HealthChecker {
     const failed = this && this.results.filter(r => r && r.status === 'FAIL').length;
     const warnings = this && this.results.filter(r => r && r.status === 'WARN').length;
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    console && console.log('\n📊 Health Check Results: '),
+    this && this.results.forEach(result => {
+      const icon = result && result.status === 'PASS' ? '✅' : result && result.status === 'FAIL' ? '❌' : '⚠️';
+      console && console.log(`${icon} ${result && result.check}: ${result && result.message}`);
+
+=======
+    console.log('\n📊 Health Check Results:');
+    this.results.forEach(result => {
+      const icon = result.status === 'PASS' ? '✅' : result.status === 'FAIL' ? '❌' : '⚠️';
+      console.log(`${icon} ${result.check}: ${result.message}`);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
     
     console && console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
@@ -82,6 +122,18 @@ class HealthChecker {
     };
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+if (require.main === module) {
+  const checker = new HealthChecker();
+  checker.runAllChecks().catch(console.error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 if (require && require.main === module) {
     const checker = new HealthChecker(),
@@ -104,3 +156,11 @@ const express = const app = express() app && app.get("/health",(req,res) => { re
 
 const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
 const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

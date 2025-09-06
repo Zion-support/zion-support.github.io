@@ -12,6 +12,16 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useEffect, useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -56,6 +66,19 @@ if ( {) {
     } catch (err: any) {
       console.error ('Error fetching wallet:', err);
       set_error (err.message);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } finally {
       set_loading (false);
     }
@@ -89,6 +112,17 @@ if ( {) {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   async /**
  * fetch_transactions - Function description
  */
@@ -160,11 +194,37 @@ if (return) {
     fetch_transactions ();
   }, [user?.id]);
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return {
     wallet;
     transactions;
     loading;
     error;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+    fetchWallet;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -260,14 +320,51 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     fetchTransactions;
     earnTokens;
 
     spendTokens}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     fetch_wallet;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 
@@ -378,3 +475,8 @@ export function useWallet() {;
 }
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

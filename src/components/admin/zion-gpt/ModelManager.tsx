@@ -1,18 +1,9 @@
-// If activating, deactivate all other models with the same purpose;
-      // Check condition
-if ( {) {
-  $2
-}
-        await supabase;
-
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
 
 
       }
 
       // Update this model;
+
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -20,14 +11,7 @@ if ( {) {
       // Refresh the model list;
       fetch_models ();
 
-    } catch (error) {
-      logErrorToProduction ('Error toggling model active state:', { data: error });
-    }
-
-
         .order('createdAt', { ascending: false }),;
-
-
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
     try {;
@@ -51,9 +35,6 @@ if ( {) {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
-
-  },
-
 
   return (
     <Card className="w-full">;
@@ -121,27 +102,12 @@ if ( {) {
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
 
-                    {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
-                        <span className="ml-1">Check</span>;
-                      </Button>;
-                    ) : model && model.trainingStatus === 'succeeded' ? (;
-                      <Button
-
-
-                        variant={model.active ? "outline" : "default"}
-                        size="sm"
-                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
-
 
                       >
                         {model.active ? (
@@ -153,8 +119,7 @@ if ( {) {
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
-                      </Button>;
-                    ) : (;
+
                       <Button
                         variant="ghost"
                         size="sm"
@@ -177,9 +142,6 @@ if ( {) {
                       </Button>
                     )}
 
-                  </TableCell>;
-                </TableRow>;
-
               ))}
             </TableBody>;
           </Table>;
@@ -188,7 +150,6 @@ if ( {) {
     </Card>;
   );
 }
-
 
 }
 
@@ -280,4 +241,4 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
-}
+

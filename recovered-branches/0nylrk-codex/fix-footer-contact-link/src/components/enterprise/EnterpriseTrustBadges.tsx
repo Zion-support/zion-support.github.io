@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+export function EnterpriseTrustBadges() {;
+
+  return (
+    <section className="py-10 px-4 md: px-6 border-t border-b border-border">;
+      <div className="container mx-auto max-w-6xl">;
+        <div className="text-center mb-8">;
+          <h3 className="text-xl font-medium mb-2">;
+            Enterprise-Grade Security & Compliance;
+          </h3>;
+          <p className="text-muted-foreground">;
+            We maintain the highest standards of data protection and compliance;
+          </p>;
+=======
+import React from "react";
+import { Shield, Lock, Award, CheckCircle } from "lucide-react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -53,6 +81,16 @@ export function EnterpriseTrustBadges() {;
         <div className="text-center mb-8">;
           <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>;
           <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">;
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">;
@@ -75,6 +113,19 @@ export function EnterpriseTrustBadges() {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 import { Shield, Lock, Award, CheckCircle  } from './lucide-react';
 export /**
@@ -113,6 +164,14 @@ function EnterpriseTrustBadges() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -141,3 +200,8 @@ function EnterpriseTrustBadges() {
 }
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

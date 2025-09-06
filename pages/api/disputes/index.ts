@@ -6,13 +6,9 @@ import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
 
-
-  req: NextApiRequest
-  res: NextApiResponse
 ) {;
 
   const user = parseUserFromRequest(req);
-
 
   if (req && req.method === "GET") {
     const all = await readAllDisputes();
@@ -31,7 +27,6 @@ export default async function handler(
     return res.status(200).json({ disputes: filtered })
 
   }
-
 
   if (req && req.method === "POST") {
     const now = new Date().toISOString();
@@ -60,22 +55,8 @@ export default async function handler(
 
     }
     const id = generateCaseId();
-      id
-      projectId: String(projectId)
-      entityType
-      entityId
-      clientUserId: String(clientUserId)
-      talentUserId: String(talentUserId)
-      createdAt: now
-      updatedAt: now
-      status: "Open"
-      reason: reason as DisputeReason
-      reasonDetails
-      description
-      attachments: []
-      messages: []
-    };
 
+    };
 
     await createDispute(dispute);
     return res && res.status(201).json({ dispute });

@@ -1,10 +1,13 @@
 
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const templates = {
   lulu: {
     sizes: [
@@ -46,6 +49,9 @@ export default function handler(req, res) {
 }
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

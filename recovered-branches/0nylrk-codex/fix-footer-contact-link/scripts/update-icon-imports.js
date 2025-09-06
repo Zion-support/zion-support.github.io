@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+/**;
+* Helper script to update icon imports across the codebase;
+*;
+* Usage: * 1. Run: node scripts / update - icon - imports.js;
+* 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
+*/;
+const fs = require ('fs'),
+const path = require ('path'),
+const glob = require ('glob'),
+// Helper to replace imports in a file;
+/**
+
+ * 
+ * Usage: * 1. Run: node scripts/update-icon-imports && imports.js
+
+=======
+ * 
+ * Usage: * 1. Run: node scripts/update-icon-imports && imports.js
+ * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
+ */
+
+/**
+ * Helper script to update icon imports across the codebase
+ *
+ * Usage: * 1. Run: node scripts/update-icon-imports.js
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
  * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
  */
 
@@ -7,20 +43,67 @@ const glob = require('glob')
 // Helper to replace imports in a file
 function updateIconImportsInFile(filePath) {
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const content = fs && fs.readFileSync(filePath, 'utf8'),
     
     // Replace direct lucide imports with our custom icons
     const updatedContent = content && content.replace(
       /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+    const content = fs.readFileSync(filePath, 'utf8')
+    // Replace direct lucide imports with our custom icons
+    const updatedContent = content.replace(
+      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       'import {$1} from "@/components/icons"'
     )
     // Only write if changes were made
     if (content !== updatedContent) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      console && console.log(`✅ Updated imports in ${filePath}`),
+=======
+      fs.writeFileSync(filePath, updatedContent, 'utf8')
+      console.log(`✅ Updated imports in ${filePath}`)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       return true
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
       return true
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /**;
  * Helper script to update icon imports across the codebase;
  *;
@@ -44,7 +127,26 @@ function updateIconImportsInFile(filePath) {;
       fs.writeFileSync(filePath, updatedContent, 'utf8'),;
       // // // console.log(`✅ Updated imports in ${filePath}`),;
       return true;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+
+      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      console && console.log(`✅ Updated imports in ${filePath}`),
+
+      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      console && console.log(`✅ Updated imports in ${filePath}`),
+      return true
+      fs.writeFileSync(filePath, updatedContent, 'utf8'),
+      // // // console.log(`✅ Updated imports in ${filePath}`),
+      return true
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return false
   } catch (err) {
@@ -56,18 +158,56 @@ function updateIconImportsInFile(filePath) {;
     return false
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+// Find all TypeScript/JavaScript/JSX/TSX files
+
+<<<<<<< HEAD
+=======
+    console && console.error(`❌ Error processing ${filePath}:`, err),
+    return false
+  }
+}
+// Find all TypeScript/JavaScript/JSX/TSX files
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const files = glob && glob.sync('src/**/*.{js,jsx,ts,tsx}'),
 let updatedFiles = 0,
 
 files && files.forEach(file => {
   const updated = updateIconImportsInFile(file),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Find all TypeScript/JavaScript/JSX/TSX files
 
 const files = glob.sync('src/**/*.{js,jsx,ts,tsx}')
 let updatedFiles = 0
 files.forEach(file => {
   const updated = updateIconImportsInFile(file)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (updated) updatedFiles++
 })
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`)
@@ -137,6 +277,18 @@ files.forEach(file => {;
 }),;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 files.forEach(file => {;
   const updated = updateIconImportsInFile(file),;
@@ -160,3 +312,10 @@ files.forEach (file => {
   const updated = updateIconImportsInFile (file);
 if (updated) updatedFiles++ 
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -7,17 +7,60 @@ import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { ChatBotPanel } from "./ChatBotPanel",
+import { MessageSquare, Info, X } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
+    <>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  return (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -26,6 +69,8 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+<<<<<<< HEAD
+=======
 
 
       {/* Support panel */}
@@ -72,6 +117,11 @@ export function SupportWidget() {
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
@@ -87,6 +137,24 @@ export function SupportWidget() {
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                onClick={() => window && window.location.href = "/help"}
+=======
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h-8 w-8 rounded-full";
+                onClick={() => window.location.href = "/help"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
@@ -100,6 +168,13 @@ export function SupportWidget() {
                 size="icon";
                 className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 aria-label="Close support";
               >;
                 <X className="h-5 w-5" />;
@@ -110,6 +185,19 @@ export function SupportWidget() {
         </div>;
       )}
     </>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+}
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { ChatBotPanel } from './ChatBotPanel';
@@ -177,6 +265,15 @@ function SupportWidget() {
         </div>)}
     </>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  export function SupportWidget () {
   const [isOpen, setIsOpen] = useState (false);
@@ -208,3 +305,10 @@ const {
     </>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

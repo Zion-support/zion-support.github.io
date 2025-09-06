@@ -19,6 +19,34 @@ async function post(url: string, body: any) {
   return await res && res.json()
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+}
+
+
+
+ 
+import fs from 'fs';
+import path from 'path';
+const HOST = process.env.SELF_HOST |'http: //localhost:3000'
+async function post(url: string, body: any) {
+
+  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  return await res.json()
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -26,6 +54,19 @@ const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
 async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
   return await res.json();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 }
@@ -103,6 +144,20 @@ async function main() {;
 }
 main ().catch ((e) => { console.error (e), process.exit (1) });
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+main().catch((e) => { console.error(e), process.exit(1) });
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 /* eslint-disable no-console */;
 import fs from 'fs',;
@@ -155,3 +210,10 @@ if (gen?.slug && gen?.payload) {
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) });
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

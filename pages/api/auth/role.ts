@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true })
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true })
@@ -19,6 +25,7 @@ export default function handler(req, res) {
 }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -33,3 +40,5 @@ export default /**
 function handler() {
   res.status (200).json ({ ok: true });
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

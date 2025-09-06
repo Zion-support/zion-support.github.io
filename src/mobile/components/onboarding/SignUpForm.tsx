@@ -10,8 +10,6 @@ import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function SignUpForm() {
-
 
 ;
 import { use_router } from 'next / router';
@@ -66,8 +64,7 @@ function SignUpForm() {
     try {;
       setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {;
-        const result = await signUp(formData.email, formData.password, {;
-          name: formData.name}),;
+
         if (result?.error) {;
           throw new Error(result.error as any), // Cast to any if type is AuthError;
         }
@@ -82,10 +79,7 @@ function SignUpForm() {
           setShowVerificationMessage(true);
         } else {;
           // Only navigate if email verification is not required;
-          router.push("/mobile");
-        }
-      } else {;
-        const { error } = await login(formData.email, formData.password),;
+
         if (error) {;
           throw new Error(error);
         }
@@ -101,23 +95,17 @@ function SignUpForm() {
       setIsLoading(false)
     }
   };
+
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
-      setError(err.message);
+
     }
 
   },
-  
-
-
 
   return (
-
-
-      
-
 
       <div className="space-y-2">
         <Button
@@ -134,10 +122,8 @@ function SignUpForm() {
           Continue with Google
         </Button>
 
-
         <Button 
           variant="outline" 
-
 
           className="w-full py-6 relative"
         >
@@ -204,10 +190,6 @@ function SignUpForm() {
         </Button>;
       </div>;
 
-
-      
-
-
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -216,10 +198,7 @@ function SignUpForm() {
         </Alert>
       )}
 
-
       )}
-
-      
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
@@ -234,12 +213,10 @@ function SignUpForm() {
               id="name"
               name="name"
 
-
               value={formData.name}
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
-
 
               placeholder="Enter your full name"
             />
@@ -248,10 +225,6 @@ function SignUpForm() {
             )}
           </div>
         )}
-
-
-
-
 
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
@@ -263,12 +236,10 @@ function SignUpForm() {
             name="email"
             type="email"
 
-
             value={formData.email}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.email}
-
 
             placeholder="Enter your email"
           />;
@@ -286,12 +257,10 @@ function SignUpForm() {
             name="password"
             type="password"
 
-
             value={formData.password}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
-
 
             placeholder="Create a password"
           />;
@@ -301,10 +270,6 @@ function SignUpForm() {
           )}
 
         </div>;
-
-
-
-        
 
         <Button
           type="submit"
@@ -318,10 +283,6 @@ function SignUpForm() {
           ) : (;
             signupMode ? "Create Account" : "Sign In";
           )}
-
-
-      
-
 
       <p className="text-center text-sm">
         {signupMode
@@ -434,8 +395,6 @@ function SignUpForm() {
       </p>;
     </div>;
   );
-
-
 
   error;
 }= await login (form_data.email, form_data.password);

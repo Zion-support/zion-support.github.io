@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useSearchParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {ITServicePricingTable} from "@/components/services/ITServicePricingTable";
+import {GlobalServiceSection} from "@/components/GlobalServiceSection";
+import {QuoteFormSection} from "@/components/QuoteFormSection";
+import {TrustedBySection} from "@/components/TrustedBySection";
+import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
+import {toast} from "@/hooks/use-toast";
+import {PageHero} from "@/components/services/PageSections/PageHero";
+import {CountryTabs} from "@/components/services/PageSections/CountryTabs";
+import {ServiceDetailsSection} from "@/components/services/PageSections/ServiceDetailsSection";
+import {ServiceProcessSteps} from "@/components/services/PageSections/ServiceProcessSteps";
+import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
+import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
+export default function ITOnsiteServicesPage() {;
+  const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  // Check for success parameter in URL
+  const success = searchParams.get("success");
+import { useState, useEffect } from "react",
+import { useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",
+import { GlobalServiceSection } from "@/components/GlobalServiceSection",
+import { QuoteFormSection } from "@/components/QuoteFormSection",
+import { TrustedBySection } from "@/components/TrustedBySection",
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
+import { toast } from "@/hooks/use-toast",
+import { PageHero } from "@/components/services/PageSections/PageHero",
+import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
+import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
+import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
+=======
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -14,6 +51,7 @@ import { PageHero } from "@/components/services/PageSections/PageHero";
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {
@@ -35,6 +73,8 @@ export default function ITOnsiteServicesPage() {
           "Your IT onsite service request has been received. Our team will contact you shortly.",
       });
     }
+<<<<<<< HEAD
+=======
   }, [success]);
 
   // Popular countries for the featured cards
@@ -47,6 +87,14 @@ export default function ITOnsiteServicesPage() {
     "Singapore",
   ];
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter((country) =>
@@ -54,6 +102,14 @@ export default function ITOnsiteServicesPage() {
     )
     .sort((a, b) => {
       // First, sort by popular status
+<<<<<<< HEAD
+  const handleCountrySelect = (country: CountryPricing) => {
+    setSelectedCountry(country)
+    // Scroll to the service details section
+    setTimeout(() => {
+      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
+=======
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
 
@@ -102,6 +158,42 @@ export default function ITOnsiteServicesPage() {;
     if (success === "true") {;
       toast({;
 
+<<<<<<< HEAD
+=======
+  // Popular countries for the featured cards;
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+
+  // Filter countries based on search query;
+  const filteredCountries = onsiteServicePricing;
+    .filter(country => ;
+      country && country.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    );
+    .sort((a, b) => {;
+      // First, sort by popular status;
+      const aIsPopular = popularCountries && popularCountries.includes(a && a.country);
+      const bIsPopular = popularCountries && popularCountries.includes(b && b.country);
+
+      if (aIsPopular && !bIsPopular) return -1;
+      if (!aIsPopular && bIsPopular) return 1;
+
+      // Then sort alphabetically;
+      return a && a.country.localeCompare(b && b.country);
+    });
+
+  const handleCountrySelect = (country: CountryPricing) => {;
+    setSelectedCountry(country),;
+
+    // Scroll to the service details section;
+    setTimeout(() => {;
+      document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
@@ -112,16 +204,31 @@ export default function ITOnsiteServicesPage() {;
           {/* Country Selection Tabs */}
           <div className="mb-12">
             <CountryTabs
+<<<<<<< HEAD
+            <CountryTabs 
+          {/* Hero Section with Features */}
+            <CountryTabs
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
+<<<<<<< HEAD
+=======
             />
           </div>
 
             />
           </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Service Details Section */}
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
@@ -298,6 +405,16 @@ if (return 1) {
       <TrustedBySection />;
       <QuoteFormSection />;
     </AppLayout>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 
@@ -340,3 +457,8 @@ if (return 1) {
 ;
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

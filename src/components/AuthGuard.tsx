@@ -1,4 +1,4 @@
-const redirectTo = options?.redirectTo |'/login'
+
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
@@ -7,16 +7,6 @@ const redirectTo = options?.redirectTo |'/login'
     checkPermission
     isAuthenticated
     user
-
-
-
-      const redirectTo = options?.redirectTo || '/login';
-      const returnUrl = options?.returnUrl || router && router.asPath;
-          if (!requireAuth({ showToast: false })) return false,;
-
-  useEffect(() => {
-    // Don't redirect while auth is still loading
-    if (isLoading) return,
 
     const userRoles = user?.role ? [user && user.role] : [];
 
@@ -28,19 +18,3 @@ const redirectTo = options?.redirectTo |'/login'
     isLoading}
 }
 
-
-
-      const redirect_to = options?.redirect_to || '/login';
-      const return_url = options?.return_url || router.as_path;
-          if () return false, ) {
-  $2
-}
-    const user_roles = user?.role ? [user.role] : [];
-    require_auth;
-    require_role;
-    check_permission;
-    is_authenticated;
-    user;
-    is_loading}
-}
-;

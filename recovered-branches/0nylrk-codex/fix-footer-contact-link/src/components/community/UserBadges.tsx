@@ -43,6 +43,17 @@ const icon_map = {
 };
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (
+    <div className="flex flex-wrap gap-2">
+      {badges.map((badge) => {
+        // Get the correct icon component based on the badge's icon name
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!badges?.length) return null;
 
 },
@@ -55,6 +66,18 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
         
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy;
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
+        
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -78,6 +101,8 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
             </Tooltip>
           </TooltipProvider>
         )
+<<<<<<< HEAD
+=======
 
 
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",;
@@ -126,6 +151,22 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
+export default UserBadges;
+<<<<<<< HEAD
+=======
+
+=======
+=======
+export default UserBadges;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   MessageSquare;
 }
 ;
@@ -201,3 +242,8 @@ export default UserBadges;
 
 
 export default UserBadges;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -4,11 +4,19 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   const company = store && store.getCompanyById(companyId);
   if (!company) return res && res.status(404).json({ error: "company_not_found" });
   return res && res.status(200).json(company && company.activity);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -28,6 +36,7 @@ if ( {) {
 }
   return res.status (200).json (company.activity);
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -61,6 +70,9 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -82,3 +94,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

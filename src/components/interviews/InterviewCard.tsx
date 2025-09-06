@@ -33,4 +33,4 @@ function InterviewCard() {
         return <Badge>{interview.status}</Badge>;
 }
   );
-}
+

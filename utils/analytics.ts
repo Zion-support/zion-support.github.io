@@ -31,6 +31,20 @@ function track_event() {
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
       keepalive: true as any});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 export async function trackEvent(payload: TrackEventPayload) {;
   try {
@@ -41,6 +55,12 @@ export async function trackEvent(payload: TrackEventPayload) {;
       keepalive: true as any});
   } catch (e) {;
     // swallow;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -53,9 +73,29 @@ export async function trackEvent(payload: TrackEventPayload) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   }
 }
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

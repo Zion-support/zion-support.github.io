@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -65,6 +78,7 @@ import { use_translation  } from './react - i18next';
 import { Button  } from '@/components / ui / button';
 import { Globe  } from './lucide-react';
 import {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -101,6 +115,25 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
             </div>
           </DropdownMenuItem>
         ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+}
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      </DropdownMenuContent>;
+    </DropdownMenu>;
+=======
+      </DropdownMenuContent>
+    </DropdownMenu>
+      </DropdownMenuContent>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
 }
@@ -108,3 +141,10 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
   );
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

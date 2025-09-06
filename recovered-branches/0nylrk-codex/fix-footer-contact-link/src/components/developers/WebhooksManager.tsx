@@ -18,6 +18,16 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function WebhooksManager() {
 
   const {;
@@ -49,6 +59,22 @@ export function WebhooksManager() {
   useEffect(() => {;
     fetchWebhooks();
   }, []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
@@ -77,6 +103,33 @@ export function WebhooksManager() {
     toggleWebhook,
     deleteWebhook,
     testWebhook,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    clearTestResult
+<<<<<<< HEAD
+
+=======
+  } = useWebhooks();
+  const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
+  const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
+  const [showTestResult, setShowTestResult] = useState(false);
+  // Create webhook form state
+  const [webhookName, setWebhookName] = useState("");
+  const [webhookUrl, setWebhookUrl] = useState("");
+  const [webhookSecret, setWebhookSecret] = useState("");
+
+  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
+  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } = useWebhooks(),
   
   const [showCreateDialog, setShowCreateDialog] = useState(false),
@@ -90,6 +143,19 @@ export function WebhooksManager() {
   const [webhookSecret, setWebhookSecret] = useState(""),
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   // Load webhooks on mount
   useEffect(() => {
@@ -97,21 +163,64 @@ export function WebhooksManager() {
   }, []),
 
   const handleCreateWebhook = async () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
+    
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
 
     if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+    );
+    setShowCreateDialog(false);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     resetWebhookForm()
   }
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ),
     
     setShowCreateDialog(false),
@@ -128,11 +237,55 @@ export function WebhooksManager() {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const resetWebhookForm = () => {
     setWebhookName("");
     setWebhookUrl("");
     setWebhookSecret("");
     setSelectedEvents([])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  },
+
+
+
+<<<<<<< HEAD
+=======
+  const handleDeleteWebhook = async (webhookId: string) => {
+    await deleteWebhook(webhookId)
+    setShowDeleteConfirm(null)
+  }
+  },
+
+  const handleTestWebhook = async (webhookId: string) => {
+    await testWebhook(webhookId, testEventType),
+    setShowTestResult(true)
+  }
+  },
+
+  const resetWebhookForm = () => {
+    setWebhookName(""),
+    setWebhookUrl(""),
+    setWebhookSecret(""),
+    setSelectedEvents([])
+  }
+  },
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Event type options
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' }
@@ -146,6 +299,27 @@ export function WebhooksManager() {
         ? prev.filter(e => e !== event)
         : [...prev, event]
     )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  },
+
+
+
+<<<<<<< HEAD
+=======
+  }
+  },
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -200,6 +374,38 @@ export function WebhooksManager() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  <Input
+                    id="webhook-secret"
+                    type="password"
+                    value={webhookSecret}
+                    onChange={(e) => setWebhookSecret(e.target.value)}
+                    placeholder="••••••••••••••••"
+                    className="bg-zinc-800 border-zinc-700"
+                  />
+                  <p className="text-xs text-zinc-500">
+                    Used to verify webhook payload signatures. Keep it secret and secure.
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <Label>Event Types</Label>
+                  <div className="grid gap-2 pt-2">
+                    {eventOptions.map((event) => (
+                      <div key={event.value} className="flex items-center space-x-2">
+                        <Checkbox
+                          id={event.value}
+                        <Checkbox 
+                          id={event.value} 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -242,6 +448,16 @@ export function WebhooksManager() {;
   useEffect(() => {;
     fetchWebhooks();
   }, []),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const handleCreateWebhook = async () => {;
     if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
@@ -354,6 +570,19 @@ export function WebhooksManager() {;
                 <div className="space-y-2">;
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Input
                     id="webhook-secret"
                     type="password"
@@ -382,6 +611,16 @@ export function WebhooksManager() {;
                     Used to verify webhook payload signatures. Keep it secret and secure.;
                   </p>;
                 </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="space-y-2">;
                   <Label>Event Types</Label>;
                   <div className="grid gap-2 pt-2">;
@@ -389,6 +628,12 @@ export function WebhooksManager() {;
                       <div key={event.value} className="flex items-center space-x-2">;
                         <Checkbox;
                           id={event.value} ;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {eventOptions && eventOptions.map((event) => (;
                       <div key={event && event.value} className="flex items-center space-x-2">;
                         <Checkbox
@@ -690,6 +935,89 @@ function WebhooksManager() {
                       />;
                       <span className="ml - 2 text - sm">;
                         {webhook.is_active ? "Active" : "Inactive"}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        {/* Webhooks List */}
+        <div className="space-y-4">
+          {loading ? (
+            <div className="text-center py-8 text-zinc-500">Loading webhooks...</div>
+          ) : webhooks.length === 0 ? (
+            <div className="text-center py-8 text-zinc-500">
+              <Webhook className="mx-auto mb-2 opacity-30" size={24} />
+              <p>No webhooks found.</p>
+              <p className="text-sm mt-1">Create one to receive event notifications.</p>
+            </div>
+          ) : (
+            webhooks.map((webhook) => (
+              <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-medium">{webhook.name}</h3>
+                    <div className="flex items-center text-sm text-zinc-400 mt-1">
+                      <Globe size={14} className="mr-1" />
+                      <span className="max-w-md truncate">{webhook.url}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="flex items-center mr-2">
+                      <Switch
+                        checked={webhook.is_active}
+                        onCheckedChange={() => handleToggleStatus(webhook.id, webhook.is_active)}
+                      />
+                      <span className="ml-2 text-sm">
+                        {webhook.is_active ? "Active" : "Inactive"}
+                      </span>
+                    </div>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="ghost" size="icon">
+                          <MoreVertical size={16} />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
+                        <DropdownMenuItem
+                          onClick={() => setShowTestDialog(webhook.id)}
+                          className="cursor-pointer"
+                        >
+                          <PlayCircle size={14} className="mr-2" /> Test
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => setShowDeleteConfirm(webhook.id)}
+                          className="cursor-pointer text-red-500"
+                        >
+                          <X size={14} className="mr-2" /> Delete
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {webhook.event_types.map((event) => (
+                    <Badge
+                      key={event}
+                      variant="secondary"
+                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
+                    >
+                      {event}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
+                  {webhook.last_triggered_at && (
+                    <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
+=======
+                        </DropdownMenuItem>;
+                      </DropdownMenuContent>;
+                    </DropdownMenu>;
+                  </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   )}
                 </div>
               </div>
@@ -769,6 +1097,44 @@ function WebhooksManager() {
                           <MoreVertical size={16} />;
                         </Button>;
                       </DropdownMenuTrigger>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                          onClick={() => setShowDeleteConfirm(webhook && webhook.id)}
+                          className="cursor-pointer text-red-500";
+                        >;
+                          <X size={14} className="mr-2" /> Delete;
+=======
+                      <DropdownMenuContent align="end" className="bg - zinc - 900 border - zinc - 800 text - white">;
+                        <DropdownMenuItem;
+                          on_click={() => setShowTestDialog (webhook.id)}
+                          className="cursor - pointer";
+                        >;
+                          <PlayCircle size={14} className="mr - 2" /> Test;
+                        </DropdownMenuItem>;
+                        <DropdownMenuItem;
+                          on_click={() => setShowDeleteConfirm (webhook.id)}
+                          className="cursor - pointer text - red - 500";
+                        >;
+                          <X size={14} className="mr - 2" /> Delete;
+
+=======
+                      <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">;
+                        <DropdownMenuItem;
+                          onClick={() => setShowTestDialog(webhook.id)}
+                          className="cursor-pointer";
+                        >;
+                          <PlayCircle size={14} className="mr-2" /> Test;
+                        </DropdownMenuItem>;
+                        <DropdownMenuItem;
+                          onClick={() => setShowDeleteConfirm(webhook.id)}
+                          className="cursor-pointer text-red-500";
+                        >;
+                          <X size={14} className="mr-2" /> Delete;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
                     </DropdownMenu>;
@@ -832,6 +1198,91 @@ function WebhooksManager() {
                   </p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+              clearTestResult();
+            }
+          }
+        }}
+      >
+        <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
+          <DialogHeader>
+            <DialogTitle>Test Webhook</DialogTitle>
+            <DialogDescription className="text-zinc-400">
+              Send a test webhook to your endpoint.
+            </DialogDescription>
+          </DialogHeader>
+          {!showTestResult ? (
+            <>
+              <div className="space-y-4 py-4">
+                <div className="space-y-2">
+                  <Label htmlFor="test-event-type">Event Type</Label>
+                  <Select
+                    value={testEventType}
+                    onValueChange={(value) => setTestEventType(value as WebhookEventType)}
+                  >
+                    <SelectTrigger className="bg-zinc-800 border-zinc-700">
+                      <SelectValue placeholder="Select an event type" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-zinc-900 border-zinc-800">
+                      {eventOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <p className="text-xs text-zinc-500">
+                    The event type will determine the structure of the test payload.
+                  </p>
+                </div>
+              </div>
+              <DialogFooter>
+                <Button variant="outline" onClick={() => setShowTestDialog(null)}>
+                  Cancel
+                </Button>
+                <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
+                  Send Test
+                </Button>
+              </DialogFooter>
+            </>
+          ) : (
+            <>
+              <div className="space-y-4 py-4">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <Label>Response Status</Label>
+                    <Badge
+                      className={
+                        testResult && testResult.status >= 200 && testResult.status < 300
+                          ? "bg-green-700"
+                          : "bg-red-700"
+                      }
+                    >
+                      {testResult?.status} {testResult?.statusText}
+                    </Badge>
+                  </div>
+                  <div className="space-y-2 mt-4">
+                    <Label>Response Body</Label>
+                    <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
+                      <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
+                        {testResult?.responseBody |"No response body"}
+                      </pre>
+                    </ScrollArea>
+                  </div>
+                </div>
+              </div>
+              <DialogFooter>
+                <Button variant="default" onClick={() => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   setShowTestDialog(null),
                   setShowTestResult(false),
                   clearTestResult()
@@ -839,12 +1290,40 @@ function WebhooksManager() {
                   Close
                 </Button>
                 <Button variant="outline" onClick={() => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                  setShowTestResult(false),
+
+=======
+                  setShowTestResult(false),
+
+                  setShowTestResult(false);
+
+                  setShowTestResult(false),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   clearTestResult()
                 }}>
                   Test Another Event
                 </Button>
               </DialogFooter>
             </>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </Badge>;
                   </div>;
 
@@ -853,6 +1332,46 @@ function WebhooksManager() {
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body"}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+              <DialogFooter>;
+                <Button variant="outline" on_click={() => setShowTestDialog (null)}>;
+                  Cancel;
+                </Button>;
+                <Button on_click={() => showTestDialog && handleTestWebhook (showTestDialog)}>;
+                  Send Test;
+                </Button>;
+              </DialogFooter>;
+            </>) : (
+            <>;
+              <div className="space - y-4 py - 4">;
+                <div className="space - y-2">;
+                  <div className="flex items - center justify - between">;
+                    <Label > Response Status</Label>;
+                    <Badge;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                      className={
+                        test_result && test_result.status >= 200 && test_result.status < 300;
+                          ? "bg - green - 700";
+                          : "bg - red - 700";
+                      }
+                    >;
+<<<<<<< HEAD
+                      {testResult?.status} {testResult?.statusText}
+=======
+                      {test_result?.status} {test_result?.status_text}
+                    </Badge>;
+                  </div>;
+                  <div className="space - y-2 mt - 4">;
+                    <Label > Response Body</Label>;
+                    <ScrollArea className="h-[200px] rounded border border - zinc - 800 bg - black p - 4">;
+                      <pre className="text - xs font - mono text - zinc - 300 whitespace - pre - wrap break - all">;
+                        {test_result?.response_body || "No response body"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               ;
               <DialogFooter>;
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>;
@@ -879,17 +1398,82 @@ function WebhooksManager() {
                       }
                     >;
                       {testResult?.status} {testResult?.statusText}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </Badge>;
+                  </div>;
+                  ;
+                  <div className="space-y-2 mt-4">;
+                    <Label>Response Body</Label>;
+                    <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">;
+                      <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
+                        {testResult?.responseBody || "No response body"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </pre>;
                     </ScrollArea>;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
                   clearTestResult();
                 }}>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+              ;
+              <DialogFooter>;
+                <Button variant="default" onClick={() => {;
+                  setShowTestDialog(null),;
+                  setShowTestResult(false),;
+                  clearTestResult(),;
+                }}>;
+                  Test Another Event;
+                </Button>;
+              <DialogFooter>;
+                <Button variant="default" onClick={() => {;
+                  setShowTestDialog(null),;
+                  setShowTestResult(false);
+                  clearTestResult();
+                }}>;
+                  Close;
+                </Button>;
+                <Button variant="outline" onClick={() => {;
+                  setShowTestResult(false);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                  clearTestResult();
+                }}>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
             </>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           )}
         </DialogContent>
       </Dialog>
@@ -912,6 +1496,21 @@ function WebhooksManager() {
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                  clearTestResult();
+=======
+                  clearTestResult();
+                <Button variant="outline" onClick={() => {;
+                  setShowTestResult(false),;
+                  clearTestResult(),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 }}>;
                   Test Another Event;
                 </Button>;
@@ -926,6 +1525,43 @@ function WebhooksManager() {
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+              <DialogFooter>;
+                <Button variant="default" on_click={() => {
+                  setShowTestDialog (null);
+                  setShowTestResult (false);
+                  clearTestResult ();
+                }}>;
+                  Close;
+                </Button>;
+                <Button variant="outline" on_click={() => {
+                  setShowTestResult (false);
+                  clearTestResult ();
+                }}>;
+                  Test Another Event;
+                </Button>;
+              </DialogFooter>;
+            </>)}
+        </DialogContent>;
+      </Dialog>;
+      {/* Delete Webhook Confirmation Dialog */}
+      <AlertDialog;
+        open={showDeleteConfirm !== null}
+        onOpenChange={(open) => !open && setShowDeleteConfirm (null)}
+      >;
+        <AlertDialogContent className="bg - zinc - 900 border - zinc - 800 text - white">;
+          <AlertDialogHeader>;
+            <AlertDialogTitle > Delete Webhook?</AlertDialogTitle>;
+            <AlertDialogDescription className="text - zinc - 400">;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Close;
                 </Button>;
                 <Button variant="outline" onClick={() => {;
@@ -935,6 +1571,26 @@ function WebhooksManager() {
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+              className="bg-red-600 hover: bg-red-700";
+=======
+            <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
+              Cancel;
+            </AlertDialogCancel>;
+            <AlertDialogAction;
+              on_click={() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm)}
+              className="bg - red - 600 hover: bg - red - 700";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
@@ -952,12 +1608,35 @@ function WebhooksManager() {
   )
 }
               className="bg-red-600 hover: bg-red-700";
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             >;
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </Card>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </Card>;
   ); export function WebhooksManager () {
   const {
@@ -1103,3 +1782,10 @@ clearTestResult ();
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

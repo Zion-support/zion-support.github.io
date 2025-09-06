@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
@@ -22,8 +26,11 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -56,5 +63,8 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string) || ''
@@ -14,8 +18,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       height: 10
       includetext: false})
     res.setHeader('Content-Typeimage/png')
+
     res.status(200).send(png)
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to render barcode' })
   }
-};
+

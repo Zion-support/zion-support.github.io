@@ -1,4 +1,21 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function MessageTab(): any ({;
+  message,;
+  setMessage,;
+  proposalLink,;
+  setProposalLink,;
+}: MessageTabProps) {;
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className="space-y-4">;
@@ -9,6 +26,26 @@
         <Textarea
           id="message"
           value={message}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          onChange={(e) => setMessage(e && e.target.value)}
+=======
+import React from "react";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+export interface MessageTabProps {;
+  message: string;
+  setMessage: (message: string) => void;
+  proposalLink: string;
+  setProposalLink: (link: string) => void;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 import { Textarea } from "@/components/ui/textarea",
 import { Input } from "@/components/ui/input";
@@ -44,6 +81,44 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
         <Textarea
           id="message"
           value={message}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div>
+        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
+=======
+<<<<<<< HEAD
+          onChange={(e) => setMessage(e.target.value)}
+          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white"
+          placeholder="Write a message to the job poster..."
+        />
+      </div>
+
+          onChange={(e) => setMessage(e && e.target.value)}
+
+import React from 'react',;
+import { Textarea } from "@/components/ui/textarea",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+;
+export interface MessageTabProps {;
+  message:string,;
+  setMessage:(message:string) => void,;
+  proposalLink:string,;
+  setProposalLink:(link:string) => void;
+}
+;
+export function MessageTab({ message, setMessage, proposalLink, setProposalLink } MessageTabProps) {;
+  return (;
+    <div className="space-y-4">;
+      <div>;
+        <Label htmlFor="message" className="text-white">Application Message</Label>;
+        <Textarea;
+          id="message";
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white";
           placeholder="Write a message to the job poster...";
         />;
@@ -58,10 +133,35 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Input
           id="proposalLink"
           type="url"
           value={proposalLink}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+          onChange={(e) => setProposalLink(e && e.target.value)}
+          className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
+          placeholder="https: //...";
+        />;
+      </div>;
+    </div>;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 import { Textarea  } from '@/components / ui / textarea';
 import { Input  } from '@/components / ui / input';
@@ -91,6 +191,31 @@ function MessageTab() {
         />;
       </div>;
       <div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <Label html_for="proposal_link" className="text - white">;
+          Link to Proposal / Portfolio (Optional);
+        </Label>;
+        <Input;
+          id="proposal_link";
+          type="url";
+          value={proposal_link}
+          on_change={(e) => setProposalLink (e.target.value)}
+          className="bg - zion - blue - dark / 20 border - zion - purple / 30 text - white";
+          placeholder="https: //...";
+        />;
+      </div>;
+    </div>);
+<<<<<<< HEAD
+
+}
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"
           placeholder="https: //..."
@@ -99,6 +224,12 @@ function MessageTab() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 import React from 'react',;
 import { Textarea } from "@/components/ui/textarea",;
@@ -139,6 +270,15 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
   );
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     </div>;
   );
@@ -146,3 +286,10 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   salary_range: z && z.string().optional(),
   description: z && z.string().min(10, {
@@ -15,6 +25,22 @@
   status: z && z.string().optional(),
   external_apply_link: z && z.string().url({
     message: "Please enter a valid URL."}).optional()});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export type JobSchemaType = z && z.infer<typeof jobSchema>;
+
+=======
+=======
+
+export type JobSchemaType = z && z.infer<typeof jobSchema>;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { z } from './zod';
 export const job_schema = z.object ({
   title: z.string ().min (3, {
@@ -44,10 +70,38 @@ export const job_schema = z.object ({
 ;
 export type JobSchemaType = z.infer < typeof job_schema>;
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 import {z} from "zod";
 import { z } from "zod",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {z} from "zod";
 export const jobSchema = z.object({
   title: z.string().min(3, {;
@@ -85,6 +139,21 @@ export const jobSchema = z.object({
   external_apply_link: z.string().url({
     message: "Please enter a valid URL."}).optional()}),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export type JobSchemaType = z.infer<typeof jobSchema>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export type JobSchemaType = z.infer<typeof jobSchema>,
 import { z } from "zod",;
 export const jobSchema = z.object({;
@@ -113,3 +182,15 @@ export const jobSchema = z.object({;
   external_apply_link: z.string().url({;
     message: "Please enter a valid URL."}).optional()});
 export type JobSchemaType = z.infer<typeof jobSchema>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type JobSchemaType = z.infer<typeof jobSchema>;
+export type JobSchemaType = z.infer<typeof jobSchema>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

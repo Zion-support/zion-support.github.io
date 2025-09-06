@@ -1,13 +1,21 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
       <select
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={category}
+<<<<<<< HEAD
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
   category: string
   level: string
   isFree: string
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
@@ -19,13 +27,20 @@
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type Props = {
   category: string;
   level: string;
@@ -46,10 +61,12 @@ export default function FilterBar({
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
-
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -67,7 +84,10 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   );
 
@@ -116,6 +136,7 @@ function FilterBar() {
 
 }
 
+<<<<<<< HEAD
 
 
 }
@@ -154,3 +175,5 @@ function FilterBar() {
   );
 }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

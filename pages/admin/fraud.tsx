@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface FraudItem {
@@ -62,6 +63,50 @@ export default function FraudAdminPage() {
     else alert(json.error || 'Action failed');
   };
 
+=======
+
+
+
+
+interface FraudItem {
+
+
+export default function FraudAdminPage() {
+  const [items, setItems] = useState<FraudItem[]>([])
+  const [adminToken, setAdminToken] = useState<string>('')
+  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+  useEffect(() => {
+
+    const saved = localStorage.getItem('admin-token') || '';
+    setAdminToken(saved)
+  }, []);
+
+
+    const saved = localStorage.getItem('admin-token') |''
+    setAdminToken(saved)
+  }, [])
+  const fetchItems = async () => {
+    setLoading(true)
+    setError(null)
+    try {
+    } finally {
+
+      set_loading (false);
+
+    }
+    fetchItems()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminToken])
+  const onSaveToken = () => {
+    localStorage.setItem('admin-token', adminToken)
+    fetchItems()
+  }
+  const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
+    const res = await fetch('/api/fraud/admin/action', {
+      method: 'POST'
+      headers: {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -69,16 +114,35 @@ export default function FraudAdminPage() {
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
+<<<<<<< HEAD
           value={adminToken}
           onChange={(e) => setAdminToken(e.target.value)}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
 
+<<<<<<< HEAD
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
 
+=======
+
+
+
+      {loading && <div>Loading...</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      {error && <div className="text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -95,19 +159,28 @@ export default function FraudAdminPage() {
           <tbody>
             {items.map((it) => (
               <tr key={it.id} className="border-t">
+<<<<<<< HEAD
                 <td className="p-2 border">{it.userId || '—'}</td>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
+<<<<<<< HEAD
                     ))}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </div>
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
+<<<<<<< HEAD
                     <div className="font-semibold">{it.gpt?.label || '—'}</div>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
@@ -126,4 +199,12 @@ export default function FraudAdminPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,4 +1,16 @@
 "export function GradientHeading({ children,className,level = "h2",id }) {" const Tag = level; return (); <Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",className" )}" > ";""
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+:src.disabled/components/GradientHeading.jsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 </Tag>"
 </Tag>"
 ursor/add-new-services-and-deploy-updates-0462

@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -9,10 +13,38 @@ import {Card, CardContent, CardFooter} from "@/components/ui/card";
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from "react";
+import {Star} from "lucide-react";
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -20,6 +52,16 @@ const testimonials = [
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
     rating: 5
     avatar: "/placeholder.svg"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 import { Star } from './lucide-react';
 import { Card, CardContent, CardFooter } from '@/components / ui / card';
@@ -30,11 +72,35 @@ const testimonials = [;
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
     rating: 5,
     avatar: "/placeholder.svg";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   {
     name: "Sarah Williams"
     role: "Tech Recruiter"
     text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+    rating: 5
+    avatar: "/placeholder.svg"
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   {
     name: "Sarah Williams",
@@ -43,6 +109,17 @@ const testimonials = [;
     rating: 5,
     avatar: "/placeholder.svg"
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     name: "Michael Chen"
     role: "Full Stack Developer"
@@ -50,6 +127,27 @@ const testimonials = [;
     rating: 4
     avatar: "/placeholder.svg"
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+],
+
+
+
+<<<<<<< HEAD
+=======
+];
+],
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -66,6 +164,21 @@ export const AppTestimonials: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
@@ -86,6 +199,19 @@ export const AppTestimonials: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -96,11 +222,95 @@ const testimonials = [;
     role: "AI Developer",;
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",;
     rating: 5,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    avatar: "/placeholder && placeholder.svg";
+  };
+  {;
+    name: "Sarah Williams",;
+    role: "Tech Recruiter",;
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
+    rating: 5,;
+    avatar: "/placeholder && placeholder.svg";
+  };
+=======
+    avatar: "/placeholder.svg";
+  },;
+  {;
+    name: "Sarah Williams",;
+    role: "Tech Recruiter",;
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",;
+    rating: 5,;
+    avatar: "/placeholder.svg";
+  },;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {;
     name: "Michael Chen",;
     role: "Full Stack Developer",;
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",;
     rating: 4,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    avatar: "/placeholder && placeholder.svg";
+  }
+];
+
+export const AppTestimonials: React.FC = () => {;
+  return (
+=======
+
+import React from "react",;
+import { Star } from "lucide-react",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+;
+const testimonials = [;
+  {;
+    name:"Alex Johnson",;
+    role:"AI Developer",;
+    text:"The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",;
+    rating:5,;
+    avatar:"/placeholder.svg";
+  },;
+  {;
+    name:"Sarah Williams",;
+    role:"Tech Recruiter",;
+    text:"As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",;
+    rating:5,;
+    avatar:"/placeholder.svg";
+  },;
+  {;
+    name:"Michael Chen",;
+    role:"Full Stack Developer",;
+    text:"I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",;
+    rating:4,;
+    avatar:"/placeholder.svg";
+  }
+],;
+;
+export const AppTestimonials:React.FC = () => {;
+  return (;
+    avatar: "/placeholder.svg";
+  }
+],;
+export const AppTestimonials: React.FC = () => {;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -109,6 +319,24 @@ const testimonials = [;
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          {testimonials && testimonials.map((testimonial, index) => (;
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">;
+              <CardContent className="pt-6">;
+                <div className="flex mb-4">;
+                  {Array && Array.from({ length: 5 }).map((_, i) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial && testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
@@ -120,11 +348,58 @@ const testimonials = [;
               <CardFooter className="border-t border-zion-purple/20 pt-4">;
                 <div className="flex items-center">;
                   <div className="h-10 w-10 rounded-full overflow-hidden mr-4">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <img src={testimonial && testimonial.avatar} alt={testimonial && testimonial.name} className="h-full w-full object-cover" />;
+                  </div>;
+                  <div>;
+                    <p className="font-semibold text-white">{testimonial && testimonial.name}</p>;
+                    <p className="text-sm text-gray-400">{testimonial && testimonial.role}</p>;
+=======
+                    <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" />;
+                  </div>;
+                  <div>;
+                    <p className="font-semibold text-white">{testimonial.name}</p>;
+                    <p className="text-sm text-gray-400">{testimonial.role}</p>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </div>;
                 </div>;
               </CardFooter>;
             </Card>;
           ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        </div>;
+      </div>;
+    </section>;
+  );
+};
+
+=======
+=======
+        </div>;
+      </div>;
+    </section>;
+  );
+};
+
+  );
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     rating: 5,
     avatar: "/placeholder.svg";
   }
@@ -208,3 +483,10 @@ export const AppTestimonials: React.FC = () => {
     </section>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

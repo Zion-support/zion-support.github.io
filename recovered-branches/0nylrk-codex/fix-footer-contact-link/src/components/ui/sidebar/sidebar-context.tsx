@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import * as React from "react"
+import type { CSSProperties } from "react"
+<<<<<<< HEAD
+
+=======
+import {TooltipProvider} from "@/components/ui/tooltip"
+import {useIsMobile} from "@/hooks/use-mobile"
+import {cn} from "@/lib/utils"
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
@@ -14,6 +35,26 @@ export function useSidebar(): SidebarContextType {
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider.")
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import * as React from './react';
+import type { CSSProperties } from './react';
+import { TooltipProvider } from '@/components / ui / tooltip';
+import { useIsMobile } from '@/hooks / use - mobile';
+import { cn } from '@/lib / utils';
+=======
+import * as React from "react";
+import type { CSSProperties } from "react";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
 ;
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
@@ -25,6 +66,12 @@ const SIDEBAR_KEYBOARD_SHORTCUT = "b";
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   default_open?: boolean;
   open?: boolean;
@@ -57,6 +104,18 @@ export interface SidebarProviderProps extends React && React.ComponentProps<"div
 >(;
   (;
     {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      defaultOpen = true;
+<<<<<<< HEAD
+=======
+=======
+  return context as SidebarContextType
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return context as SidebarContextType
 }
@@ -68,10 +127,36 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
 }
 
       defaultOpen = true;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   SidebarProviderProps
 >(
   (
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      defaultOpen = true;
+      open: openProp
+      onOpenChange: setOpenProp
+      className;
+      style;
+      children;
+      ...props
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       defaultOpen = true,
       open: openProp,
       onOpenChange: setOpenProp,
@@ -79,6 +164,21 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
       style,
       children,
       ...props
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    },
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ref
   ) => {
     const isMobile = useIsMobile()
@@ -88,6 +188,37 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
     const [_open, _setOpen] = React.useState(defaultOpen)
     const open = openProp ?? _open
     const setOpen = React.useCallback(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export const SidebarProvider = React.forward_ref<;
+  HTMLDivElement;
+  SidebarProviderProps;
+>(
+  (
+    {
+      default_open = true;
+      open: open_prop,
+      onOpenChange: setOpenProp,
+      class_name;
+      style;
+      children;
+      ...props;
+    }
+    ref) => {
+    const is_mobile = useIsMobile ();
+    const [open_mobile, setOpenMobile] = React.useState (false);
+    // This is the internal state of the sidebar.;
+    // We use open_prop and setOpenProp for control from outside the component.;
+    const [_open, _setOpen] = React.useState (default_open);
+    const open = open_prop ?? _open;
+    const set_open = React.useCallback (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       (value: boolean | ((value: boolean) => boolean)) => {
         const open_state = typeof value === "function" ? value (open) : value;
         // Check condition
@@ -103,6 +234,13 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       (value: boolean | ((value: boolean) => boolean)) => {
         const openState = typeof value === "function" ? value(open) : value
         if (setOpenProp) {
@@ -114,6 +252,13 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -134,6 +279,24 @@ if ( {) {
         ) {
           event.preventDefault()
           toggleSidebar()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+=======
+        }
+      }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -155,6 +318,22 @@ if ( {) {
         ) {;
           event.preventDefault();
           toggleSidebar();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+      }
+
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+        }
+      }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         }
       }
@@ -162,6 +341,11 @@ if ( {) {
         }
       }
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
@@ -169,6 +353,19 @@ if ( {) {
     // This makes it easier to style the sidebar with Tailwind classes.
     const state = open ? "expanded" : "collapsed" as SidebarState
     const contextValue = React.useMemo(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${open_state}, path=/, max - age=${SIDEBAR_COOKIE_MAX_AGE}`;
       }
@@ -296,6 +493,16 @@ if (
 );
 SidebarProvider.display_name = "SidebarProvider";
 export { SidebarContext }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -453,3 +660,10 @@ export { SidebarContext };
 ;
 export { SidebarContext }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

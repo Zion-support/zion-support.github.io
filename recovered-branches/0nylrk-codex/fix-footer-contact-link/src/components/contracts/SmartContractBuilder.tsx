@@ -20,6 +20,58 @@ import {TemplateManager} from "./templates/TemplateManager";
 import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from "@/types/smart-contracts";
 import {useSmartContracts} from "@/hooks/useSmartContracts";
 import {toast} from "sonner";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { useState } from "react",
+import { Dialog, DialogContent } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+import { TemplateManager } from "./templates/TemplateManager",
+import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
+interface SmartContractBuilderProps {
+
+  isOpen: boolean
+  onClose: () => void
+  talent: TalentProfile
+  clientName: string
+  onContractGenerated?: (contractContent: string) => void
+
+  onDeploy?: (contractContent: string) => void
+import { useState } from "react",
+import { Dialog, DialogContent } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+import { TemplateManager } from "./templates/TemplateManager",
+import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
+interface SmartContractBuilderProps {
+
+  isOpen: boolean
+  onClose: () => void
+  talent: TalentProfile
+  clientName: string
+  onContractGenerated?: (contractContent: string) => void
+
+  onDeploy?: (contractContent: string) => void
+}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SmartContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -31,12 +83,70 @@ interface SmartContractBuilderProps {;
 
 export function SmartContractBuilder(): any ({;
 
+<<<<<<< HEAD
 export function SmartContractBuilder({;
+=======
+<<<<<<< HEAD
+export function SmartContractBuilder({;
+=======
+<<<<<<< HEAD
+=======
+import { useState } from "react",
+import { Dialog, DialogContent } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+import { TemplateManager } from "./templates/TemplateManager",
+import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
+import { useSmartContracts } from "@/hooks/useSmartContracts";
+import { toast } from "sonner";
+import { useSmartContracts } from "@/hooks/useSmartContracts",
+import { toast } from "sonner",
+interface SmartContractBuilderProps {
+
+  isOpen: boolean
+  onClose: () => void
+  talent: TalentProfile
+  clientName: string
+  onContractGenerated?: (contractContent: string) => void
+
+  onDeploy?: (contractContent: string) => void
+}
+
+export function SmartContractBuilder({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export function SmartContractBuilder({;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isOpen;
   onClose;
   talent;
   clientName;
   onContractGenerated;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export function SmartContractBuilder({
+  isOpen,
+  onClose,
+  talent,
+  clientName,
+  onContractGenerated,
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onDeploy;
 }: SmartContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
@@ -53,12 +163,52 @@ export function SmartContractBuilder({;
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+
+
+=======
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+
+
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
 
     network: 'ethereum'
     useEscrow: true
 
     deployToChain: false
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+  });
+  const [deployStatus, setDeployStatus] = useState<string>('');
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
+  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts();
+
+  const handleLoadTemplate = (templateData: ContractFormValues) => {
+    setFormValues(templateData)
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }),
   const [deployStatus, setDeployStatus] = useState<string>(''),
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
@@ -69,10 +219,31 @@ export function SmartContractBuilder({;
     setFormValues(templateData)
   },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Convert ContractFormValues to contract content string
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   );
@@ -95,6 +266,16 @@ export function SmartContractBuilder({;
   const handleContractGenerated = async (formValues: ContractFormValues) => {;
     if (!formValues) return,;
     try {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
       setGeneratedContract(generatedContractText);
       setActiveTab("preview");
@@ -159,16 +340,48 @@ if ( {) {
 }
         onContractGenerated (generatedContractText);
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName),
       setGeneratedContract(generatedContractText),
       setActiveTab("preview"),
       if (onContractGenerated) {
         onContractGenerated(generatedContractText)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     } catch (error) {
       console.error("Error generating contract:", error),
       toast.error("Failed to generate smart contract")
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  }
+  const handleDeployContract = async () => {
+    if (!generatedContract) return;
+    try {
+      setDeployStatus('deploying');
+      const contractInfo = await deploySmartContract(generatedContract, deployOptions);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
   const handleDeployContract = async () => {
@@ -178,10 +391,31 @@ if ( {) {
       setDeployStatus('deploying'),
       const contractInfo = await deploySmartContract(generatedContract, deployOptions),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (contractInfo) {
         setDeploymentInfo(contractInfo),
         setDeployStatus('deployed'),
         toast.success("Smart contract deployed successfully!")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   const handleDeployContract = async () => {
     // Check condition
@@ -210,6 +444,44 @@ if ( {) {
 
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      if (contractInfo) {
+        setDeploymentInfo(contractInfo),
+        setDeployStatus('deployed'),
+        toast.success("Smart contract deployed successfully!")
+      } else {
+        setDeployStatus('error'),
+        toast.error("Failed to deploy smart contract")
+      }
+    } catch (error) {
+      console.error("Error deploying contract:", error);
+      setDeployStatus('error');
+      toast.error("Failed to deploy smart contract")
+    }
+  }
+  // Modified to match the expected interface
+  const handleFormSubmit = (contract: string) => {
+    // This should be a function that takes a string (contract content)
+    // Since we need to adapt the interface, we'll implement the simplest solution that works
+    if (onContractGenerated) {
+      onContractGenerated(contract)
+    }
+    setGeneratedContract(contract);
+    setActiveTab("preview")
+  }
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
@@ -283,6 +555,23 @@ export function SmartContractBuilder({;
     }
     setGeneratedContract(contract);
     setActiveTab("preview")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  },
+
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -354,11 +643,85 @@ export function SmartContractBuilder({;
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            <div className="flex gap-2">;
+              <Button
+                variant="outline" 
+                size="sm"
+=======
+            ;
+            <div className="flex gap-2">;
+              <Button ;
+                variant="outline" ;
+                size="sm";
+            <div className="flex gap-2">;
+              <Button;
+                variant="outline";
+                size="sm";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+  // Modified to match the expected interface;
+  const handleFormSubmit = (contract: string) =>: any {
+    // This should be a function that takes a string (contract content);
+    // Since we need to adapt the interface, we'll implement the simplest solution that works;
+    // Check condition
+if ( {) {
+  $2
+}
+      onContractGenerated (contract);
+    }
+    setGeneratedContract (contract);
+    setActiveTab ("preview");
+  }
+;
+  return (
+    <Dialog open={is_open} onOpenChange={on_close}>;
+      <DialogContent className="max - w-4xl max - h-[90vh] overflow - y-auto">;
+        <Tabs value={active_tab} onValueChange={setActiveTab} className="mt - 4">;
+          <div className="flex justify - between items - center">;
+            <TabsList className="grid grid - cols - 2">;
+              <TabsTrigger value="form">Contract Details</TabsTrigger>;
+              <TabsTrigger value="preview" disabled={!generated_contract}>Preview</TabsTrigger>;
+            </TabsList>;
+            <div className="flex gap - 2">;
+              <Button;
+                variant="outline";
+                size="sm";
+                on_click={() => setTemplateManagerOpen (true)}
+                className="flex gap - 1";
+              >;
+                <Save className="h - 4 w - 4" />;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Templates;
               </Button>;
             </div>;
@@ -374,11 +737,85 @@ export function SmartContractBuilder({;
               onContractGenerated={handleFormSubmit}
               deploy_options={deploy_options}
               onDeployOptionsChange={setDeployOptions}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            />;
+          </TabsContent>;
+
+          <TabsContent value="preview" className="pt-4">;
+            {generatedContract && (;
+              <div>;
+
+                <ContractPreview
+=======
+
+                <ContractPreview 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
                   deployStatus={deployStatus}
                   deploymentInfo={deploymentInfo}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                />;
+
+                {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;
+                  <div className="mt-6 flex justify-center">;
+
+=======
+          <TabsContent value="form" className="pt-4">;
+            <ContractForm;
+              talent={talent}
+              clientName={clientName}
+              initialValues={formValues}
+              onFormValuesChange={setFormValues}
+              onContractGenerated={handleFormSubmit}
+              deployOptions={deployOptions}
+              onDeployOptionsChange={setDeployOptions}
+            />
+          </TabsContent>
+          <TabsContent value="preview" className="pt-4">
+            {generatedContract && (
+              <div>
+
+            />;
+          </TabsContent>;
+                <ContractPreview
+
+                <ContractPreview 
+
+                  generatedContract={generatedContract}
+                  talent={talent}
+          ;
+          <TabsContent value="preview" className="pt-4">;
+            {generatedContract && (;
+              <div>;
+                <ContractPreview ;
+                  generatedContract={generatedContract}                  talent={talent}
+                  onClose={onClose}
+                  deployStatus={deployStatus}
+                  deploymentInfo={deploymentInfo}
+                />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Button
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
@@ -389,11 +826,90 @@ export function SmartContractBuilder({;
                 )}
               </div>;
             )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+          </TabsContent>;
+        </Tabs>;
+
+
+=======
+                ;
+                {!deploymentInfo && deployOptions.deployToChain && (;
+                  <div className="mt-6 flex justify-center">;
+                    <Button ;
+                      onClick={handleDeployContract}
+                      disabled={deployStatus === 'deploying'}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700";
+                    >;
+                      {deployStatus === 'deploying' ? 'Deploying...' :'Deploy to Blockchain'}
+                    </Button>;
+                  </div>;                )}
+              </div>;
+            )}
+          </TabsContent>;
+        </Tabs>;
+        ;
+        <TemplateManager;
+                <ContractPreview
+                <ContractPreview 
+                  generatedContract={generatedContract}
+                  talent={talent}
+                  onClose={onClose}
+                  deployStatus={deployStatus}
+                  deploymentInfo={deploymentInfo}
+                />
+                {!deploymentInfo && deployOptions.deployToChain && (
+                  <div className="mt-6 flex justify-center">
+                    <Button
+                      onClick={handleDeployContract}
+                      disabled={deployStatus === 'deploying'}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                    >
+                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                    </Button>
+                  </div>
+                )}
+              </div>
+            )}
+          </TabsContent>
+        </Tabs>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              </div>;
+            )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+
+=======
+        />;
+      </DialogContent>;
+    </Dialog>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -464,3 +980,77 @@ try {
 setActiveTab ("preview");
   
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+
+};
+const handleDeployContract = async () => {
+  if (!generatedContract) return;
+try {
+  setDeployStatus ('deploying');
+const contractInfo = await deploySmartContract (generatedContract, deployOptions);
+if (contractInfo) {
+  
+}
+};
+//This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {
+  setGeneratedContract (contract);
+setActiveTab ("preview");
+};
+  talent 
+}clientName= {
+  clientName 
+}initialValues= {
+  formValues 
+}onFormValuesChange= {
+  setFormValues 
+}onContractGenerated= {
+  handleFormSubmit 
+}deployOptions= {
+  deployOptions 
+}onDeployOptionsChange= {
+  setDeployOptions 
+}/> </TabsContent> <div> <ContractPreview generatedContract= {
+  generatedContract 
+}talent= {
+  talent 
+}onClose= {
+  onClose 
+}deployStatus= {
+  deployStatus 
+}deploymentInfo= {
+  deploymentInfo 
+}/> > {
+  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' 
+}</Button> </div>) 
+}</div>) 
+}</TabsContent> </Tabs> <TemplateManager isOpen= {
+  templateManagerOpen 
+}onClose= {
+  () => setTemplateManagerOpen (false) 
+}onSelectTemplate= {
+  handleLoadTemplate 
+}currentValues= {
+  formValues 
+}/> </DialogContent> </Dialog>) 
+}
+        />
+      </DialogContent>
+    </Dialog>
+  )
+}
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

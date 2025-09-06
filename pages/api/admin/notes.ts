@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { randomUUID } from 'crypto',;
 type Note = {
   id: string
@@ -9,6 +9,7 @@ type Note = {
   createdAt: number
 }
 
+<<<<<<< HEAD
 
 
   if (req.method === 'GET') {
@@ -36,3 +37,5 @@ type Note = {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 };
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

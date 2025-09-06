@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function DocsPage() {
 	return (
 		<Layout>
@@ -12,6 +17,7 @@ export default function DocsPage() {
 		</Layout>
 	)
 
+<<<<<<< HEAD
 }
 
 
@@ -34,6 +40,8 @@ import React from 'react';
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import React from 'react',;
@@ -42,7 +50,6 @@ import Layout from '../components/layout/Layout',;
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
-
 
 export default function DocsPage() {
 	return (
@@ -57,9 +64,17 @@ export default function DocsPage() {
 			</section>
 		</Layout>
 	)
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

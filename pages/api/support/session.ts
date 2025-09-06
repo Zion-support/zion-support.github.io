@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { readJson, writeJson } from '../../../utils/fsDb',;
 import { logSupportEventToOperator } from '../../../utils/operator',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,5 +18,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   await logSupportEventToOperator({ type: eventType, sessionId, payload })
 
-  return res.status(200).json({ ok: true })
-};

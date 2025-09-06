@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -10,21 +14,24 @@ export default async function handler(
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 
-
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
       "placeholder-key";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
         leaders: [
 
-
       });
 
           { code: 'aihub', profile_completions: 9 }
           { code: 'modelmasters', profile_completions: 7 }
+
           { code: 'promptpro', profile_completions: 5 }
         ]})
 
@@ -41,6 +48,10 @@ export default async function handler(
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
     startOfMonth.set_date (1);
@@ -69,6 +80,7 @@ if (continue) {
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
 
+<<<<<<< HEAD
 
 
 
@@ -101,6 +113,8 @@ export default async function handler(
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -158,6 +172,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
   } catch (error) {
@@ -193,10 +211,18 @@ export default async function handler(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
@@ -223,6 +249,10 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);
@@ -232,6 +262,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   }
 }
   } catch (error) {
@@ -254,3 +285,6 @@ export default async function handler(req, res) {
 }
   }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

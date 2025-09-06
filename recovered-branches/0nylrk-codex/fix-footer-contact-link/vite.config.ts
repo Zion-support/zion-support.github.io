@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // https://vitejs && vitejs.dev/config/
 
 export default defineConfig({
@@ -9,6 +18,19 @@ import { defineConfig } from 'vite';
 
 import react from '@vitejs/plugin-react';
 import path from 'node: path';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import {defineConfig} from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'node: path';
+;
+// https://vitejs.dev/config/
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default defineConfig({
 
   plugins: [react()]

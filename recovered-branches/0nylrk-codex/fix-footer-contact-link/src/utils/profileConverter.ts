@@ -1,11 +1,59 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",
+
+=======
+=======
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ProfileData } from "@/types/profile";
 import { TalentProfile } from "@/types/talent";
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {ProfileData} from "@/types/profile";
 import {TalentProfile} from "@/types/talent";
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import {ProfileData} from "@/types/profile";
+import {TalentProfile} from "@/types/talent";
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
@@ -31,6 +79,8 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     bio: profile.bio || '',
     summary: profile.bio?.substring (0, 150);
     profile_picture_url: profile.avatar_url,
+<<<<<<< HEAD
+=======
 
 import { ProfileData } from "@/types/profile",;
 import { TalentProfile } from "@/types/talent",;
@@ -53,6 +103,11 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     bio: profile.bio || '',
     summary: profile.bio?.substring (0, 150);
     profile_picture_url: profile.avatar_url,
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     years_experience: 3, // Default value;
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
@@ -61,6 +116,15 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     hourly_rate: profile.hourly_rate || 0;
     rating_count: profile.review_count || 0,
     average_rating: profile.rating || 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 }
@@ -121,3 +185,8 @@ average rating: profile.rating || 0
 ;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

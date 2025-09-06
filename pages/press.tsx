@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -14,10 +18,13 @@ return (
   </>);
 }
 
+<<<<<<< HEAD
 
 
 import React from 'react';
 import SEO from '../components/SEO';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function PressPage() {
 	return (
 		<>
@@ -29,9 +36,17 @@ export default function PressPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

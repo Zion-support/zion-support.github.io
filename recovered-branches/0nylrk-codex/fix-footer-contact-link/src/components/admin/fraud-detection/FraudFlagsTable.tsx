@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -5,6 +18,12 @@ import {FraudFlag} from "@/types/fraud";
 import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
@@ -14,6 +33,16 @@ import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
 import { ActionButtons } from "./ActionButtons",
 import { EmptyFraudState } from "./EmptyFraudState",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -24,6 +53,21 @@ interface FraudFlagsTableProps {
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags;
   isLoading;
@@ -38,6 +82,16 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   isLoading,
   hasFilters,
   resetFilters,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onAction
 }) => {
   if (isLoading) {
@@ -47,6 +101,28 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
     )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import React from "react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {FraudFlag} from "@/types/fraud";
+import {SeverityDisplay} from "./SeverityDisplay";
+import {ActionButtons} from "./ActionButtons";
+import {EmptyFraudState} from "./EmptyFraudState";
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
@@ -54,6 +130,19 @@ import { FraudFlag } from "@/types/fraud",;
 import { SeverityDisplay } from "./SeverityDisplay",;
 import { ActionButtons } from "./ActionButtons",;
 import { EmptyFraudState } from "./EmptyFraudState",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface FraudFlagsTableProps {;
   flags: FraudFlag[],;
   isLoading: boolean,;
@@ -66,14 +155,54 @@ interface FraudFlagsTableProps {;
   onAction;
 }) => {;
   if (isLoading) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return (
+=======
+;
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
+  flags,;
+  isLoading,;
+  hasFilters,;
+  resetFilters;
+  onAction;
+}) => {;
+  if (isLoading) {;
+    return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex justify-center items-center h-64">;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
+<<<<<<< HEAD
+=======
 
 
   return (
@@ -108,6 +237,7 @@ interface FraudFlagsTableProps {;
             </TableCell>
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
             <TableCell className="max-w-xs truncate">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   return (
@@ -115,6 +245,35 @@ interface FraudFlagsTableProps {;
 
               {flag.gpt_explanation || (
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  if (flags && flags.length === 0) {;
+    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />;
+  }
+  return (
+    return (;
+      <div className="flex justify-center items-center h-64">;
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
+      </div>;
+    ),;
+  }
+;
+  if (flags.length === 0) {;
+    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />,;
+  }
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Table>;
       <TableHeader>;
         <TableRow>;
@@ -268,6 +427,18 @@ if ( {) {
             </TableCell>;
           </TableRow>))}
       </TableBody>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </Table>);
+}
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;
 },; interface FraudFlagsTableProps {
   flags: FraudFlag[];
@@ -340,3 +511,10 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
     </Table>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

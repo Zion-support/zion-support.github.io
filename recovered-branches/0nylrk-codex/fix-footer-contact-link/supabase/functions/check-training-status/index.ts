@@ -1,8 +1,19 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
@@ -11,6 +22,8 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
+=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -25,15 +38,49 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  if (req && req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+    if (!openAIApiKey) {
+      throw new Error("OpenAI API key is not set in environment variables")
+    }
+
+=======
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
     const { modelId, jobId } = await req && req.json();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
 
@@ -110,6 +157,17 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`
     }
 
@@ -159,12 +217,37 @@ serve(async (req) => {;
     // Otherwise, look up the job ID from our database first;
     let finetuneJobId = jobId,;
     if (!finetuneJobId) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // This would require a database lookup in the real implementation;
       // For now, we'll simulate a response;
       // In a real implementation, you would:;
       // 1. Query your database to find the job ID associated with this model ID;
       // 2. Then use that job ID to check status with OpenAI;
       // Mock response for demonstration (in real code, fetch from DB);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      finetuneJobId = `ft - job-${model_id}-${Date.now ()}`;
+    }
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`;
@@ -175,6 +258,28 @@ serve(async (req) => {;
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
       headers: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        "Authorization": `Bearer ${openAIApiKey}`,
+        "Content-Type": "application/json"}}),
+
+
+<<<<<<< HEAD
+=======
+        "Authorization": `Bearer ${openAIApiKey}`;
+        "Content-Type": "application/json"}});
+        "Authorization": `Bearer ${openAIApiKey}`,
+        "Content-Type": "application/json"}}),
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
       if (response.status === 404) {
@@ -182,7 +287,24 @@ serve(async (req) => {;
           JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
         )
+<<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     const data = await response.json();
     // Map OpenAI status to our internal status names
@@ -246,6 +368,32 @@ if ( {) {
       case "succeeded": status = "succeeded",
         break,
       case "failed":
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        status = "failed",
+        error = data.error?.message || "Unknown error occurred during training",
+        break,
+
+=======
+        status = "failed",
+        error = data.error?.message || "Unknown error occurred during training",
+        break,
+        status = "failed";
+        error = data.error?.message |"Unknown error occurred during training";
+        break;
+        status = "failed",
+        error = data.error?.message || "Unknown error occurred during training",
+        break,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "cancelled":
         status = "failed",
         error = "Training job was cancelled",
@@ -255,6 +403,15 @@ if ( {) {
         break,
       default:
         status = "queued"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
 
@@ -316,6 +473,28 @@ if ( {) {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+});
+=======
+<<<<<<< HEAD
+
+  } catch (error) {;
+    console.error("Error in check-training-status function:", error),;
+    return new Response(;
+      JSON.stringify({ error: error.message }),;
+      {;
+        status: 500,;
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+    );
+
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 });
 ;
@@ -435,3 +614,8 @@ serve(async (req) => {;
 });
   }
 });
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -2,12 +2,45 @@
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path);
 };
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+<<<<<<< HEAD
+=======
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -41,18 +74,73 @@ export const isProtectedRoute = (path: string): boolean => {
   // If route doesn't exist in our sitemap
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  if (route && route.requiredAuth && !isAuthenticated) return false;
+  
+
+=======
+  if (route && route.requiredAuth && !isAuthenticated) return false;
+  
+
+  if (route && route.requiredAuth && !isAuthenticated) return false;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // If route requires specific roles and user doesn't have one
   if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
     if (!userType) return false;
     return route && route.requiredRoles.includes(userType as any)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  if (route.requiredAuth && !isAuthenticated) return false;
+  if (route.requiredAuth && !isAuthenticated) return false,
+  
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   return true
 }
 // Get breadcrumb items for a path
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path && path.split('/').filter(Boolean);
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
   const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
@@ -63,10 +151,47 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     currentPath += `/${segment}`;
     const route = findRouteByPath(currentPath);
     if (route) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      breadcrumbs && breadcrumbs.push({
+        label: route && route.label,
+
+=======
+      breadcrumbs && breadcrumbs.push({
+        label: route && route.label,
+      breadcrumbs.push({
+        label: route.label
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         path: currentPath
       })
     } else {
       // For dynamic routes that might not be in the static sitemap
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      breadcrumbs && breadcrumbs.push({
+        label: segment && segment.charAt(0).toUpperCase() + segment && segment.slice(1).replace(/-/g, ' ');
+        path: currentPath
+      })
+    }
+  }
+  return breadcrumbs
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 }
@@ -160,7 +285,36 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+}
+;
+<<<<<<< HEAD
+=======
+}return breadcrumbs;
+};
+      breadcrumbs.push({
+        label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+        path: currentPath
+      })
+    }
+  }
+  return breadcrumbs
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 };
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -8,7 +8,6 @@ export function EducationItem({
   onDelete
 }: EducationItemProps) {
 
-
 import { format } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react';
 
@@ -17,5 +16,5 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Education } from '@/types/resume';
 import { EducationItemProps } from './types';
 
-
   return (
+

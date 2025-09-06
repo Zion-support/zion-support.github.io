@@ -1,8 +1,41 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Button} from "@/components/ui/button";
 import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 
@@ -12,6 +45,11 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { 
   getTalentRateSuggestion;
   PricingSuggestion;
@@ -19,11 +57,125 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {Button} from "@/components/ui/button";
+import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
+interface TalentRateRecommenderProps {;
+  skills: string[],;
+  yearsExperience: number,;
+  location?: string;
+  onSuggestionApplied: (value: number) => void,;
+  rateType: "hourly" | "fixed";
+}
+
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
+=======
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion } from '@/services / pricingSuggestionService';
+import { PricingSuggestionBox } from './PricingSuggestionBox';
+import { use_auth } from '@/hooks / use_auth';
+import { Sparkles } from './lucide-react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface TalentRateRecommenderProps {
 
   skills;
   years_experience;
   location;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  const generateSuggestion = async () => {;
+    if (skills && skills.length === 0 || yearsExperience <= 0) {;
+      return;
+
+    }
+    setIsLoading(true);
+    try {;
+      const params: TalentRateParams = {;
+        skills;
+
+        yearsExperience,;
+        location};
+
+
+      const result = await getTalentRateSuggestion(params);
+<<<<<<< HEAD
+=======
+      setSuggestion(result);
+    } catch (error) {;
+      console && console.error("Error generating rate suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+
+  };
+
+=======
+
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
+
+=======
+  skills;
+  years_experience;
+  location;
+  const generateSuggestion = async () => {;
+    if (skills && skills.length === 0 || yearsExperience <= 0) {;
+      return;
+    }
+    setIsLoading(true);
+    try {;
+      const params: TalentRateParams = {;
+        skills;
+        yearsExperience,;
+        location};
+      const result = await getTalentRateSuggestion(params);
+      setSuggestion(result);
+    } catch (error) {;
+      console && console.error("Error generating rate suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
+
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from "lucide-react";
+interface TalentRateRecommenderProps {
+
+  skills: string[]
+  yearsExperience: number
+  location?: string;
+  onSuggestionApplied: (value: number) => void
+
+  rateType: "hourly" | "fixed"
+}
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
+  skills;
+  yearsExperience;
+  location;
+
+  onSuggestionApplied
+
+  rateType}) => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
@@ -34,12 +186,34 @@ interface TalentRateRecommenderProps {
       const params: TalentRateParams = {;
         skills;
       const result = await getTalentRateSuggestion(params);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number) => void,
   rateType: "hourly" | "fixed"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -73,6 +247,18 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
       return
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const generateSuggestion = async () => {
+    if (skills.length === 0 || yearsExperience <= 0) {
+      return
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   skills,;
   yearsExperience,;
   location,;
@@ -84,6 +270,19 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {;
     if (skills.length === 0 || yearsExperience <= 0) {;
       return;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
     setIsLoading(true),
@@ -94,11 +293,63 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         location},
 
       const result = await getTalentRateSuggestion(params),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating rate suggestion:", error)
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  };
+
+=======
+=======
+  };
+
+    }
+  }
+  const handleApplySuggestion = () => {
+    if (suggestion) {
+      // We'll use the middle of the range as the suggested rate
+      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2);
+      onSuggestionApplied(suggestedRate);
+      // Track this suggestion application
+      if (user) {
+        trackPricingSuggestion({
+          userId: user.id
+          suggestionType: 'talent'
+          suggestedMin: suggestion.minRate
+          suggestedMax: suggestion.maxRate
+          actualValue: suggestedRate
+          accepted: true
+        })
+      }
+    }
+  }
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     setIsLoading(true),;
     try {;
@@ -114,7 +365,21 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       setIsLoading(false);
     }
   },;
+<<<<<<< HEAD
   };
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       // We'll use the middle of the range as the suggested rate;
@@ -131,9 +396,24 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setSuggestion(result);
     } catch (error) {;
       console && console.error("Error generating rate suggestion:", error);
@@ -143,6 +423,13 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       }
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-4">;
       <div>;
@@ -151,6 +438,18 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             type="button"
             variant="outline"
             onClick={generateSuggestion}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
       </div>;
@@ -237,10 +536,32 @@ if ( {) {
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>;
     </div>;
   );
@@ -255,6 +576,15 @@ if ( {) {
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -393,3 +723,10 @@ return (<div className="space-y-4" > <div> {
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

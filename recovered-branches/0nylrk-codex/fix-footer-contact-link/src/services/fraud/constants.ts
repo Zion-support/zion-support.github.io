@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
@@ -13,6 +24,24 @@ export const suspicious_phrases = [;
   "avoid fees";
   "payment link";
   "urgent payment";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "deal outside";
+];
+
+;
+// Email domains often used for throwaway accounts;
+export const suspiciousEmailDomains = [;
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const suspiciousPhrases = [
   "whatsapp me",
   "contact me outside",
@@ -28,11 +57,37 @@ export const suspiciousPhrases = [
   "deal outside"
   "deal outside";
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+],
+
+// Email domains often used for throwaway accounts
+export const suspiciousEmailDomains = [;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   "tempmail";
   "throwaway";
   "fakeemail";
   "mailinator";
   "guerrillamail";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  "10minutemail"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const suspiciousEmailDomains = [
   "tempmail",
   "throwaway",
@@ -67,6 +122,8 @@ export const suspiciousEmailDomains = [;
   "10minutemail";
   "10minutemail";
 ];
+<<<<<<< HEAD
+=======
 
 ;
 
@@ -91,3 +148,8 @@ export const suspiciousEmailDomains = [
 ];
   "10minutemail";
 ];
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

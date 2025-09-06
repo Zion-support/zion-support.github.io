@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),
 export default function GlobalEventRoute() {
 const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {;
   ssr: false,;
 });
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function GlobalEventRoute() {;
   return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),;
 export default function GlobalEventRoute() {;
@@ -25,3 +29,7 @@ export default /**
 function GlobalEventRoute() {
   return <ExpoPage />;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

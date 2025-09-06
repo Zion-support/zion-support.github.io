@@ -1,4 +1,23 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+import {useAuth} from "@/hooks/useAuth";
+import {Loader2} from "lucide-react";
+import {Badge} from "@/components/ui/badge";
+import {useJobSuggestions} from "@/hooks/useJobSuggestions";
+import {JobMatchesCard} from "./JobMatchesCard";
+import {NoJobsCard} from "./NoJobsCard";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
@@ -7,24 +26,57 @@ import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 import { JobMatchesCard } from "./JobMatchesCard",
 import { NoJobsCard } from "./NoJobsCard",
+<<<<<<< HEAD
+=======
 interface SuggestedJobsProps {
   talentId?: string
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SuggestedJobsProps {
   talentId?: string
 }
 
 
+<<<<<<< HEAD
+=======
 
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
+  const { user } = useAuth();
+  const currentTalentId = talentId || user?.id;
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { 
     isLoading,
     updateJobMatchStatus, 
@@ -35,7 +87,21 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     } 
   } = useJobSuggestions(currentTalentId),
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const currentTalentId = talentId |user?.id;
   const {
     isLoading;
@@ -47,6 +113,34 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     }
   } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    updateJobMatchStatus(matchId, 'applied');
+    // In a real app, this might redirect to application form or open a modal
+
+import {useAuth} from "@/hooks/useAuth";
+import {Loader2} from "lucide-react";
+import {Badge} from "@/components/ui/badge";
+import {useJobSuggestions} from "@/hooks/useJobSuggestions";
+import {JobMatchesCard} from "./JobMatchesCard";
+import {NoJobsCard} from "./NoJobsCard";
+=======
+
+=======
+
+
+    updateJobMatchStatus(matchId, 'applied'),
+    // In a real app, this might redirect to application form or open a modal
+  }
+  const handleDecline = (matchId: string) => {
+    updateJobMatchStatus(matchId, 'declined')
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   const handleDecline = (matchId: string) => {
@@ -78,6 +172,43 @@ import { NoJobsCard } from "./NoJobsCard",;
   };
 
   if (isLoading) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return (
+=======
+
+
+  
+
+  return (
+    <div className="space-y-6">;
+      {/* New Matches Section */}
+
+  if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
+    return <NoJobsCard />;
+  }
+  return (
+    <div className="space-y-6">;
+      {/* New Matches Section */}
+      {newMatches && newMatches.length > 0 && (;
+  } = useJobSuggestions(currentTalentId),;
+;
+  const handleApply = (matchId:string, jobId:string) => {;
+    updateJobMatchStatus(matchId, 'applied'),;
+    // In a real app, this might redirect to application form or open a modal;
+  },;
+;
+  const handleDecline = (matchId:string) => {;
+    updateJobMatchStatus(matchId, 'declined'),;
+  },;
+;
+  if (isLoading) {;
+    return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (isLoading) {;
     return (
@@ -85,6 +216,20 @@ import { NoJobsCard } from "./NoJobsCard",;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 
@@ -243,6 +388,16 @@ if ( {) {
           </div>;
         </div>)}
     </div>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   ),; interface SuggestedJobsProps {
@@ -325,3 +480,10 @@ if (isLoading) {
               />;
 ;
               />;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

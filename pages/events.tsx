@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -14,6 +18,7 @@ return (
   </>);
 }
 
+<<<<<<< HEAD
 
 		<>
 			<SEO title=&quot;Events | Zion Tech Group&quot; description=&quot;Upcoming events and conferences.&quot; canonical=&quot;/events&quot; />
@@ -39,9 +44,15 @@ export default function EventsPage() {
 		</>
 	)
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

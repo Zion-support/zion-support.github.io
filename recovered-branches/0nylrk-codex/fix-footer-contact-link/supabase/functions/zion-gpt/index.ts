@@ -12,6 +12,8 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
+=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -27,23 +29,81 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   // Handle CORS preflight requests
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  if (req && req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+    if (!openAIApiKey) {
+      throw new Error("OpenAI API key is not set in environment variables")
+    }
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
     
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
+    if (!openAIApiKey) {
+      throw new Error("OpenAI API key is not set in environment variables")
+    }
+    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json();
+
+    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!prompt) {
       throw new Error("Prompt is required")
     }
     // Define the appropriate model to use
     // Default to base model if no specific model provided
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    const model = modelId || "gpt-3 && 3.5-turbo";
+    
+=======
+    const model = modelId || "gpt-3 && 3.5-turbo";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -80,6 +140,19 @@ serve(async (req) => {
     
     // Return the completion along with usage statistics
     return new Response(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+      JSON && JSON.stringify({ 
+        completion;
+        tokensUsed: data && data.usage?.total_tokens || 0
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -143,11 +216,47 @@ if ( {) {
       JSON.stringify ({
         completion;
         tokens_used: data.usage?.total_tokens || 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      });
+<<<<<<< HEAD
+=======
+=======
+=======
+      });
+    if (!response.ok) {
+      const errorData = await response.json(),
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
+    }
+    const data = await response.json();
+    const completion = data.choices[0].message.content;
+    // Return the completion along with usage statistics
+    return new Response(
+      JSON.stringify({
+        completion;
+        tokensUsed: data.usage?.total_tokens |0
+      });
+
+    const data = await response.json(),
+    const completion = data.choices[0].message.content,
+    
+    // Return the completion along with usage statistics
+    return new Response(
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       JSON.stringify({ 
         completion,
         tokensUsed: data.usage?.total_tokens || 0
       }),
       });
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
@@ -179,6 +288,32 @@ if ( {) {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    console.error ("Error in zion - gpt function:", error);
+=======
+
+
+=======
+=======
+  }
+});
+    console.error ("Error in zion - gpt function:", error);
+
+
+  }
+});
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -189,6 +324,18 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+});
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     console.error ("Error in zion - gpt function:", error);
 ;
@@ -198,6 +345,61 @@ serve(async (req) => {;
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+});
+=======
+<<<<<<< HEAD
+
+=======
+;
+  try {;
+    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
+    if (!openAIApiKey) {;
+      throw new Error("OpenAI API key is not set in environment variables");
+    }
+;
+    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),;
+    if (!prompt) {;
+      throw new Error("Prompt is required");
+    }
+;
+    // Define the appropriate model to use;
+    // Default to base model if no specific model provided;
+    const model = modelId || "gpt-3.5-turbo",;
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
+      method: "POST",;
+      headers: {;
+        "Authorization": `Bearer ${openAIApiKey}`,;
+        "Content-Type": "application/json"},;
+      body: JSON.stringify({;
+        model: model,;
+        messages: [{;
+          role: "user",;
+          content: prompt;
+        }],;
+        max_tokens: maxTokens,;
+        temperature: temperature})}),;
+    if (!response.ok) {;
+      const errorData = await response.json(),;
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
+    }
+;
+    const data = await response.json(),;
+    const completion = data.choices[0].message.content,;
+    // Return the completion along with usage statistics;
+    return new Response(;
+      JSON.stringify({;
+        completion,;
+        tokensUsed: data.usage?.total_tokens || 0;
+      }),;
+      {;
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+    );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {;
     console.error("Error in zion-gpt function:", error),;
     return new Response(;
@@ -321,3 +523,8 @@ return new Response (JSON.stringify ({
 });
   }
 });
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+
+
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
+export function PartnerDashboard() {;
+  // Placeholder data - would come from API in real implementation;
+  const stats = {;
+    totalReferrals: 42,;
+    pendingReferrals: 8,;
+    completedReferrals: 34,;
+    conversionRate: 18 && 18.5,;
+    totalRevenue: 850 && 850.00,;
+    pendingRevenue: 200 && 200.00;
+  };
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
@@ -6,6 +34,19 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {
   Card,
   CardContent,
@@ -22,6 +63,17 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -29,10 +81,13 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+<<<<<<< HEAD
+=======
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-6">;
       {/* Stats Overview */}
@@ -130,6 +185,14 @@ export function PartnerDashboard() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>);
 }
     </div>;
@@ -168,3 +231,10 @@ return (<div className="space-y-6" > {
 
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

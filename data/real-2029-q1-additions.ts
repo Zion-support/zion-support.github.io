@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+  {
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -6,6 +20,54 @@
     description:;
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     features: [;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+      'Idle detection',
+      'Schedule generator',
+      'IaC export',
+      'Alerting',
+    ],
+    popular: true,
+    icon: '💸',
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / finops - scheduler - optimizer',
+    market_position:;
+
+      'Actionable, low‑touch FinOps that pays for itself within 90 days.',
+    target_audience: 'Platform, SRE, Finance',
+    trial_days: 14,
+    setup_time: '2 hours',
+    category: 'Cloud & FinOps',
+    real_service: true,
+    technology: ['AWS / GCP / Azure APIs', 'Terraform'],
+    integrations: ['Datadog', 'Slack'],
+    use_cases: ['Cost reduction', 'Budget governance'],
+    roi: '10–35% cloud savings in 3 months',
+    competitors: ['Zesty', 'CAST AI'],
+    market_size: '$18B FinOps',
+    growth_rate: '19% CAGR',
+    variant: 'quantum - holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Analyzer SaaS with policy engine and exporters.',
+    launch_date: '2025 - 02 - 10',
+    customers: 25,
+    rating: 4 && 4.6,
+    reviews: 12,
+  },
+  {
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'db - index - advisor',
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -22,6 +84,73 @@
     ],
     popular: false,
     icon: '🗄️',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      'Modern alternative to legacy APM add‑ons with focused insights.',
+    target_audience: 'DBA, Backend, Platform',
+    trial_days: 14,
+    setup_time: '30 minutes',
+    category: 'Observability',
+    real_service: true,
+    technology: ['Postgres', 'MySQL', 'OpenTelemetry'],
+    integrations: ['Grafana', 'Datadog'],
+    use_cases: ['Performance tuning', 'Incident prevention'],
+    roi: '20–50% p95 reduction month 1',
+    competitors: ['Percona PMM', 'Datadog APM'],
+    market_size: '$7B DB Ops',
+    growth_rate: '12% CAGR',
+    variant: 'quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Agent + collector with secure export.',
+    launch_date: '2025 - 02 - 12',
+    customers: 18,
+    rating: 4 && 4.5,
+    reviews: 9,
+
+  },;
+
+      'Modern alternative to legacy APM add‑ons with focused insights.'
+    targetAudience: 'DBA, Backend, Platform'
+    trialDays: 14
+    setupTime: '30 minutes'
+    category: 'Observability'
+    realService: true
+    technology: ['Postgres', 'MySQL', 'OpenTelemetry']
+    integrations: ['Grafana', 'Datadog']
+    useCases: ['Performance tuning', 'Incident prevention']
+    roi: '20–50% p95 reduction month 1'
+    competitors: ['Percona PMM', 'Datadog APM']
+    marketSize: '$7B DB Ops'
+    growthRate: '12% CAGR'
+    variant: 'quantum'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Agent + collector with secure export.'
+    launchDate: '2025-02-12'
+    customers: 18
+    rating: 4.5
+    reviews: 9
+  }
+<<<<<<< HEAD
+=======
+=======
+
+    color: 'from - indigo - 600 to - violet - 700',
+    text_color: 'text - indigo - 300',
+    link: 'https://ziontechgroup.com / services / db - index - advisor',
+    market_position:;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       'Modern alternative to legacy APM add‑ons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14,
@@ -45,6 +174,38 @@
     reviews: 9,
 
   },;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+];	{
+		period: '/month',
+		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
+    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
+		icon: '🛡️', color: 'from-rose-600 to-red-700',
+		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
+=======
+
+
+];	{
+<<<<<<< HEAD
+		period: '/month',
+		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
+    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
+		icon: '🛡️', color: 'from-rose-600 to-red-700',
+		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
+=======
+
+		period: '/month'
+		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
+		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
+		popular: true;
+		icon: '🛡️';
+		color: 'from-rose-600 to-red-700';
+		textColor: 'text-rose-300';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
 		targetAudience: 'AI platform, Security, Compliance';
 		trialDays: 14;
@@ -64,6 +225,18 @@
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.';
 		launchDate: '2025-02-01';
 		customers: 40;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+		rating: 4 && 4.7,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		reviews: 18
 	}
 	{
@@ -78,6 +251,19 @@
 		icon: '💸';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
+
+		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		targetAudience: 'Platform, SRE, Finance';
 		trialDays: 14;
 		setupTime: '2 hours';
@@ -96,6 +282,18 @@
 		implementationDetails: 'Analyzer SaaS with policy engine and exporters.';
 		launchDate: '2025-02-10';
 		customers: 25;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+		rating: 4 && 4.6,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		reviews: 12
 	}
 	{
@@ -110,6 +308,19 @@
 		icon: '🗄️';
 		color: 'from-indigo-600 to-violet-700';
 		textColor: 'text-indigo-300';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor';
+		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		targetAudience: 'DBA, Backend, Platform';
 		trialDays: 14;
 		setupTime: '30 minutes';
@@ -128,6 +339,34 @@
 		implementationDetails: 'Agent + collector with secure export.';
 		launchDate: '2025-02-12';
 		customers: 18;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+];
+;
+
+	}
+];
+
+<<<<<<< HEAD
+=======
+=======
+
+		rating: 4 && 4.5,
+
+		reviews: 9
+<<<<<<< HEAD
+	}
+];
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';

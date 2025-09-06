@@ -9,10 +9,39 @@ import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ProjectDetailsField} from "./ProjectDetailsField";
 import {TimelineField} from "./TimelineField";
 import {BudgetFields} from "./BudgetFields";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface HireRequestFormProps {;
+  talent: TalentProfile,;
+  onClose: () => void,;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   initialJobTitle?: string;
   userDetails?: {;
     name?: string;
     email?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+=======
+export interface HireRequestFormProps {
+  talent: TalentProfile,
+  onClose: () => void,;
+  initialJobTitle?: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -30,25 +59,106 @@ export interface HireRequestFormProps {
   onClose: () => void
 
   initialJobTitle?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { TimelineField } from "./TimelineField",
+import { BudgetFields } from "./BudgetFields",
+export interface HireRequestFormProps {
+  talent: TalentProfile,
+  onClose: () => void,
+  initialJobTitle?: string,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   initialJobTitle?: string;
   userDetails?: {;
     name?: string;
     email?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   userDetails?: {
     name?: string,
     email?: string,
     id?: string
+<<<<<<< HEAD
   },
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  },
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
 
 
+<<<<<<< HEAD
     initialJobTitle;
     userDetails
   });
+=======
+<<<<<<< HEAD
+    initialJobTitle;
+    userDetails
+  });
+=======
+<<<<<<< HEAD
+  const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
+    talent, 
+
+
+<<<<<<< HEAD
+=======
+  }
+  },
+  onSubmitSuccess?: () => void
+}
+export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
+
+  const { form, isSubmitting, onSubmit } = useHireRequestForm({
+    talent
+    onClose: onSubmitSuccess |onClose
+
+    initialJobTitle;
+    userDetails
+  });
+  const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
+    talent, 
+    onClose: onSubmitSuccess || onClose, ;
+    initialJobTitle;
+    onClose: onSubmitSuccess || onClose, 
+    initialJobTitle,
+    userDetails 
+  }),
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    initialJobTitle;
+    userDetails
+  });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -70,6 +180,17 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           >
             Cancel
           </Button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -136,6 +257,13 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
             disabled={isSubmitting}>;
             Cancel;
           </Button>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -222,6 +350,15 @@ function HireRequestForm() {
       </form>;
     </Form>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  export interface HireRequestFormProps {
   talent: TalentProfile;
@@ -266,3 +403,10 @@ return (<Form {
     </Form>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

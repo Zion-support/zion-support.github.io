@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 
 
@@ -24,3 +33,11 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Cus
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; const \"Custom404\": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name=\'description\' content=\'404 page\' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
+<<<<<<< HEAD
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -7,6 +20,19 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface AIMatchingResultsProps {;
+  matches: MatchResultItem[],;
+  onSelectMatch?: (match: MatchResultItem) => void,;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
@@ -19,6 +45,14 @@ import {cn} from "@/lib/utils";
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -89,18 +123,50 @@ export function AIMatchingResults({
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Group matches by category
   const categories = {
     all: matches
     talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
     services: matches.filter(match => match.category.toLowerCase().includes("service"))
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+=======
+  }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes("talent")) return User;
     if (lowerCategory.includes("equipment")) return Monitor
     return BriefcaseIcon
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return (
+=======
+<<<<<<< HEAD
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
   // Get the icon for a category
@@ -181,6 +247,11 @@ export function AIMatchingResults({;
   if (isLoading) {;
     return (
     return (
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;
@@ -189,6 +260,24 @@ export function AIMatchingResults({;
           <Skeleton className="h-[120px] w-full" />;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    );
+  }
+
+
+  if (matches && matches.length === 0) {;
+
+    return (
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (matches && matches.length === 0) {;
     return (
     ),;
@@ -198,6 +287,19 @@ export function AIMatchingResults({;
     return (;
     );
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+  if (matches.length === 0) {;
+    return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
           <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />;
@@ -210,11 +312,50 @@ export function AIMatchingResults({;
               <p className="text-xs text-zion-slate-light">Your search:</p>;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           )}
         </CardContent>;
       </Card>;
     );
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  
+
+
+=======
+  
+
+
+          )}
+        </CardContent>
+      </Card>
+    )
+  }
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -234,6 +375,19 @@ export function AIMatchingResults({;
         </TabsList>
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -371,4 +525,140 @@ if ( {) {
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                  </Card>);
+              })) : (
+              <div className="text - center py - 8 text - zion - slate - light">;
+                No {tab} matches found.;
+              </div>)}
+          </TabsContent>))}
+      </Tabs>;
+    </div>);
+
+=======
+                  </Card>;
+                ),;
+              });
+            ) :(;
+              <div className="text-center py-8 text-zion-slate-light">;
+                No {tab} matches found.;
+              </div>;            )}
+          </TabsContent>;
+        ))}
+      </Tabs>;
+    </div>;
+  ),; interface AIMatchingResultsProps {
+  matches: MatchResultItem[];
+onSelectMatch?: (match: MatchResultItem) => void;
+isLoading?: boolean;
+projectDescription?: string;
+serviceType?: string 
+}export function AIMatchingResults ({
+  matches;
+onSelectMatch;
+isLoading = false;
+projectDescription = "";
+serviceType: serviceType = "" 
+}: AIMatchingResultsProps) {
+  //Group matches by category const categories = {
+  all: matches;
+if (isLoading) {
+  return (<div className=" space-y-4"> <Skeleton className=" h-10 w-full"/> <div className=" space-y-3"> <Skeleton className=" h-[120px] w-full"/> <Skeleton className=" h-[120px] w-full"/> <Skeleton className=" h-[120px] w-full"/> </div> </div>) 
+}if (matches.length === 0) {
+  return (<Card className=" bg-zion-blue-dark border-zion-blue-light text-center p-6"> <CardContent className=" pt-6"> <BarChart3 className=" h-12 w-12 mx-auto text-zion-slate-light mb-3"/> <p className=" text-white font-medium mb-2">No matches found</p> <p className=" text-zion-slate-light text-sm mb-4"> projectDescription && (<div className=" bg-zion-blue-light/20 p-3 rounded-md text-left"> <p className=" text-xs text-zion-slate-light">Your search:</p> <p className=" text-sm text-white"> {
+  projectDescription 
+}</p> </div>) 
+}</CardContent> </Card>) 
+}return (<AvatarImage src= {
+  match.image 
+}/>) : (<AvatarFallback className=" bg-zion-purple/20"> <CategoryIcon className=" h-6 w-6 text-zion-purple"/> </AvatarFallback>) 
+}</Avatar> <div className=" flex-1"> <div className=" flex justify-between"> <div> </div> </div>) 
+}</div> </Badge>) ) 
+}</div> </div> </div> </div> </div> </Card>) 
+}) ) : (<div className="text-center py-8 text-zion-slate-light"> No {
+  tab 
+}matches found. </div>) 
+}</TabsContent>) ) 
+}</Tabs> </div>) 
+            {items.length > 0 ? (
+              items.map((match) => {
+                const CategoryIcon = getCategoryIcon(match.category),
+                return (
+                  <Card
+                    key={match.id}
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
+                    onClick={() => onSelectMatch && onSelectMatch(match)}
+                  >
+                    <div className="flex">
+                      <div className={cn(
+                        "w-2"
+                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :
+                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" :
+
+                        "bg-green-500"
+                      )} />
+                      <div className="flex-1 p-4">
+                        <div className="flex items-start gap-4">
+                          <Avatar className="h-12 w-12 border border-zion-blue-light">
+                            {match.image ? (
+                              <AvatarImage src={match.image} />
+                            ) : (
+                              <AvatarFallback className="bg-zion-purple/20">
+                                <CategoryIcon className="h-6 w-6 text-zion-purple" />
+                              </AvatarFallback>
+                            )}
+                          </Avatar>
+                          <div className="flex-1">
+                            <div className="flex justify-between">
+                              <div>
+                                <h3 className="font-medium text-white">{match.title}</h3>
+                                <p className="text-zion-slate-light text-sm">{match.description}</p>
+                              </div>
+                              {match.price && (
+                                <div className="text-right ml-2">
+                                  <div className="font-medium text-white">${match.price}</div>
+                                  <div className="text-xs text-zion-slate-light">
+                                    {match.category.toLowerCase().includes("talent") ? "/hour" : ""}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
+                                {match.category}
+                              </Badge>
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                                <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">
+                                  {skill}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                )
+              })
+            ) : (
+              <div className="text-center py-8 text-zion-slate-light">
+                No {tab} matches found.
+              </div>
+            )}
+          </TabsContent>
+        ))}
+      </Tabs>
+    </div>
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }

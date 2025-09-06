@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -7,6 +23,45 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {useState} from "react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface TemplateListProps {;
+  templates: ContractTemplate[],;
+  isLoading: boolean,;
+  onSelect: (template: ContractTemplate) => void,;
+  onEdit: (template: ContractTemplate) => void;
+}
+
+export function TemplateList(): any ({;
+  templates;
+  isLoading;
+  onSelect;
+  onEdit;
+}: TemplateListProps) {;
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
+
+  const handleDeleteClick = (templateId: string) => {;
+    setTemplateToDelete(templateId);
+  };
+
+  const handleDeleteConfirm = async () => {;
+    if (templateToDelete) {;
+      await deleteTemplate && deleteTemplate.mutateAsync(templateToDelete);
+      setTemplateToDelete(null);
+    }
+  };
+=======
+=======
+  };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
@@ -123,10 +178,61 @@ interface TemplateListProps {;
   onSelect: (template: ContractTemplate) => void,;
   onEdit: (template: ContractTemplate) => void;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+export function TemplateList({;
+  templates,;
+  isLoading,;
+  onSelect,;
+  onEdit;
+    ),;
+  }
+;
+  return (;
+    <div className="space-y-3">;
+      {templates.map((template) => (;
+        <Card key={template.id} className={template.is_default ? "border-zion-purple" :""}>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <CardContent className="p-4">;
             <div className="flex items-center justify-between">;
               <div className="space-y-1">;
                 <div className="flex items-center gap-2">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <h3 className="font-medium">{template && template.title}</h3>;
+                  {template && template.is_default && (;
+                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
+                  )}
+=======
+}: TemplateListProps) {;
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),;
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),;
+  const handleDeleteClick = (templateId: string) => {;
+    setTemplateToDelete(templateId);
+  },;
+  const handleDeleteConfirm = async () => {;
+    if (templateToDelete) {;
+      await deleteTemplate.mutateAsync(templateToDelete),;
+      setTemplateToDelete(null);
+    }
+  },
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+  };
+interface TemplateListProps {
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate) => void,
+  onEdit: (template: ContractTemplate) => void
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
@@ -191,6 +297,16 @@ interface TemplateListProps {;
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick={handleDeleteConfirm}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </div>;
                 <p className="text-xs text-muted-foreground">;
                   Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
@@ -216,6 +332,13 @@ interface TemplateListProps {;
               onClick={() => onSelect(template)} ;
               variant="outline" ;
               className="w-full";
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             >;
               Use This Template;
             </Button>;
@@ -225,11 +348,61 @@ interface TemplateListProps {;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            <AlertDialogCancel > Cancel</AlertDialogCancel>;
+            <AlertDialogAction;
+              className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
+              on_click={handleDeleteConfirm}
+            >;
+
+=======
+            <AlertDialogCancel>Cancel</AlertDialogCancel>;
+            <AlertDialogAction ;
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
+              onClick={handleDeleteConfirm}
+            >;
+            >
+              Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </div>
+  )
+}
+            >;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </div>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   ),; import {
   AlertDialog;
@@ -296,3 +469,10 @@ if (isLoading) {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

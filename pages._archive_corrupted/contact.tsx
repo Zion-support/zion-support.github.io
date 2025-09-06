@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
@@ -6,10 +33,42 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { 
   Phone, 
   Mail, 
@@ -19,17 +78,74 @@ import {
   Send,
   MessageCircle,
   Globe
+<<<<<<< HEAD
 
 } from 'lucide-react';
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+} from 'lucide-react'
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+
+} from 'lucide-react';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -55,6 +171,37 @@ const "ContactPage": React.FC = () => {
       \"link\": null
     }
   ]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -71,8 +218,103 @@ const "ContactPage": React.FC = () => {
     "Blockchain Technology",
     "Digital Transformation",
     "Consulting & Strategy"
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+  ]
+  return (
+    <>
+      <SEO title=\"Contact Us - Zion Tech Group\"
+        description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com\"
+        keywords=\"contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address\"
+        canonical=\""https\": //ziontechgroup.com/contact\"
+       />
+      <PageTransition>
+        <main className=\"min-h-screen bg-white\">
+          {/* Hero Section */}
+          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">
+            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+              <motion.div
+                initial={{ opacity: 0, \"y\": 20 }}
+                animate={{ \"opacity\": 1, \"y\": 0 }}
+                transition={{ \"duration\": 0.6 }}
+                className=\"text-center\"
+              >
+                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">
+                  Get In <span className=\"text-blue-600\">Touch</span>
+                </h1>
+                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">
+                  Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let\'s discuss your project.
+                </p>
+                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">
+                  <motion.a
+                    href=\"tel:+13024640950\"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ \"scale\": 0.95 }}
+                    className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
+                  >
+                    <Phone className=\"w-5 h-5\"  />
+                    Call \"Now\": +1 302 464 0950
+                  </motion.a>
+                  <motion.a
+                    href=\"mailto: klebe r@ziontechgroup.com\"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ \"scale\": 0.95 }}
+                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
+                  >
+                    <Mail className=\"w-5 h-5\"  />
+                    Send Email
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ]
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
@@ -150,11 +392,90 @@ const "ContactPage": React.FC = () => {;
                 <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;
                   <motion&& motion.a
                     href=\"tel:+13024640950\"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ \"scale\": 0.95 }}
+                    className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
+                  >
+                    <Phone className=\"w-5 h-5\"  />
+                    Call \"Now\": +1 302 464 0950
+                  </motion.a>
+                  <motion.a
+                    href=\"mailto: klebe r@ziontechgroup.com\"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ \"scale\": 0.95 }}
+                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
+                  >
+                    <Mail className=\"w-5 h-5\"  />
+                    Send Email
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 const "Contact": NextPage = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -178,6 +499,168 @@ const "Contact": NextPage = () => {
       \"title\": \'Business Hours\',
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  ];
+  const offices = [{
+      \"city\": \'San Francisco\',
+      \"address\": \'123 Tech Street, San Francisco, CA 94105\',
+      \"phone\": \'+1 (555) 123-4567\',
+      \"email\": \'sf@ziontechgroup.com\'
+    },
+    {
+      \"city\": \'New York\',
+      \"address\": \'456 Innovation Ave, New York, NY 10001\',
+      \"phone\": \'+1 (555) 987-6543\',
+      \"email\": \'ny@ziontechgroup.com\'
+    },
+    {
+      \"city\": \'London\',
+      \"address\": \'789 Digital Lane, London, UK EC1A 1BB\',
+      \"phone\": \'+44 20 7123 4567\',
+      \"email\": \'london@ziontechgroup.com\'
+    }
+  ];
+  return (
+    <MainLayout
+      title=\"Contact Us - Zion Tech Group\"
+      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\"
+    >
+      {/* Hero Section */}
+      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"text-center\">
+            <h1 className=\"text-5xl font-bold mb-6\">Get In Touch</h1>
+            <p className=\"text-xl max-w-3xl mx-auto\">
+              Ready to transform your business? Let\'s discuss how our technology solutions 
+              can help you achieve your goals.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Contact Information */}
+      <section className=\"py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16\">
+            {contactInfo.map((info) => (
+              <div key={info.title} className=\"text-center\">
+                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
+                  <info.icon className=\"h-8 w-8\" />
+                </div>
+                <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">
+                  {info.title}
+                </h3>
+                {info.link ? (
+                  <a
+                    href={info.link}
+                    className=\"text-blue-600 \"hover\": text-blue-700 transition-colors\"
+                  >
+                    {info.details}
+                  </a>
+                ) : (
+                  <p className=\"text-gray-600\">{info.details}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Contact Form & Office Locations */}
+      <section className=\"py-20 bg-gray-50\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12\">
+            {/* Contact Form */}
+            <div>
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Send Us a Message</h2>
+              <form className=\"space-y-6\">
+                <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">
+                  <div>
+                    <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                      First Name *
+                    </label>
+=======
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ \"scale\": 0 && 0.95 }}
+                    className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
+                    <Phone className=\"w-5 h-5\"  />;
+                    Call \"Now\": +1 302 464 0950;
+                  </motion && motion.a>;
+                  <motion&& motion.a
+                    href=\"mailto: klebe r@ziontechgroup && ziontechgroup.com\"
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ \"scale\": 0 && 0.95 }}
+                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
+                    <Mail className=\"w-5 h-5\"  />;
+                    Send Email;
+                  </motion && motion.a>;
+                </div>;
+              </motion && motion.div>;
+            </div>;
+          </section>;
+const \"Contact\": NextPage = () => {;
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+import {Mail,, Phone,, MapPin,, Clock,, Send} from 'lucide-react';
+const "Contact": NextPage = () => {;
+  const contactInfo = [{;
+      icon: Mail,;
+      \"title\": \'Email Us\',;
+      \"details\": \'info@ziontechgroup && ziontechgroup.com\',;
+      \"link\": \'mailto:info@ziontechgroup && ziontechgroup.com\';
+    },;
+    {;
+      \"icon\": Phone,;
+      \"title\": \'Call Us\',;
+      \"details\": \'+1 (555) 123-4567\',;
+      \"link\": \'tel:+1-555-123-4567\';
+    },;
+    {;
+      \"icon\": MapPin,;
+      \"title\": \'Visit Us\',;
+      \"details\": \'123 Tech Street, San Francisco, CA 94105\',;
+      \"link\": \'https://maps && maps.google.com\';
+    },;
+    {;
+      \"icon\": Clock,;
+      \"title\": \'Business Hours\',;
+      \"details\": \'Mon-Fri: 9AM-6PM PST\',;
+      \"link\": null;
+    }
+  ];
+  const offices = [{;
+      \"city\": \'San Francisco\',;
+      \"address\": \'123 Tech Street, San Francisco, CA 94105\',;
+      \"phone\": \'+1 (555) 123-4567\',;
+      \"email\": \'sf@ziontechgroup && ziontechgroup.com\';
+    },;
+    {;
+      \"city\": \'New York\',;
+      \"address\": \'456 Innovation Ave, New York, NY 10001\',;
+      \"phone\": \'+1 (555) 987-6543\',;
+      \"email\": \'ny@ziontechgroup && ziontechgroup.com\';
+    },;
+    {;
+      \"city\": \'London\',;
+      \"address\": \'789 Digital Lane, London, UK EC1A 1BB\',;
+      \"phone\": \'+44 20 7123 4567\',;
+      \"email\": \'london@ziontechgroup && ziontechgroup.com\';
+    }
+  ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  return (
+    <MainLayout
+      title=\"Contact Us - Zion Tech Group\"
+      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -308,12 +791,79 @@ const "Contact": NextPage = () => {
         </div>;
       </section>;
       {/* FAQ Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
+      <section className=\"py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"text-center mb-16\">
+            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+              Get answers to common questions about our services and process
+            </p>
+          </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -322,12 +872,82 @@ const "Contact": NextPage = () => {
                 We\'ll provide a detailed timeline during our initial consultation.
               </p>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -336,12 +956,82 @@ const "Contact": NextPage = () => {
                 security patches, and technical support.
               </p>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -350,12 +1040,82 @@ const "Contact": NextPage = () => {
                 the best technology stack for each project\'s specific needs.
               </p>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -497,8 +1257,68 @@ const "Contact": NextPage = () => {
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
+<<<<<<< HEAD
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+=======
+                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                className=\"text-center mb-16\"
+              >
+                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
+                  Contact Information
+                </h2>
+                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+                  Multiple ways to reach us for your convenience
+                </p>
+              </motion.div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> main
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {contactInfo.map((info, index) => (
                   <motion.div
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -551,8 +1371,68 @@ const "Contact": NextPage = () => {
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
+<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+=======
+                transition={{ \"duration\": 0.6 }}
+                className=\"text-center mb-16\"
+              >
+                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
+                  Send Us a Message
+                </h2>
+                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+                  Fill out the form below and we\'ll get back to you within 24 hours
+                </p>
+              </motion.div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> main
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <motion.form
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
@@ -589,12 +1469,60 @@ const "Contact": NextPage = () => {
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         placeholder=\"your.email@example.com\"
                        />
                     </div>
                   </div>
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
@@ -608,13 +1536,102 @@ const "Contact": NextPage = () => {
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
+<<<<<<< HEAD
                        />
                     </div>
                   </div>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+                       />
+                    </div>
+                  </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div className=\"mb-6\">
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+                      Service Interest
+                    </label>
+                    <select
+                      id=\"service\"
+                      name=\"service\"
+                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                    >
+                      <option value=\"">Select a service</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>
+                          {service}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       Service Interest
                     </label>
                        />;
@@ -636,10 +1653,72 @@ const "Contact": NextPage = () => {
                           {service}
                         </option>;
                       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
+                    </select>
+                  </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+                      Message *
+                    </label>
+=======
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       Message *
                     </label>
                     </select>;
@@ -656,6 +1735,25 @@ const "Contact": NextPage = () => {
                       rows={6}
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      placeholder=\"Tell us about your project requirements...\"
+                    ></textarea>
+                  </div>
+                  <motion.button
+                    type=\"submit\"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ \"scale\": 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
@@ -666,6 +1764,18 @@ const "Contact": NextPage = () => {
                 </motion.form>
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
@@ -718,12 +1828,81 @@ const "Contact": NextPage = () => {
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -745,6 +1924,44 @@ const "Contact": NextPage = () => {
                     </div>
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+                          value={formData && formData.email}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
@@ -771,6 +1988,67 @@ const "Contact": NextPage = () => {
                 </div>
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+                        value={formData && formData.message}
+                        onChange={handleInputChange}
+                        className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                        placeholder=\"Tell us about your project or requirements...\"
+                      />;
+                    </div>;
+                    <button
+                      type=\"submit\"
+                      disabled={isSubmitting}
+                      className=\"w-full inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300\">;
+                      {isSubmitting ? (;
+                        <>;
+                          <div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2\"></div>;
+                          Sending...;
+                        </>;
+                      ) : (;
+                        <>;
+                          <Send className=\"w-5 h-5 mr-2\" />;
+                          Send Message;
+                        </>;
+                      )}
+                    </button>;
+                  </form>;
+                )}
+              </div>;
+              {/* Contact Information */}
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -786,6 +2064,92 @@ const "Contact": NextPage = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+          </section>
+          {/* Services Overview */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, "y": 20 }}
+                animate={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
+                  Our Services
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Comprehensive technology solutions to meet all your business needs
+                </p>
+              </motion.div>
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ "opacity": 0, "y": 20 }}
+                    animate={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
+                    className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center"
+                  >
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {service}
+                    </h3>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </main>
+      </PageTransition>
+    </>
+  )
+}
+export default ContactPage
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </section>
               <div className=\"space-y-8\">;
                 <div>;
@@ -845,6 +2209,15 @@ const "Contact": NextPage = () => {
                   </motion && motion.div>;
                 ))}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default ContactPage
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
         </section>
       </div>
@@ -869,4 +2242,51 @@ export default ContactPage;
     </>;
   );
 
+<<<<<<< HEAD
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+>>>>>>> main
+>>>>>>> main
+=======
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

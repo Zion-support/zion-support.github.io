@@ -1,4 +1,38 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { UseFormReturn } from "react-hook-form";
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+} from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
@@ -28,15 +62,47 @@ import {;
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/popover";
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  form: UseFormReturn<ContractFormValues>;
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   form: UseFormReturn<ContractFormValues>;
@@ -47,6 +113,16 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
   form: UseFormReturn<ContractFormValues>;
 }
+<<<<<<< HEAD
+=======
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  form: UseFormReturn<ContractFormValues>;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
       <FormField
@@ -60,13 +136,100 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
             <FormMessage />;
+<<<<<<< HEAD
       <FormField
         control={form && form.control}
         name="scopeSummary"
+=======
+<<<<<<< HEAD
+      <FormField
+        control={form && form.control}
+        name="scopeSummary"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      />;
+
+
+=======
+      />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      <FormField
+        control={form && form.control}
+        name="scopeSummary"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import { format } from "date-fns",;
+import { CalendarIcon } from "lucide-react",;
+import { UseFormReturn } from "react-hook-form",;
+import { ;
+  FormField,;
+  FormItem, ;
+  FormLabel, ;
+  FormControl, ;
+  FormDescription, ;
+  FormMessage ;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Calendar } from "@/components/ui/calendar",;
+import { ContractFormValues } from "./ContractForm",;
+;
+interface ProjectDetailsFieldsProps {;
+  form:UseFormReturn<ContractFormValues>;
+}
+;
+export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+        control={form.control}
+        name="projectName";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Project Name</FormLabel>;
+            <FormControl>;
+              <Input placeholder="AI Website Development" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;        )}
+      />;
+      ;
+      <FormField;
+        control={form.control}
+        name="scopeSummary";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <Textarea
+                placeholder="Describe the project scope, deliverables, and expectations..."
+                className="min-h-[120px]"
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </FormItem>)}
       />;
       <FormField;
@@ -79,6 +242,22 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min - h-[120px]";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+              <Textarea;
+                placeholder="Describe the project scope, deliverables, and expectations...";
+                className="min-h-[120px]";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {...field}
               />;
             </FormControl>;
@@ -86,6 +265,29 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      />
+      <FormField
+      />;
+      <FormField;
+        control={form.control}
+        name="scopeSummary"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Scope Summary</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="Describe the project scope, deliverables, and expectations..."
+                className="min-h-[120px]"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {...field}
               />
             </FormControl>
@@ -100,6 +302,16 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      />;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <FormField
           control={form && form.control}
           name="startDate"
@@ -265,8 +477,64 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
       </div>;
     </>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </FormItem>)}
         />;
       </div>;
     </>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            </FormItem>;
+          )}
+        />;
+      </div>;
+    </>;
+  ),;}
+ import {
+  FormField;
+FormItem;
+FormLabel;
+FormControl;
+FormDescription;
+FormMessage interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues> 
+}form 
+}: ProjectDetailsFieldsProps) {
+  return (<> <FormField control= {
+  form.control 
+}</FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Scope Summary</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Be specific about what is included and any limitations </FormDescription> <FormMessage /> </FormItem>) 
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+}/> <FormField <FormLabel>End Date (Optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormDescription> Leave empty if the end date is flexible </FormDescription> <FormMessage /> </FormItem>) 
+}/> </div> </>) 
+}
+        />
+      </div>
+    </>
+        />;
+      </div>;
+    </>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

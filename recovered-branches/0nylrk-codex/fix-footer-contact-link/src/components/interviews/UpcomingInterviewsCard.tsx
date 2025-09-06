@@ -8,6 +8,31 @@ import {Link} from "react-router-dom";
 import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  const { fetchInterviews } = useInterviews();
+=======
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {;
+    const loadInterviews = async () => {;
+      setIsLoading(true);
+      try {;
+        const interviews = await fetchInterviews();
+        const now = new Date();
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -28,6 +53,28 @@ export function UpcomingInterviewsCard() {
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+=======
+<<<<<<< HEAD
+
+  useEffect(() => {;
+    const loadInterviews = async () => {;
+
+=======
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setIsLoading(true);
       try {;
         const interviews = await fetchInterviews();
@@ -40,6 +87,32 @@ export function UpcomingInterviewsCard() {
     const loadInterviews = async () => {
       setIsLoading(true),
       try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        const interviews = await fetchInterviews(),
+        const now = new Date(),
+        
+
+
+=======
+        const interviews = await fetchInterviews(),
+        const now = new Date(),
+        
+        const interviews = await fetchInterviews();
+        const now = new Date();
+        const interviews = await fetchInterviews(),
+        const now = new Date(),
+        
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
@@ -51,6 +124,16 @@ export function UpcomingInterviewsCard() {
           )
           .slice(0, 3), // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useEffect, useState } from './react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -124,6 +207,24 @@ export function UpcomingInterviewsCard() {;
       try {;
         const interviews = await fetchInterviews(),;
         const now = new Date(),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        // Filter for confirmed interviews in the future;
+        const upcoming = interviews;
+          .filter (interview =>;
+            interview.status === 'confirmed' &&;
+            !is_past (parseISO (interview.scheduled_date)));
+          .sort ((a, b) =>;
+            parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
+          .slice (0, 3), // Take only the next 3 interviews;
+        setUpcomingInterviews (upcoming);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } catch (error) {
         console.error ("Error loading upcoming interviews:", error);
       } finally {
@@ -161,16 +262,51 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             ))}
           </div>;
         </CardContent>;
       </Card>;
     );
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  if (upcomingInterviews && upcomingInterviews.length === 0) {;
+
+=======
+=======
+  if (upcomingInterviews && upcomingInterviews.length === 0) {;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
   if (upcomingInterviews.length === 0) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return (
   if (upcomingInterviews && upcomingInterviews.length === 0) {;
     return (
@@ -197,6 +333,48 @@ export function UpcomingInterviewsCard() {;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    );
+  }
+  return (
+<<<<<<< HEAD
+=======
+
+=======
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
+
+  if (upcomingInterviews.length === 0) {
+    return (
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center">
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />
+            Upcoming Interviews
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="text-center py-6">
+            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />
+            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
+            <Button asChild className="mt-4" variant="outline" size="sm">
+              <Link to="/interviews">Schedule Interview</Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -221,6 +399,11 @@ export function UpcomingInterviewsCard() {;
     );
   }
   return (
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -244,6 +427,62 @@ export function UpcomingInterviewsCard() {;
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            const formattedTime = format(interviewDate, 'h: mm a'),;
+
+            // Determine if interview is happening soon (within 30 minutes);
+            const now = new Date();
+            const isStartingSoon = ;
+              interviewDate && interviewDate.getTime() - now && now.getTime() < 30 * 60 * 1000 &&;
+              interviewDate && interviewDate.getTime() > now && now.getTime();
+
+            return (
+              <div key={interview && interview.id} className="flex items-center gap-3">;
+                <Avatar className="h-10 w-10 bg-zion-purple/10">;
+                  {interview && interview.client_avatar || interview && interview.talent_avatar ? (;
+                    <img
+                      src={interview && interview.client_avatar || interview && interview.talent_avatar} 
+                      alt={interview && interview.client_name || interview && interview.talent_name}
+                    />;
+                  ) : (;
+                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;
+                      {(interview && interview.client_name || interview && interview.talent_name || "U").charAt(0)}
+=======
+                    )}
+                  </div>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Clock className="h-3 w-3 mr-1" />
+                    {formattedDate} at {formattedTime}
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
+          <Button asChild size="sm" variant="outline" className="w-full">
+            <Link to="/interviews">
+              View All Interviews
+            </Link>
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+    ),;
+  }
+;
+  return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
       <CardHeader>;
         <CardTitle className="text-lg flex items-center">;
@@ -264,6 +503,13 @@ export function UpcomingInterviewsCard() {;
           {upcomingInterviews && upcomingInterviews.map(interview => {;
             const interviewDate = parseISO(interview && interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;
@@ -389,6 +635,24 @@ if ( {) {
           </Button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </Card>);
+}
+
+=======
+
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </Card>;
   ),; export function UpcomingInterviewsCard () {
   const {
@@ -426,3 +690,10 @@ return (<img src= {
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,8 +1,3 @@
-return (
-
-        disabled={isLoading || !title || !category}
-        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'>        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
-          id="title";
 
         <Input
           id="category"
@@ -17,20 +12,6 @@ return (
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
         <Textarea
 
-
-
-          id="keyFeatures"
-          value={keyFeatures}
-          onChange={(e) => setKeyFeatures(e && e.target.value)}
-          placeholder="Briefly describe the main features or benefits";
-          className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
-          disabled={isLoading}
-
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from 'lucide-react'
 import { Star } from 'lucide-react';
 
@@ -50,13 +31,11 @@ interface AIListingFormProps {
   }
 }
 
-
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),
   const [ title, setTitle ] = useState(initialValues.title || ""),
   const [ category, setCategory ] = useState(initialValues.category || ""),
   const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
   const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
-
 
   const handleSubmit = () => {
     if (!title || !category) {
@@ -76,11 +55,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
     })
   };
 
-
   return (
     <div className="space-y-4">
-        />
-
 
       </div>
       <div className="space-y-2">
@@ -178,7 +154,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           id="category";
           value={category}
 
-
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
@@ -272,18 +247,11 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
 
-          placeholder="e.g. Developers, Marketers, Startups";
-          className="bg-zion-blue border border-zion-blue-light text-white";
-
-          disabled={isLoading}
-
         />;
       </div>;
       <Button;
 
         onClick={handleSubmit}
-
-        disabled={isLoading || !title || !category}
 
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
@@ -291,8 +259,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           <>Generating Optimized Content...</>
         ) : (
           <>
-
-            <Sparkles className="h-4 w-4 mr-2" />
 
             Generate Optimized Content
           </>
@@ -303,5 +269,4 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }: AIListingFormProps) {
   if (!title |!category) {
   toast ({
-  return;
-}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
+

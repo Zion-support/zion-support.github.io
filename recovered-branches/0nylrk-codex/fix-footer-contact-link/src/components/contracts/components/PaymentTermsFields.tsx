@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import { UseFormReturn } from "react-hook-form";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -6,11 +21,30 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { UseFormReturn } from "react-hook-form",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import { UseFormReturn } from "react-hook-form",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { UseFormReturn } from "react-hook-form",
 
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { 
   FormField;
   FormItem;
@@ -19,6 +53,28 @@ import {
   FormDescription;
   FormMessage 
 } from "@/components/ui/form",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+import { Input } from "@/components/ui/input",
+
+
+=======
+import { Input } from "@/components/ui/input",
+
+
+import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { 
   Select;
   SelectContent;
@@ -28,6 +84,17 @@ import {
 } from "@/components/ui/select",
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
 
@@ -36,6 +103,13 @@ import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
 import { ContractFormValues } from "./ContractForm";
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -43,6 +117,39 @@ interface PaymentTermsFieldsProps {
 
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import {UseFormReturn} from "react-hook-form";
+import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSuggestions";
+import {TalentProfile} from "@/types/talent";
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
+import {ContractFormValues} from "./ContractForm";
+
+
+
+<<<<<<< HEAD
+=======
+export function PaymentTermsFields({
+  form;
+  talent;
+  handleMilestonesGenerated
+
+export function PaymentTermsFields({ ;
+  form;
+  talent;
+export function PaymentTermsFields({ 
+  form,
+  talent,
+  handleMilestonesGenerated 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }: PaymentTermsFieldsProps) {
   return (
     <>
@@ -93,6 +200,20 @@ interface PaymentTermsFieldsProps {;
   talent: TalentProfile,;
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function PaymentTermsFields(): any ({ ;
+  form;
+  talent;
+  handleMilestonesGenerated ;
+}: PaymentTermsFieldsProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -173,15 +294,90 @@ function PaymentTermsFields() {
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        />;
+      </div>;
+
+
+=======
+        />;
+      </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Project Milestones */}
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="paymentAmount"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Payment Amount</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder={form.getValues("paymentTerms") === "hourly" ? "$X per hour" : "Total $X"}
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription>
+                {form.getValues("paymentTerms") === "milestone" &&
+                  "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+      {/* Project Milestones */}
+      {form.watch("paymentTerms") === "milestone" && (
+        <div className="pt-2">
+          <MilestoneSuggestions
+            projectName={form.getValues("projectName") |"Project"}
+            scopeSummary={form.getValues("scopeSummary") |""}
+            startDate={form.getValues("startDate") |new Date()}
+            endDate={form.getValues("endDate")}
+            projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             projectName={form && form.getValues("projectName") || "Project"}
             scopeSummary={form && form.getValues("scopeSummary") || ""}
             startDate={form && form.getValues("startDate") || new Date()}
@@ -253,6 +449,15 @@ function PaymentTermsFields() {
         </div>)}
     </>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  import {
   FormField;
@@ -295,3 +500,10 @@ handleMilestonesGenerated
     </>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

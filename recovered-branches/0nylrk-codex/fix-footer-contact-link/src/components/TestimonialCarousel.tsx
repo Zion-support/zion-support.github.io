@@ -6,15 +6,46 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components / ui / carousel';
 import { Card, CardContent } from '@/components / ui / card';
 import { Avatar } from '@/components / ui / avatar';
 import { Quote } from './lucide-react';
 const testimonials = [;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+const testimonials = [
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
     author: "Sarah Chen"
     role: "CTO, DataMind Solutions";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     avatar: "https://i.pravatar.cc / 150?img = 32",
     company: "DataMind"},
   {
@@ -29,10 +60,52 @@ const testimonials = [;
     role: "Independent AI Consultant",
     avatar: "https://i.pravatar.cc / 150?img = 28",
     company: "AI Systems"},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+    avatar: "https://i.pravatar.cc/150?img=32"
+    company: "DataMind"}
+  {
+    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry."
+    author: "Michael Rodriguez"
+    role: "IT Director, GlobalTech";
+    avatar: "https://i.pravatar.cc/150?img=12"
+    company: "GlobalTech"}
+  {
+    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.";
+    author: "Aanya Patel"
+    role: "Independent AI Consultant"
+    avatar: "https://i.pravatar.cc/150?img=28"
+    company: "AI Systems"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+=======
+    avatar: "https://i.pravatar.cc/150?img=67"
+    company: "EcoTech"}]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {
   Carousel,
   CarouselContent,
@@ -42,6 +115,21 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Quote } from "lucide-react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -68,6 +156,20 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}],
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -79,6 +181,19 @@ export function TestimonialCarousel() {
           </p>
         </div>
         <div className="max-w-5xl mx-auto px-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const testimonials = [;
   {;
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",;
@@ -134,6 +249,17 @@ function TestimonialCarousel() {
               align: "start"
 
               loop: true}}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          <Carousel
+            opts={{
+              align: "start"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               loop: true}}
             className="w-full"
@@ -174,6 +300,18 @@ function TestimonialCarousel() {
 
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+}
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {;
   Carousel,;
   CarouselContent,;
@@ -247,6 +385,16 @@ export function TestimonialCarousel() {;
                   </Card>;
                 </CarouselItem>;
               ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </CarouselContent>;
             <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
@@ -285,10 +433,69 @@ export function TestimonialCarousel() {;
             <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>;
           </Carousel>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+    </section>);
+=======
+
+;
+    </section>;
+  );}
+ const testimonials = [ {
+  quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!";
+author: "Sarah Chen";
+role: "CTO, DataMind Solutions";
+avatar: "https://i.pravatar.cc/150?img=32";
+company: "DataMind" 
+};
+{
+  quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.";
+author: "Michael Rodriguez";
+role: "IT Director, GlobalTech";
+avatar: "https://i.pravatar.cc/150?img=12";
+company: "GlobalTech" 
+};
+{
+  quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.";
+author: "Aanya Patel";
+role: "Independent AI Consultant";
+avatar: "https://i.pravatar.cc/150?img=28";
+company: "AI Systems" 
+};
+{
+  export function TestimonialCarousel () {
+  return (<section className="py-20 bg-zion-blue-dark" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-12" > <h3 className="text-3xl font-bold text-white mb-3" >What Our Users Say</h3> <p className="text-zion-slate-light text-lg max-w-2xl mx-auto" > max-w-5xl mx-auto px-8" > <Carousel opts= {
+  {
+  </div> </CardContent> </Card> </CarouselItem>) ) 
+}</CarouselContent> </div> </Carousel> </div> </div> </section>) 
+}
+    </section>;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

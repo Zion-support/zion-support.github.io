@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
@@ -18,6 +32,35 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     // Font loading logic would go here
     // For demonstration purposes, we'll just set up the font using standard fonts
     switch (fontFamily) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      case 'montserrat':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'open-sans':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'roboto':
+        doc && doc.setFont('helvetica');
+        break;
+      default: doc && doc.setFont('helvetica')
+    }
+  } catch (error) {
+
+    console && console.error('Error loading custom fonts:', error);
+
+    // Fall back to default font
+=======
+      case 'montserrat':;
+        doc.setFont('helvetica');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         break;
       case 'open-sans':
         doc.setFont('helvetica');
@@ -66,6 +109,21 @@ if (return, ) {
   } catch (error) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    doc.set_font ('helvetica');
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+    doc.setFont('helvetica');
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 

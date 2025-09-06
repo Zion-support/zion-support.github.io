@@ -7,6 +7,14 @@ import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   name: string;
   title: string;
   bio: string;
@@ -33,6 +41,12 @@ export interface CategorizedSkills {;
   platforms: string[];
 import { useState  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface TalentProfileData {
   name: string;
   title: string;
@@ -41,10 +55,37 @@ export interface TalentProfileData {
 export interface CategorizedSkills {
 
 export interface CategorizedSkills {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   programming: string[];
   devops: string[];
   platforms: string[];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+  softSkills: string[]
+
+  other: string[]
+}
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
@@ -54,6 +95,16 @@ export interface EnhancedProfile {
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
     setError(null)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export interface EnhancedProfile {
   summary: string,
@@ -68,12 +119,48 @@ export function useTalentProfileEnhancer() {;
     setIsGenerating(true);
     setError(null),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+=======
+
+      if (error) {
+        throw new Error(error.message)
+
+    try {
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: { talentData: profileData }
+      });
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (error) {
         throw new Error(error.message)
 import { useState } from 'react',;
@@ -118,10 +205,33 @@ export function useTalentProfileEnhancer() {;
 
       setError(err && err.message || 'Failed to enhance profile'),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      setError(err && err.message || 'Failed to enhance profile'),
+      }
+      return data as EnhancedProfile
+    } catch (err: any) {
+      setError(err.message |'Failed to enhance profile')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
   platforms: string[];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return null
     } finally {
       setIsGenerating(false)
@@ -132,12 +242,42 @@ export interface CategorizedSkills {
   
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return {
+    enhanceProfile;
+    isGenerating;
+<<<<<<< HEAD
+
+    error
+=======
+=======
+    error
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   return {
     enhanceProfile;
     isGenerating;
 
     error
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  },;
+  return {;
+    enhanceProfile;
+    isGenerating;
+    error;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   soft_skills: string[],
   other: string[];
 }
@@ -180,9 +320,89 @@ if ( {) {
     enhance_profile;
     is_generating;
     error;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
 
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  }
+}
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+;
+export interface TalentProfileData {;
+  name:string,;
+  title:string,;
+  bio:string,;
+  skills:string[],;
+  location?:string;}
+;
+export interface CategorizedSkills {;
+  programming:string[],;
+  devops:string[],;
+  platforms:string[],;
+  softSkills:string[],;
+  other:string[];
+}
+;
+export interface EnhancedProfile {;
+  summary:string,;
+  categorizedSkills:CategorizedSkills;
+}
+;
+export function useTalentProfileEnhancer() {;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  ;
+  const enhanceProfile = async (profileData:TalentProfileData):Promise<EnhancedProfile | null> => {;
+    setIsGenerating(true),;
+    setError(null),;
+    ;
+    try {;
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {;
+        body:{ talentData:profileData }
+      }),;
+;
+      if (error) {;
+        throw new Error(error.message),;
+      }
+      ;
+      return data as EnhancedProfile,;
+    } catch (err:any) {;
+      setError(err.message || 'Failed to enhance profile'),;
+      return null;
+    } finally {;
+      setIsGenerating(false),;
+    }
+  },;
+  ;
+  return {;
+    enhanceProfile,;
+    isGenerating,;
+    error;
+  },;
+} 
+}
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

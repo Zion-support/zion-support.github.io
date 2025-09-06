@@ -10,12 +10,33 @@ interface CodeBlockProps {;
   showLineNumbers?: boolean;
   className?: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export function CodeBlock(): any ({ ;
+
+=======
+  language?: string;
+  showLineNumbers?: boolean;
+  className?: string;
+}
+export function CodeBlock(): any ({ ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   code;
   language = 'bash';
   showLineNumbers = false;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
+<<<<<<< HEAD
+=======
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
@@ -26,6 +47,41 @@ import { cn } from "@/lib/utils",
 
   language = 'bash';
   showLineNumbers = false;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  className;
+}: CodeBlockProps) {;
+  const [copied, setCopied] = useState(false);
+
+
+
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import {cn} from "@/lib/utils";
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { useState } from 'react',
+import { Check, Copy } from 'lucide-react',
+import { cn } from "@/lib/utils",
+
+
+
+=======
+  className
+}: CodeBlockProps) {
+  const [copied, setCopied] = useState(false);
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import {cn} from "@/lib/utils";
+import { useState } from 'react',
+import { Check, Copy } from 'lucide-react',
+import { cn } from "@/lib/utils",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -33,20 +89,66 @@ interface CodeBlockProps {
   className?: string
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+export function CodeBlock({ ;
+  code;
+  language = 'bash';
+  showLineNumbers = false;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function CodeBlock({ 
   code,
   language = 'bash',
   showLineNumbers = false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => {
       setCopied(false)
     }, 2000)
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
@@ -56,6 +158,14 @@ export function CodeBlock({
     setTimeout(() => {
       setCopied(false)
     }, 2000)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   },
@@ -99,6 +209,13 @@ export function CodeBlock({;
     }, 2000);
   };
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
@@ -157,6 +274,16 @@ function CodeBlock() {
   const [copied, set_copied] = useState (false);
 ;
 export default CodeBlock;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
 ;
 export default CodeBlock,;
@@ -233,3 +360,10 @@ export default CodeBlock;
 
 ;
 export default CodeBlock;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

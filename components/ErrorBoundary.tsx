@@ -1,34 +1,21 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-}
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    this.setState({
-      error,
       errorInfo
     });
 
@@ -37,15 +24,12 @@ class ErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
 
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error details:', error);
-      console.error('Error info:', errorInfo);
     }
   }
 
   render() {
     if (this.state.hasError) {
+
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white max-w-md mx-auto p-6">
@@ -65,29 +49,37 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 Reload Page
               </button>
-              <button 
-                onClick={() => this.setState({ hasError: false })} 
+
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
               >
                 Try Again
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
+
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
                   {this.state.error.stack}
+
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
         </div>
       );
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return this && this.props.children;
   }
 }
@@ -251,6 +243,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return this.props.children;
   }
 }

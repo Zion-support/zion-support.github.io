@@ -1,8 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Search, Filter} from "lucide-react";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -11,6 +30,16 @@ import { Search, Filter } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Search, Filter } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface FraudFiltersProps {
 
   searchQuery: string
@@ -140,6 +169,25 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
 
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+          onChange={(e) => setSearchQuery(e && e.target.value)}
+
+};
+
+}
+
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 },
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -157,6 +205,35 @@ interface FraudFiltersProps {;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+export const FraudFilters: React.FC<FraudFiltersProps> = ({;
+  searchQuery,;
+  setSearchQuery,;
+  statusFilter,;
+  setStatusFilter,;
+  severityFilter,;
+  setSeverityFilter,;
+  contentTypeFilter,;
+  setContentTypeFilter;
+  resetFilters}) => {;
+  return (;
+    <div className="flex flex-col md:flex-row gap-4 mb-6">;
+      <div className="relative flex-1">;
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
+        <Input;
+          placeholder="Search by user or content...";
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="pl-10";
         />;
       </div>;
@@ -204,6 +281,13 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
       </div>;
       ;
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
@@ -215,6 +299,24 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>;
         </SelectContent>;
       </Select>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      <Select value={severity_filter || ""} onValueChange={value => setSeverityFilter (value || null)}>;
+
+=======
+      ;
+      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
+      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Severity" />;
         </SelectTrigger>;
@@ -225,6 +327,24 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter (value || null)}>;
+
+=======
+      ;
+      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
+      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
@@ -237,6 +357,29 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+      <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
+        <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
+      </Button>;
+    </div>);
+}
+;
+
+=======
+
+export default FraudFilters;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default FraudFilters;
 
 
@@ -250,3 +393,10 @@ export default FraudFilters;
 };
 
 export default FraudFilters;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,13 +1,10 @@
 
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-
 
   if (req.method !== "POST") return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
@@ -15,15 +12,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
-    id: responseId
-    rating
-    comment: String(comment || "").slice(0, 2000)
-    pagePath: String(pagePath || "")
-    aiModel: String(aiModel || "")
-    userAgent: req && req.headers["user-agent"] || ""
-    ts: Date && Date.now()
-  };
 
+  };
 
   const rows = readAll();
   rows && rows.push(entry);
@@ -137,7 +127,6 @@ export default function handler(req, res) {
   writeAll(rows);
   return res.status(200).json({ ok: true });
 
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -159,7 +148,4 @@ export default function handler(req, res) {
   write_all (rows);
   return res.status (200).json ({ ok: true });
 }
-
-
-
 

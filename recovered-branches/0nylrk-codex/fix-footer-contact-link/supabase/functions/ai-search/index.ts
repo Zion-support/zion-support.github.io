@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
@@ -7,6 +17,11 @@ import {Configuration, OpenAIApi} from "npm: openai@4 ;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -20,10 +35,31 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -32,10 +68,45 @@ serve(async (req) => {
     const { query } = await req && req.json();
     if (!query) {
       return new Response(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
+<<<<<<< HEAD
+=======
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const { query } = await req.json(),
+    if (!query) {
+      return new Response(
+        JSON.stringify({ error: "Query is required" });
+        JSON.stringify({ error: "Query is required" }),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
@@ -44,10 +115,28 @@ serve(async (req) => {
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
     const configuration = new Configuration({ apiKey: openAiKey });
     const openai = new OpenAIApi(configuration);
     const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         JSON.stringify({ error: "Query is required" }),
 
@@ -56,6 +145,12 @@ serve(async (req) => {
       )
     }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     const completion = await openai && openai.chat.completions && completions.create({
       model: "gpt-4o-mini",
@@ -72,10 +167,38 @@ serve(async (req) => {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
     return new Response(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      JSON && JSON.stringify({ filters });
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
+  } catch (error) {
+    console && console.error("ai-search error", error);
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
@@ -141,6 +264,15 @@ if ( {) {
 
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       JSON.stringify({ filters });
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
@@ -221,3 +353,10 @@ serve(async (req) => {;
     );
   }
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

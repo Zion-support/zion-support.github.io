@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -14,6 +27,44 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Define the form schema with zod;
+const productSchema = z && z.object({;
+  title: z && z.string().min(3, "Title must be at least 3 characters");
+  description: z && z.string().min(10, "Description must be at least 10 characters");
+  price: z && z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
+    message: "Price must be a valid number"}),;
+  category: z && z.string().min(1, "Please select a category");
+  image: z && z.instanceof(File).optional(),;
+  tags: z && z.string().optional()}),;
+
+// Type for our form values;
+type ProductFormValues = z && z.infer<typeof productSchema>;
+
+export function ProductSubmissionForm() {;
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = React && React.useState(false);
+  const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
+  const [activeTab, setActiveTab] = React && React.useState("manual");
+=======
+
+
+
+=======
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -48,6 +99,15 @@ import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Define the form schema with zod;
 const productSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
@@ -77,6 +137,29 @@ const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+    message: "Price must be a valid number"})
+  category: z.string().min(1, "Please select a category");
+  image: z.instanceof(File).optional()
+  tags: z.string().optional()})
+// Type for our form values
+type ProductFormValues = z.infer<typeof productSchema>;
+export function ProductSubmissionForm() {
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [imagePreview, setImagePreview] = React.useState(null as string | null);
+  const [activeTab, setActiveTab] = React.useState("manual");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     message: "Price must be a valid number"}),
   category: z.string().min(1, "Please select a category"),
   image: z.instanceof(File).optional(),
@@ -85,6 +168,31 @@ const productSchema = z.object({
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+export function ProductSubmissionForm() {;
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [imagePreview, setImagePreview] = React.useState(null as string | null);
+  const [activeTab, setActiveTab] = React.useState("manual");
+export function ProductSubmissionForm() {
+  const { user } = useAuth(),
+  const { toast } = useToast(),
+  const navigate = useNavigate(),
+  const [isSubmitting, setIsSubmitting] = React.useState(false),
+  const [imagePreview, setImagePreview] = React.useState(null as string | null),
+  const [activeTab, setActiveTab] = React.useState("manual"),
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
@@ -102,11 +210,36 @@ type ProductFormValues = z.infer<typeof productSchema>,
       const reader = new FileReader(),
       reader.onloadend = () => {
         setImagePreview(reader.result as string)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue("description", content.description);
+    form.setValue("tags", content.tags.join(", "));
+    // Set a default price as the middle of the suggested range
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
+    form.setValue("price", averagePrice);
+    // Switch to the manual tab to show applied content
+    setActiveTab("manual")
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       },
       reader.readAsDataURL(file)
     }
   },
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
     form.setValue("description", content.description),
@@ -190,7 +323,23 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      },
+      reader.readAsDataURL(file)
+    }
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -254,6 +403,18 @@ export function ProductSubmissionForm() {;
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+    setIsSubmitting(true);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {;
       // Create the product listing;
       const productData = {;
@@ -348,6 +509,13 @@ export function ProductSubmissionForm() {;
       <TabsContent value="manual">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <FormField
               control={form.control}
               name="title"
@@ -594,6 +762,14 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
             <FormField
               control={form && form.control}
@@ -608,6 +784,13 @@ if ( {) {
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <FormControl>;
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
@@ -615,6 +798,21 @@ if ( {) {
                     Create a compelling title that describes your product;
                   </FormDescription>;
                   <FormMessage />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                </FormItem>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               )}
 
             />;
@@ -728,6 +926,72 @@ if ( {) {
                   )}
                 </FormItem>;
               )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            />;
+
+            <div className="flex justify-end">;
+              <Button
+                type="submit" 
+
+                disabled={isSubmitting}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+                {isSubmitting ? "Publishing..." : "Publish Product"}
+
+
+            title: form.getValues("title"),
+
+
+            category: form.getValues("category")
+=======
+=======
+            />;
+            <div className="flex justify-end">;
+              <Button
+                type="submit" 
+                disabled={isSubmitting}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+                {isSubmitting ? "Publishing..." : "Publish Product"}
+                    <Input ;
+                      type="file" ;
+                      accept="image/*" ;
+                      onChange={handleImageChange}
+                      className="cursor-pointer";
+                    />;
+                  </FormControl>;
+                  <FormDescription>;
+                    Upload a high-quality image of your product (recommended size:1200x800px);
+                  </FormDescription>;
+                  <FormMessage />;
+                  ;
+                  {imagePreview && (;
+                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">;
+                      <AspectRatio ratio={3/2}>;
+                        <img ;
+                          src={imagePreview} ;
+                          alt="Preview" ;
+                          className="w-full h-full object-cover";
+                        />;
+                      </AspectRatio>;
+                    </div>;                  )}
+                </FormItem>;
+              )}
+            />;
+;
+            <div className="flex justify-end">;
+              <Button ;
+                type="submit" ;
+                disabled={isSubmitting}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+              >;
+                {isSubmitting ? "Publishing..." :"Publish Product"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>;
             </div>;
           </form>;
@@ -745,6 +1009,13 @@ if ( {) {
           initialValues={{;
             title:form.getValues("title"),;
             category:form.getValues("category");
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
         />;
       </TabsContent>;
@@ -807,6 +1078,14 @@ if ( {) {
         />;
       </TabsContent>;
     </Tabs>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),; import {
   Form;
 FormControl;
@@ -876,4 +1155,11 @@ return (<Tabs value= {
       </TabsContent>
     </Tabs>
   )
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }

@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const logger = winston && winston.createLogger({
+  level: 'info',
+  format: winston && winston.format.combine(
+    winston && winston.format.timestamp(),
+    winston && winston.format.errors({ stack: true }),
+    winston && winston.format.json()
+  ),
+  defaultMeta: { service: 'automation-script' },
+  transports: [
+    new winston && winston.transports.File({ filename: 'logs/error && error.log', level: 'error' }),
+    new winston && winston.transports.File({ filename: 'logs/combined && combined.log' })
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ]
 })
 
@@ -19,6 +41,24 @@ class AggressiveSyntaxFixer {
         this.fixedFiles = [],
         this.errors = []
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        this.projectRoot = process.cwd(),
+        this.fixedFiles = [],
+        this.errors = []
+        this.projectRoot = process.cwd(),
+        this.fixedFiles = [],
+        this.errors = []
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -47,6 +87,21 @@ class AggressiveSyntaxFixer {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
         this.errors = [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 ;
     log(message) {;
@@ -99,11 +154,35 @@ class AggressiveSyntaxFixer {;
             this.log(`❌ Error fixing ${filePath}: ${error.message}`);
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         this.projectRoot = process.cwd()
         this.fixedFiles = []
 
         this.errors = []
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         this && this.projectRoot = process && process.cwd(),
         this && this.fixedFiles = [],
         this && this.errors = []
@@ -112,18 +191,97 @@ class AggressiveSyntaxFixer {;
         logger && logger.info(`[Aggressive Syntax Fixer] ${message}`)
     }
     async fixAllSyntaxErrors() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        this && this.log('🔧 Starting aggressive syntax error fixing...'),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     log(message) {
         logger.info(`[Aggressive Syntax Fixer] ${message}`)
     }
     async fixAllSyntaxErrors() {
 
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         try {
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
                 ignore: ['node_modules/**.next/**dist/**build/**']
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+            }),
+
+            this && this.log(`📁 Found ${files && files.length} files to check`),
+
+
+            })
+            this.log(`📁 Found ${files.length} files to check`)
+            for (const file of files) {
+                await this && this.fixFile(file)
+            }
+            this.log(`✅ Fixed ${this.fixedFiles.length} files`)
+
+
+            this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
+            if (this && this.errors.length > 0) {
+                this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
+
+            }
+            return {
+
+                fixedFiles: this && this.fixedFiles,
+                errors: this && this.errors
+
+            }
+        } catch (error) {
+
+            this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
+=======
+            }),
+            this && this.log(`📁 Found ${files && files.length} files to check`),
+            })
+            this.log(`📁 Found ${files.length} files to check`)
+            for (const file of files) {
+                await this && this.fixFile(file)
+            }
+            this.log(`✅ Fixed ${this.fixedFiles.length} files`)
+            this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
+            if (this && this.errors.length > 0) {
+                this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
+            }
+            return {
+                fixedFiles: this && this.fixedFiles,
+                errors: this && this.errors
+            }
+        } catch (error) {
+            this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             })
             this.log(`📁 Found ${files.length} files to check`)
             for (const file of files) {
@@ -131,12 +289,94 @@ class AggressiveSyntaxFixer {;
             }
             this.log(`✅ Fixed ${this.fixedFiles.length} files`)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            if (this.errors.length > 0) {
+                this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`)
+            }
+            return {
+
+                fixedFiles: this.fixedFiles
+
+                errors: this.errors
+            }
+        } catch (error) {
+
+            this.log(`❌ Error fixing syntax: ${error.message}`)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             throw error
         }
     }
     async fixFile(filePath) {
         try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            const fullPath = path && path.join(this && this.projectRoot, filePath),
+            const content = fs && fs.readFileSync(fullPath, 'utf8'),
+            const originalContent = content,
+            
+            // Check if this file has syntax errors
+            if (this && this.hasSyntaxErrors(content)) {
+                const fixedContent = this && this.createValidFile(filePath),
+                fs && fs.writeFileSync(fullPath, fixedContent),
+                this && this.fixedFiles.push(filePath),
+                this && this.log(`✅ Fixed: ${filePath}`)
+
+            }
+        } catch (error) {
+
+            this && this.errors.push({ file: filePath, error: error && error.message }),
+            this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
+
+=======
+            const fullPath = path && path.join(this && this.projectRoot, filePath),
+            const content = fs && fs.readFileSync(fullPath, 'utf8'),
+            const originalContent = content,
+            // Check if this file has syntax errors
+            if (this && this.hasSyntaxErrors(content)) {
+                const fixedContent = this && this.createValidFile(filePath),
+                fs && fs.writeFileSync(fullPath, fixedContent),
+                this && this.fixedFiles.push(filePath),
+                this && this.log(`✅ Fixed: ${filePath}`)
+            }
+        } catch (error) {
+            this && this.errors.push({ file: filePath, error: error && error.message }),
+            this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
+
+            const fullPath = path.join(this.projectRoot, filePath)
+            const content = fs.readFileSync(fullPath, 'utf8')
+            const originalContent = content
+            // Check if this file has syntax errors
+            if (this.hasSyntaxErrors(content)) {
+                const fixedContent = this.createValidFile(filePath)
+                fs.writeFileSync(fullPath, fixedContent)
+                this.fixedFiles.push(filePath)
+
+                this.log(`✅ Fixed: ${filePath}`)
+            }
+        } catch (error) {
+
+            this.errors.push({ file: filePath, error: error.message })
+
+            this.log(`❌ Error fixing ${filePath}: ${error.message}`)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
     }
     hasSyntaxErrors(content) {
@@ -161,6 +401,20 @@ class AggressiveSyntaxFixer {;
 
         ]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
+    }
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return errorPatterns.some(pattern => pattern.test(content))
     }
     createValidFile(filePath) {
@@ -169,6 +423,15 @@ class AggressiveSyntaxFixer {;
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
         // Convert invalid characters to valid ones
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -181,6 +444,20 @@ class AggressiveSyntaxFixer {;
         
 if (ext === '.tsx' || ext === '.jsx') {;
             return `import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    createValidFile(filePath) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         const ext = path && path.extname(filePath),
         const fileName = path && path.basename(filePath, ext),
         const dirName = path && path.dirname(filePath),
@@ -285,6 +562,8 @@ process.on('SIGTERM', () => {
 ;
 ;
 module.exports = AggressiveSyntaxFixer,;
+<<<<<<< HEAD
+=======
 
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
 
@@ -292,6 +571,7 @@ module.exports = AggressiveSyntaxFixer,;
   process && process.exit(0)
 }),
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         return `// ${validFileName} placeholder;
 const ${validFileName} = {}`;
@@ -575,3 +855,13 @@ process.on('SIGTERM', () => {;
   // Add cleanup logic here;
   process.exit(0);
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

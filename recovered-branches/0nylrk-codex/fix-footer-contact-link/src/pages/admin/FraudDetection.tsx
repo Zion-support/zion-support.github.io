@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+import React, { useState, useEffect } from "react";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Button} from "@/components/ui/button";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {FraudFlag, FraudStats} from "@/types/fraud";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -21,6 +44,16 @@ import {
   FraudFlagsTable,
   FraudTabContent
 } from "@/components/admin/fraud-detection",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 export default function FraudDetection() {
@@ -47,6 +80,11 @@ export default function FraudDetection() {
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [stats, setStats] = useState<FraudStats>({
 
     total_flags: 0
@@ -62,6 +100,21 @@ export default function FraudDetection() {
       const { data, error } = await supabase
         .from("fraud_flags")
         .select("*")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+        .order("timestamp", { ascending: false })
+      if (error) throw error;
+      setFlags(data |[]);
+      setFilteredFlags(data |[]);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .order("timestamp", { ascending: false }),
 
       if (error) throw error,
@@ -69,6 +122,17 @@ export default function FraudDetection() {
       setFlags(data || []),
       setFilteredFlags(data || []),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Calculate stats
       const newStats: FraudStats = {
         total_flags: data?.length |0
@@ -86,6 +150,35 @@ export default function FraudDetection() {
         variant: "destructive"})
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+    }
+  }
+  useEffect(() => {
+    fetchFraudFlags()
+  }, []);
+  // Apply filters
+  useEffect(() => {
+    let result = [...flags];
+    // Apply search filter
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter(
+        (flag) =>
+          flag.user_email?.toLowerCase().includes(query) |
+          flag.content_excerpt.toLowerCase().includes(query) |
+          flag.reason.toLowerCase().includes(query)
+      )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect } from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -163,6 +256,11 @@ export default function FraudDetection() {;
           flag.reason.toLowerCase().includes(query);
       );
     }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     // Apply status filter
     if (statusFilter) {
@@ -176,6 +274,24 @@ export default function FraudDetection() {;
     if (contentTypeFilter) {
       result = result.filter((flag) => flag.content_type === contentTypeFilter)
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+
+
+=======
+
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -227,13 +343,78 @@ export default function FraudDetection() {;
     false_positives: 0,;
     actioned_count: 0}),;
 
+<<<<<<< HEAD
+=======
+
+
+=======
+    setFilteredFlags(result)
+  }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
+  const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
+    try {
+      const status = action === 'ignore' ? 'ignored' : 'actioned';
+      const actionTaken = action === 'ignore' ? 'none' : action
+      const { error } = await supabase
+        .from("fraud_flags")
+        .update({
+          status;
+          action_taken: actionTaken
+          reviewed_at: new Date().toISOString()
+          // In a real app, you'd get the current user's ID
+          reviewed_by: 'admin'
+        })
+        .eq("id", flagId);
+      if (error) throw error;
+
+    setFilteredFlags(result)
+  }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),
+
+  const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
+    try {
+      const status = action === 'ignore' ? 'ignored' : 'actioned',
+      const actionTaken = action === 'ignore' ? 'none' : action,
+      
+      const { error } = await supabase
+        .from("fraud_flags")
+        .update({
+          status,
+          action_taken: actionTaken,
+          reviewed_at: new Date().toISOString(),
+          // In a real app, you'd get the current user's ID
+          reviewed_by: 'admin'
+        })
+        .eq("id", flagId),
+
+      if (error) throw error,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: "Flag updated"
         description: `Action '${action}' was applied successfully.`})
       // Refresh the data
       fetchFraudFlags()
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error updating fraud flag:", error),
+=======
+<<<<<<< HEAD
+      console.error("Error updating fraud flag:", error),
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      console.error("Error updating fraud flag:", error);
+=======
+      console.error("Error updating fraud flag:", error),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      console.error("Error updating fraud flag:", error),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: "Error"
         description: "Failed to update flag"
@@ -245,7 +426,39 @@ export default function FraudDetection() {;
     setSeverityFilter(null);
     setContentTypeFilter(null)
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  },
+
+  const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter),
+
+
+<<<<<<< HEAD
+=======
+  }
+  },
+
+  const resetFilters = () => {
+    setSearchQuery(""),
+    setStatusFilter(null),
+    setSeverityFilter(null),
+    setContentTypeFilter(null)
+  }
+  const hasFilters = !!(searchQuery |statusFilter |severityFilter |contentTypeFilter);
+  },
+
+  const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <AppLayout>
       <SEO
@@ -263,6 +476,24 @@ export default function FraudDetection() {;
             </p>
           </div>
           <div className="mt-4 md:mt-0">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+            <Button
+              onClick={fetchFraudFlags}
+              className="bg-zion-purple hover:bg-zion-purple-light"
+            <Button 
+              onClick={fetchFraudFlags} 
+              className="bg-zion-purple hover:bg-zion-purple-light"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     setFilteredFlags(result);
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;
@@ -321,12 +552,25 @@ export default function FraudDetection() {;
             <Button;
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <Button 
               onClick={fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               disabled={isLoading}
             >
               Refresh Data
@@ -342,10 +586,21 @@ export default function FraudDetection() {;
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <TabsContent value="all" className="mt-6">
 
           <TabsContent value="all" className="mt-6">
@@ -600,6 +855,19 @@ if (throw error) {
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>;
             <TabsTrigger value="actioned">Actioned</TabsTrigger>;
           </TabsList>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          <TabsContent value="all" className="mt - 6">;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Search and Filters */}
             <FraudFilters;
               search_query={search_query}
@@ -619,6 +887,35 @@ if (throw error) {
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
                   onAction={handleAction}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+                />
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="pending">
+            <FraudTabContent tabValue="pending" />
+          </TabsContent>
+          <TabsContent value="dangerous">
+            <FraudTabContent tabValue="dangerous" />
+          </TabsContent>
+          <TabsContent value="actioned">
+            <FraudTabContent tabValue="actioned" />
+          </TabsContent>
+        </Tabs>
+      </div>
+    </AppLayout>
+  )
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               reset_filters={reset_filters}
             />;
             {/* Flags Table */}
@@ -739,3 +1036,10 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

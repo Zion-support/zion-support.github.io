@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -56,11 +68,57 @@ exports.handler = async function () {
         });
         return map;
       }, {}),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    }
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+;
+    const content = JSON.stringify (summary, null, 2);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({
+        owner,
+        repo,
+        path: 'data / learn / insights - weekly.json',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+        users: Object.keys(users).length,
+        courses: courses.length,
+        completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
+      },
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return map
       }, {})
     },
@@ -107,9 +165,48 @@ exports.handler = async function () {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+      await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+
+},
+
+=======
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

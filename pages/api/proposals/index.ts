@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -10,6 +11,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -29,6 +34,10 @@ async function ensureStore() {;
   try {
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -82,6 +91,7 @@ export default async function handler(
     return res && res.status(201).json(item);
   }
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -96,10 +106,14 @@ function ensure_store() {
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
   $2
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch {
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
+<<<<<<< HEAD
 export default async /**
  * handler - Function description
  */
@@ -132,6 +146,8 @@ if ( {) {
     return res.status (201).json (item);
   }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   } catch (error) {
     console.error("Error:", error);
@@ -165,6 +181,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -178,3 +198,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

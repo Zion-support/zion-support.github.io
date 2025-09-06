@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -11,10 +47,42 @@ import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {;
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import React, { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { TalentGrid } from "@/components/talent/TalentGrid",
+import { FilterSidebar } from "@/components/talent/FilterSidebar",
+import { TalentResults } from "@/components/talent/TalentResults",
+import { useTalentDirectory } from "@/hooks/useTalentDirectory",
+import { SORT_OPTIONS } from "@/data/sortOptions",
+import { X } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   // Use our custom hook to manage state;
   const {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
@@ -57,6 +125,37 @@ function TalentDirectory() {
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    selected_talent;
+    setSelectedTalent;
+<<<<<<< HEAD
+=======
+
+
+
+
+
+  const navigate = useNavigate();
+  // Use our custom hook to manage state
+  const {
+
+=======
+    selectedTalent;
+    setSelectedTalent;
+    expandedSections;
+    isAuthenticated;
+    savedTalents;
+    toggleSkill;
+    toggleAvailability;
+    toggleRegion;
+    clearFilters;
+    toggleSection;
+    handleToggleSave} = useTalentDirectory();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     filteredTalents,
     isLoading,
     searchTerm,
@@ -95,6 +194,11 @@ function TalentDirectory() {
   
     selected_talent;
     setSelectedTalent;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -105,11 +209,58 @@ function TalentDirectory() {
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+                selectedSkills={selectedSkills}
+                toggleSkill={toggleSkill}
+                selectedAvailability={selectedAvailability}
+                toggleAvailability={toggleAvailability}
+                selectedRegions={selectedRegions}
+                toggleRegion={toggleRegion}
+                priceRange={priceRange}
+                setPriceRange={setPriceRange}
+                experienceRange={experienceRange}
+                setExperienceRange={setExperienceRange}
+                expandedSections={expandedSections}
+                toggleSection={toggleSection}
+                sortOption={sortOption}
+                setSortOption={setSortOption}
+                clearFilters={clearFilters}
+              />
+            </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -173,6 +324,27 @@ export default function TalentDirectory() {;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+          ;
+          {/* Main content */}
+          <div className="flex flex-col lg:flex-row gap-6">;
+            {/* Sidebar - Desktop */}
+            <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
+              <FilterSidebar;
+                searchTerm={searchTerm}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -256,6 +428,8 @@ export default function TalentDirectory() {;
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
+<<<<<<< HEAD
+=======
 
                 selected_skills;
                 toggle_skill;
@@ -264,6 +438,40 @@ export default function TalentDirectory() {;
                 selected_regions;
                 toggle_region;
                 price_range;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                setPriceRange;
+                experience_range;
+=======
+              isAuthenticated={isAuthenticated}
+
+=======
+              isAuthenticated={isAuthenticated}
+
+            
+            {/* Results */}
+            <TalentResults
+              filteredTalents={filteredTalents}
+              isLoading={isLoading}
+              viewProfile={viewProfile}
+              handleRequestHire={handleRequestHire}
+              savedTalents={savedTalents}
+              handleToggleSave={handleToggleSave}
+              isAuthenticated={isAuthenticated}
+              activeFiltersProps={{
+                selectedSkills;
+                toggleSkill;
+                selectedAvailability;
+                toggleAvailability;
+                selectedRegions;
+                toggleRegion;
+                priceRange;
+                setPriceRange;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
@@ -273,12 +481,27 @@ export default function TalentDirectory() {;
                 toggleRegion,;
                 priceRange,;
                 setPriceRange,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 experienceRange;
                 setExperienceRange;
 
                 setPriceRange;
                 experience_range;
                 setExperienceRange;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 selectedSkills
                 toggleSkill
                 selectedAvailability
@@ -309,6 +532,11 @@ export default function TalentDirectory() {;
                 setPriceRange;
                 experience_range;
                 setExperienceRange;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
@@ -373,6 +601,15 @@ export default function TalentDirectory() {;
 }
 
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>;
             )}
           </div>
@@ -529,3 +766,10 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

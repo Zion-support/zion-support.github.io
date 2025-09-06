@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+
+export type ForumCategory =
+export type ForumCategory = 
+export type ForumCategory = 
+=======
 export type ForumCategory =
   | "getting-hired"
   | "project-help"
   | "ai-tools"
   | "feedback"
   | "announcements";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   id: ForumCategory;
   name: string;
@@ -82,10 +89,41 @@ export interface UserBadge {
 
 }
 export interface CommunityUser {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export interface UserBadge {;
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  id: string;
+  name: string;
+  description: string;
+  icon: string
+  color: string
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface UserBadge {
 
 
 export interface UserBadge {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   userId: string;
   badgeId: string;
   awardedAt: string;
@@ -94,9 +132,24 @@ export interface UserBadge {;
 
 export interface CommunityUser {;
 
+<<<<<<< HEAD
 export interface CommunityUser {
 
 export interface CommunityUser {;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export interface CommunityUser {
+
+export interface CommunityUser {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export interface Badge {
   id: string;
@@ -104,6 +157,13 @@ export interface Badge {
   description: string;
 }
 export interface CommunityUser {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   name: string;
   avatar?: string;
@@ -124,6 +184,9 @@ export interface CommunityUser {
   post_count: number;
   reply_count: number;
   badges: Badge[];
+<<<<<<< HEAD
+=======
   isVerified: boolean;
   isModerator: boolean;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

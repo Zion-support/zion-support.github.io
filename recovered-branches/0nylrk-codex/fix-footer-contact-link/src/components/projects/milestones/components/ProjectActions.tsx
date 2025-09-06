@@ -1,4 +1,33 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+=======
+
+
+
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Link  } from 'react-router-dom';
+import { ShieldAlert } from "lucide-react";
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface ProjectActionsProps {
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+import {Button} from '@/components/ui/button';
+import {Link} from 'react-router-dom';
+import {ShieldAlert} from "lucide-react";
+import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   projectId: string
   isUnderDispute: boolean
@@ -9,11 +38,41 @@ import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
@@ -22,6 +81,17 @@ interface ProjectActionsProps {
   onAddMilestone: () => void
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ProjectActions({;
   projectId;
   isUnderDispute;
@@ -56,10 +126,30 @@ export function ProjectActions({
 }: ProjectActionsProps) {
   return (
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
         />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -80,6 +170,42 @@ export function ProjectActions({;
   isTalent;
   onAddMilestone;
 }: ProjectActionsProps) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return (;
+
+=======
+  return (
+
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Link } from 'react-router-dom',;
+import { ShieldAlert } from "lucide-react",;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+;
+interface ProjectActionsProps {;
+  projectId:string,;
+  isUnderDispute:boolean,;
+  disputeId?:string,;
+  isTalent:boolean,;
+  onAddMilestone:() => void;
+}
+;
+export function ProjectActions({;
+  projectId,;
+  isUnderDispute,;
+  disputeId,;
+  isTalent,;
+  onAddMilestone;
+} ProjectActionsProps) {;
+  return (;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="flex gap-2">;
       {isUnderDispute && disputeId ? (;
         <Button variant="outline" asChild>;
@@ -99,18 +225,48 @@ export function ProjectActions({;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      ) : (;
+        <RaiseDisputeButton;
+          projectId={projectId}
+          variant="outline";
+        />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
           Add Milestone
         </Button>
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>
   )
 }
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Button} from '@/components / ui / button';
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
@@ -143,6 +299,17 @@ function ProjectActions() {
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
           Add Milestone;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </Button>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   ),;}
  interface ProjectActionsProps {
@@ -172,3 +339,10 @@ onAddMilestone
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

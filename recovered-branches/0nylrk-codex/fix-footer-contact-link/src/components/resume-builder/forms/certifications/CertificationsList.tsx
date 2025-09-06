@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+import { Certification  } from '@/types/resume';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Edit, Trash2  } from 'lucide-react';
+import { format } from 'date-fns';
+import {Certification} from '@/types/resume';
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Edit, Trash2} from 'lucide-react';
+import {format} from 'date-fns';
+interface CertificationsListProps {
+  certifications: Certification[];
+  onEdit: (cert: Certification) => void;
+  onDelete: (id: string) => void
+import { Certification } from '@/types/resume',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Edit, Trash2 } from 'lucide-react',;
+import { format } from 'date-fns',;
+interface CertificationsListProps {;
+  certifications: Certification[],;
+  onEdit: (cert: Certification) => void;
+  onDelete: (id: string) => void;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Certification } from "@/types/resume";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,6 +49,8 @@ export function CertificationsList({
 
 
   return (
+<<<<<<< HEAD
+=======
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
       {certifications.map((cert) => (
@@ -49,14 +77,47 @@ export function CertificationsList({
                         ? cert.expiration_date
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   )}
                 </p>;
               </div>;
               <div className="flex gap-2">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <Button
+                  variant="ghost"
+                  size="icon"
+=======
+                <Button;
+                  variant="ghost";
+                  size="icon";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   onClick={() => onEdit(cert)}
                 >;
                   <Edit className="h-4 w-4" />;
                 </Button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {cert.credential_url && (
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <Button
+                  variant="ghost"
+                  size="icon"
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {typeof cert.expiration_date === "string";
                         ? cert.expiration_date;
                         : format (cert.expiration_date, "MMM yyyy")}
@@ -80,6 +141,37 @@ export function CertificationsList({
                 </Button>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+            {cert.credential_url && (
+              <p className="text-xs mt-2">
+                <a
+                  href={cert.credential_url}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  View credential
+                </Link>
+              </p>
+            )}
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
+}
+;
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' 
 }{
@@ -102,3 +194,10 @@ export function CertificationsList({
   )
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -7,6 +7,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -27,6 +29,7 @@
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
@@ -35,9 +38,13 @@
 
 =======
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { execSync } = require('child_process');
 >>>>>>> origin/main
 const fs = require('fs');
@@ -45,6 +52,8 @@ const path = require('path');
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 console.log('🔍 Starting SEO Optimizer...');
 
@@ -298,6 +307,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class SEOOptimizer {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
@@ -419,6 +429,9 @@ class SEOOptimizer {
   }
 }
 
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -620,6 +633,7 @@ module.exports = SEOOptimizer;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -637,6 +651,9 @@ module.exports = SEOOptimizer;
 const optimizer = new SEOOptimizer();
 <<<<<<< HEAD
 optimizer.optimize().catch(console.error);
+=======
+<<<<<<< HEAD
+optimizer.optimize().catch(console.error);
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -651,3 +668,4 @@ optimizer.optimizeSEO().catch(console.error);
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

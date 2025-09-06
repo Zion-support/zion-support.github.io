@@ -1,9 +1,33 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ChatMessage  } from './ChatMessage';
 import { ChatInput  } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 export interface Message {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -15,16 +39,47 @@ import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
   read?: boolean
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: string,
     name: string,;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 
@@ -50,7 +105,26 @@ export interface ChatAssistantProps {
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+=======
+<<<<<<< HEAD
+=======
+import {ChatMessage} from './ChatMessage';
+import {ChatInput} from './ChatInput';
+
+export function ChatAssistant({
+
+export function ChatAssistant({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isOpen;
   onClose;
   recipient;
@@ -58,6 +132,29 @@ import React, { useState, useEffect, useRef, ReactNode } from 'react';
 
   initialMessages = [];
   onSendMessage;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  contextHeader;
+}: ChatAssistantProps) {;
+
+=======
+  contextHeader
+}: ChatAssistantProps) {
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (initialMessages.length > 0) {
+      setMessages(initialMessages)
+    }
+  }, [initialMessages]);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
@@ -126,6 +223,13 @@ export function ChatAssistant({;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
@@ -134,16 +238,36 @@ export function ChatAssistant({;
   }
   }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
     scrollToBottom()
   }, [messages]),
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
+<<<<<<< HEAD
+=======
 
       id: Date.now().toString(),
       role: 'user',
@@ -159,6 +283,12 @@ export function ChatAssistant({;
 
   if (!isOpen) return null,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -192,6 +322,71 @@ export function ChatAssistant({;
           ) : (;
             messages && messages.map((msg) => (;
               <ChatMessage
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+                key={msg.id} 
+
+
+=======
+                key={msg.id} 
+
+
+
+  return (
+    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
+        {/* Header */}
+        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
+          <div className="flex items-center space-x-3">
+            <Avatar className="h-10 w-10 border border-zion-purple/20">
+              <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />
+              <AvatarFallback className="bg-zion-purple/20 text-white">
+                {recipient.name.charAt(0).toUpperCase()}
+              </AvatarFallback>
+            </Avatar>
+            <div>
+              <div className="font-medium text-white">{recipient.name}</div>
+              {recipient.role && (
+                <div className="text-xs text-zion-slate">{recipient.role}</div>
+              )}
+            </div>
+          </div>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-white hover:bg-zion-purple/10 rounded-full"
+            onClick={onClose}
+          >
+            <X className="h-5 w-5" />
+          </Button>
+        </div>
+        {/* Context Header (Optional) */}
+        {contextHeader && (
+          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
+            {contextHeader}
+          </div>
+        )}
+        {/* Messages */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          {messages.length === 0 ? (
+            <div className="text-center text-zion-slate py-8">
+              <p>Start a conversation with {recipient.name}</p>
+            </div>
+          ) : (
+            messages.map((msg) => (
+              <ChatMessage
+                key={msg.id}
+                key={msg.id} 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 role={msg.role}
                 message={msg.message}
               />
@@ -199,6 +394,19 @@ export function ChatAssistant({;
           )}
           <div ref={messagesEndRef} />
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 key={msg && msg.id} 
                 role={msg && msg.role}
                 message={msg && msg.message}
@@ -337,6 +545,16 @@ if (return null) {
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
@@ -532,8 +750,21 @@ return ()
 }
 };
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 }
 
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

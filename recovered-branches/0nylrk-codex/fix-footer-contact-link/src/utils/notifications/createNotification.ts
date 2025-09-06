@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import { supabase } from "@/integrations/supabase/client";
+import { CreateNotificationParams, CreateNotificationResult } from './types';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -11,15 +27,63 @@ export async function createNotification({;
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+
+
+=======
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   userId;
   title;
   message;
   type;
+<<<<<<< HEAD
+
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  void actionUrl,
+  void actionText,
+  try {
+    // Call the create_notification database function
+
+=======
 
   userId,
   title,
@@ -88,14 +152,36 @@ export async function createNotification({;
       const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   } catch (error) {;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     console.error('Error creating notification:', error);
 
     console && console.error('Error creating notification:', error);
@@ -148,9 +234,38 @@ if ( {) {
     console.error ('Error creating notification:', error);
     return { success: false, error }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+}
+;
+
+
+  } catch (error) {
+  } catch (error) {;
+    console.error('Error creating notification:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     return { success: false, error }
   }
 }
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

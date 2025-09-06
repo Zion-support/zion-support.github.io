@@ -1,15 +1,52 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
   const [disputeId, setDisputeId] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+  const [isLoading, setIsLoading] = useState(true);
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [isLoading, setIsLoading] = useState(true);
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -19,15 +56,54 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [disputeId, setDisputeId] = useState<string | null>(null),
   const [isLoading, setIsLoading] = useState(true),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
 
     const checkDispute = async () => {
       if (!projectId && !milestoneId) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        setIsLoading(false);
+        return
+      }
+      try {
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         setIsLoading(false),
         return
       }
       try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        setIsLoading(true);
+        let query = supabase
+          .from("disputes")
+          .select("id, status")
+          .eq("project_id", projectId);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         setIsLoading(true),
         
         let query = supabase
@@ -37,8 +113,34 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          query = query && query.eq("milestone_id", milestoneId)
+        }
+        // Order by status priority: open, under_review, resolved, closed
+<<<<<<< HEAD
+=======
+
+        query = query && query.order("status", { ascending: true });
+        
+
+        const { data, error } = await query;
+        if (error) throw error;
+=======
+
+=======
+          query = query.eq("milestone_id", milestoneId)
+        }
+        // Order by status priority: open, under_review, resolved, closed
+        query = query.order("status", { ascending: true });
+        const { data, error } = await query;
+        if (error) throw error;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         query = query.order("status", { ascending: true }),
         
         const { data, error } = await query,
@@ -50,6 +152,11 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           query = query && query.eq("milestone_id", milestoneId)
         }
         // Order by status priority: open, under_review, resolved, closed
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true),
@@ -121,18 +228,72 @@ if ( {) {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+        if (data && data.length > 0) {
+          // Get the first dispute (highest priority based on status)
+          setIsUnderDispute(true),
+          setDisputeStatus(data[0].status as any),
+          setDisputeId(data[0].id)
+        } else {
+          setIsUnderDispute(false),
+          setDisputeStatus(null),
+          setDisputeId(null)
+        }
+      } catch (err) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         console.error("Error checking dispute status:", err),
         setIsUnderDispute(false),
         setDisputeStatus(null),
         setDisputeId(null)
       } finally {
         setIsLoading(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    isLoading 
+
+=======
+=======
+    isLoading 
+
+      }
+    }
+    checkDispute()
+  }, [projectId, milestoneId]);
+  return {
+    isUnderDispute
+    disputeStatus
+    disputeId;
+    isLoading
+
+    isLoading 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     isLoading
 
     isLoading 
 
     isLoading 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -182,6 +343,17 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
   return {
@@ -189,6 +361,12 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     dispute_status,
     dispute_id;
     is_loading;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 

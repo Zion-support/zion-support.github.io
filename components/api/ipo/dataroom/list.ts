@@ -1,8 +1,13 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
+<<<<<<< HEAD
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,6 +20,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const files = fs.readdirSync(dir).map((name) => ({ name }));
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const section = String(req && req.query.section || "General");
   const dir = resolveDataPath(path && path.join("dataroom", section));
   if (!fs && fs.existsSync(dir)) return res && res.status(200).json([]);
@@ -25,6 +33,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   appendAuditLog({ type: "file_list", section });
   res && res.status(200).json(files);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -47,5 +59,8 @@ function handler() {
   res.status (200).json (files);
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,7 +1,16 @@
 // Stub pricing analytics utility - placeholder for missing functionality;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 },
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const getPricingMetrics = async () => {
   // Placeholder implementation;
   return { metrics: {}, success: true }
@@ -10,6 +19,8 @@ export const getPricingMetrics = async () => {
 
 export const trackPricingRequest = async (data: any) => {;
   // Placeholder implementation;
+<<<<<<< HEAD
+=======
 
   return { success: true   } catch (error) {
     console.error("Error:", error);
@@ -22,6 +33,7 @@ export const getPricingMetrics = async () => {
 }
 export const trackPricingRequest = async (data: any) => {;
   // Placeholder implementation;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return { success: true }
 },;
 export const getPricingMetrics = async () => {;
@@ -34,6 +46,21 @@ export const getPricingMetrics = async () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const trackPricingRequest = async (data: any) => {;
+  // Placeholder implementation;
+};
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 };
 export const trackPricingRequest = async (data: any) => {;
@@ -41,3 +68,9 @@ export const trackPricingRequest = async (data: any) => {;
 };
 
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

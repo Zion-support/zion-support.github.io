@@ -20,8 +20,11 @@ export default async function handler(
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
 
-
   if (req && req.method === "POST") {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       ensureAdmin(user);
     } catch (e: any) {
@@ -36,8 +39,8 @@ export default async function handler(
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
       return res && res.status(400).json({ error: "Invalid status" });
     }
-    }
 
+<<<<<<< HEAD
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 
@@ -132,6 +135,8 @@ req: NextApiRequest
     }
     ((dispute.status = status |"Resolved")
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -211,19 +216,14 @@ export default async function handler(req, res) {
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 
-
-
-
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
-
 
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
 
 }
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
@@ -244,6 +244,7 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     try {
       ensure_admin (user);
     } catch (e: any) {
@@ -274,3 +275,6 @@ if ( {) {
     return res.status(200).json({ dispute });
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

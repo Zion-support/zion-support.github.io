@@ -7,16 +7,53 @@ import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface ApiKey {
 
 
 export interface ApiKey {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+export interface ApiKey {;
+
+export interface ApiKey {
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface ApiKey {
 
 
@@ -24,30 +61,113 @@ export interface ApiKey {
 export interface ApiKey {;
 
 export interface ApiKey {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   name: string;
   key_prefix: string;
   scopes: ApiKeyScope[];
   created_at: string;
   last_used_at: string | null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+
+=======
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   expires_at: string | null,
   is_active: boolean;
 }
 
 
 export interface ApiLog {;
+<<<<<<< HEAD
 }
 export interface ApiLog {
+=======
+<<<<<<< HEAD
+}
+export interface ApiLog {
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+  expires_at: string | null
+  is_active: boolean
+}
+export interface ApiLog {
+  expires_at: string | null,
+  is_active: boolean
+}
+
+export interface ApiLog {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export interface ApiLog {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   endpoint: string;
   method: string;
   status_code: number;
   created_at: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+  ip_address?: string
+  response_time_ms?: number
+}
+export function useApiKeys() {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ip_address?: string,
   response_time_ms?: number
 }
 
 export function useApiKeys() {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -60,6 +180,32 @@ export function useApiKeys() {;
     // Using optional chaining ensures this function works both in the browser
     // (where import && import.meta.env is injected by Vite) and in Node environments
     // such as tests or server side rendering.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    const env = (import && import.meta as any)?.env ?? process ;
+    const url = env && env.VITE_SUPABASE_URL || env && env.SUPABASE_URL;
+
+<<<<<<< HEAD
+=======
+    const env = (import && import.meta as any)?.env ?? process ;
+    const url = env && env.VITE_SUPABASE_URL || env && env.SUPABASE_URL;
+
+  // Helper to get the base URL for API functions
+  const getApiUrl = () => {
+    // Using optional chaining ensures this function works both in the browser
+    // (where import.meta.env is injected by Vite) and in Node environments
+    // such as tests or server side rendering.
+    const env = (import.meta as any)?.env ?? process.env;
+    const url = env.VITE_SUPABASE_URL |env.SUPABASE_URL;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return `${url}/functions/v1/api-key-manager`
   }
   // Fetch user's API keys
@@ -67,6 +213,20 @@ export function useApiKeys() {;
     if (!user) return;
     setLoading(true);
     setError(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      setKeys(result.keys |[])
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
     return `${url}/functions/v1/api-key-manager`
@@ -83,6 +243,11 @@ export function useApiKeys() {;
       setKeys(result.keys |[])
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -157,18 +322,142 @@ if ( {) {
   $2
 }
         throw new Error (result.error || 'Failed to fetch API keys');
+<<<<<<< HEAD
       setKeys(result.keys || [])
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch API keys')
+      }
+      setKeys(result.keys |[])
+
+;
+export function useApiKeys() {;
+  const { user } = useAuth(),;
+  const [keys, setKeys] = useState<ApiKey[]>([]),;
+  const [logs, setLogs] = useState<ApiLog[]>([]),;
+  const [totalLogs, setTotalLogs] = useState(0),;
+  const [loading, setLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const [newApiKey, setNewApiKey] = useState<string | null>(null),;
+  // Helper to get the base URL for API functions;
+  const getApiUrl = () => {;
+    // Using optional chaining ensures this function works both in the browser;
+    // (where import.meta.env is injected by Vite) and in Node environments;
+    // such as tests or server side rendering.;
+    const env = (import.meta as any)?.env ?? process.env,;
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
+    return `${url}/functions/v1/api-key-manager`;
+  },;
+  // Fetch user's API keys;
+  const fetchApiKeys = async () => {;
+    if (!user) return,;
+    setLoading(true),;
+    setError(null),;
+    try {;
+      const { data: { session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return;
+      }
+;
+      const response = await fetch(`${getApiUrl()}/keys`, {;
+        method: 'GET',;
+        headers: {;
+          'Authorization': `Bearer ${session.access_token}`,;
+          'Content-Type': 'application/json';
+        }
+      }),;
+      const result = await response.json(),;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to fetch API keys');
+      }
+
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      setKeys(result.keys || [])
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setKeys(result.keys || [])
     } catch (err) {
       console.error('Error fetching API keys:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        variant: "destructive",
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      set_keys (result.keys || []);
+    } catch (err) {
+      console.error ('Error fetching API keys:', err);
+      set_error (err instanceof Error ? err.message : 'An unknown error occurred');
+      toast ({
+        variant: "destructive";
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Error fetching API keys",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {
       set_loading (false);
     }
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  }
+=======
+<<<<<<< HEAD
+
+
+=======
+        variant: "destructive",
+        title: "Error fetching API keys",
+
+
+        variant: "destructive";
+        title: "Error fetching API keys"
+        variant: "destructive",
+        title: "Error fetching API keys",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  }
+  // Create new API key
+  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+    setNewApiKey(null);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   // Create new API key
@@ -179,6 +468,18 @@ if ( {) {
     setError(null),
     setNewApiKey(null),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -201,6 +502,49 @@ if ( {) {
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      toast({
+        title: "API Key Created"
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      setNewApiKey(result && result.key);
+      
+
+=======
+      setNewApiKey(result && result.key);
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/create`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({
+          name;
+          scopes
+          expiresAt: expiresAt ? expiresAt.toISOString() : null
+        })
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to create API key')
+      }
+      // Add the new key to the list
+      setKeys(prev => [{ ...result, key: undefined }, ...prev]);
+      // Store the actual key value temporarily so it can be displayed once
+      setNewApiKey(result.key);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
@@ -208,6 +552,11 @@ if ( {) {
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       setKeys(result.keys || []);
     } catch (err) {;
@@ -251,6 +600,21 @@ if ( {) {
         throw new Error(result.error || 'Failed to create API key');
       }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
       
@@ -261,6 +625,20 @@ if ( {) {
         title: "API Key Created",
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return result
     } catch (err) {
       console && console.error('Error creating API key:', err);
@@ -386,6 +764,30 @@ if ( {) {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+        variant: "destructive",
+        title: "Error creating API key",
+
+=======
+      
+      return result
+    } catch (err) {
+      console.error('Error creating API key:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: "destructive";
+        title: "Error creating API key"
+        variant: "destructive",
+        title: "Error creating API key",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -460,11 +862,47 @@ if ( {) {
       setNewApiKey(result && result.key);
       
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      toast({
+        title: "API Key Regenerated"
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
+=======
+
+=======
+      }
+      // Update the key in the list
+      setKeys(prev => prev && prev.map(key => 
+        key && key.id === keyId ? { ...result, key: undefined } : key
+      ));
+      // Store the new key value
+      setNewApiKey(result && result.key);
+      // Update the key in the list
+      setKeys(prev => prev.map(key =>
+        key.id === keyId ? { ...result, key: undefined } : key
+      ));
+      // Store the new key value
+      setNewApiKey(result.key);
+      toast({
+        title: "API Key Regenerated"
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ));
       // Store the new key value
       toast({
         title: "API Key Regenerated"
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )),
       
       // Store the new key value
@@ -474,6 +912,18 @@ if ( {) {
         title: "API Key Regenerated",
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."}),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return result
     } catch (err) {
       console && console.error('Error regenerating API key:', err);
@@ -620,6 +1070,28 @@ if ( {) {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+        variant: "destructive",
+        title: "Error regenerating API key",
+
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      }
+      // Update the key's active status in the list
+      ));
+      toast({
+        title: "API Key Revoked"
+        description: "The API key has been revoked successfully."});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return result
     } catch (err) {
       console && console.error('Error revoking API key:', err);
@@ -642,6 +1114,18 @@ if ( {) {
     setLoading(true),
     setError(null),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -668,6 +1152,13 @@ if ( {) {
 
       setLogs(result.logs || []);
       setTotalLogs(result.count || 0);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       // Update the key's active status in the list;
       setKeys(prev => prev.map(key =>;
@@ -715,6 +1206,34 @@ if ( {) {
         throw new Error(result.error |'Failed to fetch API logs')
       }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+        variant: "destructive";
+=======
+<<<<<<< HEAD
+
+
+      // Update the key's active status in the list
+
+      setKeys(prev => prev && prev.map(key => 
+        key && key.id === keyId ? { ...key, is_active: false } : key
+
+<<<<<<< HEAD
+=======
+      }
+      // Update the key's active status in the list
+      setKeys(prev => prev && prev.map(key => 
+        key && key.id === keyId ? { ...key, is_active: false } : key
+      // Update the key's active status in the list
+      setKeys(prev => prev.map(key =>
+        key.id === keyId ? { ...key, is_active: false } : key
+      // Update the key's active status in the list
+      setKeys(prev => prev.map(key =>
+        key.id === keyId ? { ...key, is_active: false } : key
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ));
       toast({
         title: "API Key Revoked"
@@ -742,6 +1261,11 @@ if ( {) {
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
       
         variant: "destructive";
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   // Revoke API key;
   const revokeApiKey = async (key_id: string) => {
@@ -797,6 +1321,32 @@ if ( {) {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {
+          method: 'GET'
+          headers: {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+        variant: "destructive",
+        title: "Error revoking API key",
+
+=======
+      return result
+    } catch (err) {
+      console.error('Error revoking API key:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: "destructive";
+        title: "Error revoking API key"
+        variant: "destructive",
+        title: "Error revoking API key",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -902,11 +1452,36 @@ if ( {) {
         {
           method: 'GET'
           headers: {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return result
     } catch (err) {
       console && console.error('Error fetching API logs:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+=======
+=======
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+        variant: "destructive";
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             'Authorization': `Bearer ${session.access_token}`;
             'Content - Type': 'application / json';
           }
@@ -940,6 +1515,20 @@ if ( {) {
     keys;
     logs;
     total_logs;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      
+      return result
+    } catch (err) {
+      console.error('Error fetching API logs:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive";
         title: "Error fetching API logs"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
@@ -958,6 +1547,19 @@ if ( {) {
     regenerateApiKey;
     revokeApiKey;
     fetchApiLogs;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+    clearNewApiKey: () => setNewApiKey(null)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
         variant: "destructive",
@@ -997,11 +1599,33 @@ if ( {) {
 
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   }
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   }
@@ -1459,3 +2083,8 @@ clearNewApiKey: () => setNewApiKey (null)
 ;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface CustomerTicket {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface CustomerTicket {
 export interface CustomerTicket {;
   id: string;
@@ -13,6 +26,18 @@ export interface CustomerTicket {;
   resolvedAt?: Date;
   customerSatisfaction?: number;
   tags: string[];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   attachments: string[],
   conversation_history: CustomerMessage[];
@@ -27,12 +52,21 @@ export interface CustomerMessage {
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
+<<<<<<< HEAD
 }
 export interface CustomerProfile {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   intent: string,
   confidence: number;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface CustomerProfile {
   id: string;
@@ -41,8 +75,23 @@ export interface CustomerProfile {
   phone?: string;
   company?: string;
   plan: string;
+<<<<<<< HEAD
   total_tickets: number;
   resolved_tickets: number;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  total_tickets: number;
+  resolved_tickets: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   averageResolutionTime: number;
   customer_satisfaction: number;
   last_contact: Date;
@@ -73,6 +122,16 @@ export interface CustomerServiceMetrics {
   open_tickets: number;
   resolved_tickets: number;
   averageResolutionTime: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     ticketsResolved: number
     averageResolutionTime: number,
@@ -136,11 +195,26 @@ export interface CustomerServiceMetrics {;
     ticketsResolved: number;
     averageResolutionTime: number
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     customerSatisfaction: number
   }>
 }
 export interface CustomerServiceRequest {
   customerId: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   customer_id: string;
 }
 export interface CustomerServiceRequest {
@@ -149,6 +223,25 @@ export interface CustomerServiceRequest {
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  attachments?: string[],
+  preferred_channel?: 'email' | 'chat' | 'phone';
+
+=======
+  attachments?: string[],
+  preferred_channel?: 'email' | 'chat' | 'phone';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   ticketId: string;
 export interface CustomerServiceResponse {
@@ -156,6 +249,40 @@ export interface CustomerServiceResponse {
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
+
+=======
+  attachments?: string[]
+
+  preferredChannel?: 'email' | 'chat' | 'phone'
+}
+export interface CustomerServiceResponse {
+
+export interface CustomerServiceResponse {;
+  ticketId: string;
+  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
+  aiResponse?: AIResponse;
+  estimatedResolutionTime: string;
+
+  nextSteps: string[]
+
+  assignedAgent?: string
+}
+export class AICustomerServiceService {
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export class AICustomerServiceService {;
   private apiKey: string;
 
@@ -163,6 +290,16 @@ export class AICustomerServiceService {;
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -198,6 +335,39 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      return data
+    } catch (error) {
+      console && console.error('Error creating ticket:', error);
+=======
+      if (!response && response.ok) {
+        throw new Error(`Create ticket API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
+      return data
+    } catch (error) {
+      console && console.error('Error creating ticket:', error);
+  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
+        body: JSON.stringify(request)});
+      if (!response.ok) {
+        throw new Error(`Create ticket API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return data
+    } catch (error) {
+      console.error('Error creating ticket:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -212,6 +382,20 @@ export interface CustomerServiceResponse {
   }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
+        headers: {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -272,6 +456,11 @@ export interface CustomerServiceResponse {
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error updating ticket:', error);
     } catch (error) {
@@ -281,6 +470,14 @@ export interface CustomerServiceResponse {
   }
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST',
@@ -294,6 +491,21 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      if (!response && response.ok) {
+        throw new Error(`Add message API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return {
         ...data;
         timestamp: new Date(data && data.timestamp)}
@@ -304,6 +516,14 @@ export interface CustomerServiceResponse {
   }
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
@@ -316,6 +536,21 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      if (!response && response.ok) {
+        throw new Error(`AI response API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return {
         ...data;
         generatedAt: new Date(data && data.generatedAt)}
@@ -326,6 +561,16 @@ export interface CustomerServiceResponse {
   }
   async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
 
@@ -337,6 +582,22 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+      if (!response && response.ok) {
+        throw new Error(`Get customer profile API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return {
         ...data;
         lastContact: new Date(data && data.lastContact)}
@@ -347,6 +608,16 @@ export interface CustomerServiceResponse {
   }
   async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
 
@@ -358,6 +629,11 @@ export interface CustomerServiceResponse {
 
       return await response && response.json()
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error getting metrics:', error);
     } catch (error) {
@@ -368,6 +644,16 @@ export interface CustomerServiceResponse {
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
       const params = new URLSearchParams({ query, ...filters });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
 
@@ -389,6 +675,7 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error searching tickets:', error);
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error searching tickets:', error);
       throw error
@@ -396,6 +683,14 @@ export interface CustomerServiceResponse {
   }
   async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
@@ -408,6 +703,11 @@ export interface CustomerServiceResponse {
 
       return await response && response.json()
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
     } catch (error) {
@@ -417,6 +717,14 @@ export interface CustomerServiceResponse {
   }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
@@ -431,6 +739,11 @@ export interface CustomerServiceResponse {
       const data = await response && response.json();
       return data && data.downloadUrl
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error generating report:', error);
     } catch (error) {
@@ -441,6 +754,24 @@ export interface CustomerServiceResponse {
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+=======
+=======
+export interface CustomerTicket {;
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string,;
   customerId: string,;
   subject: string,;
@@ -456,9 +787,29 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   tags: string[],;
   attachments: string[],;
   conversationHistory: CustomerMessage[];
+<<<<<<< HEAD
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   next_steps: string[],
   assigned_agent?: string;
 }
@@ -698,6 +1049,16 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export interface CustomerTicket {;
 
@@ -1103,3 +1464,9 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
 
 export interface CustomerTicket {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

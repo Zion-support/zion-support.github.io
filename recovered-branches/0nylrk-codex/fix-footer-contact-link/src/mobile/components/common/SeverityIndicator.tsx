@@ -1,4 +1,33 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react",
+import { cn } from "@/lib/utils";
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+interface SeverityIndicatorProps {
 
+interface SeverityIndicatorProps {;
+  severity: "safe" | "suspicious" | "dangerous",;
+
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  showIcon?: boolean;
+  showText?: boolean;
+  size?: "sm" | "md" | "lg";
+  className?: string;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+<<<<<<< HEAD
+=======
 import React from "react";
 import {cn} from "@/lib/utils";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
@@ -17,6 +46,29 @@ interface SeverityIndicatorProps {;
   className?: string;
 }
 
+<<<<<<< HEAD
+=======
+=======
+  className?: string
+}
+
+export function SeverityIndicator({
+  severity
+  showIcon = true
+  showText = true
+  size = "md";
+  className
+import { cn } from "@/lib/utils",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+  className?: string;
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
   showIcon?: boolean,
@@ -28,6 +80,16 @@ interface SeverityIndicatorProps {
 export function SeverityIndicator({ 
   severity, 
   showIcon = true, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   showText = true, 
   size = "md",
 
@@ -38,11 +100,28 @@ export function SeverityIndicator({
   showText = true, 
   size = "md",
   className 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
       case 'dangerous':
         return <AlertCircle className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function SeverityIndicator(): any ({ ;
   severity, ;
   showIcon = true, ;
@@ -65,6 +144,16 @@ export function SeverityIndicator(): any ({ ;
         )} />
     }
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className={cn("flex items-center gap-1", className)}>
@@ -72,9 +161,31 @@ export function SeverityIndicator(): any ({ ;
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+<<<<<<< HEAD
 }
 
 
+=======
+<<<<<<< HEAD
+}
+
+
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -92,10 +203,36 @@ export function SeverityIndicator({;
   showText = true,;
   size = "md",;
   className;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }: SeverityIndicatorProps) {;
   const getSeverityIcon = () => {;
     switch (severity) {;
       case 'dangerous':;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return <AlertCircleclassName={cn(
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           "text-destructive"
         )} />;
       case 'suspicious':;
@@ -167,6 +304,51 @@ function SeverityIndicator() {
     }
   }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
+;
+interface SeverityIndicatorProps {;
+  severity:"safe" | "suspicious" | "dangerous",;
+  showIcon?:boolean,;
+  showText?:boolean,;
+  size?:"sm" | "md" | "lg",;
+  className?:string;
+}
+;
+export function SeverityIndicator({ ;
+  severity, ;
+  showIcon = true, ;
+  showText = true, ;
+  size = "md",;
+  className ;
+} SeverityIndicatorProps) {;
+  const getSeverityIcon = () => {;
+    switch (severity) {;
+      case 'dangerous':;
+        return <AlertCircle className={cn(;
+          size === "sm" ? "h-3 w-3" :size === "lg" ? "h-5 w-5" :"h-4 w-4",;
+        return <AlertCircle className={cn(;
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",;
+          "text-destructive";
+        )} />,;
+      case 'suspicious':;
+        return <AlertTriangle className={cn(;
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",;
+          "text-amber-500";
+        )} />,;
+      default:;
+        return <CheckCircle className={cn(;
+    </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className={cn ("flex items - center gap - 1", class_name)}>;
       {show_icon && getSeverityIcon ()}
@@ -210,3 +392,10 @@ return (</div>)
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

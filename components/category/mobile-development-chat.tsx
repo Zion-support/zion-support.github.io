@@ -30,9 +30,12 @@ const MobileDevelopmentChat: NextPage = () => {;
 }
 export default MobileDevelopmentChat;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -74,6 +77,7 @@ const MobileDevelopmentChat: NextPage = () => {
 ;
 export default MobileDevelopmentChat;
 ;
+<<<<<<< HEAD
     <div>
       <Head>
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
@@ -121,3 +125,6 @@ export default MobileDevelopmentChat;
 
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

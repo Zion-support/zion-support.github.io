@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
  import { NewsletterForm } from '@/components/NewsletterForm'; import * as toastHook from '@/hooks/use-toast'; import api from '@/services/apiClient'; import { vi,expect,test } from 'vitest'; vi.mock( '@/hooks/use-toast'); vi.mock( '@/services/apiClient',() => ({ "default": { post: vi.fn() }})) const mockedApi = api as unknown as { "post": 'any' } test( shows success toast when subscription succeeds',async () => { mockedApi.post.mockResolvedValue({}) render(<NewsletterForm />); _fireEvent.input(screen.getByPlaceholderText(/enter your email/i),{ "target": { value: 'test@example.com }}) _fireEvent.submit(screen.getByRole( 'button',{ "name": '/subscribe/i' })) await waitFor(() => { expect(toastHook.toast.success).toHaveBeenCalledWith( '¡Gracias por suscribirte!')})})
  import { NewsletterForm } from '@/components/NewsletterForm'; import * as toastHook from '@/hooks/use-toast'; import api from '@/services/apiClient'; import { vi,expect,test } from 'vitest'; vi.mock( '@/hooks/use-toast'); vi.mock( '@/services/apiClient',() => ({ "default": { post: vi.fn() }})) const mockedApi = api as unknown as { "post": 'any' } test( shows success toast when subscription succeeds',async () => { mockedApi.post.mockResolvedValue({}) render(<NewsletterForm />); _fireEvent.input(screen.getByPlaceholderText(/enter your email/i),{ "target": { value: 'test@example.com }}) _fireEvent.submit(screen.getByRole( 'button',{ "name": '/subscribe/i' })) await waitFor(() => { expect(toastHook.toast.success).toHaveBeenCalledWith( '¡Gracias por suscribirte!')})})
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -16,3 +25,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
  import { NewsletterForm } from '@/components/NewsletterForm'; import * as toastHook from '@/hooks/use-toast'; import api from '@/services/apiClient'; import { vi,expect,test } from 'vitest'; vi.mock( '@/hooks/use-toast'); vi.mock( '@/services/apiClient',() => ({ "default": { post: vi.fn() }})) const mockedApi = api as unknown as { "post": 'any' } test( shows success toast when subscription succeeds',async () => { mockedApi.post.mockResolvedValue({}) render(<NewsletterForm />); _fireEvent.input(screen.getByPlaceholderText(/enter your email/i),{ "target": { value: 'test@example.com }}) _fireEvent.submit(screen.getByRole( 'button',{ "name": '/subscribe/i' })) await waitFor(() => { expect(toastHook.toast.success).toHaveBeenCalledWith( '¡Gracias por suscribirte!')})})
  import { NewsletterForm } from '@/components/NewsletterForm'; import * as toastHook from '@/hooks/use-toast'; import api from '@/services/apiClient'; import { vi,expect,test } from 'vitest'; vi.mock( '@/hooks/use-toast'); vi.mock( '@/services/apiClient',() => ({ "default": { post: vi.fn() }})) const mockedApi = api as unknown as { "post": 'any' } test( shows success toast when subscription succeeds',async () => { mockedApi.post.mockResolvedValue({}) render(<NewsletterForm />); _fireEvent.input(screen.getByPlaceholderText(/enter your email/i),{ "target": { value: 'test@example.com }}) _fireEvent.submit(screen.getByRole( 'button',{ "name": '/subscribe/i' })) await waitFor(() => { expect(toastHook.toast.success).toHaveBeenCalledWith( '¡Gracias por suscribirte!')})})
+<<<<<<< HEAD
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

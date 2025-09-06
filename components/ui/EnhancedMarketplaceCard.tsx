@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      </div>;
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+import Link from 'next/link';
+import Image from 'next/image';
+interface EnhancedMarketplaceCardProps {
+  title: string, description: string
+  price?: string;
+  href: string, image?: string
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface MarketplaceCardProps {
   title: string;
@@ -9,6 +24,7 @@ interface MarketplaceCardProps {
   onFavorite?: () => void;
 }
 
+<<<<<<< HEAD
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
   description,
@@ -55,3 +71,5 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

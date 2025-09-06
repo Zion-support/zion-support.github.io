@@ -13,6 +13,25 @@ type UserWithProfile = UserProfile | UserDetails | null;
 ;
 export function useMessagingRealtime (
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+import { useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { Message, Conversation  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
@@ -43,12 +62,58 @@ export function useMessagingRealtime(;
           fetchConversations();
           // Show toast notification for new message
           toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            title: `New message from ${payload && payload.new.sender_name || 'Someone'}`;
+            description: payload && payload.new.content && content.substring(0, 50) + (payload && payload.new.content && content.length > 50 ? '...' : '')
+
+=======
+            title: `New message from ${payload && payload.new.sender_name || 'Someone'}`;
+            description: payload && payload.new.content && content.substring(0, 50) + (payload && payload.new.content && content.length > 50 ? '...' : '')
+            title: `New message from ${payload.new.sender_name |'Someone'}`;
+            description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           })
         }
       )
       .subscribe();
 
     return () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      supabase.removeChannel(subscription)
+import { useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { Message, Conversation } from '@/types/messaging',;
+import { toast } from '@/hooks/use-toast',;
+// Allow either UserProfile or UserDetails;
+type UserWithProfile = UserProfile | UserDetails | null,;
+export function useMessagingRealtime(;
+  user: UserWithProfile,;
+  activeConversation: Conversation | null,;
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,;
+  fetchConversations: () => Promise<void>;
+) {;
+  // Setup real-time subscription when user is logged in;
+  useEffect(() => {;
+    if (!user) return,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       supabase && supabase.removeChannel(subscription)
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])
@@ -59,6 +124,12 @@ export function useMessagingRealtime(;
 if (return, ) {
   $2
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Subscribe to new messages;
     const subscription = supabase;
       .channel ('messages');
@@ -94,6 +165,15 @@ if ( {) {
       supabase.remove_channel (subscription);
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 
@@ -149,3 +229,8 @@ export function useMessagingRealtime(;
   }, [user, activeConversation, fetchConversations, setActiveMessages])
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

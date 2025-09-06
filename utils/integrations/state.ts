@@ -4,6 +4,58 @@ interface IntegrationState {
   overrides: any[];
 }
 let state: IntegrationState = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  connections: [],
+  logs: [],
+  overrides: [],
+=======
+<<<<<<< HEAD
+  connections: [],
+  logs: [],
+  overrides: [],
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+<<<<<<< HEAD
+export function getState(): IntegrationState {
+<<<<<<< HEAD
+  return { ...state }
+}
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+};
+
+export function getState(): IntegrationState {;
+  return { ...state };
+}
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
+
+
+  updater(state);
+  return { ...state }
+}
+<<<<<<< HEAD
+=======
+export function resetState(): void {
+  state = {
+
+  connections: [],
+  logs: [],
+  overrides: [];
+=======
+  connections: []
+  logs: []
+  overrides: []
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 export function get_state (): IntegrationState {
@@ -18,6 +70,7 @@ export function getState(): IntegrationState {;
   updater(state);
   return { ...state }
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function resetState(): void {
   state = {
 
@@ -34,11 +87,61 @@ export function get_state (): IntegrationState {
 }
 export function reset_state (): void {
   state = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+<<<<<<< HEAD
+    connections: [],
+    logs: [],
+    overrides: [];
+=======
+<<<<<<< HEAD
+    connections: []
+    logs: []
+    overrides: []
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     connections: [],
     logs: [],
     overrides: [],
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

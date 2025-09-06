@@ -1,36 +1,131 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+{onNext && (;
+
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { NavigationButtonsProps } from "./types",;
+;
+export const NavigationButtons = ({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {NavigationButtonsProps} from "./types";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const NavigationButtons = ({;
   onBack;
   onNext;
   isNextDisabled = false;
   backLabel = "Back";
   nextLabel = "Next";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const NavigationButtons = ({
   onBack,
   onNext,
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
         <Button variant="outline" onClick={onBack}>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 import { NavigationButtonsProps } from "./types",;
@@ -40,6 +135,14 @@ export const NavigationButtons = ({;
   isNextDisabled = false,;
   backLabel = "Back",;
   nextLabel = "Next";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isLoading = false}: NavigationButtonsProps) => {;
   return (
     <div className="flex justify-between">;
@@ -55,6 +158,14 @@ export const NavigationButtons = ({;
       {onNext && (;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
 
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isLoading = false}: NavigationButtonsProps) => {;
   return (;
     <div className="flex justify-between">;
@@ -121,6 +232,14 @@ export const NavigationButtons = ({
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   ),;
 },; export const NavigationButtons = ({
@@ -158,3 +277,10 @@ isLoading = false
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

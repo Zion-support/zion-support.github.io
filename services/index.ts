@@ -1,9 +1,32 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export { urlShortenerService } from './urlShortenerService';
+export { passwordGeneratorService } from './passwordGeneratorService';
+export { qrCodeService } from './qrCodeService';
+export { fileConverterService } from './fileConverterService';
+export { textAnalysisService } from './textAnalysisService';
+=======
+<<<<<<< HEAD
+
+;
+// Export service types and interfaces;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export type {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ShortUrl;
   UrlAnalytics;
   ClickEvent;
   CreateShortUrlRequest;
 } from './urlShortenerService';
+<<<<<<< HEAD
+export type {
+=======
 
 ;
 
@@ -23,14 +46,44 @@ export type {
 
 export type {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 export type {;
 export type {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
 } from './passwordGeneratorService';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
 
@@ -39,15 +92,45 @@ export type {
 
 export type {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export type {
 
 
 export type {;
 export type {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate;
 } from './qrCodeService';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
 
@@ -56,16 +139,46 @@ export type {
 
 export type {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export type {
 
 
 export type {;
 export type {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
   FileInfo;
 } from './fileConverterService';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
 
@@ -106,11 +219,27 @@ export type {;
 export type {
 
 export type {;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export type {
 
 
 export type {;
 export type {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -118,6 +247,14 @@ export type {
   KeywordAnalysis;
   LanguageDetection;
   EntityExtraction;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   TextSummary;
 } from './textAnalysisService';
 
@@ -143,6 +280,7 @@ export const SERVICE_CATEGORIES = {
 ;
 // Service metadata for the application;
 export const SERVICES_METADATA = {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   url_shortener: {
     name: 'URL Shortener',
 
@@ -159,16 +297,81 @@ export const SERVICES_METADATA = {
     features: [;
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation';
     ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     pricing: 'Free',
     api_endpoint: '/api / url - shortener';
   }
   password_generator: {
 
+<<<<<<< HEAD
+=======
+=======
+  TextSummary
+} from './textAnalysisService';
+// Service categories for easy discovery
+
+export const SERVICE_CATEGORIES = {
+  UTILITIES: {;
+    name: 'Utility Tools';
+    description: 'Essential tools for everyday tasks'
+    services: ['urlShortenerpasswordGeneratorqrCodeGenerator']
+  }
+  MEDIA: {
+    name: 'Media & Files';
+    description: 'File conversion and media processing tools'
+    services: ['fileConverter']
+  }
+  ANALYSIS: {
+    name: 'Analysis & Insights';
+    description: 'Text analysis and content insights'
+    services: ['textAnalysis']
+  }
+} as const;
+// Service metadata for the application
+export const SERVICES_METADATA = {
+  urlShortener: {
+    name: 'URL Shortener'
+    name: 'URL Shortener',;
+    description: 'Create short, trackable URLs with analytics';
+    icon: '🔗';
+    category: 'UTILITIES';
+    features: [
+      'Custom short codesClick trackingAnalytics dashboardExpiration datesQR code generation'
+    ];
+    pricing: 'Free'
+    apiEndpoint: '/api/url-shortener'
+  }
+  passwordGenerator: {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     name: 'Password Generator';
     description: 'Generate secure passwords with strength analysis';
     icon: '🔐';
     category: 'UTILITIES';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     features: [;
       'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations';
     ];
@@ -176,12 +379,40 @@ export const SERVICES_METADATA = {
     pricing: 'Free',
     api_endpoint: '/api / password - generator';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    pricing: 'Free',
+    api_endpoint: '/api / password - generator';
+    features: [
+      'Multiple generation modesStrength analysisCustom character setsPassword historySecurity recommendations'
+    ];
+    pricing: 'Free'
+    apiEndpoint: '/api/password-generator'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   qrCodeGenerator: {
     name: 'QR Code Generator';
     description: 'Create QR codes for various purposes';
     icon: '📱';
     category: 'UTILITIES';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     features: [;
       'Multiple QR code types_custom styling_logo integration_error correction_template library';
     ];
@@ -191,10 +422,38 @@ export const SERVICES_METADATA = {
   }
   file_converter: {
 
+<<<<<<< HEAD
+=======
+=======
+    features: [
+      'Multiple QR code typesCustom stylingLogo integrationError correctionTemplate library'
+    ];
+    pricing: 'Free'
+    apiEndpoint: '/api/qr-code-generator'
+  }
+  fileConverter: {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     name: 'File Converter';
     description: 'Convert files between different formats';
     icon: '🔄';
     category: 'MEDIA';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     features: [;
       'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing';
     ];
@@ -205,10 +464,30 @@ export const SERVICES_METADATA = {
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     pricing: 'Free (Basic) / $9.99 / month (Pro)',
     api_endpoint: '/api / file - converter';
   }
   text_analysis: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     features: [
       'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
     ];
@@ -216,29 +495,99 @@ export const SERVICES_METADATA = {
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     name: 'Text Analysis';
     description: 'Analyze text for insights and optimization';
     icon: '📊';
     category: 'ANALYSIS';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     features: [;
       'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection';
     ];
 
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
+    features: [
+      'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
+    ];
+    pricing: 'Free (Basic) / $19.99/month (Pro)'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
 // Service availability and status
 export const getServiceStatus = () => {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  return {
+    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
@@ -246,18 +595,69 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
   return {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 // Service usage statistics
 export const getServiceStats = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return {;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return {
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return {;
   return {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     totalUsers: 15420;
     totalRequests: 2847500;
     averageResponseTime: 125
     services: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    pricing: 'Free (Basic) / $19.99 / month (Pro)',
+    api_endpoint: '/api / text - analysis';
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
@@ -441,15 +841,47 @@ textAnalysis: {
 
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
+<<<<<<< HEAD
 
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    pricing: 'Free (Basic) / $19.99 / month (Pro)',
+    api_endpoint: '/api / text - analysis';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService',;
 export { passwordGeneratorService } from './passwordGeneratorService',;
@@ -521,6 +953,13 @@ export const getServiceStatus = () =>: any {
 }
 ;
 // Service usage statistics;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export const getServiceStats = () => {;
   return {;
@@ -543,6 +982,12 @@ export const getServiceStats = () => {;
 }
 }
 };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
 export const getServiceStats = () =>: any {
   return {
@@ -558,3 +1003,16 @@ export const getServiceStats = () =>: any {
     }
   }
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

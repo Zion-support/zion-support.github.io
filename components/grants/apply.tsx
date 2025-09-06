@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -12,6 +16,7 @@ const categories: GrantCategory[] = [
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -24,6 +29,8 @@ const categories: GrantCategory[] = [
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -32,6 +39,10 @@ const categories: GrantCategory[] = [;
   'Research Grants',;
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -39,12 +50,20 @@ export default function ApplyGrantPage() {;
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -77,12 +96,16 @@ export default function ApplyGrantPage() {;
       setError(e && e.message);
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
+<<<<<<< HEAD
           program;
           projectName;
           teamInfo;
           proposalSummary;
           timeline;
           budgetAmount: Number(budgetAmount || 0),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -96,6 +119,10 @@ export default function ApplyGrantPage() {;
             .filter (Boolean);
           pitchDeckUrl;
           region;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           sector: (sector as any) || undefined,;
           submit})});
       const data = await resp && resp.json();
@@ -105,7 +132,11 @@ export default function ApplyGrantPage() {;
       setError(e && e.message);
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
     }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 
@@ -125,7 +156,6 @@ export default function ApplyGrantPage() {;
             className='mt-1 w-full border rounded p-2'
             rows={3}
             value={supportingLinks}
-
 
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
@@ -147,6 +177,7 @@ export default function ApplyGrantPage() {;
           <button
             disabled={loading}
             onClick={() => save(true)}
+<<<<<<< HEAD
   }
     }
 
@@ -157,6 +188,16 @@ export default function ApplyGrantPage() {;
   return (
 
 
+=======
+
+  }
+    }
+
+  };
+
+  return (
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -176,6 +217,10 @@ export default function ApplyGrantPage() {;
       </div>
     </EnhancedLayout>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
             </select>;
@@ -191,6 +236,7 @@ export default function ApplyGrantPage() {;
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
         </label>;
 
+<<<<<<< HEAD
 
   );
   );
@@ -244,11 +290,17 @@ export default function ApplyGrantPage() {;
     </EnhancedLayout>
 }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 
 );
 }
   );
+<<<<<<< HEAD
 }
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

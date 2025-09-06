@@ -86,7 +86,6 @@ export function ReferralLink(): any ({;
       </CardHeader>;
       <CardContent>;
 
-
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
 
@@ -107,7 +106,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
   const [ copied, setCopied ] = useState(false),
 
-  
   const handleCopy = () => {
     onCopy()
     setCopied(true)
@@ -141,9 +139,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
             <p className="text-sm text-green-600 dark:text-green-500">;
 
-
-
-
   return (
 
     <Card className="mt - 6">;
@@ -159,13 +154,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       </CardHeader>;
       <CardContent>;
 
-
             <Input
               value={referralLink}
               readOnly
               className="font-mono text-sm"
 
-
-          )}
-        </div>
-      </CardContent>

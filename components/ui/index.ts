@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 export { default as AIAssistant } from './AIAssistant';
 export type { AIAssistantProps } from './AIAssistant';
 export type { AIAssistantProps } from "./AIAssistant";
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 

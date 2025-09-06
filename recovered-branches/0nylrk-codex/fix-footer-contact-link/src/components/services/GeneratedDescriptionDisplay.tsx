@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -12,6 +14,21 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Textarea } from "@/components/ui/textarea",
 import { Check, Pencil } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -37,6 +54,18 @@ export function GeneratedDescriptionDisplay({
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const handleSave = () => {
+    onSave(editedDescription),
+    setIsEditing(false),
+    toast({
+
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const handleSave = () => {;
     onSave(editedDescription);
@@ -46,6 +75,7 @@ export function GeneratedDescriptionDisplay({
       description: "Your edited description has been saved.",
     });
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -55,6 +85,8 @@ export function GeneratedDescriptionDisplay({
           <Button
             variant="outline"
             size="sm"
+<<<<<<< HEAD
+=======
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
@@ -122,10 +154,23 @@ export function GeneratedDescriptionDisplay({;
           <Button ;
             variant="outline" ;
             size="sm" ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;

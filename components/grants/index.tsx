@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
@@ -23,6 +28,10 @@ export default function GrantsPage() {;
     region?: string;
     program?: string;
   }>({});
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
 
     const params = new URLSearchParams();
@@ -73,6 +82,7 @@ export default function GrantsPage() {;
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+<<<<<<< HEAD
 export default /**
  * GrantsPage - Function description
  */
@@ -110,6 +120,9 @@ function GrantsPage() {
             </a>;
           </Link>;
       </div>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         >
           <option value=''>All Stages</option>
@@ -122,10 +135,18 @@ function GrantsPage() {
         <input
           className='border rounded p-2'
           placeholder='Region'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         />
         <select
           className='border rounded p-2'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         >;
           <option value=''>All Sectors</option>;
@@ -151,13 +172,21 @@ function GrantsPage() {
           placeholder='Region'
           }
         />;
+<<<<<<< HEAD
         <select
           className='border rounded p-2'
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -166,7 +195,10 @@ function GrantsPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className='grid gap-4'>;
         {items && items.map(g => (;
           <div
@@ -188,9 +220,13 @@ function GrantsPage() {
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
+<<<<<<< HEAD
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
                 {g && g.status === 'Approved' && (;
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -213,6 +249,7 @@ function GrantsPage() {
         {items && items.length === 0 && (;
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
+<<<<<<< HEAD
       </div>
     </EnhancedLayout>
 );
@@ -246,3 +283,8 @@ function GrantsPage() {
       </div>;
     </EnhancedLayout>);
 }
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

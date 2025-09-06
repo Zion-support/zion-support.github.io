@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { forwardRef } from "react";
+import {Slot} from "@radix-ui/react-slot";
+import {cn} from "@/lib/utils";
+interface SidebarMenuButtonProps extends React && React.ButtonHTMLAttributes<HTMLButtonElement> {;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className?: string;
   children?: React && React.ReactNode;
   asChild?: boolean;
@@ -14,6 +29,15 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
@@ -22,6 +46,15 @@ import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 import { Slot } from "@radix-ui/react-slot",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
@@ -37,12 +70,52 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
     return (
       <Comp
         className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string,
   children?: React.ReactNode,
   asChild?: boolean
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(
+  ({ className, children, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button",
+
+    return (
+      <Comp
+        className={cn(
+
+<<<<<<< HEAD
+=======
+export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(
+  ({ className, children, asChild = false, ...props }, ref) => {;
+    const Comp = asChild ? Slot : "button";
+export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(
+  ({ className, children, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button",
+    return (
+      <Comp
+        className={cn(
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors";
+          "text-muted-foreground hover: text-foreground hover:bg-accent";
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+          className
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
           "text-muted-foreground hover:text-foreground hover:bg-accent",
           "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
@@ -111,6 +184,16 @@ export const SidebarMenuButton = forward_ref < HTMLButtonElement, SidebarMenuBut
 ;
 SidebarMenuButton.display_name = "SidebarMenuButton";
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         )}
         ref={ref as any}
@@ -180,3 +263,10 @@ className
 });
 SidebarMenuButton.displayName = "SidebarMenuButton";
 SidebarMenuButton.displayName = "SidebarMenuButton";
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

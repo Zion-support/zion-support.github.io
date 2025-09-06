@@ -52,6 +52,163 @@ export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+import { supabase } from "@/integrations/supabase/client";
+import { Switch } from "@/components/ui/switch";
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+
+    brand_name: ""
+    subdomain: ""
+    logo_url: ""
+    primary_color: "#9b87f5"
+    theme_preset: "light"
+    company_size: ""
+    industry: ""
+    custom_domain: ""
+    is_co_branded: true
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const [formData, setFormData] = useState({;
+    brand_name: "",;
+    subdomain: "",;
+    logo_url: "",;
+    primary_color: "#9b87f5",;
+    theme_preset: "light",;
+    company_size: "",;
+    industry: "",;
+    custom_domain: "",;
+    is_co_branded: true;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  });
+
+  // Check if user has admin role;
+  const isAdmin = user?.role === "admin";
+<<<<<<< HEAD
+=======
+
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" />;
+  }
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e && e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSelectChange = (name: string, value: string) => {;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSwitchChange = (name: string, checked: boolean) => {;
+    setFormData(prev => ({ ...prev, [name]: checked }));
+  };
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true),;
+
+    try {;
+      // Generate subdomain if not provided;
+      const subdomain = formData && formData.subdomain || formData && formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+      // Create landing page copy;
+      const landingPageCopy = {;
+        headline: "AI Hiring Assistant",;
+        subtitle: `Find the best talent for your ${formData && formData.industry || "company"}`,;
+        cta: "Get Started";
+      };
+
+=======
+
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { toast } from "sonner",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Switch } from "@/components/ui/switch",;
+;
+export default function TenantOnboarding() {;
+  const { user } = useAuth(),;
+  const [activeTab, setActiveTab] = useState("company"),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [formData, setFormData] = useState({;
+    brand_name:"",;
+    subdomain:"",;
+    logo_url:"",;
+    primary_color:"#9b87f5",;
+    theme_preset:"light",;
+    company_size:"",;
+    industry:"",;
+    custom_domain:"",;
+    is_co_branded:true;
+  }),;
+  ;
+  // Check if user has admin role;
+  const isAdmin = user?.role === "admin",;
+  ;
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" />,;
+  }
+;
+  const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target,;
+    setFormData(prev => ({ ...prev, [name]:value })),;
+  },;
+  ;
+  const handleSelectChange = (name:string, value:string) => {;
+    setFormData(prev => ({ ...prev, [name]:value })),;
+  },;
+  ;
+  const handleSwitchChange = (name:string, checked:boolean) => {;
+    setFormData(prev => ({ ...prev, [name]:checked })),;
+  },;
+  ;
+  const handleSubmit = async (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSubmitting(true),;
+    ;
+    try {;
+      // Generate subdomain if not provided;
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),;
+      ;
+      // Create landing page copy;
+      const landingPageCopy = {;
+        headline:"AI Hiring Assistant",;
+        subtitle:`Find the best talent for your ${formData.industry || "company"}`,;
+        cta:"Get Started";
+      },;
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
@@ -91,15 +248,61 @@ export default function TenantOnboarding() {
 
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }),
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value }))
+<<<<<<< HEAD
+
+=======
+  }
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+  const handleSwitchChange = (name: string, checked: boolean) => {
+    setFormData(prev => ({ ...prev, [name]: checked }))
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true)
+    try {
+      // Generate subdomain if not provided
+      const subdomain = formData.subdomain |formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
   const handleSelectChange = (name: string, value: string) => {
@@ -118,11 +321,43 @@ export default function TenantOnboarding() {
       // Generate subdomain if not provided
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant"
         subtitle: `Find the best talent for your ${formData.industry |"company"}`
         cta: "Get Started"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      },
+      
+
+=======
+      },
+      
+
+      }
+      },
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -140,6 +375,21 @@ export default function TenantOnboarding() {
           email_template_override: null
         })
         .select('id, brand_name, subdomain')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+        .single();
+      if (error) throw error;
+      toast.success("Tenant created successfully!", {
+        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
+      });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .single(),
       
       if (error) throw error,
@@ -148,6 +398,16 @@ export default function TenantOnboarding() {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       }),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Reset form
       setFormData({
         brand_name: ""
@@ -161,10 +421,47 @@ export default function TenantOnboarding() {
         is_co_branded: true
       })
     } catch (error: any) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      console.error("Error creating tenant:", error),
+      toast.error("Failed to create tenant", { 
+        description: error.message 
+
+=======
+      console.error("Error creating tenant:", error),
+      toast.error("Failed to create tenant", { 
+        description: error.message 
+      console.error("Error creating tenant:", error);
+      toast.error("Failed to create tenant", {
+        description: error.message
+      console.error("Error creating tenant:", error),
+      toast.error("Failed to create tenant", { 
+        description: error.message 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       })
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  },
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
 
@@ -199,6 +496,161 @@ export default function TenantOnboarding() {
               <form onSubmit={handleSubmit} className="space-y-6">;
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
                   <TabsList className="mb-4 grid grid-cols-3 w-full">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import React, { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { SEO } from '@/components / SEO';
+import { use_auth } from '@/hooks / use_auth';
+import { Navigate } from './react-router-dom';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Input } from '@/components / ui / input';
+import { Label } from '@/components / ui / label';
+import { Button } from '@/components / ui / button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { toast } from './sonner';
+import { supabase } from '@/integrations / supabase / client';
+import { Switch } from '@/components / ui / switch';
+export default /**
+ * TenantOnboarding - Function description
+ */
+function TenantOnboarding() {
+  const { user } = use_auth ();
+  const [active_tab, setActiveTab] = useState ("company");
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const [form_data, setFormData] = useState ({
+    brand_name: "",
+    subdomain: "",
+    logo_url: "",
+    primary_color: "#9b87f5",
+    theme_preset: "light",
+    company_size: "",
+    industry: "",
+    custom_domain: "",
+    is_co_branded: true;
+  });
+;
+  // Check if user has admin role;
+  const is_admin = user?.role === "admin";
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <Navigate to="/unauthorized" />;
+  }
+  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+    const { name, value } = e.target;
+    setFormData (prev => ({ ...prev, [name]: value }));
+  }
+;
+  const handleSelectChange = (name: string, value: string) =>: any {
+    setFormData (prev => ({ ...prev, [name]: value }));
+  }
+;
+  const handleSwitchChange = (name: string, checked: boolean) =>: any {
+    setFormData (prev => ({ ...prev, [name]: checked }));
+  }
+;
+  const handle_submit = async (e: React.FormEvent) => {
+    e.prevent_default ();
+    setIsSubmitting (true),
+    try {
+      // Generate subdomain if not provided;
+      const subdomain = form_data.subdomain || form_data.brand_name.toLowerCase ().replace (/[^a - z0 - 9]/g, '');
+;
+      // Create landing page copy;
+      const landingPageCopy = {
+        headline: "AI Hiring Assistant",
+        subtitle: `Find the best talent for your ${form_data.industry || "company"}`,
+        cta: "Get Started";
+      }
+;
+      // Submit to Supabase;
+      const { data, error } = await supabase;
+        .from ('whitelabel_tenants');
+        .insert ({
+          brand_name: form_data.brand_name,
+          subdomain: subdomain,
+          custom_domain: form_data.custom_domain || null,
+          primary_color: form_data.primary_color,
+          logo_url: form_data.logo_url || null,
+          theme_preset: form_data.theme_preset,
+          landing_page_copy: landingPageCopy,
+          is_active: true,
+          account_manager_id: user.id,
+          dns_verified: false,
+          email_template_override: null;
+        });
+        .select ('id, brand_name, subdomain');
+        .single ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast.success ("Tenant created successfully!", {
+        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`;
+      });
+;
+      // Reset form;
+      setFormData ({
+        brand_name: "",
+        subdomain: "",
+        logo_url: "",
+        primary_color: "#9b87f5",
+        theme_preset: "light",
+        company_size: "",
+        industry: "",
+        custom_domain: "",
+        is_co_branded: true;
+      });
+    } catch (error: any) {
+      console.error ("Error creating tenant:", error);
+      toast.error ("Failed to create tenant", {
+        description: error.message;
+      });
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+;
+  return (
+    <>;
+      <SEO;
+        title="Tenant Onboarding - Zion AI Marketplace";
+        description="Onboard a new white - label tenant to the Zion AI Marketplace platform.";
+      />;
+      <Header />;
+      <main className="flex - 1 container max - w-4xl mx - auto py - 10 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="flex flex - col space - y-6">;
+          <div>;
+            <h1 className="text - 3xl font - bold tracking - tight">Tenant Onboarding</h1>;
+            <p className="text - muted - foreground mt - 2">;
+              Create a new white - label instance of Zion Hire AI for a company.;
+            </p>;
+          </div>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > New Tenant Setup</CardTitle>;
+              <CardDescription>;
+                Configure the branding and details for the new white - label tenant.;
+              </CardDescription>;
+            </CardHeader>;
+            <CardContent>;
+              <form on_submit={handle_submit} className="space - y-6">;
+                <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
+                  <TabsList className="mb - 4 grid grid - cols - 3 w - full">;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 
@@ -206,6 +658,46 @@ export default function TenantOnboarding() {
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+                        placeholder="hire && hire.yourcompany.com"
+
+
+=======
+                      />;
+                    </div>;
+
+                    <div className="space-y-2">;
+                      <Label htmlFor="industry">Industry</Label>;
+                      <Select
+                        name="industry" 
+                        value={formData && formData.industry} 
+                        onValueChange={(value) => handleSelectChange("industry", value)}
+=======
+                  <TabsContent value="company" className="space - y-4">;
+                    <div className="space - y-2">;
+                      <Label html_for="brand_name">Company Name</Label>;
+                      <Input;
+                        id="brand_name";
+                        name="brand_name";
+                        value={form_data.brand_name}
+                        on_change={handleInputChange}
+=======
+                  ;
+                  <TabsContent value="company" className="space-y-4">;
+                    <div className="space-y-2">;
+                      <Label htmlFor="brand_name">Company Name</Label>;
+                      <Input;
+                        id="brand_name";
+                        name="brand_name";
+                        value={formData.brand_name}
+                        onChange={handleInputChange}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         placeholder="Acme Corporation";
                         required;
                       />;
@@ -252,6 +744,11 @@ export default function TenantOnboarding() {
                         placeholder="hire && hire.yourcompany.com"
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -488,6 +985,71 @@ export default function TenantOnboarding() {;
                         name="logo_url"
                         value={formData && formData.logo_url}
                         onChange={handleInputChange}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        placeholder="https://example.com/logo.png";
+<<<<<<< HEAD
+
+                      />;
+                      <p className="text-xs text-muted-foreground">;
+=======
+                    <div className="flex items - center justify - between">;
+                      <div className="space - y-0.5">;
+                        <Label html_for="is_co_branded">Co - branding</Label>;
+                        <p className="text - xs text - muted - foreground">;
+=======
+                      />;
+                      <p className="text-xs text-muted-foreground">;
+                        Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
+                      </p>;
+                    </div>;
+                    <div className="space-y-2">;
+                      <Label htmlFor="primary_color">Primary Brand Color</Label>;
+                      <div className="flex items-center gap-2">;
+                        <Input;
+                          id="primary_color";
+                          name="primary_color";
+                          type="color";
+                          value={formData.primary_color}
+                          onChange={handleInputChange}
+                          className="w-12 p-1 h-10"
+                        />
+                        <Input
+                          name="primary_color"
+                          value={formData.primary_color}
+                          onChange={handleInputChange}
+                          placeholder="#9b87f5";
+                        />;
+                      </div>;
+                    </div>;
+                    <div className="space-y-2">;
+                      <Label htmlFor="theme_preset">Theme Preset</Label>;
+                      <Select;
+                        name="theme_preset";
+                        value={formData.theme_preset} ;
+                        onValueChange={(value) => handleSelectChange("theme_preset", value)}
+                      >;
+                        <SelectTrigger>;
+                          <SelectValue placeholder="Select theme" />;
+                        </SelectTrigger>;
+                        <SelectContent>;
+                          <SelectItem value="light">Light</SelectItem>;
+                          <SelectItem value="dark">Dark</SelectItem>;
+                          <SelectItem value="corporate">Corporate</SelectItem>;
+                          <SelectItem value="startup">Startup</SelectItem>;
+                          <SelectItem value="neon">Neon</SelectItem>;
+                        </SelectContent>;
+                      </Select>;
+                    </div>;
+                    <div className="flex items-center justify-between">;
+                      <div className="space-y-0.5">;
+                        <Label htmlFor="is_co_branded">Co-branding</Label>;
+                        <p className="text-xs text-muted-foreground">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           Show "Powered by Zion AI" in the footer and elsewhere;
                         </p>;
                       </div>;
@@ -529,11 +1091,45 @@ export default function TenantOnboarding() {;
                         placeholder="hire.yourcompany.com";
                       />;
                       <p className="text-xs text-muted-foreground">;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.;
                       </p>;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                <div className="flex justify - end space - x-2">;
+                  <Button type="button" variant="outline" on_click={() => window.history.back ()}>;
+                    Cancel;
+                  </Button>;
+                  <Button type="submit" disabled={is_submitting}>;
+                    {is_submitting ? "Creating..." : "Create Tenant"}
+
+=======
+                ;
+                <div className="flex justify-end space-x-2">;
+                  <Button type="button" variant="outline" onClick={() => window.history.back()}>;
+                    Cancel;
+                  </Button>;
+                  <Button type="submit" disabled={isSubmitting}>;
+                    {isSubmitting ? "Creating..." : "Create Tenant"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </Button>;
                 </div>;
               </form>;
@@ -546,6 +1142,14 @@ export default function TenantOnboarding() {;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
     </>);
 }
@@ -607,7 +1211,20 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
     </>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

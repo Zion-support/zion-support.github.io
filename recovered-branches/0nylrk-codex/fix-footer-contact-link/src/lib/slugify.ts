@@ -1,5 +1,28 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+=======
+<<<<<<< HEAD
 
+
+<<<<<<< HEAD
+=======
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+=======
+=======
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function slugify(title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -30,9 +53,12 @@ export function unslugify(slug: string, separator = "-"): string {
   return slug
     .split(separator)
     .filter(Boolean)
+<<<<<<< HEAD
+=======
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export function slugify (title: string, separator = "-"): string {
@@ -43,6 +69,19 @@ export function slugify (title: string, separator = "-"): string {
 
 ;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -72,4 +111,22 @@ export function unslugify (slug: string, separator = "-"): string {
     .join(" ");
 }
 ;
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

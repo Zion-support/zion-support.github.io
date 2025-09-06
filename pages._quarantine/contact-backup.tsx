@@ -7,6 +7,15 @@ const "ContactBackup": NextPage = () => {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default ContactBackup;
+import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
+import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 export default ContactBackup;
@@ -39,3 +48,9 @@ const "ContactBackup": NextPage = () => {
 }
 export default ContactBackup
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { Interface } from 'ethers',;
 // Simple ABI for demonstration (release/refund)
 const abi = [
@@ -10,6 +10,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { bytecode, constructorArgs } = req.body |{}
   if (!bytecode |!constructorArgs) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
   }
   try {
@@ -44,9 +48,12 @@ import { Interface } from 'ethers';
 
 }
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Interface } from 'ethers'
 // Simple ABI for demonstration (release / refund);
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const abi = [;
   'constructor (address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release () externalfunction refund () externalfunction client () view returns (address)function talent () view returns (address)function total_amount () view returns (uint256)';
 ]
@@ -77,16 +84,24 @@ if ( {) {
     return res.status (200).json ({ abi, tx });
   } catch (e: any) {
     return res.status (400).json ({ error: e?.message || 'Failed to prepare deployment tx' });
+<<<<<<< HEAD
   }
 }
 
 
 
 
+=======
+
+  }
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 }
 
+<<<<<<< HEAD
 ;
   const { bytecode, constructorArgs } = req.body || {};
   if (!bytecode || !constructorArgs) {;
@@ -118,3 +133,5 @@ if ( {) {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -31,17 +31,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
     });
 
+  }
 
+<<<<<<< HEAD
+}
+
+
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 }
 
-
-  }
-
 }
+<<<<<<< HEAD
+=======
 
-}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -129,3 +135,7 @@ function handler() {
   }
 }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

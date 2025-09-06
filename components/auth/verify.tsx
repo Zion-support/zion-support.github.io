@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Verify Email</h1>;
@@ -12,6 +17,10 @@
       <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 
 export default function VerifyEmailPage() {
@@ -49,6 +58,7 @@ function VerifyEmailPage() {
     </div>);
 }
 
+<<<<<<< HEAD
 
 
 
@@ -59,6 +69,8 @@ function VerifyEmailPage() {
 
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function VerifyEmailPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -72,6 +84,7 @@ export default function VerifyEmailPage() {
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Verify Email</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>
+<<<<<<< HEAD
     </div>
   );
 
@@ -84,3 +97,6 @@ export default function VerifyEmailPage() {
   );
 }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

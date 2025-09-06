@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Phone
   Mail
   MapPin
@@ -17,6 +22,10 @@
 
 import React from 'react;';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </a>
               </div>
               <div className="flex items-center>
@@ -38,9 +47,17 @@ import Link from 'next/link';
             </div>
           </div>
           {/* Services */}
+<<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
+=======
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                     className="text-gray-300 hover:text-white transition-colors"
@@ -48,8 +65,6 @@ import Link from 'next/link';
                     {link.name}
                   </Link>
                 </li>
-
-
 
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
@@ -104,14 +119,12 @@ import Link from 'next/link';
             </ul>;
           </div>;
 
-
           {/* Solutions */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
             <ul className="space-y-2">;
               {footerLinks && footerLinks.solutions.map((link) => (;
                 <li key={link && link.name}>;
-
 
           {/* Solutions */}
           <div>
@@ -136,6 +149,7 @@ import Link from 'next/link';
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
               <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
@@ -157,10 +171,128 @@ import Link from 'next/link';
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
+=======
+
+                    href={link && link.href}
+                    className="text-gray-300 hover:text-white transition-colors">;
+                    {link && link.name}
+                  </Link>;
+                </li>;
+              ))}
+            </ul>;
+          </div>;
+
+          {/* Company & Resources */}
+          <div>;
+            <h3 className="text-lg font-semibold mb-4">Company</h3>;
+            <ul className="space-y-2 mb-6">;
+              {footerLinks && footerLinks.company.map((link) => (;
+                <li key={link && link.name}>;
+                  <Link
+          {/* Resources */}
+          <div>
+            <h3 className=text-lg font-semibold mb-6">Resources</h3>
+            <ul className="space-y-3>
+              {resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                    href={link && link.href}
+                    className="text-gray-300 hover:text-white transition-colors">;
+                    {link && link.name}
+                  </Link>;
+                </li>;
+              ))}
+            </ul>;
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>;
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.resources.map((link) => (;
+                <li key={link && link.name}>;
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>;
+          </div>;
+        </div>;
+      </div>;
+            {/* Social Links */}
+            <div className="flex space-x-4 mb-4 md:mb-0">
+              <a
+                href="https://linkedin.com/company/zion-tech-group"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://facebook.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://instagram.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+            {/* Social Links */}
+            <div className=mt-6">
+              <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target=_blank"
+                    rel="noopener noreferrer
+                    className="text-gray-400 hover:text-white transition-colors"
+                    aria-label={social.name}
+                  >
+                    <social.icon className=h-5 w-5" />
+                  </a>
+                ))}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-8 pt-8>
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -192,6 +324,7 @@ import Link from 'next/link';
                 Terms of Service;
               </Link>;
               <Link
+<<<<<<< HEAD
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
@@ -200,3 +333,6 @@ import Link from 'next/link';
     </footer>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,14 +1,64 @@
+<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 const Tabs = TabsPrimitive.Root;
+=======
+<<<<<<< HEAD
+import {cn} from '@/lib/utils';
+const Tabs = TabsPrimitive.Root;
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import * as React from 'react';
+import * as TabsPrimitive from '@radix-ui/react-tabs';
+import {cn} from '@/lib/utils';
+const Tabs = TabsPrimitive.Root;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {cn} from '@/lib/utils';
+const Tabs = TabsPrimitive.Root;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { cn } from "@/lib/utils"
 
 const Tabs = TabsPrimitive.Root
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
@@ -17,6 +67,8 @@ const TabsList = React.forwardRef<
 
     ref={ref}
     className={cn(
+<<<<<<< HEAD
+=======
 
 import * as React from "react";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
@@ -35,6 +87,7 @@ const TabsList = React.forwardRef<;
       "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     ref={ref}
     className={cn(
@@ -63,6 +116,22 @@ const TabsTrigger = React && React.forwardRef<;
   <TabsPrimitive&& TabsPrimitive.Trigger
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    ref={ref}
+    className={cn(
+      'inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const TabsTrigger = React.forwardRef<;
   React.ElementRef<typeof TabsPrimitive.Trigger>,;
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>;
@@ -98,11 +167,42 @@ const TabsContent = React && React.forwardRef<;
     ref={ref}
     className={cn(
       'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+    ref={ref}
+    className={cn(
+      'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const TabsContent = React.forwardRef<;
   React.ElementRef<typeof TabsPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>;
 >(({ className, ...props }, ref) => (;
   <TabsPrimitive.Content;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ref={ref}
     className={cn(
       "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
@@ -172,6 +272,15 @@ TabsContent.display_name = TabsPrimitive.Content.display_name;
 ;
 export { Tabs, TabsList, TabsTrigger, TabsContent }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 ;
 export { Tabs, TabsList, TabsTrigger, TabsContent }import * as React from "react" import * as TabsPrimitive from "@radix-ui/react-tabs" const Tabs = TabsPrimitive.Root const TabsList = React.forwardRef< React.ElementRef<typeof TabsPrimitive.List>;
@@ -211,3 +320,10 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }
 export { Tabs, TabsList, TabsTrigger, TabsContent };
 export { Tabs, TabsList, TabsTrigger, TabsContent }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

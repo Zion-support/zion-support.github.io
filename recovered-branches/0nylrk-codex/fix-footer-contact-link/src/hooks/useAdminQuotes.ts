@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -11,6 +22,17 @@ import type { DateRange } from '@/types/dateRange';
 export const useAdminQuotes = () => {;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
+import { quoteRequestService  } from '@/services/quoteRequestService';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -20,6 +42,16 @@ import type { DateRange } from '@/types/dateRange';
 
 export const useAdminQuotes = () => {
 export const useAdminQuotes = () => {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -29,12 +61,46 @@ export const useAdminQuotes = () => {;
   // Fetch all quote requests
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotesadmin'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    queryFn: () => quoteRequestService && quoteRequestService.getAll(),
+
+=======
+queryFn: () => quoteRequestService && quoteRequestService.getAll(),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     enabled: true});
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+    queryFn: () => quoteRequestService.getAll()
+    enabled: true});
+  // Filter quotes based on selected filters
+  const filteredQuotes = allQuotes.filter((quote) => {
+    // Status filter
+    if (statusFilter !== 'all' && quote.status !== statusFilter) {
+      return false
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -60,6 +126,12 @@ export const useAdminQuotes = () => {;
       return false;
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -104,6 +176,29 @@ export const useAdminQuotes = () => {;
 
     
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+    
+
+    return true
+  });
+  // Update quote status mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
+      quoteRequestService.updateStatus(id, status);
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     // Search filter;
     if (searchQuery) {;
@@ -135,10 +230,35 @@ export const useAdminQuotes = () => {;
       }
     }
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return true
   });
   // Update quote status mutation
   const updateStatusMutation = useMutation({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
@@ -146,22 +266,70 @@ export const useAdminQuotes = () => {;
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     onSuccess: () => {
       toast({
         title: "Status updated"
         description: "The quote request status has been updated"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+      });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to update status: " + error && error.message,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+    }
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update status: " + error.message
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive"
       })
     }
   });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+
+=======
+    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
+      quoteRequestService.toggleArchive(id, isArchived);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     onError: (error: Error) => {
       toast({
@@ -176,12 +344,34 @@ export const useAdminQuotes = () => {;
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
           ? "The quote request has been archived"
           : "The quote request has been moved back to active quotes"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      });
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
@@ -198,10 +388,38 @@ export const useAdminQuotes = () => {;
       toast({
         title: "Error";
         description: "Failed to update quote: " + error && error.message,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+    }
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update quote: " + error.message
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive"
       })
     }
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     onError: (error: Error) => {
       toast({
@@ -212,6 +430,13 @@ export const useAdminQuotes = () => {;
     }
   }),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
@@ -235,16 +460,67 @@ export const useAdminQuotes = () => {;
       toast({
         title: "Error";
         description: "Failed to delete quote: " + error.message
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to delete quote: " + error && error.message,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive"
       })
     }
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  return {
+    quotes: filteredQuotes;
+    isLoading;
+    error;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter;
+    searchQuery;
+    setSearchQuery;
+    dateRange;
+    setDateRange
+    updateStatus: (id: string, status: QuoteStatus) =>
+      updateStatusMutation.mutate({ id, status });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -403,6 +679,21 @@ if ( {) {
     setArchiveFilter;
     search_query;
     setSearchQuery;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    toggleArchive: (id: string, isArchived: boolean) => 
+
+=======
+=======
+    toggleArchive: (id: string, isArchived: boolean) =>
+    toggleArchive: (id: string, isArchived: boolean) => 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return {
     toggleArchive: (id: string, isArchived: boolean) =>
     toggleArchive: (id: string, isArchived: boolean) => 
@@ -410,6 +701,13 @@ if ( {) {
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     onError: (error: Error) => {
       toast({
@@ -493,10 +791,36 @@ if ( {) {
     updateStatus: (id: string, status: QuoteStatus) =>;
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     setDateRange,
     updateStatus: (id: string, status: QuoteStatus) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status });
@@ -504,6 +828,14 @@ if ( {) {
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
 };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     date_range;
     setDateRange,
     update_status: (id: string, status: QuoteStatus) =>;
@@ -513,6 +845,15 @@ if ( {) {
     delete_quote: (id: string) => delete_mutation.mutate (id)}
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -678,3 +1019,10 @@ export const useAdminQuotes = () => {;
   
 }
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

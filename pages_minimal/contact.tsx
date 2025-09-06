@@ -1,5 +1,34 @@
+<<<<<<< HEAD
     </div>;
   );
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+export default function Contact() {;
+
+  return (
+<<<<<<< HEAD
+    <div>;
+      <main>;
+        <h1>Contact Us</h1>;
+        <p>Get in touch with our team for your IT and AI service needs.</p>;
+      </main>;
+=======
+    <div>
+      <main>
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team for your IT and AI service needs.</p>
+      </main>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    </div>;
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 ;
 export default /**

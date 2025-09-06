@@ -22,16 +22,43 @@ interface DiscussionPost {
   avatar?: string;
   time: string;
   title: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface DiscussionPost {
   id: number,
   author: string,
   avatar?: string,
   time: string,
   title: string,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  body: string
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   body: string
 }
 
@@ -45,6 +72,33 @@ const initial_posts: DiscussionPost[] = [;
     title: "What AI trends are you most excited for in 2025?",
   body: string
 }
+<<<<<<< HEAD
+=======
+const initialPosts: DiscussionPost[] = [
+  {
+
+id: 1
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+  {
+    id: 2,
+    author: "David Kim",
+    time: "50m ago",
+    title: "Quick tip: How to rank your Zion listing higher",
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
+
+    id: 1
+    author: "Anna Zhou"
+    time: "2h ago"
+    title: "What AI trends are you most excited for in 2025?"
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  body: string
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     id: 2
     author: "David Kim"
@@ -53,6 +107,19 @@ const initial_posts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
   }
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const CommunityDiscussion: React.FC = () => {
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const initialPosts: DiscussionPost[] = [;
   {;
     id: 1,;
@@ -64,6 +131,19 @@ const initialPosts: DiscussionPost[] = [;
     author: "David Kim",;
     time: "50m ago",;
     title: "Quick tip: How to rank your Zion listing higher",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
+  },;
+];
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleAddPost = () => {;
     if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
     setPosts([;
@@ -75,11 +155,86 @@ const initialPosts: DiscussionPost[] = [;
         body: newBody,;
       },;
       ...posts,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+const [posts, setPosts] = useState(initialPosts);
+export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+  const handleAddPost = () => {
+    if (!newTitle.trim() |!newBody.trim()) return;
+    setPosts([
+      {
+        id: Date.now()
+        author: "You"
+        time: "Now"
+        title: newTitle
+        body: newBody
+      }
+      ...posts
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ]);
     setNewTitle("");
     setNewBody("");
     setShowNew(false);
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (
+<<<<<<< HEAD
+=======
+=======
+
+    id: 1,
+    author: "Anna Zhou",
+    time: "2h ago",
+    title: "What AI trends are you most excited for in 2025?",
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+  {
+    id: 2,
+    author: "David Kim",
+    time: "50m ago",
+    title: "Quick tip: How to rank your Zion listing higher",
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
+
+
+
+=======
+
+  const [posts, setPosts] = useState(initialPosts),
+  const [showNew, setShowNew] = useState(false),
+  const [newTitle, setNewTitle] = useState(""),
+  const [newBody, setNewBody] = useState(""),
+
+  const handleAddPost = () => {
+    if (!newTitle.trim() || !newBody.trim()) return,
+    setPosts([
+      {
+        id: Date.now(),
+        author: "You",
+        time: "Now",
+        title: newTitle,
+        body: newBody},
+      ...posts]),
+    setNewTitle(""),
+    setNewBody(""),
+    setShowNew(false)
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
@@ -153,6 +308,11 @@ import { Separator } from "@/components/ui/separator",;
     setShowNew(false);
   }
   return (
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
         <MessageCircle size={28} className="text-zion-cyan" />;
@@ -176,6 +336,99 @@ import { Separator } from "@/components/ui/separator",;
       {showNew && (;
         <Card className="mb-6 animate-scale-in">;
           <CardContent className="py-5">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <Input
+              placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
+              className="mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate"
+              value={newTitle}
+              onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
+                setNewTitle(e && e.target.value);
+              }
+              maxLength={80}
+            />;
+            <Textarea
+              placeholder="What's on your mind?"
+              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
+              value={newBody}
+              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
+                setNewBody(e && e.target.value);
+=======
+;
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, set_posts] = useState (initial_posts);
+  const [show_new, setShowNew] = useState (false);
+  const [new_title, setNewTitle] = useState ("");
+  const [new_body, setNewBody] = useState ("");
+;
+  const handleAddPost = () =>: any {
+    if (|| !new_body.trim ()) return) {
+  $2
+}
+    set_posts ([;
+      {
+        id: Date.now (),
+        author: "You",
+        time: "Now",
+        title: new_title,
+        body: new_body,
+      },
+      ...posts,
+    ]);
+    setNewTitle ("");
+    setNewBody ("");
+    setShowNew (false);
+  }
+;
+  return (
+    <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
+      <div className="flex items - center gap - 3 mb - 4">;
+        <MessageCircle size={28} className="text - zion - cyan" />;
+        <span className="font - bold text - 2xl text - white tracking - tight">;
+          Community Discussion;
+        </span>;
+        <span className="ml - auto text - xs text - zion - slate - light bg - zion - purple / 20 rounded - full px - 2 py - 0.5">;
+          {posts.length} posts;
+        </span>;
+      </div>;
+      <Separator className="mb - 6" />;
+      <div className="mb - 4 flex justify - end">;
+        <Button;
+          className="bg - zion - purple text - white hover:bg - zion - purple - light transition hover - scale";
+          size="sm";
+          on_click={() => setShowNew ((v) => !v)}
+        >;
+          {show_new ? "Cancel" : "New Post"}
+        </Button>;
+      </div>;
+      {show_new && (
+        <Card className="mb - 6 animate - scale - in">;
+          <CardContent className="py - 5">;
+            <Input;
+              placeholder="Title (e.g., Share an AI tool, Ask for help...)";
+              className="mb - 3 bg - zion - blue - light text - white placeholder:text - zion - slate";
+              value={new_title}
+              on_change={(e: React.ChangeEvent < HTMLInputElement>) =>;
+                setNewTitle (e.target.value);
+              }
+              max_length={80}
+            />;
+            <Textarea;
+              placeholder="What's on your mind?";
+
+              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]";
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
@@ -202,12 +455,79 @@ import { Separator } from "@/components/ui/separator",;
 
                 disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() || !newBody.trim()}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                disabled={!newTitle.trim() |!newBody.trim()}
+                disabled={!newTitle.trim() || !newBody.trim()}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 Post
               </Button>
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      )}
+      <div className="flex flex-col gap-6">
+        {posts.map((post) => (
+          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
+            <CardContent className="py-4 flex gap-4">
+              <Avatar>
+                <AvatarFallback>
+                  {post.author
+                    .split(" ")
+                    .map((s) => s[0])
+                    .join("")
+                    .toUpperCase()
+                    .slice(0, 2)}
+<<<<<<< HEAD
+                </AvatarFallback>
+              </Avatar>
+              <div>
+                <div className="flex gap-2 items-center">
+                  <span className="font-semibold text-white">
+                    {post.author}
+                  </span>
+                  <span className="text-xs text-zion-slate-light">
+                    {post.time}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">
+                  {post.title}
+                </h3>
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">
+                  {post.body}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">
+        🚀 Stay engaged! Top contributors are regularly featured on the
+        homepage.
+      </div>
+    </div>
+<<<<<<< HEAD
+);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
             <div className="flex gap - 3 justify - end">;
               <Button;
@@ -261,6 +581,73 @@ import { Separator } from "@/components/ui/separator",;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        </Card>)}
+      <div className="flex flex - col gap - 6">;
+        {posts.map ((post) => (
+          <Card;
+            key={post.id}
+            className="bg - zion - blue border - zion - slate - dark shadow - lg";
+          >;
+            <CardContent className="py - 4 flex gap - 4">;
+              <Avatar>;
+                <AvatarFallback>;
+                  {post.author;
+                    .split (" ");
+                    .map ((s) => s[0]);
+                    .join ("");
+                    .toUpperCase ();
+                    .slice (0, 2)}
+                </AvatarFallback>;
+              </Avatar>;
+              <div>;
+                <div className="flex gap - 2 items - center">;
+                  <span className="font - semibold text - white">;
+                    {post.author}
+                  </span>;
+                  <span className="text - xs text - zion - slate - light">;
+                    {post.time}
+                  </span>;
+                </div>;
+                <h3 className="text - lg font - bold text - zion - cyan mt - 1">;
+                  {post.title}
+                </h3>;
+                <p className="text - zion - slate - light mt - 1 whitespace - pre - line">;
+                  {post.body}
+                </p>;
+              </div>;
+            </CardContent>;
+          </Card>))}
+      </div>;
+      <div className="mt - 8 text - xs text - zion - slate - dark text - center">;
+        🚀 Stay engaged! Top contributors are regularly featured on the;
+        homepage.;
+      </div>;
+    </div>);
+}
+;
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
   );
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

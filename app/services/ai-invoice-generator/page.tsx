@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 
 export const metadata = {
@@ -347,13 +348,17 @@ export default function AIInvoiceGeneratorPage() {
 
 function FeatureCard({ icon, title, description, benefits }: {
 =======
+=======
+import Link from 'next/link';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export const metadata = {
   title: 'AI Invoice Generator | Zion Tech Group',
-  description: 'Automated invoicing with AI data extraction, smart categorization, and payment processing. Save 10+ hours per week with 99% accuracy.',
-  keywords: 'AI invoice generator, automated invoicing, invoice automation, payment processing, expense tracking, billing software'
+  description: 'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization for streamlined financial management.',
+  keywords: 'AI invoice generator, automated billing, invoice automation, expense tracking, financial management, smart invoicing',
 };
 
+<<<<<<< HEAD
 interface FeatureCardProps {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   icon: string;
@@ -365,11 +370,18 @@ interface FeatureCardProps {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
 =======
+=======
+interface FeatureProps {
+  title: string;
+  description: string;
+  icon: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
-function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
+function Feature({ title, description, icon }: FeatureProps) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
@@ -386,6 +398,11 @@ function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
           </li>
         ))}
       </ul>
+=======
+      <div className="text-3xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>
   );
 }
@@ -448,7 +465,7 @@ function PricingTier({ name, price, period, description, features, popular = fal
         ))}
       </ul>
       <a
-        href="mailto:kleber@ziontechgroup.com?subject=AI Invoice Generator - {name} Plan"
+        href="mailto:kleber@ziontechgroup.com?subject=AI Invoice Generator Quote - {name}"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
 <<<<<<< HEAD
@@ -534,12 +551,12 @@ export default function AIInvoiceGeneratorPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-orange-50 to-red-100 rounded-lg">
+      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-blue-100 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           AI Invoice Generator
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Automate your invoicing process with AI-powered data extraction, smart categorization, and payment processing. Save 10+ hours per week with 99% accuracy.
+          Automate your invoicing process with AI-powered data extraction, smart categorization, and automated billing. Save time and reduce errors with intelligent invoice management.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -562,194 +579,108 @@ export default function AIInvoiceGeneratorPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Invoice Features</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI invoice generator automates every aspect of your billing process, from data extraction to payment collection.
+            Comprehensive AI solutions to streamline your invoicing and financial management processes.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <FeatureCard
+          <Feature
             icon="📄"
             title="Smart Data Extraction"
-            description="AI automatically extracts invoice data from emails, PDFs, and documents with 99% accuracy"
-            benefits={[
-              "99% accuracy rate",
-              "Multi-format support",
-              "Automatic data entry",
-              "Error detection",
-              "Validation rules"
-            ]}
+            description="AI automatically extracts data from receipts, contracts, and documents to create accurate invoices"
           />
-          <FeatureCard
-            icon="🏷️"
-            title="Smart Categorization"
-            description="Automatically categorize expenses, clients, and projects using AI pattern recognition"
-            benefits={[
-              "Automatic categorization",
-              "Learning algorithms",
-              "Custom rules engine",
-              "Bulk processing",
-              "Exception handling"
-            ]}
+          <Feature
+            icon="🤖"
+            title="Automated Invoice Generation"
+            description="Generate professional invoices automatically based on project milestones, time tracking, or recurring schedules"
           />
-          <FeatureCard
+          <Feature
             icon="💳"
             title="Payment Processing"
-            description="Integrated payment processing with multiple payment methods and automated follow-ups"
-            benefits={[
-              "Multiple payment methods",
-              "Automated reminders",
-              "Payment tracking",
-              "Late fee calculation",
-              "Receipt generation"
-            ]}
+            description="Integrated payment processing with multiple payment methods and automated payment reminders"
           />
-          <FeatureCard
+          <Feature
             icon="📊"
+            title="Expense Categorization"
+            description="AI automatically categorizes expenses and tracks tax-deductible items for easy accounting"
+          />
+          <Feature
+            icon="📈"
             title="Financial Analytics"
-            description="Comprehensive financial insights and reporting with AI-powered trend analysis"
-            benefits={[
-              "Revenue tracking",
-              "Expense analysis",
-              "Cash flow forecasting",
-              "Client profitability",
-              "Tax preparation"
-            ]}
+            description="Comprehensive dashboards with revenue tracking, payment analytics, and financial insights"
           />
-          <FeatureCard
-            icon="🔄"
-            title="Workflow Automation"
-            description="Automated invoice approval workflows, recurring billing, and client notifications"
-            benefits={[
-              "Approval workflows",
-              "Recurring billing",
-              "Client notifications",
-              "Status tracking",
-              "Exception handling"
-            ]}
+          <Feature
+            icon="🔔"
+            title="Smart Notifications"
+            description="Automated reminders for overdue payments, upcoming invoices, and payment confirmations"
           />
-          <FeatureCard
-            icon="🔒"
-            title="Security & Compliance"
-            description="Bank-level security with compliance features for various industries and regulations"
-            benefits={[
-              "Bank-level encryption",
-              "GDPR compliance",
-              "Audit trails",
-              "Data backup",
-              "Access controls"
-            ]}
-          />
+        </div>
+      </section>
+
+      {/* Integration Options */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Connect with your existing business tools for a unified financial management experience.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {[
+            { name: 'QuickBooks', icon: '📚', description: 'Accounting software' },
+            { name: 'Xero', icon: '🔢', description: 'Cloud accounting' },
+            { name: 'Stripe', icon: '💳', description: 'Payment processing' },
+            { name: 'PayPal', icon: '💰', description: 'Online payments' },
+            { name: 'FreshBooks', icon: '📖', description: 'Invoice software' },
+            { name: 'Wave', icon: '🌊', description: 'Free accounting' },
+            { name: 'Sage', icon: '🧙', description: 'Business software' },
+            { name: 'Zoho Books', icon: '📘', description: 'Online accounting' },
+          ].map((integration, index) => (
+            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+              <div className="text-3xl mb-3">{integration.icon}</div>
+              <h3 className="font-semibold text-gray-900 mb-1">{integration.name}</h3>
+              <p className="text-xs text-gray-600">{integration.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-12 bg-gray-50 rounded-lg">
+      <section className="py-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI invoice generator simplifies your billing process in four easy steps.
+            Simple 4-step process to automate your invoicing with AI.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
               1
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Upload Documents</h3>
-            <p className="text-gray-600">
-              Upload invoices, receipts, or emails. Our AI automatically extracts all relevant data.
-            </p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Connect & Setup</h3>
+            <p className="text-gray-600">Connect your business tools and configure AI settings for your industry</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
               2
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Processing</h3>
-            <p className="text-gray-600">
-              AI categorizes expenses, validates data, and prepares invoices with smart suggestions.
-            </p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Extraction</h3>
+            <p className="text-gray-600">AI automatically extracts data from documents, emails, and time tracking tools</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
               3
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Review & Send</h3>
-            <p className="text-gray-600">
-              Review AI-generated invoices, make adjustments if needed, and send to clients automatically.
-            </p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Invoice Generation</h3>
+            <p className="text-gray-600">AI creates professional invoices with accurate pricing and client information</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
               4
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Track & Collect</h3>
-            <p className="text-gray-600">
-              Track payment status, send reminders, and collect payments through integrated payment processing.
-            </p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Payment & Tracking</h3>
+            <p className="text-gray-600">Automated payment processing and comprehensive financial tracking</p>
           </div>
-        </div>
-      </section>
-
-      {/* Industry Solutions */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Solutions</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Tailored invoice generation solutions for different industries and business types.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              industry: "Freelancers",
-              icon: "👨‍💻",
-              description: "Simple invoicing for individual professionals and consultants",
-              features: ["Time tracking", "Project billing", "Expense tracking", "Client management"]
-            },
-            {
-              industry: "Small Business",
-              icon: "🏢",
-              description: "Comprehensive invoicing for small to medium businesses",
-              features: ["Multi-user access", "Inventory management", "Tax calculations", "Reporting"]
-            },
-            {
-              industry: "Agencies",
-              icon: "🎯",
-              description: "Advanced invoicing for marketing and creative agencies",
-              features: ["Retainer billing", "Project tracking", "Team management", "Client portals"]
-            },
-            {
-              industry: "E-commerce",
-              icon: "🛒",
-              description: "Automated invoicing for online stores and marketplaces",
-              features: ["Order integration", "Shipping calculations", "Tax automation", "Multi-currency"]
-            },
-            {
-              industry: "Services",
-              icon: "🔧",
-              description: "Field service invoicing with mobile capabilities",
-              features: ["Mobile invoicing", "GPS tracking", "Photo attachments", "Digital signatures"]
-            },
-            {
-              industry: "Healthcare",
-              icon: "🏥",
-              description: "Medical billing with insurance and compliance features",
-              features: ["Insurance billing", "HIPAA compliance", "Patient portals", "Claim processing"]
-            }
-          ].map((solution, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-              <div className="text-4xl mb-4">{solution.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.industry}</h3>
-              <p className="text-gray-600 mb-4">{solution.description}</p>
-              <ul className="space-y-1">
-                {solution.features.map((feature, idx) => (
-                  <li key={idx} className="text-sm text-gray-600 flex items-center">
-                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -758,7 +689,7 @@ export default function AIInvoiceGeneratorPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your invoicing needs. All plans include our core AI features.
+            Choose the plan that fits your invoicing needs and business size.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -768,12 +699,12 @@ export default function AIInvoiceGeneratorPage() {
             period="month"
             description="Perfect for freelancers and small businesses"
             features={[
-              "Up to 100 invoices/month",
-              "Basic AI extraction",
-              "Payment processing",
-              "Basic reporting",
-              "Email support",
-              "Mobile app"
+              'Up to 50 invoices/month',
+              'Basic AI data extraction',
+              'Payment processing',
+              'Basic analytics',
+              'Email support',
+              '1 user account',
             ]}
             cta="Start Free Trial"
           />
@@ -783,12 +714,14 @@ export default function AIInvoiceGeneratorPage() {
             period="month"
             description="Most popular for growing businesses"
             features={[
-              "Up to 1,000 invoices/month",
-              "Advanced AI features",
-              "Custom workflows",
-              "Advanced analytics",
-              "Priority support",
-              "API access"
+              'Up to 500 invoices/month',
+              'Advanced AI features',
+              'Expense categorization',
+              'Advanced analytics',
+              'Priority support',
+              '5 user accounts',
+              'Custom templates',
+              'API access',
             ]}
             popular={true}
             cta="Start Free Trial"
@@ -799,54 +732,57 @@ export default function AIInvoiceGeneratorPage() {
             period="month"
             description="For large organizations"
             features={[
-              "Unlimited invoices",
-              "Custom AI models",
-              "White-label solution",
-              "Advanced reporting",
-              "Dedicated support",
-              "Custom integrations"
+              'Unlimited invoices',
+              'Full AI optimization suite',
+              'White-label options',
+              'Dedicated account manager',
+              '24/7 phone support',
+              'Unlimited users',
+              'Custom integrations',
+              'Advanced reporting',
             ]}
             cta="Contact Sales"
           />
         </div>
       </section>
 
-      {/* Success Stories */}
+      {/* Benefits */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our AI Invoice Generator?</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how businesses have transformed their invoicing process with our AI generator.
+            Proven results and cutting-edge AI technology to streamline your financial processes.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              company: "Marketing Agency",
-              industry: "Services",
-              result: "15 hours saved/week",
-              description: "Reduced invoice processing time from 20 hours to 5 hours per week, improving cash flow by 30% and reducing errors by 95%."
-            },
-            {
-              company: "Freelance Designer",
-              industry: "Creative",
-              result: "40% faster payments",
-              description: "Automated invoice generation and payment reminders reduced average payment time from 45 days to 27 days."
-            },
-            {
-              company: "Consulting Firm",
-              industry: "Professional",
-              result: "99% accuracy rate",
-              description: "Eliminated manual data entry errors and improved client satisfaction with professional, consistent invoicing."
-            }
-          ].map((story, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-              <div className="text-sm text-blue-600 font-semibold mb-2">{story.industry}</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">{story.company}</h3>
-              <p className="text-gray-600 mb-4">{story.description}</p>
-              <div className="text-2xl font-bold text-green-600">{story.result}</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">⏰</span>
             </div>
-          ))}
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Save 10+ Hours/Week</h3>
+            <p className="text-gray-600">Automate invoicing tasks and focus on growing your business</p>
+          </div>
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">📈</span>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">30% Faster Payments</h3>
+            <p className="text-gray-600">Automated reminders and easy payment options increase collection speed</p>
+          </div>
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🎯</span>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">99% Accuracy</h3>
+            <p className="text-gray-600">AI reduces human errors and ensures accurate invoicing</p>
+          </div>
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🔒</span>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Bank-Level Security</h3>
+            <p className="text-gray-600">Enterprise-grade security to protect your financial data</p>
+          </div>
         </div>
       </section>
 
@@ -854,11 +790,11 @@ export default function AIInvoiceGeneratorPage() {
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Automate Your Invoicing?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Start your free trial today and see how AI can revolutionize your billing process.
+          Start your free trial today and see how AI can transform your invoicing process.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Invoice Generator Free Trial"
+            href="mailto:kleber@ziontechgroup.com?subject=AI Invoice Generator Demo Request"
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Start Free Trial

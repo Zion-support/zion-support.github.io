@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+import React from "react";
+
+import {Link} from "react-router-dom";
+import {ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone} from "lucide-react";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Link } from "react-router-dom",
 import { 
@@ -15,6 +34,20 @@ import {
 export function QuickAccess() {
   const quickLinks = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function QuickAccess() {
   const quickLinks = [
     {
@@ -27,6 +60,7 @@ export function QuickAccess() {
       title: "AI Matcher",
       description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       link: "/match";
     };
       link: "/match"
@@ -37,26 +71,118 @@ export function QuickAccess() {
       description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    },
+
+
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       title: "Service Marketplace"
       description: "Discover professional services"
       icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
       link: "/services"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    },
+
+
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware"
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    },
+
+
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       title: "Community"
       description: "Connect with tech professionals"
       icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
       link: "/community"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    },
+
+
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       title: "Mobile App"
       description: "Zion on the go"
@@ -198,6 +324,122 @@ function QuickAccess() {
   ];
 ;
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import React from "react",;
+import { Link } from "react-router-dom",;
+import {;
+  ArrowRight,;
+  Search,;
+  Users,;
+  Briefcase,;
+  Settings,;
+  MessageSquare,;
+  Smartphone;
+} from "lucide-react",;
+export function QuickAccess() {;
+  const quickLinks = [;
+    {;
+      title: "AI Matcher",;
+      description: "Find the perfect match for your project needs",;
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,;
+      link: "/match";
+    },;
+    {;
+      title: "Talent Directory",;
+      description: "Browse verified tech specialists",;
+      icon: <Users className="h-6 w-6 text-zion-purple" />,;
+      link: "/talent";
+    },;
+    {;
+      title: "Service Marketplace",;
+      description: "Discover professional services",;
+      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,;
+      link: "/services";
+    },;
+    {;
+      title: "Equipment Catalog",;
+      description: "Find specialized hardware",;
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,;
+      link: "/equipment";
+    },;
+    {;
+      title: "Community",;
+      description: "Connect with tech professionals",;
+      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,;
+      link: "/community";
+    },;
+    {;
+      title: "Mobile App",;
+      description: "Zion on the go",;
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />;
+      link: "/mobile-launch";
+    }
+  ];
+  return (;
+
+=======
+    }
+  ];
+  return (;
+import { ;
+  ArrowRight,;
+  Search, ;
+  Users, ;
+  Briefcase, ;
+  Settings, ;
+  MessageSquare, ;
+  Smartphone ;
+} from "lucide-react",;
+;
+export function QuickAccess() {;
+  const quickLinks = [;
+    {;
+      title:"AI Matcher",;
+      description:"Find the perfect match for your project needs",;
+      icon:<Search className="h-6 w-6 text-zion-cyan" />,;
+      link:"/match";
+    },;
+    {;
+      title:"Talent Directory",;
+      description:"Browse verified tech specialists",;
+      icon:<Users className="h-6 w-6 text-zion-purple" />,;
+      link:"/talent";
+    },;
+    {;
+      title:"Service Marketplace",;
+      description:"Discover professional services",;
+      icon:<Briefcase className="h-6 w-6 text-zion-cyan" />,;
+      link:"/services";
+    },;
+    {;
+      title:"Equipment Catalog",;
+      description:"Find specialized hardware",;
+      icon:<Settings className="h-6 w-6 text-zion-purple" />,;
+      link:"/equipment";
+    },;
+    {;
+      title:"Community",;
+      description:"Connect with tech professionals",;
+      icon:<MessageSquare className="h-6 w-6 text-zion-cyan" />,;
+      link:"/community";
+    },;
+    {;
+      title:"Mobile App",;
+      description:"Zion on the go",;
+      icon:<Smartphone className="h-6 w-6 text-zion-purple" />,;
+      link:"/mobile-launch";
+    }
+  ],;
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section className="py-12 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-8">;
@@ -255,6 +497,15 @@ function QuickAccess() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ;
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
           {quickLinks.map((link, index) => (;
@@ -295,3 +546,10 @@ Smartphone const quickLinks = [ {
     </section>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

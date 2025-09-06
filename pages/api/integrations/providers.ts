@@ -13,9 +13,12 @@ function handler() {
 }
   res.status (200).json ({ providers: PROVIDERS });
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { PROVIDERS } from '[^']*';

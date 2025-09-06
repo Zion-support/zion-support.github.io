@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 origin/main
 
@@ -12,6 +27,25 @@ origin/main
  * Generate README;
  * Creates or updates the main README && README.md file;
  */;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+origin/main
+
+#!/usr/bin/env node;
+;
+/**;
+ * Generate README;
+ * Creates or updates the main README.md file;
+ */;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -110,6 +144,17 @@ function generateReadme() {;
     if (existingContent.length > 1000) {;
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),;
       return,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 #!/usr/bin/env node
 
 /**
@@ -214,10 +259,54 @@ function generateReadme() {
     if (existingContent.length > 1000) {
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),
       return
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+  console.log(`✅ README generated at: ${outputPath}`)
+}
+
+if (require.main === module) {
+  generateReadme()
+}
+;
+module.exports = { generateReadme },// Simple README maintenance: append an automation run footer with timestamp
+// Simple README maintenance: append an automation run footer with timestamp
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
 // Simple README "maintenance": append an automation run footer with timestamp
 import fs from 'fs';
@@ -245,15 +334,40 @@ import fs from 'fs'; import path from 'path'; function main() { const repoRoot =
 
 module.exports = { generateReadme },
   // // // console.log(`✅ README generated at: ${outputPath}`)
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // // // console.log(`✅ README generated at: ${outputPath}`)
 
 
   // // // console.log(`✅ README generated at: ${outputPath}`)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 #!/usr/bin/env node;
 /**;
  * Generate README;
  * Creates or updates the main README.md file;
  */;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const fs = require('fs');
 const path = require('path');
 const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
@@ -275,6 +389,11 @@ Leading - edge technology solutions and autonomous innovation systems.;
 ## 🚀 Quick Start;
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 \`\`\`bash;
 # Install dependencies;
 npm install;
@@ -285,6 +404,26 @@ npm run build;
 # Start automation systems;
 npm run automation:all;
 \`\`\`;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+## 🏗️ Project Structure;
+- \`pages/\` - Next.js pages and routing;
+<<<<<<< HEAD
+=======
+
+const fs = require('fs'),;
+const path = require('path'),;
+
+=======
+;
+const fs = require('fs'),;
+const path = require('path'),;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
 
 Leading-edge technology solutions and autonomous innovation systems.;
@@ -308,33 +447,152 @@ npm run automation:all;
 ## 🏗️ Project Structure;
 ;
 - \`pages/\` - Next.js pages and routing;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 - \`styles/\` - Global CSS and Tailwind configuration;
 - \`automation/\` - Autonomous automation systems;
 - \`scripts/\` - Utility scripts and build tools;
 - \`public/\` - Static assets and generated content;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+## 🔧 Available Scripts;
+
+
+=======
+;
+## 🔧 Available Scripts;
+;
+## 🔧 Available Scripts;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ### Development;
 - \`npm run dev\` - Start development server;
 - \`npm run build\` - Build for production;
 - \`npm run start\` - Start production server;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ### Automation;
 - \`npm run automation:all\` - Start all automation systems;
 - \`npm run redundancy:start\` - Start redundancy systems;
 - \`npm run pm2:start\` - Start PM2 process manager;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+### Maintenance;
+- \`npm run lint\` - Run ESLint;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ### Maintenance;
 - \`npm run lint\` - Run ESLint;
 - \`npm run type - check\` - Run TypeScript type checking;
 - \`npm run fix:all\` - Fix linting issues;
 ### Maintenance;
 - \`npm run lint\` - Run ESLint;
+<<<<<<< HEAD
+=======
+- \`npm run type-check\` - Run TypeScript type checking;
+- \`npm run fix:all\` - Fix linting issues;
+## 🌟 Features;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+### Maintenance;
+- \`npm run lint\` - Run ESLint;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 - **Autonomous Content Generation** - AI-powered content creation;
 - **Intelligent Automation** - Self-healing automation systems;
 - **Redundancy Management** - High-availability infrastructure;
 - **Performance Optimization** - Continuous performance monitoring;
 - **Modern UI/UX** - Responsive design with Tailwind CSS;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+;
+- **Autonomous Content Generation** - AI - powered content creation;
+- **Intelligent Automation** - Self - healing automation systems;
+- **Redundancy Management** - High - availability infrastructure;
+- **Performance Optimization** - Continuous performance monitoring;
+- **Modern UI / UX** - Responsive design with Tailwind CSS;
+;
+
+## 📚 Documentation;
+=======
+;
+## 📚 Documentation;
+;
+## 📚 Documentation;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 - [Architecture](./ARCHITECTURE.md) - System architecture overview;
 - [API Reference](./API.md) - API documentation;
 - [Deployment](./DEPLOYMENT.md) - Deployment instructions;
 - [Contributing](./CONTRIBUTING.md) - Contribution guidelines;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+## 🔒 Security;
+- Regular security audits;
+- Automated vulnerability scanning;
+- Secure dependency management;
+## 📊 Monitoring;
+
+;
+- Real - time performance metrics;
+
+=======
+;
+## 📊 Monitoring;
+;
+- Real-time performance metrics;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 - Automated health checks;
 - Comprehensive logging;
 ## 🤝 Contributing;
@@ -358,10 +616,38 @@ This project is proprietary software. All rights reserved.;
 ;
   fs.writeFileSync(outputPath, README_TEMPLATE),;
   // // // console.log(`✅ README generated at: ${outputPath}`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 if (require.main === module) {
   generateReadme()
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Simple README maintenance: append an automation run footer with timestamp
 
 
@@ -387,6 +673,12 @@ module && module.exports = { generateReadme },// Simple README maintenance: appe
 // Simple README maintenance: append an automation run footer with timestamp
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process && process.cwd(); const readmePath = path && path.join(repoRoot,'README && README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs && fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content && content.includes('Automation summary:')) { content += footer} else { content = content && content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs && fs.writeFileSync(readmePath,content,'utf8'); } main();
 // Simple README "maintenance": append an automation run footer with timestamp
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 *Generated on ${new Date ().toISOString ()}*;
 `,
@@ -436,6 +728,7 @@ import path from 'path';
 function main() {
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
 // Simple README "maintenance": append an automation run footer with timestamp
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import fs from 'fs';
 import path from 'path';
 function main() {
@@ -456,6 +749,8 @@ function main() {
   console.log('✅ README updated')}
 main();
 #!/usr/bin/env node;,"});,"}) import fs from;,"});,"}) 'fs';,"});,"}) import path from;,"});,"}) 'path';,"});,"}) ;,"});,"}) function main() {,"});,"}) const repoRoot = process.cwd();,"});,"}) const readmePath = path.join(repoRoot;,"});,"}) 'README.md');,"});,"}) const now = new Date().toISOString();,"});,"}) ;,"});,"}) let content = ';,"});,"}) ';,"});,"}) try {,"});,"}) content = fs.readFileSync(readmePath,'utf8;,"});,"}) ');,"});,"}) } catch (err) {,"});,"}) content =;,"});,"}) '# Project\n\n';,"});,"}) }"});,"}) ;,"});,"}) const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;,"});,"}) if (!content.includes(;,"});,"}) 'Automation summary:')) {,"});,"}) content += footer;,"});,"}) } else {,"});,"}) content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer);,"});,"}) }"});,"}) ;,"});,"}) fs.writeFileSync(readmePath,content;,"});,"}) 'utf8');,"});,"}) console.log(;,"});,"}) '✅ README updated');,"});,"}) }"});,"}) ;,"});,"}) main();,"});,"}) ;,"});,"}) content = fs.readFileSync(readmePath,'utf8';)} catch (err) {content =';# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes(` 'Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer)} fs.writeFileSync(readmePath,content,';utf8'); console.log(','✅ README updated')} main();
+<<<<<<< HEAD
+=======
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
@@ -524,6 +819,7 @@ function main() { const repo_root = process.cwd (); const readme_path = path.joi
 ;
 
 module.exports = { generateReadme },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -549,3 +845,29 @@ module.exports = { generateReadme }
 
 ;
 module.exports = { generateReadme },;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

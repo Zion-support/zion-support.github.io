@@ -5,6 +5,10 @@ import OpenAI from 'openai';
     title?: string;
     bio?: string;
     experience?: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 
   if (!name) return res && res.status(400).json({ error: 'Name is required' });
@@ -29,6 +33,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     temperature: 0.6
       });
 
+<<<<<<< HEAD
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
@@ -75,26 +80,42 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }      name;
       title: parsed && parsed.title || title || 'Professional';
       category: parsed && parsed.category || null;
       summary: parsed && parsed.summary || '',
       skills: Array && Array.isArray(parsed && parsed.skills) ? parsed && parsed.skills.slice(0, 20) : []})
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status(200).json({
       name;
       title: parsed.title || title || 'Professional', category: parsed.category || null,
       summary: parsed.summary || '',
+<<<<<<< HEAD
   } catch (e: any) {
 }
+=======
+
+  } catch (e: any) {
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
 }
   }
 
+<<<<<<< HEAD
 }
 
 
 
 
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

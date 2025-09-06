@@ -1,13 +1,44 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 
 import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
 const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
 
+<<<<<<< HEAD
+=======
+=======
+import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
+const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
 const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 
@@ -33,3 +64,10 @@ const { Html,Head,Main,NextScript } from "next/document"; export default functio
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+<<<<<<< HEAD
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

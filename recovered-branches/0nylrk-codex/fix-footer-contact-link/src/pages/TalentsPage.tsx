@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 // Sample talent listings
@@ -11,12 +24,36 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 150
     currency: "$"
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -27,6 +64,20 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 150,
     currency: "$",
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     author: {
       name: "Alexandra Chen"
       id: "alexandra-chen"
@@ -37,6 +88,24 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 43}
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+    id: "talent-2"
+    title: "DevOps Specialist"
+    description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.";
+    category: "DevOps"
+    price: 135
+    currency: "$"
+    tags: ["Kubernetes", "Docker", "AWS", "Terraform"];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: "talent-2",
     title: "DevOps Specialist",
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",
@@ -44,6 +113,17 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 135,
     currency: "$",
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     author: {
       name: "Michael Reynolds"
       id: "michael-reynolds"
@@ -54,6 +134,16 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.8
     reviewCount: 37}
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { DynamicListingPage } from '@/components / DynamicListingPage';
 import { ProductListing } from '@/types / listings';
 // Sample talent listings;
@@ -95,11 +185,33 @@ const TALENT_LISTINGS: ProductListing[] = [;
   {
     id: "talent - 3",
     title: "Data Scientist",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+    id: "talent-3"
+    title: "Data Scientist"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
     category: "Data Science"
     price: 145
     currency: "$"
     tags: ["Statistical Analysis", "Python", "R", "Tableau"];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     id: "talent-3",
     title: "Data Scientist",
@@ -108,6 +220,13 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 145,
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     author: {
 
     author: {
@@ -121,11 +240,48 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.9,
     review_count: 29},
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    id: "talent - 4",
+    title: "Cybersecurity Expert",
+
+=======
+    author: {
+      name: "Priya Sharma"
+      id: "priya-sharma"}
+    images: ["https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&w=800&h=500"]
+    createdAt: "2024-01-10T09:45:00.000Z"
+    aiScore: 95
+    rating: 4.9
+    reviewCount: 29}
+  {
+    id: "talent-4"
+    title: "Cybersecurity Expert"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
     category: "Security"
     price: 165
     currency: "$"
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: "talent-4",
     title: "Cybersecurity Expert",
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",
@@ -175,6 +331,13 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 125
     currency: "$"
     tags: ["React", "Node.js", "TypeScript", "MongoDB"];
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: "talent-5",
     title: "Full-Stack Developer",
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",
@@ -182,6 +345,20 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 125,
     currency: "$",
     tags: ["React", "Node.js", "TypeScript", "MongoDB"],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     author: {
       name: "David Martinez"
       id: "david-martinez"}
@@ -191,6 +368,19 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.8
     reviewCount: 42}
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    id: "talent-6"
+    title: "AI Ethics Consultant"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
     category: "Consulting"
     price: 180
@@ -223,11 +413,30 @@ const TALENT_LISTINGS: ProductListing[] = [;
   {
     id: "talent - 6",
     title: "AI Ethics Consultant",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
     category: "Consulting"
     price: 180
     currency: "$"
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    author: {
+
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     id: "talent-6",
     title: "AI Ethics Consultant",
@@ -254,6 +463,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
 ;
     author: {
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function TalentsPage() {;
   return (
     <DynamicListingPage
@@ -419,3 +629,15 @@ function TalentsPage() {
       initial_price={{ min: 100, max: 200 }}
     />);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}/>) 
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

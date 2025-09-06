@@ -22,6 +22,18 @@ import {;
   FormControl,
   FormDescription,
   FormMessage,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -41,10 +53,26 @@ interface DescriptionFieldsProps {
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function DescriptionFields(): any ({;
   control,;
   handleEditorChange,;
@@ -54,6 +82,11 @@ export function DescriptionFields(): any ({;
   return (
     <>;
       <FormField
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         control={control}
         name="description"
@@ -97,6 +130,20 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Textarea
               <Textarea 
 
@@ -229,6 +276,98 @@ function DescriptionFields() {
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                }}
+                className="min-h-[200px]"
+                placeholder="Enter a detailed description of the job role"
+              />
+            </FormControl>
+            <FormDescription>
+              Detailed description of the job role.
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="responsibilities"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Responsibilities (Optional)</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="List the main responsibilities of this job"
+                className="resize-none min-h-[100px]"
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>
+              List the main responsibilities of this job.
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="qualifications"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Qualifications (Optional)</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="List the required qualifications for this job"
+                className="resize-none min-h-[100px]"
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>
+              List the required qualifications for this job.
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="benefits"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Benefits (Optional)</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="List the benefits offered for this job"
+                className="resize-none min-h-[100px]"
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>
+              List the benefits offered for this job.
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="application_instructions"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Application Instructions (Optional)</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="Provide instructions on how to apply for this job"
+                className="resize-none min-h-[100px]"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {...field}
               />
             </FormControl>
@@ -242,12 +381,60 @@ function DescriptionFields() {
       />;
     </>;
   );
+<<<<<<< HEAD
+=======
+=======
+          </FormItem>)}
+      />;
+    </>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </FormItem>)}
       />;
     </>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ),;}
+ interface DescriptionFieldsProps {
+  control: Control<JobSchemaType>;
+handleEditorChange: (content: string) => void;
+editorContent: string 
+}control, handleEditorChange, editorContent 
+}: DescriptionFieldsProps) {
+  return (<> <FormField control= {
+  control 
+}/> </FormControl> <FormDescription> Detailed description of the job role. </FormDescription> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Responsibilities (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> List the main responsibilities of this job. </FormDescription> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Qualifications (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> List the required qualifications for this job. </FormDescription> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Benefits (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> List the benefits offered for this job. </FormDescription> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Application Instructions (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Provide instructions on how to apply for this job. </FormDescription> <FormMessage /> </FormItem>) 
+}/> </>) 
+}
+        )}
+      />
+    </>
+      />;
+    </>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
           </FormItem>)}
       />;
     </>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

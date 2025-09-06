@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export const basicInfoSchema = z.object({;
+
+
+<<<<<<< HEAD
+=======
+
+import {z} from "zod";
+export const basicInfoSchema = z.object({
+import {z} from "zod";
+export const basicInfoSchema = z.object({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   fullName: z.string().min(1, "Full name is required");
   title: z.string().min(1, "Professional title is required");
   email: z.string().email("Invalid email address");
@@ -5,6 +26,19 @@
   location: z.string().optional();
   website: z.string().url().optional().or(z.literal(""));
   linkedin: z.string().optional();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const basicInfoSchema = z && z.object({
   fullName: z && z.string().min(1, "Full name is required");
   title: z && z.string().min(1, "Professional title is required");
@@ -32,6 +66,15 @@ export const basicInfoSchema = z.object ({
 ;
 export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -40,6 +83,13 @@ export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
   hourlyRate: z.number().positive().optional()});
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { z } from "zod",
 export const basicInfoSchema = z.object({
   fullName: z.string().min(1, "Full name is required"),
@@ -53,9 +103,27 @@ export const basicInfoSchema = z.object({
   github: z.string().optional(),
   hourlyRate: z.number().positive().optional()}),
 
+<<<<<<< HEAD
   github: z.string().optional(),
   hourlyRate: z.number().positive().optional()}),
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+  github: z.string().optional(),
+  hourlyRate: z.number().positive().optional()}),
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,
 import { z } from "zod",;
 export const basicInfoSchema = z.object({;
@@ -69,3 +137,40 @@ export const basicInfoSchema = z.object({;
   github: z.string().optional(),;
   hourlyRate: z.number().positive().optional()});
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { z } from "zod",;
+;
+export const basicInfoSchema = z.object({;
+  fullName:z.string().min(1, "Full name is required"),;
+  title:z.string().min(1, "Professional title is required"),;
+  email:z.string().email("Invalid email address"),;
+  phone:z.string().optional(),;
+  location:z.string().optional(),;
+  website:z.string().url().optional().or(z.literal("")),;
+  linkedin:z.string().optional(),;
+  github:z.string().optional(),;
+  hourlyRate:z.number().positive().optional()}),;
+;
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,; export const basicInfoSchema = z.object ({
+  fullName: z.string () .min (1, "Full name is required");
+title: z.string () .min (1, "Professional title is required");
+email: z.string () .email ("Invalid email address");
+phone: z.string () .optional ();
+location: z.string () .optional ();
+website: z.string () .url () .optional () .or (z.literal ("") );
+linkedin: z.string () .optional ();
+github: z.string () .optional ();
+hourlyRate: z.number () .positive () .optional () 
+});
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

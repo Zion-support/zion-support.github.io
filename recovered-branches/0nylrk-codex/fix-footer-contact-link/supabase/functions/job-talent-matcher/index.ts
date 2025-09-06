@@ -1,23 +1,94 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {processJobMatching, storeMatchResults} from "./job-matching ;
 
 
 
+<<<<<<< HEAD
+=======
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {processJobMatching, storeMatchResults} from "./job-matching.ts";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 // Initialize the Supabase client
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+=======
+=======
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {processJobMatching, storeMatchResults} from "./job-matching.ts";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {processJobMatching, storeMatchResults} from "./job-matching.ts";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -27,12 +98,36 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const { jobId } = await req && req.json();
     
 
@@ -50,6 +145,13 @@ serve(async (req) => {
     const { jobId } = await req.json();
     const { jobId } = await req.json(),
     
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!jobId) {
       throw new Error("Job ID is required")
     }
@@ -74,6 +176,28 @@ serve(async (req) => {
       )
     }
     // 3. Use AI to normalize skills and find matches
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    await storeMatchResults(jobId, matchedTalents, job && job.title);
+<<<<<<< HEAD
+=======
+
+=======
+
+    const matchedTalents = await processJobMatching(job, talents);
+    // 4. Store matches in database and create notifications
+    await storeMatchResults(jobId, matchedTalents, job.title);
+    return new Response(
+      JSON.stringify({
+        message: "Job matching completed"
+        matches: matchedTalents.length
+      });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const matchedTalents = await processJobMatching(job, talents),
     
     // 4. Store matches in database and create notifications
@@ -86,6 +210,45 @@ serve(async (req) => {
     )
   } catch (error) {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    console.error("Error in job-talent-matcher:", error),
+
+    
+=======
+    return new Response(
+      JSON.stringify({ 
+        message: "Job matching completed", 
+        matches: matchedTalents.length 
+      }),
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
+  } catch (error) {
+    console.error("Error in job-talent-matcher:", error);
+    return new Response(
+      JSON.stringify({ error: error.message });
+      {
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      }
+    )
+  }
+});
+
+    console.error("Error in job-talent-matcher:", error),
+    
+    return new Response(
+      JSON.stringify({ error: error.message }),
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
@@ -191,3 +354,87 @@ if ( {) {
     );
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
+import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
+;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin":"*",;
+  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
+;
+// Initialize the Supabase client;
+const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
+const supabase = createClient(supabaseUrl, supabaseAnonKey),;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;
+    const { jobId } = await req.json(),;
+    if (!jobId) {;
+      throw new Error("Job ID is required");
+    }
+;
+    // 1. Retrieve job details;
+    const { data: job, error: jobError } = await supabase;
+      .from("jobs");
+      .select("*");
+      .eq("id", jobId);
+      .single(),;
+    if (jobError) {;
+      throw new Error(`Failed to fetch job: ${jobError.message}`);
+    }
+;
+    // 2. Retrieve all talent profiles;
+    const { data: talents, error: talentsError } = await supabase;
+      .from("talent_profiles");
+      .select("*");
+      .eq("is_published", true),;
+    if (talentsError) {;
+      throw new Error(`Failed to fetch talent profiles: ${talentsError.message}`);
+    }
+;
+    if (!talents || talents.length === 0) {;
+      return new Response(;
+        JSON.stringify({ message: "No talent profiles found" }),;
+        { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+;
+    // 3. Use AI to normalize skills and find matches;
+    const matchedTalents = await processJobMatching(job, talents),;
+    // 4. Store matches in database and create notifications;
+    await storeMatchResults(jobId, matchedTalents, job.title),;
+    return new Response(;
+      JSON.stringify({;
+        message: "Job matching completed",;
+        matches: matchedTalents.length;
+      }),;
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    );
+  } catch (error) {;
+    console.error("Error in job-talent-matcher:", error),;
+    return new Response(;
+      JSON.stringify({ error: error.message }),;
+      {;
+        status: 500,;
+        headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+      }
+    );
+  }
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import Marketplace from "@/pages/Marketplace",
+import Categories from "@/pages/Categories",
+import CategoryDetail from "@/pages/CategoryDetail",
+import Featured from "@/pages/Featured",
+import ListingDetail from "@/pages/ListingDetail",
+import EquipmentPage from "@/pages/EquipmentPage",
+import EquipmentDetail from "@/pages/EquipmentDetail",
+import PostJob from "@/pages/PostJob",
+import JobDetails from "@/pages/JobDetails",
+import PublishProduct from "@/pages/PublishProduct",
+import ServicesPage from "@/pages/ServicesPage",
+import RequestQuote from "@/pages/RequestQuote",
+import AIMatcher from "@/pages/AIMatcher",
+import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",
+import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
+import SearchPage from "@/pages/SearchPage",
+import ProjectRoom from "@/pages/ProjectRoom";
+import VideoCall from "@/pages/VideoCall";
+
+import ProjectRoom from "@/pages/ProjectRoom",
+import VideoCall from "@/pages/VideoCall",
+const MarketplaceRoutes = () => {
+  return (
+    <Routes>
+=======
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
@@ -22,6 +50,7 @@ const MarketplaceRoutes = () => {
 const MarketplaceRoutes = () => {;
   return (
     <Routes>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Marketplace Routes */}
       <Route path="/marketplace" element={<Marketplace />} />
       <Route path="/categories" element={<Categories />} />
@@ -82,7 +111,52 @@ const MarketplaceRoutes = () => {;
         }
       />
     </Routes>
+<<<<<<< HEAD
+  )
+}
+export default MarketplaceRoutes;
+
+},
+
+export default MarketplaceRoutes,
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import Marketplace from "@/pages/Marketplace",;
+import Categories from "@/pages/Categories",;
+import CategoryDetail from "@/pages/CategoryDetail",;
+import Featured from "@/pages/Featured",;
+import ListingDetail from "@/pages/ListingDetail",;
+import EquipmentPage from "@/pages/EquipmentPage",;
+import EquipmentDetail from "@/pages/EquipmentDetail",;
+import PostJob from "@/pages/PostJob",;
+import JobDetails from "@/pages/JobDetails",;
+import PublishProduct from "@/pages/PublishProduct",;
+import ServicesPage from "@/pages/ServicesPage",;
+import RequestQuote from "@/pages/RequestQuote",;
+import AIMatcher from "@/pages/AIMatcher",;
+import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",;
+import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
+import SearchPage from "@/pages/SearchPage",;
+import ProjectRoom from "@/pages/ProjectRoom",;
+import VideoCall from "@/pages/VideoCall",;
+const MarketplaceRoutes = () => {
+const MarketplaceRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Marketplace Routes */}
+      {/* Job Routes */}
+      <Route
+        path="/post-job"
+        element={
+          <ProtectedRoute>;
+            <VideoCall />;
+          </ProtectedRoute>;
+        } ;
+      />;
+    </Routes>;
+=======
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 
 
@@ -95,6 +169,8 @@ const MarketplaceRoutes = () => {;
 
 
 export default MarketplaceRoutes;
+<<<<<<< HEAD
+=======
 
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
@@ -223,3 +299,8 @@ export default MarketplaceRoutes;
 },;
 export default MarketplaceRoutes;
 export default MarketplaceRoutes;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

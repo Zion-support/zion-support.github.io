@@ -32,14 +32,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
-    eventId: uuidv4()
-    type: "talent_mobility" as const
-    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: Date.now()}
-
-
 
   upsertEvent(state, event);
   writeState(state);
@@ -53,6 +45,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
@@ -60,3 +56,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
+

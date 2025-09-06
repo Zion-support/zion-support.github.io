@@ -1,13 +1,50 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useResumeList() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -29,10 +66,58 @@ export function useResumeList() {;
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
       if (resumeError) throw resumeError;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      
+      if (!resumeData || resumeData && resumeData.length === 0) {
+
+=======
+        .eq('user_id', user.id)
+        .order('is_active', { ascending: false })
+        .order('created_at', { ascending: false });
+      if (resumeError) throw resumeError;
+      if (!resumeData |resumeData.length === 0) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         setResumes([]);
         return []
       }
       // Transform data to match Resume type
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
+        id: resume && resume.id;
+        user_id: resume && resume.user_id;
+=======
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {Resume} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+export /**
+ * useResumeList - Function description
+ */
+function useResumeList() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+  const [resumes, set_resumes] = useState < Resume[]>([]);
+;
+  const fetch_resumes = async () => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Check condition
 if ( {) {
   $2
@@ -47,6 +132,20 @@ if ( {) {
         education: [];
         skills: [];
         certifications: [],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }));
+      setResumes(transformedResumes);
+      return transformedResumes
+    } catch (e: any) {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         is_active: resume.is_active;
       }));
 ;
@@ -56,10 +155,27 @@ if ( {) {
       console.error ('Error fetching resumes:', e);
       set_error (e.message);
       return [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   // Fetch resumes when the component mounts;
   useEffect (() => {
@@ -71,10 +187,28 @@ if ( {) {
     }
   }, [user]);
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return {
     is_loading;
     error;
     resumes;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
       const transformedResumes: Resume[] = resumeData.map(resume => ({

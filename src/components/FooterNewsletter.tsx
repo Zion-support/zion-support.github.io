@@ -1,3 +1,5 @@
+
+
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -214,31 +216,21 @@ export function FooterNewsletter(): React.ReactElement {;
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
-{/* Honeypot field */}
-      <input
 
         onChange={e => setHoneypot(e && e.target.value)}
+
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
       />;
 
-      <Button
-        type="submit"
-        disabled={isSubmitting}
-
-      <Button
-        type="submit"
-        disabled={isSubmitting}
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
 
-
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
-
 
         type='text'
         type="text"
@@ -270,6 +262,7 @@ export function FooterNewsletter(): React.ReactElement {;
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
+
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -281,6 +274,7 @@ export function FooterNewsletter(): React.ReactElement {;
       >;
         {isSubmitting ? (;
           <>;
+
             Subscribing...;
           </>;
         ) : (;
@@ -392,6 +386,7 @@ export function FooterNewsletter():React.ReactElement {;
           <>;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+
             Subscribing...;
           </>;
         ) : (;
@@ -399,8 +394,10 @@ export function FooterNewsletter():React.ReactElement {;
         )}
       </Button>;
     </form>;
+
   );
 } ;
+
 } ;
 
 import React, { useState, useRef } from 'react';
@@ -526,7 +523,6 @@ if ( {) {
 }
 }
 
-
 };
 return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubmit= {;
   handleSubmit ";
@@ -538,4 +534,4 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 } ;
 }
 }
-}
+

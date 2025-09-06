@@ -1,6 +1,14 @@
+<<<<<<< HEAD
+import { useState, useEffect } from "react",
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "./useAuth",
+import { supabase } from "@/integrations/supabase/client",
+=======
 import { useState, useEffect } from "react";
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface OnboardingStatus {
   profileCompleted: boolean;
   skillsAdded: boolean;
@@ -11,16 +19,58 @@ interface OnboardingStatus {
   responseReceived: boolean;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function useOnboardingStatus() {;
   const { user } = useAuth();
 export function useOnboardingStatus() {
   const { user } = useAuth(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
 
 
   const [status, setStatus] = useState<OnboardingStatus>({
+<<<<<<< HEAD
+
+    profileCompleted: false
+    skillsAdded: false
+    availabilitySet: false
+    matchReceived: false
+    jobPosted: false
+    inviteSent: false
+
+    responseReceived: false
+      try {
+        // Get user onboarding progress from database
+        const { data, error } = await supabase
+          .from('user_onboarding')
+          .select('*')
+          .eq('user_id', user.id)
+=======
     profileCompleted: false,
     skillsAdded: false,
     availabilitySet: false,
@@ -46,10 +96,26 @@ export function useOnboardingStatus() {
         if (error) {
           console.error("Error fetching onboarding status:", error);
           return;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
 
         if (data) {
           setStatus({
+<<<<<<< HEAD
+            profileCompleted: data.profile_completed |false
+            skillsAdded: data.skills_added |false
+            availabilitySet: data.availability_set |false
+            matchReceived: data.match_received |false
+            jobPosted: data.job_posted |false
+            inviteSent: data.talent_invited |false
+            responseReceived: data.quote_received |false
+          })
+      try {;
+        // Get user onboarding progress from database;
+        const { data, error } = await supabase;
+          .from('user_onboarding');
+          .select('*');
+=======
             profileCompleted: data.profile_completed || false,
             skillsAdded: data.skills_added || false,
             availabilitySet: data.availability_set || false,
@@ -91,6 +157,7 @@ export function useOnboardingStatus() {
             responseReceived: data && data.quote_received || false;
           });
         }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } catch (err) {;
         console && console.error("Error in onboarding status hook:", err);
       }
@@ -131,6 +198,65 @@ function useOnboardingStatus() {
     response_received: false;
   });
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  useEffect (() => {
+    const fetchOnboardingStatus = async () => {
+      // Check condition
+if (return) {
+  $2
+}
+      try {
+        // Get user onboarding progress from database;
+        const { data, error } = await supabase;
+          .from ('user_onboarding');
+          .select ('*');
+          .eq ('user_id', user.id);
+          .single ();
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          console.error ("Error fetching onboarding status:", error);
+          return;
+        }
+        // Check condition
+if ( {) {
+  $2
+}
+          set_status ({
+            profile_completed: data.profile_completed || false,
+            skills_added: data.skills_added || false,
+            availability_set: data.availability_set || false,
+            match_received: data.match_received || false,
+            job_posted: data.job_posted || false,
+            invite_sent: data.talent_invited || false,
+            response_received: data.quote_received || false;
+          });
+        }
+      } catch (err) {
+        console.error ("Error in onboarding status hook:", err);
+      }
+    }
+;
+    fetchOnboardingStatus ();
+  }, [user]);
+;
+  return status;
+<<<<<<< HEAD
+}
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           .eq('user_id', user.id);
           .single(),;
           ;
@@ -225,3 +351,10 @@ const { data, error} = await supabase
 return status;
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

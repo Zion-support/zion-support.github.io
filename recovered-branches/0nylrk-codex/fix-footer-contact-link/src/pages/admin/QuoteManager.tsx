@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -6,16 +42,54 @@ import {useAuth} from "@/hooks/useAuth";
 import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Navigate} from "react-router-dom";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { QuoteRequest } from "@/types/quotes";
 
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default function QuoteManager() {;
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
+
+  const {;
+
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -31,6 +105,13 @@ import type { QuoteRequest } from "@/types/quotes";
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -67,6 +148,14 @@ function QuoteManager() {
     setSearchQuery;
     date_range;
     setDateRange;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",
@@ -99,6 +188,26 @@ export default function QuoteManager() {
     updateStatus,
     toggleArchive,
     deleteQuote
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  } = useAdminQuotes(),
+
+
+
+<<<<<<< HEAD
+=======
+  } = useAdminQuotes();
+  } = useAdminQuotes(),
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -139,9 +248,58 @@ export default function QuoteManager() {
     return <Navigate to="/unauthorized" replace />;
   }
   return (
+<<<<<<< HEAD
 
 
             
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  }
+  },
+
+  const handleViewDetails = (quote: QuoteRequest) => {
+    setSelectedQuote(quote)
+    setShowDetails(true)
+  }
+  },
+
+  const handleResetFilters = () => {
+    setStatusFilter('all'),
+    setArchiveFilter('all'),
+    setSearchQuery(''),
+    setDateRange({ from: undefined, to: undefined })
+  }
+  },
+
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" replace />
+  }
+  return (
+    <ProtectedRoute adminOnly>
+      <div>
+        <Header />
+        <div className="min-h-screen bg-zion-blue px-4 py-8">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+              <div>
+                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
+                <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
+              </div>
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
+            </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+            
+<<<<<<< HEAD
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -231,6 +389,27 @@ export default function QuoteManager() {;
   }
 ;
   return (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    setDateRange({ from:undefined, to:undefined }),;
+  },;
+;
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" replace />,;
+  }
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -243,6 +422,17 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -255,6 +445,12 @@ export default function QuoteManager() {;
               searchQuery={searchQuery}              setSearchQuery={setSearchQuery}
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -296,6 +492,13 @@ function QuoteManager() {
     setDateRange;
   }
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -307,6 +510,20 @@ function QuoteManager() {
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            />;
+
+=======
+            />;
+            ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
@@ -317,11 +534,79 @@ function QuoteManager() {
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => !quote && quote.is_archived)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+              ;
+              <TabsContent value="active">;
+                {/* Quotes Table */}
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+                  <QuotesTable;
+                    quotes={quotes.filter(quote => !quote.is_archived)}                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
+                  />;
+                </Card>;
+              </TabsContent>;
+              ;
+              <TabsContent value="archived">;
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+                  <QuotesTable;
+                    quotes={quotes.filter(quote => quote.is_archived)}                    isArchived={true}
+            />
+            {/* Tabs for Active/Archived */}
+            <Tabs defaultValue="active" className="mb-6">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
+              </TabsList>
+              <TabsContent value="active">
+                {/* Quotes Table */}
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+                  <QuotesTable
+                    quotes={quotes.filter(quote => !quote.is_archived)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                  />;
+                </Card>;
+              </TabsContent>;
+
+              <TabsContent value="archived">;
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+
+                  <QuotesTable
+                    quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
+                    isArchived={true}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                   />;
                 </Card>;
@@ -331,6 +616,18 @@ function QuoteManager() {
         </div>;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   />;
                 </Card>;
               </TabsContent>;
@@ -369,14 +666,46 @@ function QuoteManager() {
             </Tabs>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          onClose={() => {
+            setShowDetails(false);
+
+<<<<<<< HEAD
+
+          onClose={() => {;
+            setShowDetails(false);
+            setSelectedQuote(null);
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             setSelectedQuote(null)
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
         />
         <Footer />
@@ -493,6 +822,14 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             setShowDetails(false),;
             setSelectedQuote(null),;
           }}
@@ -566,3 +903,10 @@ const [showDetails, setShowDetails] = useState (false);
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

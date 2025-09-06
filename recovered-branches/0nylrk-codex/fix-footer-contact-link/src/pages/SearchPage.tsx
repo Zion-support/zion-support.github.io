@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -6,12 +43,30 @@ import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
 export default function SearchPage() {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [params] = useSearchParams();
 
   const navigate = useNavigate();
   const initial = params.get("q") || "";
   const [query, setQuery] = useState(initial);
   const { results, loading, search } = useAISearch();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
@@ -42,10 +97,51 @@ export default function SearchPage() {
 
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
     if (initial) {
       search(initial)
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  const initial = params && params.get("q") || "";
+  const [query, setQuery] = useState(initial);
+  const { results, loading, search } = useAISearch();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
+
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from "react",;
+import { useNavigate, useSearchParams } from "react-router-dom",;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { generateSearchSuggestions } from "@/data/marketplaceData",;
+import { SearchSuggestion } from "@/types/search",;
+import { useAISearch } from "@/hooks/useAISearch",;
+import { AppLayout } from "@/layout/AppLayout",;
+;
+export default function SearchPage() {;
+  const [params] = useSearchParams(),;
+  const navigate = useNavigate(),;
+  const initial = params.get("q") || "",;
+  const [query, setQuery] = useState(initial),;
+  const { results, loading, search } = useAISearch(),;
+  const suggestions:SearchSuggestion[] = generateSearchSuggestions(),;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {;
     if (initial) {;
       search(initial);
@@ -58,6 +154,16 @@ export default function SearchPage() {
     search(query)
   },
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
@@ -68,6 +174,30 @@ export default function SearchPage() {
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          />;
+        </form>;
+
+
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+          />
+        </form>
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -103,8 +233,25 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
+<<<<<<< HEAD
           />;
         </form>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          />;
+        </form>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -185,6 +332,15 @@ if ( {) {
       </main>;
     </AppLayout>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
   loading && <p className="text-zion-slate-light">Searching...</p> 
@@ -232,3 +388,10 @@ if ( {) {
     </AppLayout>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

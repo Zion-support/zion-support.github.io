@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+import { ApplicationStatus } from "@/types/jobs";
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle2, Circle, CircleDot } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
@@ -13,14 +31,61 @@ export function ApplicationProgress({
 }: ApplicationProgressProps) {
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Define the progress value based on status
 
   const getProgressValue = () => {
     switch (status) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export function ApplicationProgress(): any ({;
+  status,;
+  className,;
+}: ApplicationProgressProps) {;
+  // Define the progress value based on status;
+  const getProgressValue = () => {;
+    switch (status) {;
+      case "new":;
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot  } from './lucide-react';
@@ -37,6 +102,13 @@ function ApplicationProgress() {
   const getProgressValue = () =>: any {
     switch (status) {
       case "new":;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return 20;
       case "viewed":;
         return 40;
@@ -50,6 +122,36 @@ function ApplicationProgress() {
         return 100;
       default:;
         return 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  }
+<<<<<<< HEAD
+
+
+=======
+      case "new":;
+        return 20;
+      case "viewed":
+        return 40;
+      case "shortlisted":
+        return 60;
+      case "interview":
+        return 80;
+      case "hired":
+        return 100;
+      case "rejected":
+        return 100;
+      default:
+        return 0;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
@@ -57,6 +159,27 @@ function ApplicationProgress() {
       case "hired": return 100,
       case "rejected": return 100,
       default: return 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    }
+
+=======
+    }
+  }
+  const progressValue = getProgressValue();
+  return (
+    <div className={cn("w-full space-y-2", className)}>
+      <Progress value={progressValue} className="h-2" />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   const progressValue = getProgressValue(),
@@ -64,8 +187,25 @@ function ApplicationProgress() {
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
+<<<<<<< HEAD
       
       
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -89,11 +229,54 @@ function ApplicationProgress() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+
+=======
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
   )
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  }
+=======
+<<<<<<< HEAD
+function StatusIcon({
+  status
+  current
+}: {
+  status: ApplicationStatus;
+  current: ApplicationStatus;
+}) {
+  // Helper to determine if this step is active, completed, or inactive
+  const statusRank: Record<ApplicationStatus, number> = {
+    new: 1
+    viewed: 2
+    shortlisted: 3
+    interview: 4
+    hired: 5
+    rejected: 5
+  }
+  const currentRank = statusRank[current];
+  const statusRank_ = statusRank[status];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
@@ -174,6 +357,11 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
     rejected: 5},;
     }
   }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
@@ -187,6 +375,19 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   const progress_value = getProgressValue ();
 ;
@@ -250,6 +451,22 @@ if ( {) {
     // This step is upcoming;
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+<<<<<<< HEAD
+=======
+=======
+}
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 
@@ -310,3 +527,8 @@ return (<div className= {
 }
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

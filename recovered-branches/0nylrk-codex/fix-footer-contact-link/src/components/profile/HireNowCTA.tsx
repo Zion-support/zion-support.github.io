@@ -1,7 +1,41 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
 import {useState} from "react";
 import {TalentProfile} from "@/types/talent";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { Button } from "@/components/ui/button",
+import { HireRequestModal } from "./hire-request",
+import { useState } from "react";
+import { TalentProfile } from "@/types/talent";
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface HireNowCTAProps {;
   talentProfile: {;
     id: string,;
@@ -18,6 +52,17 @@ interface HireNowCTAProps {
     hourly_rate?: number;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -37,17 +82,48 @@ export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
     id: string
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
     full_name?: string,
     professional_title?: string,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    hourly_rate?: number
+  }
+}
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   const handleOpenModal = () => {
     setModalOpen(true)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    hourly_rate?: number
+  }
+}
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
@@ -58,6 +134,24 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 
   const handleOpenModal = () => {
     setModalOpen(true)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
+
+=======
+<<<<<<< HEAD
+  }
+  const handleCloseModal = () => {
+    setModalOpen(false)
+  }
+  // Check if we have minimum required data
+  const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
+  // Calculate talent profile completeness (simplified)
+  const profileCompleteness = calculateProfileCompleteness(talentProfile);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   const handleCloseModal = () => {
@@ -77,6 +171,11 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           <span>Profile Completeness</span>
@@ -101,6 +200,24 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
           Schedule Interview
         </Button>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
+
+=======
+      <HireRequestModal
+
+      <HireRequestModal 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <HireRequestModal 
 import { Button } from "@/components/ui/button",;
 import { HireRequestModal } from "./hire-request",;
@@ -137,14 +254,78 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
           <span className="font-bold">{profileCompleteness}%</span>;
         </div>;
         <div className="h-2 bg-zion-blue-light rounded-full overflow-hidden">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <div
+            className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
+=======
+          <div;
+            className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             style={{ width: `${profileCompleteness}%` }}
           />;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      <div className="flex flex-col space-y-4 mt-6">;
+<<<<<<< HEAD
+        <Button
+          onClick={handleOpenModal}
+          disabled={!canHire}
+          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+          Request to Hire;
+        </Button>;
+
+=======
+          <div;
+            className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
+            style={{ width:`${profileCompleteness}%` }}
+          />;
+        </div>;
+      </div>;
+      ;
+      <div className="flex flex-col space-y-4 mt-6">;
+        <Button;
+          onClick={handleOpenModal}
+          disabled={!canHire}
+          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+        >;
+          Request to Hire;
+        </Button>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
           Schedule Interview;
         </Button>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <HireRequestModal;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
@@ -158,6 +339,21 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
           availability_type: 'full_time'
           timezone: ''
           hourly_rate: talentProfile.hourly_rate
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+      <HireRequestModal
+=======
+<<<<<<< HEAD
+        } : null}
+      />
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
       <HireRequestModal
@@ -232,15 +428,47 @@ function HireNowCTA() {
 
 
       <HireRequestModal
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           bio: '',
           years_experience: 0,
           skills: [],
           availability_type: 'full_time',
           timezone: '',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
@@ -251,6 +479,29 @@ function calculateProfileCompleteness(): any (profile: any) {;
   ];
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+;
+// Helper function to calculate profile completeness;
+function calculateProfileCompleteness(): any (profile: any) {;
+  if (!profile) return 0;
+
+  const fields = [;
+        } : null}
+      />;
+    </div>;
+  );
+}
+    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
+    'availability_type';
+  ];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     totalFields++;
   });
@@ -280,6 +531,48 @@ if (return 0) {
     'availability_type';
   ];
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+  let completedFields = 0;
+  let totalFields = 0,;
+  fields && fields.forEach(field => {;
+    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
+    'availability_type'
+  ];
+  let completedFields = 0;
+  let totalFields = 0
+  fields.forEach(field => {
+    if (profile[field]) {
+      completedFields++
+    }
+    totalFields++
+  });
+
+  return Math.min(Math.round((completedFields / totalFields) * 100), 100)
+}
+;
+// Helper function to calculate profile completeness;
+function calculateProfileCompleteness(profile: any) {;
+  if (!profile) return 0,;
+  const fields = [;
+    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience',;
+    'availability_type';
+  ],;
+  let completedFields = 0,;
+  let totalFields = 0;
+  fields.forEach(field => {;
+    if (profile[field]) {;
+      completedFields++;
+    }
+    totalFields++;
+  });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   let completed_fields = 0;
   let total_fields = 0,
   fields.for_each (field => {
@@ -371,3 +664,10 @@ return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-
   return Math.min(Math.round((completedFields / totalFields) * 100), 100);
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

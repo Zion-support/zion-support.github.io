@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Form,
   FormControl,
   FormField,
@@ -25,10 +40,64 @@ import { Textarea } from "@/components/ui/textarea";
 import {
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Form,
   FormControl,
   FormField,
   FormItem,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+FormMessage,;
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+=======
+<<<<<<< HEAD
+=======
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
+
+  FormMessage,
+
+} from "@/components/ui/form";
+
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+  FormMessage,
+} from '@/components / ui / form';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+interface ReplyFormProps {
+  on_submit: (content: string) => Promise < void>;
+  parent_id?: string;
+}
+interface ReplyFormValues {
+interface ReplyFormValues {;
+  content: string;
+}
+  const form = useForm<ReplyFormValues>({;
+    defaultValues: {;
+      content: "",;
+    },;
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {;
+    setIsSubmitting(true);
+    try {;
+      (await onSubmit(values && values.content), form && form.reset());
+    } finally {;
+      setIsSubmitting(false);
+    }
+
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -251,6 +320,12 @@ export default ReplyForm;
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -382,9 +457,25 @@ interface ReplyFormValues {;
   )
 },
 
+<<<<<<< HEAD
 export default ReplyForm,
 export default ReplyForm;
 export default ReplyForm,
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default ReplyForm,
+export default ReplyForm;
+export default ReplyForm,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default ReplyForm;
 export default ReplyForm,
 
@@ -398,3 +489,10 @@ export default ReplyForm,
           </form>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

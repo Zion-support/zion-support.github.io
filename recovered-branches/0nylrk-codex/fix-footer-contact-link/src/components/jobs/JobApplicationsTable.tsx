@@ -7,11 +7,70 @@ import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface JobApplicationsTableProps {;
+  jobId: string;
+}
+
+
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
+=======
+
+
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
+
+import { useState } from "react",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import {;
+  ApplicationsTable,;
+  EmptyState,;
+  ErrorState,;
+  LoadingState,;
+  ScoreDialog;
+} from "./applications",;
+;
+interface JobApplicationsTableProps {;
+  jobId:string;
+}
+;
+export function JobApplicationsTable({ jobId } JobApplicationsTableProps) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { ;
     applications, ;
     isLoading, ;
     error, ;
     updateApplicationStatus, ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+
+=======
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+
+interface JobApplicationsTableProps {
+  jobId: string
+}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   const {
@@ -37,12 +96,51 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
+    setProcessingId(applicationId)
+    try {
+      await updateApplicationStatus(applicationId, newStatus);
+      // If it's not already viewed, mark it as viewed
+      const application = applications.find(app => app.id === applicationId);
+      if (application && !application.viewed_at) {
+        await markApplicationAsViewed(applicationId)
+import { useState } from "react",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import {
+  ApplicationsTable,
+  EmptyState,
+  ErrorState,
+  LoadingState,
+  ScoreDialog
+} from "./applications",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
     setProcessingId(applicationId),;
     try {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
+    setProcessingId(applicationId),;
+    try {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed;
       const application = applications && applications.find(app => app && app.id === applicationId);
@@ -57,6 +155,67 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       setProcessingId(null);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  };
+
+
+
+<<<<<<< HEAD
+=======
+
+interface JobApplicationsTableProps {
+  jobId: string
+import { useState } from "react",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import {;
+  ApplicationsTable,;
+  EmptyState,;
+  ErrorState,;
+  LoadingState,;
+  ScoreDialog;
+} from "./applications",;
+interface JobApplicationsTableProps {;
+  jobId: string;
+}
+;
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
+  const {;
+    applications,;
+    isLoading,;
+    error,;
+    updateApplicationStatus,;
+    markApplicationAsViewed,;
+    refetch;
+  } = useJobApplications(jobId),;
+  const [processingId, setProcessingId] = useState<string | null>(null),;
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),;
+  const [showScoreDialog, setShowScoreDialog] = useState(false),;
+  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
+    setProcessingId(applicationId),;
+    try {;
+      await updateApplicationStatus(applicationId, newStatus),;
+      // If it's not already viewed, mark it as viewed;
+      const application = applications.find(app => app.id === applicationId),;
+      if (application && !application.viewed_at) {;
+        await markApplicationAsViewed(applicationId);
+      }
+    } finally {
+      setProcessingId(null)
+    }
+  }
+  };
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -67,6 +226,21 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
     refetch()
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  };
+
+=======
+  };
+
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleViewScore = (application: JobApplication) => {;
     setSelectedApplication(application),;
     setShowScoreDialog(true);
@@ -94,6 +268,15 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   if (applications && applications.length === 0) {;
     return <EmptyState />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   if (isLoading) {;
@@ -160,6 +343,25 @@ if ( {) {
         onOpenChange={setShowScoreDialog}
         application={selected_application}
         onScoreUpdated={handleScoreUpdated}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      />;
+    </>;
+  );
+}
+
+=======
+      />;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       />;
     </>;
       />;
@@ -225,3 +427,10 @@ return (<> <ApplicationsTable applications= {
     </>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

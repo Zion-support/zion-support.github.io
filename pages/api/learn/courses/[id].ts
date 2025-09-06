@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 
     res.status(200).json({ course })
 res.status(200).json({ course })
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
+
+    res.status(200).json({ course })
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
@@ -24,3 +35,7 @@ function handler() {
     res.status (500).json ({ error: e?.message ?? 'Failed to load course' });
   }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

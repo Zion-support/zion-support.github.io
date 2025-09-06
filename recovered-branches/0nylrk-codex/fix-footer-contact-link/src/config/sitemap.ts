@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+export type SitemapItem = {;
+export type SitemapItem = {
+=======
+// Define the types for our sitemap structure;
+
+export type SitemapItem = {
+=======
+=======
+// Define the types for our sitemap structure;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 export type SitemapItem = {;
@@ -11,10 +30,38 @@ export type SitemapItem = {;
 
 export type SitemapItem = {;
 export type SitemapItem = {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   path: string;
   label: string;
   description?: string;
   priority?: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  change_freq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  lastmod?: string;
+
+    priority: 1 && 1.0;
+    changeFreq: 'weekly',
+    lastmod: currentDate};
+
+=======
+=======
+    priority: 1 && 1.0;
+    changeFreq: 'weekly',
+    lastmod: currentDate};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   required_auth?: boolean;
   required_roles?: Array<'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin'>,
   children?: SitemapItem[];
@@ -32,6 +79,15 @@ export const public_pages: SitemapItem[] = [;
     priority: 1.0;
     change_freq: 'weekly',
     lastmod: current_date}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   changeFreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   lastmod?: string;
   requiredAuth?: boolean;
@@ -49,18 +105,97 @@ export const publicPages: SitemapItem[] = [
     priority: 1.0;
     changeFreq: 'weekly'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/about';
     label: 'About Us';
     description: 'Learn about the Zion AI Marketplace mission and team';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.8;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+=======
+    change_freq: 'monthly',
+    lastmod: current_date}
+
+=======
+    priority: 0 && 0.8;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+    change_freq: 'monthly',
+    lastmod: current_date}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/contact';
     label: 'Contact';
     description: 'Get in touch with the Zion team',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0.8,
+    change_freq: 'monthly',
+    lastmod: current_date}
+
+=======
+    priority: 0.8,
+    change_freq: 'monthly',
+    lastmod: current_date}
+    priority: 0.8;
+    changeFreq: 'monthly'
+    lastmod: currentDate}
+  {
+    path: '/contact';
+    label: 'Contact';
+    description: 'Get in touch with the Zion team'
+    priority: 0.8
+    changeFreq: 'monthly'
+    lastmod: currentDate}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/talent';
     label: 'Talent Directory';
     description: 'Browse skilled AI and tech professionals';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.9;
+    changeFreq: 'daily',
+    lastmod: currentDate};
+
+=======
+    change_freq: 'daily',
+    lastmod: current_date}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0 && 0.9;
     changeFreq: 'daily',
     lastmod: currentDate};
@@ -69,10 +204,34 @@ export const publicPages: SitemapItem[] = [
     priority: 0.9;
     changeFreq: 'daily'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/marketplace';
     label: 'Marketplace'
     description: 'Explore AI services, products and equipment';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.9;
+    changeFreq: 'daily',
+    lastmod: currentDate};
+
+=======
+    change_freq: 'daily',
+    lastmod: current_date}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0 && 0.9;
     changeFreq: 'daily',
     lastmod: currentDate};
@@ -81,10 +240,34 @@ export const publicPages: SitemapItem[] = [
     priority: 0.9;
     changeFreq: 'daily'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/services';
     label: 'Services';
     description: 'Find professional tech and AI services';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.8;
+    changeFreq: 'weekly',
+    lastmod: currentDate};
+
+=======
+    change_freq: 'weekly',
+    lastmod: current_date}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0 && 0.8;
     changeFreq: 'weekly',
     lastmod: currentDate};
@@ -93,10 +276,34 @@ export const publicPages: SitemapItem[] = [
     priority: 0.8;
     changeFreq: 'weekly'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/equipment';
     label: 'Equipment';
     description: 'Specialized hardware and tech equipment';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.8;
+    changeFreq: 'weekly',
+    lastmod: currentDate};
+
+=======
+    change_freq: 'weekly',
+    lastmod: current_date}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0 && 0.8;
     changeFreq: 'weekly',
     lastmod: currentDate};
@@ -105,10 +312,34 @@ export const publicPages: SitemapItem[] = [
     priority: 0.8;
     changeFreq: 'weekly'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/categories';
     label: 'Categories';
     description: 'Browse service and talent categories';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.7;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+
+=======
+    change_freq: 'monthly',
+    lastmod: current_date}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0 && 0.7;
     changeFreq: 'monthly',
     lastmod: currentDate};
@@ -117,10 +348,34 @@ export const publicPages: SitemapItem[] = [
     priority: 0.7;
     changeFreq: 'monthly'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/blog';
     label: 'Blog';
     description: 'Articles and insights about AI and tech';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.9;
+    changeFreq: 'daily',
+    lastmod: currentDate};
+
+=======
+    change_freq: 'daily',
+    lastmod: current_date}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0 && 0.9;
     changeFreq: 'daily',
     lastmod: currentDate};
@@ -129,10 +384,34 @@ export const publicPages: SitemapItem[] = [
     priority: 0.9;
     changeFreq: 'daily'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/faq';
     label: 'FAQ';
     description: 'Frequently asked questions about Zion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.7;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+
+=======
+    change_freq: 'monthly',
+    lastmod: current_date}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0 && 0.7;
     changeFreq: 'monthly',
     lastmod: currentDate};
@@ -141,10 +420,34 @@ export const publicPages: SitemapItem[] = [
     priority: 0.7;
     changeFreq: 'monthly'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/terms';
     label: 'Terms of Service';
     description: 'Terms and conditions for using Zion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.5;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+
+=======
+    change_freq: 'monthly',
+    lastmod: current_date}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0 && 0.5;
     changeFreq: 'monthly',
     lastmod: currentDate};
@@ -153,10 +456,32 @@ export const publicPages: SitemapItem[] = [
     priority: 0.5;
     changeFreq: 'monthly'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/privacy';
     label: 'Privacy Policy';
     description: 'How we handle your data';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.5;
+    changeFreq: 'monthly',
+
+=======
+    priority: 0 && 0.5;
+    changeFreq: 'monthly',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     lastmod: currentDate}];
 // Authentication Pages
 export const authPages: SitemapItem[] = [
@@ -165,10 +490,34 @@ export const authPages: SitemapItem[] = [
 ;
 // Authentication Pages;
 export const auth_pages: SitemapItem[] = [;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/login';
     label: 'Login';
     description: 'Sign in to your account';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.6;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+
+=======
+    change_freq: 'monthly',
+    lastmod: current_date}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0 && 0.6;
     changeFreq: 'monthly',
     lastmod: currentDate};
@@ -188,14 +537,39 @@ export const authPages: SitemapItem[] = [
     lastmod: currentDate}
     change_freq: 'monthly',
     lastmod: current_date}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/signup';
     label: 'Sign Up';
     description: 'Create a new account';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     priority: 0.6;
     change_freq: 'monthly';
     lastmod: current_date;
     children: [;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {
         path: '/signup / talent';
         label: 'Talent Registration';
@@ -241,6 +615,24 @@ export const talent_routes: SitemapItem[] = [;
     path: '/talent - onboarding';
     label: 'Talent Onboarding';
     description: 'Complete your talent profile';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.8;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+
+=======
+=======
+    priority: 0 && 0.8;
+    changeFreq: 'monthly',
+    lastmod: currentDate};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     required_auth: true;
     required_roles: ['job_seekercreator'];
     priority: 0.8;
@@ -293,10 +685,38 @@ export const talentRoutes: SitemapItem[] = [
     priority: 0.8;
     changeFreq: 'monthly'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/portfolio';
     label: 'Portfolio';
     description: 'Manage your portfolio and resume';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.8;
+    changeFreq: 'weekly',
+    lastmod: currentDate};
+
+=======
+=======
+    priority: 0 && 0.8;
+    changeFreq: 'weekly',
+    lastmod: currentDate};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     required_auth: true;
     required_roles: ['job_seekercreator'];
     priority: 0.8;
@@ -352,6 +772,15 @@ export const shared_routes: SitemapItem[] = [;
     priority: 0.9;
     change_freq: 'hourly',
     lastmod: current_date}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     requiredAuth: true;
     requiredRoles: ['jobSeekercreator'];
     priority: 0.8;
@@ -405,10 +834,38 @@ export const sharedRoutes: SitemapItem[] = [
     priority: 0.9;
     changeFreq: 'hourly'
     lastmod: currentDate}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     path: '/notifications';
     label: 'Notifications';
     description: 'Your alerts and updates';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.8;
+    changeFreq: 'hourly',
+    lastmod: currentDate};
+
+=======
+=======
+    priority: 0 && 0.8;
+    changeFreq: 'hourly',
+    lastmod: currentDate};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     required_auth: true;
     priority: 0.8;
     change_freq: 'hourly',
@@ -471,9 +928,90 @@ export const admin_routes: SitemapItem[] = [;
     path: '/admin / disputes';
     label: 'Dispute Management';
     description: 'Manage user disputes';
+<<<<<<< HEAD
     lastmod: currentDate}];
 // Dynamic Path Patterns
 export const dynamicPaths = {;
+=======
+<<<<<<< HEAD
+    lastmod: currentDate}];
+// Dynamic Path Patterns
+export const dynamicPaths = {;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    priority: 0 && 0.8;
+    changeFreq: 'daily',
+
+    lastmod: currentDate}];
+// Dynamic Path Patterns
+export const dynamicPaths = {
+=======
+    priority: 0 && 0.8;
+    changeFreq: 'daily',
+    lastmod: currentDate}];
+// Dynamic Path Patterns
+export const dynamicPaths = {
+    requiredAuth: true;
+    priority: 0.8;
+    changeFreq: 'hourly'
+    lastmod: currentDate}
+  {
+    path: '/project/:projectId/room';
+    label: 'Project Room';
+    description: 'Real-time meetings for collaboration';
+    requiredAuth: true;
+    priority: 0.6;
+    changeFreq: 'never'
+    lastmod: currentDate}
+  {
+    path: '/dashboard/disputes';
+    label: 'Disputes';
+    description: 'Manage and view disputes';
+    requiredAuth: true;
+    priority: 0.7;
+    changeFreq: 'daily'
+    lastmod: currentDate}];
+// Admin Routes
+export const adminRoutes: SitemapItem[] = [
+  {;
+    path: '/analytics';
+    label: 'Analytics';
+    description: 'System analytics and metrics';
+    requiredAuth: true;
+    requiredRoles: ['admin'];
+    priority: 0.9;
+    changeFreq: 'daily'
+    lastmod: currentDate}
+  {
+    path: '/admin/reviews';
+    label: 'Reviews Moderation';
+    description: 'Moderate user reviews';
+    requiredAuth: true;
+    requiredRoles: ['admin'];
+    priority: 0.7;
+    changeFreq: 'daily'
+    lastmod: currentDate}
+  {
+    path: '/admin/disputes';
+    label: 'Dispute Management';
+    description: 'Manage user disputes';
+    requiredAuth: true;
+    requiredRoles: ['admin'];
+    priority: 0.8;
+    changeFreq: 'daily'
+    lastmod: currentDate}];
+// Dynamic Path Patterns
+export const dynamicPaths = {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    lastmod: currentDate}];
+// Dynamic Path Patterns
+export const dynamicPaths = {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   talentProfile: '/talent/:id';
   projectDetails: '/project/:projectId';
   projectMilestones: '/project/:projectId/milestones';
@@ -482,7 +1020,23 @@ export const dynamicPaths = {;
   categoryDetails: '/categories/:slug'
   disputeDetails: '/dashboard/disputes/:disputeId'}
 // The complete sitemap
+<<<<<<< HEAD
 export const completeSitemap: SitemapItem[] = [;
+=======
+<<<<<<< HEAD
+export const completeSitemap: SitemapItem[] = [;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const completeSitemap: SitemapItem[] = [
+=======
+export const completeSitemap: SitemapItem[] = [;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export const completeSitemap: SitemapItem[] = [;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ...publicPages;
   ...authPages;
   ...talentRoutes;
@@ -494,7 +1048,23 @@ export const getAccessibleRoutes = (
   isAuthenticated: boolean
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
 ) => {
+<<<<<<< HEAD
   // Public routes accessible to everyone;
+=======
+<<<<<<< HEAD
+  // Public routes accessible to everyone;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // Public routes accessible to everyone
+=======
+  // Public routes accessible to everyone;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Public routes accessible to everyone;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   let accessibleRoutes = [...publicPages, ...authPages];
   // Add authenticated-only routes
   if (isAuthenticated) {
@@ -502,6 +1072,17 @@ export const getAccessibleRoutes = (
     // Add role-specific routes
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Define the types for our sitemap structure;
 export type SitemapItem = {;
   path: string,;
@@ -834,6 +1415,12 @@ export const getAccessibleRoutes = (;
     // Add role-specific routes;
     if (userType === 'creator' || userType === 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes],;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     ;
     if (userType === 'employer' || userType === 'buyer') {;
@@ -902,6 +1489,45 @@ if ( {) {
   return accessible_routes;
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ;
+  return accessibleRoutes,;
+},; // Define the types for our sitemap structure // Authentication Pages export const authPages: SitemapItem[] = [ {
+  path: '/login', label: 'Login', description: 'Sign in to your account', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate 
+};
+{
+  path: '/signup', label: 'Sign Up', description: 'Create a new account', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate, children: [ {
+  path: '/signup/talent', label: 'Talent Registration', description: 'Sign up as a talent or creator', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate 
+};
+{
+  path: '/signup/client', label: 'Client Registration', description: 'Sign up as an employer or buyer', priority: 0.6, changeFreq: 'monthly', lastmod: currentDate 
+}] 
+};
+// The complete sitemap export const completeSitemap: SitemapItem[] = [ ...publicPages;
+...authPages;
+...talentRoutes;
+...clientRoutes;
+...sharedRoutes;
+...adminRoutes];
+// Helper function to get appropriate routes based on user role 
+}return accessibleRoutes 
+};
+    }
+    if (userType === 'employer' |userType === 'buyer') {
+      accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
+    }
+    if (userType === 'admin') {
+      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
+    }
+  }
+  return accessibleRoutes
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
   return accessibleRoutes;
@@ -910,3 +1536,14 @@ if ( {) {
 ;
   return accessibleRoutes;
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

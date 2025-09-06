@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState } from "../../../utils/sync/storage",;
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
@@ -13,11 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       paused: state.config.paused
 lastSyncedAt: state.lastSyncedAt})
 
-
 }
 
-import type { NextApiRequest, NextApiResponse } from './next';
-import { read_state  } from '../../../utils / sync / storage';
 export default async /**
  * handler - Function description
  */
@@ -31,7 +27,10 @@ if ( {) {
       route: "/multiverse / hub"
       instance_id: state.config.instance_id
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -63,18 +62,29 @@ export default async function handler(req, res) {
     return res.status(200).json({
       route: "/multiverse/hub"
       instanceId: state.config.instanceId
+<<<<<<< HEAD
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
+=======
+
+      route: "/multiverse/hub",
+      instanceId: state.config.instanceId,
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       peers: state.config.peers,
       scope: state.config.scope,
       opt_in: state.config.opt_in,
       paused: state.config.paused,
+<<<<<<< HEAD
       peers: state.config.peers
       scope: state.config.scope
       opt_in: state.config.opt_in
       paused: state.config.paused
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       lastSyncedAt: state.lastSyncedAt})
   }
 
   return res.status(405).json({ error: "Method not allowed" })
-};
+

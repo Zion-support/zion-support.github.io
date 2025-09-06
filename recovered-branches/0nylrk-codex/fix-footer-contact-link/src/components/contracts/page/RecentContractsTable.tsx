@@ -10,8 +10,30 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
+<<<<<<< HEAD
 interface RecentContractsTableProps {
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+interface RecentContractsTableProps {;
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+interface RecentContractsTableProps {
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button",
 interface Contract {
   id: string,
@@ -207,6 +229,24 @@ function RecentContractsTable() {
 
 
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+              </tr>))}
+          </tbody>;
+        </table>;
+      </div>;
+    </>);
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
               </tr>))}
           </tbody>;
@@ -214,3 +254,42 @@ function RecentContractsTable() {
       </div>;
     </>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ),;}
+ interface Contract {
+  id: string;
+title: string;
+client: string;
+talent: string;
+date: string;
+isSmartContract: boolean 
+}interface RecentContractsTableProps {
+  contracts: Contract[];
+onViewContract: (contractId: string) => void 
+}export function RecentContractsTable ({
+  contracts, onViewContract 
+}: RecentContractsTableProps) {
+  return (<> <h2 className="text-2xl font-bold mb-4" >Recent Contracts</h2> <div className="overflow-x-auto rounded-md border" > <table className="min-w-full divide-y divide-border" > <thead className="bg-muted" > col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Contract Title </th> <th scope=" col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Client </th> <th scope=" col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Talent </th> <th scope=" col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Date </th> <th scope=" col"className=" px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"> Type </th> <th scope=" col"className=" relative px-6 py-3"> <span className=" sr-only">Actions</span> </th> </tr> </thead> <tbody className=" bg-card divide-y divide-border"> {
+  contracts.map ( (contract) => (<tr key= {
+  contract.id 
+}> Smart Contract </span>) : (<span className=" inline-flex items-center px-2.5 py-0.5 rounded-full bg-muted text-muted-foreground text-xs"> Standard </span>) 
+}</td> <td className=" px-6 py-4 whitespace-nowrap text-right text-sm" > <Button > View </Button> </td> </tr>) ) 
+}</tbody> </table> </div> </>) 
+}
+          </tbody>
+        </table>
+      </div>
+    </>
+          </tbody>;
+        </table>;
+      </div>;
+    </>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

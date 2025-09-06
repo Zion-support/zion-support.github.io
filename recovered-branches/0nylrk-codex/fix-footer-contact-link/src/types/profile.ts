@@ -1,15 +1,25 @@
+<<<<<<< HEAD
+=======
 export interface ProfileSkill {
   name: string;
   level: number; // 1-5
   endorsements?: number;
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   id: string;
   title: string;
   description: string;
   image_url?: string;
   tags?: string[];
+<<<<<<< HEAD
+=======
   url?: string;
   date: string;
 }
@@ -19,10 +29,48 @@ export interface ProfileSkill {
 
 }
 export interface ProfileExperience {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+export interface ProfileSkill {
+
+  name: string
+
+  level: number, // 1-5
+  endorsements?: number
+}
+export interface ProfileProject {
+
+export interface ProfileProject {;
+  id: string;
+  title: string;
+  description: string;
+  imageUrl?: string;
+  tags?: string[];
+
+  url?: string
+
+  date: string
+}
+export interface ProfileExperience {
+
+export interface ProfileExperience {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   role: string;
   company: string;
   description: string;
+<<<<<<< HEAD
+  status: 'available' | 'limited' | 'unavailable';
+  next_available?: string;
+  message?: string,
+  available_hours?: { day: string, hours: string }[];
+=======
   startDate: string;
   endDate?: string;
   current?: boolean;
@@ -38,6 +86,7 @@ export interface Availability {
   message?: string;
   availableHours?: { day: string; hours: string }[];
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 }
 export interface ProfileData {
@@ -79,6 +128,8 @@ export interface ProfileData {;
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
+<<<<<<< HEAD
+=======
   hourlyRate?: number;
   contactEmail?: string;
 }
@@ -91,6 +142,12 @@ export interface ProfileSkill {;
   level: number, // 1-5;
   endorsements?: number;
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export interface ProfileProject {;
   id: string,;
@@ -140,3 +197,10 @@ export interface ProfileData {;
 }
 ;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

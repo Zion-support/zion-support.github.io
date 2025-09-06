@@ -7,8 +7,6 @@ export function AIEnhancementButton({
   className
 }: AIEnhancementButtonProps) {
 
-
-
       return
     }
     setError(null)
@@ -46,7 +44,6 @@ export function AIEnhancementButton(): any ({;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
-
 
 import { Button } from '@/components / ui / button';
 import { Sparkles, Loader2 } from 'lucide-react';
@@ -87,3 +84,4 @@ if ( {) {
 }
       on_enhanced (enhanced_content);
     }
+

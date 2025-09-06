@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+import { ServiceVariant } from '../types / service - variants';
+
+export interface Revolutionary2026Service {
+
+  {
+
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   contactInfo: {
       
     mobile: string, email: string,
@@ -9,6 +39,85 @@
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+      'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.'
+    launchDate: '2026-03-01'
+    customers: 45
+    rating: 4.8
+    reviews: 25
+  }
+      'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.',
+    launchDate: '2026-03-01',
+    customers: 45,
+    rating: 4.8,
+    reviews: 25,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.';
+    launchDate: '2026-03-01';
+    customers: 45;
+    rating: 4.8
+
+    reviews: 25
+  }
+];
+import { ServiceVariant } from '../types/service-variants',;
+export interface Revolutionary2026Service {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [
@@ -40,6 +149,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -48,6 +162,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     customers: 45;
     rating: 4.8,
     reviews: 25;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2026Service {;
   id: string,;
@@ -709,3 +836,16 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     rating: 4.8;
     reviews: 25;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+;
+=======
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

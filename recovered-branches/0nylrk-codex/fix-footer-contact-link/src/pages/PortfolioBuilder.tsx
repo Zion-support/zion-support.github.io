@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
+import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState('resume');
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+import { useState } from 'react',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
+import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState('resume'),
+  
+=======
 import { useState } from "react";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
@@ -13,6 +44,7 @@ import {
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState("resume");
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>
       <SEO
@@ -56,7 +88,40 @@ function PortfolioBuilderContent() {
     </>
   );
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+function PortfolioBuilderContent() {;
+  const [activeTab, setActiveTab] = useState('resume');
+
+  return (
+    <ProtectedRoute>
+      <PortfolioBuilderContent />
+    </ProtectedRoute>
+  );
+}
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 
 export default function PortfolioBuilder() {;
@@ -66,6 +131,16 @@ export default function PortfolioBuilder() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 import {useState} from 'react';
@@ -116,6 +191,15 @@ function PortfolioBuilder() {
       <PortfolioBuilderContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;
 }
 export default function PortfolioBuilder() {
@@ -135,3 +219,10 @@ export default function PortfolioBuilder() {;
 }
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

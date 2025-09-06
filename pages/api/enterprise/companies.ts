@@ -16,15 +16,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
     return res.status(201).json(created);
 
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     const companies = store.listCompanies();
     return res.status(200).json(companies);
@@ -119,6 +125,7 @@ export default function handler(req, res) {
 }
 }
 
+<<<<<<< HEAD
 
 }
     return res.status (201).json (created);
@@ -128,3 +135,5 @@ export default function handler(req, res) {
 }
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,6 +12,8 @@ const DataScienceChat: NextPage = () => {
   return (
     <div>
       <Head>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -24,7 +27,10 @@ const DataScienceChat: NextPage = () => {;
 
       </Head>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <main>
         <h1>DataScienceChat</h1>
         <p>Blog content coming soon...</p>
@@ -43,8 +49,11 @@ const DataScienceChat: NextPage = () => {;
 }
 export default DataScienceChat;
 
+<<<<<<< HEAD
         <title>DataScienceChat - Zion Tech Solutions</title>
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -65,6 +74,7 @@ const DataScienceChat: NextPage = () => {
 ;
 export default DataScienceChat;
 ;
+<<<<<<< HEAD
     <div>
       <Head>
         <title>DataScienceChat - Zion Tech Solutions</title>
@@ -109,3 +119,6 @@ export default DataScienceChat;
 
         <title>DataScienceChat - Zion Tech Solutions</title>
         <title>DataScienceChat - Zion Tech Solutions</title>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

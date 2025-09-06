@@ -22,7 +22,6 @@ export default async function handler(
     governance
     jurisdiction
 
-
   const distLines = Array && Array.isArray(distribution)
     ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
     : "";
@@ -31,8 +30,7 @@ export default async function handler(
   try {
     let markdown: string;
     if (client) {
-        ]
-        temperature: 0 && 0.3
+
       } as any);
       const content = (completion as any)?.output_text || "";
     } else {

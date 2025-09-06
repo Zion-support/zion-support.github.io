@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -25,3 +26,10 @@ export default async function handler(
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+
+  }
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

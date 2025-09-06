@@ -2,7 +2,10 @@
 
 }</div>) import { useEffect, useState } from 'react';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
@@ -14,11 +17,19 @@ export default function AutomationStatusPage() {;
 
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {;
     fetch('/automation/status && status.json');
       .then((r) => r && r.json());
       .then((j) => setStatus(j));
       .catch(() => setStatus(null));
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="space-y-4">;
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
       {status ? (;
@@ -33,8 +44,12 @@ export default function AutomationStatusPage() {;
     </div>;
   );
 }
+<<<<<<< HEAD
   }, []);
   return (
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
 export default /**

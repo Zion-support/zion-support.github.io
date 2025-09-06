@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+
+
+
+import {useState} from 'react';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
+import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
+import {Resume} from '@/types/resume';
+import {useResume} from '@/hooks/useResume';
+=======
 import { useState } from "react";
 import {
   DropdownMenu,
@@ -18,21 +31,27 @@ import {
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void;
 }
 
+<<<<<<< HEAD
+=======
 export function ResumeVersionSelector({
   currentResume,
   onResumeChange,
 }: ResumeVersionSelectorProps) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState("");
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
+<<<<<<< HEAD
+=======
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
@@ -49,6 +68,14 @@ export function ResumeVersionSelector({
 
         setNewResumeTitle('')
 
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
@@ -57,6 +84,21 @@ export function ResumeVersionSelector({
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        setNewResumeTitle('')
+
+
+        setNewResumeTitle('')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -91,6 +133,16 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
         setNewResumeTitle('');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       setIsLoading(false);
     }
@@ -148,6 +200,15 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         setNewResumeTitle("");
       }
       setIsLoading(false);
@@ -173,7 +234,27 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
+              Cancel
+            </Button>
+            <Button
+onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() |isLoading}
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -184,6 +265,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DialogContent>
       </Dialog>
     </div>
+<<<<<<< HEAD
+=======
   );
 }
 
@@ -204,3 +287,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 }
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -5,6 +18,16 @@ import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
@@ -12,6 +35,20 @@ import {Label} from '@/components/ui/label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface AddSkillFormProps {
 
   resumeId: string
@@ -33,11 +70,45 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       name: skillName.trim()
       category: skillCategory |'Other'
       proficiency: proficiency}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {useState} from 'react';
+
+=======
+=======
+    const success = await onAddSkill(newSkill);
+    if (success) {
+      setSkillName('');
+      setProficiency(3)
+    }
+import React from 'react';
+import {useState} from 'react';
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   }
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -60,11 +131,40 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setSkillName('');
       setProficiency(3);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  },
+
+
+
+=======
+
+
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   },
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
   };
   const handleEnhanceSkill = (enhancedCategory: string) => {;
@@ -116,6 +216,19 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
       <div className="flex flex-col gap-4 md:flex-row">;
         <div className="flex-1">;
           <Label htmlFor="skill-name">Skill Name</Label>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <Input
+            id="skill-name"
+            value={skillName}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onChange={(e) => setSkillName(e && e.target.value)}
             placeholder="Enter a skill (e && e.g., React)";
           />;
@@ -124,6 +237,29 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
           <div className="flex justify-between items-center">;
             <Label htmlFor="skill-category">Category</Label>;
             {skillName && (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              <AIEnhancementButton
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                currentContent={skillName}
+                enhancementType="general"
+                onEnhanced={handleEnhanceSkill}
+<<<<<<< HEAD
+=======
+                buttonText="Suggest"
+                className="h-4"
+              />;
+            )}
+
+=======
+              <AIEnhancementButton ;
+                currentContent={skillName}
+                enhancementType="general";
+                onEnhanced={handleEnhanceSkill}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
           <Select
             value={skillCategory} 
@@ -200,6 +336,11 @@ if ( {) {
                 currentContent={skillName}
                 enhancementType="general";
                 onEnhanced={handleEnhanceSkill}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <SelectValue placeholder="Select category" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -254,5 +395,38 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 }
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </form>);
+=======
+    </form>;
+  ),;
+},; if (!skillName.trim () ) return;
+const newSkill: Skill = {
+  />) 
+}</div> <Select value= {
+  skillCategory 
+}onValueChange= {
+  setSkillCategory 
+}> <SelectTrigger id="skill-category" > <SelectValue placeholder="Select category" /> </SelectTrigger> <SelectContent> <SelectItem value="Programming" >Programming</SelectItem> <SelectItem value="Design" >Design</SelectItem> <SelectItem value="Soft Skills" >Soft Skills</SelectItem> <SelectItem value="DevOps" >DevOps</SelectItem> <SelectItem value="Data Science" >Data Science</SelectItem> <SelectItem value="AI/ML" >AI/ML</SelectItem> <SelectItem value="Management" >Management</SelectItem> <SelectItem value="Other" >Other</SelectItem> </SelectContent> </Select> </div> <div> <Label htmlFor="skill-proficiency" >Proficiency (1-5) </Label> <div className="flex gap-4" > <Input /> <Button type="submit" >Add</Button> </div> </div> </div> </form>) 
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+
+<<<<<<< HEAD
+=======
+},
+};
+},
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,21 +1,77 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+=======
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ServiceProfileData {
   name: string;
   title: string;
   bio: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+  services?: string[]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ServiceProfileData {
   name: string,
   title: string,
   bio: string,
   services?: string[],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   location: string
 }
 serve(async (req) => {
@@ -23,6 +79,26 @@ serve(async (req) => {
     // CORS headers
 
     const headers = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      return new Response(
+        JSON && JSON.stringify({
+  services?: string[],
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+      "Access-Control-Allow-Origin": "*";
+      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type";
+      "Content-Type": "application/json"}
+      "Access-Control-Allow-Origin": "*";
+      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type";
+      "Content-Type": "application/json"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
       "Content-Type": "application/json"},
@@ -49,6 +125,14 @@ interface ServiceProfileData {;
   title: string,;
   bio: string,;
   services?: string[],;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   location: string;
 }
 serve (async (req) => {
@@ -85,6 +169,14 @@ if ( {) {
     const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {
       return new Response(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     // Get OpenAI API key from environment;
     const api_key = Deno.env.get ("OPENAI_API_KEY");
@@ -94,6 +186,55 @@ if ( {) {
 }
       return new Response (
         JSON.stringify ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          error: "OpenAI API key not configured"});
+=======
+        JSON.stringify({
+
+=======
+          error: "OpenAI API key not configured"});
+        JSON.stringify({
+
+  location: string;
+}
+;
+serve(async (req) => {;
+  try {;
+    // CORS headers;
+    const headers = {;
+      "Access-Control-Allow-Origin": "*",;
+      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",;
+      "Content-Type": "application/json"},;
+    // Handle CORS preflight request;
+    if (req.method === "OPTIONS") {;
+      return new Response(null, { headers, status: 204 });
+    }
+;
+    const reqData = await req.json(),;
+    const providerData = reqData.providerData as ServiceProfileData,;
+    // Validate input;
+    if (!providerData || !providerData.bio) {;
+      return new Response(;
+        JSON.stringify({;
+          error: "Missing required service provider data"}),;
+        { headers, status: 400 }
+      );
+    }
+
+    // Get OpenAI API key from environment
+    const apiKey = Deno.env.get("OPENAI_API_KEY"),
+    if (!apiKey) {
+      return new Response(
+        JSON.stringify({
+          error: "OpenAI API key not configured"});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           error: "OpenAI API key not configured"}),
 ;
     // Get OpenAI API key from environment;
@@ -102,12 +243,27 @@ if ( {) {
       return new Response(;
         JSON.stringify({;
           error: "OpenAI API key not configured"}),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         { headers, status: 500 }
       );
     }
         { headers, status: 500 }
       )
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         { headers, status: 500 }
       );
     }
@@ -131,10 +287,32 @@ if ( {) {
     Current Bio: ${providerData && providerData.bio}
     ${providerData && providerData.services && providerData && providerData.services.length > 0 
       ? `Current Services: ${providerData && providerData.services.join(", ")}`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    ${providerData.services && providerData.services.length > 0
+    ${providerData.services && providerData.services.length > 0 
+      ? `Current Services: ${providerData.services.join(", ")}`
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+          error: "OpenAI API key not configured"});
+        { headers, status: 500 }
+      );
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
     Only respond with JSON in this exact format: {
@@ -142,6 +320,13 @@ if ( {) {
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
     `;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     Only respond with JSON in this exact format:
     {
       "summary": "Professional summary goes here...",
@@ -163,6 +348,15 @@ if ( {) {
         messages: [
           {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            role: "system"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         model: "gpt-4";
         messages: [
           {
@@ -195,10 +389,51 @@ if ( {) {
         messages: [;
           {
             role: "system",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    `,
+
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST"
+      headers: {
+        Authorization: `Bearer ${apiKey}`;
+        "Content-Type": "application/json"}
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json"},
+      body: JSON.stringify({
+        model: "gpt-4",
+        messages: [
+          {
+            role: "system"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             content: "You are an expert at creating professional service descriptions for marketplaces."}
           {
             role: "user"
             content: prompt}];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+        temperature: 0.7
+        max_tokens: 800})});
+    const responseData = await response.json();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             role: "system",
             content: "You are an expert at creating professional service descriptions for marketplaces."},
           {
@@ -209,6 +444,26 @@ if ( {) {
 
     const responseData = await response.json(),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    if (!response.ok) {
+      console.error("OpenAI API error:", responseData);
+      return new Response(
+        JSON.stringify({
+
+        temperature: 0 && 0.7,
+        max_tokens: 800})});
+
+    const responseData = await response && response.json();
+    
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!response.ok) {
       console.error("OpenAI API error:", responseData),
       return new Response(
@@ -318,6 +573,19 @@ if ( {) {
       )
     } catch (error) {
       console.error("Error parsing AI response:", error),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      return new Response(
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const content = responseData && responseData.choices[0].message && message.content;
       const parsedContent = JSON && JSON.parse(content);
@@ -348,24 +616,102 @@ if ( {) {
         { headers, status: 200 }
       );
     } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         JSON && JSON.stringify({
 
 
           error: "Failed to parse AI response",
           raw: responseData && responseData.choices[0]?.message?.content});
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       console.error ("Error parsing AI response:", error);
       return new Response (
         JSON.stringify ({
           error: "Failed to parse AI response",
+<<<<<<< HEAD
           raw: response_data.choices[0]?.message?.content});
+=======
+<<<<<<< HEAD
+          raw: response_data.choices[0]?.message?.content});
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+          raw: response_data.choices[0]?.message?.content});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          raw: response_data.choices[0]?.message?.content});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         { headers, status: 500 }
       );
+    }
+  } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    console.error ("Function error:", error);
+    return new Response (
+      JSON.stringify ({
+        error: "Internal server error"});
+      {
+        headers: {
+          "Content - Type": "application / json",
+          "Access - Control - Allow - Origin": "*"},
+        status: 500;
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    console.error("Function error:", error),
+    return new Response(
+      JSON.stringify({
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        { headers, status: 500 }
+      )
     }
   } catch (error) {
     console.error("Function error:", error),
     return new Response(
       JSON.stringify({
-
+        error: "Internal server error"});
+      {
+        headers: {
+          "Content-Type": "application/json"
+          "Access-Control-Allow-Origin": "*"}
+        status: 500
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         error: "Internal server error"}),
       { 
         headers: {
@@ -382,6 +728,13 @@ if ( {) {
           "Content-Type": "application/json",;
           "Access-Control-Allow-Origin": "*"},;
         status: 500;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         error: "Internal server error"}),
       { 
         headers: {
@@ -389,10 +742,35 @@ if ( {) {
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     );
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 ;
@@ -592,3 +970,10 @@ raw: responseData.choices[0]?.message?.content
   }
 });
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

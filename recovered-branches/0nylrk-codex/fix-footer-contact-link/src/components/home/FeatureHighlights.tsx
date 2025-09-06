@@ -1,15 +1,61 @@
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Check} from "lucide-react";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from "lucide-react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card",
 import { Check } from "lucide-react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      title: "For Talent Seekers",
+      features: [;
+
+        "AI-powered talent matching based on your specific project requirements";
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
@@ -24,6 +70,16 @@ export function FeatureHighlights() {;
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         "Secure payment protection and dispute resolution",;
         "Post jobs and receive AI-matched applicants";
       ];
@@ -31,6 +87,17 @@ export function FeatureHighlights() {;
     {;
       title: "For Talent & Service Providers",;
       features: [;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Check } from './lucide-react';
@@ -81,6 +148,23 @@ function FeatureHighlights() {
     {
       title: "For Talent & Service Providers"
       features: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        "Create a professional profile showcasing your skills and experience";
+        "Get matched with relevant projects that fit your expertise";
+        "Secure payment processing with on-time disbursements";
+        "Build your reputation through client reviews and ratings";
+        "Access to enterprise clients and high-value projects"
+        "Professional development resources and community support"
+      ]
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         "Create a professional profile showcasing your skills and experience",
         "Get matched with relevant projects that fit your expertise",
@@ -90,19 +174,97 @@ function FeatureHighlights() {
         "Professional development resources and community support"
       ]
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    {
+      title: "For Enterprise Clients"
+      features: [
+
+=======
+    {
+      title: "For Enterprise Clients"
+      features: [
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        "Create a professional profile showcasing your skills and experience";
+        "Get matched with relevant projects that fit your expertise";
+        "Secure payment processing with on - time disbursements";
+        "Build your reputation through client reviews and ratings";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         "White-labeled talent portal with your company branding";
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        "API access for seamless integration with your HR systems"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "Customizable workflow and approval processes"
+      ]
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   ],
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <section className="py-16 bg-zion-blue">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {highlightsData.map((category, index) => (
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
+                <ul className="space-y-3">
+                  {category.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-zion-slate-light">{feature}</span>
+                    </li>
+        "White-labeled talent portal with your company branding",
+        "Dedicated account management and priority support",
+        "Custom talent pools and preferred provider networks",
+        "Advanced analytics and reporting capabilities",
+        "API access for seamless integration with your HR systems",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
         "Customizable workflow and approval processes"
@@ -129,6 +291,7 @@ function FeatureHighlights() {
 ;
   return (
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
@@ -172,6 +335,26 @@ export function FeatureHighlights() {;
     }
   ];
   return (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+        "API access for seamless integration with your HR systems",;
+        "Customizable workflow and approval processes";
+      ];
+    }
+  ],;
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -180,6 +363,32 @@ export function FeatureHighlights() {;
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+          {highlightsData && highlightsData.map((category, index) => (;
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;
+              <CardContent className="p-6">;
+                <h3 className="text-xl font-bold text-white mb-4">{category && category.title}</h3>;
+                <ul className="space-y-3">;
+                  {category && category.features.map((feature, idx) => (;
+                    <li key={idx} className="flex items-start">;
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0 && 0.5 flex-shrink-0" />;
+                      <span className="text-zion-slate-light">{feature}</span>;
+                    </li>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   ))}
                 </ul>;
               </CardContent>;
@@ -211,6 +420,15 @@ export function FeatureHighlights() {;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  export function FeatureHighlights () {
   const highlightsData = [ {
@@ -265,3 +483,10 @@ return (<section className="py-16 bg-zion-blue" > <div className="container mx-a
     </section>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

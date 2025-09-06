@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Loader2, Sparkles, Check  } from 'lucide-react';
+import { Badge  } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
+interface MilestoneSuggestionsProps {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -13,6 +36,20 @@ import React, { useState } from 'react';
   startDate;
   endDate;
   projectType;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -28,7 +65,18 @@ interface MilestoneSuggestionsProps {;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   projectName: string
   scopeSummary: string
@@ -39,6 +87,33 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {Button} from '@/components/ui/button';
+import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Loader2, Sparkles, Check} from 'lucide-react';
+import {Badge} from '@/components/ui/badge';
+import {format, parseISO} from 'date-fns';
+
+interface MilestoneSuggestionsProps {;
+  projectName: string,;
+  scopeSummary: string,;
+  startDate: Date,;
+  endDate?: Date;
+  projectType: string,;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
+
+export function MilestoneSuggestions(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   projectName;
   scopeSummary;
   startDate;
@@ -71,6 +146,11 @@ export function MilestoneSuggestions({
     }
     const milestones = await generateMilestones(input);
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -79,15 +159,63 @@ export function MilestoneSuggestions({
 
     const milestones = await generateMilestones(input),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  };
+
+=======
+=======
+  };
+
+      }
+    }
+  }
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
+    }
+  }
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   };
 
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -99,6 +227,19 @@ export function MilestoneSuggestions({;
 }: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;
       scope: `${projectName}: ${scopeSummary}`,;
@@ -116,6 +257,17 @@ export function MilestoneSuggestions({;
         onMilestonesGenerated(milestones);
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Button} from '@/components / ui / button';
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -171,6 +323,17 @@ if ( {) {
       return dateString;
 
 
+<<<<<<< HEAD
+=======
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -184,6 +347,113 @@ if ( {) {
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          )}
+        </Button>
+      )}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          disabled={isGenerating || !scopeSummary || !startDate}
+          className="w-full">;
+=======
+    }
+  },
+
+  return (
+    <div className="space-y-4">
+      {!showSuggestions && (
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating |!scopeSummary |!startDate}
+          className="w-full"
+        >
+          {isGenerating ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Generating milestones...
+            </>
+          ) : (
+            <>
+              <Sparkles className="mr-2 h-4 w-4" />
+              Suggest Project Milestones with AI
+            </>
+          )}
+        </Button>
+      )}
+
+          disabled={isGenerating || !scopeSummary || !startDate}
+          className="w-full">;
+
+import React, { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Loader2, Sparkles, Check } from 'lucide-react',;
+import { Badge } from '@/components/ui/badge',;
+import { format, parseISO } from 'date-fns',;
+;
+interface MilestoneSuggestionsProps {;
+  projectName:string,;
+  scopeSummary:string,;
+  startDate:Date,;
+  endDate?:Date,;
+  projectType:string,;
+  onMilestonesGenerated?:(milestones:GeneratedMilestone[]) => void;
+}
+;
+export function MilestoneSuggestions({;
+  projectName,;
+  scopeSummary,;
+  startDate,;
+  endDate,;
+  projectType,;
+  onMilestonesGenerated;
+} MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
+  const [showSuggestions, setShowSuggestions] = useState(false),;
+;
+  const handleGenerateMilestones = async () => {;
+    const input:MilestoneInput = {;
+      scope:`${projectName} ${scopeSummary}`,;
+      startDate:startDate.toISOString(),;
+      endDate:endDate ? endDate.toISOString() :null,;
+      projectType:projectType || "Other";
+    },;
+;
+    const milestones = await generateMilestones(input),;
+    ;
+    if (milestones.length > 0) {;
+      setShowSuggestions(true),;
+      if (onMilestonesGenerated) {;
+        onMilestonesGenerated(milestones),;
+      }
+    }
+  },;
+;
+  const formatDate = (dateString:string) => {;
+    try {;
+      return format(parseISO(dateString), 'MMM dd, yyyy'),;
+    } catch (error) {;
+      return dateString,;
+    }
+  },;
+;
+  return (;
+    <div className="space-y-4">;
+      {!showSuggestions && (;
+        <Button;
+          variant="outline";
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating || !scopeSummary || !startDate}
+          className="w-full";
+        >;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {isGenerating ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
@@ -192,6 +462,11 @@ if ( {) {
           )}
         </Button>
       )}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -229,6 +504,31 @@ if ( {) {
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+      {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
+=======
+          )}
+        </Button>;
+      )}
+      {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
+          ) :(;
+            <>;
+              <Sparkles className="mr-2 h-4 w-4" />;
+              Suggest Project Milestones with AI;
+            </>;          )}
+        </Button>;
+      )}
+;
+      {showSuggestions && generatedMilestones.length > 0 && (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>;
           <CardHeader className="pb-3">;
             <CardTitle className="text-lg flex items-center">;
@@ -275,3 +575,10 @@ endDate: endDate ? endDate.toISOString () : null;
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

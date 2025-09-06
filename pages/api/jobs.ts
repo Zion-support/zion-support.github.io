@@ -4,13 +4,16 @@ import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   req: NextApiRequest
   res: NextApiResponse
 ) {
   try {
 
   if (!rateLimit(req, res)) return;
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
@@ -25,8 +28,15 @@ export default async function handler(req, res) {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     res.status(200).json({ jobs });
   if (req && req.method === "GET") {
+<<<<<<< HEAD
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
+=======
+
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    res && res.status(200).json({ jobs });
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return;
     } catch (error) {
     console.error("Error:", error);
@@ -154,6 +164,7 @@ if ( {) {
     const nowIso = new Date().toISOString();
     const job: Job = {
 
+<<<<<<< HEAD
 
 required_skills = []
       budgetMinUsd
@@ -175,6 +186,8 @@ category: String(category || "")
         : []
       budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined
       budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -203,8 +216,11 @@ category: String(category || "")
     return;
   }
 
+<<<<<<< HEAD
     res.status(201).json({ job });
     return
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   } catch (error) {
     console.error("Error:", error);
@@ -221,15 +237,21 @@ category: String(category || "")
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       client_email
     } = req.body || {}
     // Check condition
@@ -289,6 +311,7 @@ if (=>) {
     writeJsonFile < Job[]>(FILE, jobs);
     res.status (201).json ({ job });
     return;
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -317,12 +340,18 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

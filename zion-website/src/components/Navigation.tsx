@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+import { useState } from 'react'
+import { Dialog } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+const navigation = [
+  { name: 'Home', href: '/' }
+  { name: 'About', href: '/about' }
+  { name: 'Services', href: '/services' }
+  { name: 'Solutions', href: '/solutions' }
+  { name: 'Research', href: '/research' }
+  { name: 'Contact', href: '/contact' }]
+export default function Navigation() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+;
+  return (;
+    <header className=&quot;fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10&quot;>
+      <nav className=&quot;flex items-center justify-between p-6 lg:px-8&quot; aria-label=&quot;Global&quot;>
+        <div className=&quot;flex lg:flex-1&quot;>
+          <a href=&quot;/&quot; className=&quot;-m-1.5 p-1.5&quot;>
+            <span className=&quot;sr-only&quot;>Zion Tech Group</span>
+            <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+=======
 'use client';
 
 import { useState } from 'react';
@@ -16,6 +40,7 @@ const navigation = [
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <header className="bg-white shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -83,6 +108,24 @@ export default function Navigation() {
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
+<<<<<<< HEAD
+</Link>))}
+              </div>;
+              <div className=&quot;py - 6&quot;>;
+                <a;
+                  href=&quot;/contact & quot;
+                  className=&quot;-mx - 3 block rounded - lg px - 3 py - 2.5 text - base font - semibold leading - 7 text - white bg - blue - 600 hover:bg - blue - 700 transition - colors duration - 200 & quot;
+                  on_click={() => setMobileMenuOpen (false)}
+                >;
+                  Get Started;
+                </Link>;
+              </div>;
+            </div>;
+          </div>;
+        </Dialog.Panel>;
+      </Dialog>;
+    </header>);
+=======
                   </a>
                 ))}
               </div>
@@ -101,3 +144,4 @@ export default function Navigation() {
     </header>
   );
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

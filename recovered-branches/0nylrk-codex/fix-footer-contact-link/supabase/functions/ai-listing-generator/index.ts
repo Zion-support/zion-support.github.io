@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
@@ -7,6 +17,11 @@ import {Configuration, OpenAIApi} from "npm: openai@4 ;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -20,15 +35,56 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const { title, category, keyFeatures, targetAudience } = await req.json();
+    if (!title |!category) {
+      return new Response(
+        JSON.stringify({
+          error: "Missing required fields: title and category are required"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         });
         {
           status: 400
@@ -70,10 +126,27 @@ serve(async (req) => {;
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required fields: title and category are required" 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         });
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
@@ -102,6 +175,7 @@ if ( {) {
           status: 400,
           headers: { ...cors_headers, "Content - Type": "application / json" }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const { title, category, keyFeatures, targetAudience } = await req.json(),
 
     if (!title || !category) {
@@ -112,11 +186,49 @@ if ( {) {
         { 
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;
+    const { title, category, keyFeatures, targetAudience } = await req.json(),;
+    if (!title || !category) {;
+      return new Response(;
+        JSON.stringify({;
+          error: "Missing required fields: title and category are required";
+        }),;
+        {;
+          status: 400,;
+          headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
       )
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
       );
     }
@@ -133,21 +245,89 @@ if ( {) {
 
     
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+        }
+      )
+    }
+
+    const configuration = new Configuration({
+      apiKey: Deno.env.get('OPENAI_API_KEY')});
+    const openai = new OpenAIApi(configuration);
+    const prompt = `Generate an optimized marketplace listing for the following product:
+Title: ${title}
+Category: ${category}
+Key Features: ${keyFeatures |"Not specified"}
+Target Audience: ${targetAudience |"General users"}
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Generate an optimized marketplace listing for the following product:;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+        }
+      );
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const configuration = new Configuration ({
       api_key: Deno.env.get ('OPENAI_API_KEY')});
     const openai = new OpenAIApi (configuration);
@@ -189,6 +369,27 @@ Format the response as a JSON object with the following structure:
   "keyPoints": ["point1", "point2", "point3"]
 }`,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.7}),
+
+    const responseText = completion.choices[0].message.content,
+    
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        }
+      );
+    }
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here..."
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Parse the JSON from the AI response
     let parsedResponse,
     try {
@@ -197,11 +398,34 @@ Format the response as a JSON object with the following structure:
       const jsonString = jsonMatch[1].trim();
       parsedResponse = JSON && JSON.parse(jsonString)
     } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      console.error("Failed to parse AI response as JSON:", error);
+      console.log("Raw response:", responseText);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Provide a fallback structured response
       parsedResponse = {
         description: "An error occurred while generating the optimized description. Please try again.";
         tags: []
         suggestedPrice: { min: 0, max: 0 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
                         responseText.match(/({[\s\S]*})/) ||
                         [null, responseText],
@@ -217,10 +441,39 @@ Format the response as a JSON object with the following structure:
         description: "An error occurred while generating the optimized description. Please try again.",
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         keyPoints: []
       }
     }
     return new Response(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      JSON && JSON.stringify({ 
+
+        generated: parsedResponse
+=======
+      JSON && JSON.stringify({ 
+        generated: parsedResponse
+      JSON.stringify({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         generated: parsedResponse
       });
       {
@@ -303,6 +556,8 @@ Format the response as a JSON object with the following structure:;
       {;
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+<<<<<<< HEAD
+=======
       }
     );
       });
@@ -370,10 +625,27 @@ Format the response as a JSON object with the following structure:;
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     );
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+;
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       JSON.stringify({
         generated: parsedResponse
 
@@ -542,3 +814,8 @@ headers: {
 });
   }
 });
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

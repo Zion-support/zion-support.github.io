@@ -49,11 +49,9 @@ export function MobileResumeBuilder() {;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
 
-
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
-
 
         >
           Basics
@@ -88,12 +86,9 @@ export function MobileResumeBuilder() {;
       </div>
       {renderStepContent()}
 
-
-      
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-
 
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
@@ -132,25 +127,19 @@ function BasicsStep() {
           Skills;
         </Button>;
       </div>;
-      {renderStepContent()}
-;
-      <Button className="w-full flex gap-2" size="lg">;
-        <Zap className="h-5 w-5" /> Enhance with AI;
-      </Button>;
+
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
     </div>;
   );
 }
-;
-function BasicsStep() {;
-  return (;
+
     <Card>;
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
-          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />;
+
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
@@ -158,7 +147,7 @@ function BasicsStep() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
-          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />;
+
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;
@@ -182,12 +171,9 @@ function BasicsStep() {;
   );
 }
 
-
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-
-
 
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
@@ -198,12 +184,10 @@ function ExperienceStep() {
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
 
-
   };
 };
   );
 };
-
 
   Select;
   SelectContent;
@@ -355,12 +339,9 @@ function ExperienceStep() {;
     setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
   };
 
-
   const removeEducation = (id: string,) => {;
     setEducations(educations && educations.filter(edu => edu && edu.id !== id));
   };
-
-
 
   const removeSkill = (id: string,) => {;
     setSkills(skills && skills.filter(skill => skill && skill.id !== id));
@@ -368,10 +349,7 @@ function ExperienceStep() {;
 
 }
 
-
-
   );
 }
-
 
 ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
 ;
@@ -25,6 +26,10 @@ function handler() {
     lastSyncedAt: state.lastSyncedAt
     events
 
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -59,11 +64,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     events
   return res.status(200).json({
 
-
-
-    instanceId: state.config.instanceId
-    lastSyncedAt: state.lastSyncedAt
-    events
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -94,6 +94,7 @@ export default function handler(req, res) {
   });
 }
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
@@ -122,3 +123,5 @@ function handler() {
     lastSyncedAt: state.lastSyncedAt
     events
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

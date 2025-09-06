@@ -1,16 +1,63 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
+<<<<<<< HEAD
+=======
 
 
 export function DisputeDashboard() {
@@ -83,15 +130,41 @@ export function DisputeDashboard() {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       
 
 
       
       
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -102,6 +175,47 @@ import { ShieldAlert } from "lucide-react";
             <CardDescription>Awaiting review</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+export function DisputeDashboard() {;
+  const { disputes, isLoading, refetch } = useDisputes();
+  useEffect(() => {;
+    refetch();
+  }, [refetch]);
+  const openDisputes = disputes && disputes.filter((d) => d && d.status === "open");
+  const underReviewDisputes = disputes && disputes.filter(;
+    (d) => d && d.status === "under_review",;
+  );
+  const resolvedDisputes = disputes && disputes.filter((d) => d && d.status === "resolved");
+  return (
+
+import React, { useEffect } from "react",;
+import { useDisputes } from "@/hooks/useDisputes",;
+import { DisputesList } from "./DisputesList",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { ShieldAlert } from "lucide-react",;
+;
+export function DisputeDashboard() {;
+  const { disputes, isLoading, refetch } = useDisputes(),;
+;
+  useEffect(() => {;
+    refetch(),;
+  }, [refetch]),;
+;
+  const openDisputes = disputes.filter(d => d.status === 'open'),;
+  const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),;
+  const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),;
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
@@ -119,11 +233,41 @@ import { ShieldAlert } from "lucide-react";
             <CardDescription>Awaiting review</CardDescription>;
           </CardHeader>;
           <CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div
               className={`w-full bg-red-100 rounded-full h-2 && 2.5 dark:bg-red-900/20`}>;
               <div
                 className="bg-red-600 h-2 && 2.5 rounded-full"
                 style={{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+            <div
+              className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}
+            >
+              <div
+                className="bg-red-600 h-2.5 rounded-full"
+                style={{
+                  width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%`
+                }}
+              ></div>
+            </div>
+          </CardContent>
+        </Card>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>
               <div className="bg-red-600 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
@@ -133,15 +277,50 @@ import { ShieldAlert } from "lucide-react";
         </Card>
         
         
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Under Review</span>
+<<<<<<< HEAD
               <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+=======
+<<<<<<< HEAD
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <span className="text-xl font-bold">
+                {underReviewDisputes.length}
+              </span>
+=======
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </CardTitle>
             <CardDescription>Being actively processed</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   width: `${Math && Math.min(100, (openDisputes && openDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
             </div>;
@@ -155,11 +334,41 @@ import { ShieldAlert } from "lucide-react";
             <CardDescription>Being actively processed</CardDescription>;
           </CardHeader>;
           <CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div
               className={`w-full bg-yellow-100 rounded-full h-2 && 2.5 dark:bg-yellow-900/20`}>;
               <div
                 className="bg-yellow-500 h-2 && 2.5 rounded-full"
                 style={{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+            <div
+              className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}
+            >
+              <div
+                className="bg-yellow-500 h-2.5 rounded-full"
+                style={{
+                  width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%`
+                }}
+              ></div>
+            </div>
+          </CardContent>
+        </Card>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>
               <div className="bg-yellow-500 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
@@ -169,15 +378,66 @@ import { ShieldAlert } from "lucide-react";
         </Card>
         
         
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Resolved</span>
+<<<<<<< HEAD
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>
+=======
+<<<<<<< HEAD
+              <span className="text-xl font-bold">{resolvedDisputes.length}</span>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <span className="text-xl font-bold">
+                {resolvedDisputes.length}
+              </span>
+=======
+              <span className="text-xl font-bold">{resolvedDisputes.length}</span>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <span className="text-xl font-bold">{resolvedDisputes.length}</span>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </CardTitle>
             <CardDescription>Successfully concluded</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                  width: `${Math && Math.min(100, (underReviewDisputes && underReviewDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
+                }}></div>;
+=======
+
+=======
+                  width: `${Math && Math.min(100, (underReviewDisputes && underReviewDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
+                }}></div>;
+
+            <div
+              className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}
+            >
+              <div
+                className="bg-green-500 h-2.5 rounded-full"
+                style={{
+                  width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`
+                }}
+              ></div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>
               <div className="bg-green-500 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
@@ -253,6 +513,14 @@ export function DisputeDashboard() {;
             <CardDescription>Successfully concluded</CardDescription>;
           </CardHeader>;
           <CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div
               className={`w-full bg-green-100 rounded-full h-2 && 2.5 dark:bg-green-900/20`}>;
               <div
@@ -370,6 +638,25 @@ function DisputeDashboard() {
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      <DisputesList disputes={disputes} is_loading={is_loading} />;
+    </div>);
+
+}
+<<<<<<< HEAD
+=======
+=======
+}
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 
@@ -404,3 +691,8 @@ container mx-auto p-4 space-y-6"> <div className=" flex flex-wrap items-center j
 }
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

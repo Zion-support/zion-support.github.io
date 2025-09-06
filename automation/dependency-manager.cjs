@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -22,6 +24,7 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -382,6 +385,11 @@ if ( {})
       process.exit(1)})};
 module.exports = DependencyManager;
 <<<<<<< HEAD
+module.exports = DependencyManager;
+module.exports = DependencyManager;
+module.exports = DependencyManager;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -410,3 +418,4 @@ module.exports = DependencyManager;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

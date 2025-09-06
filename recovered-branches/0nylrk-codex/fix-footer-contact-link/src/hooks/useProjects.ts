@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -8,6 +21,12 @@ export function useProjects() {;
   const [projects, setProjects] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -24,25 +43,81 @@ export function useProjects() {
   const [projects, setProjects] = useState<Project[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
     if (!user) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      setIsLoading(false);
+      return
+    }
+    try {
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       setIsLoading(true),
       
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      setIsLoading(false),
+      return
+    }
+    try {
+      setIsLoading(true);
+      setIsLoading(true),
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Build the query based on user type
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
         .from("projects")
         .select(`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       
       if (user && user.userType === "jobSeeker" || user && user.userType === "creator") {
         query = query && query.eq("talent_id", user && user.id)
@@ -57,16 +132,44 @@ export function useProjects() {
         .order("created_at", { ascending: false }),
       
       if (user.userType === "jobSeeker" || user.userType === "creator") {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" |user.userType === "buyer") {
         query = query.eq("client_id", user.id)
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      const { data, error: fetchError } = await query;
+      if (fetchError) throw fetchError;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       
       const { data, error: fetchError } = await query,
       
       if (fetchError) throw fetchError,
       
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Transform the data to match our project types
       const transformedData = data && data.map((project: any) => ({
 import { useState, useEffect } from './react';
@@ -155,6 +258,19 @@ if (throw fetch_error) {
         .from ("projects");
         .select (`;
           *;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+      console.error("Error fetching projects:", err);
+      setError("Failed to fetch projects: " + err.message)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       })),
       
       setProjects(transformedData as Project[]),
@@ -198,6 +314,11 @@ if (throw error) {
 }
       // Transform the data to match our project types;
       const transformed_project = {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ...data;
         ...data;
         } : undefined
@@ -208,11 +329,61 @@ if (throw error) {
       toast && toast.error("Failed to fetch project details");
       return null
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  },
+
+
+
+<<<<<<< HEAD
+=======
+      // Transform the data to match our project types
+      const transformedProject = {
+        ...data,
+        talent_profile: data.talent_profile ? {
+          ...data.talent_profile
+          full_name: data.talent_profile.display_name
+        } : undefined
+      }
+      },
+      
+      return transformedProject as Project
+    } catch (err: any) {
+      console.error("Error fetching project:", err),
+      toast.error("Failed to fetch project details"),
+      return null
+    }
+  }
+  },
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
         .update({ status })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+        .eq("id", projectId);
+      if (error) throw error;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .eq("id", projectId),
       
       if (error) throw error,
@@ -227,6 +398,16 @@ if (throw error) {
       
       toast.success(`Project status updated to ${status}`),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return true
     } catch (err: any) {
       console && console.error("Error updating project status:", err);
@@ -273,6 +454,47 @@ if ( {) {
     projects;
     is_loading;
     error;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      // Update the local state
+      setProjects(prev =>
+        prev.map(project => project.id === projectId ? { ...project, status } : project)
+      );
+      toast.success(`Project status updated to ${status}`);
+      ),
+      
+      toast.success(`Project status updated to ${status}`),
+      return true
+    } catch (err: any) {
+      console.error("Error updating project status:", err),
+      toast.error("Failed to update project status"),
+      return false
+    }
+  }
+  // Fetch projects when component mounts or user changes
+  useEffect(() => {
+    if (user) {
+      fetchProjects()
+    }
+  }, [user]);
+  return {
+    projects;
+    isLoading;
+    error;
+    refetch: fetchProjects;
+    getProjectById
+
+<<<<<<< HEAD
+=======
+
+=======
+    updateProjectStatus
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -463,5 +685,12 @@ refetch: fetchProjects;
 getProjectById;
 updateProjectStatus 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }

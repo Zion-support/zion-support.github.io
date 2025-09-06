@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+import { 
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue 
+} from "@/components/ui/select",
+import type { QuoteStatus } from "@/types/quotes";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { 
@@ -8,6 +30,16 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -16,6 +48,19 @@ type RequestsHeaderProps = {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type RequestsHeaderProps = {
   unreadCount: number
   statusFilter: QuoteStatus | 'all'
@@ -55,6 +100,74 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   setArchiveFilter;
 }) => {;
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+        <Select 
+          value={archiveFilter} 
+
+
+=======
+export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
+  unreadCount;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter
+  unreadCount,
+  statusFilter,
+  setStatusFilter,
+  archiveFilter,
+  setArchiveFilter
+}) => {
+  return (
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+      <div>
+        <div className="flex items-center gap-3">
+          <h1 className="text-3xl font-bold text-white">Hire Requests</h1>
+          {unreadCount > 0 && (
+            <Badge className="bg-blue-500">
+              {unreadCount} New
+            </Badge>
+          )}
+        </div>
+        <p className="text-zion-slate-light mt-2">
+          Manage client requests to hire your services
+        </p>
+      </div>
+      <div className="flex gap-3 mt-4 md:mt-0">
+        <Select
+          value={statusFilter}
+          onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
+        >
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
+            <SelectValue placeholder="All Statuses" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Statuses</SelectItem>
+            <SelectItem value="new">New</SelectItem>
+            <SelectItem value="in_review">In Review</SelectItem>
+            <SelectItem value="responded">Responded</SelectItem>
+            <SelectItem value="accepted">Accepted</SelectItem>
+            <SelectItem value="closed">Closed</SelectItem>
+          </SelectContent>
+        </Select>
+
+
+
+  setArchiveFilter
+        <Select
+          value={archiveFilter}
+        <Select 
+          value={archiveFilter} 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
@@ -69,6 +182,29 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+};
+
+=======
+=======
+};
+
+}
+
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 },
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -104,11 +240,62 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
               {unreadCount} New;
             </Badge>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
         </p>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      <div className="flex gap-3 mt-4 md:mt-0">;
+<<<<<<< HEAD
+        <Select
+          value={statusFilter} 
+          onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
+        >;
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
+=======
+    <div className="flex flex - col md:flex - row justify - between items - start md:items - center mb - 8">;
+      <div>;
+        <div className="flex items - center gap - 3">;
+          <h1 className="text - 3xl font - bold text - white">Hire Requests</h1>;
+          {unread_count > 0 && (
+            <Badge className="bg - blue - 500">;
+              {unread_count} New;
+            </Badge>)}
+        </div>;
+        <p className="text - zion - slate - light mt - 2">;
+          Manage client requests to hire your services;
+        </p>;
+      </div>;
+      <div className="flex gap - 3 mt - 4 md:mt - 0">;
+        <Select;
+          value={status_filter}
+          onValueChange={(value) => setStatusFilter (value as QuoteStatus | 'all')}
+        >;
+          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -120,11 +307,30 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="closed">Closed</SelectItem>;
           </SelectContent>;
         </Select>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Select;
           value={archive_filter}
           onValueChange={(value) => setArchiveFilter (value as 'active' | 'archived' | 'all')}
         >;
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <SelectValue placeholder="Active Only" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -134,6 +340,19 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+export default RequestsHeader;
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>);
 }
 ;
@@ -217,3 +436,10 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
 };
 
 export default RequestsHeader;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

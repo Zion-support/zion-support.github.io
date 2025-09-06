@@ -1,12 +1,3 @@
-totalSize: number;
-  gzippedSize: number;
-  chunkCount: number;
-  loadTime: number;
-
-
-    const show = null;
-      process.env.NODE_ENV === 'development' ||
-
 
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
@@ -61,14 +52,6 @@ if ( {) {
 if (return) {
   $2
 }
-    setIsVisible (true);
-    collectBundleInfo ();
-  }, []);
-  const collectBundleInfo = async () => {
-    if (typeof window === 'undefined') return;
-    setIsCollecting(true)
-    try {
-
 
         totalSize,
         gzippedSize,
@@ -76,7 +59,6 @@ if (return) {
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
-
 
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
@@ -141,9 +123,6 @@ if (return) {
       collectBundleInfo()
     }
   }
-
-
-
 
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -258,63 +237,15 @@ export function BundleAnalyzer() {;
     return null;
   }
 
-
-
-
-
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
 
-
-          variant="outline"
-          size="sm"
-          onClick={toggleAnalyzer}
-          className="bg-background/80 backdrop-blur-sm"
-        >
-          <Package className="w-4 h-4 mr-2" />
-
-
           Bundle Analyzer
         </Button>
       </div>
     )
-          className='bg-background/80 backdrop-blur-sm'>;
-          <Package className='w-4 h-4 mr-2' />;
-          Bundle Analyzer;
-        </Button>;
-      </div>;
-    );
-  }
-  return (
-    <div className="fixed bottom-20 right-4 z-50 w-96">
-      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg">
-        <CardHeader className="pb-2">
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-sm flex items-center">
-              <Package className="w-4 h-4 mr-2" />
-              Bundle Analyzer
-            </CardTitle>
-            <div className="flex gap-2">
-              <Button
-
-
-                variant="ghost"
-                size="sm"
-                onClick={collectBundleInfo}
-                disabled={isCollecting}
-                className="h-6 w-6 p-0"
-              >
-                <Zap className="w-3 h-3" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleAnalyzer}
-                className="h-6 w-6 p-0"
-              >
-
 
                 ✕
               </Button>
@@ -357,69 +288,10 @@ export function BundleAnalyzer() {;
               </div>
               <div>
 
-                className='h-6 w-6 p-0'>;
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='fixed bottom - 20 right - 4 z - 50'>;
-        <Button;
-          variant='outline';
-          size='sm';
-          on_click={toggle_analyzer}
-          className='bg - background / 80 backdrop - blur - sm'        >;
-          <Package className='w - 4 h - 4 mr - 2' />;
-          Bundle Analyzer;
-        </Button>;
-      </div>);
-  }
-  return (
-    <div className='fixed bottom - 20 right - 4 z - 50 w - 96'>;
-      <Card className='bg - background / 95 backdrop - blur - sm border shadow - lg'>;
-        <CardHeader className='pb - 2'>;
-          <div className='flex items - center justify - between'>;
-            <CardTitle className='text - sm flex items - center'>;
-              <Package className='w - 4 h - 4 mr - 2' />;
-              Bundle Analyzer;
-            </CardTitle>;
-            <div className='flex gap - 2'>;
-              <Button;
-                variant='ghost';
-                size='sm';
-                on_click={collectBundleInfo}
-                disabled={is_collecting}
-                className='h - 6 w - 6 p - 0'              >;
-                <Zap className='w - 3 h - 3' />;
-              </Button>;
-              <Button;
-                variant='ghost';
-                size='sm';
-                on_click={toggle_analyzer}
-                className='h - 6 w - 6 p - 0'              >;
-
-                ✕;
               </Button>;
             </div>;
           </div>;
         </CardHeader>;
-
-
-                <div className="text-xs font-medium mb-2">Largest Chunks:</div>
-                <div className="space-y-1">
-                  {chunks.map((chunk, index) => (
-                    <div key={chunk.name} className="flex justify-between items-center text-xs">
-                      <div className="flex items-center gap-2 flex-1 min-w-0">
-                        <span className="w-4 text-muted-foreground">{index + 1}.</span>
-                        <span className="truncate" title={chunk.name}>
-                          {chunk.name}
-
 
                         </span>
                         {chunk.cached && (
@@ -428,8 +300,6 @@ if ( {) {
                           </Badge>
                         )}
                       </div>
-
-                      <Badge className={getSizeColor(chunk.size)} variant="outline">
 
                         {formatSize(chunk.size)}
                       </Badge>
@@ -454,18 +324,11 @@ if ( {) {
 
 }
 
-
-}
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-
-
-
-        
-
 
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
@@ -546,4 +409,4 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
-}
+

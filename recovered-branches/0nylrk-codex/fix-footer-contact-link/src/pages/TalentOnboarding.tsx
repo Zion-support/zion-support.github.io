@@ -1,14 +1,59 @@
 import React from "react";
+<<<<<<< HEAD
+import {TalentOnboardingForm} from "@/components/profile/TalentOnboardingForm";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function TalentOnboarding() {;
+  const { user, isLoading } = useAuth();
+import React from "react",
+import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+=======
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function TalentOnboarding() {
   const { user, isLoading } = useAuth();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function TalentOnboarding() {
+  const { user, isLoading } = useAuth(),
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+<<<<<<< HEAD
+  // If not authenticated, redirect to login;
+  if (!isLoading && !user) {;
+    return <Navigate to="/login" replace />;
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
+<<<<<<< HEAD
+    return <Navigate to="/login" replace />
+  }
+  return (
+  }
+  return (
+=======
     return <Navigate to="/login" replace />;
   }
   return (
@@ -46,14 +91,51 @@ export default function TalentOnboarding() {
             <p className="text - zion - slate - light max - w-2xl mx - auto">;
   }
   return (
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               Showcase your skills to top clients and employers. Create a professional profile;
               to get discovered for AI and tech projects on the Zion Marketplace.;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+          ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <TalentOnboardingForm />;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </>);
+}
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </>;
   ); export default function TalentOnboarding () {
   const {
@@ -69,3 +151,10 @@ export default function TalentOnboarding() {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -4,6 +4,17 @@ interface StickyActionProps {
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
@@ -14,6 +25,36 @@ interface StickyActionProps {;
   children: React && React.ReactNode,;
 
   showAfterScroll?: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  position?: "bottom" | "top";
+}
+
+
+export function StickyAction(): any ({;
+
+=======
+  showAfterScroll?: number;
+
+import React, { useEffect, useState } from "react",
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import {motion, AnimatePresence} from "framer-motion";
+interface StickyActionProps {
+  className?: string;
+
+  children: React.ReactNode
+
+  showAfterScroll?: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   position?: "bottom" | "top"
 }
 
@@ -30,6 +71,17 @@ interface StickyActionProps {
 export function StickyAction({
   position?: "bottom" | "top";
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function StickyAction(): any ({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className;
   children;
 
@@ -37,10 +89,37 @@ export function StickyAction({
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
         setIsVisible(true)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useEffect, useState } from './react';
 import { cn } from '@/lib / utils';
 import { motion, AnimatePresence } from './framer-motion';
@@ -58,11 +137,54 @@ function StickyAction() {
       } else {
         setIsVisible (false);
       }
+<<<<<<< HEAD
     }
+=======
+<<<<<<< HEAD
+    }
+=======
+<<<<<<< HEAD
+
+;
+    window.addEventListener ("scroll", handle_scroll);
+
+<<<<<<< HEAD
+=======
+    }
+;
+    window.addEventListener ("scroll", handle_scroll);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
     }
   }, [showAfterScroll]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+
+=======
+      } else {
+        setIsVisible(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [showAfterScroll]);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -71,12 +193,55 @@ function StickyAction() {
     }
   }, [showAfterScroll]),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  const positionClasses = {
+    bottom: "bottom-4"
+    top: "top-20"
+
+  },
+
+
+=======
+  const positionClasses = {
+    bottom: "bottom-4"
+    top: "top-20"
+  }
+  },
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          transition={{ duration: 0.2 }}
+          className={cn(
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
+            positionClasses[position];
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -103,6 +268,30 @@ export function StickyAction({;
       } else {;
         setIsVisible(false);
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    };
+
+    window && window.addEventListener("scroll", handleScroll);
+    return () => {;
+      window && window.removeEventListener("scroll", handleScroll);
+    }
+  }, [showAfterScroll]);
+
+  const positionClasses = {;
+    bottom: "bottom-4",;
+    top: "top-20";
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <AnimatePresence>;
       {isVisible && (;
@@ -149,6 +338,15 @@ export function StickyAction({;
         </motion.div>)}
     </AnimatePresence>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -215,3 +413,10 @@ export function StickyAction({;
     </AnimatePresence>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

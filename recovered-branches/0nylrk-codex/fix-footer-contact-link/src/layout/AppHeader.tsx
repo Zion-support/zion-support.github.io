@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { MainNavigation  } from './MainNavigation';
+import { Logo  } from '@/components/header/Logo';
+import { ModeToggle  } from '@/components/ModeToggle';
+import { Menu, X  } from 'lucide-react';
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+export function AppHeader() {
+import {useState} from 'react';
+import {use_messaging} from '@/context / MessagingContext';
+import {MainNavigation} from './MainNavigation';
+import {Logo} from '@/components / header / Logo';
+import {ModeToggle} from '@/components / ModeToggle';
+import {Menu, X} from 'lucide-react';
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const isMobile = useIsMobile();
+  } catch (error) {
+    console.warn ('Messaging context not available');
+import { useState } from 'react',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { MainNavigation } from './MainNavigation',;
+import { Logo } from '@/components/header/Logo',;
+import { ModeToggle } from '@/components/ModeToggle',;
+import { Menu, X } from 'lucide-react',;
+import { MobileMenu } from '@/components/header/MobileMenu',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
+export function AppHeader() {;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
+  const isMobile = useIsMobile(),;
+  // Try to access the messaging context, but provide a fallback value if it's not available;
+  let unreadCount = 0;
+  try {;
+    const { unreadCount: count } = useMessaging();
+    unreadCount = count;
+  } catch (error) {;
+    console.warn('Messaging context not available');
+=======
 import { useState } from "react";
 import { useMessaging } from "@/context/MessagingContext";
 import { MainNavigation } from "./MainNavigation";
@@ -19,6 +61,7 @@ export function AppHeader() {
       unreadCount = count;
   } catch (error) {
     console.warn("Messaging context not available");
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
@@ -112,6 +155,15 @@ export function AppHeader() {
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
     </>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
 ) : (<Menu className="block h-6 w-6" aria-hidden="true" />) 
 }</button> </div> <ModeToggle /> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick= {
@@ -135,3 +187,10 @@ export function AppHeader() {
     </>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

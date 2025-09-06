@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -200,3 +201,36 @@ export default function AIAutonomousMarketingPlatform() {
     </Layout>
   );
 }
+=======
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
+}
+export default function AIAutonomousMarketingPlatform(props: any) {
+	return <ServicePage {...props} />
+}
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export async function getStaticProps() {;
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
+}
+export default /**
+ * AIAutonomousMarketingPlatform - Function description
+ */
+function AIAutonomousMarketingPlatform() {
+return <ServicePage {...props} />;
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

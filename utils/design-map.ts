@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface TokenSet {
+=======
+<<<<<<< HEAD
+export type UIKitKind = "ios" | "android" | "web";
+=======
+<<<<<<< HEAD
+export type UIKitKind = "ios" | "android" | "web";
+=======
+<<<<<<< HEAD
+export interface TokenSet {
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export interface TokenSet {;
   colors: Record<string, string>;
@@ -157,6 +174,16 @@ export interface FigmaNode {
 }
 
   const tokens = await buildTokenSet(fileId);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     };
   };
 }
@@ -363,6 +390,8 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
     },
   };
 }
+<<<<<<< HEAD
+=======
 
 export async function buildUIKit(
   fileId: string,
@@ -382,3 +411,12 @@ export async function buildUIKit(
     tokens,
   };
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

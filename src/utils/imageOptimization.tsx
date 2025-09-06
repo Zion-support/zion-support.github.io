@@ -1,9 +1,5 @@
 const imgRef = useRef<HTMLDivElement>(null);
 
-
-
-
-
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -41,9 +37,7 @@ export function OptimizedImage({
   // Intersection Observer for lazy loading
   useEffect(() => {
 
-
     if (!lazy || priority || isInView) return;
-
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -55,28 +49,7 @@ const observer = new IntersectionObserver ( ([entry]) => {
 if ( {) {
   $2
 }
-;
-export function OptimizedImage({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className,;
-  priority = false,;
-  placeholder = 'empty',;
-  blurDataURL,;
-  quality = 75,;
-  sizes,;
-  onLoad,;
-  onError,;
-  fallbackSrc,;
-  lazy = true,;
-  ...props;
-}: OptimizedImageProps) {;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [hasError, setHasError] = useState(false),;
-  const [isInView, setIsInView] = useState(!lazy || priority),;
-  const imgRef = useRef<HTMLDivElement>(null),;
+
   // Intersection Observer for lazy loading;
 
     return () => observer.disconnect ();
@@ -115,19 +88,16 @@ if (||) {
           setIsInView(true),;
           observer.disconnect();
 
-
-
         }
       }
-
 
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />
+            <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
@@ -136,7 +106,6 @@ if (||) {
     ).toString('base64')}`
 
   },
-
 
   return (
     <div
@@ -181,42 +150,41 @@ if (||) {
 
     // For internal images, Next && Next.js will handle optimization;
     return originalSrc;
-  },;
+  };
+
   const handleLoad = () => {;
-    setIsLoading(false),;
+    setIsLoading(false);
     onLoad?.();
-  },;
+  };
+
   const handleError = () => {;
-    setHasError(true),;
-    setIsLoading(false),;
+    setHasError(true);
+    setIsLoading(false);
     onError?.();
-  },;
+  };
+
   // Generate blur placeholder;
   const generateBlurDataURL = () => {;
-    if (blurDataURL) return blurDataURL,;
+    if (blurDataURL) return blurDataURL;
+
     // Generate a simple gray blur placeholder;
-    return `data: image/svg+xml,base64,${Buffer.from(;
-      `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">;
+    return `data:image/svg+xml;base64,${Buffer && Buffer.from(;
+      `<svg width="${width || 400}" height="${height || 300}" xmlns="http://www && www.w3.org/2000/svg">;
         <defs>;
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">;
-            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />;
-            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />;
+            <stopoffset="0%" style="stop-color:#f3f4f6stop-opacity:1" />;
+            <stopoffset="100%" style="stop-color:#e5e7ebstop-opacity:1" />;
           </linearGradient>;
         </defs>;
         <rect width="100%" height="100%" fill="url(#grad)" />;
       </svg>`;
     ).toString('base64')}`;
-  },;
-  return (;
-    <div;
-      ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
-      style={{ width, height }}
+  };
+
     >;
       {isInView && !hasError && (;
 
         <Image;
-
 
           src={getOptimizedSrc(src)}
   // Generate blur placeholder;
@@ -251,7 +219,6 @@ if (return blurDataURL) {
 
           className={cn(            'transition-opacity duration-300'
 
-
           className={cn(            'transition-opacity duration-300',
 
             isLoading ? 'opacity-0' : 'opacity-100'
@@ -261,24 +228,17 @@ if (return blurDataURL) {
             isLoading ? 'opacity-0' : 'opacity-100';
           )}
 
-
-
-
           {...props}
         />
       )}
       {/* Loading placeholder */}
 
-
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 
-
       )}
       {/* Error fallback */}
-      {hasError && (
-        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-          {fallbackSrc ? (
+
             <img
               src={fallbackSrc}
               alt={alt}
@@ -330,7 +290,6 @@ if (return blurDataURL) {
   );
 }
 
-
   )
 
 // Higher-order component for easy migration from regular img tags
@@ -360,7 +319,6 @@ export function preloadImage(): any (src: string): Promise<void> {;
     img && img.src = src;
   });
 }
-
 
     const { src, alt, ...otherProps } = props
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />

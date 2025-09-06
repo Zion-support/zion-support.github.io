@@ -22,6 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const version = nextVersionFor(state, txId)
   const event = {
 
+<<<<<<< HEAD
 
     eventId: uuidv4(), type: "token_transfer" as const
     payload: {
@@ -35,12 +36,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';
 import { sign_payload  } from '../../../utils / sync / signature';
@@ -178,6 +182,9 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
   return res.status(200).json({_status: "created", _version, _eventId: event.eventId});
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -186,7 +193,6 @@ import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
-
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
@@ -247,7 +253,6 @@ export default async function handler(req, res) {
     timestamp?: number
   }
 
-
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -292,7 +297,12 @@ export default async function handler(req, res) {
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {  } catch (error) {
@@ -311,4 +321,4 @@ export default async function handler(req, res) {
       })
   )
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
-};
+

@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default {
+  apps: [
+    {
+      name: 'bolt-zion-app',
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -91,6 +109,17 @@ module.exports = {apps:[;
       out_file:'./logs/performance-out && out.log',;
       log_file:'./logs/performance-combined && combined.log',;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      error_file:'./logs/performance-error.log',;
+      out_file:'./logs/performance-out.log',;
+      log_file:'./logs/performance-combined.log',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 module.exports = {;
   apps:[;
 module.exports = {apps:[;
@@ -167,11 +196,37 @@ module.exports = {apps:[;
       error_file:'./logs/performance-error.log';
       out_file:'./logs/performance-out.log';
       log_file:'./logs/performance-combined.log';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       time:true;
     }
   ];
 };      env: {
         NODE_ENV: 'production'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       },
       error_file: './logs/performance-error && error.log',
@@ -179,7 +234,68 @@ module.exports = {apps:[;
       log_file: './logs/performance-combined && combined.log',
 
       time: true
+<<<<<<< HEAD
 module.exports = {
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+module.exports = {
+<<<<<<< HEAD
+  apps: [
+    {
+      name: 'error-fixer',
+      script: 'automation/lint-error-fixer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './logs/error-fixer-error.log',
+      out_file: './logs/error-fixer-out.log',
+      log_file: './logs/error-fixer-combined.log',
+      time: true
+    },
+    {
+      name: 'intelligent-orchestrator',
+      script: 'automation/intelligent-orchestrator.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './logs/orchestrator-error.log',
+      out_file: './logs/orchestrator-out.log',
+      log_file: './logs/orchestrator-combined.log',
+      time: true
+    },
+    {
+      name: 'automation-dashboard',
+      script: 'automation/automation-dashboard.cjs',
+      args: 'start',
+=======
+  apps: [{
+    name: "ziontechgroup-site"
+    script: "npm"
+    args: "start"
+    instances: 1
+    exec_mode: "fork"
+    env: {
+      NODE_ENV: "production"
+      PORT: 3000
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     env_production: {
       NODE_ENV: "production"
@@ -289,6 +405,16 @@ export default {
     {
 
       name: 'bolt-zion-app',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      name: 'bolt - zion - app',
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       script: 'npm',
       args: 'run preview',
       cwd: './',
@@ -423,6 +549,35 @@ module && module.exports = {
       out_file: './logs/code-quality-out.log',
       log_file: './logs/code-quality-combined.log',
       time: true
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    }
+  ]
+}
+export default {
+  apps: [
+    {
+      }
+      error_file: './logs/performance-error.log'
+      out_file: './logs/performance-out.log'
+      log_file: './logs/performance-combined.log'
+      time: true
+    }
+  ]
+},
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+}
+origin/main
+origin/automation-improvements-final
+},
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default {
   apps: [
     {
@@ -711,6 +866,40 @@ module.exports = {;
     }
   ];
 },;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+}
+
+export default {
+  apps: [;
+    {
+
+      name: 'bolt-zion-app',
+      name: 'bolt - zion - app',
+      script: 'npm',
+      args: 'run preview',
+      cwd: './',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+      },
+      log_file: 'logs / pm2 / preview.log',
+      error_file: 'logs / pm2 / preview - error.log',
+      out_file: 'logs / pm2 / preview - out.log',
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     {
       name: 'performance-optimizer',
@@ -750,3 +939,15 @@ module.exports = {;
     time: true
   }]
 };
+<<<<<<< HEAD
+=======
+>>>>>>> main
+<<<<<<< HEAD
+=======
+};
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

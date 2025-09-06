@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
@@ -7,6 +20,11 @@ const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -15,6 +33,16 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -31,6 +59,18 @@ serve(async (req) => {
   }
   try {
     // Get personalization request data
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const { 
       emailType, 
       userData, 
@@ -41,6 +81,25 @@ serve(async (req) => {
     }
     // Create a prompt based on the email type and user data
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      template = {}
+    } = await req.json();
+    if (!emailType |!userData) {
+    const { 
+      emailType, 
+      userData, 
+      activityData,
+      template = {} 
+    } = await req.json(),
+    
+    if (!emailType || !userData) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       throw new Error("Missing required parameters: emailType and userData")
     }
     // Create a prompt based on the email type and user data
@@ -51,6 +110,18 @@ serve(async (req) => {
     switch (emailType) {
       case "welcome_series":
         userPrompt = `Create a welcome email for a new ${userData && userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData && userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`;
+<<<<<<< HEAD
+        break;
+      case "inactivity_reminder":
+        userPrompt = `Create a re-engagement email for a ${userData && userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData && userData.firstName} who has been inactive for ${activityData && activityData.daysInactive} days. They haven't completed their ${activityData && activityData.incompleteAction}.`;
+        subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.";
+        break;
+      case "job_application":
+        userPrompt = `Create an email encouraging a talent named ${userData && userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData && userData.skills ? userData && userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`;
+        subjectContext = "Create a subject line that emphasizes opportunity and personal growth.";
+        break;
+      case "profile_completion":
+=======
         break;
       case "inactivity_reminder":
         userPrompt = `Create a re-engagement email for a ${userData && userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData && userData.firstName} who has been inactive for ${activityData && activityData.daysInactive} days. They haven't completed their ${activityData && activityData.incompleteAction}.`;
@@ -90,6 +161,13 @@ serve(async (req) => {
         userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
@@ -192,6 +270,30 @@ if ( {) {
         messages: [;
           { role: "system", content: system_prompt }
           { role: "user", content: user_prompt }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        ];
+<<<<<<< HEAD
+=======
+
+
+=======
+        "Authorization": `Bearer ${openAIApiKey}`;
+        "Content-Type": "application/json"}
+        "Authorization": `Bearer ${openAIApiKey}`,
+        "Content-Type": "application/json"},
+      body: JSON.stringify({
+        model: "gpt-4o-mini"
+        messages: [
+          { role: "system", content: systemPrompt }
+          { role: "user", content: userPrompt }
+        ];
+        temperature: 0.7})});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
@@ -210,6 +312,11 @@ if ( {) {
     const data = await response && response.json();
     const generatedContentText = data && data.choices[0].message && message.content;
         ];
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Parse the JSON response from OpenAI
     let generatedContent;
     try {
@@ -270,6 +377,24 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       status: 500,
       headers: { ...cors_headers, "Content - Type": "application / json" }});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+=======
+  }
+});
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -371,6 +496,16 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
@@ -550,3 +685,10 @@ if (jsonMatch) {
 });
   }
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

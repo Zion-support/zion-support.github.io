@@ -111,8 +111,7 @@ function FilterSidebar() {
         </div>;
 
       </div>;
-    </>;
-  )};
+    </>)}
 '"`;
 
 

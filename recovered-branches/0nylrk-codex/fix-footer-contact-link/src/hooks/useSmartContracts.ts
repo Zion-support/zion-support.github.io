@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -8,6 +20,16 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 export function useSmartContracts() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
@@ -19,6 +41,20 @@ import {ContractFormValues} from "@/components/contracts/components/ContractForm
 export function useSmartContracts() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+  const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
@@ -32,12 +68,44 @@ export function useSmartContracts() {
   const [isLoading, setIsLoading] = useState(false),
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const generateSolidityContract = async (
     values: ContractFormValues
     talent: TalentProfile
     clientName: string
   ): Promise<string> => {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      setIsLoading(true),
+      
+      const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
+
+        body: {
+
+=======
+setIsLoading(true),
+      const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
+        body: {
+          talentName: talent && talent.full_name;
+          clientName: clientName;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           projectName: values && values.projectName;
           scopeSummary: values && values.scopeSummary;
           startDate: values && values.startDate.toISOString();
@@ -58,6 +126,15 @@ export function useSmartContracts() {
       
       if (error) throw error,
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (data && data.solidityCode) {
         return data.solidityCode
 import {useState} from 'react';
@@ -107,6 +184,22 @@ if ( {) {
         throw new Error ("Failed to generate Solidity contract");
       }
     } catch (err: any) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      console.error ("Error generating Solidity contract:", err);
+      toast.error ("Failed to generate smart contract");
+      throw err;
+
+=======
+      console.error ("Error generating Solidity contract:", err);
+      toast.error ("Failed to generate smart contract");
+      throw err;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } finally {
       setIsLoading (false);
     }
@@ -121,6 +214,12 @@ if ( {) {
   
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const deploySmartContract = async (
     contractCode: string;
     options: DeploymentOptions
@@ -140,6 +239,20 @@ if ( {) {
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000));
       setDeploymentStatus('success');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      toast.success("Smart contract deployed successfully!");
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      return mockSmartContractInfo
+    } catch (err: any) {
+      console.error("Error deploying smart contract:", err);
+      toast.error("Failed to deploy smart contract");
+      setDeploymentStatus('error');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return null
     }
   }
@@ -149,6 +262,8 @@ if ( {) {
     isLoading;
 
     deploymentStatus
+<<<<<<< HEAD
+=======
   }
 }
       setDeploymentStatus('deploying'),
@@ -256,12 +371,31 @@ if ( {) {
   }
 
     deploymentStatus
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   return {
     generateSolidityContract;
     deploySmartContract;
     is_loading;
     deployment_status;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+}
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       setDeploymentStatus('deploying'),
       
@@ -447,3 +581,8 @@ deploymentStatus
   }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

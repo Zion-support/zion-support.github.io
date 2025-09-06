@@ -16,6 +16,15 @@ import {;
   PopoverContent,
   PopoverTrigger,;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { FormControl } from "@/components/ui/form";
@@ -35,11 +44,34 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface DateFieldsProps {
   startDate: Date | undefined;
   setStartDate: (date: Date | undefined) => void;
@@ -64,12 +96,43 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
   endDate: Date | undefined,
   setEndDate: (date: Date | undefined) => void
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -81,6 +144,17 @@ interface DateFieldsProps {
               <Button
                 variant={"outline"}
                 className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function DateFields(): any ({;
   startDate,;
   setStartDate,;
@@ -90,6 +164,12 @@ export function DateFields(): any ({;
   return (
 
                   !startDate && "text-muted-foreground"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
               >
                 {startDate ? (
@@ -103,6 +183,21 @@ export function DateFields(): any ({;
           <PopoverContent className="w-auto p-0" align="start">
             <Calendar
               mode="single"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              selected={startDate}
+              onSelect={setStartDate}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+              selected={startDate}
+              onSelect={setStartDate}
+              disabled={(date) => date > new Date()}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',;
 import { format } from 'date-fns',;
 import { Label } from "@/components/ui/label",;
@@ -113,12 +208,40 @@ import { FormControl } from "@/components/ui/form",;
 import { cn } from "@/lib/utils",;
               selected={startDate}
               onSelect={setStartDate}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface DateFieldsProps {;
   startDate: Date | undefined;
   setStartDate: (date: Date | undefined) => void;
   endDate: Date | undefined;
   setEndDate: (date: Date | undefined) => void
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {;
+  return (;
+<<<<<<< HEAD
+
+=======
+;
+interface DateFieldsProps {;
+  startDate:Date | undefined,;
+  setStartDate:(date:Date | undefined) => void,;
+  endDate:Date | undefined,;
+  setEndDate:(date:Date | undefined) => void;
+}
+;
+export function DateFields({ startDate, setStartDate, endDate, setEndDate } DateFieldsProps) {;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
@@ -129,6 +252,11 @@ interface DateFieldsProps {;
                   format(startDate, "PPP");
                 ) : (;
                   <span>Pick a date</span>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
               </Button>;
             </FormControl>;
@@ -142,9 +270,26 @@ interface DateFieldsProps {;
               disabled={(date) =>;
                 date > new Date();
               }
+<<<<<<< HEAD
               disabled={(date) =>;
                 date > new Date();
               }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              disabled={(date) =>;
+                date > new Date();
+              }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               initialFocus
             />
           </PopoverContent>
@@ -158,6 +303,28 @@ interface DateFieldsProps {;
               <Button
                 variant={"outline"}
                 className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+                  "w-full md:w-[240px] pl-3 text-left font-normal",
+
+=======
+                  "w-full md:w-[240px] pl-3 text-left font-normal",
+
+                  "w-full md: w-[240px] pl-3 text-left font-normal"
+
+                  "w-full md:w-[240px] pl-3 text-left font-normal",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   !endDate && "text-muted-foreground"
                 )}
               >
@@ -189,10 +356,102 @@ interface DateFieldsProps {;
           </PopoverContent>;
         </Popover>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+    </div>);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from './react';
+import { format  } from './date - fns';
+import { Label  } from '@/components / ui / label';
+import { Button  } from '@/components / ui / button';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components / ui / popover';
+import { Calendar  } from '@/components / ui / calendar';
+import { FormControl  } from '@/components / ui / form';
+import { cn  } from '@/lib / utils';
+interface DateFieldsProps {
+  start_date: Date | undefined;
+  setStartDate: (date: Date | undefined) => void;
+  end_date: Date | undefined;
+  setEndDate: (date: Date | undefined) => void;
+}
+export /**
+ * DateFields - Function description
+ */
+function DateFields() {
+  return (
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+      <div>;
+        <Label html_for="published_date">Published Date (Optional)</Label>;
+        <Popover>;
+          <PopoverTrigger as_child>;
+            <FormControl>;
+              <Button;
+                variant={"outline"}
+                className={cn (
+                  "w - full md: w-[240px] pl - 3 text - left font - normal",
+                  !start_date && "text - muted - foreground",
+                )}
+              >;
+                {start_date ? (
+                  format (start_date, "PPP")) : (
+                  <span > Pick a date</span>)}
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w - auto p - 0" align="start">;
+            <Calendar;
+              mode="single";
+              selected={start_date}
+              on_select={setStartDate}
+              disabled={(date) => date > new Date ()}
+              initial_focus;
+=======
+;
+      <div>;
+        <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>;
+        <Popover>;
+          <PopoverTrigger asChild>;
+            <FormControl>;
+              <Button;
+                variant={"outline"}
+                className={cn(;
+                  "w-full md:w-[240px] pl-3 text-left font-normal",;
+                  !endDate && "text-muted-foreground";
+                )}
+              >;
+                {endDate ? (;
+                  format(endDate, "PPP");
+                ) :(;
+                  <span>Pick a date</span>;
+                )}
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
           </PopoverContent>;
         </Popover>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  );
+    </div>);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div>;
         <Label html_for="expiry_date">Expiry Date (Optional)</Label>;
         <Popover>;
@@ -220,4 +479,40 @@ interface DateFieldsProps {;
           </PopoverContent>;
         </Popover>;
       </div>;
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    </div>);
+}
+            <Calendar;
+              mode="single";
+              selected={endDate}
+              onSelect={setEndDate}
+              disabled={(date) => date < new Date()}
+              initialFocus
+            />
+          </PopoverContent>
+        </Popover>
+      </div>
+    </div>
+              disabled={(date) =>;
+                date < new Date();
+              }
+              initialFocus;
+            />;
+          </PopoverContent>;
+        </Popover>;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

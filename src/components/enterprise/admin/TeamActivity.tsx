@@ -1,8 +1,7 @@
-jobs: { variant: "default" },
+
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
-
 
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
@@ -102,13 +101,8 @@ export function TeamActivity() {;
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
 
-
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
-
-
-
-
 
   return (
 
@@ -306,8 +300,6 @@ const getCategoryBadge = (category: string) =>: any {
         </Table>
       </div>
 
-      
-
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -318,4 +310,4 @@ const getCategoryBadge = (category: string) =>: any {
         <Button variant="outline" size="sm">
           Next
         </Button>
-      </div>
+

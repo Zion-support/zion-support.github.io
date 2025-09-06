@@ -15,7 +15,6 @@ import OpenAI from 'openai';
 export type GenerateServiceDescriptionRequest = {
   title: string;
 
-
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(
   req: NextApiRequest
@@ -28,7 +27,6 @@ Key Features:
     });
     let description = "";
 
-      model: 'gpt-4o-mini', input: prompt
       temperature: 0.7
       });
 

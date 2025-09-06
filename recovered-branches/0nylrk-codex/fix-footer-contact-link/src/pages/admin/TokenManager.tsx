@@ -1,8 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import {useEffect, useState} from 'react';
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useEffect, useState  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -29,6 +49,15 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
 export default function TokenManager() {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 import {useEffect, useState} from 'react';
@@ -40,6 +69,20 @@ import {useEffect, useState} from 'react';
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+  };
+
+=======
+  const isAdmin = user?.userType === 'admin';
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -114,6 +157,11 @@ if ( {) {
 
   };
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -133,6 +181,17 @@ export default function TokenManager() {;
   const [userId, setUserId] = useState(''),;
   const [amount, setAmount] = useState(0),;
   const isAdmin = user?.userType === 'admin',;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]);
@@ -144,11 +203,40 @@ export default function TokenManager() {;
       .order('created_at', { ascending: false });
       .limit(100);
     if (!error) setTransactions(data || []);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  };
+
+=======
+      .limit(100),;
+    if (!error) setTransactions(data || []);
+  },;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      .limit(100);
+    if (!error) setTransactions(data || []);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleIssue = async (type: 'earn' | 'burn') => {;
     if (!userId || amount <= 0) return,;
     const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      body: JSON && JSON.stringify({ userId, amount })});
+    if (res && res.ok) {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({;
         title: 'Success',;
         description: 'Transaction processed';
@@ -240,4 +328,86 @@ export default function TokenManager() {;
         </div>;
         <Footer />;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </ProtectedRoute>);
+
+=======
+    </ProtectedRoute>;
+  ),; const fetchTransactions = async () => {
+  const {
+  data, error 
+}= await supabase .from ('token transactions') .select ('*') 
+}
+};
+return (<ProtectedRoute adminOnly> <div> <Header /> <div className="min-h-screen bg-zion-blue px-4 py-8" > <div className="container mx-auto" > <h1 className="text-3xl font-bold text-white mb-6" >Token Manager</h1> <Card className="mb-6" > <CardHeader> <CardTitle>Issue or Revoke Tokens</CardTitle> </CardHeader> </div> </CardContent> </Card> <Tabs defaultValue="history" > <TabsList> <TabsTrigger value="history" >Transaction History</TabsTrigger> </TabsList> </li>) ) 
+}</ul> </TabsContent> </Tabs> </div> </div> <Footer /> </div> </ProtectedRoute>) 
+      body: JSON.stringify({ userId, amount })}),;
+    if (res.ok) {;
+      toast({;
+        title: 'Success',;
+        description: 'Transaction processed';
+      }),;
+      fetchTransactions();
+    } else {;
+      const err = await res.json(),;
+      toast({;
+        title: 'Error',;
+        description: err.error || 'Failed';
+        variant: 'destructive';
+      });
+    }
+  },
+
+  return (
+    <ProtectedRoute adminOnly>
+      <div>
+        <Header />
+        <div className="min-h-screen bg-zion-blue px-4 py-8">
+          <div className="container mx-auto">
+            <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
+            <Card className="mb-6">
+              <CardHeader>
+                <CardTitle>Issue or Revoke Tokens</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />
+                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />
+                <div className="flex gap-2">
+                  <Button onClick={() => handleIssue('earn')}>Issue</Button>
+                  <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>
+                </div>
+              </CardContent>
+            </Card>
+            <Tabs defaultValue="history">
+              <TabsList>
+                <TabsTrigger value="history">Transaction History</TabsTrigger>
+              </TabsList>
+              <TabsContent value="history">
+                <ul className="space-y-2">
+                  {transactions.map(tx => (
+                    <li key={tx.id} className="flex justify-between border-b py-2 text-white">
+                      <span>{tx.user_id}</span>
+                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>
+                    </li>
+                  ))}
+                </ul>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </ProtectedRoute>
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }

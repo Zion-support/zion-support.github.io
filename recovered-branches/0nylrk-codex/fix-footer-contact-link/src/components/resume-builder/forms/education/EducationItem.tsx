@@ -1,3 +1,67 @@
+<<<<<<< HEAD
+import { format  } from './date - fns';
+import { Edit, Trash2  } from './lucide-react';
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Education  } from '@/types / resume';
+import { EducationItemProps  } from './types';
+export /**
+ * EducationItem - Function description
+ */
+function EducationItem() {
+
+  return (
+    <Card className="bg - muted / 40">;
+      <CardContent className="pt - 6">;
+        <div className="flex justify - between">;
+          <div>;
+            <h4 className="font - medium">{education.degree}</h4>;
+            <p className="text - sm text - muted - foreground">;
+              {education.institution}
+            </p>;
+            {education.field_of_study && (
+              <p className="text - sm text - muted - foreground">;
+                {education.field_of_study}
+              </p>)}
+            <p className="text - xs text - muted - foreground mt - 1">;
+              {typeof education.start_date === "string";
+                ? education.start_date;
+                : format (education.start_date, "MMM yyyy")}{" "}
+              -{" "}
+              {education.is_current;
+                ? "Present";
+                : education.end_date;
+                  ? typeof education.end_date === "string";
+                    ? education.end_date;
+                    : format (education.end_date, "MMM yyyy");
+                  : ""}
+            </p>;
+            {education.location && (
+              <p className="text - xs text - muted - foreground">;
+                {education.location}
+
+
+
+
+import {format} from 'date-fns';
+import {Edit, Trash2} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
+import {Education} from '@/types/resume';
+import {EducationItemProps} from './types';
+
+
+import { format } from 'date-fns',
+import { Edit, Trash2 } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent } from '@/components/ui/card',
+import { Education } from '@/types/resume',
+import { EducationItemProps } from './types',
+
+
+
+export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+=======
 import { format } from "date-fns";
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +73,7 @@ export function EducationItem({
   onEdit,
   onDelete,
 }: EducationItemProps) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
@@ -116,6 +181,13 @@ export function EducationItem({
 }
 ;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </CardContent>
     </Card>
   );
@@ -224,3 +296,8 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 }
 ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,8 +1,20 @@
 import React, { forwardRef } from "react";
+<<<<<<< HEAD
+import {ChevronDown} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {SafeRef} from "@/types/ref-types";
+import React, { forwardRef } from "react",
+import { ChevronDown } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+=======
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title?: string;
   icon?: React && React.ReactNode;
   defaultExpanded?: boolean;
@@ -42,17 +54,44 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { forwardRef } from "react",
 import { ChevronDown } from "lucide-react",
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string,
   icon?: React.ReactNode,
   defaultExpanded?: boolean,
   showChevron?: boolean
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 import React, { forwardRef } from "react",;
@@ -71,6 +110,15 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
     const [expanded, setExpanded] = React.useState(defaultExpanded),;
     return (;
       <div;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
         {...props}
@@ -125,6 +173,12 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
 ;
     return (;
       <div;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
         {...props}
@@ -136,6 +190,17 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
   }
 ),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export { SidebarGroup };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {title && (
           <button;
             type="button";
@@ -200,3 +265,11 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 
 
 export { SidebarGroup };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

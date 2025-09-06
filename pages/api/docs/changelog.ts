@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -13,11 +18,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
 
+<<<<<<< HEAD
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
       const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (e: any) {
       res
         .status(500)
@@ -26,20 +34,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
+<<<<<<< HEAD
 
 
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default /**
  * handler - Function description
  */
@@ -80,4 +94,7 @@ if ( {) {
   res.status (405).end ("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

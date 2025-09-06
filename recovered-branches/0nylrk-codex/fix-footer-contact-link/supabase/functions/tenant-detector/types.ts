@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 export interface TenantInfo {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   brand_name: string;
   subdomain: string;
@@ -8,7 +11,18 @@ export interface TenantInfo {
   theme_preset: string;
   landing_page_copy: {
     headline: string;
+<<<<<<< HEAD
+}
+
+export interface TenantResponse {
+  tenant: TenantInfo | null,
+  error?: string;
+export interface TenantResponse {;
+  tenant: TenantInfo | null;
+    subtitle: string,
+=======
     subtitle: string;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     cta: string;
   };
   is_active: boolean;
@@ -16,12 +30,15 @@ export interface TenantInfo {
 export interface TenantResponse {
   tenant: TenantInfo | null;
   error?: string;
+<<<<<<< HEAD
+=======
 }
 }
 
     cta: string;
   },;
   is_active: boolean;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 export interface TenantResponse {;
@@ -35,5 +52,12 @@ export interface TenantResponse {
   tenant: TenantInfo | null,
   error?: string
 }
+<<<<<<< HEAD
+=======
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

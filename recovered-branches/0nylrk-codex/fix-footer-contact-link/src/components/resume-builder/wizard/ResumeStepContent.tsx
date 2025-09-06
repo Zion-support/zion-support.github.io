@@ -25,6 +25,36 @@ import {EducationForm} from '../forms/EducationForm';
 import {SkillsForm} from '../forms/SkillsForm';
 import {CertificationsForm} from '../forms/CertificationsForm';
 import {PreviewResume} from '../PreviewResume';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          initialData={resume?.basic_info}
+          onSave={(data) => {;
+            // Here you would typically save the data to your backend;
+            console && console.log("Saving basic info:", data);
+import { TabsContent } from "@/components/ui/tabs",
+import { Resume } from "@/types/resume";
+import { BasicInfoForm  } from '../forms/basic-info';
+import { WorkExperienceForm  } from '../forms/WorkExperienceForm';
+import { EducationForm  } from '../forms/EducationForm';
+import { SkillsForm  } from '../forms/SkillsForm';
+import { CertificationsForm  } from '../forms/CertificationsForm';
+import { PreviewResume } from '../PreviewResume';
+import { Resume } from "@/types/resume",
+import { BasicInfoForm } from '../forms/basic-info',
+import { WorkExperienceForm } from '../forms/WorkExperienceForm',
+import { EducationForm } from '../forms/EducationForm',
+import { SkillsForm } from '../forms/SkillsForm',
+import { CertificationsForm } from '../forms/CertificationsForm',
+import { PreviewResume } from '../PreviewResume',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -70,6 +100,16 @@ import { EducationForm } from '../forms/EducationForm',;
 import { SkillsForm } from '../forms/SkillsForm',;
 import { CertificationsForm } from '../forms/CertificationsForm',;
 import { PreviewResume } from '../PreviewResume',;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ResumeStepContentProps {;
   activeTab: string,;
   resume: Resume,;
@@ -95,6 +135,18 @@ export const ResumeStepContent = ({ ;
             console && console.log("Saving basic info:", data);
           }}
         <WorkExperienceForm
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+        <WorkExperienceForm 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export const ResumeStepContent = ({;
   activeTab,;
@@ -168,45 +220,186 @@ export const ResumeStepContent = ({;
       </TabsContent>;
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        />;
+      </TabsContent>;
+
+      <TabsContent value="education">;
+
+        <EducationForm
+=======
+
+        <EducationForm 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         />
       </TabsContent>
       <TabsContent value="education">
         <EducationForm
         <EducationForm 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        />;
+      </TabsContent>;
+
+      <TabsContent value="skills">;
+
+=======
+        />
+      </TabsContent>
+      <TabsContent value="skills">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SkillsForm
           resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        />;
+      </TabsContent>;
+
+      <TabsContent value="certifications">;
+
+        <CertificationsForm
+=======
+
+        <CertificationsForm 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         />
       </TabsContent>
       <TabsContent value="certifications">
         <CertificationsForm
         <CertificationsForm 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           resumeId={resume?.id!}
           certifications={resume?.certifications |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        />;
+      </TabsContent>;
+
+      <TabsContent value="preview">;
+        <PreviewResume
+          resume={resume as Resume} 
+=======
+        />
+      </TabsContent>
+      <TabsContent value="preview">
+        <PreviewResume
+          resume={resume as Resume}
+          onBack={onPrevStep}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         />
       </TabsContent>
     </>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+        <PreviewResume 
+          resume={resume as Resume} 
+=======
+        />;
+      </TabsContent>;
+      ;
+      <TabsContent value="preview">;
+        <PreviewResume ;
+          resume={resume as Resume} ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onBack={onPrevStep}
         />;
       </TabsContent>;
     </>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { TabsContent } from '@/components / ui / tabs';
 import { Resume } from '@/types / resume';
 import {BasicInfoForm} from '../forms / basic - info';
@@ -354,3 +547,11 @@ onPrevStep
 
 
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

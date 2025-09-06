@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+
+import * as React from 'react';
+import * as LabelPrimitive from '@radix-ui/react-label';
+import {useReactId} from '@/hooks/useReactId';
+import {Slot} from '@radix-ui/react-slot';
+import {Controller, type, FieldPath, type, FieldValues, FormProvider, useFormContext,} from 'react-hook-form';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {cn} from '@/lib/utils';
 import {Label} from '@/components/ui/label';
 const Form = FormProvider;
@@ -8,6 +30,16 @@ const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ''
 });
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -44,6 +76,30 @@ const useFormField = () => {;
     FormItemContext;
   ) as FormItemContextValue | null;
   const { getFieldState, formState } = useFormContext();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+import { cn } from "@/lib/utils"
+import { Label } from "@/components/ui/label"
+
+const Form = FormProvider
+
+type FormFieldContextValue = {
+  name: string
+}
+
+const FormFieldContext = React.createContext<FormFieldContextValue>({
+  name: ""})
+
+const FormField = ({ ...props }: any) => {
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <FormFieldContext.Provider value={{ name: props.name }}>
       <Controller {...props} />
     </FormFieldContext.Provider>
@@ -64,11 +120,88 @@ const useFormField = () => {
   if (!fieldContext) {;
     throw new Error('useFormField should be used within <FormField>');
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  if (!itemContext) {;
+
+    throw new Error('useFormField should be used within <FormItem>');
+  }
+  const { id } = itemContext as FormItemContextValue;
+
+=======
+
+
+=======
+=======
+  if (!itemContext) {;
+    throw new Error('useFormField should be used within <FormItem>');
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
+import { useReactId } from "@/hooks/useReactId";
+import { Slot } from "@radix-ui/react-slot";
+import {;
+  Controller,;
+  type FieldPath,;
+  type FieldValues,;
+  FormProvider,;
+  useFormContext} from "react-hook-form";
+;
+import { cn } from "@/lib/utils";
+import { Label } from "@/components/ui/label";
+;
+const Form = FormProvider;
+;
+type FormFieldContextValue = {;
+  name:string;
+}
+;
+const FormFieldContext = React.createContext<FormFieldContextValue>({;
+  name:""});
+;
+const FormField = ({ ...props } any) => {;
+  return (;
+    <FormFieldContext.Provider value={{ name:props.name }}>;
+      <Controller {...props} />;
+    </FormFieldContext.Provider>;
+  );
+}
+;
+const useFormField = () => {;
+  const fieldContext = React.useContext(FormFieldContext) as FormFieldContextValue;
+  const itemContext = React.useContext(FormItemContext) as FormItemContextValue | null;
+  const { getFieldState, formState } = useFormContext();
+;
+  const fieldState = getFieldState(fieldContext.name, formState);
+;
+  if (!fieldContext) {;
+    throw new Error("useFormField should be used within <FormField>");
+  }
+;
+  if (!itemContext) {;
+    throw new Error("useFormField should be used within <FormItem>");
+  }
+;
+  const { id } = itemContext as FormItemContextValue;
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const FormItem = React.forwardRef<
   HTMLDivElement
   React.HTMLAttr</HTMLDivElement>ibutes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const id = useReactId();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     throw new Error("useFormField should be used within <FormItem>")
   }
 
@@ -106,6 +239,13 @@ const FormItem = React && React.forwardRef<;
     </FormItemContext && FormItemContext.Provider>;
   );
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 FormItem && FormItem.displayName = 'FormItem';
 
 const FormLabel = React && React.forwardRef<;
@@ -159,6 +299,21 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
       <div ref={ref} className={cn("space-y-2", className)} {...props} />
     </FormItemContext.Provider>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  );
+});
+FormItem.displayName = 'FormItem';
+const FormLabel = React.forwardRef<
+  React.ElementRef<typeof LabelPrimitive.Root>
+  React.ComponentProp</typeof>sWithoutRef<typeof LabelPrimitive.Root>
+>(({ className, ...props }, ref) => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { error, formItemId } = useFormField();
     />
   );
@@ -207,6 +362,16 @@ const FormLabel = React.forwardRef<
       className={cn(error && "text-destructive", className)}
       htmlFor={formItemId}
       {...props}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     />
   )
 })
@@ -218,6 +383,17 @@ const FormControl = React.forwardRef<
 >(({ ...props }, ref) => {
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Slot
       ref={ref}
@@ -229,8 +405,20 @@ const FormControl = React.forwardRef<
       }
       aria-invalid={!!error}
       {...props}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     />
   )
 })
@@ -242,14 +430,37 @@ const FormDescription = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const { formDescriptionId } = useFormField()
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <p
       ref={ref}
       id={formDescriptionId}
       className={cn("text-sm text-muted-foreground", className)}
       {...props}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     />
   )
 })
@@ -269,6 +480,29 @@ const FormMessage = React.forwardRef<
     >
       {body}
     </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+  );
+});
+FormMessage.displayName = 'FormMessage';
+export {
+  useFormField
+  Form
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
+  FormField
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 })
 FormMessage.displayName = "FormMessage"
@@ -281,6 +515,17 @@ export {;
   FormControl,;
   FormDescription,;
   FormMessage,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  FormField,;
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as LabelPrimitive from '@radix - ui / react - label';
 import {useReactId} from '@/hooks / useReactId';
 import {Slot} from '@radix - ui / react - slot';
@@ -416,6 +661,112 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+  FormField,
+}
+;
+  FormField} const Form = FormProvider type FormFieldContextValue = {
+  name: string 
+}const FormField = ({
+  ...props 
+}: unknown) => {
+  return (<FormFieldContext.Provider value= {
+  {
+  name: props.name 
+}
+}> <Controller {
+  ...props 
+}/> </FormFieldContext.Provider>) 
+}const useFormField = () => {
+  const fieldContext = React.useContext (FormFieldContext) as FormFieldContextValue const itemContext = React.useContext (FormItemContext) as FormItemContextValue | null const {
+  getFieldState, formState 
+}= useFormContext () const fieldState = getFieldState (fieldContext.name, formState) const {
+  id 
+}= itemContext as FormItemContextValue return {
+  id, name: fieldContext.name, formItemId: `$ {
+  id 
+}-form-item`;
+formDescriptionId: `$ {
+  id 
+}-form-item-description`;
+formMessageId: `$ {
+  id 
+}-form-item-message`;
+...fieldState 
+}
+}type FormItemContextValue = {
+  id: string 
+}const FormItemContext = React.createContext<FormItemContextValue | null> (null) const FormItem = React.forwardRef< HTMLDivElement;
+React.HTMLAttributes<HTMLDivElement> > ( ({
+  className, ...props 
+}, ref) => {
+  const id = useReactId () return (</FormItemContext.Provider>) 
+}) FormItem.displayName = "FormItem" const FormLabel = React.forwardRef< React.ElementRef<typeof LabelPrimitive.Root>;
+React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> > ( ({
+  className, ...props 
+}, ref) => {
+  const {
+  error, formItemId 
+}= useFormField () return (<Label />) 
+}) FormLabel.displayName = "FormLabel" const FormControl = React.forwardRef< React.ElementRef<typeof Slot>;
+React.ComponentPropsWithoutRef<typeof Slot> > ( ({
+  ...props 
+}, ref) => {
+  const {
+  error, formItemId, formDescriptionId, formMessageId 
+}= useFormField () return (<Slot ref= {
+  ref 
+}id= {
+  formItemId 
+}aria-describedby= {
+  !error ? `$ {
+  formDescriptionId 
+}` : `$ {
+  formDescriptionId 
+}$ {
+  formMessageId 
+}` 
+}aria-invalid= {
+  !!error 
+}{
+  ...props 
+}/>) 
+}) FormControl.displayName = "FormControl" const FormDescription = React.forwardRef< HTMLParagraphElement;
+React.HTMLAttributes<HTMLParagraphElement> > ( ({
+  className, ...props 
+}, ref) => {
+  const {
+  formDescriptionId 
+}= useFormField () return (<p />) 
+}) FormDescription.displayName = "FormDescription" const FormMessage = React.forwardRef< HTMLParagraphElement;
+React.HTMLAttributes<HTMLParagraphElement> > ( ({
+  className, children, ...props 
+}, ref) => {
+  const {
+  error, formMessageId 
+}= useFormField () const body = error ? String (error?.message) : children if (!body) {
+  return null;
+}return (<p > {
+  body 
+}</p>) 
+}) FormMessage.displayName = "FormMessage" export {
+  useFormField, Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage, FormField 
+}
+  FormField}
+;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   FormField,;
 };
   FormField}
@@ -426,3 +777,10 @@ export {
   FormField,
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

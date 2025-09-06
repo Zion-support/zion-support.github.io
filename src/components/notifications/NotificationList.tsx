@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -47,7 +56,6 @@ interface NotificationListProps {;
   onRetry: () => void;
 }
 
-
 onRetry
 },) => {
 } import React from 'react';
@@ -58,6 +66,7 @@ import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context / notifications';
 import { EmptyState } from '@/components / ui / empty - state';
 import { Bell } from 'lucide-react';
+
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -141,7 +150,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   );
 };
 
-
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
           <Button;
@@ -191,6 +199,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>;
   );
 };
+<<<<<<< HEAD
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -268,3 +277,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>
   );
 };
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

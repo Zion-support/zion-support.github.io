@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
@@ -18,15 +22,24 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
+<<<<<<< HEAD
       
 import React, { ReactNode } from 'react';
 import Header from '../Header';
@@ -43,6 +56,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
   return (
     <>
       <SEOHead title={title} description={description} />
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -52,3 +68,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
       </div>
     </>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

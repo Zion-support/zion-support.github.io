@@ -1,8 +1,32 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface KycProfile {
   user_id: string;
 
@@ -27,11 +51,62 @@ export interface KycProfile {;
     at: string;
     by: string;
     action: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    details?: any
+
+  }>;
+
+=======
+// KYC (Know Your Customer) utilities
+export interface KycProfile {
+  userId: string;
+  role: 'client' | 'talent' | 'both';
+  fullLegalName: string;
+  businessName?: string;
+  businessRegistrationNumber?: string;
+  documents: KycDocument[];
+  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired';
+  submittedAt?: string;
+  reviewedAt?: string;
+  expiresAt?: string;
+  reviewerId?: string;
+  rejectionReason?: string;
+  notes?: string;
+
+}
+
+export function getRequiredDocuments (role: KycRole): string[] {
+  // Check condition
+if ( {) {
+  $2
+}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
@@ -44,11 +119,51 @@ export interface KycProfile {;
   }
   if (!profile && profile.country) {
     missing && missing.push('country');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {
+    missing.push('name');
+=======
+  }
+  
+<<<<<<< HEAD
+  if (!profile && profile.country) {
+    missing && missing.push('country');
+  }
+=======
+  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
+    missing && missing.push('dateOfBirth');
+  }
+  return { ok: missing && missing.length === 0, missing };  
+  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
+    missing && missing.push('businessRegistrationNumber');
+=======
+
+  
+  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
+    missing && missing.push('name'),
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   
   if (!profile && profile.country) {
     missing && missing.push('country');
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  if (profile.role === 'client' && !profile.dateOfBirth) {
+    missing.push('dateOfBirth');
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
@@ -60,6 +175,24 @@ export interface KycProfile {;
   }
   return {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    ok: missing && missing.length === 0,
+
+    missing
+
+  }
+
+}
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export interface KycDocumentMeta {;
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
@@ -88,6 +221,31 @@ export interface KycDocumentMeta {;
     details?: any
   }>;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+export function generateKycDocumentId(): string {
+  return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+export function isKycProfileComplete(profile: KycProfile): boolean {
+  return profile.status === 'approved' && 
+         profile.documents.length > 0 && 
+         profile.fullLegalName.length > 0;
+}
+export function isKycProfileExpired(profile: KycProfile): boolean {
+  if (!profile.expiresAt) return false;
+  return new Date(profile.expiresAt) < new Date();
+}
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
 ;
@@ -122,3 +280,20 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

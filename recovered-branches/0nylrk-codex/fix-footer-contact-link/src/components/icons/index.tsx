@@ -1,4 +1,17 @@
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
@@ -13,6 +26,127 @@ const iconExports: Record<string, React.FC<IconProps>> = {}
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
     iconExports[alias] = createIconComponent(alias, lucideName)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// Alias for missing icons or for icons with different names;
+const icon_aliases: Record < string, keyof typeof LucideIcons> = {
+  // Grid views;
+  LayoutGrid: 'LayoutGrid',
+  List: 'List',
+  // UI elements;
+  Zap: 'Zap',
+  Settings: 'Settings',
+  Plus: 'Plus',
+  HelpCircle: 'HelpCircle',
+  // Social media;
+  Twitter: 'Twitter',
+  Linkedin: 'Linkedin',
+  Facebook: 'Facebook',
+  Instagram: 'Instagram',
+  Github: 'Github',
+  // Services;
+  Server: 'Server',
+  // There is no 'Network' icon in lucide-react.;
+  // Map to a similar existing icon.;
+  Network: 'Share2',
+  Recycle: 'Recycle',
+  Truck: 'Truck',
+  HardDrive: 'HardDrive',
+  // Status and actions;
+  Check: 'Check',
+  CheckIcon: 'Check',
+  Handshake: 'Handshake',
+  StarIcon: 'Star',
+  // Theme;
+  Moon: 'Moon',
+  Sun: 'Sun',
+  // Notifications;
+  Bell: 'Bell',
+  // Calendar;
+  CalendarIcon: 'Calendar',
+  // Navigation;
+  ChevronRight: 'ChevronRight',
+  MoreHorizontal: 'MoreHorizontal',
+  MoreVertical: 'MoreVertical',
+  // Content;
+  Quote: 'Quote',
+  // Alerts;
+  Info: 'Info',
+  AlertTriangle: 'AlertTriangle',
+  Ban: 'Ban',
+  ShieldAlert: 'ShieldAlert',
+  // Actions;
+  Archive: 'Archive',
+  Trash2: 'Trash2',
+  Trash: 'Trash2',
+  Power: 'Power',
+  RefreshCw: 'RefreshCcw',
+  Copy: 'Copy',
+  ClipboardCopy: 'ClipboardCopy',
+  Download: 'Download',
+  // Auth;
+  LogIn: 'LogIn',
+  EyeOff: 'EyeOff',
+  Wallet: 'Wallet',
+  // Development;
+  Code: 'Code',
+  // Cast to any to work around missing type for Megaphone;
+  Megaphone: 'Megaphone' as unknown as keyof typeof LucideIcons,
+  Terminal: 'Terminal',
+  // Community;
+  ThumbsUp: 'ThumbsUp',
+  ThumbsDown: 'ThumbsDown',
+  Pin: 'Pin',
+  Lock: 'Lock',
+  Trophy: 'Trophy',
+  Award: 'Award',
+  BadgeCheck: 'BadgeCheck',
+  MessageSquare: 'MessageSquare',
+  // Misc;
+  Link: 'Link',
+  Briefcase: 'Briefcase',
+  FileText: 'FileText',
+  Clock: 'Clock',
+  Save: 'Save',
+  StarOff: 'Star',
+  LayoutDashboard: 'LayoutDashboard',
+  BarChart: 'BarChart3',
+  BookOpen: 'BookOpen',
+  Key: 'Key',
+  Tag: 'Tag' as keyof typeof LucideIcons},
+type IconProps = LucideIcons.LucideProps;
+;
+// Create a type safe export for each icon;
+const createIconComponent = (alias_name: string, icon_name: keyof typeof LucideIcons) =>: any {
+  const IconComponent = (props: IconProps) =>: any {
+    // Fix: Use proper type casting to access the icon component;
+    const LucideIcon = LucideIcons[icon_name] as React.FC < IconProps>,
+    return <LucideIcon {...props} />;
+  }
+  IconComponent.display_name = alias_name;
+  return IconComponent;
+}
+;
+// Export all of our icon components;
+const icon_exports: Record < string, React.FC < IconProps>> = {}
+;
+// Generate icon exports;
+Object.entries (icon_aliases).for_each (([alias, lucide_name]) => {
+  // Check condition
+if ( {) {
+  $2
+}
+    icon_exports[alias] = createIconComponent (alias, lucide_name);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } else {
     console.warn (`Icon '${lucide_name}' not found in lucide-react`);
     // Use a fallback icon;
@@ -129,6 +263,18 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
     iconExports[alias] = createIconComponent(alias, 'HelpCircle');
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export const {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const {;
 
 
@@ -143,6 +289,12 @@ export const {;
 export const {
 
 export const {;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   LayoutGrid;
   List;
   Zap;
@@ -386,6 +538,13 @@ export const {;
   Tag} = iconExports;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -458,10 +617,31 @@ export * from 'lucide-react';
 
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Tag} = icon_exports;
 ;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 // Alias for missing icons or for icons with different names type IconProps = LucideIcons.LucideProps;
 // Create a type safe export for each icon const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
@@ -471,3 +651,8 @@ export * from 'lucide-react';
 };
 // Generate icon exports // Also export all original icons from lucide-react export * from 'lucide-react';
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

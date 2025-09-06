@@ -4,8 +4,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { FavoriteButton } from "@/components/FavoriteButton",
 
-
-
 export const TalentCard = React && React.memo(TalentCardComponent);
 TalentCard && TalentCard.displayName = 'TalentCard';import React from 'react';
 import { useRouter } from 'next/router';
@@ -19,12 +17,10 @@ import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 
-
 import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
-
 
 export interface TalentCardProps {
 
@@ -32,7 +28,6 @@ export interface TalentCardProps {
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
   isAuthenticated: boolean
-
 
 import React from 'react',;
 import { useRouter } from 'next/router',;
@@ -51,7 +46,6 @@ export interface TalentCardProps {;
   onRequestHire: (talent: TalentProfile) => void,;
   isAuthenticated: boolean;
 
-
 }
 const TalentCardComponent = ({
   talent
@@ -68,9 +62,6 @@ const TalentCardComponent = ({
       onViewProfile(talent.id)
     }
 
-
-
-
   const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
     e.stopPropagation()
@@ -78,11 +69,7 @@ const TalentCardComponent = ({
       onRequestHire(talent)
     }
 
-
   },
-
-
-
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[]
@@ -110,9 +97,7 @@ const TalentCardComponent = ({;
       onViewProfile(talent && talent.id);
     }
   },;
-  const handleRequestHire = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
+
     if (onRequestHire) {;
       onRequestHire(talent);
     }
@@ -130,31 +115,23 @@ const TalentCardComponent = ({;
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
 
-
       onClick={handleViewProfile}
       tabIndex={0}
-
 
     >
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
-          <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
-              {talent.profile_picture_url ? (
-                <img
 
+                <img
 
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
 
-
                   className="w-full h-full object-cover"
                   loading="lazy"
 
-
                   {talent.full_name?.charAt(0) || "T"}
-
 
                 </div>
                 />;
@@ -180,30 +157,11 @@ const TalentCardComponent = ({;
             </div>;
             <p className="text-white font-medium">{talent && talent.professional_title}</p>;
 
-
-
-            
-
             {/* Location & Availability */}
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">
-              {talent.location && (
-                <div className="flex items-center text-zion-slate-light">
-                  <MapPin className="h-4 w-4 mr-1" />
-                  <span>{talent.location}</span>
-                </div>
-              )}
-              {talent.availability_type && (
-                <div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{talent.availability_type}</span>
-                </div>
-              )}
-
 
             </div>;
           </div>;
         </div>;
-
 
         {/* Skills */}
         {skills.length > 0 && (
@@ -239,11 +197,8 @@ const TalentCardComponent = ({;
                 </span>;
 
               )}
-            </div>
-          </div>
+
         )}
-
-
 
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">;
@@ -257,10 +212,6 @@ const TalentCardComponent = ({;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
 
-
-          
-
-
           <div className="flex items-center gap-2">
             {isAuthenticated && (
           </div>;
@@ -271,9 +222,7 @@ const TalentCardComponent = ({;
                 size="sm"
                 variant="secondary"
 
-
                 onClick={handleRequestHire}
-
 
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
@@ -284,10 +233,8 @@ const TalentCardComponent = ({;
               size="sm"
               variant="ghost"
 
-
               onClick={(e) => {
               onClick={(e) => {
-
 
                 e.stopPropagation(),
                 handleViewProfile()
@@ -458,7 +405,6 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-
 
     </Card>);
 },

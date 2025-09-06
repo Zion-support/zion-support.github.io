@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+import { useState  } from './react';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Badge  } from '@/components / ui / badge';
+=======
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   AlertDialog,
   AlertDialogAction,
@@ -11,9 +18,51 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
+<<<<<<< HEAD
+} from '@/components / ui / alert - dialog';
+import { Edit, Trash2, Github, Link, FileText  } from './lucide-react';
+import { PortfolioProject  } from '@/types / resume';
+interface ProjectCardProps {
+  project: PortfolioProject;
+  on_edit: (project: PortfolioProject) => void;
+  on_delete: (project_id: string) => void;
+}
+export /**
+ * ProjectCard - Function description
+ */
+function ProjectCard() {
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState (false);
+;
+  const handle_delete = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      on_delete (project.id);
+    }
+    setDeleteDialogOpen (false);
+  }
+;
+
+  return (
+    <Card className="h - full flex flex - col">;
+      <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
+        {project.image_url ? (
+          <img;
+            src={project.image_url}
+            alt={project.title}
+import {useState} from 'react';
+import {Card, CardContent, CardFooter} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Badge} from '@/components/ui/badge';
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
+import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
+import {PortfolioProject} from '@/types/resume';
+=======
 } from "@/components/ui/alert-dialog";
 import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
 import { PortfolioProject } from "@/types/resume";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
@@ -27,6 +76,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
   const handleDelete = () => {
     if (project.id) {
+<<<<<<< HEAD
+=======
       onDelete(project.id);
     }
     setDeleteDialogOpen(false);
@@ -48,6 +99,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
           />;
         ) : (;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -67,7 +119,13 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   ;
   const handleDelete = () => {;
     if (project.id) {;
+<<<<<<< HEAD
+      onDelete(project.id);
+
+
+=======
       onDelete(project.id),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     setDeleteDialogOpen(false),;
   },;
@@ -85,12 +143,15 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
+<<<<<<< HEAD
+=======
       </div>
 
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">
               {project.description}
@@ -210,3 +271,13 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   )
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

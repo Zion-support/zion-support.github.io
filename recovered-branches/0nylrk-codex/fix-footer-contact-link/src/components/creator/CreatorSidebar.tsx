@@ -1,3 +1,54 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+import {
+
+import {;
+  Bell,;
+  FileText,;
+  Home,;
+  Mail,;
+  Search,;
+  Settings,;
+=======
+
+=======
+import {
+
+
+
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
+import {
+
+  Bell
+  FileText
+  Home
+  Mail
+  Search
+  Settings
+  Users
+} from "lucide-react";
+import {
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenu
+  SidebarMenuItem
+  SidebarMenuButton
+  SidebarGroupLabel
+  SidebarGroupContent
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Bell,
   FileText,
   Home,
@@ -25,6 +76,19 @@ import {;
 
 export function AppSidebar() {;
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+        
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (
@@ -78,6 +142,13 @@ import {
 
         
         
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -87,7 +158,23 @@ import {
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
+<<<<<<< HEAD
                   </Link>
+=======
+<<<<<<< HEAD
+                  </Link>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </a>
+=======
+                  </Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -95,18 +182,51 @@ import {
                   <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
+<<<<<<< HEAD
                   </Link>
+=======
+<<<<<<< HEAD
+                  </Link>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </a>
+=======
+                  </Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         
 
 
         
         
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -116,7 +236,23 @@ import {
                   <a href="/profile">
                     <Users size={16} />
                     <span>Profile</span>
+<<<<<<< HEAD
                   </Link>
+=======
+<<<<<<< HEAD
+                  </Link>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </a>
+=======
+                  </Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -124,13 +260,42 @@ import {
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
+<<<<<<< HEAD
                   </Link>
+=======
+<<<<<<< HEAD
+                  </Link>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  </a>
+=======
+                  </Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    </Sidebar>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
   )
@@ -146,6 +311,20 @@ import {;
   SidebarGroupContent} from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  SidebarGroupContent} from "@/components/ui/sidebar",;
+;
+export function AppSidebar() {;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -154,14 +333,166 @@ export function AppSidebar() {;
             <SidebarMenu>;
               <SidebarMenuItem>;
                 <SidebarMenuButton asChild>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <a href="/creator-dashboard">;
+                    <Home size={16} />;
+                    <span>Home</span>;
+<<<<<<< HEAD
+=======
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,
+} from './lucide-react';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupLabel,
+  SidebarGroupContent,
+} from '@/components / ui / sidebar';
+;
+export /**
+ * AppSidebar - Function description
+ */
+function AppSidebar() {
+  return (
+    <Sidebar>;
+      <SidebarContent>;
+        <SidebarGroup>;
+          <SidebarGroupLabel > Dashboard</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton as_child>;
+                  <a href="/creator - dashboard">;
+                    <Home size={16} />;
+                    <span > Home</span>;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                <SidebarMenuButton as_child>;
+                  <a href="/messaging">;
+                    <Mail size={16} />;
+                    <span > Messages</span>;
+
+=======
+                <SidebarMenuButton asChild>;
+                  <a href="/messaging">;
+                    <Mail size={16} />;
+                    <span>Messages</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                <SidebarMenuButton as_child>;
+                  <a href="/notifications">;
+                    <Bell size={16} />;
+                    <span > Notifications</span>;
+
+=======
+                <SidebarMenuButton asChild>;
+                  <a href="/notifications">;
+                    <Bell size={16} />;
+                    <span>Notifications</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+            </SidebarMenu>;
+          </SidebarGroupContent>;
+        </SidebarGroup>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        <SidebarGroup>;
+          <SidebarGroupLabel > Content</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton as_child>;
+                  <a href="/publish">;
+                    <FileText size={16} />;
+                    <span > My Content</span>;
+
+=======
+        ;
+        <SidebarGroup>;
+          <SidebarGroupLabel>Content</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton asChild>;
+                  <a href="/publish">;
+                    <FileText size={16} />;
+                    <span>My Content</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                <SidebarMenuButton as_child>;
+                  <a href="/analytics">;
+                    <Search size={16} />;
+                    <span > Analytics</span>;
+
+=======
+                <SidebarMenuButton asChild>;
+                  <a href="/analytics">;
+                    <Search size={16} />;
+                    <span>Analytics</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -172,16 +503,25 @@ export function AppSidebar() {;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-                  </a>;
-                </SidebarMenuButton>;
-              </SidebarMenuItem>;
-            </SidebarMenu>;
-          </SidebarGroupContent>;
-        </SidebarGroup>;
-                  </a>;
-                </SidebarMenuButton>;
-              </SidebarMenuItem>;
-              <SidebarMenuItem>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                <SidebarMenuButton as_child>;
+                  <a href="/settings">;
+                    <Settings size={16} />;
+                    <span > Settings</span>;
+
+=======
+                <SidebarMenuButton asChild>;
+                  <a href="/settings">;
+                    <Settings size={16} />;
+                    <span>Settings</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -189,6 +529,19 @@ export function AppSidebar() {;
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+}
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     </Sidebar>
 
@@ -221,3 +574,8 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

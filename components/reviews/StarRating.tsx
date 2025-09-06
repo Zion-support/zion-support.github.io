@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +30,10 @@ class ErrorBoundary extends React.Component {
 }</div>) ;
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type Props = {;
   value: number,;
   onChange: (val: number) => void,;
@@ -38,19 +45,35 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 
   const stars = [1, 2, 3, 4, 5];
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <button
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
           >;
             <svg
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               width={size}
               height={size}
               view_box='0 0 24 24';
               fill={active ? 'gold' : 'none'}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default StarRating;
 
               xmlns="http://www.w3.org/2000/svg"
@@ -86,3 +109,7 @@ export default StarRating;              width={size}
 }
 ;
 export default StarRating;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

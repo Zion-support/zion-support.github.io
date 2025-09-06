@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ReferralGuide() {
 
   const steps = [
@@ -11,6 +32,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
@@ -35,10 +62,35 @@ export /**
  */
 function ReferralGuide() {
   const steps = [;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+      title: "They sign up",;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+
+=======
+=======
+      title: "They sign up",;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
 
@@ -50,11 +102,17 @@ function ReferralGuide() {
       description: "Rewards are issued based on the type of user who completes onboarding"}]
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 
+<<<<<<< HEAD
     {
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       title: "They sign up"
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
@@ -103,6 +161,22 @@ export function ReferralGuide() {;
       description: "Copy your unique referral link and share it with potential clients or talent"},;
     {;
       title: "They sign up",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+    {;
+      title: "They complete onboarding",;
+      description: "Once they complete their profile setup, your referral is confirmed"};
+    {;
+      title: "You earn rewards",;
+      description: "Rewards are issued based on the type of user who completes onboarding"}],;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
 
@@ -141,14 +215,40 @@ export function ReferralGuide() {;
       </CardHeader>;
       <CardContent>;
         <div className="space-y-4">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          {steps && steps.map((step, index) => (;
+            <div key={index} className="flex gap-4">;
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
                 {index + 1}
@@ -159,11 +259,26 @@ export function ReferralGuide() {;
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
@@ -194,6 +309,15 @@ export function ReferralGuide() {;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
@@ -218,3 +342,10 @@ export function ReferralGuide() {;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

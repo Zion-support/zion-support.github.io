@@ -1,3 +1,4 @@
+
   const store = getFraudStore();
 
     return res.status(200).json(settings)
@@ -13,7 +14,10 @@
   res.status(405).json({ error: "Method not allowed" });
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (req && req.method === "GET") {
     const userId = (req && req.query.userId as string) || "";
     if (!userId) return res && res.status(400).json({ error: "Missing userId" });
@@ -66,7 +70,10 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
@@ -83,6 +90,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 export default async function handler(req, res) {
   try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const store = getFraudStore();
   if (req.method === 'GET') {
     const userId = (req.query.userId as string) || '';
@@ -113,8 +124,12 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
   res.status(405).json({ error: "Method not allowed" });
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   } catch (error) {
     console.error("Error:", error);
@@ -136,3 +151,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

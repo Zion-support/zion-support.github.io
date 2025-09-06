@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {useHireRequest} from "@/hooks/useHireRequest";
+import {TalentProfile} from "@/types/talent";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -6,6 +24,13 @@ import { useHireRequest } from "@/hooks/useHireRequest";
 import { TalentProfile } from "@/types/talent";
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -19,11 +44,40 @@ interface UseHireRequestFormProps {
   initialJobTitle?: string;
   user_details?: {
     name?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+=======
+import { useHireRequest } from "@/hooks/useHireRequest";
+import { TalentProfile } from "@/types/talent";
+import { useHireRequest } from "@/hooks/useHireRequest",
+import { TalentProfile } from "@/types/talent",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     name?: string;
 
     email?: string
@@ -32,6 +86,12 @@ interface UseHireRequestFormProps {
   }
 }
 export interface FormValues {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 
@@ -74,6 +134,15 @@ export interface FormValues {;
   budgetMin: number,;
   budgetMax: number;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     email?: string,
     id?: string;
@@ -91,9 +160,59 @@ export interface FormValues {
   budgetMax: number
 }
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
+<<<<<<< HEAD
     path: ["budgetMax"]
   });
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { submitHireRequest } = useHireRequest(),
+
+
+
+  // Define the form schema with validation rules
+
+  const formSchema = z && z.object({
+    requesterName: z && z.string().min(2, "Name is required");
+    requesterEmail: z && z.string().email("Valid email is required"),
+    projectOverview: z && z.string().min(10, "Please provide more details about your project");
+    timeline: z && z.string().min(5, "Please specify your timeline");
+    budgetMin: z && z.number().min(1, "Budget minimum is required");
+    budgetMax: z && z.number().min(1, "Budget maximum is required")
+  }).refine(data => data && data.budgetMax >= data && data.budgetMin, {
+    message: "Maximum budget must be greater than or equal to minimum budget",
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    path: ["budgetMax"]
+  });
+
+<<<<<<< HEAD
+=======
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { submitHireRequest } = useHireRequest();
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { submitHireRequest } = useHireRequest(),
+
+  // Define the form schema with validation rules
+
+  const formSchema = z.object({
+    requesterName: z.string().min(2, "Name is required");
+    requesterEmail: z.string().email("Valid email is required")
+    projectOverview: z.string().min(10, "Please provide more details about your project");
+    timeline: z.string().min(5, "Please specify your timeline");
+    budgetMin: z.number().min(1, "Budget minimum is required");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     requesterName: z.string().min(2, "Name is required"),
     requesterEmail: z.string().email("Valid email is required"),
     projectOverview: z.string().min(10, "Please provide more details about your project"),
@@ -111,6 +230,39 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema);
     defaultValues: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      budgetMin: talent && talent.hourly_rate || 25,
+      budgetMax: talent && talent.hourly_rate ? talent && talent.hourly_rate * 1 && 1.5 : 50
+
+<<<<<<< HEAD
+    }
+  });
+=======
+
+=======
+  });
+  }),
+
+  // Initialize the form
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      requesterName: userDetails?.name |"";
+      requesterEmail: userDetails?.email |""
+      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "";
+      timeline: "";
+
+      budgetMin: talent.hourly_rate |25
+      budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
+    }
+  });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       requesterName: userDetails?.name || "",
       requesterEmail: userDetails?.email || "",
       projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",
@@ -120,6 +272,15 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     }
   }),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
@@ -172,11 +333,63 @@ function useHireRequestForm() {
           id: userDetails?.id
         }
         project: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          overview: values && values.projectOverview;
+          timeline: values && values.timeline;
+          budgetMin: values && values.budgetMin,
+          budgetMax: values && values.budgetMax
+
+        }
+      }
+      const result = await submitHireRequest(requestData);
+      if (result && result.success) {
+        onClose()
+=======
+
+=======
+  // Handle form submission
+  const onSubmit = async (values: FormValues) => {
+    setIsSubmitting(true),
+    try {
+      const requestData = {
+        talent: {
+          id: talent.id |"";
+          full_name: talent.full_name
+          professional_title: talent.professional_title}
+        requester: {
+          name: values.requesterName;
+          email: values.requesterEmail
+          id: userDetails?.id
+        }
+        project: {
+          overview: values.projectOverview;
+          timeline: values.timeline;
+          budgetMin: values.budgetMin
+          budgetMax: values.budgetMax
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
       }
       const result = await submitHireRequest(requestData);
       if (result.success) {
         onClose()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           id: talent.id || "",
           full_name: talent.full_name,
           professional_title: talent.professional_title},
@@ -190,6 +403,23 @@ function useHireRequestForm() {
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        }
+      };
+
+      const result = await submitHireRequest(requestData);
+      if (result.success) {
+        onClose()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -286,6 +516,32 @@ if ( {) {
     } catch (error) {
       console.error ("Error submitting hire request:", error);
     } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      setIsSubmitting(false)
+
+
+<<<<<<< HEAD
+=======
+=======
+    }
+  }
+  return {
+    form;
+    isSubmitting;
+
+    onSubmit
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -296,6 +552,19 @@ if ( {) {
     form;
     isSubmitting;
     onSubmit;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+}
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   }
@@ -310,3 +579,16 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
+=======
+  }
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

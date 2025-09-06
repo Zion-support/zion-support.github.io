@@ -1,18 +1,119 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      case "available": return <Badge className="bg-green-500">Available</Badge>;
+      case "interviewing":;
+        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+=======
+
+      id: "talent-1",
+      name: "Jessica Lee",
+=======
+      id: "talent-1"
+      name: "Jessica Lee"
+      role: "UI/UX Designer"
+      skills: ["Figma", "Sketch", "User Testing"];
+      status: "available"
+      match: 95
+    }
+    {
+      id: "talent-2"
+      name: "Marcus Wright"
+      role: "Full Stack Developer"
+      skills: ["React", "Node.js", "MongoDB"];
+      status: "interviewing"
+      match: 92
+    }
+    {
+      id: "talent-3"
+      name: "Aisha Patel"
+      role: "Product Manager"
+      skills: ["Agile", "Roadmapping", "User Research"];
+      status: "available"
+      match: 88
+    }
+  ];
+      id: "talent-1",
+      name: "Jessica Lee",
+      role: "UI/UX Designer",;
+      skills: ["Figma", "Sketch", "User Testing"];
+      role: "UI/UX Designer",
+      skills: ["Figma", "Sketch", "User Testing"],
+      status: "available",
+      match: 95
+    },
+    {
+      id: "talent-2",
+      name: "Marcus Wright",
+      role: "Full Stack Developer",
+      skills: ["React", "Node.js", "MongoDB"],
+      status: "interviewing",
+      match: 92
+    },
+    {
+      id: "talent-3",
+      name: "Aisha Patel",
+      role: "Product Manager",
+      skills: ["Agile", "Roadmapping", "User Research"],
+      status: "available",
+      match: 88
+    }
+  ],
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -88,6 +189,11 @@ export function TalentPool() {;
       case "available": return <Badge className="bg-green-500">Available</Badge>;
       case "interviewing":;
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 
@@ -98,6 +204,17 @@ export function TalentPool() {;
           <div>;
             <CardTitle>Dedicated Talent Pool</CardTitle>;
             <CardDescription>Candidates matched to your company</CardDescription>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -128,10 +245,66 @@ function TalentPool() {
       role: "Product Manager",
       skills: ["Agile", "Roadmapping", "User Research"],
       status: "available",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      match: 88;
+    }
+  ];
+;
+  const getStatusBadge = (status: string) =>: any {
+    switch (status) {
+      case "available": return <Badge className="bg - green - 500">Available</Badge>;
+      case "interviewing":;
+        return <Badge variant="outline" className="bg - amber - 100 text - amber - 800 border - amber - 200">Interviewing</Badge>;
+      case "hired":;
+        return <Badge variant="outline" className="bg - blue - 100 text - blue - 800 border - blue - 200">Hired</Badge>,
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  }
+;
+  return (
+    <Card>;
+      <CardHeader>;
+        <div className="flex items - center justify - between">;
+          <div>;
+            <CardTitle > Dedicated Talent Pool</CardTitle>;
+            <CardDescription > Candidates matched to your company</CardDescription>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
           <Button size="sm">View All</Button>;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                  {getStatusBadge(talent.status)}
+                  <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
+                    {talent.match}% Match
+                  </Badge>
+                </div>
+              </div>
+              <div className="mt-2 flex flex-wrap gap-1">
+                {talent.skills.map((skill, index) => (
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
                   </Badge>;
@@ -221,3 +394,49 @@ default: return <Badge variant="outline"> {
   status 
 }</Badge> 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+
+};
+return (<Card> <CardHeader> <div className="flex items-center justify-between" > <div> <CardTitle>Dedicated Talent Pool</CardTitle> <CardDescription>Candidates matched to your company</CardDescription> </div> <Button size="sm" >View All</Button> </div> </CardHeader> </Badge>) ) 
+}</div> <div className="mt-3 flex gap-2" > <Button size="sm" variant="outline" >View Profile</Button> <Button size="sm" >Contact</Button> </div> </div>) ) 
+}</div> </CardContent> </Card>) 
+}
+                  <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
+                    {talent.match}% Match
+                  </Badge>
+                </div>
+              </div>
+              <div className="mt-2 flex flex-wrap gap-1">
+                {talent.skills.map((skill, index) => (
+                  <Badge key={index} variant="secondary" className="text-xs">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+              <div className="mt-3 flex gap-2">
+                <Button size="sm" variant="outline">View Profile</Button>
+                <Button size="sm">Contact</Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

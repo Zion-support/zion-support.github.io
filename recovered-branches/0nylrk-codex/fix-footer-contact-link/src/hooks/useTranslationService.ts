@@ -6,12 +6,33 @@ import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
 type ContentType = 'job' | 'profile' | 'service' | 'general';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+interface TranslationResponse {
+  translations: Record<SupportedLanguage, string>;
+  error?: string
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_language, SupportedLanguage} from '@/context / LanguageContext';
 ;
 type ContentType = 'job' | 'profile' | 'service' | 'general';
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface TranslationResponse {
   translations: Record < SupportedLanguage, string>;
   error?: string;
@@ -48,11 +69,31 @@ export function useTranslationService() {;
           ar: ''
         }
         initialTranslations[sourceLanguage] = content;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       
       return { translations: data && data.translations }
     } catch (err) {
       setIsTranslating(false);
       console && console.error('Translation service error:', err);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
@@ -174,6 +215,17 @@ if ( {) {
         en: content;
         es: '';
         pt: '',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
@@ -266,6 +318,13 @@ export function useTranslationService() {;
       }
     }
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ar: '';
       },;
       initialTranslations[sourceLanguage] = content,;
@@ -274,6 +333,13 @@ export function useTranslationService() {;
         error: err instanceof Error ? err.message : 'Unknown translation error';
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },;
   const getTranslation = (translations: Record<SupportedLanguage string>, fallback: string = '') => {;
     if (!translations) return fallback,;
@@ -283,6 +349,16 @@ export function useTranslationService() {;
     translateContent;
     isTranslating;
     getTranslation;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {
@@ -290,6 +366,22 @@ export function useTranslationService() {;
 if (return fallback, ) {
   $2
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return translations[current_language] || translations.en || fallback;
+  }
+<<<<<<< HEAD
+}
+=======
+;
+  return {
+    translate_content;
+    is_translating;
+    get_translation;
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   },;
   ;
@@ -315,3 +407,8 @@ setIsTranslating (false);
 }
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

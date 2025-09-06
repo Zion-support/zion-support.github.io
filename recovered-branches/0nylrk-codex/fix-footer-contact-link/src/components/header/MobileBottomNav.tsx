@@ -3,12 +3,36 @@ import {Link, useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface MobileBottomNavProps {;
+  unreadCount?: number;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
@@ -16,19 +40,53 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface MobileBottomNavProps {
   unreadCount?: number
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
   const { user } = useAuth();
@@ -37,12 +95,36 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const { user } = useAuth(),
   const isAuthenticated = !!user,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const navItems = [
     {
       name: "Home"
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+    }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Browse"
       href: "/talent"
@@ -50,6 +132,18 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      name: "Community"
+      href: "/community"
+      icon: MessageCircle
+      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     {
       name: "Browse",
@@ -63,6 +157,17 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Messages"
       href: "/messages"
@@ -70,6 +175,28 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    },
+
+
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -77,6 +204,25 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+=======
+
+  ];
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(item =>
+    !item.authRequired |(item.authRequired && isAuthenticated)
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ],
 
   // Filter items based on auth status
@@ -136,6 +282,22 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
       name: "Dashboard",;
       href: "/dashboard",;
       icon: User,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      matches: (path: string) => path && path.startsWith("/dashboard"),;
+      authRequired: true;
+    }
+  ];
+
+  // Filter items based on auth status;
+  const visibleItems = navItems && navItems.filter(item => ;
+    !item && item.authRequired || (item && item.authRequired && isAuthenticated);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
@@ -154,6 +316,30 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      matches: (path: string) => path.startsWith("/dashboard"),;
+      authRequired: true;
+    }
+  ],;
+  // Filter items based on auth status;
+  const visibleItems = navItems.filter(item =>;
+    !item.authRequired || (item.authRequired && isAuthenticated);
+  );
+  return (;
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
+      <div className="flex justify-around items-center h-16">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -169,6 +355,18 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
               <item.icon className="h-5 w-5 mb-1" />;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
@@ -257,6 +455,15 @@ function MobileBottomNav() {
       </div>;
     </nav>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  interface MobileBottomNavProps {
   unreadCount?: number 
@@ -318,3 +525,10 @@ return ({
     </nav>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
@@ -24,6 +39,21 @@ import {useTranslation} from "react-i18next";
 import {useTranslationService} from "@/hooks/useTranslationService";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {toast} from "@/components/ui/use-toast";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -127,6 +157,16 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         break
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -236,12 +276,40 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
+      const { translations, error } = await translateContent(content, 'job', sourceLanguage),
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (error) {
         toast({
           title: t('translation.translation_failed')
           description: error
           variant: "destructive"})
         return
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     if (!content) {;
       toast({;
@@ -259,6 +327,18 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
           description: error,;
           variant: "destructive"}),;
         return;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       if (field === 'title') {
         setTitle(translations)
@@ -267,19 +347,69 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       } else if (field === 'requirements') {
         setRequirements(translations)
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
     } catch (error) {
+<<<<<<< HEAD
       console.error(`Error translating ${field}:`, error),
+=======
+<<<<<<< HEAD
+      console.error(`Error translating ${field}:`, error),
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      console.error(`Error translating ${field}:`, error);
+=======
+      console.error(`Error translating ${field}:`, error),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      console.error(`Error translating ${field}:`, error),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
   // Ensure all translations are available
@@ -287,6 +417,16 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     const promises = [];
     if (!title.en && !title.es && !title.pt && !title.ar) return;
     if (!description.en && !description.es && !description.pt && !description.ar) return;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Title translations
+    if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
+      promises.push(autoTranslate('title'))
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       toast({;
         title: t('translation.translation_success'),;
@@ -307,6 +447,18 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     // Title translations;
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {;
       promises.push(autoTranslate('title'));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -324,9 +476,28 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   },
   };
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   
   
   
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -341,6 +512,19 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="title" className="text-lg font-medium">
               {t('jobs.job_title')}
             </label>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     if (!content) {;
       toast({;
@@ -403,13 +587,128 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
             <label htmlFor="title" className="text-lg font-medium">;
+<<<<<<< HEAD
       }
     }
+=======
+<<<<<<< HEAD
+      }
+    }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              {t('jobs && jobs.job_title')}
+            </label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('title')}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+              disabled={isTranslating || (!title && title.en && !title && title.es && !title && title.pt && !title && title.ar)}
+=======
+              disabled={isTranslating || (!title && title.en && !title && title.es && !title && title.pt && !title && title.ar)}
+              {t('jobs.job_title')}
+            </label>;
+            <Button;
+              type="button";
+              size="sm";
+              variant="outline";
+              onClick={() => autoTranslate('title')}
+              disabled={isTranslating || (!title.en && !title.es && !title.pt && !title.ar)}
+              className="flex items-center gap-1";
+            >;
+              {isTranslating ? (;
+                <Loader2 className="h-4 w-4 animate-spin" />;
+              ) :(;
+                <Globe className="h-4 w-4" />;
+              )}
+              {t('translation.auto_translate')}
+            </Button>;
+          </div>;
+          ;
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
+            <TabsList className="w-full">;
+              {supportedLanguages.map((lang) => (;
+                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
+                  <span className="mr-1">{lang.flag}</span> {lang.name}
+                </TabsTrigger>;
+              ))}
+            </TabsList>;
+            ;
+            {supportedLanguages.map((lang) => (;
+              <TabsContent key={lang.code} value={lang.code} className="mt-2">;
+                <div className="space-y-1">;
+                  <Input;                    id={`title-${lang.code}`}
+                    value={title[lang.code] || ''}
+                    onChange={(e) => handleTitleChange(e.target.value)}
+                    placeholder={t('jobs.title_placeholder')}
+                    className="w-full";
+                    dir={lang.code === 'ar' ? 'rtl' :'ltr'}
+                  />;
+                </div>;
+              </TabsContent>;
+            ))}
+          </Tabs>;
+        </div>;
+              disabled={isTranslating |(!title.en && !title.es && !title.pt && !title.ar)}
+              className="flex items-center gap-1"
+            >
+              {isTranslating ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Globe className="h-4 w-4" />
+              )}
+              {t('translation.auto_translate')}
+            </Button>
+          </div>
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+            <TabsList className="w-full">
+              {supportedLanguages.map((lang) => (
+                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
+                  <span className="mr-1">{lang.flag}</span> {lang.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {supportedLanguages.map((lang) => (
+              <TabsContent key={lang.code} value={lang.code} className="mt-2">
+                <div className="space-y-1">
+                  <Input
+                    id={`title-${lang.code}`}
+                    value={title[lang.code] |''}
+                    onChange={(e) => handleTitleChange(e.target.value)}
+                    placeholder={t('jobs.title_placeholder')}
+                    className="w-full"
+                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                  />
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
+        </div>
+        <div className="space-y-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="description" className="text-lg font-medium">
+              {t('jobs.job_description')}
+            </label>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button
               type="button"
               size="sm"
@@ -423,10 +722,87 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             ))}
           </Tabs>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        <div className="space-y-2">;
+          <div className="flex justify-between items-center">;
+            <label htmlFor="description" className="text-lg font-medium">;
+              {t('jobs && jobs.job_description')}
+            </label>;
+
+=======
+              disabled={isTranslating |(!description.en && !description.es && !description.pt && !description.ar)}
+              className="flex items-center gap-1"
+            >
+              {isTranslating ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Globe className="h-4 w-4" />
+              )}
+              {t('translation.auto_translate')}
+            </Button>
+          </div>
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+            <TabsList className="w-full">
+              {supportedLanguages.map((lang) => (
+                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
+                  <span className="mr-1">{lang.flag}</span> {lang.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {supportedLanguages.map((lang) => (
+              <TabsContent key={lang.code} value={lang.code} className="mt-2">
+                <Textarea
+                  id={`description-${lang.code}`}
+                  value={description[lang.code] |''}
+                  onChange={(e) => handleDescriptionChange(e.target.value)}
+                  placeholder={t('jobs.description_placeholder')}
+                  className="min-h-32 w-full"
+                  dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                />
+              </TabsContent>
+            ))}
+          </Tabs>
+        </div>
+        <div className="space-y-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="requirements" className="text-lg font-medium">
+              {t('jobs.skills_required')}
+            </label>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button
               type="button"
               size="sm"
               variant="outline"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              onClick={() => autoTranslate('description')}
+<<<<<<< HEAD
+=======
+
+              disabled={isTranslating || (!description && description.en && !description && description.es && !description && description.pt && !description && description.ar)}
+=======
+              onClick={() => autoTranslate('requirements')}
+              disabled={isTranslating || (!requirements && requirements.en && !requirements && requirements.es && !requirements && requirements.pt && !requirements && requirements.ar)}
+        ;
+        <div className="space-y-2">;
+          <div className="flex justify-between items-center">;
+            <label htmlFor="requirements" className="text-lg font-medium">;
+              {t('jobs.skills_required')}
+            </label>;
+            <Button;
+              type="button";
+              size="sm";
+              variant="outline";
+              onClick={() => autoTranslate('requirements')}
+              disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.pt && !requirements.ar)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="flex items-center gap-1";
             >;
               {isTranslating ? (;
@@ -436,6 +812,20 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             ))}
           </Tabs>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        <div className="space-y-2">;
+          <div className="flex justify-between items-center">;
+            <label htmlFor="requirements" className="text-lg font-medium">;
+              {t('jobs && jobs.skills_required')}
+            </label>;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button
               type="button"
               size="sm"
@@ -457,6 +847,35 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
               id="deadline"
               type="date"
               value={deadline}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              onChange={(e) => setDeadline(e.target.value)}
+              className="w-full"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="pt-4">
+        <Button
+          type="submit"
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
+          disabled={isSubmitting |isTranslating}
+        >
+          {isSubmitting ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              {t('jobs.submitting')}
+            </>
+          ) : (
+            t('jobs.post_job_button')
+          )}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               onChange={(e) => setDeadline(e && e.target.value)}
               className="w-full";
@@ -816,11 +1235,59 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+=======
+        </Button>
+      </div>
+    </form>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>;
       </div>;
     </form>;
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      <div className="pt - 4">;
+        <Button;
+          type="submit";
+          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan";
+          disabled={is_submitting || is_translating}
+        >;
+          {is_submitting ? (
+            <>;
+              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+              {t ('jobs.submitting')}
+            </>) : (
+            t ('jobs.post_job_button'))}
+        </Button>;
+      </div>;
+    </form>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ;
       <div className="pt-4">;
         <Button;
@@ -864,3 +1331,42 @@ onSubmit ({
   return;
 }return;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+
+}
+};
+//Ensure all translations are available if (!title.en && !title.es && !title.pt && !title.ar) return;
+if (!description.en && !description.es && !description.pt && !description.ar) return;
+//Title translations if (Object.values (title) .some (val => val) && Object.values (title) .some (val => !val) ) {
+  ) : (<Globe className=" h-4 w-4"/>) 
+}{
+  t ('translation.auto translate') 
+}</Button> </div> </TabsTrigger>) ) 
+}</TabsList> /> </div> </TabsContent>) ) 
+}</Tabs> </div>) : (<Globe className=" h-4 w-4"/>) 
+}{
+  t ('translation.auto translate') 
+}</Button> </div> </TabsTrigger>) ) 
+}</TabsList> /> </TabsContent>) ) 
+}</Tabs> </div>) : (<Globe className=" h-4 w-4"/>) 
+}{
+  t ('translation.auto translate') 
+}</Button> </div> </TabsTrigger>) ) 
+}</TabsList> /> </TabsContent>) ) 
+}</Tabs> </div> /> </div> </div> </div> <div className=" pt-4"> <Button > {
+  isSubmitting ? (<> <Loader2 className=" mr-2 h-4 w-4 animate-spin" /> {
+  t ('jobs.submitting') 
+}</>) : (t ('jobs.post job button') ) 
+}</Button> </div> </form>) 
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

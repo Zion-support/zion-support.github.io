@@ -2,6 +2,19 @@ import React from "react";
 interface TalentDirectoryHeaderProps {
   title: string;
   description: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import React from "react",;
+interface TalentDirectoryHeaderProps {;
+  title: string,;
+  description: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export function TalentDirectoryHeader({
@@ -82,6 +95,17 @@ function TalentDirectoryHeader() {
         <p className="text - zion - slate - light max - w-2xl">{description}</p>;
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),; interface TalentDirectoryHeaderProps {
   title: string;
 description: string 
@@ -105,3 +129,8 @@ description: string
 }
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

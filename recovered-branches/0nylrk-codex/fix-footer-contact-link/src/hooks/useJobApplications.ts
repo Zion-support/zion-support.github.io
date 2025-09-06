@@ -22,6 +22,27 @@ export const useJobApplications = (jobId?: string) => {;
       return
     }
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+  const fetchApplications = async () => {
+    if (!user) {
+      setIsLoading(false),
+      return
+    }
+    try {
+      setIsLoading(true);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       let query = supabase
         .from("job_applications")
         .select(`
@@ -29,6 +50,14 @@ export const useJobApplications = (jobId?: string) => {;
           job: jobs(*)
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
         `)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        .order("created_at", { ascending: false });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setIsLoading(true),
       
       let query = supabase
@@ -40,20 +69,70 @@ export const useJobApplications = (jobId?: string) => {;
         `)
         .order("created_at", { ascending: false }),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Filter by job if jobId is provided
       if (jobId) {
         query = query && query.eq("job_id", jobId)
       }
       // For talent users, only fetch their own applications
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      if (user && user.userType === "jobSeeker" || user && user.userType === "creator") {
+=======
+if (user && user.userType === "jobSeeker" || user && user.userType === "creator") {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         query = query && query.eq("talent_id", user && user.id)
       } 
       // For client users, fetch applications for their jobs
       else if (user && user.userType === "employer" || user && user.userType === "buyer") {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+      // Filter by job if jobId is provided
+      if (jobId) {
+        query = query.eq("job_id", jobId)
+      }
+      // For talent users, only fetch their own applications
+      if (user.userType === "jobSeeker" |user.userType === "creator") {
+        query = query.eq("talent_id", user.id)
+      }
+      // For client users, fetch applications for their jobs
+      else if (user.userType === "employer" |user.userType === "buyer") {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (!jobId) {
           // Fix: Convert the subquery to a proper array or string
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             .eq("client_id", user && user.id);
           
 
@@ -62,12 +141,34 @@ export const useJobApplications = (jobId?: string) => {;
           
 
             .eq("client_id", user && user.id);
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           if (jobIds && jobIds.length > 0) {
             const jobIdArray = jobIds && jobIds.map(job => job && job.id);
             query = query && query.in("job_id", jobIdArray)
           }
         }
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        ...app;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      const { data, error: fetchError } = await query;
+      if (fetchError) throw fetchError;
+      // Transform the data to match our application types
+      const transformedData = data && data.map((app: any) => ({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { use_auth } from '@/hooks / use_auth';
@@ -150,12 +251,35 @@ if (throw fetch_error) {
           full_name: app && app.talent_profile.display_name;
           profile_picture_url: app && app.talent_profile.avatar_url,
         ...app;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           skills: []
         } : undefined
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      console && console.error("Error fetching applications:", err);
+      setError("Failed to fetch applications: " + err && err.message),
+      toast && toast.error("Failed to fetch applications")
+
+=======
+=======
+      console && console.error("Error fetching applications:", err);
+      setError("Failed to fetch applications: " + err && err.message),
+      toast && toast.error("Failed to fetch applications")
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           profile_picture_url: app.talent_profile.avatar_url,
           skills: [];
         } : undefined;
@@ -171,6 +295,30 @@ if (throw fetch_error) {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+      
+      const { data, error: fetchError } = await query,
+      
+      if (fetchError) throw fetchError,
+      
+
+      // Transform the data to match our application types
+      const transformedData = data.map((app: any) => ({
+        ...app,
+        talent_profile: app.talent_profile ? {
+
+=======
+      console.error("Error fetching applications:", err);
+      setError("Failed to fetch applications: " + err.message)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -200,6 +348,25 @@ if (throw fetch_error) {
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+          job_id: jobId;
+          talent_id: user.id;
+          resume_id: resumeId;
+          cover_letter: coverLetter
+          status: "new"
+        })
+        .select()
+        .single();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           job_id: jobId,
           talent_id: user.id,
           resume_id: resumeId,
@@ -243,6 +410,11 @@ export const useJobApplications = (jobId?: string) => {;
       // Filter by job if jobId is provided;
       if (jobId) {;
         query = query.eq("job_id", jobId);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
         return false
       }
@@ -320,6 +492,8 @@ if ( { // Unique violation) {
 
 
       
+<<<<<<< HEAD
+=======
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -344,15 +518,80 @@ if ( { // Unique violation) {
     } catch (err: any) {
       console && console.error("Error applying to job:", err);
       toast && toast.error("Failed to submit application: " + err && err.message),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      return false
+    }
+  }
+=======
+      return false
+
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { toast } from "sonner",;
+;
+export const useJobApplications = (jobId?:string) => {;
+  const { user } = useAuth(),;
+  const [applications, setApplications] = useState<JobApplication[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+;
+  const fetchApplications = async () => {;
+    if (!user) {;
+      setIsLoading(false),;
+      return,;
+    }
+  }
+      
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      // Add the new application to the local state
+      const newApplication = data as JobApplication,
+      setApplications(prev => [newApplication, ...prev]),
+      
+      toast.success("Application submitted successfully"),
+      return true
+    } catch (err: any) {
+      console.error("Error applying to job:", err),
+      toast.error("Failed to submit application: " + err.message),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return false
     }
   },
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+        .eq("id", applicationId);
+      if (error) throw error;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .eq("id", applicationId),
       
       if (error) throw error,
@@ -368,6 +607,17 @@ if ( { // Unique violation) {
     }
   },
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -378,11 +628,23 @@ if ( { // Unique violation) {
         })
         .eq("id", applicationId)
         .is("viewed_at", null), // Only update if not already viewed
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       
       if (error) throw error,
       
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Update the local state
 
       setApplications(prev => 
@@ -470,6 +732,63 @@ if ( {) {
     markApplicationAsViewed;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+      if (error) throw error;
+      
+      if (error) throw error,
+      
+      // Update the local state
+      setApplications(prev =>
+        prev.map(app => app.id === applicationId ?
+          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
+        )
+      );
+      ),
+      
+      return true
+    } catch (err) {
+      console.error("Error marking application as viewed:", err),
+      return false
+    }
+  }
+  // Fetch applications when component mounts or dependencies change
+  useEffect(() => {
+    if (user) {
+      fetchApplications()
+    }
+  }, [user, jobId]);
+  return {
+    applications;
+    is_loading;
+    error;
+    refetch: fetch_applications;
+    applyToJob;
+    updateApplicationStatus,
+    markApplicationAsViewed;
+
+
+  return {
+    applications;
+    isLoading;
+    error;
+    refetch: fetchApplications;
+    applyToJob;
+    updateApplicationStatus
+    markApplicationAsViewed
+  }
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       // Add the new application to the local state;
       const newApplication = data as JobApplication,;
@@ -538,6 +857,22 @@ if ( {) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+};
+=======
+<<<<<<< HEAD
+
+
+  }
+}
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .is("viewed_at", null), // Only update if not already viewed;
       ;
       if (error) throw error,;
@@ -641,3 +976,8 @@ markApplicationAsViewed
 };
   }
 };
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

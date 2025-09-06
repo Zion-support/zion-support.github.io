@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -15,16 +27,63 @@ import {useRecordActivity} from './useRecordActivity';
           project_id: projectId,
           created_by: user && user.id})
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+export const useCreateMilestone = (projectId?: string) => {
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { recordMilestoneActivity } = useRecordActivity();
+  const createMilestone = async (milestoneData: Omit<Milestone, 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
+    if (!user |!projectId) return null;
+    try {
+      setIsSubmitting(true);
+      const { data, error } = await supabase
+        .from('project_milestones')
+        .insert({
+          ...milestoneData;
+          project_id: projectId
+          created_by: user.id})
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .select()
         .single();
       if (error) throw error;
       // Create activity record
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      await recordMilestoneActivity(data && data.id, 'created', null, 'pendingMilestone created');
+      
+      toast && toast.success("Milestone created successfully");
+      
+      return data
+    } catch (err: any) {
+      console && console.error("Error creating milestone:", err);
+      toast && toast.error("Failed to create milestone: " + err && err.message),
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return null
 export const useCreateMilestone = (project_id?: string) =>: any {
   const { user } = use_auth ();
@@ -38,10 +97,49 @@ if (return null) {
     } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+      await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created');
+      toast.success("Milestone created successfully");
+      return data
+    } catch (err: any) {
+      console.error("Error creating milestone:", err);
+      toast.error("Failed to create milestone: " + err.message)
+      return null
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  return {
+    createMilestone;
+    isSubmitting
+  }
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const useCreateMilestone = (projectId?: string) => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -52,6 +150,15 @@ export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   
   const createMilestone = async (milestoneData: Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     if (!user || !projectId) return null,
@@ -82,12 +189,29 @@ export const useCreateMilestone = (projectId?: string) => {
       return null
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   };
   
   return {
     createMilestone;
     isSubmitting
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -136,7 +260,14 @@ export const useCreateMilestone = (projectId?: string) => {;
 ;
   }
 };
+<<<<<<< HEAD
+=======
   }
 };
   }
 };
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

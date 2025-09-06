@@ -1,9 +1,3 @@
-return (
-
-
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
 
         <Card>
           <CardHeader>
@@ -38,10 +32,6 @@ return (
           </CardFooter>
         </Card>
 
-
-        
-
-
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -75,10 +65,6 @@ return (
           </CardFooter>
         </Card>
 
-
-        
-
-
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -109,10 +95,6 @@ return (
             </Button>
           </CardFooter>
         </Card>
-
-
-        
-
 
         <Card>
           <CardHeader>
@@ -156,14 +138,6 @@ return (
           </CardFooter>
         </Card>
       </div>
-
-
-      
-      <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
-            <Sparkles className="h-5 w-5 text-primary" />
-
 
           </div>
           <div>
@@ -375,27 +349,3 @@ export function UsageStats() {;
         </Card>;
       </div>;
 
-      <div className='bg - muted / 50 rounded - lg p - 6 flex items - center justify - between'>;
-        <div className='flex items - center gap - 4'>;
-          <div className='h - 10 w - 10 rounded - full bg - primary / 20 flex items - center justify - center'>;
-            <Sparkles className='h - 5 w - 5 text - primary' />;
-          </div>;
-          <div>;
-            <h3 className='font - medium'>Need higher limits?</h3>;
-            <p className='text - sm text - muted - foreground'>;
-
-              Contact your account manager to discuss custom limits for your;
-              enterprise.;
-            </p>;
-          </div>;
-        </div>;
-
-
-
-        <Button > Contact Us</Button>;
-      </div>;
-    </div>);
-}"}
-
-    </div>
-  )

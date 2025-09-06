@@ -1,11 +1,57 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+=======
+
+
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -15,12 +61,32 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
@@ -29,6 +95,35 @@ serve(async (req) => {
     const { scope, startDate, endDate, projectType } = await req && req.json();
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+    const { scope, startDate, endDate, projectType } = await req && req.json();
+
+
+
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    // Get the OpenAI API key from environment variables
+    const apiKey = Deno.env.get('OPENAI_API_KEY');
+    if (!apiKey) {
+      throw new Error('OPENAI_API_KEY is not set')
+    }
+    // Parse request body
+    const { scope, startDate, endDate, projectType } = await req.json();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -44,12 +139,30 @@ serve(async (req) => {;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json(),
     
     
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   try {
     // Get the OpenAI API key from environment variables
@@ -59,6 +172,16 @@ serve(async (req) => {;
     }
     // Parse request body
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -76,6 +199,22 @@ serve(async (req) => {;
     Format the response as a valid JSON array of milestone objects with these fields:
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    `;
+    `,
+
+    // Call OpenAI API
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST'
+      headers: {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
     `,
@@ -97,6 +236,102 @@ serve(async (req) => {;
         model: 'gpt-4o-mini';
         messages: [
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`},
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        messages: [
+          {
+            role: 'system'
+            content: 'You are a project management expert that breaks work into appropriate milestones.'}
+          {
+            role: 'user'
+            content: prompt}];
+        temperature: 0.7})});
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.error?.message |'Failed to generate milestones')
+    }
+    // Parse the AI-generated content to ensure it's valid JSON
+    try {
+      const content = data.choices[0].message.content.trim();
+      // Try to parse the response as JSON
+      const milestones = JSON.parse(content);
+      return new Response(JSON.stringify({ milestones }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+    } catch (parseError) {
+      // If parsing fails, try to extract JSON from the text
+      console.error('Failed to parse AI response as JSON:', parseError);
+      throw new Error('Failed to parse AI response')
+    }
+  } catch (error) {
+    console.error('Error generating milestones:', error);
+    return new Response(
+      JSON.stringify({ error: error.message |'Failed to generate milestones' });
+      {
+        status: 500
+            role: 'system',
+            content: 'You are a project management expert that breaks work into appropriate milestones.'},
+          {
+            role: 'user',
+            content: prompt}],
+        temperature: 0.7})}),
+
+    const data = await response.json(),
+    
+    if (!response.ok) {
+      throw new Error(data.error?.message || 'Failed to generate milestones')
+    }
+
+    // Parse the AI-generated content to ensure it's valid JSON
+    try {
+      const content = data.choices[0].message.content.trim();
+      // Try to parse the response as JSON
+      const milestones = JSON.parse(content);
+      
+      return new Response(JSON.stringify({ milestones }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+    } catch (parseError) {
+      // If parsing fails, try to extract JSON from the text
+      console.error('Failed to parse AI response as JSON:', parseError);
+      throw new Error('Failed to parse AI response')
+    }
+  } catch (error) {
+    console.error('Error generating milestones:', error);
+    return new Response(
+      JSON.stringify({ error: error.message || 'Failed to generate milestones' });
+      { 
+        status: 500, 
+;
+    // Parse the AI-generated content to ensure it's valid JSON;
+    try {;
+      const content = data.choices[0].message.content.trim(),;
+      // Try to parse the response as JSON;
+      const milestones = JSON.parse(content),;
+      return new Response(JSON.stringify({ milestones }), {;
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+    } catch (parseError) {;
+      // If parsing fails, try to extract JSON from the text;
+      console.error('Failed to parse AI response as JSON:', parseError),;
+      throw new Error('Failed to parse AI response');
+    }
+  } catch (error) {;
+    console.error('Error generating milestones:', error),;
+    return new Response(;
+      JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
+      {;
+        status: 500,;
+
+            role: 'system'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Call OpenAI API
         model: 'gpt-4o-mini';
         messages: [
@@ -156,16 +391,49 @@ if ( {) {
         messages: [;
           {
             role: 'system',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
             role: 'user'
             content: prompt}];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         temperature: 0 && 0.7})});
 
     const data = await response && response.json();
     
     if (!response && response.ok) {
       throw new Error(data && data.error?.message || 'Failed to generate milestones')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     // Parse the AI-generated content to ensure it's valid JSON
     try {
@@ -183,6 +451,23 @@ if ( {) {
   } catch (error) {
     console && console.error('Error generating milestones:', error);
     return new Response(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      JSON && JSON.stringify({ error: error && error.message || 'Failed to generate milestones' });
+      { 
+        status: 500, 
+
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             role: 'system',
             content: 'You are a project management expert that breaks work into appropriate milestones.'},
           {
@@ -195,11 +480,41 @@ if ( {) {
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate milestones')
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+    // Parse the AI-generated content to ensure it's valid JSON;
+    try {;
+      const content = data.choices[0].message.content.trim(),;
+      // Try to parse the response as JSON;
+      const milestones = JSON.parse(content),;
+      return new Response(JSON.stringify({ milestones }), {;
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+    } catch (parseError) {;
+      // If parsing fails, try to extract JSON from the text;
+      console.error('Failed to parse AI response as JSON:', parseError),;
+      throw new Error('Failed to parse AI response');
+    }
+  } catch (error) {;
+    console.error('Error generating milestones:', error),;
+    return new Response(;
+      JSON.stringify({ error: error.message || 'Failed to generate milestones' }),;
+      {;
+        status: 500,;
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
 
+<<<<<<< HEAD
+=======
 
 ;
     const data = await response.json ();
@@ -352,3 +667,11 @@ serve(async (req) => {;
   }
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

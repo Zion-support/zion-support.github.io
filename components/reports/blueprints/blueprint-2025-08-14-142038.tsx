@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function Page() {
 
   return (
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
@@ -56,6 +61,7 @@ export default function Page() {
   }
 }
 ;
+<<<<<<< HEAD
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -153,3 +159,6 @@ function Page() {
       </main>;
     </div>);
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

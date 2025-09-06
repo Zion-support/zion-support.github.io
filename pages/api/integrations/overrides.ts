@@ -6,8 +6,7 @@
   }
     });
     return res && res.status(200).json({
-      ok: true
-      override: updated && updated.overrides.find((o) => o && o.jobId === jobId)
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -64,7 +63,6 @@ if (state.overrides[idx] = entry) {
   return res.status (405).json ({ error: "Method not allowed" });
 }
 
-
   }
   }
 }
@@ -78,5 +76,4 @@ if (state.overrides[idx] = entry) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 

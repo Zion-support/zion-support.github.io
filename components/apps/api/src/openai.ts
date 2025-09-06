@@ -1,4 +1,8 @@
 import OpenAI from 'openai';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return new OpenAI({ apiKey });
 export async function generateJobPost(
   openai: OpenAIClient
@@ -6,6 +10,7 @@ export async function generateJobPost(
   opts: any
 ): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
+<<<<<<< HEAD
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote'}
 Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
@@ -13,12 +18,14 @@ Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
 
-
   return new OpenAI({ apiKey });
 
+<<<<<<< HEAD
 
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote'}
@@ -26,11 +33,17 @@ Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
     input: prompt
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -57,6 +70,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   return completion.output_text;
 }
 
+<<<<<<< HEAD
 }
 
 
@@ -75,3 +89,5 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 }
 
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,7 +1,59 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export type CuttingEdgeAIService = {
       'CBT-guided prompts',
   launch_date?: string;
   real_service?: boolean;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  id: string;
+  name: string;
+  description: string;
+  category:
+    | 'AI Consciousness'
+    | 'AI Emotional Intelligence'
+    | 'AI Creativity'
+    | 'AI Psychology'
+    | 'AI Business Management'
+    | 'AI Healthcare'
+    | 'AI Neural Interfaces'
+    | 'AI Quantum Computing';
+  pricing: { starter: string; professional?: string; enterprise?: string }
+  features: string[];
+  integrations?: string[];
+  useCases?: string[];
+  link: string;
+  rating?: number;
+  launchDate?: string;
+  realService?: boolean;
+}
+export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
+  {
+
+<<<<<<< HEAD
+=======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+  {
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
     description:;
@@ -37,16 +89,62 @@ export type CuttingEdgeAIService = {
       'Rights management',
     ],
     integrations: ['Canva', 'Figma'],
+<<<<<<< HEAD
 ];	id: string;
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   },;
 ];	id: string;
+<<<<<<< HEAD
 	id: string, name: string,
 	description: string,
 
+=======
+
+<<<<<<< HEAD
+=======
+=======
+
+    use_cases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup.com / services / ai - creative - studio',
+    real_service: true,
+
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+];	id: string;
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    useCases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup.com/services/ai-creative-studio',
+    realService: true,
+  },;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+];	id: string;
+	id: string, name: string,
+	description: string,
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -75,6 +173,18 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		realService: true
 	}
 	{
@@ -86,6 +196,18 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		realService: true
 	}
 	{
@@ -97,10 +219,40 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['Brand kitImage & video genReview & approvalsRights management'];
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	}
+];
+
+=======
+<<<<<<< HEAD
+	}
+];
+
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
+
+		realService: true
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 	}
 ];
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 name: string;
 description: string;
 category:;

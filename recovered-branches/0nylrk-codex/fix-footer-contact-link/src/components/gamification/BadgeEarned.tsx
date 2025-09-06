@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import React from './react';
+import { getBadgeMeta, BadgeKey } from './badge_config';
+
+<<<<<<< HEAD
+=======
+import React from './react';
+import { getBadgeMeta, BadgeKey } from './badge_config';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface BadgeEarnedProps {
   badge: BadgeKey
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
@@ -14,6 +31,25 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 }
 export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   badge;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  size = 44;
+<<<<<<< HEAD
+=======
+  showDesc = false,;
+  earnedDate}) => {;
+  const meta = getBadgeMeta(badge);
+  if (!meta) return null;
+  const Icon = meta && meta.icon;
+
+
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+
+import React from "react";
+import { getBadgeMeta, BadgeKey } from "./badgeConfig";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface BadgeEarnedProps {
 
   badge: BadgeKey
@@ -31,11 +67,20 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   badge;
 
   size = 44;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   size?: number;
   showName?: boolean;
   showDesc?: boolean;
@@ -46,6 +91,13 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
@@ -54,6 +106,20 @@ interface BadgeEarnedProps {
   earnedDate?: string
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   badge;
   size = 44;
@@ -78,10 +144,31 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   const Icon = meta.icon,
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           background: meta && meta.bg,
           borderRadius: "9999px",
           width: size,
@@ -131,6 +218,13 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       </div>;
       {showName && (;
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
           {meta.name}
@@ -151,12 +245,30 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
     </div>;
   );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
     </div>;
@@ -205,6 +317,15 @@ if (return null) {
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
@@ -301,3 +422,10 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -2,10 +2,7 @@ import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { StarIcon } from 'lucide-react';
-import Image from 'next / image'; // Import next / image;
-import React, { useState } from 'react'; // Import useStateimport Image from 'next / image'; // Import next / image;
-import React, { useState } from 'react'; // Import useState;
-import { Star } from 'lucide-react';
+
 interface ListingScoreCardProps {
   title: string;
   description: string;
@@ -13,9 +10,6 @@ interface ListingScoreCardProps {
   category: string;
   tags?: string[];
   author?: string;
-
-export function ListingScoreCard(): any ({;
-
 
   tags,
   author,
@@ -26,12 +20,6 @@ export function ListingScoreCard(): any ({;
   className
 }: ListingScoreCardProps) {
 
-
-      {image && !mainImageError && (
-        <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
-          <Image
-
-
             src={image} 
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -39,8 +27,6 @@ export function ListingScoreCard(): any ({;
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
-
-
 
         </div>
       )}
@@ -66,7 +52,6 @@ export function ListingScoreCard(): any ({;
             )
           )}
         </div>
-
 
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
@@ -103,6 +88,7 @@ interface ListingScoreCardProps {;
 }
 ;
 export function ListingScoreCard({;
+
   title,;
   description,;
   image,;
@@ -113,15 +99,7 @@ export function ListingScoreCard({;
   aiScore,;
   rating = 0,;
   reviewCount = 0,;
-  className,;
-}: ListingScoreCardProps) {;
-  const [mainImageError, setMainImageError] = useState(false);
-  const [authorImageError, setAuthorImageError] = useState(false);
 
-
-    >;
-      {image && !mainImageError && (;
-        <div className='h-48 w-full overflow-hidden relative'>;
   author_image?: string;
   ai_score?: number;
   rating?: number;
@@ -220,52 +198,10 @@ function ListingScoreCard() {
 
         </p>;
 
-        {rating > 0 && (;
-          <div className='flex items-center gap-1 mb-4'>;
-            <div className='flex'>;
-              {[1, 2, 3, 4, 5].map(star => (;
-                <StarIcon
-                  key={star}
-                  className={cn(
-                    'h-4 w-4',
-                    star <= Math && Math.round(rating)
-                      ? 'text-zion-cyan fill-zion-cyan'
-                      : 'text-zion-slate-light'
-                  )}                />;
-
-                  className={cn(;
-                    "h-4 w-4";
-                    star <= Math.round(rating);
-                      ? "text-zion-cyan fill-zion-cyan";
-                      : "text-zion-slate-light";
-                  )}
-                />;
-
-
-              ))}
-            </div>;
-            <span className='text-sm text-zion-slate-light ml-1'>;
-              ({reviewCount});
-            </span>;
-          </div>;
-        )}
-
-
-        {tags && tags.length > 0 && (;
-          <div className='flex flex-wrap gap-2 mb-4'>;
-            {tags && tags.map((tag, i) => (;
-
-              <Badge
-                key={i}
-                variant='outline'
-                className='border-zion-slate-dark text-zion-slate-light'>                {tag}
               </Badge>;
             ))}
           </div>;
         )}
-
-
-
 
         {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
@@ -343,13 +279,9 @@ function ListingScoreCard() {
               </div>
             )}
 
-
             <span className="text-sm text-zion-slate-light">{author}</span>
           </div>
         )}
       </div>;
     </div>;
-  );
 
-}
-;

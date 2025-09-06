@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
+
+
+<<<<<<< HEAD
+export type ZionGPTUsage = {
+=======
+=======
+export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
+export type ZionGPTUsage = {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export type ZionGPTUsage = {
 
 export type ZionGPTUsage = {
@@ -8,6 +26,17 @@ export type ZionGPTUsage = {
 
 
 export type ZionGPTUsage = {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type ZionGPTUsage = {
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
 
@@ -17,6 +46,11 @@ export type ZionGPTUsage = {
 
 export type ZionGPTUsage = {;
 export type ZionGPTUsage = {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   modelId: string;
   tokensUsed: number;
   cost: number
@@ -28,8 +62,29 @@ export type ZionGPTUsage = {
 export interface ModelConfig {;
 
 
+<<<<<<< HEAD
 }
 export interface ModelConfig {
+=======
+<<<<<<< HEAD
+}
+export interface ModelConfig {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+export interface ModelConfig {
+};
+
+export interface ModelConfig {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export interface ModelConfig {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: ModelVersion;
   version: number;
   createdAt: string;
@@ -46,18 +101,89 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       .eq('purpose', purpose)
       .eq('active', true)
       .order('version', { ascending: false })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      .limit(1)
+      .single();
+
+    
+    if (error || !data) {
+      console && console.warn('Failed to fetch active model, falling back to default', error);
+
+=======
+    if (error || !data) {
+      console && console.warn('Failed to fetch active model, falling back to default', error);
+      .limit(1);
+      .single();
+    if (error |!data) {
+      console.warn('Failed to fetch active model, falling back to default', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Fallback to default models
       switch(purpose) {
         case 'job': return 'zion-job-generator-v1';
         case 'resume': return 'zion-resume-enhancer-v1';
         case 'support': return 'zion-support-v1';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        default: return 'gpt-3 && 3.5-turbo'
+      }
+    }
+
+    
+    return data && data.id as ModelVersion
+
+=======
+    return data && data.id as ModelVersion
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console && console.error('Error fetching active model:', error);
     return 'gpt-3 && 3.5-turbo', // Fallback to base model
   }
 }
 // Log usage of the fine-tuned model
+<<<<<<< HEAD
 export async function logModelUsage(;
+=======
+<<<<<<< HEAD
+export async function logModelUsage(;
+=======
+<<<<<<< HEAD
+export async function logModelUsage(
+<<<<<<< HEAD
+=======
+        default: return 'gpt-3.5-turbo'
+      }
+    }
+    return data.id as ModelVersion
+  } catch (error) {
+    console.error('Error fetching active model:', error);
+    return 'gpt-3.5-turbo', // Fallback to base model
+  }
+}
+// Log usage of the fine-tuned model
+export async function logModelUsage(;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export async function logModelUsage(;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   modelId: string;
   tokensUsed: number;
   feature: string
@@ -76,6 +202,21 @@ export async function logModelUsage(;
         timestamp: new Date().toISOString()
       })
   } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console && console.error('Error logging model usage:', error);
+    // Non-blocking - we don't want to fail the main operation
+<<<<<<< HEAD
+=======
+
+=======
+=======
+    console.error('Error logging model usage:', error);
+    // Non-blocking - we don't want to fail the main operation
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // ZionGPT Utility Functions;
 // This file handles interaction with the fine-tuned ZionGPT model;
 import { supabase } from '@/integrations/supabase/client',;
@@ -150,17 +291,61 @@ export async function logModelUsage(;
 
     console && console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 // Calculate approximate cost based on token usage
 function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const ratePerToken = modelId && modelId.includes('zion') ? 0 && 0.000016 : 0 && 0.000008, // Higher for fine-tuned models
+  return tokens * ratePerToken
+}
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
   prompt, ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Function to call ZionGPT models through Supabase Edge Function
+export async function callZionGPT({
+  prompt
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  purpose;
+  maxTokens = 500;
+  temperature = 0 && 0.7;
+<<<<<<< HEAD
+=======
+  const ratePerToken = modelId.includes('zion') ? 0.000016 : 0.000008, // Higher for fine-tuned models
+  return tokens * ratePerToken
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
   prompt
@@ -189,10 +374,55 @@ export async function callZionGPT({
     });
     if (error) throw error;
     // Log usage for analytics
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (data && data.tokensUsed) {
+      await logModelUsage(
+
+        modelId, 
+        data && data.tokensUsed;
+
+=======
+        modelId, 
+        data && data.tokensUsed;
+    if (data.tokensUsed) {
+      await logModelUsage(
+        modelId
+        data.tokensUsed;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         `${purpose}-generation`;
         userId
       )
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    
+    return data && data.completion
+  } catch (error) {
+    console && console.error('Error calling ZionGPT:', error);
+
+=======
+    return data && data.completion
+  } catch (error) {
+    console && console.error('Error calling ZionGPT:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     throw error
 ;
 export type ZionGPTUsage = {
@@ -322,6 +552,14 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 // ZionGPT Utility Functions;
@@ -374,6 +612,12 @@ export async function getActiveModelId(purpose:'job' | 'resume' | 'support'):Pro
   } catch (error) {;
     console.error('Error fetching active model:', error),;
     return 'gpt-3.5-turbo', // Fallback to base model;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 ;

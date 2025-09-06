@@ -1,14 +1,58 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
+
+import {useTranslation} from 'react-i18next';
+import {supabase} from '../integrations/supabase/client';
+import {toast} from '../components/ui/use-toast';
+export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
+export type LanguageContextType = {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   currentLanguage: SupportedLanguage
   changeLanguage: (lang: SupportedLanguage) => Promise<void>
   isRTL: boolean
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const supportedLanguages = [
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
@@ -21,10 +65,48 @@ const defaultLanguageContext: LanguageContextType = {
   isRTL: false
   supportedLanguages
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export type LanguageContextType = {;
+  currentLanguage: SupportedLanguage,;
+  changeLanguage: (lang: SupportedLanguage) => Promise<void>,;
+  isRTL: boolean,;
+  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
+};
+
+const supportedLanguages = [;
+  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },;
+  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' },;
+  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
+  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
+];
+
+const defaultLanguageContext: LanguageContextType = {;
+  currentLanguage: 'en',;
+  changeLanguage: async () => {},;
+  isRTL: false,;
+  supportedLanguages;
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
@@ -32,11 +114,35 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children
   authState = { isAuthenticated: false, user: null }
 }) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
   authState = { isAuthenticated: false, user: null } 
 }) => {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
@@ -59,6 +165,46 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     // Add RTL class for Tailwind
     if (i18n.dir() === 'rtl') {
       document.documentElement.classList.add('rtl')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    } else {
+      document.documentElement.classList.remove('rtl')
+    }
+  }, [currentLanguage, i18n]);
+  // Sync language preference with user profile when authenticated
+  useEffect(() => {
+    const syncLanguageWithProfile = async () => {
+      if (isAuthenticated && user?.id) {
+        try {
+          const { error } = await supabase
+            .from('profiles')
+            .update({ preferred_language: currentLanguage })
+            .eq('id', user.id);
+          if (error) {
+            console.error('Error updating language preference:', error)
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
+import { useTranslation } from 'react-i18next',;
+import { supabase } from '../integrations/supabase/client',;
+import { toast } from '../components/ui/use-toast',;
+export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar',;
+export type LanguageContextType = {;
+  currentLanguage: SupportedLanguage,;
+  changeLanguage: (lang: SupportedLanguage) => Promise<void>,;
+  isRTL: boolean,;
+  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
+},;
+const supportedLanguages = [;
+  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },;
+  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' },;
+  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
 import {use_translation} from 'react - i18next';
 import {supabase} from '../integrations / supabase / client';
@@ -137,21 +283,192 @@ if (=== 'rtl') {) {
 ;
   // Sync language preference with user profile when authenticated;
   useEffect (() => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
     } else {
       document.document_element.class_list.remove ('rtl');
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const syncLanguageWithProfile = async () => {
       // Check condition
 if ( {) {
   $2
 }
         try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+interface LanguageProviderProps {;
+  children: ReactNode,;
+  authState?: { ;
+=======
+interface LanguageProviderProps {;
+  children: ReactNode,;
+  authState?: { ;
+  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
+],;
+const defaultLanguageContext: LanguageContextType = {;
+  currentLanguage: 'en',;
+  changeLanguage: async () => {},;
+  isRTL: false,;
+  supportedLanguages;
+},;
+const LanguageContext = createContext(defaultLanguageContext),;
+export const useLanguage = (): LanguageContextType => useContext(LanguageContext),;
+interface LanguageProviderProps {;
+  children: ReactNode,;
+  authState?: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     isAuthenticated: boolean,;
     user: { id?: string } | null;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
+  children, ;
+  authState = { isAuthenticated: false, user: null } ;
+}) => {;
+  const { i18n, t } = useTranslation();
+  const { isAuthenticated, user } = authState;
+  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
+    (i18n && i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
+  );
+  const [isRTL, setIsRTL] = useState(i18n && i18n.dir() === 'rtl');
+
+  useEffect(() => {;
+    // Set initial language from localStorage or browser;
+    const savedLang = localStorage && localStorage.getItem('zion_language') as SupportedLanguage;
+    if (savedLang && supportedLanguages && supportedLanguages.some(lang => lang && lang.code === savedLang)) {;
+      i18n && i18n.changeLanguage(savedLang);
+      setCurrentLanguage(savedLang);
+    }
+  }, []);
+
+  // Update RTL status when language changes;
+  useEffect(() => {;
+    setIsRTL(i18n && i18n.dir() === 'rtl');
+    document && document.documentElement.dir = i18n && i18n.dir();
+    document && document.documentElement.lang = currentLanguage;
+
+    // Add RTL class for Tailwind;
+    if (i18n && i18n.dir() === 'rtl') {;
+      document && document.documentElement.classList && classList.add('rtl');
+    } else {;
+      document && document.documentElement.classList && classList.remove('rtl');
+    }
+  }, [currentLanguage, i18n]);
+
+=======
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
+import { useTranslation } from 'react-i18next',;
+import { supabase } from '../integrations/supabase/client',;
+import { toast } from '../components/ui/use-toast',;
+;
+export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar',;
+;
+export type LanguageContextType = {;
+  currentLanguage:SupportedLanguage,;
+  changeLanguage:(lang:SupportedLanguage) => Promise<void>,;
+  isRTL:boolean,;
+  supportedLanguages:{ code:SupportedLanguage, name:string, flag:string }[],;
+},;
+;
+const supportedLanguages = [;
+  { code:'en' as SupportedLanguage, name:'English', flag:'🇺🇸' },;
+  { code:'es' as SupportedLanguage, name:'Español', flag:'🇪🇸' },;
+  { code:'pt' as SupportedLanguage, name:'Português', flag:'🇧🇷' },;
+  { code:'ar' as SupportedLanguage, name:'العربية', flag:'🇸🇦' }
+],;
+;
+const defaultLanguageContext:LanguageContextType = {;
+  currentLanguage:'en',;
+  changeLanguage:async () => {},;
+  isRTL:false,;
+  supportedLanguages;
+},;
+;
+const LanguageContext = createContext(defaultLanguageContext),;
+;
+export const useLanguage = ():LanguageContextType => useContext(LanguageContext),;
+;
+interface LanguageProviderProps {;
+  children:ReactNode,;
+  authState?:{ ;
+    isAuthenticated:boolean,;
+    user:{ id?:string } | null,;
+  },;
+}
+;
+export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
+  children, ;
+  authState = { isAuthenticated:false, user:null } ;
+}) => {;
+;
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
+  children,;
+  authState = { isAuthenticated: false, user: null } ;
+}) => {;
+  const { i18n, t } = useTranslation(),;
+  const { isAuthenticated, user } = authState,;
+  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
+    (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';
+  ),;
+  const [isRTL, setIsRTL] = useState(i18n.dir() === 'rtl'),;
+  useEffect(() => {;
+    // Set initial language from localStorage or browser;
+    const savedLang = localStorage.getItem('zion_language') as SupportedLanguage,;
+    if (savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {;
+      i18n.changeLanguage(savedLang),;
+      setCurrentLanguage(savedLang);
+    }
+  }, []),;
+  // Update RTL status when language changes;
+  useEffect(() => {;
+    setIsRTL(i18n.dir() === 'rtl'),;
+    document.documentElement.dir = i18n.dir(),;
+    document.documentElement.lang = currentLanguage,;
+    // Add RTL class for Tailwind;
+    if (i18n.dir() === 'rtl') {;
+      document.documentElement.classList.add('rtl');
+    } else {;
+      document.documentElement.classList.remove('rtl');
+    }
+  }, [currentLanguage, i18n]),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Sync language preference with user profile when authenticated;
   useEffect(() => {;
     const syncLanguageWithProfile = async () => {;
@@ -159,10 +476,30 @@ if ( {) {
         try {;
           const { error } = await supabase;
             .from('profiles');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            .update({ preferred_language: currentLanguage });
+            .eq('id', user && user.id);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
             console && console.error('Error updating language preference:', error);
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         } catch (err) {;
           console && console.error('Error syncing language with profile:', err);
@@ -195,6 +532,18 @@ if ( {) {
           .eq('id', user.id);
         if (error) {
           console.error('Error updating language preference:', error)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    };
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     };
 
     syncLanguageWithProfile();
@@ -202,6 +551,12 @@ if ( {) {
 
   const changeLanguage = async (lang: SupportedLanguage) => {;
     if (lang === currentLanguage) return;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     try {;
       await i18n && i18n.changeLanguage(lang);
@@ -212,14 +567,65 @@ if ( {) {
       toast({;
         description: t('language && language.language_changed', { language: langName });
       });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    },;
+    syncLanguageWithProfile();
+  }, [currentLanguage, isAuthenticated, user]),;
+  const changeLanguage = async (lang: SupportedLanguage) => {;
+    if (lang === currentLanguage) return,;
+    try {;
+      await i18n.changeLanguage(lang),;
+      setCurrentLanguage(lang),;
+      localStorage.setItem('zion_language', lang),;
+      // Get language name for toast;
+      const langName = supportedLanguages.find(l => l.code === lang)?.name || lang,;
+      toast({;
+        description: t('language.language_changed', { language: langName });
+      }),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // If user is authenticated, update their profile;
       if (isAuthenticated && user?.id) {;
         const { error } = await supabase;
           .from('profiles');
           .update({ preferred_language: lang });
+<<<<<<< HEAD
 
 
           console && console.error('Error updating language preference:', error);
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          .eq('id', user && user.id);
+
+        if (error) {;
+
+          console.error('Error updating language preference:', error);
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+          console && console.error('Error updating language preference:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
       }
     } catch (err) {;
@@ -237,6 +643,16 @@ if ( {) {
         currentLanguage
         changeLanguage
         isRTL;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 
   return (
@@ -250,6 +666,20 @@ if ( {) {
   );
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+      }}>;
+      {children}
+    </LanguageContext && LanguageContext.Provider>;
+  );
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         supportedLanguages
   },;
   return (;
@@ -349,6 +779,17 @@ if ( {) {
     </LanguageContext.Provider>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         supportedLanguages
   },;
   return (;
@@ -480,3 +921,10 @@ syncLanguageWithProfile ()
     </LanguageContext.Provider>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface InvestmentPortfolio {
 export interface InvestmentPortfolio {;
   id: string;
@@ -6,13 +18,20 @@ export interface InvestmentPortfolio {;
   totalValue: number;
   currency: string;
 
+<<<<<<< HEAD
+  riskTolerance: 'conservative' | 'moderate' | 'aggressive'
+=======
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
   target_return: number;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
+<<<<<<< HEAD
+}
+=======
 
   created_at: Date,
   updated_at: Date;
@@ -26,11 +45,26 @@ export interface InvestmentPortfolio {;
 }
 }
 export interface PortfolioAsset {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   current_price: number;
   market_value: number,
@@ -44,11 +78,25 @@ export interface PortfolioAsset {
     yearly_return: number,
     total_return: number;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+}
+export interface PortfolioPerformance {
+  total_return: number;
+  annualized_return: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
   beta: number;
   alpha: number;
+<<<<<<< HEAD
+=======
   id: string;
   user_id: string;
   }
@@ -63,12 +111,36 @@ export interface PortfolioPerformance {
   alpha: number;
 }
 export interface InvestmentRecommendation {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   user_id: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
   asset: {
     symbol: string;
     name: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    type: string,
+    current_price: number;
+  }
+  confidence: number;
+  reasoning: string[];
+  expected_return: number;
+  risk_level: 'low' | 'medium' | 'high',
+  time_horizon: number, // in months;
+  alternatives: string[];
+  created_at: Date,
+  expires_at: Date;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export interface FinancialGoal {
   id: string;
@@ -95,6 +167,7 @@ export interface MarketAnalysis {
   created_at: Date,
   expires_at: Date;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface FinancialGoal {
   id: string;
@@ -105,6 +178,11 @@ export interface FinancialGoal {
   target_date: Date;
   priority: 'low' | 'medium' | 'high';
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
+<<<<<<< HEAD
+export interface MarketAnalysis {
+  id: string;
+  market: string;
+=======
 
   monthly_contribution: number;
   expected_return: number;
@@ -121,11 +199,36 @@ export interface MarketAnalysis {
   analysis: string,
   key_metrics: Record < string, number>;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  last_updated: Date,
+  next_update: Date;
+
+=======
+  last_updated: Date,
+  next_update: Date;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export interface FinancialPlan {
   id: string;
@@ -138,6 +241,8 @@ export interface FinancialPlan {
     rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
     risk_management: string[];
   }
+<<<<<<< HEAD
+=======
   cash_flow: {
     monthly_income: number;
     monthly_expenses: number;
@@ -168,10 +273,19 @@ export interface FinancialPlan {
     emergency_fund: number;
 
   }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   insurance: {
     life: boolean;
     health: boolean;
     disability: boolean;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     property: boolean,
     recommendations: string[];
@@ -190,6 +304,33 @@ export interface FinancialPlan {
   }
   created_at: Date,
   updated_at: Date;
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    property: boolean,
+    recommendations: string[];
+  }
+  tax: {
+    estimatedTaxLiability: number;
+    taxOptimizationStrategies: string[],
+    deductions: string[];
+  }
+  retirement: {
+    target_age: number;
+    estimated_needs: number;
+    current_savings: number;
+    monthly_contribution: number,
+    projected_value: number;
+  }
+  created_at: Date,
+  updated_at: Date;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 export interface FinancialRequest {
@@ -197,24 +338,84 @@ export interface FinancialRequest {
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+}
+export interface FinancialResponse {
+=======
+}
+export interface FinancialResponse {
+export interface FinancialResponse {
+
+export interface FinancialResponse {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
 }
+<<<<<<< HEAD
 
 }
 export interface FinancialResponse {
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}
+export interface FinancialResponse {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    analysis?: MarketAnalysis
+    goals?: FinancialGoal[]
+  }
+  insights: string[];
+  nextSteps: string[];
+  riskWarnings: string[]
+
+  estimatedFees: number
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export class AIFinancialAdvisorService {
 
   private apiKey: string;
@@ -223,11 +424,36 @@ export class AIFinancialAdvisorService {
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
@@ -238,6 +464,11 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.portfolio
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error analyzing portfolio:', error);
       throw error
@@ -245,6 +476,14 @@ export class AIFinancialAdvisorService {
   }
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
         method: 'POST',
@@ -259,6 +498,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.recommendations || []
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);
     } catch (error) {
@@ -268,12 +508,36 @@ export class AIFinancialAdvisorService {
   }
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
         body: JSON && JSON.stringify(request)});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`)
+      }
+
+      const data = await response && response.json();
+      return data && data.plan
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error creating financial plan:', error);
       throw error
@@ -297,6 +561,23 @@ export class AIFinancialAdvisorService {
   }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
+=======
+      console && console.error('Error creating financial plan:', error);
+      throw error
+    }
+  }
+  async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
+    try {
+<<<<<<< HEAD
+=======
+      const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         headers: {
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
@@ -308,6 +589,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.analysis
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
     } catch (error) {
       console && console.error('Error getting market analysis:', error);
@@ -317,6 +599,8 @@ export class AIFinancialAdvisorService {
   }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
+<<<<<<< HEAD
+=======
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
 
@@ -329,6 +613,7 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.analysis
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error getting market analysis:', error);
       throw error
@@ -347,6 +632,14 @@ export class AIFinancialAdvisorService {
     expectedImpact: string
   }> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',
@@ -362,6 +655,11 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.rebalancing
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error rebalancing portfolio:', error);
     } catch (error) {
@@ -377,6 +675,14 @@ export class AIFinancialAdvisorService {
     recommendations: string[]
   }> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST',
@@ -392,6 +698,11 @@ export class AIFinancialAdvisorService {
       const data = await response && response.json();
       return data && data.calculation
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error calculating retirement needs:', error);
     } catch (error) {
@@ -400,6 +711,17 @@ export class AIFinancialAdvisorService {
     }
   }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     analysis?: MarketAnalysis,
     goals?: FinancialGoal[];
   }
@@ -416,6 +738,12 @@ export class AIFinancialAdvisorService {
     this.base_url = base_url;
   }
   async analyze_portfolio (portfolio_id: string): Promise < InvestmentPortfolio> {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/analyze`, {
         headers: {
@@ -521,6 +849,18 @@ if ( {) {
     strategies: string[];
     estimated_savings: number;
     implementation: string[];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const response = await fetch(`${this && this.baseUrl}/api/financial/tax-optimization`, {
         method: 'POST',
         headers: {
@@ -535,6 +875,11 @@ if ( {) {
       const data = await response && response.json();
       return data && data.optimization
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error getting tax optimization strategies:', error);
     } catch (error) {
@@ -551,6 +896,14 @@ if ( {) {
     nextSteps: string[]
   }> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
         method: 'POST',
@@ -566,6 +919,11 @@ if ( {) {
       const data = await response && response.json();
       return data && data.report
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       console && console.error('Error generating financial report:', error);
     } catch (error) {
@@ -576,6 +934,23 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+
+=======
+=======
+export interface InvestmentPortfolio {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string,;
   userId: string,;
   name: string,;
@@ -589,9 +964,29 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
   performance: PortfolioPerformance,;
   createdAt: Date,;
   updatedAt: Date;
+<<<<<<< HEAD
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+
+export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     risks: string[],
     deadlines: Record < string, Date>;
   }> {
@@ -650,6 +1045,14 @@ if ( {) {
 export interface InvestmentPortfolio {;
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export interface InvestmentPortfolio {;
 
@@ -1181,3 +1584,13 @@ export class AIFinancialAdvisorService {;
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

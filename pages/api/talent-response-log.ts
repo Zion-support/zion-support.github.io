@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   const { talentId, action } = req.body |{}
@@ -10,4 +15,4 @@
   const payload = { talentId, action, at: new Date().toISOString() }
 
   return res.status(200).json({ ok: true, data: payload })
-};
+

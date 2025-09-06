@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface Version {
   major: number;
   minor: number;
@@ -16,6 +25,16 @@ export function parseVersion(versionString: string): Version {
   };
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export function nextVersionFor(
   state: MultiverseState,
@@ -24,6 +43,22 @@ export function nextVersionFor(
   const current = state.latestVersionByEntityId[entityKey] || 0;
   return current + 1;
 }
+<<<<<<< HEAD
+// Versioning utilities;
+export const versioning = {
+  // Add versioning functionality here;
+  get_version: () => '1.0.0',
+  compare_versions: (v1: string, v2: string) => 0,
+  increment_version: (version: string) => version;
+}
+// Versioning utilities;
+export const versioning = {
+  // Add versioning functionality here;
+  get_version: () => '1.0.0',
+  compare_versions: (v1: string, v2: string) => 0,
+  increment_version: (version: string) => version;
+}
+=======
 
 export function nextVersionFor(
   currentVersion: string,
@@ -72,3 +107,10 @@ export interface Version {
 };
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

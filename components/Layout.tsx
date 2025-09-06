@@ -174,6 +174,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 export default Layout;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -223,3 +227,7 @@ export default function Layout({
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

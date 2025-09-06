@@ -20,6 +20,22 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+function ProjectDetailsContent() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { projectId } = useParams() as { projectId?: string };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
@@ -31,6 +47,30 @@ import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSqu
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+=======
+  // Load project data
+  useEffect(() => {
+    async function loadProject() {
+      if (!projectId) return;
+      setIsLoading(true);
+      const projectData = await getProjectById(projectId);
+      if (projectData) {
+        setProject(projectData);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -81,6 +121,21 @@ import {
   Video,
   User,
   XCircle} from "lucide-react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -106,7 +161,24 @@ function ProjectDetailsContent() {
       const projectData = await getProjectById(projectId),
       
       if (projectData) {
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        setProject(projectData),
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -115,6 +187,16 @@ function ProjectDetailsContent() {
           description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from './react';
 import { use_params, use_navigate, Link } from './react-router-dom';
 import { format } from './date - fns';
@@ -195,6 +277,62 @@ import {;
   XCircle} from "lucide-react",;
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { project_id } = use_params () as { project_id?: string }
+  const { user } = use_auth ();
+  const navigate = use_navigate ();
+  const { getProjectById, updateProjectStatus } = use_projects ();
+;
+  const [project, set_project] = useState < Project | null>(null);
+  const [is_loading, setIsLoading] = useState (true);
+  const [notes, set_notes] = useState < any[]>([]);
+  const [new_note, setNewNote] = useState ("");
+  const [isSubmittingNote, setIsSubmittingNote] = useState (false);
+  const [active_tab, setActiveTab] = useState ("details");
+;
+  // Load project data;
+  useEffect (() => {
+    async /**
+ * load_project - Function description
+ */
+function load_project() {
+      // Check condition
+if (return) {
+  $2
+}
+      setIsLoading (true);
+      const project_data = await getProjectById (project_id);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        set_project (project_data);
+;
+        // Now fetch notes;
+        fetchProjectNotes (project_id);
+      } else {
+        toast ({
+          title: "Project not found",
+          description: "The requested project could not be found.",
+          variant: "destructive"}),
+        navigate ("/dashboard");
+      }
+      setIsLoading (false);
+    }
+    load_project ();
+  }, [project_id]);
+;
+  const fetchProjectNotes = async (project_id: string) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const { data, error } = await supabase;
         .from ("project_notes");
@@ -284,6 +422,44 @@ if ( {) {
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      setIsLoading(true);
+      const projectData = await getProjectById(projectId);
+
+      if (projectData) {;
+        setProject(projectData);
+<<<<<<< HEAD
+
+=======
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { projectId } = useParams() as { projectId?: string },;
+  const { user } = useAuth(),;
+  const navigate = useNavigate(),;
+  const { getProjectById, updateProjectStatus } = useProjects(),;
+  const [project, setProject] = useState<Project | null>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [notes, setNotes] = useState<any[]>([]),;
+  const [newNote, setNewNote] = useState(""),;
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false),;
+  const [activeTab, setActiveTab] = useState("details"),;
+  // Load project data;
+  useEffect(() => {;
+    async function loadProject() {;
+      if (!projectId) return,;
+      setIsLoading(true),;
+      const projectData = await getProjectById(projectId),;
+      if (projectData) {;
+        setProject(projectData),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Now fetch notes;
         fetchProjectNotes(projectId);
       } else {;
@@ -292,10 +468,77 @@ if ( {) {
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
 
       setIsLoading(false);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    
+    loadProject()
+  }, [projectId]),
+  
+
+  const fetchProjectNotes = async (projectId: string) => {
+    try {
+      const { data, error } = await supabase
+        .from("project_notes")
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)
+        .eq("project_id", projectId)
+
+=======
+      }
+      setIsLoading(false)
+    }
+    loadProject()
+  }, [projectId]);
+    
+    loadProject()
+  }, [projectId]),
+  
+  const fetchProjectNotes = async (projectId: string) => {
+    try {
+      const { data, error } = await supabase
+        .from("project_notes")
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)
+        .eq("project_id", projectId)
+        .order("created_at", { ascending: false })
+      if (error) throw error;
+      setNotes(data |[])
+    } catch (err) {
+      console.error("Error fetching project notes:", err)
+    }
+  }
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() |!project |!user) return;
+    setIsSubmittingNote(true);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .order("created_at", { ascending: false }),
       
       if (error) throw error,
@@ -368,15 +611,37 @@ if ( {) {
         return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,
       case "completed":
         return <Badge variant="default">Completed</Badge>,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "canceled":
         return <Badge variant="destructive">Canceled</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (isLoading) {
       case "canceled":;
         return <Badge variant="destructive">Canceled</Badge>,;
@@ -470,6 +735,16 @@ if ( {) {
     )
   }
   // Check if user is either the client or the talent
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
@@ -481,14 +756,57 @@ if ( {) {
   if (!isClient && !isTalent) {;
     navigate("/unauthorized");
     return null;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
+<<<<<<< HEAD
   }
 
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+=======
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
+  
+  if (!isClient && !isTalent) {
+    navigate("/unauthorized"),
+    return null
+  }
+  const isOfferPending = project.status === "offer_sent";
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>
       <SEO
@@ -685,7 +1003,23 @@ if ( {) {
                         <Button variant="outline" size="sm" asChild>
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
                             View
+<<<<<<< HEAD
                           </Link>
+=======
+<<<<<<< HEAD
+                          </Link>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          </a>
+=======
+                          </Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                          </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         </Button>
                       </div>
                     ) : (
@@ -711,6 +1045,19 @@ if ( {) {
                   <CardContent>
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>);
   }
   // Check if user is either the client or the talent;
@@ -1076,6 +1423,55 @@ if ( {) {
                                       alt={note && note.created_by_profile.display_name}
                                     />;
                                   ) : (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                                    <User className="h-4 w-4" />;
+                                  )}
+<<<<<<< HEAD
+=======
+
+                                </Avatar>;
+                                <span className="font-medium text-sm">;
+                                  {note && note.created_by_profile?.display_name || "User"}
+                                </span>;
+                                <span className="text-xs text-muted-foreground">;
+                                  {format(new Date(note && note.created_at), "PPp")}
+                                </span>;
+                              </div>;
+                              <p className="text-sm whitespace-pre-wrap">{note && note.content}</p>;
+                            </div>;
+                          ));
+                        ) : (;
+=======
+                        {notes.length > 0 ? (;
+                          notes.map((note) => (;
+                            <div key={note.id} className="bg-muted/30 p-3 rounded-md">;
+                              <div className="flex items-center gap-2 mb-2">;
+                                <Avatar className="h-6 w-6">;
+                                  {note.created_by_profile?.avatar_url ? (;
+                                    <img;
+                                      src={note.created_by_profile.avatar_url}
+                                      alt={note.created_by_profile.display_name}
+                                    />;
+                                  ) :(;
+                                    <User className="h-4 w-4" />;
+                                  )}
+                                </Avatar>;
+                                <span className="font-medium text-sm">;
+                                  {note.created_by_profile?.display_name || "User"}
+                                </span>;
+                                <span className="text-xs text-muted-foreground">;
+                                  {format(new Date(note.created_at), "PPp")}
+                                </span>;
+                              </div>;
+                              <p className="text-sm whitespace-pre-wrap">{note.content}</p>;
+                            </div>;
+                          ));
+                        ) :(;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           <div className="text-center py-8">;
                             <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />;
                             <p className="text-muted-foreground">;
@@ -1086,6 +1482,11 @@ if ( {) {
                       </div>;
                                     <User className="h-4 w-4" />;
                                   )}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           <Textarea
                             placeholder="Add a note or update to the project..."
                             value={newNote}
@@ -1098,10 +1499,116 @@ if ( {) {
                           </Button>;
                         </div>;
                       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+                            disabled={!newNote && newNote.trim() || isSubmittingNote}>;
+                            {isSubmittingNote ? "Posting..." : "Post Note"}
+                      ;
+                      {isOfferAccepted && (;
+                        <div>;
+                          <Textarea;
+                            placeholder="Add a note or update to the project...";
+                            value={newNote}
+                            onChange={(e) => setNewNote(e.target.value)}
+                            className="min-h-[100px] mb-2";
+                          />;
+                          <Button;
+                            onClick={handleSubmitNote}
+                            disabled={!newNote.trim() || isSubmittingNote}
+                          >;
+                            {isSubmittingNote ? "Posting..." :"Post Note"}
+                          </Button>;
+                        </div>;
+                      )}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+                        {notes.length > 0 ? (
+                          notes.map((note) => (
+                            <div key={note.id} className="bg-muted/30 p-3 rounded-md">
+                              <div className="flex items-center gap-2 mb-2">
+                                <Avatar className="h-6 w-6">
+                                  {note.created_by_profile?.avatar_url ? (
+                                    <img
+                                      src={note.created_by_profile.avatar_url}
+                                      alt={note.created_by_profile.display_name}
+                                    />
+                                  ) : (
+                                    <User className="h-4 w-4" />
+                                  )}
+                                </Avatar>
+                                <span className="font-medium text-sm">
+                                  {note.created_by_profile?.display_name |"User"}
+                                </span>
+                                <span className="text-xs text-muted-foreground">
+                                  {format(new Date(note.created_at), "PPp")}
+                                </span>
+                              </div>
+                              <p className="text-sm whitespace-pre-wrap">{note.content}</p>
+                            </div>
+                          ))
+                        ) : (
+                          <div className="text-center py-8">
+                            <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
+                            <p className="text-muted-foreground">
+                              No notes yet. Add the first note to this project.
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                      {isOfferAccepted && (
+                        <div>
+                          <Textarea
+                            placeholder="Add a note or update to the project..."
+                            value={newNote}
+                            onChange={(e) => setNewNote(e.target.value)}
+                            className="min-h-[100px] mb-2"
+                          />
+                          <Button
+                            onClick={handleSubmitNote}
+                            disabled={!newNote.trim() |isSubmittingNote}
+                          >
+                            {isSubmittingNote ? "Posting..." : "Post Note"}
+                          </Button>
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+              <TabsContent value="reviews">
+                <ProjectReviewSection project={project} />
+              </TabsContent>
+            </Tabs>
+          </div>
+          <div className="order-1 lg:order-2 lg:col-span-1">
+            <Card>
+              <CardHeader>
+                <CardTitle>Project Participants</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <Avatar className="h-10 w-10">
+                      {project.talent_profile?.profile_picture_url ? (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
@@ -1150,6 +1657,26 @@ if ( {) {
                           variant="outline"
                           size="sm"
                           className="mt-2"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                          onClick={() => navigate(`/messages?clientId=${project.client_id}`)}
+                        >
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                        </Button>
+
+<<<<<<< HEAD
+=======
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     loadProject();
   }, [projectId]),;
@@ -1370,6 +1897,15 @@ if ( {) {
                 <div className="space-y-6">;
                   <div className="flex items-start gap-4">;
                     <Avatar className="h-10 w-10">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      {project && project.talent_profile?.profile_picture_url ? (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <img
                           src={project && project.talent_profile.profile_picture_url}
                           alt={project && project.talent_profile.full_name}
@@ -1377,6 +1913,48 @@ if ( {) {
                       ) : (;
                         <User className="h-6 w-6" />;
                       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                    </Avatar>;
+                    <div>;
+                      <h3 className="font-semibold">;
+                        {project && project.talent_profile?.full_name || "Talent"}
+                      </h3>;
+                      <p className="text-sm text-muted-foreground">;
+                        {project && project.talent_profile?.professional_title || "Professional"}
+                      </p>;
+                      {isClient && (;
+
+=======
+                      {project.talent_profile?.profile_picture_url ? (;
+                        <img;
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                        />;
+                    </Avatar>;
+                    <div>;
+                      <h3 className="font-semibold">;
+                      ) : (;
+                        <User className="h-6 w-6" />;
+                      )}
+                    </Avatar>
+                    <div>
+                      <h3 className="font-semibold">
+                        {project.talent_profile?.full_name || "Talent"}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {project.talent_profile?.professional_title || "Professional"}
+                      </p>
+                      {isClient && (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <Button
                           variant="outline"
                           size="sm"
@@ -1386,6 +1964,70 @@ if ( {) {
                           <MessageSquare className="mr-1 h-3 w-3" /> Message;
                         </Button>;
                       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                    </div>;
+                  </div>;
+
+=======
+                        {project.talent_profile?.full_name || "Talent"}
+                      </h3>;
+                      <p className="text-sm text-muted-foreground">;
+                        {project.talent_profile?.professional_title || "Professional"}
+                      </p>;
+                      {isClient && (;
+                        <Button;
+                          variant="outline";
+                          size="sm";
+                          className="mt-2";
+                          onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
+                          onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
+                        >
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                        </Button>
+                      )}
+                    </div>;
+                  </div>;
+                  <div className="flex items-start gap-4">;
+                    <Avatar className="h-10 w-10">;
+                      {project.client_profile?.avatar_url ? (;
+                        <img;
+                          src={project.client_profile.avatar_url}
+                          alt={project.client_profile.display_name}
+                        />;
+                      ) : (;
+                        <User className="h-6 w-6" />;
+                      )}
+                    </Avatar>
+                    <div>
+                      <h3 className="font-semibold">
+                        {project.client_profile?.display_name || "Client"}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">Project Owner</p>
+                      {isTalent && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => navigate(`/messages?clientId=${project.client_id}`)}
+                        >;
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
+                        </Button>;
+                      )}
+                    </div>;
+                  </div>;
+                </div>;
+              </CardContent>;
+            </Card>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -1417,6 +2059,45 @@ if ( {) {
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                    </div>;
+                  </div>;
+                  ;
+                  <div className="flex items-start gap-4">;
+                    <Avatar className="h-10 w-10">;
+                      {project.client_profile?.avatar_url ? (;
+                        <img;
+                          src={project.client_profile.avatar_url}
+                          alt={project.client_profile.display_name}
+                        />;
+                      ) :(;
+                        <User className="h-6 w-6" />;
+                      )}
+                    </Avatar>;
+                    <div>;
+                      <h3 className="font-semibold">;
+                        {project.client_profile?.display_name || "Client"}
+                      </h3>;
+                      <p className="text-sm text-muted-foreground">Project Owner</p>;
+                      {isTalent && (;
+                        <Button;
+                          variant="outline";
+                          size="sm";
+                          className="mt-2";
+                          onClick={() => navigate(`/messages?clientId=${project.client_id}`)}
+                        >;
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
+                        </Button>;                      )}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </div>;
                   </div>;
                 </div>;
@@ -1472,11 +2153,139 @@ if ( {) {
                   </Button>;
                 </CardFooter>;
               )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+              {project && project.status === "offer_sent" && isClient && (;
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
+                  <p className="text-sm text-muted-foreground">;
+                    Waiting for the talent to accept your offer.;
+                  </p>;
+                </CardFooter>;
+              )}
+
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    </>;
+  );
+
+}
+=======
+
+export default function ProjectDetails() {;
+  return (
+    <ProtectedRoute>;
+      <ProjectDetailsContent />;
+    </ProtectedRoute>;
+  );
+}
+
+=======
+              ;
+              {project.status === "offer_sent" && isClient && (;
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
+                  <p className="text-sm text-muted-foreground">;
+                    Waiting for the talent to accept your offer.;
+                  </p>;
+                </CardFooter>;
+              )}
+                  <Button
+                    variant="outline"
+                    onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
+                    className="w-full"
+                  >
+                    <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
+                  </Button>
+                </CardFooter>
+              )}
+              {project.status === "offer_sent" && isClient && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-muted-foreground">
+                    Waiting for the talent to accept your offer.
+                  </p>
+                </CardFooter>
+              )}
+              {project.status === "completed" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-green-600 flex items-center gap-1">
+                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.
+                  </p>
+                </CardFooter>
+              )}
+              {project.status === "canceled" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-red-600 flex items-center gap-1">
+                    <XCircle className="h-4 w-4" /> This project has been canceled.
+                  </p>
+                </CardFooter>
+              )}
+
+
+              {project && project.status === "completed" && (;
+              ;
+              {project.status === "completed" && (;
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
+                  <p className="text-sm text-green-600 flex items-center gap-1">;
+                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.;
+                  </p>;
+                </CardFooter>;
+              )}
+              ;
+              {project.status === "canceled" && (;
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
+                  <p className="text-sm text-red-600 flex items-center gap-1">;
+                    <XCircle className="h-4 w-4" /> This project has been canceled.;
+                  </p>;
+                </CardFooter>;
+              )}
+            </Card>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+}
+export default function ProjectDetails() {
+  return (
+    <ProtectedRoute>
+      <ProjectDetailsContent />
+    </ProtectedRoute>
+  )
+};
+;
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </>);
 }
 export default /**
@@ -1488,6 +2297,20 @@ function ProjectDetails() {
       <ProjectDetailsContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 
     </>;
@@ -1512,3 +2335,10 @@ export default function ProjectDetails() {;
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

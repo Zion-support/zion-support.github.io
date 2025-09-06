@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',;
 import { updateFlagStatus } from '../../../../../../utils/moderationDb',;
 import type { ModerationStatus } from '../../../../../../types/moderation',;
@@ -5,6 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = parseUserFromRequest(req)
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
 
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
   try {
@@ -47,6 +52,8 @@ ban: 'banned'}
   res.setHeader('AllowPOST'),;
   return res.status(405).end('Method Not Allowed');
 };
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth';
 import { updateFlagStatus } from '../../../../../../utils/moderationDb';
@@ -54,6 +61,7 @@ import type { ModerationStatus } from '../../../../../../types/moderation';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
 
   if (req.method === 'POST') {
     const { action, adminNotes } = req.body || {} as { action: string, adminNotes?: string }
@@ -69,5 +77,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ flag })
   }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return res.status(405).end('Method Not Allowed');
 };
+

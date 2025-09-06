@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;
 import SEO from '../components/SEO',;
 import React from 'react';
@@ -33,17 +34,29 @@ import SEO from '../components/SEO';
 export default function WebinarsPage() {
 origin/main
 origin/automation-improvements-final
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 			</div>
 		</>
 	)
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -60,6 +73,7 @@ return (
   </>);
 }
 
+<<<<<<< HEAD
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -72,3 +86,5 @@ origin/automation-improvements-final
   }
 }
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

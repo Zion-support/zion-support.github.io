@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -12,6 +26,12 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -27,6 +47,21 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }) => void;
+  isLoading: boolean
+
+  }) => void,
+  isLoading: boolean,
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   initialValues?: {
     title?: string,
     category?: string,
@@ -100,6 +135,23 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      <Button 
+
+=======
+=======
+      <Button 
+
+          disabled={isLoading}
+        />
+      </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
@@ -107,18 +159,52 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
       <Button 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Sparkles } from "lucide-react",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface AIListingFormProps {;
   onSubmit: (formData: {;
     title: string,;
     category: string,;
     keyFeatures: string,;
     targetAudience: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }) => void;
+  isLoading: boolean,;
+  initialValues?: {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -128,6 +214,15 @@ interface AIListingFormProps {;
 
 export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [title, setTitle] = useState(initialValues && initialValues.title || "");
   const [category, setCategory] = useState(initialValues && initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
@@ -138,10 +233,30 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
         title: "Missing required fields",;
         description: "Please provide at least a title and category.",;
         variant: "destructive";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       });
       return;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+      });
+      return;
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     onSubmit({;
       title;
       category;
@@ -149,6 +264,17 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       targetAudience;
     });
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-4">;
       <div className="space-y-2">;
@@ -212,6 +338,16 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content
           </>
         )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         />;
       </div>;
       <Button
@@ -230,6 +366,17 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 
       </Button>;
     </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -261,3 +408,117 @@ function AIListingForm() {
   const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+=======
+  const handle_submit = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Missing required fields",
+        description: "Please provide at least a title and category.",
+        variant: "destructive";
+      });
+      return;
+    }
+    on_submit ({
+      title;
+      category;
+      key_features;
+      target_audience;
+    });
+  }
+;
+  return (
+    <div className="space - y-4">;
+      <div className="space - y-2">;
+        <label html_for="title" className="text - sm font - medium text - zion - slate - light">Title</label>;
+        <Input;
+          id="title";
+          value={title}
+          on_change={(e) => set_title (e.target.value)}
+          placeholder="Enter your product or service title";
+          className="bg - zion - blue border border - zion - blue - light text - white";
+          disabled={is_loading}
+        />;
+      </div>;
+      <div className="space - y-2">;
+        <label html_for="category" className="text - sm font - medium text - zion - slate - light">Category</label>;
+        <Input;
+          id="category";
+          value={category}
+          on_change={(e) => set_category (e.target.value)}
+          placeholder="e.g. AI Tool, Digital Product, Service";
+          className="bg - zion - blue border border - zion - blue - light text - white";
+          disabled={is_loading}
+        />;
+      </div>;
+      <div className="space - y-2">;
+        <label html_for="key_features" className="text - sm font - medium text - zion - slate - light">Key Features (Optional)</label>;
+        <Textarea;
+          id="key_features";
+          value={key_features}
+          on_change={(e) => setKeyFeatures (e.target.value)}
+          placeholder="Briefly describe the main features or benefits";
+          className="bg - zion - blue border border - zion - blue - light text - white min - h-20";
+          disabled={is_loading}
+        />;
+      </div>;
+      <div className="space - y-2">;
+        <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light">Target Audience (Optional)</label>;
+        <Input;
+          id="target_audience";
+          value={target_audience}
+          on_change={(e) => setTargetAudience (e.target.value)}
+          placeholder="e.g. Developers, Marketers, Startups";
+          className="bg - zion - blue border border - zion - blue - light text - white";
+          disabled={is_loading}
+        />;
+      </div>;
+      <Button;
+        on_click={handle_submit}
+        disabled={is_loading || !title || !category}
+        className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2";
+      >;
+        {is_loading ? (
+          <>Generating Optimized Content...</>) : (
+          <>;
+            <Sparkles className="h - 4 w - 4 mr - 2" />;
+            Generate Optimized Content;
+          </>)}
+      </Button>;
+    </div>);
+  ),;}export function AIListingForm ({
+  onSubmit, isLoading, initialValues = {
+  
+}
+}: AIListingFormProps) {
+  if (!title || !category) {
+  toast ({
+  return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
+}</Button> </div>) 
+}
+      </Button>
+    </div>
+  )
+}
+      </Button>;
+    </div>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

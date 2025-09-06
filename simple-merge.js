@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 console.log('🚀 Starting simple merge process...');
 try {// Check git status;
   console.log('📊 Checking git status...');
@@ -72,22 +85,60 @@ try {;
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Resolve conflicts by accepting our version;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
       for (const file of files) {;
         if (file.trim()) {;
+<<<<<<< HEAD
+          console.log(`Resolving conflicts in: ${file}`);
+          try {execSync(`git checkout --ours "${file}"`);
+          } catch (e) {execSync(`git checkout --theirs "${file}"`);
+=======
 
       for (const file of files) {;
         if (file.trim()) {;
           console.log(`Resolving conflicts in: ${file}`);
           try {execSync(`git checkout --ours "${file}"`);
           } catch (e) {execSync(`git checkout --theirs "${file}"`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           console.log(`Resolving conflicts in: ${file}`),;
           try {;
             execSync(`git checkout --ours "${file}"`);
           } catch (e) {;
             execSync(`git checkout --theirs "${file}"`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           }
           exec_sync (`git add "${file}"`);
@@ -128,6 +179,18 @@ try {;
     }
   }
   // Push all changes;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      for (const file of files) {;
+        if (file.trim()) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
           execSync(`git add "${file}"`);
         }
@@ -136,10 +199,34 @@ try {;
       execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Continue with other branches;
     }
   }
   // Push all changes;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  console.log('📤 Pushing all changes to main...');
+  execSync('git push origin main');
+  console.log('🎉 All merge operations completed successfully!');
+  console.log('✅ All PRs have been merged into main branch');
+  console.log('✅ All merge conflicts have been resolved');
+  console.log('✅ Repository is now clean and up to date');
+} catch (error) {console.error('❌ Error during merge process:', error.message);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 ;
@@ -148,6 +235,19 @@ try {;
   const branches = execSync('git branch -r', { encoding: 'utf8' }),;
   const branchList = branches.split('\n');
     .map(branch => branch.trim());
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
     .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
 
@@ -183,6 +283,12 @@ try {;
 
   process.exit(1);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   console.log ('📤 Pushing all changes to main...'),
   exec_sync ('git push origin main'),
   console.log ('🎉 All merge operations completed successfully!'),
@@ -195,3 +301,27 @@ try {;
 }
   process.exit(1);
 }
+<<<<<<< HEAD
+=======
+  console.log('📤 Pushing all changes to main...');
+  execSync('git push origin main');
+  ;
+  console.log('🎉 All merge operations completed successfully!');
+  console.log('✅ All PRs have been merged into main branch');
+  console.log('✅ All merge conflicts have been resolved');
+  console.log('✅ Repository is now clean and up to date');
+  ;
+} catch (error) {;
+  console.error('❌ Error during merge process:', error.message);
+  process.exit(1);}
+  process.exit(1);
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  process.exit(1);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

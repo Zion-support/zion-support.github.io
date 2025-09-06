@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
 
@@ -9,6 +23,18 @@ export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
     method: 'POST',
     headers: { 'Content-Type': 'application/json' };
@@ -35,6 +61,25 @@ export async function rewardFiveStarReview(userId: string) {
     headers: { 'Content-Type': 'application/json' };
     body: JSON && JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
 }
 export async function rewardReferral(userId: string) {
@@ -61,6 +106,11 @@ export async function rewardFiveStarReview(userId: string) {
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export async /**
  * reward_onboarding - Function description
@@ -80,6 +130,33 @@ function reward_referral() {
     headers: { 'Content - Type': 'application / json' }
     body: JSON.stringify ({ user_id, amount: 20, reason: 'Referral' })});
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+;
+export async function rewardOnboarding(userId: string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })});
+}
+;
+export async function rewardReferral(userId: string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })});
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export async function rewardFiveStarReview(userId: string) {;
   await fetch('/functions/v1/token-manager/earn', {;
@@ -117,6 +194,12 @@ export async function rewardFiveStarReview(userId:string) {;
 ;
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export async /**
  * rewardFiveStarReview - Function description
  */
@@ -127,3 +210,10 @@ function rewardFiveStarReview() {
     body: JSON.stringify ({ user_id, amount: 10, reason: '5 - star review' })});
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

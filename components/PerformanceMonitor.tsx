@@ -1,6 +1,29 @@
+<<<<<<< HEAD
 
       observer.observe({ entryTypes: ['navigation'] });
 
+=======
+
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: any) => void;
+}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+
+        }
+      });
+
+      observer.observe({ entryTypes: ['navigation'] });
+
+      return () => observer.disconnect();
+
+    }
+  }, []);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (!metrics) return null;
 
@@ -14,3 +37,4 @@
 };
 
 export default PerformanceMonitor;
+

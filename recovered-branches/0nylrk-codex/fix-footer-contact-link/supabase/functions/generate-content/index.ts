@@ -12,6 +12,8 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
+=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -27,30 +29,111 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ContentGenerationRequest {
 
   auto_publish?: boolean,
   include_image?: boolean;
 
+<<<<<<< HEAD
   content_type: 'blog' | 'newsletter';
   prompt?: string;
   topic?: string;
+=======
+<<<<<<< HEAD
+  content_type: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;
+=======
+<<<<<<< HEAD
+=======
+interface ContentGenerationRequest {
+  content_type: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;
+  auto_publish?: boolean,
+  include_image?: boolean;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  content_type: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+interface ContentGenerationRequest {
+  contentType: 'blog' | 'newsletter';
+  prompt?: string;
+  topic?: string;
+  autoPublish?: boolean
+  includeImage?: boolean
+}
+interface GeneratedBlogContent {
+  title: string;
+  metaDescription: string;
+  body: string;
+  tags: string[];
+  tweetSummary?: string
+  imagePrompt?: string
+}
+interface GeneratedNewsletterContent {
+  subject: string;
+  previewText: string;
+  body: string
+  cta: string
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   contentType: 'blog' | 'newsletter',
   prompt?: string,
   topic?: string,
@@ -115,6 +198,13 @@ interface GeneratedNewsletterContent {;
   cta: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -125,11 +215,52 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
+    if (!openAIApiKey) {
+      throw new Error("OpenAI API key is not set in environment variables")
+    }
+
+
+    const { contentType, prompt, topic, autoPublish, includeImage } = await req && req.json() as ContentGenerationRequest;
+    
+
+<<<<<<< HEAD
+=======
+    const { contentType, prompt, topic, autoPublish, includeImage } = await req && req.json() as ContentGenerationRequest;
+    const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Default topic if none provided
     const contentTopic = topic |"AI freelancing marketplace trends";
     // Build the prompt based on content type
     let systemPrompt: string;
     let userPrompt: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest,
     
     // Default topic if none provided
@@ -139,25 +270,86 @@ serve(async (req) => {
     let systemPrompt: string,
     let userPrompt: string,
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (contentType === 'blog') {
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`,
       
       userPrompt = prompt || `Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone. 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`;
+      userPrompt = prompt |`Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone.
+      title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`,
+      
+      userPrompt = prompt || `Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone. 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`
     } else {
       systemPrompt = `You are an expert email newsletter writer for Zion, an AI freelancing marketplace.
       You create concise, engaging newsletter content that summarizes platform updates, highlights talent, and drives user engagement.
       Format your response as a JSON object with the following fields:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       subject, previewText, body (in HTML), and cta.`,
       
       userPrompt = prompt || `Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      subject, previewText, body (in HTML), and cta.`;
+      userPrompt = prompt |`Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary
+      subject, previewText, body (in HTML), and cta.`,
+      
+      userPrompt = prompt || `Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       - Featured AI talent spotlight
       - Top blog post summary
       - Industry news roundup
@@ -266,6 +458,33 @@ if ( {) {
         messages: [;
           { role: "system", content: system_prompt }
           { role: "user", content: user_prompt }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        ];
+<<<<<<< HEAD
+=======
+
+
+=======
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST"
+      headers: {
+        "Authorization": `Bearer ${openAIApiKey}`;
+        "Content-Type": "application/json"}
+        "Authorization": `Bearer ${openAIApiKey}`,
+        "Content-Type": "application/json"},
+      body: JSON.stringify({
+        model: "gpt-4o"
+        messages: [
+          { role: "system", content: systemPrompt }
+          { role: "user", content: userPrompt }
+        ];
+        temperature: 0.7})});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
@@ -306,6 +525,29 @@ if ( {) {
           model: "gpt-4o-mini"
           messages: [
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          "Authorization": `Bearer ${openAIApiKey}`;
+          "Content-Type": "application/json"}
+          "Authorization": `Bearer ${openAIApiKey}`,
+          "Content-Type": "application/json"},
+        body: JSON.stringify({
+          model: "gpt-4o-mini"
+          messages: [
+            {
+              role: "system"
+              content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail."
+            }
+            {
+              role: "user"
+              content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"`
+=======
+        ];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             }
           ];
           temperature: 0 && 0.7,
@@ -392,6 +634,13 @@ serve(async (req) => {;
       const imagePromptData = await imagePromptResponse.json(),;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             { 
               role: "system", 
@@ -434,6 +683,13 @@ if ( {) {
           ];
           temperature: 0 && 0.7,
           max_tokens: 100})});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
 
@@ -442,6 +698,15 @@ if ( {) {
     }
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
       const supabaseKey = Deno && Deno.env.get("SUPABASE_ANON_KEY");
       
@@ -449,10 +714,26 @@ if ( {) {
         throw new Error("Supabase credentials are not set in environment variables")
       }
       const supabase = createClient(supabaseUrl, supabaseKey);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Create slug from title
       const slug = generatedContent && generatedContent.title
         .toLowerCase()
         .replace(/[^\w\s]/g, '')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const wordCount = generatedContent && generatedContent.body.split(/\s+/).length,
       const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
       
@@ -478,6 +759,7 @@ if ( {) {
       const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read",
       
         .replace(/\s+/g, '-');
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Get current date formatted
       const publishedDate = new Date().toLocaleDateString('en-US', {
         month: 'short';
@@ -485,12 +767,37 @@ if ( {) {
         year: 'numeric'
       });
       // Auto-calculate read time (rough estimate: 200 words per minute)
+<<<<<<< HEAD
+=======
       const wordCount = generatedContent && generatedContent.body.split(/\s+/).length,
       const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Insert into blog_posts table
       const { data: blogPost, error } = await supabase
         .from('blog_posts')
         .insert({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          title: generatedContent && generatedContent.title;
+          slug: slug;
+          excerpt: generatedContent && generatedContent.metaDescription;
+          content: generatedContent && generatedContent.body;
+          author: {
+
+=======
+            name: "Zion AI Team";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             title: "Content Team",
             avatarUrl: "https://images && images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
           };
@@ -498,6 +805,29 @@ if ( {) {
           read_time: readTime;
           category: "AI Insights";
           tags: generatedContent && generatedContent.tags,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+          title: generatedContent.title,
+          slug: slug,
+          excerpt: generatedContent.metaDescription,
+          content: generatedContent.body,
+          author: {
+            name: "Zion AI Team";
+            title: "Content Team"
+            avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
+          }
+          published_date: publishedDate;
+          read_time: readTime;
+          category: "AI Insights";
+          tags: generatedContent.tags
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           featured_image: "", // To be updated if image is generated
           is_featured: false;
           is_published: true;
@@ -507,6 +837,27 @@ if ( {) {
         .select()
         .single();
       if (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        console && console.error("Error saving blog post:", error)
+      } else {
+
+        console && console.log("Blog post saved successfully:", blogPost);
+        
+
+=======
+
+=======
+
+        console.error("Error saving blog post:", error)
+      } else {
+        console.log("Blog post saved successfully:", blogPost);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             name: "Zion AI Team",
             title: "Content Team",
             avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -530,11 +881,28 @@ if ( {) {
         // // // console.log("Blog post saved successfully:", blogPost),
         
         console && console.log("Blog post saved successfully:", blogPost);
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Create notification about new blog post
         await supabase
           .from('notifications')
           .insert({
             user_id: null, // System notification visible to admins
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent && generatedContent.title}" has been published.`;
             type: "system";
@@ -648,21 +1016,65 @@ if ( {) {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            title: "New Blog Post Generated"
+            message: `AI-generated blog post "${generatedContent.title}" has been published.`;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             type: "system";
             read: false;
             related_id: blogPost.id
             action_url: `/blog/${slug}`;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`,
             type: "system",
             read: false,
             related_id: blogPost.id,
             action_url: `/blog/${slug}`,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             action_text: "View Post"
           })
       }
     }
     return new Response(JSON.stringify(generatedContent), {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 200})
   } catch (error) {
@@ -672,6 +1084,16 @@ if ( {) {
       status: 500})
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
@@ -681,6 +1103,17 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     // If autoPublish is true, save the content to the database;
     if (autoPublish && contentType === 'blog') {;
@@ -775,6 +1208,16 @@ if ( {) {
       status: 500});
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -1050,3 +1493,10 @@ action text: "View Post"
 });
   }
 });
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,15 +1,8 @@
 export function ClientDashboard() {
   return (
-    <div className="space-y-6 px-4 pb-24">
-      <section className="mt-4">
-        <Button className="w-full py-6" size="lg">
-          <Plus className="mr-2 h-5 w-5" /> Post a New Job
+
         </Button>
       </section>
-
-
-
-      
 
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -20,8 +13,6 @@ export function ClientDashboard() {
             </Button>
           </Link>
         </div>
-
-        
 
         <Card>
           <CardContent className="p-4">
@@ -34,7 +25,6 @@ export function ClientDashboard() {
                 <Badge>3 Milestones</Badge>
               </div>
 
-              
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
 
@@ -46,7 +36,6 @@ export function ClientDashboard() {
                 </div>
               </div>
 
-              
               <div className="flex justify-between items-center">
                 <div className="flex -space-x-2">
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
@@ -58,20 +47,12 @@ export function ClientDashboard() {
                   </div>
                 </div>
 
-
-
-
                 <Button size="sm" variant="outline">View Details</Button>
               </div>
             </div>
           </CardContent>
         </Card>
       </section>
-
-      
-
-      
-
 
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -83,10 +64,7 @@ export function ClientDashboard() {
           </Link>
         </div>
 
-
-        
         <div className="space-y-3">
-
 
           <Card>
             <CardContent className="p-4">
@@ -116,10 +94,6 @@ export function ClientDashboard() {
             </CardContent>
           </Card>
 
-
-          
-
-
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between">
@@ -137,9 +111,7 @@ export function ClientDashboard() {
                 </div>
               </div>
 
-
               <div className="mt-3 flex gap-1 flex-wrap">
-
 
                 <Badge variant="outline" className="text-xs">React</Badge>
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
@@ -149,23 +121,20 @@ export function ClientDashboard() {
                 <Button size="sm">View Profile</Button>
                 <Button size="sm" variant="outline">Message</Button>
               </div>
+              <div className='flex gap-2 mt-3'>
+                <Button size='sm'>View Profile</Button>
+                <Button size='sm' variant='outline'>
+                  Message
+                </Button>              </div>
             </CardContent>
           </Card>
         </div>
       </section>
 
-
-      
-
-
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
-
-
-        
-
 
         <Card>
           <CardContent className="p-4 space-y-4">
@@ -181,23 +150,16 @@ export function ClientDashboard() {
               </div>
             </div>
 
-
-            
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
                 <FileText className="h-5 w-5 text-primary" />
 
-
               </div>
               <div>
-                <p className="text-sm">
-                  <strong>Mobile App Development:</strong> 3 new applicants for your job post
-                </p>
-                <p className="text-xs text-muted-foreground">1 day ago</p>
+
               </div>
             </div>
 
-      
       <section>
 
         <div className="flex items-center justify-between mb-4">
@@ -227,15 +189,11 @@ export function ClientDashboard() {
                 <p className="text-xs text-muted-foreground">1 day ago</p>
               </div>
             </div>
-
-            
 
             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
       </section>
-
-
 
     </div>
 

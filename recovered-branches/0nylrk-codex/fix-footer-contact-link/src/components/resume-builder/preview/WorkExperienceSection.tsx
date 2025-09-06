@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {WorkExperience} from '@/types / resume';
+import {format} from 'date - fns';
+
+=======
+=======
+import {WorkExperience} from '@/types / resume';
+import {format} from 'date - fns';
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 import {WorkExperience} from '@/types/resume';
@@ -10,6 +27,15 @@ interface WorkExperienceSectionProps {
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
 import {WorkExperience} from '@/types/resume';
@@ -36,6 +62,27 @@ interface WorkExperienceSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+=======
+    }
+    return format(date, 'MMM yyyy')
+  }
+  if (sortedWorkExperience.length === 0) return null;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
@@ -55,12 +102,44 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedWorkExperience.length === 0) return null;
 
+<<<<<<< HEAD
   
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (sortedWorkExperience.length === 0) return null,
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
@@ -77,6 +156,25 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
               <p className="text-sm">{work.company_name}</p>
               {work.location && (
                 <span className="text-sm">{work.location}</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface WorkExperienceSectionProps {
+  work_experience: WorkExperience[];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
+interface WorkExperienceSectionProps {;
+  workExperience: WorkExperience[];
+=======
+interface WorkExperienceSectionProps {
+  work_experience: WorkExperience[];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
               )}
             </div>;
@@ -145,6 +243,15 @@ if (return null) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  if (sortedWorkExperience.length === 0) return null;
 ) 
@@ -162,3 +269,10 @@ if (return null) {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

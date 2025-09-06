@@ -46,8 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 export default async function handler(req, res) {
   try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
+
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -124,7 +123,6 @@ export default async function handler(req, res) {
   upsertEvent(currentState, event);
   writeState(currentState);
 
-
   const alreadyPropagated = payload && payload.propagate === false;
 
   if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
@@ -179,22 +177,16 @@ export default async function handler(req, res) {
   writeState(currentState)
   const alreadyPropagated = payload.propagate === false
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
-    const headers: Record<string, string> = {}
-    const localBody = { ...event, propagate: false }
-    const baseSignature = require("../../../utils/sync/signature")
-    const sig = baseSignature.signPayload(localBody)
-    if (sig) headers["x-zion-signature"] = sig
+
     await Promise.all(
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {
 
-          const url = new URL("/api/sync/publish", peer.baseUrl).toString()
           try {
 };
 ;
   if (event.type === "proposal") {;
-
 
   const event = payload as SyncEvent & { propagate?: boolean }
   // Check condition

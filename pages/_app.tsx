@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
@@ -227,10 +228,15 @@ import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 import '../styles/globals.css';
+=======
+import React from 'react';
+import type { AppProps } from 'next/app';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
+<<<<<<< HEAD
 }
   );
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -257,3 +263,6 @@ export default function App({ Component, pageProps }: AppProps) {
     </Layout>
   );
 }
+=======
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

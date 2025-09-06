@@ -1,8 +1,38 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface MobileHeaderProps {;
+  title: string,;
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { useNavigate } from "react-router-dom",
 import { ChevronLeft, Bell, Settings } from "lucide-react",
@@ -11,6 +41,16 @@ import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
 
   title: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   showBack?: boolean;
   showNotifications?: boolean;
@@ -19,6 +59,23 @@ interface MobileHeaderProps {
   onNotificationsClick?: () => void;
   onSettingsClick?: () => void;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+export function MobileHeader(): any ({;
+
+=======
+export function MobileHeader(): any ({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  onSettingsClick?: () => void;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title;
 
   showBack = false;
@@ -29,6 +86,23 @@ interface MobileHeaderProps {
   onSettingsClick}: MobileHeaderProps) {;
   const navigate = useNavigate();
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -36,10 +110,25 @@ interface MobileHeaderProps {
   showSettings?: boolean,
   className?: string,
   onNotificationsClick?: () => void,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   onSettingsClick?: () => void
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onSettingsClick?: () => void
 }
 export function MobileHeader({;
@@ -66,6 +155,18 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -75,6 +176,26 @@ export function MobileHeader({
               variant="ghost"
               size="icon"
               className="mr-2"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    <headerclassName={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
+      className
+=======
+=======
+    <headerclassName={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
+      className
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={() => navigate(-1)}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -105,9 +226,36 @@ export function MobileHeader({
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
             </Button>
+<<<<<<< HEAD
 }
 
 
+=======
+<<<<<<< HEAD
+}
+
+
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+=======
+          )}
+        </div>
+      </div>
+    </header>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
@@ -145,6 +293,18 @@ export function MobileHeader({;
     <header className={cn(;
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
       className;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onSettingsClick} MobileHeaderProps) {;
   const navigate = useNavigate(),;
 ;
@@ -152,10 +312,33 @@ export function MobileHeader({;
     <header className={cn(;
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;
       className;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     )}>;
       <div className="flex items-center justify-between h-14 px-4">;
         <div className="flex items-center">;
           {showBack && (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <Button
+              variant="ghost" 
+              size="icon" 
+              className="mr-2" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button ;
               variant="ghost" ;
               size="icon" ;
@@ -164,6 +347,13 @@ export function MobileHeader({;
               variant="ghost";
               size="icon";
               className="mr-2";
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={() => navigate(-1)}
             >;
               <ChevronLeft className="h-5 w-5" />;
@@ -172,10 +362,33 @@ export function MobileHeader({;
           )}
           <h1 className="text-lg font-medium leading-none truncate">;
             {title}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </h1>;
         </div>;
         <div className="flex items-center space-x-2">;
           {showNotifications && (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <Button
+              variant="ghost" 
+
+              size="icon"
+              onClick={onNotificationsClick}>;
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               size="icon"
               onClick={onNotificationsClick}>;
             <Button ;
@@ -188,10 +401,39 @@ export function MobileHeader({;
               size="icon";
               onClick={onNotificationsClick}
             >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Bell className="h-5 w-5" />;
               <span className="sr-only">Notifications</span>;
             </Button>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          {showSettings && (;
+            <Button
+              variant="ghost" 
+
+              size="icon"
+              onClick={onSettingsClick}>;
+=======
+          {showSettings && (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               size="icon"
               onClick={onSettingsClick}>;
             <Button ;
@@ -205,10 +447,31 @@ export function MobileHeader({;
               size="icon";
               onClick={onSettingsClick}
             >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
             </Button>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       </div>;
     </header>;
@@ -234,6 +497,17 @@ export /**
 function MobileHeader() {
   const navigate = use_navigate ();
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        </div>;
+      </div>;
+    </header>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <header className={cn (
       "sticky top - 0 z - 40 bg - background / 80 backdrop - blur - sm border - b border - border";
@@ -317,3 +591,10 @@ className)
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -3,6 +3,65 @@ import {useAuth} from "@/hooks/useAuth";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+export function TalentOnboardingSteps() {
+  const { user } = useAuth(),
+  const onboardingStatus = useOnboardingStatus(),
+  
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function TalentOnboardingSteps() {
+  const { user } = useAuth();
+=======
+export function TalentOnboardingSteps() {;
+
+  const { user } = useAuth();
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  const onboardingStatus = useOnboardingStatus();
+
+  const steps: OnboardingStep[] = [
+    {
+      id: "profile",
+      label: "Complete your profile",
+      completed: onboardingStatus.profileCompleted,
+      link: "/profile",
+      action: "Update",
+    },
+    {
+      id: "skills",
+      label: "Add your top skills",
+      completed: onboardingStatus.skillsAdded,
+      link: "/profile/skills",
+      action: "Add Skills",
+    },
+    {
+      id: "availability",
+      label: "Set your availability",
+      completed: onboardingStatus.availabilitySet,
+      link: "/profile/availability",
+      action: "Set",
+    },
+    {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 id: "match"
       id: "match"
       label: "Receive your first job match"
@@ -15,11 +74,47 @@ id: "match"
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
       link: "/talent-dashboard",
+<<<<<<< HEAD
+      action: "View Matches"}],
+  
+  return <OnboardingTracker steps={steps} />
+import React from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",;
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
+export function TalentOnboardingSteps() {;
+  const { user } = useAuth(),;
+  const onboardingStatus = useOnboardingStatus(),;
+  const steps: OnboardingStep[] = [;
+    {;
+      id: "profile",;
+      label: "Complete your profile",;
+      link: "/profile",;
+      action: "Update"},;
+    {;
+      id: "skills",;
+      label: "Add your top skills",;
+      link: "/profile/skills",;
+      action: "Add Skills"},;
+    {;
+      id: "availability",;
+      label: "Set your availability",;
+      link: "/profile/availability",;
+      action: "Set"},;
+    {;
+      id: "match",;
+      label: "Receive your first job match",;
+
+  return <OnboardingTracker steps={steps} />;
+
+=======
       action: "View Matches",
     },
   ];
 
   return <OnboardingTracker steps={steps} />;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
   const { user } = useAuth();
@@ -69,6 +164,15 @@ function TalentOnboardingSteps() {
 ;
   return <OnboardingTracker steps={steps} />;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -150,3 +254,10 @@ return <OnboardingTracker steps= {
   return <OnboardingTracker steps={steps} />;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -17,6 +17,18 @@
         </div>
       </div>
       <div className="mt-6 grid grid-cols-4 gap-3">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <Button
           type="button"
           variant="outline"
@@ -64,17 +76,76 @@
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => loginWithTwitter()}
           disabled={isLoading}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        >
+          <span className="sr-only">Sign in with Twitter</span>
+          <Twitter className="h-5 w-5" />
+        </Button>
+        <Web3Login />
+      </div>
+    </div>
+
+
+=======
+=======
+
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Web3Login } from "./Web3Login",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function SocialLogin() {;
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
+    useAuth();
+
+  return (
+=======
+export function SocialLogin() {;
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;
         <div className="relative flex justify-center text-sm">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Facebook, Twitter  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
@@ -112,10 +183,25 @@ function SocialLogin() {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
         </div>;
       </div>;
       <div className="mt-6 grid grid-cols-4 gap-3">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
           on_click={() => loginWithGoogle ()}
           disabled={is_loading}
@@ -169,3 +255,14 @@ function SocialLogin() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

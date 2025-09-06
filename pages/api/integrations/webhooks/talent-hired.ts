@@ -7,6 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
+<<<<<<< HEAD
   const state = readState();
   const atsProviders = state && state.connections.filter(
     (c) =>
@@ -14,6 +15,8 @@ export default async function handler(
       c && c.providerId === "lever" ||
       c && c.providerId === "workable" ||
       c && c.providerId === "bamboohr"
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { ats  } from '../../../../lib / integrations / connectors';
@@ -41,6 +44,7 @@ function handler() {
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
+<<<<<<< HEAD
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
       providerId: conn && conn.providerId
       level: "info"
@@ -53,6 +57,9 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { ats } from '../../../../lib/integrations/connectors';
@@ -87,8 +94,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status (200).json ({ ok: true, results });
   res.status(200).json({ ok: true, results });
 }
+<<<<<<< HEAD
   res.status(200).json({ ok: true, results });
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

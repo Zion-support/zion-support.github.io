@@ -41,6 +41,15 @@ import {;
   FormItem,
   FormLabel,
   FormMessage,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
@@ -54,6 +63,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const keywords = watch("keywords");
   const platform = watch("platform");
 
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/form";
 
 } from "@/components/ui/form";
@@ -75,11 +92,73 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import { AppMetadataValues } from "./MetadataManager";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from "@/components/ui/form";
+
+import { Badge } from "@/components/ui/badge";
+import { X } from "lucide-react";
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+
+  const { control, register, watch, setValue } = form,
+  const keywords = watch("keywords"),
+  const platform = watch("platform"),
+  
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+<<<<<<< HEAD
+=======
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+  const { control, register, watch, setValue } = form;
+  const keywords = watch("keywords");
+  const platform = watch("platform");
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
 
@@ -93,12 +172,27 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const keywords = watch("keywords"),
   const platform = watch("platform"),
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
       const value = e.currentTarget.value.trim(),
       
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (value && !keywords.includes(value)) {
 
   const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
@@ -111,10 +205,51 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         e && e.currentTarget.value = "";
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  };
+
+  const removeKeyword = (keyword: string) => {;
+    setValue(;
+      "keywords",;
+      keywords && keywords.filter((k) => k !== keyword),;
+
+<<<<<<< HEAD
+=======
+      if (value && !keywords.includes(value)) {
+        setValue("keywords", [...keywords, value]),
+        e.currentTarget.value = ""
+      }
+    }
+  }
+  const removeKeyword = (keyword: string) => {
+    setValue(
+      "keywords"
+      keywords.filter((k) => k !== keyword)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     );
   }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
   const longDescription = watch("longDescription");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return (
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   },
   
@@ -196,6 +331,11 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
 ;
   return (;
   return (
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>App Metadata</CardTitle>;
@@ -320,7 +460,29 @@ if ( {) {
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                </FormItem>;
+              )}
+            />;
+            <FormField;
+
+=======
+)}
+            />
+            <FormField
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -338,6 +500,19 @@ if ( {) {
                   </FormDescription>
                 </FormItem>
               )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            />;
+            <FormField;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
             <FormField;
 
@@ -348,18 +523,44 @@ if ( {) {
             <FormField
             />;
             <FormField;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               control={control}
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                    <Textarea 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Textarea 
 
 <Textarea
 
                     <Textarea
                     <Textarea 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
@@ -372,8 +573,26 @@ if ( {) {
                 </FormItem>
               )}
             />
+<<<<<<< HEAD
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            
+
+<<<<<<< HEAD
+            
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <div>
+              <FormLabel htmlFor="keywords">Keywords</FormLabel>
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
 
             <div>;
@@ -406,10 +625,94 @@ if ( {) {
                     </button>;
                   </Badge>;
                 ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+              </div>;
+              <FormDescription className="mt-2">;
+=======
+                    {long_description.length}/{maxDescriptionLength} characters;
+                  </FormDescription>;
+                </FormItem>)}
+            />;
+            <div>;
+              <FormLabel html_for="keywords">Keywords</FormLabel>;
+              <Input;
+                id="keywords";
+                placeholder="Add keywords (press Enter or comma to add)";
+                onKeyDown={add_keyword}
+                className="mb - 2";
+              />;
+              <div className="flex flex - wrap gap - 2 mt - 2">;
+                {keywords.map ((keyword, index) => (
+                  <Badge;
+                    key={index}
+                    className="bg - zion - purple / 60 hover:bg - zion - purple";
+                  >;
+                    {keyword}
+                    <button;
+                      type="button";
+                      on_click={() => remove_keyword (keyword)}
+                      className="ml - 1 hover:text - red - 300";
+                    >;
+                      <X className="h - 3 w - 3" />;
+                    </button>;
+                  </Badge>))}
+              </div>;
+              <FormDescription className="mt - 2">;
+
+=======
+              />
+
+              
+              <div className="flex flex-wrap gap-2 mt-2">
+                {keywords.map((keyword, index) => (
+                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
+                    {keyword}
+                    <button
+                    <button 
+                      type="button"
+                      onClick={() => removeKeyword(keyword)}
+                      className="ml-1 hover:text-red-300"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  </Badge>
+                ))}
+              </div>
+              <FormDescription className="mt-2">
+                Add keywords to improve discoverability (max 100 characters total)
+              </FormDescription>
+            </div>
+
+              </div>;
+              <FormDescription className="mt-2">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Add keywords to improve discoverability (max 100 characters;
                 total);
               </FormDescription>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+            
+
+
+=======
+
+            
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <FormField
               control={control}
               name="version"
@@ -511,3 +814,13 @@ if (value && !keywords.includes (value) ) {
     </Card>;
   );
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

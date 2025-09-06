@@ -6,6 +6,20 @@ import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -14,8 +28,24 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
 
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
@@ -35,6 +65,36 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "New"
       colors: "bg-green-500/20 text-green-400"}
     "top-rated": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      icon: Award
+      text: "Top Rated"
+      colors: "bg-purple-500/20 text-purple-400"}}
+  const { icon: Icon, text, colors } = badgeConfig[type];
+  return (
+    <div className={cn(
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
+      colors;
+
+      icon: Award,
+      text: "Top Rated",
+      colors: "bg-purple-500/20 text-purple-400"}},
+;
+  const { icon: Icon, text, colors } = badgeConfig[type];
+
+  const { icon: Icon, text, colors } = badgeConfig[type],
+
+  return (
+    <div className={cn(
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
+      colors,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
       icon: Award,
@@ -48,6 +108,18 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     </div>
   )
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -88,6 +160,17 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       <Icon className="w-3 h-3" />;
       <span>{text}</span>;
     </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
   const { icon: Icon, text, colors } = badgeConfig[type];
@@ -97,6 +180,14 @@ import { BadgeCheck, Star, Clock, Award } from './lucide-react';
 import { cn } from '@/lib / utils';
 type BadgeType = 'verified' | 'featured' | 'new' | 'top - rated';
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ProfileBadgeProps {
   type: BadgeType,
   class_name?: string;
@@ -153,3 +244,10 @@ className)
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

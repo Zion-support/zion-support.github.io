@@ -1,13 +1,72 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from 'sonner';
+import {Milestone, MilestoneStatus} from './types';
+import {useRecordActivity} from './useRecordActivity';
+export const useUpdateMilestone = () => {
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { recordMilestoneActivity } = useRecordActivity();
+  const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
+    if (!user) return false;
+    try {
+      setIsSubmitting(true);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -18,16 +77,53 @@ export const useUpdateMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
     if (!user) return false;
     try {
+<<<<<<< HEAD
       
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      setIsSubmitting(true),
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
         .eq('id', milestoneId)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         .single(),
 
@@ -39,10 +135,67 @@ export const useUpdateMilestone = () => {
       
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      const previousStatus = milestoneData && milestoneData.status;
+        .single();
+      if (fetchError) throw fetchError;
+      if (!milestoneData) throw new Error("Milestone not found");
+      const previousStatus = milestoneData.status;
+        .single(),
+      
+      if (fetchError) throw fetchError,
+      if (!milestoneData) throw new Error("Milestone not found"),
+      
+      const previousStatus = milestoneData.status,
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Update the milestone status
       const { error } = await supabase
         .from('project_milestones')
         .update({ status: newStatus })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+        .eq('id', milestoneId),
+
+      
+      toast && toast.success(`Milestone status changed to ${newStatus}`);
+      
+      return true
+    } catch (err: any) {
+
+      console.error("Error updating milestone status:", err),
+      toast.error("Failed to update status: " + err.message),
+
+
+=======
+        .eq('id', milestoneId),
+
+      
+        .eq('id', milestoneId);
+      if (error) throw error;
+      // Create activity record
+      await recordMilestoneActivity(milestoneId, 'status_changed', previousStatus, newStatus, comment);
+      console && console.error("Error updating milestone status:", err);
+      toast && toast.error("Failed to update status: " + err && err.message),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return false
     } finally {
       setIsSubmitting(false)
@@ -180,6 +333,16 @@ export const useUpdateMilestone = () => {;
         .eq('id', milestoneId),
 
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  }
+<<<<<<< HEAD
+};
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast && toast.success("Milestone updated successfully");
       
       return true
@@ -215,6 +378,20 @@ if (throw error) {
       toast.error ("Failed to update milestone: " + err.message),
       return false;
     } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+;
+
+=======
+      setIsSubmitting (false);
+    }
+  }
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return {
     updateMilestoneStatus;
     update_milestone;

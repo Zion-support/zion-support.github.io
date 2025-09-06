@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   additionalMetaTags: [
 { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     { name: 'theme-color', content: '#111827' }]}
 export default config;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
   title_template: '%s | Zion Tech Solutions',
@@ -22,8 +31,11 @@ import type { DefaultSeoProps } from 'next - seo';
 export default config;
 ;
 
+<<<<<<< HEAD
 
 
 export default config
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

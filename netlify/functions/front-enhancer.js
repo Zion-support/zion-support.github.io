@@ -1,8 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+function runNode(relPath, args = []) {
+
+  const abs = path && path.resolve(__dirname, '..', '..', relPath);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    status: res && res.status || 0,
+    stdout: res && res.stdout || '',
+    stderr: res && res.stderr || '',
+  };
+exports && exports.config = {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   schedule: '*/20 * * * *', // every 20 minutes
 }
 
@@ -11,6 +42,20 @@ exports && exports.handler = async () => {
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return status;
   }
   // Update the front page auto-generated section
@@ -18,6 +63,21 @@ exports && exports.handler = async () => {
     runNode('automation/front-index-advertiser && advertiser.cjs')
   );
   // Attempt to sync changes back to main (best-effort)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
+  return { statusCode: 200, body: logs && logs.join('\n') };
+};function runNode(relPath, args = []) {
+  const abs = path && path.resolve(__dirname, '....', relPath),
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -37,6 +97,27 @@ exports && exports.handler = async () => {
     return status
   }
   // Update the front page auto-generated section
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser && advertiser.cjs')),
+
+
+  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'))
+  // Attempt to sync changes back to main (best-effort)
+
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;

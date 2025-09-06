@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+=======
 import crypto from "crypto";
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Merkle tree utilities;
 export const merkle = {
   // Add merkle tree functionality here;
@@ -8,6 +15,8 @@ export const merkle = {
   get_proof: (tree: any, leaf: string) => [],
   verify_proof: (proof: any[], leaf: string, root: string) => false;
 }
+<<<<<<< HEAD
+=======
 
 export class MerkleTree {
   private root: MerkleNode | null = null;
@@ -130,3 +139,4 @@ export function verifyMerkleProof(
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

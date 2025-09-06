@@ -1,8 +1,3 @@
-return (
-      <Link href="/" className="flex items - center">;
-        <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
-      </Link>);
-  }
 
 
   if (logoToUse) {
@@ -13,17 +8,13 @@ return (
     )
   }
 
-  
-
   return (
-
 
 interface LogoProps {;
   customLogo?: string;
 
 export function Logo(): any ({ customLogo }: LogoProps) {;
   const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-
 
   // Use the white-label logo if available and no specific customLogo is provided;
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
@@ -96,4 +87,3 @@ if ( {) {
     </Link>);
 }
 
-}

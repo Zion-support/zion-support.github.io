@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -29,6 +30,15 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {}
 
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ |{}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+;
+const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { address } = req.query as { address?: string }
   if (!address) return res.status(400).json({ error: 'Missing address' })
   const data = store[String(address).toLowerCase()] |null
@@ -44,18 +54,23 @@ export default function handler(req: any, res: any) {
   res.status(200).json({ store });
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
-
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { address } = req.query as { address?: string };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+let state: SyncState = { ...defaultState }
+export function readState(): SyncState {
+  return { ...state }
+}
+export function updateState(updates: Partial<SyncState>): void {
+  state = { ...state, ...updates }
+};
+=======
+<<<<<<< HEAD
+=======
+
+
+    );
+  }
+
+  return events;export function resetState(): void {
+  state = { ...defaultState }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+<<<<<<< HEAD
+
+export function readState(): SyncState {;
+  return { ...state };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 
@@ -28,6 +60,216 @@ export interface SyncLog {
   timestamp: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+class SyncStorage {
+  private jobs: Map<string, SyncJob> = new Map();
+  private connections: Map<string, SyncConnection> = new Map();
+  private mappings: Map<string, SyncMapping> = new Map();
+  private logs: Map<string, SyncLog> = new Map();
+
+  // Job methods
+  async createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
+    const newJob: SyncJob = {
+      ...job,
+      id: `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      progress: {
+        total: 0,
+        processed: 0,
+        failed: 0,
+        skipped: 0
+      },
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    this.jobs.set(newJob.id, newJob);
+    return newJob;
+  }
+
+  async getJob(id: string): Promise<SyncJob | null> {
+    return this.jobs.get(id) || null;
+  }
+
+  async updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
+    const job = this.jobs.get(id);
+    if (!job) return null;
+
+    const updatedJob = {
+      ...job,
+      ...updates,
+      updatedAt: new Date().toISOString()
+    };
+
+    this.jobs.set(id, updatedJob);
+    return updatedJob;
+  }
+
+  async deleteJob(id: string): Promise<boolean> {
+    return this.jobs.delete(id);
+  }
+
+  async getJobsByStatus(status: SyncJob['status']): Promise<SyncJob[]> {
+    return Array.from(this.jobs.values()).filter(job => job.status === status);
+  }
+
+  async getJobsByType(type: SyncJob['type']): Promise<SyncJob[]> {
+    return Array.from(this.jobs.values()).filter(job => job.type === type);
+  }
+
+  async getAllJobs(): Promise<SyncJob[]> {
+    return Array.from(this.jobs.values()).sort((a, b) => 
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
+  }
+}
+// Singleton instance
+export const syncStorage = new SyncStorage();
+
+// Main functions for external use
+export async function createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
+  return syncStorage.createJob(job);
+}
+
+export async function getJob(id: string): Promise<SyncJob | null> {
+  return syncStorage.getJob(id);
+}
+
+export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
+  return syncStorage.updateJob(id, updates);
+}
+
+export async function startJob(id: string): Promise<boolean> {
+  return syncStorage.startJob(id);
+}
+
+export async function completeJob(id: string, error?: string): Promise<boolean> {
+  return syncStorage.completeJob(id, error);
+}
+
+export async function updateJobProgress(id: string, progress: Partial<SyncJob['progress']>): Promise<boolean> {
+  return syncStorage.updateJobProgress(id, progress);
+}
+
+export async function createConnection(connection: Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncConnection> {
+  return syncStorage.createConnection(connection);
+}
+
+export async function getConnection(id: string): Promise<SyncConnection | null> {
+  return syncStorage.getConnection(id);
+}
+
+export async function updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
+  return syncStorage.updateConnection(id, updates);
+}
+
+export async function createMapping(mapping: Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncMapping> {
+  return syncStorage.createMapping(mapping);
+}
+
+export async function getMapping(id: string): Promise<SyncMapping | null> {
+  return syncStorage.getMapping(id);
+}
+
+export async function updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
+  return syncStorage.updateMapping(id, updates);
+}
+
+export async function createLog(log: Omit<SyncLog, 'id' | 'timestamp'>): Promise<SyncLog> {
+  return syncStorage.createLog(log);
+}
+
+export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncLog[]> {
+  return syncStorage.getLogsByJob(jobId, limit);
+}
+
+// Utility functions
+export function createSyncJob(
+  type: SyncJob['type'],
+  source: string,
+  destination: string,
+  config?: SyncJob['config']
+): Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'> {
+  return {
+    type,
+    status: 'pending',
+    source,
+    destination,
+    config: config || {}
+  };
+}
+
+export function createSyncConnection(
+  name: string,
+  type: SyncConnection['type'],
+  config: SyncConnection['config']
+): Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'> {
+  return {
+    name,
+    type,
+    config,
+    isActive: true
+  };
+}
+
+export function createSyncMapping(
+  name: string,
+  sourceConnectionId: string,
+  destinationConnectionId: string,
+  fieldMappings: Record<string, string>
+): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {
+  return {
+    name,
+    sourceConnectionId,
+    destinationConnectionId,
+    fieldMappings,
+    isActive: true
+  };
+}
+
+export function generateJobId(): string {
+  return `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export function generateConnectionId(): string {
+  return `conn_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export function generateMappingId(): string {
+  return `mapping_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export function calculateProgress(processed: number, total: number): number {
+  if (total === 0) return 0;
+  return Math.round((processed / total) * 100);
+}
+
+export function formatDuration(startTime: string, endTime?: string): string {
+  const start = new Date(startTime);
+  const end = endTime ? new Date(endTime) : new Date();
+  const duration = end.getTime() - start.getTime();
+  
+  const seconds = Math.floor(duration / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  
+  if (hours > 0) {
+    return `${hours}h ${minutes % 60}m ${seconds % 60}s`;
+  } else if (minutes > 0) {
+    return `${minutes}m ${seconds % 60}s`;
+  } else {
+    return `${seconds}s`;
+  }
+}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -37,6 +279,33 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  return events;export function resetState(): void {;
+  state = { ...defaultState };
+}
+
+=======
+}
+
+}
+}
+}
+<<<<<<< HEAD
+=======
+  const entity_id = getEntityId (event);
+  const current_version = state.latestVersionByEntityId[entity_id] || 0;
+  const is_newer = event.version > current_version;
+;
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
@@ -75,3 +344,32 @@ export function filterEventsByScope (
 if (return events) {
   $2
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+    return events.filter (
+      e => e.type === 'proposal' || e.type === 'dao_endorsement');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return events.filter (
+      e =>;
+        e.type === 'token_transfer' ||;
+        e.type === 'talent_mobility' ||;
+        e.type === 'leaderboard_entry');
+  }
+  return events;export function reset_state (): void {
+  state = { ...default_state }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

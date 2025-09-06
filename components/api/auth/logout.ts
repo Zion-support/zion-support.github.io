@@ -7,10 +7,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { clearSessionCookie } from '../../../utils / auth - utils';
 ;
 export default /**
@@ -28,6 +36,7 @@ function handler() {
   res.status (200).json ({ ok: true });
 }
 
+<<<<<<< HEAD
 
 
 
@@ -46,3 +55,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

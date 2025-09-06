@@ -20,10 +20,64 @@ const categories = [;
   {
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+=======
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+const categories = [
+  {
+    title: "Services"
+    description: "On-demand IT support, consulting, development, and more";
+    icon: <Briefcase className="w-10 h-10" />
+    link: "/services"
+    color: "from-purple-500 to-indigo-600"}
+  {
+    title: "Talents"
+    description: "Connect with AI experts, developers, and tech specialists";
+    icon: <Users className="w-10 h-10" />
+    link: "/talent"
+    color: "from-cyan-500 to-blue-600"}
+  {
+    title: "Equipment"
+    description: "Rent or buy specialized hardware, servers, and devices";
+    icon: <HardDrive className="w-10 h-10" />
+    link: "/equipment"
+    color: "from-amber-500 to-orange-600"}
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const categories = [
   {
     title: "Services",
@@ -43,6 +97,20 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -51,6 +119,23 @@ const categories = [
     color: "from-emerald-500 to-green-600"}]
 const specialServices = [
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+    title: "IT Onsite Services"
+    link: "/it-onsite-services"
+    title: "IT Onsite Services"
+    link: "/it-onsite-services"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ];
 
@@ -71,6 +156,15 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 const categories = [;
   {;
     title: "Services",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    description: "On-demand IT support, consulting, development, and more";
+=======
+<<<<<<< HEAD
+    description: "On-demand IT support, consulting, development, and more",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     icon: <Briefcase className="w-10 h-10" />,;
     link: "/services",;
     color: "from-purple-500 to-indigo-600"},;
@@ -96,6 +190,11 @@ const specialServices = [;
     title: "IT Onsite Services",;
     link: "/it-onsite-services";
     description: "On-demand IT support, consulting, development, and more";
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ];
 
@@ -169,6 +268,68 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </Link>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+    </section>);
+=======
+
+;
+    </section>;
+  );}
+ const categories = [ {
+  title: "Services";
+description: "On-demand IT support, consulting, development, and more";
+icon: <Briefcase className="w-10 h-10" />;
+link: "/services";
+color: "from-purple-500 to-indigo-600" 
+};
+{
+  title: "Talents";
+description: "Connect with AI experts, developers, and tech specialists";
+icon: <Users className="w-10 h-10" />;
+link: "/talent";
+color: "from-cyan-500 to-blue-600" 
+};
+{
+  title: "Equipment";
+description: "Rent or buy specialized hardware, servers, and devices";
+icon: <HardDrive className="w-10 h-10" />;
+link: "/equipment";
+color: "from-amber-500 to-orange-600" 
+};
+{
+  const specialServices = [ {
+  title: "IT Onsite Services";
+link: "/it-onsite-services" 
+}];
+interface CategoriesSectionProps {
+  showTitle?: boolean 
+}export function CategoriesSection ({
+  showTitle = true 
+}: CategoriesSectionProps) {
+  return (<section className="py-20 bg-zion-blue" > <div className="container mx-auto px-4" > showTitle && (<div className="text-center mb-16" > <GradientHeading>Explore Categories</GradientHeading> </p> </div>) 
+}</div> </Link>) ) 
+}</div> > {
+  service.title 
+}</Link>) ) 
+}</div> </div> <div className="mt-12 flex justify-center" > <Link > View All Categories → </Link> </div> </div> </section>) 
+}
+    </section>;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,13 +1,94 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+const nextConfig = {
+  reactStrictMode: true,
+<<<<<<< HEAD
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  
+  // Minimal webpack config
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/backup*/**',
+          '**/disabled*/**',
+          '**/temp*/**',
+          '**/*.backup*',
+          '**/*.disabled*',
+          '**/pages_backup*/**',
+          '**/src_backup*/**',
+          '**/components.disabled*/**',
+          '**/pages.disabled*/**',
+          '**/src.disabled*/**'
+        ]
+      };
+    }
+    return config;
+=======
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  page_extensions: ['tsx', 'ts', 'jsx', 'js'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+  },
+  output: 'standalone',
+  trailing_slash: false,
+  dist_dir: '.next',
+}
+;
+module.exports = next_config;
+;
+
+=======
+
+    domains: ["localhost", "ziontechgroup.com"],
+  },
+  output: 'standalone',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   trailingSlash: false,
   distDir: '.next',
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
@@ -123,3 +204,12 @@ export default nextConfig;
 module.exports = nextConfig;
 module.exports = nextConfig;
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,5 +1,3 @@
-return (
-    <>;
 
   projectId: string,
   milestoneId?: string,
@@ -10,15 +8,12 @@ return (
 
 export function RaiseDisputeButton({ 
 
-
-
   projectId,
   milestoneId, 
   variant = "outline", 
   size,
   className 
 }: RaiseDisputeButtonProps) {
-
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
@@ -69,14 +64,7 @@ export function RaiseDisputeButton({
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
-            on_cancel={() => setIsDialogOpen (false)}          />;
-        </DialogContent>;
-      </Dialog>;
-    </>);
-}
 
-
-          
           <DisputeForm 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -139,5 +127,3 @@ export function RaiseDisputeButton({;
     </>;
   );
 
-}
-;

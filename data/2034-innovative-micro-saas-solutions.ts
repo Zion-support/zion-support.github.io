@@ -1,8 +1,64 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export type InnovativeMicroSaas = {
+      'Multi-speaker diarization',
+  launch_date?: string;
+
+export type InnovativeMicroSaas = {
+export type InnovativeMicroSaas = {;
+  id: string;
+  name: string;
+  description: string;
+  tagline?: string;
+  category:
+    | 'Content Marketing'
+    | 'Business Operations'
+    | 'Marketing Automation'
+    | 'Customer Success'
+    | 'Sales Automation'
+    | 'Financial Technology'
+    | 'Human Resources'
+    | 'Supply Chain Management'
+    | 'Customer Support';
+  pricing: { starter: string; professional?: string; enterprise?: string }
+  features: string[];
+  integrations?: string[];
+  useCases?: string[];
+  link: string;
+  realService?: boolean;
+  rating?: number;
+  launchDate?: string;
+}
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
+=======
+<<<<<<< HEAD
+export type InnovativeMicroSaas = {
+      'Multi-speaker diarization',
+  launch_date?: string;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
   {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description:;
@@ -25,6 +81,16 @@
   },
   {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description:;
@@ -39,6 +105,38 @@
       'Export to ERP',
     ],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
+    category: 'Human Resources'
+    pricing: { starter: '$69/mo' }
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync']
+    integrations: ['Greenhouse', 'Lever']
+    useCases: ['Faster hiring', 'Bias reduction']
+    link: 'https://ziontechgroup.com/services/candidate-screening-copilot'
+    realService: true
+  }
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+<<<<<<< HEAD
+=======
+=======
+
+    use_cases: ['Accounting automation', 'Finance ops'],
+    link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
+    real_service: true,
+
+  },
+  {
+
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
     description:;
@@ -47,6 +145,23 @@
     pricing: { starter: '$69/mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+    category: 'Human Resources',
+    pricing: { starter: '$69 / mo' },
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
+    integrations: ['Greenhouse', 'Lever'],
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
@@ -58,6 +173,16 @@
 	id: string, name: string,
 	description: string, tagline?: string,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -90,6 +215,18 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		useCases: ['Content repurposingSEO growth'];
 		link: 'https://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite';
 		realService: true;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+		rating: 4 && 4.7,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		launchDate: '2025-12-01'
 	}
 	{
@@ -101,6 +238,18 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'];
 		integrations: ['Google Business ProfileYelp'];
 		useCases: ['Local rankingReputation management'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		realService: true
 	}
 	{
@@ -112,6 +261,18 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'];
 		integrations: ['QuickBooksXeroStripe'];
 		useCases: ['Accounting automationFinance ops'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 		realService: true
 	}
 	{
@@ -123,10 +284,40 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['Resume parsingJD matchingQuestion setsATS sync'];
 		integrations: ['GreenhouseLever'];
 		useCases: ['Faster hiringBias reduction'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	}
+];
+
+=======
+<<<<<<< HEAD
+	}
+];
+
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
+
+		realService: true
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 	}
 ];
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 name: string;
 description: string;
 tagline?: string;

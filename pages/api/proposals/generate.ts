@@ -1,10 +1,7 @@
 
   try {
     const {
-      target_institution
-      type
-      regional_scope
-      budgetOrResolution
+
       language = 'en'
     } = req.body || {};
 
@@ -15,15 +12,6 @@
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini'
       messages: [
-      ]
-      temperature: 0.3
-    });
-      title
-      target_institution
-      type
-      regional_scope
-      budgetOrResolution
-
 
     return res.status(200).json({ meta, markdown: contentMarkdown })
   } catch (error: any) {
@@ -33,9 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
-      supporting_multiverses
-      content_markdown
-      language
+
     });
 ;
     return res.status (200).json ({ meta, markdown: content_markdown });

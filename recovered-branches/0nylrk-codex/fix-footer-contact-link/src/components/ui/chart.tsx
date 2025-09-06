@@ -1,8 +1,41 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+import * as React from "react"
+import type { CSSProperties } from "react"
+import * as RechartsPrimitive from "recharts"
+import {useReactId} from "@/hooks/useReactId"
+import {cn} from "@/lib/utils"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = Record<;
   string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
@@ -11,6 +44,33 @@ import { cn } from "@/lib/utils"
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  string,
+  {
+    label?: React.ReactNode
+    icon?: React.ComponentType
+  } & (
+    | { color?: string, theme?: never }
+    | { color?: never, theme: Record<keyof typeof THEMES, string> }
+  )
+>
+type ChartContextProps = {
+  config: ChartConfig
+}
+const ChartContext = React.createContext<ChartContextProps>({
+  config: {}})
+function useChart(): ChartContextProps {
+  return React.useContext(ChartContext)
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import * as React from "react";
 import type { CSSProperties } from "react";
@@ -39,6 +99,12 @@ import { cn } from '@/lib / utils';
 const THEMES = { light: "", dark: ".dark" } as const;
 export type ChartConfig = Record<;
   string;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     label?: React.ReactNode;
     icon?: React.ComponentType;
@@ -67,12 +133,45 @@ type ChartContextProps = {
     config: ChartConfig;
     children: React && React.ComponentProps<;
       typeof RechartsPrimitive && RechartsPrimitive.ResponsiveContainer;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    >["children"];
+  }
+
+>(({ id, className, children, config, ...props }, ref) => {;
+  const uniqueId = useReactId();
+  const chartId = `chart-${id || uniqueId && uniqueId.replace(/:/g, "")}`;
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <ChartContext && ChartContext.Provider value={{ config }}>;
       <div
         data-chart={chartId}
         ref={ref}
         className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          "flex aspect-video justify-center text-xs [&_ && _.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_ && _.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_ && _.recharts-curve && curve.recharts-tooltip-cursor]:stroke-border [&_ && _.recharts-dot[stroke='#fff']]:stroke-transparent [&_ && _.recharts-layer]:outline-none [&_ && _.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_ && _.recharts-radial-bar-background-sector]:fill-muted [&_ && _.recharts-rectangle && rectangle.recharts-tooltip-cursor]:fill-muted [&_ && _.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_ && _.recharts-sector[stroke='#fff']]:stroke-transparent [&_ && _.recharts-sector]:outline-none [&_ && _.recharts-surface]:outline-none"
+          className
+        )}
+        {...props}>;
+        <ChartStyle id={chartId} config={config} />;
+        <RechartsPrimitive && RechartsPrimitive.ResponsiveContainer>;
+          {children}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </RechartsPrimitive && RechartsPrimitive.ResponsiveContainer>;
       </div>;
     </ChartContext && ChartContext.Provider>;
@@ -83,6 +182,22 @@ const ChartStyle = ({ id, config }: { id: string, config: ChartConfig }) => {;
   const colorConfig = Object && Object.entries(config).filter(;
     ([_, config]) => config && config.theme || config && config.color;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  if (!colorConfig && colorConfig.length) {;
+    return null;
+
+=======
+=======
+  if (!colorConfig && colorConfig.length) {;
+    return null;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const ChartContext = React.create_context < ChartContextProps>({
   config: {}});
 function use_chart (): ChartContextProps {
@@ -129,11 +244,76 @@ if ( {) {
   return (
     <style;
       dangerouslySetInnerHTML={{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`;
+;
+  return (;
+    <ChartContext.Provider value={{ config }}>;
+      <div;
+        data-chart={chartId}
+        ref={ref}
+        className={cn(;
+          "flex aspect-video justify-center text-xs [&_.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_.recharts-curve.recharts-tooltip-cursor]:stroke-border [&_.recharts-dot[stroke='#fff']]:stroke-transparent [&_.recharts-layer]:outline-none [&_.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_.recharts-radial-bar-background-sector]:fill-muted [&_.recharts-rectangle.recharts-tooltip-cursor]:fill-muted [&_.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_.recharts-sector[stroke='#fff']]:stroke-transparent [&_.recharts-sector]:outline-none [&_.recharts-surface]:outline-none",;
+          className;
+        )}
+        {...props}
+      >;
+        <ChartStyle id={chartId} config={config} />;
+        <RechartsPrimitive.ResponsiveContainer>;
+          {children}
+        </RechartsPrimitive.ResponsiveContainer>;
+      </div>;
+    </ChartContext.Provider>;
+  );
+});
+ChartContainer.displayName = "Chart";
+;
+const ChartStyle = ({ id, config } { id:string, config:ChartConfig }) => {;
+  const colorConfig = Object.entries(config).filter(;
+    ([_, config]) => config.theme || config.color;
+  );
+;
+  if (!colorConfig.length) {;
+    return null;
+  }
+;
+  return (;
+    <style;
+      dangerouslySetInnerHTML={{;
+        __html:Object.entries(THEMES);
+          .map(;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             ([theme, prefix]) => `;
 ${prefix} [data-chart=${id}] {;
 ${colorConfig;
   .map(([key, itemConfig]) => {;
     const color =;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      itemConfig && itemConfig.theme?.[theme as keyof typeof itemConfig && itemConfig.theme] ||;
+      itemConfig && itemConfig.color;
+    return color ? `  --color-${key}: ${color},` : null;
+  });
+
+=======
+      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||;
+      itemConfig.color;
+    return color ? `  --color-${key} ${color},` :null;
+  });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   .join("\n")}
 }
 `;
@@ -178,6 +358,8 @@ const ChartTooltipContent = React.forward_ref<;
       name_key?: string;
       label_key?: string;
     }
+<<<<<<< HEAD
+=======
 
 >(
   (
@@ -268,6 +450,11 @@ const ChartTooltipContent = React.forwardRef<
       nameKey,
       labelKey},
     }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ref
   ) => {
     const { config } = useChart()
@@ -283,6 +470,39 @@ const ChartTooltipContent = React.forwardRef<
           ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
       if (labelFormatter) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+        return (
+          <div className={cn("font-medium", labelClassName)}>
+            {labelFormatter(value, payload)}
+          </div>
+        )
+      }
+      if (!value) {
+        return null
+      }
+>(;
+  (;
+    {;
+      active;
+      payload;
+      class_name;
+      indicator = "dot";
+      hide_label = false;
+      hide_indicator = false;
+      label;
+      label_formatter;
+      labelClassName;
+      formatter;
+      color;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       labelKey};
     ref;
   ) => {;
@@ -302,6 +522,13 @@ const ChartTooltipContent = React.forwardRef<
           : itemConfig?.label;
 
       if (labelFormatter) {;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return (
           <div className={cn("font-medium", labelClassName)}>;
             {labelFormatter(value, payload)}
@@ -513,11 +740,52 @@ const ChartLegendContent = React.forward_ref<;
       name_key?: string;
     }
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey }
+    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ref
   ) => {
     const { config } = useChart()
     if (!payload?.length) {
       return null
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>(;
+  (;
+    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey };
+    ref;
+  ) => {;
+    const { config } = useChart();
+
+    if (!payload?.length) {;
+      return null;
+
+    }
+=======
+    }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >(;
   (;
@@ -610,10 +878,37 @@ const ChartLegendContent = React.forwardRef<;
   }
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return (
       <div
         ref={ref}
         className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          "flex items-center justify-center gap-4"
+          verticalAlign === "top" ? "pb-3" : "pt-3"
+          className
+
+        )}>;
+        {payload && payload.map((item) => {;
+          const key = `${nameKey || item && item.dataKey || "value"}`;
+          const itemConfig = getPayloadConfigFromPayload(config, item, key);
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           return (
             <div
               key={item && item.value}
@@ -759,6 +1054,23 @@ function getPayloadConfigFromPayload(): any (;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+
+
+export {;
+  ChartContainer;
+  ChartTooltip;
+  ChartTooltipContent;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 
   return configLabelKey in config;
@@ -769,19 +1081,127 @@ function getPayloadConfigFromPayload(): any (;
   ChartLegend;
   ChartLegendContent;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ChartStyle}
+=======
+<<<<<<< HEAD
+  ChartContainer,;
+  ChartTooltip,;
+  ChartTooltipContent,;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
 }
 export {
   ChartStyle}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
   ChartLegend;
   ChartLegendContent;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ChartStyle}
+
+
+export {;
+  ChartContainer;
+  ChartTooltip;
+  ChartTooltipContent;
+;
+
+;
+  return configLabelKey in config;
+    ? config[configLabelKey];
+    : config[key as keyof typeof config];
+}
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ChartLegend;
   ChartLegendContent;
 
   ChartStyle}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  ChartContainer;
+  ChartTooltip;
+  ChartTooltipContent;
+  ChartLegend;
+  ChartLegendContent;
+  ChartStyle}
+);
+ChartLegendContent.displayName = "ChartLegend";
+;
+// Helper to extract item config from a payload.;
+function getPayloadConfigFromPayload(;
+  config:ChartConfig,;
+  payload:unknown,;
+  key:string;
+) {;
+  if (typeof payload !== "object" || payload === null) {;
+    return undefined;
+  }
+;
+  const payloadPayload =;
+    "payload" in payload &&;
+    typeof payload.payload === "object" &&;
+    payload.payload !== null;
+      ? payload.payload;
+      :undefined;
+;
+  let configLabelKey:string = key;
+;
+  if (;
+    key in payload &&;
+    typeof payload[key as keyof typeof payload] === "string";
+  ) {;
+    configLabelKey = payload[key as keyof typeof payload] as string;
+  } else if (;
+    payloadPayload &&;
+    key in payloadPayload &&;
+    typeof payloadPayload[key as keyof typeof payloadPayload] === "string";
+  ) {;
+    configLabelKey = payloadPayload[;
+      key as keyof typeof payloadPayload;
+    ] as string;
+  }
+;
+  return configLabelKey in config;
+    ? config[configLabelKey];
+    :config[key as keyof typeof config];
+}
+;
+export {;
+  ChartContainer,;
+  ChartTooltip,;
+  ChartTooltipContent,;
+  ChartLegend;
+  ChartLegendContent;
+  ChartStyle}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

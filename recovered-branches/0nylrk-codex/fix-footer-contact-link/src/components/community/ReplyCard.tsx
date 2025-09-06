@@ -6,10 +6,34 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface ReplyCardProps {;
+  reply: ForumReply,;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -27,6 +51,22 @@ interface ReplyCardProps {
   className?: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const ReplyCard = ({
+  reply;
+  onMarkAnswer
+  canMarkAnswer = false;
+import { ForumReply } from "@/types/community",
+import { cn } from "@/lib/utils",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -34,17 +74,50 @@ interface ReplyCardProps {
   className?: string
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export const ReplyCard = ({ 
+  reply,
+
+  onMarkAnswer, 
+  canMarkAnswer = false,
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const ReplyCard = ({ ;
   reply;
 export const ReplyCard = ({ 
   reply,
   onMarkAnswer, 
   canMarkAnswer = false,
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const ReplyCard = ({ ;
   reply;
   onMarkAnswer, ;
@@ -86,6 +159,21 @@ export const ReplyCard = ({;
   reply,;
   onMarkAnswer,;
   canMarkAnswer = false,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  className;
+}: ReplyCardProps) => {;
+  const timeAgo = formatDistanceToNow(new Date(reply && reply.createdAt), { addSuffix: true }),;
+
+  return (
+    <CardclassName={cn(
+      "transition-shadow"
+      reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
   className;
 }: ReplyCardProps) => {;
@@ -108,6 +196,48 @@ export const ReplyCard = ({;
               <Badge variant="outline" className="ml-2 text-xs">;
                 {reply.authorRole}
               </Badge>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            )}
+            {reply.isAnswer && (
+              <Badge className="ml-2 bg-green-500 text-white">
+                <CheckCircle className="h-3 w-3 mr-1" />
+                Answer
+              </Badge>
+            )}
+<<<<<<< HEAD
+=======
+          </div>
+          <div className="text-xs text-muted-foreground">
+            {timeAgo}
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent>
+        <div>{reply.content}</div>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="sm" className="px-2">
+            <ThumbsUp className="h-4 w-4 mr-1" />
+            <span>{reply.upvotes}</span>
+          </Button>
+          <Button variant="ghost" size="sm" className="px-2">
+            <ThumbsDown className="h-4 w-4 mr-1" />
+            <span>{reply.downvotes}</span>
+          </Button>
+        </div>
+        {canMarkAnswer && !reply.isAnswer && (
+          <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
+            <CheckCircle className="h-4 w-4 mr-1" />
+            Mark as Answer
+          </Button>
+        )}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           </div>;
         </div>;
@@ -143,11 +273,14 @@ export const ReplyCard = ({;
 }
 export default ReplyCard;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </CardFooter>;
     </Card>;
   );
 };
 export default ReplyCard;
+<<<<<<< HEAD
+=======
 
 import { formatDistanceToNow } from './date - fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from '@/components / icons';
@@ -285,3 +418,13 @@ export const ReplyCard = ({ ;
 
 
 export default ReplyCard;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default ReplyCard;
+export default ReplyCard;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

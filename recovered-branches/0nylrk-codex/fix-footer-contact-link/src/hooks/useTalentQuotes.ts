@@ -1,15 +1,65 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
 import { useAuth  } from '@/hooks/useAuth';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
+
+import {useToast} from '@/hooks/use-toast';
+export const useTalentQuotes = () => {
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
 export const useTalentQuotes = () => {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { user } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -20,6 +70,22 @@ export const useTalentQuotes = () => {;
   // Fetch quotes for this talent
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotestalent', talentId];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId),
+
+=======
+queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     enabled: !!talentId});
   // Count unread quotes
   const unreadCount = allQuotes && allQuotes.filter(
@@ -30,6 +96,28 @@ export const useTalentQuotes = () => {;
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+    queryFn: () => quoteRequestService.getByTalentId(talentId)
+    enabled: !!talentId});
+  // Count unread quotes
+  const unreadCount = allQuotes.filter(
+    quote => quote.status === 'new' && !quote.viewed_at
+  ).length;
+  // Filter quotes based on selected filters
+  const filteredQuotes = allQuotes.filter((quote) => {
+    // Status filter
+    if (statusFilter !== 'all' && quote.status !== statusFilter) {
+      return false
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -60,6 +148,12 @@ export const useTalentQuotes = () => {;
       return false;
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -68,6 +162,31 @@ export const useTalentQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+      quoteRequestService && quoteRequestService.updateStatus(id, status);
+
+<<<<<<< HEAD
+=======
+
+=======
+
+    }
+    // Archive filter
+    if (archiveFilter === 'active' && quote.is_archived) {
+      return false
+    }
+    if (archiveFilter === 'archived' && !quote.is_archived) {
+      return false
+    }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return true
   });
   // Mark as viewed/responded mutation
@@ -80,12 +199,29 @@ export const useTalentQuotes = () => {;
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return true
   });
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
+<<<<<<< HEAD
+=======
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
@@ -96,18 +232,61 @@ export const useTalentQuotes = () => {;
       toast({
         title: message
         description: "The quote request status has been updated"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+      });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to update status: " + error && error.message,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+    }
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update status: " + error.message
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive"
       })
     }
   });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+
+=======
+    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
+      quoteRequestService.toggleArchive(id, isArchived);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     onError: (error: Error) => {
       toast({
@@ -122,12 +301,33 @@ export const useTalentQuotes = () => {;
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
           ? "The quote request has been archived"
           : "The quote request has been moved back to active quotes"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      });
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
     };
@@ -137,6 +337,19 @@ export const useTalentQuotes = () => {;
       toast({
         title: "Error";
         description: "Failed to update quote: " + error.message
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
@@ -152,10 +365,46 @@ export const useTalentQuotes = () => {;
       toast({
         title: "Error";
         description: "Failed to update quote: " + error && error.message,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive"
       })
     }
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  return {
+    quotes: filteredQuotes;
+    unreadCount;
+    isLoading;
+    error;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter
+    markAsViewed: (id: string) =>
+      updateStatusMutation.mutate({ id, status: 'in_review' });
+    markAsResponded: (id: string) =>
+      updateStatusMutation.mutate({ id, status: 'responded' });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -268,6 +517,21 @@ if ( {) {
     error;
     status_filter;
     setStatusFilter;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    toggleArchive: (id: string, isArchived: boolean) => 
+
+=======
+=======
+    toggleArchive: (id: string, isArchived: boolean) =>
+    toggleArchive: (id: string, isArchived: boolean) => 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return {
     toggleArchive: (id: string, isArchived: boolean) =>
     toggleArchive: (id: string, isArchived: boolean) => 
@@ -275,6 +539,13 @@ if ( {) {
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     onError: (error: Error) => {
       toast({
@@ -346,6 +617,18 @@ if ( {) {
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 
@@ -373,6 +656,15 @@ if ( {) {
       toggleArchiveMutation.mutate ({ id, is_archived })}
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -499,3 +791,10 @@ export const useTalentQuotes = () => {;
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

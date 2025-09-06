@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Link } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {;
@@ -37,7 +42,6 @@ const Sidebar: React.FC = () => {;
     </div>;
   );
 };
-
 
 export default Sidebar;
 
@@ -248,3 +252,7 @@ export default Sidebar;
   );
 };
 export default Sidebar;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

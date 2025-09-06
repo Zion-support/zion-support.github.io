@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { useTheme } from "next-themes"
+import { Toaster as Sonner, toast } from "sonner"
+
+
+type ToasterProps = React.ComponentProps<typeof Sonner>
+const Toaster = ({ ...props }: ToasterProps) => {
+
+  const { theme = "system" } = useTheme()
+
+
+<<<<<<< HEAD
+=======
+import { useTheme } from &quot;next-themes&quot;
+import { Toaster as Sonner, toast } from &quot;sonner&quot;
+import { useTheme } from "next-themes"
+import { Toaster as Sonner, toast } from "sonner"
+
+type ToasterProps = React.ComponentProps<typeof Sonner>
+const Toaster = ({ ...props }: ToasterProps) => {
+  const { theme = &quot;system&quot; } = useTheme()
+  const { theme = "system" } = useTheme()
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
@@ -5,15 +38,52 @@
       toastOptions={{
         classNames: {
           toast:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+            &quot;group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg&quot;
+          description: &quot;group-[.toast]:text-muted-foreground&quot;
+          actionButton:
+            &quot;group-[.toast]:bg-primary group-[.toast]:text-primary-foreground&quot;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
           description: "group-[.toast]:text-muted-foreground",
           actionButton:
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
       {...props}
     />;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { use_theme } from &quot;next - themes & quot;
 import { Toaster as Sonner, toast } from &quot;sonner & quot;
 ;
@@ -39,9 +109,36 @@ type ToasterProps = React.ComponentProps<typeof Sonner>;
 const Toaster = ({ ...props } ToasterProps) => {;
   const { theme = "system" } = useTheme();
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (;
+    <Sonner;
+      theme={theme as ToasterProps["theme"]}
+      className="toaster group";
+      toastOptions={{;
+        classNames:{;
+          toast:;
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",;
+          description:"group-[.toast]:text-muted-foreground",;
+          actionButton:;
+            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",;
+          cancelButton:;
+            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {...props}
     />);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 ;
 ;

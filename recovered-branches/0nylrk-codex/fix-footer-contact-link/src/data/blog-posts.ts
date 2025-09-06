@@ -1,6 +1,31 @@
+<<<<<<< HEAD
     slug: "ai-trends-2025",
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+=======
+<<<<<<< HEAD
+    slug: "ai-trends-2025",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
+    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+import { BlogPost } from "@/types/blog";
+import { BlogPost } from '@/types/blog';
+// Sample blog data - in a real app this would come from an API or CMS
+export const BLOG_POSTS: BlogPost[] = [
+  {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    slug: "ai-trends-2025",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
+    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     id: 'ai-trends-2025'
     title: '10 Emerging AI Trends to Watch in 2025'
@@ -491,4 +516,22 @@ export const BLOG_POSTS: BlogPost[] = [;
     featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630";
   }
 ];
+<<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

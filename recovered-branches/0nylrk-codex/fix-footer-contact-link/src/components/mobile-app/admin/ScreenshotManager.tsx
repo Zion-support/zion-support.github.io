@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+import React, { useState, useRef } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Upload, Trash2, Plus } from "lucide-react",
+import { AppPlatform } from "./MetadataManager";
+import { toast } from "sonner";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -52,6 +70,16 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -68,11 +96,78 @@ type Screenshot = {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+    const maxScreenshots = platform === "ios" ? 10 : 8;
+    const availableSlots = maxScreenshots - screenshots.length;
+    if (availableSlots <= 0) {
+      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
+      return
+    }
+    const filesToAdd = imageFiles.slice(0, availableSlots);
+    const newScreenshots = filesToAdd.map(file => ({
+      id: Math.random().toString(36).substring(2, 9);
+      url: URL.createObjectURL(file)
+      file
+    }));
+    setScreenshots(prev => [...prev, ...newScreenshots]);
+    if (filesToAdd.length < imageFiles.length) {
+      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
+    }
+  }
+  const removeScreenshot = (id: string) => {
+    setScreenshots(prev => {
+      const filtered = prev.filter(screenshot => screenshot.id !== id);
+      // Revoke object URL to avoid memory leaks
+      const removed = prev.find(screenshot => screenshot.id === id)
+      if (removed) {
+        URL.revokeObjectURL(removed.url)
+      }
+      return filtered
+    })
+  }
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault()
+    setIsDragging(true)
+  }
+  const handleDragLeave = () => {
+    setIsDragging(false)
+  }
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false)
+    if (e.dataTransfer.files) {
+      addScreenshots(Array.from(e.dataTransfer.files))
+    }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
@@ -127,6 +222,12 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
   },;
@@ -184,12 +285,38 @@ type Screenshot = {
     }
   },
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -250,6 +377,10 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       <CardContent>;
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
+<<<<<<< HEAD
+            isDragging
+              ? "border-zion-cyan bg-zion-cyan/10"
+=======
 
 
             isDragging 
@@ -260,6 +391,16 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
               ? "border-zion-cyan bg-zion-cyan/10"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            isDragging 
+              ? "border-zion-cyan bg-zion-cyan/10" 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
@@ -274,12 +415,72 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          />;
+          <Button
+            variant="outline" 
+            onClick={() => fileInputRef && fileInputRef.current?.click()}
+=======
+        <div ;
+          className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
+            isDragging ;
+              ? "border-zion-cyan bg-zion-cyan/10" ;
+              :"border-zion-purple/30";
+          }`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >;
+          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
+          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
+          <input;
+            ref={fileInputRef}
+            type="file";
+            multiple;
+            accept="image/*";
+            onChange={handleFileSelect}
+            className="hidden";
+          />;
+          <Button ;
+            variant="outline" ;
+            onClick={() => fileInputRef.current?.click()}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className="mt-2";
           >;
             <Plus className="mr-2 h-4 w-4" />;
             Select Files;
           </Button>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        <div className="text-xs text-gray-400 mb-4">;
+          {platform === "ios" ;
+            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
+          }
+        </div>;
+
+        <div className="grid grid-cols-2 gap-3">;
+          {screenshots && screenshots.map((screenshot) => (;
+            <div key={screenshot && screenshot.id} className="relative group">;
+              <img
+                src={screenshot && screenshot.url}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
               />;
@@ -294,6 +495,16 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         </div>;
       </CardContent>;
@@ -460,6 +671,15 @@ if ( {) {
     </Card>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;
 },; interface ScreenshotManagerProps {
   platform: AppPlatform 
@@ -530,3 +750,10 @@ return filtered;
     </Card>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

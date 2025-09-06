@@ -1,16 +1,52 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
 
 
   ratingDistribution?: Record<number, number>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 import { Star } from "lucide-react",
@@ -23,6 +59,18 @@ interface ReviewStatsProps {
   ratingDistribution?: Record<number number>
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  // Format the average rating to one decimal place
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Format the average rating to one decimal place;
   const formattedRating = averageRating.toFixed(1);
   // Format the average rating to one decimal place
@@ -30,10 +78,42 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   const formattedRating = averageRating.toFixed(1);
   const formattedRating = averageRating.toFixed(1),
   
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {Star} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+=======
+
+  },
+  
+
+=======
+
+  },
+  
+
+  }
+
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">
@@ -46,6 +126,31 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { Star } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
+
+interface ReviewStatsProps {;
+  averageRating: number,;
+  totalReviews: number,;
+  ratingDistribution?: Record<number, number>;
+}
+
+export function ReviewStats(): any ({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {;
+  // Format the average rating to one decimal place;
+  const formattedRating = averageRating && averageRating.toFixed(1);
+
+  // Calculate percentages for distribution if available;
+  const getPercentage = (count: number) => {;
+    if (totalReviews === 0) return 0,;
+    return (count / totalReviews) * 100;
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
 import { Star } from "lucide-react",;
@@ -177,6 +282,18 @@ if (return 0, ) {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ;
       {ratingDistribution && (;
         <div className="space-y-2">;
@@ -228,3 +345,10 @@ return (<div className="bg-card border rounded-lg p-4" > <div className="flex it
 }</div>) 
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

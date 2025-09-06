@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
@@ -70,7 +75,12 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
     const completion = await openai.chat.completions.create ({
       model: "gpt - 4o - mini"
       messages: [sys_message, ...messages]
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       temperature: 0.2
+
     });
 
     const assistantMessage =
@@ -83,10 +93,13 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
       payload: { intent }
     });
       meta: {
+<<<<<<< HEAD
         intent_matched: intent.intent_matched
         matchedArticleIds: intent.matchedArticleIds
 
         links: matched_articles.map ((a) => ({
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     return res.status(200).json({
       assistantMessage
@@ -94,13 +107,23 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
         intentMatched: intent.intentMatched
         matchedArticleIds: intent.matchedArticleIds
         links: matchedArticles.map((a) => ({
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           title: a.title
           href: `/help/${a.slug}`
         }))
       }
+<<<<<<< HEAD
   } catch (e: any) {
 
 
+=======
+
+  } catch (e: any) {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
   } catch (e: any) {
     return res.status(200).json({
@@ -109,3 +132,7 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
     });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

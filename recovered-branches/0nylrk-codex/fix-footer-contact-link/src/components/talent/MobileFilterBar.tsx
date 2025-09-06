@@ -1,13 +1,42 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Search, Sliders} from "lucide-react";
 import {Input} from "@/components/ui/input";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Search, Sliders } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Search, Sliders } from "lucide-react",
 import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -15,6 +44,38 @@ interface MobileFilterBarProps {
 
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+
+
+<<<<<<< HEAD
+
+=======
+export function MobileFilterBar({
+  searchTerm;
+
+  setSearchTerm
+  setIsMobileFilterOpen
+
+
+export function MobileFilterBar({ ;
+  searchTerm;
+export function MobileFilterBar({ 
+  searchTerm,
+  setSearchTerm, 
+  setIsMobileFilterOpen 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }: MobileFilterBarProps) {
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
@@ -37,6 +98,23 @@ interface MobileFilterBarProps {
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Search, Sliders} from "lucide-react";
+import {Input} from "@/components/ui/input";
+=======
+
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from "lucide-react",;
@@ -54,6 +132,29 @@ interface MobileFilterBarProps {;
         <Sliders className="h-4 w-4" />;
         Filter Talents;
       </Button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      <div className="relative mt-4">;
+        <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />;
+        <Input
+          placeholder="Search talents..."
+          value={searchTerm}
+          onChange={e => setSearchTerm(e && e.target.value)}
+          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
+        />;
+      </div>;
+    </div>;
+  );
+}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from './lucide-react';
@@ -88,6 +189,20 @@ function MobileFilterBar() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 
       ;
@@ -104,3 +219,10 @@ function MobileFilterBar() {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

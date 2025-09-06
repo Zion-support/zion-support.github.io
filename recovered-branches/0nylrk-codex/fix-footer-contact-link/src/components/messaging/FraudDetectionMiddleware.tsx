@@ -1,9 +1,49 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import {check_message, monitor_content} from '@/services / fraud';
+import {toast} from '@/hooks / use - toast';
+import {supabase} from '@/integrations / supabase / client';
+// Props for the middleware component;
+
+interface FraudDetectionMiddlewareProps {
+  children: React.ReactNode;
+}
+
+
+
+
+=======
+=======
+import React, { useCallback } from 'react';
+import { checkMessage, monitorContent  } from '@/services/fraud';
+import { toast  } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+// Props for the middleware component
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+interface FraudDetectionMiddlewareProps {
+  children: React.ReactNode
+=======
+interface FraudDetectionMiddlewareProps {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 // Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
   children: React.ReactNode;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -11,6 +51,21 @@ import { supabase } from '@/integrations/supabase/client',;
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 // Interface for the context;
@@ -25,6 +80,20 @@ interface FraudDetectionContextType {;
     explanation?: string;
   }>;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     userId: string
     messageId: string
@@ -41,6 +110,32 @@ interface FraudDetectionContextType {;
 // TS2347, so we cast the default value instead of using a type parameter.
 
 export const FraudDetectionContext = React.createContext(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+  undefined as FraudDetectionContextType | undefined
+
+
+=======
+  undefined as FraudDetectionContextType | undefined
+
+
+  undefined as FraudDetectionContextType | undefined;
+);
+  undefined as FraudDetectionContextType | undefined
+);
+),
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
@@ -50,10 +145,49 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+      // First do a quick local check using the fraud detection service
+
+
+=======
+      // First do a quick local check using the fraud detection service
+
+
+      // First do a quick local check using the fraud detection service;
+      const quickCheck = checkMessage(content);
+      // First do a quick local check using the fraud detection service
+      const quickCheck = checkMessage(content);
+      const quickCheck = checkMessage(content),
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // If the quick check finds suspicious content, flag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
         await monitorContent(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+interface FraudDetectionMiddlewareProps {
+  children: React.ReactNode;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {checkMessage, monitorContent} from '@/services/fraud';
 import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
@@ -98,12 +232,32 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       if (quickCheck && quickCheck.isSuspicious) {;
         // Flag the content for review;
         await monitorContent(;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           userId;
           userEmail;
           'message';
           messageId;
           content;
         );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           userId,
           userEmail,
           'message',
@@ -113,6 +267,18 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        );
+        ),
+        
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
@@ -120,11 +286,50 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             description: "Your message contains content that may violate our terms of service."
             variant: "destructive"
             duration: 5000
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            explanation: "Message contains prohibited content. Please review our communication guidelines."
+          }
+            explanation: "Message contains prohibited content. Please review our communication guidelines."
+          };
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+          });
+          return {
+            isSafe: false
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }),
           
           return { 
             isSafe: false,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+            explanation: "Message contains prohibited content. Please review our communication guidelines."
+          }
+        }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      }
+
+
+      
+
+
+=======
+      
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
             explanation: "Message contains prohibited content. Please review our communication guidelines."
@@ -149,6 +354,18 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -156,15 +373,43 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       
       
       
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
           description: data.explanation |"This message contains prohibited content."
           variant: "destructive"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+        });
+        return {
+          isSafe: false
+          explanation: data.explanation
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }),
         return { 
           isSafe: false,
           explanation: data.explanation
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       if (data.classification === 'dangerous') {;
         toast({;
@@ -175,14 +420,48 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return {;
           isSafe: false,;
           explanation: data.explanation;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        }),
+        return { 
+          isSafe: false,
+          explanation: data.explanation
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
       }
       */
       // Message is considered safe
+<<<<<<< HEAD
 }
 
+=======
+<<<<<<< HEAD
+}
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         // If it's dangerous, show a warning to the user;
         if (quickCheck && quickCheck.severity === 'dangerous') {;
@@ -237,6 +516,48 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       {children}
 
     </FraudDetectionContext && FraudDetectionContext.Provider>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+      return { isSafe: true }
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+
+
+      return { isSafe: true }
+    } catch (error) {
+      console.error('Error in fraud detection:', error);
+      // On error, let the message pass through but log the error
+      return { isSafe: true }
+    }
+  }, []);
+  // Create the context value
+  const contextValue: FraudDetectionContextType = {
+    scanMessageContent}
+  return (
+    <FraudDetectionContext.Provider value={contextValue}>
+      {children}
+    </FraudDetectionContext.Provider>
+  )
+}
+// Hook to use the fraud detection context
+export const useFraudDetection = () => {;
+  const context = React.useContext(FraudDetectionContext);
+  if (context === undefined) {
+    throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
+  }
+  return context
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -250,6 +571,18 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     <FraudDetectionContext.Provider value={contextValue}>;
       {children}
     </FraudDetectionContext.Provider>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+
+
+      return { isSafe: true }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -259,6 +592,14 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
   return (
     <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
       {children}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </FraudDetectionContext && FraudDetectionContext.Provider>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 };
 
@@ -273,6 +614,14 @@ export const useFraudDetection = () => {;
 
 
 };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Interface for the context;
 interface FraudDetectionContextType {
   scanMessageContent: (
@@ -399,6 +748,15 @@ if ( {) {
   return context;
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
@@ -548,3 +906,10 @@ explanation: data.explanation
 // Hook to use the fraud detection context 
 };
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

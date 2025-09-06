@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+export type ReferralStatus = 'pending' | 'completed' | 'expired';
+;
+=======
 export type ReferralStatus = "pending" | "completed" | "expired";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface ReferralCode {
 
@@ -7,6 +12,15 @@ export interface ReferralCode {;
   id: string;
   user_id: string;
   code: string;
+<<<<<<< HEAD
+}
+  id: string;
+  user_id: string;
+  code: string;
+  created_at: string
+  updated_at: string
+}
+=======
   created_at: string;
   updated_at: string;
 }
@@ -14,13 +28,32 @@ export interface ReferralCode {;
 
 export interface Referral {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export interface Referral {
+
+export interface Referral {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface Referral {
 
 export interface Referral {;
 export interface Referral {
+<<<<<<< HEAD
 
 export interface Referral {;
 export interface Referral {
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -32,6 +65,8 @@ export interface Referral {
   referrer_user_type: string | null;
   created_at: string;
   completed_at: string | null;
+<<<<<<< HEAD
+=======
   reward_issued: boolean;
   reward_issued_at: string | null;
 }
@@ -39,6 +74,15 @@ export interface Referral {
 
 export interface ReferralReward {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   reward_issued: boolean
   reward_issued_at: string | null
 }
@@ -47,6 +91,13 @@ export interface ReferralReward {
 export interface ReferralReward {;
 }
 export interface ReferralReward {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   user_id: string;
   referral_id: string;
@@ -67,6 +118,19 @@ export interface ReferralStats {;
   totalRewards: number;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  totalRewards: number
+=======
+<<<<<<< HEAD
+=======
+  expires_at: string | null;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   expires_at: string | null;
 }
 
@@ -78,4 +142,22 @@ export interface ReferralStats {;
   totalRewards: number;
 }
 ;
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -75,6 +76,10 @@ const Footer: React.FC = () => {
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
                 <span className="text-gray-300">kleber@ziontechgroup.com</span>
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
             </div>
           </div>
@@ -88,12 +93,19 @@ const Footer: React.FC = () => {
               <span className="mr-2">Trusted by</span>
               <span className="font-semibold text-white">500+</span>
               <span className="ml-2">companies worldwide</span>
+<<<<<<< HEAD
             </div>
           </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
           </p>
+=======
+
+            </div>
+          </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
       </div>
     </footer>

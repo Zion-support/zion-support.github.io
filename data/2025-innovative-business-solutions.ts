@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   name: string;
   tagline: string;
@@ -28,6 +39,21 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    website: string;
+  }
+
+  {
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface InnovativeBusinessSolution {
   id: string, name: string,
   tagline: string, price: string,
@@ -53,6 +79,26 @@ export interface InnovativeBusinessSolution {
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      website: 'https://ziontechgroup.com';
+    }
+<<<<<<< HEAD
+    real_implementation: true,
+    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.';
+    launch_date: '2025 - 05 - 01';
+    customers: 38;
+    rating: 4.7,
+    reviews: 26;
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     realImplementation: true
     implementationDetails:
@@ -473,6 +519,17 @@ export interface InnovativeBusinessSolution {
     rating: 4.7
 
     reviews: 26
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeBusinessSolution {;
   id: string,;
@@ -775,4 +832,23 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     customers: 38;
     rating: 4.7,
     reviews: 26;
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+;
+=======
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

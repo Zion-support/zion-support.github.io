@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import EnterprisePlans from "../pages/EnterprisePlans";
@@ -14,6 +16,12 @@ import EnterpriseAdmin from "../pages/EnterpriseAdmin";
 import CompanyWorkspace from "../pages/CompanyWorkspace";
 import EnterpriseBilling from "../pages/EnterpriseBilling";
 import ZionHireAI from "../pages/ZionHireAI";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import EnterprisePlans from "../pages/EnterprisePlans",
@@ -66,6 +74,12 @@ const EnterpriseRoutes = () => {;
       <Route path="/company/:companySlug" element={<CompanyWorkspace />} />
       <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ;
       {/* Zion Hire AI Routes */}
       <Route path="/zion-hire-ai" element={<ZionHireAI />} />
@@ -76,6 +90,13 @@ const EnterpriseRoutes = () => {;
 
 
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import EnterprisePlans from "../pages / EnterprisePlans";
@@ -99,6 +120,16 @@ const EnterpriseRoutes = () =>: any {
 }
 ;
 export default EnterpriseRoutes;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;
 },;
 ;export default EnterpriseRoutes,
@@ -127,3 +158,10 @@ export default EnterpriseRoutes;
   );
 },;
 export default EnterpriseRoutes;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

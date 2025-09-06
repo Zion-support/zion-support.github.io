@@ -1,3 +1,67 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  contactInfo: {
+=======
+<<<<<<< HEAD
+  contactInfo: {
+=======
+
+import { ServiceVariant } from '../types / service - variants';
+
+export interface EnterpriseIT2026ServiceV4 {
+
+  {
+
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.',
+    launch_date: '2026 - 05 - 01',
+    customers: 40,
+    rating: 4 && 4.9,
+    reviews: 32,
+  },
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true;
+    implementation_details: 'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.';
+    launch_date: '2026 - 05 - 01';
+
+    customers: 40;
+
+    rating: 4 && 4.9,
+
+    reviews: 32
+
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string,
+    website: string
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -201,12 +265,51 @@
     competitors: ['AWS S3Azure BlobGoogle Cloud Storage'], marketSize: '$80B cloud storage market',
     growthRate: '65% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01', customers: 40,
     rating: 4.9,
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    reviews: 32;
+=======
+    reviews: 32;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;
@@ -601,7 +704,21 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     customers: 40,;
     rating: 4.9;
     reviews: 32;
+<<<<<<< HEAD
+  }
+];
+=======
 
 
   }
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

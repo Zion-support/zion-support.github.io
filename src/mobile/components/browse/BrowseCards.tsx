@@ -39,7 +39,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
     );
   };
 
-
   return (
     <div className='space-y-4 pb-24'>;
       {items && items.map(item => (;
@@ -75,7 +74,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                   </div>;
                 </div>;
 
-
                 <button
                   className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item && item.id)}                >;
@@ -102,24 +100,19 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
 
-
-import React, { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface BrowseItem {
   id: string,
   title: string,
   subtitle: string,
   description: string,
-  location?: string,
+  location?: string;
   badges: string[],
-  price?: string,
-  image?: string,
-  match?: number,
+  price?: string;
+  image?: string;
+  match?: number;
   timePosted?: string
 }
 
@@ -130,24 +123,21 @@ interface BrowseCardsProps {
 }
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]),
-  
+
+  const [ savedItems, setSavedItems ] = useState<string[]>([]),
+
   const toggleSaved = (id: string) => {
     setSavedItems(prev => 
       prev.includes(id) 
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
     )
-  },
-  
+  };
+
   return (
     <div className="space-y-4 pb-24">
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
-
-
-
-
 
           <CardContent className="p-0">
             <div className="p-4">
@@ -170,15 +160,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   </div>;
                 </div>;
 
-
                 <button
                   className="h-8 w-8 flex items-center justify-center"
-                  onClick={() => toggleSaved(item.id)}
-                >
-                  {savedItems.includes(item.id) ? (
-                    <BookmarkCheck className="h-5 w-5 text-primary" />
-                  ) : (
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />
+
                   )}
 
                 </button>;
@@ -191,7 +175,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     key = {index,}
                     variant="outline"
                     className="text-xs font-normal"
-
 
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
@@ -219,14 +202,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </button>
               </div>
 
-              
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
                   <Badge 
                     key={index} 
                     variant="outline" 
                     className="text-xs font-normal"
-
 
                   )}
                   <div>
@@ -259,17 +240,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 ))}
               </div>
 
-
                 {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
                     <span>{item.location}</span>
                   </div>
                 )}
-
-
-                
-
 
                 {item.price && (
                   <div className="flex items-center gap-1">
@@ -278,10 +254,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   </div>
                 )}
 
-
-                
-
-
                 {item.timePosted && (
                   <div className="flex items-center gap-1">
                     <Clock className="h-3 w-3" />
@@ -289,16 +261,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   </div>
                 )}
 
-
-
-
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
-
 
               </div>;
 
@@ -374,12 +342,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
       ))}
 
-            
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
-
-
 
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
@@ -533,7 +498,6 @@ function BrowseCards() {
         </Card>))}
     </div>);
 }
-
 
       ))}
 

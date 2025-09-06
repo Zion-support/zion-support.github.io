@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+
+
+
+
+import React, { useState } from "react";
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Label} from "@/components/ui/label";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
+import {Badge} from "@/components/ui/badge";
+import {Card, CardContent} from "@/components/ui/card";
+=======
 import React, { useState } from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -18,6 +35,11 @@ import { Card, CardContent } from "@/components/ui/card";
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -41,8 +63,13 @@ type JobPostStep = "details" | "requirements" | "budget" | "preview",
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 export function MobileJobPost() {
+<<<<<<< HEAD
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+  
+=======
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements");
@@ -51,7 +78,10 @@ export function MobileJobPost() {
     } else if (currentStep === "budget") {
       setCurrentStep("preview");
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details");
@@ -60,6 +90,73 @@ export function MobileJobPost() {
     } else if (currentStep === "preview") {
       setCurrentStep("budget");
     }
+<<<<<<< HEAD
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+          rows={5}
+        />
+      </div>
+    </div>
+  )
+}
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ]);
+  const [newSkill, setNewSkill] = useState("");
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+import React, { useState } from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue;
+} from "@/components/ui/select",;
+import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
+import { Badge } from "@/components/ui/badge",;
+import { Card, CardContent } from "@/components/ui/card",;
+type JobPostStep = "details" | "requirements" | "budget" | "preview",;
+
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+
+  const goToNextStep = () => {;
+    if (currentStep === "details") {;
+      setCurrentStep("requirements");
+    } else if (currentStep === "requirements") {;
+      setCurrentStep("budget");
+    } else if (currentStep === "budget") {;
+      setCurrentStep("preview");
+    }
+
+  const goToPrevStep = () => {;
+    if (currentStep === "requirements") {;
+      setCurrentStep("details");
+    } else if (currentStep === "budget") {;
+      setCurrentStep("requirements");
+    } else if (currentStep === "preview") {;
+      setCurrentStep("budget");
+    }
+  };
+
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "details": return <DetailsStep />;
+      case "requirements":;
+=======
   };
 
   const renderStepContent = () => {
@@ -67,6 +164,7 @@ export function MobileJobPost() {
       case "details":
         return <DetailsStep />;
       case "requirements":
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return <RequirementsStep />;
       case "budget":
         return <BudgetStep />;
@@ -82,6 +180,13 @@ export function MobileJobPost() {
       <MobileHeader
         title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
         showBack
+<<<<<<< HEAD
+          <Button
+            className="flex-1 gap-1"
+            onClick={goToNextStep}>;
+            {currentStep === "preview" ? "Publish Job" : "Continue"}
+            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
+=======
       />
 
       <main className="flex-1 py-4 pb-24 px-4">
@@ -193,6 +298,7 @@ function DetailsStep() {;
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           rows={5}
         />;
       </div>;
@@ -281,6 +387,15 @@ if ( {) {
  */
 function DetailsStep() {
   return (
+<<<<<<< HEAD
+
+  },
+  
+  const removeSkill = (skill: string) => {
+    setSkills(skills.filter(s => s !== skill))
+  },
+  
+=======
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Details</h2>
 
@@ -355,6 +470,7 @@ function RequirementsStep() {
     setSkills(skills.filter((s) => s !== skill));
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -397,6 +513,79 @@ function RequirementsStep() {
           {skills.map((skill) => (
             <Badge
               key={skill}
+<<<<<<< HEAD
+;
+function RequirementsStep() {;
+  const [skills, setSkills] = useState<string[]>([;
+    "React", "TypeScript", "Node.js";
+  ]),;
+  const [newSkill, setNewSkill] = useState(""),;
+  const addSkill = () => {;
+    if (newSkill && !skills.includes(newSkill)) {;
+      setSkills([...skills, newSkill]),;
+      setNewSkill("");
+    }
+  };
+
+  const removeSkill = (skill: string) => {;
+    setSkills(skills && skills.filter(s => s !== skill));
+  };
+
+  return (
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium">Job Requirements</h2>;
+
+      <div className="space-y-2">;
+        <Label htmlFor="experience">Experience Level</Label>;
+        <Select>;
+          <SelectTrigger>;
+            <SelectValue placeholder="Select experience level" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="entry">Entry Level</SelectItem>;
+            <SelectItem value="mid">Mid Level</SelectItem>;
+            <SelectItem value="senior">Senior</SelectItem>;
+            <SelectItem value="expert">Expert</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
+
+      <div className="space-y-2">;
+        <Label htmlFor="education">Education</Label>;
+        <Select>;
+          <SelectTrigger>;
+            <SelectValue placeholder="Select required education" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="high_school">High School</SelectItem>;
+            <SelectItem value="associate">Associate Degree</SelectItem>;
+            <SelectItem value="bachelor">Bachelor's Degree</SelectItem>;
+            <SelectItem value="master">Master's Degree</SelectItem>;
+            <SelectItem value="phd">PhD</SelectItem>;
+            <SelectItem value="none">No Specific Requirement</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
+
+      <div className="space-y-2">;
+        <Label>Required Skills</Label>;
+        <div className="flex flex-wrap gap-2 mb-3">;
+          {skills && skills.map((skill) => (;
+            <Badge
+              key={skill} 
+
+function RequirementsStep() {
+  const [skills, set_skills] = useState < string[]>([;
+    "React", "TypeScript", "Node.js";
+  ]);
+      setSkills([...skills, newSkill]);
+      setNewSkill("");
+    }
+              variant="secondary"
+              className="flex items-center gap-1 px-3 py-1">;
+              {skill}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
@@ -550,6 +739,41 @@ function BudgetStep() {;
  */
 function BudgetStep() {
   return (
+<<<<<<< HEAD
+        <Select>;
+          <SelectTrigger>;
+            <SelectValue placeholder="Select payment type" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="hourly">Hourly Rate</SelectItem>;
+            <SelectItem value="fixed">Fixed Price</SelectItem>;
+            <SelectItem value="salary">Salary</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
+              <SelectValue placeholder="Currency" />;
+            </SelectTrigger>;
+            <SelectContent>;
+              <SelectItem value="usd">USD</SelectItem>;
+              <SelectItem value="eur">EUR</SelectItem>;
+              <SelectItem value="gbp">GBP</SelectItem>;
+            </SelectContent>;
+          </Select>;
+        </div>;
+      </div>;
+        <Select>;
+          <SelectTrigger>;
+            <SelectValue placeholder="Select project duration" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="ltw">Less than a week</SelectItem>;
+            <SelectItem value="ltm">Less than a month</SelectItem>;
+            <SelectItem value="6m+">6+ months</SelectItem>;
+            <SelectItem value="ongoing">Ongoing</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
+=======
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Budget & Timeline</h2>
 
@@ -618,6 +842,7 @@ function BudgetStep() {
         <Textarea
           id="additionalInfo"
           placeholder="Any additional information about budget or payment"
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           rows={3}
         />
       </div>
@@ -674,6 +899,9 @@ function PreviewStep() {
         Edit Job Post
       </Button>
     </div>
+<<<<<<< HEAD
+  )
+=======
   );
 }
 
@@ -687,6 +915,7 @@ function PreviewStep() {
       </div>;
     </div>);
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * PreviewStep - Function description
  */

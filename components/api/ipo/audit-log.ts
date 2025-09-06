@@ -6,7 +6,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!requireSuperadminApi(req, res)) return;
@@ -15,6 +14,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('Content-Type', 'application/json');
   res && res.setHeader('Content-Disposition', 'attachment; filename="audit-log && log.json"');
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2));export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!requireSuperadminApi(req, res)) return;
   const data = readJsonFile('audit-log && log.json', [] as unknown[]);
   res && res.setHeader('Content-Typeapplication/json');
@@ -22,9 +25,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2))
 }
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const data = readJsonFile('audit-log.json', [] as unknown[]);
   res.setHeader('Content-Typeapplication/json');
   res.setHeader('Content-Dispositionattachment, filename="audit-log.json"');
@@ -55,6 +61,7 @@ function handler() {
   res.set_header ('Content - Dispositionattachment, filename="audit - log.json"');
   res.status (200).send (JSON.stringify (data, null, 2));
 }
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -71,3 +78,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    // Fix double commas in import statements
+
+    // Fix double commas in import statements;
+    const doubleCommaRegex = /,\s*,/g;
+    const fixedContent = content.replace(doubleCommaRegex, ",");
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
@@ -29,6 +46,36 @@ if ( {) {
     }
     return modified;
   } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    const items = fs && fs.readdirSync(currentDir);
+    for (const item of items) {
+      const fullPath = path && path.join(currentDir, item);
+      const stat = fs && fs.statSync(fullPath);
+      if (stat && stat.isDirectory()) {
+        // Skip certain directories
+        if (
+          [
+            "node_modules",
+            ".git",
+            ".next",
+            "dist",
+            "build",
+            "out",
+            "ai-optimization-backups",
+            "apps && apps.backup",
+            "backup-merge-conflicts",
+            "apps",
+            "temp_exclude",
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           ].includes(item)
         ) {
           continue;
@@ -82,12 +129,40 @@ if (
       }
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+console && console.log(`Found ${files && files.length} files to check for double commas...`);
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
     console && console.log(`Fixed double commas in: ${file}`);
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+console && console.log(`\nFixed double commas in ${fixedCount} files.`);
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   traverse (dir);
   return files;
 }

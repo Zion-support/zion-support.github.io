@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+=======
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -10,7 +17,10 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   const statCards = [
     {
+<<<<<<< HEAD
+=======
       title: "Total Referrals"
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       value: stats.totalReferrals
       icon: <Share className="h-5 w-5 text-muted-foreground" />
       description: "People you've invited"
@@ -33,6 +43,12 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { ReferralStats, as, ReferralStatsType  } from '@/types / referrals';
 import { Award, Share, Star, TrendingUp  } from './lucide-react';
@@ -69,6 +85,11 @@ function ReferralStats() {
       icon: <Award className="h - 5 w - 5 text - muted - foreground" />,
       description: "Credits earned from referrals",
     },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ];
 ;
   return (
@@ -156,8 +177,20 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>
   );
 }
 ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

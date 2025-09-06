@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -62,6 +75,15 @@ function restorePage(pagePath) {;
       const parts = backupContent.split('');
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 '),
@@ -69,6 +91,29 @@ function restorePage(pagePath) {;
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        backupContent = parts[1].split('>>>>>>>')[0]
+
+=======
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     }
     // Clean up the content
@@ -97,6 +142,20 @@ function restorePage(pagePath) {;
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 '),
       // Check condition
 if ( {) {
@@ -119,12 +178,30 @@ if ( {) {
     fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     // Create a backup of the current corrupted file;
     const timestamp = Date.now();
     const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
     fs.writeFileSync(corruptedBackupPath, currentContent),;
     // Restore the page;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     fs.writeFileSync(pagePath, backupContent),;
     return {;
       restored: true,;
@@ -133,6 +210,19 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -172,13 +262,32 @@ function restoreAllCorruptedPages() {
         
         console.log(`\n🔍 Checking: ${fullPath}`),
 
+<<<<<<< HEAD
+=======
 
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         
         console.log(`\n🔍 Checking: ${fullPath}`),
 
+<<<<<<< HEAD
 
+=======
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -200,19 +309,58 @@ function restoreAllCorruptedPages() {;
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
+<<<<<<< HEAD
+=======
+        const result = restorePage(fullPath),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        const result = restorePage(fullPath),
+        const result = restorePage(fullPath),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (result.restored) {
           results.restored++
           console.log(`✅ Restored: ${fullPath}`)
           console.log(`   Used backup: ${result.backupUsed}`)
           console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+          results.failed++
+          console.log(`❌ Failed: ${fullPath}`)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           console.log(`   Reason: ${result.reason}`)
           results.failed++,
           results.failed++,
@@ -238,9 +386,38 @@ function restoreAllCorruptedPages() {;
           results.failed++,
 
 
+<<<<<<< HEAD
           results.failed++,
 
 
+=======
+=======
+<<<<<<< HEAD
+          // // // console.log(`❌ Failed: ${fullPath}`),
+          // // // console.log(`   Reason: ${result.reason}`)
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {;
+        results.total++,;
+        // // // console.log(`\n🔍 Checking: ${fullPath}`),;
+        const result = restorePage(fullPath);
+        if (result.restored) {;
+          results.restored++,;
+          // // // console.log(`✅ Restored: ${fullPath}`),;
+          // // // console.log(`   Used backup: ${result.backupUsed}`),;
+          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+        } else {;
+          results.failed++,;
+          // // // console.log(`❌ Failed: ${fullPath}`),;
+          // // // console.log(`   Reason: ${result.reason}`);
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+          results.failed++,
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
         results.details.push({
           file: fullPath
@@ -251,22 +428,97 @@ function restoreAllCorruptedPages() {;
   }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return results
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
-  
-  console.log('🚀 Starting page restoration process...'),
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  console.log('🚀 Starting page restoration process...')
+  scanDirectory(pagesDir)
+  // Generate summary
+  console.log('\n📊 Restoration Summary: ')
+  console.log(`   Total pages: ${results.total}`)
+  console.log(`   Restored: ${results.restored}`)
+  console.log(`   Failed: ${results.failed}`)
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'page-restoration-report.json')
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  return results
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  
+  console.log('🚀 Starting page restoration process...'),
+  // // // console.log('🚀 Starting page restoration process...'),
+<<<<<<< HEAD
+  scanDirectory(pagesDir),
+  // Generate summary
+  scanDirectory(pagesDir),
+  // Generate summary
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
   scanDirectory(pagesDir),
   // Generate summary
 
+
+<<<<<<< HEAD
+=======
+=======
+  scanDirectory(pagesDir),
+  // Generate summary
+  console.log('\n📊 Restoration Summary: '),
+  console.log(`   Total pages: ${results.total}`),
+  console.log(`   Restored: ${results.restored}`),
+  console.log(`   Failed: ${results.failed}`),
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
+  
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`),
+  
+  return results
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  scanDirectory(pagesDir),
+  // Generate summary
+  scanDirectory(pagesDir),
+  // Generate summary
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
   scanDirectory(pagesDir),
   // Generate summary
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -278,7 +530,42 @@ function restoreAllCorruptedPages() {;
   console.log(`\n Detailed report saved to: ${reportPath}`)
 
   return results
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+  // // // console.log('🚀 Starting page restoration process...'),;
+  scanDirectory(pagesDir),;
+  // Generate summary;
+  // // // console.log('\n📊 Restoration Summary: '),;
+  // // // console.log(`   Total pages: ${results.total}`),;
+  // // // console.log(`   Restored: ${results.restored}`),;
+  // // // console.log(`   Failed: ${results.failed}`),;
+  // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),;
+  // Save detailed report;
+  const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),;
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
+  // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
+  return results;
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 // Run the restoration if this script is executed directly
 if ({
@@ -361,6 +648,23 @@ if ( {) {
 }
   restoreAllCorruptedPages ();
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+<<<<<<< HEAD
+=======
+module.exports = {
+
+  restorePage
+  restoreAllCorruptedPages
+  findBestBackup
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 
@@ -370,6 +674,18 @@ module.exports = {;
   restoreAllCorruptedPages,;
   findBestBackup;
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -378,6 +694,23 @@ module.exports = {
   restore_page,
   restoreAllCorruptedPages,
   findBestBackup;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 main
@@ -392,3 +725,10 @@ module.exports = {
 main
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

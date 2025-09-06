@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  status: 'planning' | 'active' | 'completed' | 'cancelled';
+  clientId: string;
+  talentId?: string;
+  budget: number;
+  deadline: string;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -39,6 +60,87 @@ export interface Project {
   updatedAt: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface CreateProjectPayload {
+  title: string;
+  description: string;
+  budget: number;
+  deadline: string;
+  clientId: string;
+}
+
+export interface UpdateProjectPayload {
+  title?: string;
+  description?: string;
+  status?: Project['status'];
+  budget?: number;
+  deadline?: string;
+}
+
+export async function createProject(payload: CreateProjectPayload): Promise<Project> {
+  const res = await fetch('/api/projects', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function getProjects(): Promise<Project[]> {
+  const res = await fetch('/api/projects', {
+    method: 'GET',
+    credentials: 'include'
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function updateProject(projectId: string, payload: UpdateProjectPayload): Promise<Project> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function deleteProject(projectId: string): Promise<void> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'DELETE',
+    credentials: 'include'
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+}
+=======
+
+=======
+  isMilestoneStatus;
+} from '../types / milestones';
+import { CurrentUser } from './auth';
+;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface Milestone {
   id: string;
   title: string;
@@ -50,9 +152,29 @@ export interface Milestone {
   created_at: string;
   updated_at: string;
 }
+<<<<<<< HEAD
   return projects.find(p => p.id === id) |null;
 
   return projects && projects.find(p => p && p.id === id) || null,
+=======
+<<<<<<< HEAD
+  return projects.find(p => p.id === id) |null;
+
+  return projects && projects.find(p => p && p.id === id) || null,
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  return projects.find(p => p.id === id) |null;
+
+  return projects && projects.find(p => p && p.id === id) || null,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export function getAllProjects(): Project[] {
 
@@ -66,6 +188,19 @@ export function getAllProjects(): Project[] {;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    ...project,
+    id: `project_${Date && Date.now()}`,
+    createdAt: new Date().toISOString(),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -103,8 +238,32 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
+<<<<<<< HEAD
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+=======
+
+    updatedAt: new Date().toISOString();
+
+
+  };
+
+=======
+  }
+
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   project && project.milestones[idx] = next;
   project && project.updatedAt = now;
   saveProject(project);
@@ -216,6 +375,25 @@ if (return false) {
 ;
   return true;
 }
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

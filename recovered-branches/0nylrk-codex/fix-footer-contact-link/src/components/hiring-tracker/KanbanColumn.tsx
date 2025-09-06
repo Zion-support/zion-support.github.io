@@ -1,8 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Droppable} from "react-beautiful-dnd";
 import {JobApplication} from "@/types/jobs";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {CandidateCard} from "./CandidateCard";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -10,6 +29,16 @@ import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 import { Badge } from "@/components/ui/badge",
 import { CandidateCard } from "./CandidateCard",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface KanbanColumnProps {
 
   id: string
@@ -35,16 +64,59 @@ interface KanbanColumnProps {;
 
 export function KanbanColumn(): any ({;
 
+<<<<<<< HEAD
 export function KanbanColumn({;
+=======
+<<<<<<< HEAD
+export function KanbanColumn({;
+=======
+<<<<<<< HEAD
+=======
+export function KanbanColumn({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export function KanbanColumn({;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id;
   title;
   description;
   applications;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function KanbanColumn({
   id,
   title,
   description,
   applications,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  id;
+  title;
+  description;
+  applications;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -56,11 +128,32 @@ export function KanbanColumn({
 
   const getBadgeVariant = (columnId: string) => {
     switch (columnId) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   count;
 }: KanbanColumnProps) {;
   // Add color based on column type;
   const getBadgeVariant = (columnId: string) => {;
     switch (columnId) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Droppable } from './react - beautiful - dnd';
 import { JobApplication } from '@/types / jobs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -87,6 +180,16 @@ function KanbanColumn() {
         return "default";
       case "hired":;
         return "success";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "new": return "secondary",
       case "shortlisted":
         return "outline",
@@ -94,11 +197,32 @@ function KanbanColumn() {
         return "default",
       case "hired":
         return "success",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "rejected":
         return "destructive"
       default:
         return "outline"
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
 
@@ -106,11 +230,36 @@ function KanbanColumn() {
     switch (columnId) {
       case "hired": return "bg-green-50",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  }
+  },
+  
+  const getColumnBgColor = (columnId: string) => {
+    switch (columnId) {
+      case "hired": return "bg-green-50",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "rejected":
         return "bg-red-50"
       default:
         return "bg-muted/30"
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "rejected":;
         return "destructive",;
       default:;
@@ -151,11 +300,35 @@ function KanbanColumn() {
         <Droppable droppableId={id}>
           {(provided) => (
             <div
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               ref={provided.innerRef}
               {...provided.droppableProps}
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                <CandidateCard
+                <CandidateCard 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -186,6 +359,15 @@ export function KanbanColumn({;
         return "default",;
       case "hired":;
         return "success",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       case "rejected":;
         return "destructive",
@@ -194,6 +376,44 @@ export function KanbanColumn({;
     }
   }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const getColumnBgColor = (column_id: string) =>: any {
+    switch (column_id) {
+      case "hired": return "bg - green - 50";
+      case "rejected":;
+        return "bg - red - 50",
+      default:;
+        return "bg - muted / 30";
+    }
+  }
+;
+  return (
+    <Card className={`${getColumnBgColor (id)} flex flex - col h-[calc (100vh - 300px)] min - h-[500px]`}>;
+      <CardHeader className="pb - 2">;
+        <div className="flex justify - between items - center">;
+          <CardTitle className="text - base">{title}</CardTitle>;
+          <Badge variant={getBadgeVariant (id) as any}>{count}</Badge>;
+        </div>;
+        <p className="text - xs text - muted - foreground">{description}</p>;
+      </CardHeader>;
+      <CardContent className="flex - grow p - 3 overflow - y-auto">;
+        <Droppable droppable_id={id}>;
+          {(provided) => (
+            <div;
+              ref={provided.inner_ref}
+              {...provided.droppable_props}
+              className="min - h-full space - y-2";
+            >;
+              {applications.map ((application, index) => (
+                <CandidateCard;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 <CandidateCard 
 
@@ -288,6 +508,12 @@ export function KanbanColumn({;
             >;
               {applications.map((application, index) => (;
 ;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 };
 const getColumnBgColor = (columnId: string) => {
@@ -377,3 +603,14 @@ return (<Card className= {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

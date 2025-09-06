@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {supabase} from '@/integrations / supabase / client';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
+import {format} from 'date - fns';
+import {Skeleton} from '@/components / ui / skeleton';
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface MilestoneActivitiesProps {
   project_id: string;
 }
@@ -13,6 +32,18 @@ interface Activity {
   created_at: string
 
   milestone: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
@@ -37,6 +68,26 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         if (error) throw error;
         setActivities(data |[])
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      } catch (err) {
+        console.error ('Error fetching milestone activities:', err);
+      } finally {
+        setIsLoading(false)
+import React, { useState, useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+import { format } from 'date-fns',;
+import { Skeleton } from '@/components/ui/skeleton',;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     title: string;
   }
   created_by_profile: {
@@ -132,6 +183,11 @@ interface Activity {;
         console.error('Error fetching milestone activities:', err);
       } finally {;
         setIsLoading(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } catch (err) {
         console.error('Error fetching milestone activities:', err)
       } finally {
@@ -167,6 +223,22 @@ interface Activity {;
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+  if (isLoading) {;
+
+=======
+        return activity.action.replace(/_/g, ' ');
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 
@@ -194,6 +266,12 @@ interface Activity {;
   }
 
         return activity.action.replace(/_/g, ' ');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 
@@ -248,6 +326,23 @@ interface Activity {;
           <p className="text-muted-foreground py-8">No activity found for this project</p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    );
+  }
+  return (
+
+=======
+    ),;
+  }
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="space-y-4">;
       <Card>;
         <CardHeader>;
@@ -259,6 +354,16 @@ interface Activity {;
                 </Avatar>;
                 <div className="space-y-1">;
                   <div className="flex items-center space-x-2">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <span className="font-medium">{activity && activity.created_by_profile?.display_name}</span>;
+                    <span className="text-muted-foreground text-sm">;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {getActivityDescription(activity)}
                     </span>;
                     <span className="text-muted-foreground text-xs">;
@@ -274,10 +379,81 @@ interface Activity {;
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+  if (activities.length === 0) {
+    return (
+      <Card>
+        <CardContent className="p-6 text-center">
+          <p className="text-muted-foreground py-8">No activity found for this project</p>
+        </CardContent>
+      </Card>
+    )
+  }
+  return (
+    <div className="space-y-4">
+      <Card>
+        <CardHeader>
+          <CardTitle>Project Activity</CardTitle>
+        </CardHeader>
+        <CardContent className="p-6">
+          <div className="space-y-6">
+            {activities.map((activity) => (
+              <div key={activity.id} className="flex items-start space-x-4">
+                <Avatar className="h-10 w-10">
+                  <AvatarImage src={activity.created_by_profile?.avatar_url |''} alt="User" />
+                  <AvatarFallback>
+                    {activity.created_by_profile?.display_name?.charAt(0) |'?'}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="space-y-1">
+                  <div className="flex items-center space-x-2">
+                    <span className="font-medium">{activity.created_by_profile?.display_name}</span>
+                    <span className="text-muted-foreground text-sm">
+                      {getActivityDescription(activity)}
+                    </span>
+                    <span className="text-muted-foreground text-xs">
+                      {format(new Date(activity.created_at), 'MMM d, yyyy h:mm a')}
+                    </span>
+                  </div>
+                  <p className="text-sm">
+                    <span className="font-medium">{activity.milestone?.title}</span>
+                    {activity.comment && (
+                      <span className="ml-2 text-muted-foreground">"{activity.comment}"</span>
+                    )}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </CardContent>;
       </Card>;
     </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Check condition
 if ( {) {
   $2
@@ -286,3 +462,129 @@ if ( {) {
     }
   }, [project_id]);
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+=======
+  function getActivityDescription (activity: Activity): string {
+    switch (activity.action) {
+      case 'created':;
+        return 'created a new milestone',
+      case 'status_changed':;
+        return `changed status from ${activity.previous_status || 'none'} to ${activity.new_status}`;
+      case 'updated':;
+        return 'updated milestone details';
+      case 'deliverable_added':;
+        return 'added a deliverable';
+      default:;
+        return activity.action.replace (/_ / g, ' ');
+    }
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="space - y-4">;
+        {[1, 2, 3].map ((i) => (
+          <Card key={i}>;
+            <CardContent className="p - 6">;
+              <div className="flex items - center space - x-4">;
+                <Skeleton className="h - 10 w - 10 rounded - full" />;
+                <div className="space - y-2">;
+                  <Skeleton className="h - 4 w - 40" />;
+                  <Skeleton className="h - 4 w - 60" />;
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>))}
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Card>;
+        <CardContent className="p - 6 text - center">;
+          <p className="text - muted - foreground py - 8">No activity found for this project</p>;
+        </CardContent>;
+      </Card>);
+  }
+  return (
+    <div className="space - y-4">;
+      <Card>;
+        <CardHeader>;
+          <CardTitle > Project Activity</CardTitle>;
+        </CardHeader>;
+        <CardContent className="p - 6">;
+          <div className="space - y-6">;
+            {activities.map ((activity) => (
+              <div key={activity.id} className="flex items - start space - x-4">;
+                <Avatar className="h - 10 w - 10">;
+                  <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />;
+                  <AvatarFallback>;
+                    {activity.created_by_profile?.display_name?.char_at (0) || '?'}
+                  </AvatarFallback>;
+                </Avatar>;
+                <div className="space - y-1">;
+                  <div className="flex items - center space - x-2">;
+                    <span className="font - medium">{activity.created_by_profile?.display_name}</span>;
+                    <span className="text - muted - foreground text - sm">;
+                      {getActivityDescription (activity)}
+                    </span>;
+                    <span className="text - muted - foreground text - xs">;
+                      {format (new Date (activity.created_at), 'MMM d, yyyy h:mm a')}
+                    </span>;
+                  </div>;
+                  <p className="text - sm">;
+                    <span className="font - medium">{activity.milestone?.title}</span>;
+                    {activity.comment && (
+                      <span className="ml - 2 text - muted - foreground">"{activity.comment}"</span>)}
+                  </p>;
+                </div>;
+              </div>))}
+          </div>;
+        </CardContent>;
+      </Card>;
+    </div>);
+  ),; useEffect ( () => {
+  async function fetchActivities () {
+  try {
+  setIsLoading (true);
+const {
+  data, error 
+}= await supabase .from ('milestone activities') .select (`*;
+milestone: milestone id (title);
+created by profile:profiles!user id (display name, avatar url) `) .eq ('project id', projectId) if (error) throw error;
+function getActivityDescription (activity: Activity) : string {
+  switch (activity.action) {
+  case 'created': return 'created a new milestone';
+case 'status changed': case 'updated': return 'updated milestone details';
+case 'deliverable added': return 'added a deliverable';
+default: return activity.action.replace (/ /g, ' ') 
+}
+}<Card key= {
+  i 
+}> <CardContent className="p-6" > <div className="flex items-center space-x-4" > <Skeleton className="h-10 w-10 rounded-full" /> <div className="space-y-2" > <Skeleton className="h-4 w-40" /> <Skeleton className="h-4 w-60" /> </div> </div> </CardContent> </Card>) ) 
+}</div>) 
+}if (activities.length === 0) {
+  return (<Card> <CardContent className="p-6 text-center" > <p className="text-muted-foreground py-8" >No activity found for this project</p> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Project Activity</CardTitle> </CardHeader> <AvatarFallback> {
+  activity.created by profile?.display name?.charAt (0) || '?' 
+}</AvatarFallback> </Avatar>) 
+}</p> </div> </div>) ) 
+}</div> </CardContent> </Card> </div>) 
+}
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

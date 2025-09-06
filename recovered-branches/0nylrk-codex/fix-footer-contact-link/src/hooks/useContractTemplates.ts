@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {useState} from "react";
+import {useQuery, useMutation, useQueryClient} from "@tanstack/react-query";
+import {supabase} from "@/integrations/supabase/client";
+import {useToast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
+import {ContractTemplate} from "@/types/contracts";
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+export function useContractTemplates() {;
+  const { user, isAuthenticated } = useAuth();
+  const queryClient = useQueryClient();
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -31,6 +54,25 @@ export function useContractTemplates() {
     isLoading: isLoadingTemplates
     error: templatesError
   } = useQuery({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    queryKey: ['contractTemplates', user?.id];
+    queryFn: async () => {
+      if (!isAuthenticated |!user) {
+        return []
+
+
+
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
     queryKey: ['contractTemplates', user?.id],
@@ -42,6 +84,16 @@ export function useContractTemplates() {
     }
     enabled: isAuthenticated && !!user
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -73,10 +125,41 @@ export function useContractTemplates() {;
         .order('created_at', { ascending: false }),;
       if (error) {;
         throw error;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       return data as ContractTemplate[]
     }
     enabled: isAuthenticated && !!user
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Create a new template
   const createTemplate = useMutation({
     mutationFn: async ({
@@ -84,6 +167,23 @@ export function useContractTemplates() {;
       templateData
       isDefault = false
     }: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+      title: string;
+      templateData: ContractFormValues
+      isDefault?: boolean
+    }) => {
+      if (!user) throw new Error("User not authenticated");
+      setIsLoading(true);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       title: string,
       templateData: ContractFormValues,
       isDefault?: boolean
@@ -92,12 +192,35 @@ export function useContractTemplates() {;
       
       setIsLoading(true),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       try {
         // If this is set as default, unset any existing default
         if (isDefault) {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            .eq('user_id', user && user.id)
+            .eq('is_default', true)
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { use_query, use_mutation, useQueryClient } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
@@ -128,6 +251,12 @@ if ( {) {
 }
         return [];
       }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const { data, error } = await supabase;
         .from ('contract_templates');
         .select ('*');
@@ -194,6 +323,25 @@ if ( {) {
       toast({
         title: "Template saved"
         description: "Contract template has been successfully saved."})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    },
+
+
+    onError: (error: Error) => {
+      console && console.error("Error saving template:", error);
+      toast({
+
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     on_success: () => {
       query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
       toast ({
@@ -239,12 +387,34 @@ if ( {) {
       
       setIsLoading(true),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       try {
         // If this is set as default, unset any existing default
         if (isDefault) {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            .eq('user_id', user && user.id)
+            .eq('is_default', true)
+            .neq('id', templateId)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       template_data: ContractFormValues,
       is_default?: boolean;
@@ -253,6 +423,50 @@ if ( {) {
   $2
 }
       setIsLoading (true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    };
+
+=======
+=======
+
+    };
+
+            .eq('user_id', user.id)
+            .eq('is_default', true)
+            .neq('id', templateId)
+        }
+        // Update the template
+        const { data, error } = await supabase
+          .from('contract_templates')
+          .update({
+            title: title;
+            template_data: templateData;
+            is_default: isDefault
+            updated_at: new Date().toISOString()
+          })
+          .eq('id', templateId)
+          .eq('user_id', user.id)
+          .select()
+          .single();
+        if (error) throw error;
+        return data as ContractTemplate
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },;
     onSuccess: () => {;
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),;
@@ -293,6 +507,51 @@ if ( {) {
             .eq('is_default', true);
             .neq('id', templateId);
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+;
+      try {
+        // If this is set as default, unset any existing default;
+        // Check condition
+if ( {) {
+  $2
+}
+          await supabase;
+            .from ('contract_templates');
+            .update ({ is_default: false });
+            .eq ('user_id', user.id);
+            .eq ('is_default', true);
+            .neq ('id', template_id);
+        }
+        // Update the template;
+        const { data, error } = await supabase;
+          .from ('contract_templates');
+          .update ({
+            title: title;
+            template_data: template_data;
+            is_default: is_default,
+            updated_at: new Date ().toISOString ();
+          });
+          .eq ('id', template_id);
+          .eq ('user_id', user.id);
+          .select ();
+          .single ();
+;
+        // Check condition
+if (throw error) {
+  $2
+}
+        return data as ContractTemplate;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } finally {
         setIsLoading (false);
       }
@@ -304,12 +563,74 @@ if ( {) {
       toast({
         title: "Template updated"
         description: "Contract template has been successfully updated."})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    },
+
+
+    onError: (error: Error) => {
+      console && console.error("Error updating template:", error);
+      toast({
+
+
+<<<<<<< HEAD
+=======
+;
+        // Update the template;
+        const { data, error } = await supabase;
+          .from('contract_templates');
+          .update({;
+            title: title,;
+            template_data: templateData,;
+            is_default: isDefault,;
+            updated_at: new Date().toISOString();
+          });
+          .eq('id', templateId);
+          .eq('user_id', user.id);
+          .select();
+          .single(),;
+        if (error) throw error,;
+        return data as ContractTemplate;
+      } finally {;
+        setIsLoading(false);
+      }
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),
+      toast({
+        title: "Template updated"
+        description: "Contract template has been successfully updated."})
+    }
+    },
+    onError: (error: Error) => {
+      console.error("Error updating template:", error),
+      toast({
+        title: "Failed to update template";
+        description: "There was an error updating your contract template."
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive"})
     }
   });
   // Delete a template
   const deleteTemplate = useMutation({
     mutationFn: async (templateId: string) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      if (!user) throw new Error("User not authenticated");
+      setIsLoading(true)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Failed to update template",
         description: "There was an error updating your contract template.",
         variant: "destructive"})
@@ -323,11 +644,43 @@ if ( {) {
       
       setIsLoading(true),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       try {
         const { error } = await supabase
           .from('contract_templates')
           .delete()
           .eq('id', templateId)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          .eq('user_id', user.id),
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          .eq('user_id', user && user.id);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        
+
+=======
+          .eq('user_id', user && user.id);
+        
+
+    }
+          .eq('user_id', user && user.id);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           .eq('user_id', user.id),
         
 
@@ -450,6 +803,24 @@ if (throw error) {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if (error) throw error
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+          .eq('user_id', user.id),
+        
+
+=======
+          .eq('user_id', user.id);
+          .eq('user_id', user.id),
+        
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (error) throw error
       } finally {
         setIsLoading(false)
@@ -501,6 +872,11 @@ if (throw error) {
           .eq('id', templateId)
         if (error) throw error
         if (error) throw error
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     on_success: () => {
       query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
       toast ({
@@ -546,6 +922,23 @@ if (throw error) {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+          .eq('user_id', user.id),
+        
+
+=======
+          .eq('user_id', user.id);
+          .eq('user_id', user.id),
+        
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         if (error) throw error
       } finally {
         setIsLoading(false)
@@ -608,6 +1001,13 @@ if (throw error) {
 
   }
 }
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 import { useState } from "react",;

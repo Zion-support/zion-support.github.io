@@ -22,6 +22,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -37,6 +44,10 @@ export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -95,9 +106,32 @@ export default function ApiPerformanceTestingPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
+<<<<<<< HEAD
   return (
   return (
   return (
+=======
+
+  return (
+    <>;
+      <SEO;
+        title="API Performance Testing";
+        description="Load, latency and regression testing - as - a-service with CI and SLOs.";
+      />;
+      <main id="main" className="container mx - auto px - 4 py - 24">;
+        <section className="max - w-5xl mx - auto">;
+          <h1 className="text - 4xl font - extrabold tracking - tight">;
+            API Performance Testing;
+          </h1>;
+          <p className="mt - 4 text - lg text - gray - 300">;
+            Ship with confidence using automated performance tests and;
+            guardrails integrated into your pipeline.;
+          </p>;
+          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
+            {features.map ((f) => (
+              <div;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <>
       <SEO
         title="API Performance Testing"
@@ -156,6 +190,7 @@ export default function ApiPerformanceTestingPage() {
         </section>;
       </main>;
 
+<<<<<<< HEAD
 
     </>);
 }
@@ -324,7 +359,13 @@ return (
   );
 }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

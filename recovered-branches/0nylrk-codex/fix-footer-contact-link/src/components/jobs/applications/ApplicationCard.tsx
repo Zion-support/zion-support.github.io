@@ -8,6 +8,37 @@ import {Link} from "react-router-dom";
 import {StatusBadge} from "./StatusBadge";
 import {ApplicationProgress} from "./ApplicationProgress";
 import {toast} from "sonner";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface ApplicationCardProps {;
+  application: JobApplication;
+}
+
+export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
+  const [expanded, setExpanded] = useState(false);
+
+  const handleDownloadResume = () => {;
+    // This would typically download the resume file;
+    toast && toast.info("Resume download functionality will be implemented soon");
+  };
+
+  const renderActionButtons = () => {;
+    switch (application && application.status) {;
+
+=======
+
+
+=======
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -23,6 +54,15 @@ import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ApplicationCardProps {;
   application: JobApplication;
 }
@@ -44,12 +84,49 @@ interface ApplicationCardProps {
   application: JobApplication
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+export function ApplicationCard({ application }: ApplicationCardProps) {
+  const [expanded, setExpanded] = useState(false),
+export function ApplicationCard({ application }: ApplicationCardProps) {;
+  const [expanded, setExpanded] = useState(false);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  },
+
+
+  const renderActionButtons = () => {
+    switch (application.status) {
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "shortlisted": return (
           <Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
@@ -82,6 +159,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
 
   return (
+<<<<<<< HEAD
+        {expanded && (
+          <div className="mt - 4 space - y-3">;
+            {application.cover_letter && (
+=======
 
 import { useState } from './react';
 import { formatDistanceToNow } from './date - fns';
@@ -164,6 +246,11 @@ function ApplicationCard() {
         {expanded && (
           <div className="mt - 4 space - y-3">;
             {application.cover_letter && (
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
@@ -272,6 +359,28 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             )}
           </div>;
         )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      </CardContent>;
+
+      <CardFooter className="flex flex-col gap-3 pt-0">;
+        <div className="flex justify-between items-center w-full">;
+          <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>;
+
+=======
+      </CardContent>;
+      <CardFooter className="flex flex-col gap-3 pt-0">;
+        <div className="flex justify-between items-center w-full">;
+          <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {expanded ? "Show Less" : "Show More"}
           </Button>;
           <div className="flex gap-2">;
@@ -294,6 +403,16 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               variant="outline" 
               size="sm"
               asChild>;
@@ -387,3 +506,10 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,8 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import {Star} from "lucide-react";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface ProfileHeroProps {;
+  name: string,;
+  title: string,;
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
@@ -12,6 +43,16 @@ interface ProfileHeroProps {
 
   name: string
   title: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   avatarUrl?: string;
   coverImageUrl?: string;
@@ -31,6 +72,23 @@ interface ProfileHeroProps {
   aiScore;
   profileType;
 }: ProfileHeroProps) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import { Star } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { Star } from "lucide-react",
+import { cn } from "@/lib/utils",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -42,10 +100,24 @@ interface ProfileHeroProps {
   aiScore?: number,
   profileType: 'service' | 'talent'
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+
+  profileType
+}: ProfileHeroProps) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ProfileHero({;
   name;
   title;
@@ -88,6 +160,17 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Badge } from "@/components/ui/badge",;
@@ -137,6 +220,21 @@ export function ProfileHero({;
                 <AvatarImage src={avatarUrl} alt={name} />;
               ) : (;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -147,6 +245,8 @@ export function ProfileHero({;
                 <Badge
                   variant="outline"
                   className={cn(
+<<<<<<< HEAD
+=======
 
     <div className="w-full overflow-hidden">;
       <div className="relative">;
@@ -160,6 +260,7 @@ export function ProfileHero({;
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
                     "ml-2 border-zion-purple/50 text-zion-cyan",
@@ -189,6 +290,8 @@ export function ProfileHero({;
                     )}
                 )}
                   </div>;
+<<<<<<< HEAD
+=======
                   </div>;
                 )}
                 
@@ -275,9 +378,98 @@ function ProfileHero() {
                   <div className="px - 2 py - 0.5 rounded bg - zion - purple / 20 text - xs font - medium text - zion - cyan">;
                     AI Match: {ai_score}%;
                   </div>)}
+<<<<<<< HEAD
                 )}
+=======
+<<<<<<< HEAD
+
+=======
+                ;
+                {aiScore && (;
+                  <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
+                    AI Match:{aiScore}%;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                  </div>;
+                )}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                )}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </div>);
+}
+
+=======
+    </div>;
+  ),;}
+ interface ProfileHeroProps {
+  name: string;
+title: string;
+avatarUrl?: string;
+coverImageUrl?: string;
+location?: string;
+rating?: number;
+reviewCount?: number;
+aiScore?: number;
+profileType: 'service' | 'talent' 
+}export function ProfileHero ({
+  name;
+title;
+avatarUrl;
+coverImageUrl;
+location;
+rating;
+reviewCount;
+aiScore;
+profileType 
+}: ProfileHeroProps) {
+  return (<div className="w-full overflow-hidden" > <div className="relative" > <AspectRatio ratio= {
+  3/1 
+}className="bg-zion-blue-light" > {
+  coverImageUrl ? (<img src= {
+  coverImageUrl 
+}alt= {
+  `$ {
+  name 
+}cover` 
+}className="w-full h-full object-cover" w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />) 
+}</AspectRatio> </AvatarFallback>) 
+}</Avatar>) 
+}> {
+  profileType === 'service' ? 'Service Provider' : 'Talent' 
+}</Badge> </div>) 
+}</div>) 
+}AI Match: {
+  aiScore 
+}% </div>) 
+}</div> </div> </div> </div> </div> </div>) 
+}
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

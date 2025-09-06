@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -83,6 +87,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
+
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -120,6 +125,7 @@ const Header = () => {
           </Link>
           
           {/* Desktop Navigation */}
+
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
@@ -215,6 +221,7 @@ const Header = () => {
                         </Link>
                       ))}
                     </div>
+
                   )}
                 </div>
               ))}
@@ -380,3 +387,7 @@ export default function Header() {
     </header>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import { GradientHeading } from "@/components/GradientHeading",
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
+import {GradientHeading} from "@/components/GradientHeading";
+import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
+import { GradientHeading } from "@/components/GradientHeading",
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 export function NewsletterSection() {
@@ -16,6 +25,22 @@ export function NewsletterSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
+export function NewsletterSection() {;
+    <section className="py-20 bg-zion-blue-dark" id="newsletter">;
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <GradientHeading>Stay Informed</GradientHeading>;
+          <p className="mt-4 text-zion-slate-light text-xl mb-8">;
+            Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities.;
+          </p>;
+          <div className="max-w-md mx-auto">;
+            <EnhancedNewsletterForm />;
+          </div>;
+        </div>;
+      </div>;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
 
@@ -31,6 +56,18 @@ export function NewsletterSection() {
 ;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </section>);
 }
     </section>;
@@ -44,3 +81,13 @@ export function NewsletterSection() {
 
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

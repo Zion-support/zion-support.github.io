@@ -1,17 +1,27 @@
+<<<<<<< HEAD
+=======
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
+<<<<<<< HEAD
+=======
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
 import {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleSignOut = async () => {
     try {
       await logout ();
@@ -24,6 +34,8 @@ import {;
   DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 
+<<<<<<< HEAD
+=======
 export function UserMenu() {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
@@ -37,10 +49,53 @@ export function UserMenu() {;
         description: "There was an error signing you out. Please try again.",;
         variant: "destructive",;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
     }
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+
+export function UserMenu() {;
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+import { Link } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuSeparator, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+
+export function UserMenu() {
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
+
+  const handleSignOut = async () => {
+    try {
+      await logout()
+    } catch (error) {
+      toast({
+        title: "Error signing out"
+        description: "There was an error signing you out. Please try again."
+        variant: "destructive"
+      });
+    }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
         variant: "destructive"})
@@ -50,6 +105,13 @@ export function UserMenu() {;
       });
     }
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!user) {;
     return (
       <div className="hidden md: flex items-center space-x-4">;
@@ -64,6 +126,32 @@ export function UserMenu() {;
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return (
+
+=======
+
+  if (!user) {
+    return (
+      <div className="hidden md: flex items-center space-x-4">
+        <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>
+        <Link 
+          to="/signup" 
+          className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2"
+        >
+          Register
+        </Link>
+      </div>
+    )
+  }
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-8 w-8 rounded-full">
@@ -72,16 +160,62 @@ export function UserMenu() {;
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            <AvatarImage
+              src={user.avatarUrl |""}
+              alt={user.displayName |"User Avatar"}
+            />
+            <AvatarFallback>
+              {user.displayName?.charAt(0).toUpperCase() |"U"}
+            </AvatarFallback>
+            <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
+            <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="grid gap-2 px-2 py-2">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>
           <div className="text-muted-foreground text-xs leading-none">{user.email}</div>
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          <div className="text-sm font-medium leading-none">
+            {user.displayName |"User"}
+          </div>
+          <div className="text-muted-foreground text-xs leading-none">
+            {user.email}
+          </div>
+          <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>
+          <div className="text-muted-foreground text-xs leading-none">{user.email}</div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
@@ -100,6 +234,27 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+              src={user && user.avatarUrl || ""}
+              alt={user && user.displayName || "User Avatar"}
+            />;
+            <AvatarFallback>;
+              {user && user.displayName?.charAt(0).toUpperCase() || "U"}
+            </AvatarFallback>;
+=======
+
+=======
+;
+  return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
         <Button variant="ghost" className="h-8 w-8 rounded-full">;
@@ -147,10 +302,14 @@ export function UserMenu() {;
   }
 ;
   return (;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
         <Button variant="ghost" className="h-8 w-8 rounded-full">;
           <Avatar className="h-8 w-8">;
+<<<<<<< HEAD
+            <AvatarImage
+=======
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />;
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>;
           </Avatar>;
@@ -177,6 +336,12 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 
       toast ({
@@ -246,6 +411,22 @@ if ( {) {
         <DropdownMenuItem on_click={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+<<<<<<< HEAD
+=======
+=======
+}
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 
@@ -277,3 +458,8 @@ const handleSignOut = async () => {
 }
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -39,6 +39,43 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          <div className="flex-1 flex justify-center">
+            <div className="relative w-64 h-auto">
+              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
+              <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, Phone} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {AppStoreButtons} from "./AppStoreButtons";
+=======
+
+
+=======
+<<<<<<< HEAD
+              {/* This would be replaced with an actual phone mockup image in production */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Phone } from "lucide-react",;
@@ -75,10 +112,17 @@ export const MobileAppHero: React.FC = () => {;
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;
               <Phone className="w-full h-auto text-white" />;
               {/* This would be replaced with an actual phone mockup image in production */}
+<<<<<<< HEAD
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+=======
             </div>
           </div>
         </div>
       </div>
     </section>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 };

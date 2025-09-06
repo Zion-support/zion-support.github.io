@@ -1,7 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,6 +29,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -40,6 +44,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 origin/automation-improvements-final
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -52,6 +58,10 @@ import { motion } from "framer-motion";
   Phone,
   MapPin,
   Users,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 import React from 'react';
@@ -64,8 +74,12 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+} from 'lucide-react';
 
       icon: <Database className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
@@ -97,6 +111,10 @@ import {
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ];
 
   const rights = [
@@ -131,6 +149,10 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className='w-6 h-6' />,
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       icon: <Eye className="w-6 h-6" />
     };
     {
@@ -175,19 +197,25 @@ import {
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 
+<<<<<<< HEAD
 
 origin/automation-improvements-final
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function PrivacyPage() {
 export default function PrivacyPage() {;
   return (
 
+<<<<<<< HEAD
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -214,10 +242,13 @@ origin/automation-improvements-final
           </div>;
         </section>;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
@@ -758,23 +789,34 @@ const PrivacyPage: React.FC = () => {
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
 
+<<<<<<< HEAD
 
 origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address</li>
@@ -787,6 +829,10 @@ origin/automation-improvements-final
                   Usage Information
                 </h3>
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -795,10 +841,13 @@ origin/automation-improvements-final
                   <li>Operating system</li>
                 </ul>
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
@@ -807,13 +856,15 @@ origin/automation-improvements-final
                   improve our services.
                 </p>
 
-
-
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -823,10 +874,13 @@ origin/automation-improvements-final
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -834,6 +888,10 @@ origin/automation-improvements-final
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
@@ -841,8 +899,12 @@ origin/automation-improvements-final
 
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
+<<<<<<< HEAD
                 
 origin/automation-improvements-final
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
@@ -861,6 +923,10 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -879,8 +945,12 @@ origin/automation-improvements-final
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <p className="text-sm text-gray-600 mt-8">
                 <p className="text-sm text-gray-600 mt-8">
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   Last updated: January 2024
                 </p>
               </div>
@@ -888,6 +958,10 @@ origin/automation-improvements-final
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
 
@@ -918,10 +992,18 @@ export default /**
  */
 function PrivacyPage() {
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <h3 className="text - xl font - semibold mb - 4">;
                   Personal Information;
                 </h3>;
@@ -961,10 +1043,18 @@ function PrivacyPage() {
                   Information Sharing;
                 </h2>;
                 <p className="mb - 6">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
                 <p className="mb - 6">;
                   We implement appropriate security measures to protect your;
@@ -973,10 +1063,18 @@ function PrivacyPage() {
                 </p>;
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
                 <p className="mb - 6">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </MainLayout>;
   );
 }
@@ -1005,18 +1103,21 @@ function PrivacyPage() {
       </Layout>
     </ErrorBoundary>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 };
 
 export default PrivacyPage;
 
-
-
-
-
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
                   contact us at:;
@@ -1042,6 +1143,7 @@ export default PrivacyPage;
 <p className="text - sm text - gray - 600 mt - 8">;
                   Last updated: January 2024;
                 </p>;
+<<<<<<< HEAD
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">;
                   <a;
                     href="mailto:kleber@ziontechgroup.com";
@@ -1067,3 +1169,6 @@ export default PrivacyPage;
   );
 },;
 export default PrivacyPage;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

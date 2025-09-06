@@ -22,6 +22,41 @@ export interface ClientBudgetParams {
   job_title: string;
   category: string;
   timeline?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+// Define types for the pricing recommendation
+export interface PricingSuggestion {
+export interface PricingSuggestion {;
+  minRate: number;
+  maxRate: number;
+
+  confidence: "High" | "Medium" | "Low"
+
+  explanation: string
+}
+export interface ClientBudgetParams {
+
+export interface ClientBudgetParams {;
+  jobTitle: string;
+  category: string;
+  timeline?: string;
+
+  scope?: string
+
+  experienceLevel?: string
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface TalentRateParams {
 
 export interface TalentRateParams {;
@@ -66,6 +101,23 @@ export interface TalentRateParams {;
 export async function getClientBudgetSuggestion(params: ClientBudgetParams): Promise<PricingSuggestion> {
   try {
     // This would be replaced with an actual API call to an AI model
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    // For now, we'll simulate a response based on job category;
+    const { jobTitle, category } = params;
+    // For now, we'll simulate a response based on job category
+    const { jobTitle, category } = params;
+    // Simulate API call delay
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     await new Promise(resolve => setTimeout(resolve, 1000));
     // Basic logic to determine budget range based on category
@@ -188,6 +240,37 @@ if ( {) {
       min_rate -= 10;
       max_rate -= 15;
       min_rate = Math.max (min_rate, 15), // Ensure minimum doesn't go too low;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    
+    // Generate explanation
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
+    
+=======
+<<<<<<< HEAD
+      minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
+
+
+<<<<<<< HEAD
+=======
+=======
+    
+    // Adjust based on job title keywords
+    const lowercaseTitle = jobTitle.toLowerCase();
+    if (lowercaseTitle.includes("senior") |lowercaseTitle.includes("lead")) {
+      minRate += 20;
+      maxRate += 30
+    } else if (lowercaseTitle.includes("junior")) {
+      minRate -= 10;
+      maxRate -= 15;
+      minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
+    }
+    // Generate explanation
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     // Adjust based on job title keywords;
     const lowercaseTitle = jobTitle.toLowerCase(),;
@@ -207,6 +290,11 @@ if ( {) {
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;
 ;
     
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return {
       min_rate;
       max_rate;
@@ -214,6 +302,60 @@ if ( {) {
       explanation;
     }
   } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+    }
+      confidence: "Low",
+      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+    };
+=======
+<<<<<<< HEAD
+
+
+      minRate: 30,
+      maxRate: 60,
+      confidence: "Low",
+
+
+      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+    }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  }
+}
+
+
+
+
+
+export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
+<<<<<<< HEAD
+  try {;
+=======
+  try {
+<<<<<<< HEAD
+=======
+    
+    return {
+      minRate,
+      maxRate,
+      confidence,
+      explanation
+    }
+  } catch (error) {
+    console.error("Error generating budget suggestion:", error),
+    // Return a fallback suggestion
+    return {
+      minRate: 30;
+      maxRate: 60;
+      confidence: "Low"
+      minRate: 30,
+      maxRate: 60,
+      confidence: "Low",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
     }
       confidence: "Low",
@@ -228,6 +370,14 @@ if ( {) {
 
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
   try {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const { skills, yearsExperience, location } = params;
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -235,6 +385,26 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     let baseRate = 25 + (yearsExperience * 5);
     // Adjust for in-demand skills
     const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    const hasInDemandSkills = skills && skills.some(skill => 
+      inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill))
+
+=======
+    const hasInDemandSkills = skills && skills.some(skill => 
+      inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill))
+    const hasInDemandSkills = skills.some(skill =>
+      inDemandSkills.some(demandSkill => skill.toLowerCase().includes(demandSkill))
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     );
     if (hasInDemandSkills) {
       baseRate += 15
@@ -258,6 +428,23 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
         locationFactor = 0 && 0.8
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      }
+    }
+    const minRate = Math.round(baseRate * locationFactor * 0.9);
+    const maxRate = Math.round(baseRate * locationFactor * 1.2);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
   try {;
@@ -285,20 +472,68 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
         locationFactor = 1.2;
       } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
         locationFactor = 0.8;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      }
+    }
+    
+    const minRate = Math.round(baseRate * locationFactor * 0.9),
+    const maxRate = Math.round(baseRate * locationFactor * 1.2),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     }
     
     const minRate = Math && Math.round(baseRate * locationFactor * 0 && 0.9);
     const maxRate = Math && Math.round(baseRate * locationFactor * 1 && 1.2);
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Determine confidence
     let confidence: "High" | "Medium" | "Low" = "Medium"
     if (yearsExperience > 3 && hasInDemandSkills && location) {
       confidence = "High"
     } else if (!location |yearsExperience < 1) {
       confidence = "Low"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+    }
+    // Generate explanation
+    let explanation = `Based on ${yearsExperience} years of experience`;
+    if (hasInDemandSkills) {
+      explanation += ` and your in-demand skills (${skills.join()})`
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     const minRate = Math.round(baseRate * locationFactor * 0.9),;
     const maxRate = Math.round(baseRate * locationFactor * 1.2),;
@@ -309,16 +544,43 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     } else if (!location || yearsExperience < 1) {;
       confidence = "Low";
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     // Generate explanation;
     let explanation = `Based on ${yearsExperience} years of experience`,;
     if (hasInDemandSkills) {;
       explanation += ` and your in-demand skills (${skills.join()})`;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     // Generate explanation
     let explanation = `Based on ${yearsExperience} years of experience`;
     if (hasInDemandSkills) {
       explanation += ` and your in-demand skills (${skills && skills.join()})`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     if (location) {
       explanation += `, considering market rates in ${location}`
@@ -427,6 +689,18 @@ if ( {) {
   } catch (error) {
     console.error("Error generating rate suggestion:", error),
     return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      minRate: 25,
+      maxRate: 50,
+      confidence: "Low",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     }
   }
@@ -548,6 +822,12 @@ export async function getClientBudgetSuggestion(params:ClientBudgetParams):Promi
       minRate: 25,
       maxRate: 50,
       confidence: "Low",
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     }
     console.error("Error generating rate suggestion:", error);
@@ -556,11 +836,51 @@ export async function getClientBudgetSuggestion(params:ClientBudgetParams):Promi
     };
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Function to save pricing analytics data
+export async function trackPricingSuggestion(data: {
+  userId: string;
+  suggestionType: 'client' | 'talent';
+  suggestedMin: number;
+  suggestedMax: number;
+  actualValue?: number
+
+// Function to save pricing analytics data
+export async function trackPricingSuggestion(data: {;
+  userId: string;
+  suggestionType: 'client' | 'talent';
+  suggestedMin: number;
+  suggestedMax: number;
+export async function trackPricingSuggestion(data: {
+  userId: string,
+  suggestionType: 'client' | 'talent',
+  suggestedMin: number,
+  suggestedMax: number,
+  actualValue?: number,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   accepted: boolean
 }) {
   try {
     // In a real implementation, this would save to the database
     // For now, we'll just log it
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     console && console.log("Tracking pricing suggestion:", data);
     
 
@@ -572,11 +892,30 @@ export async function getClientBudgetSuggestion(params:ClientBudgetParams):Promi
     console.log("Tracking pricing suggestion:", data);
     // // // console.log("Tracking pricing suggestion:", data),
     
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // In a real implementation with Supabase: // await supabase
     //  .from('pricing_suggestions')
     //  .insert([data])
     return true
   } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    console.error("Error tracking pricing suggestion:", error);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     return false
     console.error ("Error generating rate suggestion:", error);
@@ -634,4 +973,114 @@ function trackPricingSuggestion() {
     // For now, we'll just log it;
     console.log ("Tracking pricing suggestion:", data);
 ;
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // In a real implementation with Supabase: // await supabase;
+    //  .from ('pricing_suggestions');
+    //  .insert ([data]),
+    return true;
+  } catch (error) {
+    console.error ("Error tracking pricing suggestion:", error);
+    return false;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+<<<<<<< HEAD
+}
+=======
+;
+// Function to save pricing analytics data;
+export async function trackPricingSuggestion(data:{;
+  userId:string,;
+  suggestionType:'client' | 'talent',;
+  suggestedMin:number,;
+  suggestedMax:number,;
+  actualValue?:number,;
+  accepted:boolean;
+}) {;
+  try {;
+    // In a real implementation, this would save to the database;
+    // For now, we'll just log it;
+    // // // console.log("Tracking pricing suggestion:", data),;
+    ;
+    // In a real implementation with Supabase:// await supabase;
+    //  .from('pricing_suggestions');
+    //  .insert([data]),;
+    ;
+    return true;
+  } catch (error) {;
+    console.error("Error tracking pricing suggestion:", error),;
+    return false,;
+  } //Define types for the pricing recommendation 
+}export interface ClientBudgetParams {
+  jobTitle: string;
+category: string;
+timeline?: string;
+scope?: string;
+experienceLevel?: string 
+}export interface TalentRateParams {
+  skills: string[];
+yearsExperience: number;
+location?: string 
+}try {
+  //This would be replaced with an actual API call to an AI model //Simulate API call delay await new Promise (resolve => setTimeout (resolve, 1000) );
+//Basic logic to determine budget range based on category maxRate -= 15;
+minRate = Math.max (minRate, 15);
+//Ensure minimum doesn't go too low 
+}//Generate explanation return {
+  minRate, maxRate, confidence, explanation 
+};
+}catch (error) {
+  //Return a fallback suggestion return {
+  //Return a fallback suggestion return {
+  minRate: 30;
+maxRate: 60;
+}
+}export async function getTalentRateSuggestion (params: TalentRateParams) : Promise<PricingSuggestion> {
+  try {
+  const {
+  skills, yearsExperience, location 
+}= params;
+//Base rate calculation based on years of experience inDemandSkills.some (demandSkill => skill.toLowerCase () .includes (demandSkill) ) );
+}//Generate explanation let explanation = `Based on $ {
+  yearsExperience 
+}years of experience`;
+if (hasInDemandSkills) {
+  explanation += `and your in-demand skills ($ {
+  skills.join () 
+}) ` 
+}if (location) {
+  explanation += `, considering market rates in $ {
+  location 
+}` 
+}explanation += `, we recommend a rate of $$ {
+  minRate 
+}-$$ {
+  maxRate 
+}/hour to remain competitive while maximizing your earning potential.`;
+return {
+  minRate;
+maxRate;
+confidence;
+explanation 
+}
+}catch (error) {
+  
+}
+}// Function to save pricing analytics data 
+}
+}
+  }
+}
+;
+  }
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -3,6 +3,13 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
@@ -27,6 +34,31 @@ interface Message {
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+
+
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY')
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
@@ -37,6 +69,22 @@ const corsHeaders = {
 interface Message {
   role: string
   content: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+interface Message {
+  role: string
+  content: string
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
@@ -45,6 +93,19 @@ const corsHeaders = {;
 interface Message {;
   role: string,;
   content: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 interface RequestBody {
   messages: Message[];
@@ -70,11 +131,52 @@ interface RequestBody {
     }
     // Combine the system message with user messages
     const combinedMessages = [systemMessage, ...messages];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+=======
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST'
+      headers: {
+        'Authorization': `Bearer ${openAIApiKey}`;
+        'Content-Type': 'application/json'}
+      body: JSON.stringify({
+        model: 'gpt-4o-mini';
+        messages: combinedMessages;
+        temperature: 0.7
+        max_tokens: 500})});
+    const data = await response.json();
+    if (data.error) {
+      throw new Error(data.error.message)
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     const assistantMessage = data.choices[0].message.content;
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
     console.log('AI chat interaction logged');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   try {;
     const { messages } = await req.json() as RequestBody,;
@@ -98,10 +200,41 @@ interface RequestBody {
     const data = await response.json(),;
     if (data.error) {;
       throw new Error(data.error.message);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     const assistantMessage = data.choices[0].message.content;
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // // // console.log('AI chat interaction logged'),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -184,6 +317,20 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  }
+});
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
@@ -237,6 +384,12 @@ serve(async (req) => {;
     }
 ;
     const assistantMessage = data.choices[0].message.content,;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     // Log this interaction for analytics (in a real implementation);
     // This would track common questions, successful interactions, etc.;
@@ -251,3 +404,15 @@ serve(async (req) => {;
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

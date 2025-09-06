@@ -7,16 +7,53 @@ import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface Webhook {
 
 
 export interface Webhook {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+export interface Webhook {;
+
+export interface Webhook {
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface Webhook {
 
 
@@ -24,11 +61,39 @@ export interface Webhook {
 export interface Webhook {;
 
 export interface Webhook {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   name: string;
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+  created_at: string
+  last_triggered_at: string | null
+}
+export interface TestWebhookResult {
+  status: number;
+  statusText: string
+  responseBody: string
+}
+export function useWebhooks() {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   created_at: string,
   last_triggered_at: string | null
 }
@@ -40,11 +105,82 @@ export interface TestWebhookResult {;
 }
 
 export function useWebhooks() {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { user } = useAuth();
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired',
+
+export interface Webhook {
+  id: string,
+  name: string,
+  url: string,
+  event_types: WebhookEventType[],
+  is_active: boolean,
+  created_at: string,
+  last_triggered_at: string | null
+import { useState } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired',;
+export interface Webhook {;
+  id: string,;
+  name: string,;
+  url: string,;
+  event_types: WebhookEventType[],;
+  is_active: boolean,;
+  created_at: string,;
+  last_triggered_at: string | null;
+}
+;
+export interface TestWebhookResult {;
+  status: number,;
+  statusText: string,;
+  responseBody: string;
+}
+
+export function useWebhooks() {
+  const { user } = useAuth(),
+  const [webhooks, setWebhooks] = useState<Webhook[]>([]),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),
+
+
+  // Helper to get the base URL for webhook functions
+  const getWebhookUrl = () => {
+    // import.meta may be undefined when this hook is executed in a Node
+    // environment (e.g. during server side rendering or tests). Using optional
+    // chaining avoids a TypeError in those cases and falls back to process.env.
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Helper to get the base URL for webhook functions
   const getWebhookUrl = () => {
 
@@ -53,6 +189,18 @@ export function useWebhooks() {;
     // chaining avoids a TypeError in those cases and falls back to process && process.env.
     const env = (import && import.meta as any)?.env ?? process ;
     const url = env && env.VITE_SUPABASE_URL || env && env.SUPABASE_URL;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+    const env = (import.meta as any)?.env ?? process.env;
+    const url = env.VITE_SUPABASE_URL |env.SUPABASE_URL;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return `${url}/functions/v1/webhook-manager`
   }
   // Fetch user's webhooks
@@ -60,6 +208,20 @@ export function useWebhooks() {;
     if (!user) return;
     setLoading(true);
     setError(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      setWebhooks(result.webhooks |[])
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
     return `${url}/functions/v1/webhook-manager`
@@ -76,6 +238,11 @@ export function useWebhooks() {;
       setWebhooks(result.webhooks |[])
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -153,18 +320,139 @@ if ( {) {
   $2
 }
         throw new Error (result.error || 'Failed to fetch webhooks');
+<<<<<<< HEAD
       setWebhooks(result.webhooks || [])
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch webhooks')
+      }
+      setWebhooks(result.webhooks |[])
+
+;
+export function useWebhooks() {;
+  const { user } = useAuth(),;
+  const [webhooks, setWebhooks] = useState<Webhook[]>([]),;
+  const [loading, setLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),;
+  // Helper to get the base URL for webhook functions;
+  const getWebhookUrl = () => {;
+    // import.meta may be undefined when this hook is executed in a Node;
+    // environment (e.g. during server side rendering or tests). Using optional;
+    // chaining avoids a TypeError in those cases and falls back to process.env.;
+    const env = (import.meta as any)?.env ?? process.env,;
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
+    return `${url}/functions/v1/webhook-manager`;
+  },;
+  // Fetch user's webhooks;
+  const fetchWebhooks = async () => {;
+    if (!user) return,;
+    setLoading(true),;
+    setError(null),;
+    try {;
+      const { data: { session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return;
+      }
+;
+      const response = await fetch(`${getWebhookUrl()}/webhooks`, {;
+        method: 'GET',;
+        headers: {;
+          'Authorization': `Bearer ${session.access_token}`,;
+          'Content-Type': 'application/json';
+        }
+      }),;
+      const result = await response.json(),;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to fetch webhooks');
+      }
+
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      setWebhooks(result.webhooks || [])
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setWebhooks(result.webhooks || [])
     } catch (err) {
       console.error('Error fetching webhooks:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        variant: "destructive",
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      set_webhooks (result.webhooks || []);
+    } catch (err) {
+      console.error ('Error fetching webhooks:', err);
+      set_error (err instanceof Error ? err.message : 'An unknown error occurred');
+      toast ({
+        variant: "destructive";
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Error fetching webhooks",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {
       set_loading (false);
     }
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  }
+=======
+<<<<<<< HEAD
+
+
+=======
+        variant: "destructive",
+        title: "Error fetching webhooks",
+
+
+        variant: "destructive";
+        title: "Error fetching webhooks"
+        variant: "destructive",
+        title: "Error fetching webhooks",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  }
+  // Create new webhook
+  const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   // Create new webhook
@@ -174,11 +462,61 @@ if ( {) {
     setLoading(true),
     setError(null),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        };
+        body: JSON && JSON.stringify({
+
+=======
+        };
+        body: JSON && JSON.stringify({
+
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {
+      set_loading (false);
+    }
+  }
+        };
+        body: JSON && JSON.stringify({
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getWebhookUrl()}/create`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           name;
           url;
           eventTypes
@@ -256,10 +594,25 @@ if ( {) {
       setWebhooks(prev => [result.webhook, ...prev]),
       
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      // Add the new webhook to the list;
+      set_webhooks (prev => [result.webhook, ...prev]);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Webhook Created",
         description: "Your webhook has been created successfully."});
       // Add the new webhook to the list;
       set_webhooks (prev => [result.webhook, ...prev]);
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       toast ({
         title: "Webhook Created",
@@ -268,6 +621,50 @@ if ( {) {
       console.error('Error creating webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        variant: "destructive",
+        title: "Error creating webhook",
+
+<<<<<<< HEAD
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+
+    } finally {
+      set_loading (false);
+    }
+<<<<<<< HEAD
+  }
+=======
+
+
+=======
+
+        title: "Webhook Created",
+        description: "Your webhook has been created successfully."}),
+      
+      return result.webhook
+    } catch (err) {
+      console.error('Error creating webhook:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: "destructive";
+        title: "Error creating webhook"
+        variant: "destructive",
+        title: "Error creating webhook",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  }
+  // Toggle webhook active status
+  const toggleWebhook = async (webhookId: string, isActive: boolean) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
 
   // Toggle webhook active status
@@ -276,11 +673,28 @@ if ( {) {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!user) return,
     
     setLoading(true),
     setError(null),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -298,6 +712,53 @@ if ( {) {
 
       }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+=======
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {
+      set_loading (false);
+    }
+  }
+        };
+        body: JSON && JSON.stringify({ webhookId, isActive })
+      });
+      const result = await response && response.json();
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to update webhook')
+
+
+
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getWebhookUrl()}/toggle`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({ webhookId, isActive })
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to update webhook')
+      }
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       // Add the new webhook to the list;
       setWebhooks(prev => [result.webhook, ...prev]),;
@@ -341,21 +802,73 @@ if ( {) {
         throw new Error(result.error || 'Failed to update webhook');
       }
 
+<<<<<<< HEAD
+=======
       // Update the webhook in the list
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      setWebhooks(prev => prev && prev.map(webhook => 
+        webhook && webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
+
+<<<<<<< HEAD
+=======
+      }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      // Update the webhook in the list
+      setWebhooks(prev => prev && prev.map(webhook => 
+        webhook && webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
+      // Update the webhook in the list
+      setWebhooks(prev => prev.map(webhook =>
+        webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
+      // Update the webhook in the list
+      setWebhooks(prev => prev.map(webhook =>
+        webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setWebhooks(prev => prev.map(webhook =>
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
       }
       // Update the webhook in the list
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ));
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated"
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )),
       
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return result
     } catch (err) {
       console && console.error('Error toggling webhook:', err);
@@ -429,6 +942,29 @@ if ( {) {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+        variant: "destructive",
+        title: "Error updating webhook",
+
+=======
+      return result
+    } catch (err) {
+      console.error('Error toggling webhook:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: "destructive";
+        title: "Error updating webhook"
+        variant: "destructive",
+        title: "Error updating webhook",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -443,6 +979,47 @@ if ( {) {
     setLoading(true),
     setError(null),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    try {
+      const { data: { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+        setError("Authentication required");
+        return
+
+        };
+        body: JSON && JSON.stringify({ webhookId })
+      });
+
+      const result = await response && response.json();
+      
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to delete webhook')
+
+      }
+      // Remove the webhook from the list
+
+      setWebhooks(prev => prev && prev.filter(webhook => webhook && webhook.id !== webhookId));
+      
+
+=======
+        };
+        body: JSON && JSON.stringify({ webhookId })
+      });
+      const result = await response && response.json();
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to delete webhook')
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      }
+      // Remove the webhook from the list
+      setWebhooks(prev => prev && prev.filter(webhook => webhook && webhook.id !== webhookId));
+=======
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -465,10 +1042,17 @@ if ( {) {
       toast({
         title: "Webhook Deleted"
         description: "The webhook has been deleted successfully."});
+<<<<<<< HEAD
+=======
 
       toast({
         title: "Webhook Deleted"
         description: "The webhook has been deleted successfully."});
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       // Update the webhook in the list;
       setWebhooks(prev => prev.map(webhook =>;
@@ -514,6 +1098,21 @@ if ( {) {
         throw new Error(result.error || 'Failed to delete webhook');
       }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),
       
@@ -521,6 +1120,20 @@ if ( {) {
         title: "Webhook Deleted",
         description: "The webhook has been deleted successfully."}),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return result
     } catch (err) {
       console && console.error('Error deleting webhook:', err);
@@ -593,6 +1206,30 @@ if ( {) {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+        variant: "destructive",
+        title: "Error deleting webhook",
+
+=======
+      
+      return result
+    } catch (err) {
+      console.error('Error deleting webhook:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: "destructive";
+        title: "Error deleting webhook"
+        variant: "destructive",
+        title: "Error deleting webhook",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
@@ -608,6 +1245,55 @@ if ( {) {
     setError(null),
     setTestResult(null),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    try {
+      const { data: { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+        setError("Authentication required");
+        return
+
+        };
+        body: JSON && JSON.stringify({ webhookId, eventType })
+      });
+
+      const result = await response && response.json();
+      
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to test webhook')
+
+      }
+      // Store test result
+      setTestResult({
+
+        status: result && result.status;
+        statusText: result && result.statusText,
+        responseBody: result && result.responseBody
+
+      });
+=======
+
+
+
+=======
+=======
+        };
+        body: JSON && JSON.stringify({ webhookId, eventType })
+      });
+      const result = await response && response.json();
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to test webhook')
+
+
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -629,6 +1315,17 @@ if ( {) {
       // Store test result
       setTestResult({
       });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       // Remove the webhook from the list;
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),;
@@ -673,16 +1370,50 @@ if ( {) {
         throw new Error(result.error || 'Failed to test webhook');
       }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Store test result
       setTestResult({
         status: result.status,
         statusText: result.statusText,
         responseBody: result.responseBody
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }),
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Update last triggered timestamp
 
       setWebhooks(prev => prev && prev.map(webhook => 
         webhook && webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ));
       toast({
 
@@ -699,6 +1430,26 @@ if ( {) {
       console && console.error('Error testing webhook:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        title: "Error testing webhook",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+=======
+=======
+        title: "Error testing webhook",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+        variant: "destructive";
+        title: "Error testing webhook",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   // Test webhook;
   const test_webhook = async (webhook_id: string, event_type: WebhookEventType) => {
@@ -762,16 +1513,77 @@ if ( {) {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+;
+
+=======
+;
+      
+      // Update last triggered timestamp
+      setWebhooks(prev => prev.map(webhook =>
+        webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook
+      ));
+      toast({
+        title: "Webhook Test Sent"
+        description: `Test completed with status: ${result.status} ${result.statusText}`});
+      )),
+      
+      toast({
+        title: "Webhook Test Sent",
+        description: `Test completed with status: ${result.status} ${result.statusText}`}),
+      
+      return result
+    } catch (err) {
+      console.error('Error testing webhook:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive";
         title: "Error testing webhook"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return {
     webhooks;
     loading;
     error;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    testResult;
+    fetchWebhooks;
+    createWebhook;
+    toggleWebhook;
+    deleteWebhook;
+    testWebhook;
+
+    clearTestResult: () => setTestResult(null)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
         variant: "destructive",
@@ -1267,3 +2079,14 @@ clearTestResult: () => setTestResult (null)
 ;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

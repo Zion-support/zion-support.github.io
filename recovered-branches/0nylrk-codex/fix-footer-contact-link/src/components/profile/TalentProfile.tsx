@@ -19,11 +19,42 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface TalentProfileProps {;
+  profile: TalentProfileType,;
+  onRequestHire: () => void,;
+  onMessageTalent?: () => void;
+}
+
+export function TalentProfile(): any ({ ;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   profile;
   onRequestHire;
   onMessageTalent;
 }: TalentProfileProps) {;
   const { isAuthenticated } = useAuth();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+
+
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -50,30 +81,111 @@ export function TalentProfile({
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function TalentProfile({ ;
+  profile;
+  onRequestHire;
+export function TalentProfile({ 
+  profile,
+  onRequestHire,
+  onMessageTalent
+}: TalentProfileProps) {
+  const { isAuthenticated } = useAuth(),
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Create proper availability object from talent profile
 
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' :
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  }
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
     level: 3 // Default level since we don't have this data
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   })) || [],
   
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  })) |[];
+  })) || [],
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`
     title: proj.title
     description: proj.description
     date: new Date().toISOString() // Default date since we don't have this data
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  })) |[];
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   })) || [],
   
   return (
@@ -148,6 +260,8 @@ export function TalentProfile({;
   })) || [];
   return (
     <div className="container mx-auto px-4 py-8">;
+<<<<<<< HEAD
+=======
 
   })) || [],
   
@@ -156,12 +270,42 @@ export function TalentProfile({;
 
   return (
     <div className="container mx-auto px-4 py-8">;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
         title={profile && profile.professional_title}
         avatarUrl={profile && profile.profile_picture_url}
         profileType="talent"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        rating={profile && profile.average_rating}
+        reviewCount={profile && profile.rating_count}
+      />;
+
+
+      {/* Main content area */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
+        {/* Left Column - Skills & Info */}
+
+=======
+        rating={profile && profile.average_rating}
+        reviewCount={profile && profile.rating_count}
+      />;
+      {/* Main content area */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
+        {/* Left Column - Skills & Info */}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-8">;
           <ProfileSkills skills={skillsArray} />;
           <ProfileAvailability availability={availability} />;
@@ -185,6 +329,12 @@ export function TalentProfile({;
 
           
           
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}
@@ -198,6 +348,22 @@ export function TalentProfile({;
               ratingCount={profile.rating_count}
             />
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+        {/* Right Column - Bio & Projects */}
+        <div className="lg:col-span-2 space-y-8">;
+          {/* Bio Section */}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -381,6 +547,15 @@ function TalentProfile() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  interface TalentProfileProps {
   profile: TalentProfileType;
@@ -474,3 +649,10 @@ return (</div> </div> {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -2,6 +2,33 @@ import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {badgeVariants} from "@/components/ui/badge-variants";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface ClickableBadgeProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+
+  onRemove?: () => void;
+  variant?: "default" | "secondary" | "destructive" | "outline";
+}
+
+
+export function ClickableBadge(): any ({;
+=======
+  onRemove?: () => void;
+  variant?: "default" | "secondary" | "destructive" | "outline";
+}
+export function ClickableBadge(): any ({;
+export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {;
+  onRemove?: () => void;
+  variant?: "default" | "secondary" | "destructive" | "outline"
+}
+
+export function ClickableBadge({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   children;
   className;
   variant = "default";
@@ -12,6 +39,14 @@ import {badgeVariants} from "@/components/ui/badge-variants";
 }
 export function ClickableBadge({
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { X } from "lucide-react",
 import { cn } from "@/lib/utils";
@@ -30,10 +65,40 @@ export function ClickableBadge({
   children;
   className;
   variant;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   children,
   className,
   variant = "default",
   onRemove,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  ...props
+}: ClickableBadgeProps) {
+
+  return (
+    <div
+      className={cn(
+        badgeVariants({ variant })
+        "group flex items-center gap-1"
+        onRemove && "pl-2 && 2.5 pr-1 && 1.5 py-1"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
       {...props}>;
@@ -47,6 +112,43 @@ export function ClickableBadge({
   );
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+          onClick={(e) => {;
+            e && e.stopPropagation();
+            onRemove();
+          }}
+          className="ml-1 rounded-full p-0 && 0.5 hover:bg-background/20";
+
+  ...props
+}: ClickableBadgeProps) {
+  return (
+    <div
+      className={cn(
+        badgeVariants({ variant }),
+        "group flex items-center gap-1",
+        onRemove && "pl-2.5 pr-1.5 py-1",
+        className
+      )}
+      {...props}
+    >
+      <span>{children}</span>
+      {onRemove && (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation(),
+            onRemove()
+          }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
@@ -107,6 +209,19 @@ function ClickableBadge() {
             e.stop_propagation ();
             on_remove ();
           }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+            e.stopPropagation();
+            onRemove();
+          }}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
@@ -143,6 +258,12 @@ onRemove && "pl-2.5 pr-1.5 py-1";
 ;
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="ml - 1 rounded - full p - 0.5 hover:bg - background / 20";
           aria - label="Remove";
         >;
@@ -151,3 +272,10 @@ onRemove && "pl-2.5 pr-1.5 py-1";
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,9 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
   res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
     target: '$10,000,000';
     valuationCap: '$80,000,000';
+<<<<<<< HEAD
     leadInvestor: 'TBD'});
 
   res && res.status(200).json(terms)
@@ -14,6 +19,11 @@ leadInvestor: 'TBD'});
 }
     leadInvestor: 'TBD'});
 
+=======
+
+    leadInvestor: 'TBD'});
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -47,6 +57,7 @@ function handler() {
 
 }
 
+<<<<<<< HEAD
 
 
 
@@ -86,3 +97,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

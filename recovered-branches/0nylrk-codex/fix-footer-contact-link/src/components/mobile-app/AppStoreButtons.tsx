@@ -1,4 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  className?: string;
+import React from './react';
+import { Apple, GithubIcon } from './lucide-react';
+import { cn } from '@/lib / utils';
 
+
+interface AppStoreButtonsProps {
+  class_name?: string;
+  appStoreUrl?: string;
+  googlePlayUrl?: string;
+  onAppStoreClick?: () => void;
+  onGooglePlayClick?: () => void;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -37,10 +60,74 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className;
 
   appStoreUrl = "#";
   googlePlayUrl = "#";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  onAppStoreClick
+  onGooglePlayClick
+}) => {
+  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!appStoreUrl |appStoreUrl === "#") {
+      e.preventDefault();
+      console.log("App Store download clicked")
+      onAppStoreClick?.()
+    }
+  }
+  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!googlePlayUrl |googlePlayUrl === "#") {
+      e.preventDefault();
+      console.log("Google Play download clicked")
+      onGooglePlayClick?.()
+    }
+  }
+
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
+  className;
+  appStoreUrl = "#";
+  googlePlayUrl = "#";
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
+  className,
+  appStoreUrl = "#",
+  googlePlayUrl = "#",
+  onAppStoreClick,
+  onGooglePlayClick
+}) => {
+  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!appStoreUrl || appStoreUrl === "#") {
+      e.preventDefault(),
+      // // // console.log("App Store download clicked"),
+      onAppStoreClick?.()
+    }
+  },
+
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
+
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
+  className;
+  appStoreUrl = "#";
+  googlePlayUrl = "#";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onAppStoreClick,;
   onGooglePlayClick;
 }) => {;
@@ -94,10 +181,26 @@ interface AppStoreButtonsProps {
       </a>
       <a
         href={googlePlayUrl}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </Link>
 
       <a 
         href={googlePlayUrl} 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
         target="_blank"
@@ -117,6 +220,36 @@ interface AppStoreButtonsProps {
           <div className="text-xs">GET IT ON</div>
           <div className="text-xl font-semibold">Google Play</div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </a>
+    </div>
+  )
+
+=======
+
+};
+
+=======
+=======
+
+};
+
+      </Link>
+    </div>
+  )
+}
+
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 },
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
@@ -128,6 +261,44 @@ interface AppStoreButtonsProps {;
   onAppStoreClick?: () => void,;
   onGooglePlayClick?: () => void;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
+  className,;
+  appStoreUrl = "#",;
+  googlePlayUrl = "#",;
+  onAppStoreClick,;
+  onGooglePlayClick;
+}) => {;
+  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
+    if (!appStoreUrl || appStoreUrl === "#") {;
+      e.preventDefault(),;
+      // // // console.log("App Store download clicked"),;
+      onAppStoreClick?.();
+    }
+<<<<<<< HEAD
+  }
+  return (
+=======
+  },;
+  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
+    if (!googlePlayUrl || googlePlayUrl === "#") {;
+      e.preventDefault(),;
+      // // // console.log("Google Play download clicked"),;
+      onGooglePlayClick?.();
+    }
+  };
+  return (;
+<<<<<<< HEAD
+
+=======
+    }
+  }
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>;
       <a
         href={appStoreUrl} 
@@ -152,6 +323,11 @@ interface AppStoreButtonsProps {;
     }
   }
   return (
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
   appStoreUrl = "#";
@@ -221,6 +397,22 @@ if ( {) {
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+export default AppStoreButtons;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default AppStoreButtons;
 
 
@@ -243,3 +435,10 @@ onAppStoreClick?. () h-8 w-8 mr-3"/> <div> <div className=" text-xs">Download on
 };
 
 export default AppStoreButtons;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

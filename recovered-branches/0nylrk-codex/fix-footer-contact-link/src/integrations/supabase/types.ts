@@ -1,8 +1,57 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export type Json =;
+  | string;
+  | number;
+  | boolean;
+  | null;
+  | { [key: string]: Json | undefined }
+  | Json[];
+
+=======
+export type Json =;
+  | string;
+  | number;
+  | boolean;
+  | null;
+
+export type Json =
+  | string
+  | number
+  | boolean
+  | null
+  | { [key: string]: Json | undefined }
+  | Json[]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export type Database = {
   public: {
     Tables: {
       ai_chats: {
         Row: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          created_at: string;
+          id: string;
+          message: string;
+          response: string;
+          user_id: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
         Insert: {
           created_at?: string;
@@ -110,10 +159,178 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       api_logs: {;
         Row: {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          created_at: string
+          id: string
+          message: string
+          response: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          message: string
+          response: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          message?: string
+          response?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ai_chats_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      analytics_events: {
+        Row: {
+          created_at: string | null
+          event_type: string
+          id: string
+          metadata: Json | null
+          path: string | null
+          session_id: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          event_type: string
+          id?: string
+          metadata?: Json | null
+          path?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          event_type?: string
+          id?: string
+          metadata?: Json | null
+          path?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "analytics_events_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      api_keys: {
+        Row: {
+          created_at: string
+          expires_at: string | null
+          id: string
+          is_active: boolean
+          key_hash: string
+          key_prefix: string
+          last_used_at: string | null
+          name: string
+          scopes: Database["public"]["Enums"]["api_key_scope"][]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          is_active?: boolean
+          key_hash: string
+          key_prefix: string
+          last_used_at?: string | null
+          name: string
+          scopes?: Database["public"]["Enums"]["api_key_scope"][]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          is_active?: boolean
+          key_hash?: string
+          key_prefix?: string
+          last_used_at?: string | null
+          name?: string
+          scopes?: Database["public"]["Enums"]["api_key_scope"][]
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "api_keys_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      api_logs: {
+        Row: {
+          api_key_id: string | null
+          created_at: string
+          endpoint: string
+          id: string
+          ip_address: string | null
+          method: string
+          response_time_ms: number | null
+          status_code: number
+          user_agent: string | null
+          user_id: string | null
+        }
+        Insert: {
+          api_key_id?: string | null
+          created_at?: string
+          endpoint: string
+          id?: string
+          ip_address?: string | null
+          method: string
+          response_time_ms?: number | null
+          status_code: number
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          api_key_id?: string | null
+          created_at?: string
+          endpoint?: string
+          id?: string
+          ip_address?: string | null
+          method?: string
+          response_time_ms?: number | null
+          status_code?: number
+          user_agent?: string | null
+          user_id?: string | null
+      api_logs: {;
+        Row: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           api_key_id: string | null;
           created_at: string;
           endpoint: string;
@@ -137,6 +354,20 @@ export type Database = {
           user_agent?: string | null;
           user_id?: string | null;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        Update: {
+=======
+        Update: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           api_key_id?: string | null;
           created_at?: string;
           endpoint?: string;
@@ -147,6 +378,20 @@ export type Database = {
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+        Relationships: [;
+          {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
         Relationships: [;
           {
@@ -156,10 +401,22 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             foreignKeyName: "api_logs_api_key_id_fkey"
             columns: ["api_key_id"]
             isOneToOne: false
             referencedRelation: "api_keys"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             foreignKeyName: "api_logs_api_key_id_fkey";
             columns: ["api_key_id"];
@@ -170,6 +427,12 @@ export type Database = {
 
             referencedColumns: ["id"]
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             referencedColumns: ["id"];
           };
             referencedColumns: ["id"]
@@ -179,6 +442,13 @@ export type Database = {
         Relationships: [;
           {
           }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -470,6 +740,316 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            referencedColumns: ["id"];
+          };
+            referencedColumns: ["id"]
+          }
+          },
+          {
+            foreignKeyName: "api_logs_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      certifications: {
+        Row: {
+          created_at: string
+          credential_id: string | null
+          credential_url: string | null
+          expiration_date: string | null
+          id: string
+          issue_date: string | null
+          issuing_organization: string
+          name: string
+          resume_id: string
+        }
+        Insert: {
+          created_at?: string
+          credential_id?: string | null
+          credential_url?: string | null
+          expiration_date?: string | null
+          id?: string
+          issue_date?: string | null
+          issuing_organization: string
+          name: string
+          resume_id: string
+        }
+        Update: {
+          created_at?: string
+          credential_id?: string | null
+          credential_url?: string | null
+          expiration_date?: string | null
+          id?: string
+          issue_date?: string | null
+          issuing_organization?: string
+          name?: string
+          resume_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "certifications_resume_id_fkey"
+            columns: ["resume_id"]
+            isOneToOne: false
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
+          }]
+      }
+      content: {
+        Row: {
+          content_type: string
+          content_url: string | null
+          created_at: string
+          creator_id: string
+          description: string | null
+          id: string
+          published: boolean | null
+          thumbnail_url: string | null
+          title: string
+          updated_at: string
+          views: number | null
+        }
+        Insert: {
+          content_type: string
+          content_url?: string | null
+          created_at?: string
+          creator_id: string
+          description?: string | null
+          id?: string
+          published?: boolean | null
+          thumbnail_url?: string | null
+          title: string
+          updated_at?: string
+          views?: number | null
+        }
+        Update: {
+          content_type?: string
+          content_url?: string | null
+          created_at?: string
+          creator_id?: string
+          description?: string | null
+          id?: string
+          published?: boolean | null
+          thumbnail_url?: string | null
+          title?: string
+          updated_at?: string
+          views?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "content_creator_id_fkey"
+            columns: ["creator_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }]
+      }
+      contract_templates: {
+        Row: {
+          created_at: string
+          id: string
+          is_default: boolean | null
+          template_data: Json
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_default?: boolean | null
+          template_data: Json
+          title: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_default?: boolean | null
+          template_data?: Json
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "contract_templates_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      education: {
+        Row: {
+          created_at: string
+          degree: string
+          description: string | null
+          end_date: string | null
+          field_of_study: string | null
+          id: string
+          institution: string
+          institution_logo_url: string | null
+          is_current: boolean
+          location: string | null
+          resume_id: string
+          start_date: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          degree: string
+          description?: string | null
+          end_date?: string | null
+          field_of_study?: string | null
+          id?: string
+          institution: string
+          institution_logo_url?: string | null
+          is_current?: boolean
+          location?: string | null
+          resume_id: string
+          start_date: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          degree?: string
+          description?: string | null
+          end_date?: string | null
+          field_of_study?: string | null
+          id?: string
+          institution?: string
+          institution_logo_url?: string | null
+          is_current?: boolean
+          location?: string | null
+          resume_id?: string
+          start_date?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "education_resume_id_fkey"
+            columns: ["resume_id"]
+            isOneToOne: false
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
+          }]
+      }
+      fraud_detection_reports: {
+        Row: {
+          action_taken_count: number
+          dangerous_count: number
+          false_positive_count: number
+          generated_at: string
+          id: string
+          report_data: Json | null
+          report_month: string
+          suspicious_count: number
+          total_flags: number
+        }
+        Insert: {
+          action_taken_count?: number
+          dangerous_count?: number
+          false_positive_count?: number
+          generated_at?: string
+          id?: string
+          report_data?: Json | null
+          report_month: string
+          suspicious_count?: number
+          total_flags?: number
+        }
+        Update: {
+          action_taken_count?: number
+          dangerous_count?: number
+          false_positive_count?: number
+          generated_at?: string
+          id?: string
+          report_data?: Json | null
+          report_month?: string
+          suspicious_count?: number
+          total_flags?: number
+        }
+        Relationships: []
+      }
+      fraud_flags: {
+        Row: {
+          action_taken: string | null
+          content_excerpt: string
+          content_id: string
+          content_type: string
+          gpt_classification: string | null
+          gpt_explanation: string | null
+          id: string
+          ip_address: string | null
+          is_false_positive: boolean | null
+          reason: string
+          reviewed_at: string | null
+          reviewed_by: string | null
+          severity: Database["public"]["Enums"]["fraud_severity"]
+          status: string
+          timestamp: string
+          updated_at: string | null
+          user_email: string | null
+          user_id: string | null
+        }
+        Insert: {
+          action_taken?: string | null
+          content_excerpt: string
+          content_id: string
+          content_type: string
+          gpt_classification?: string | null
+          gpt_explanation?: string | null
+          id?: string
+          ip_address?: string | null
+          is_false_positive?: boolean | null
+          reason: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          severity?: Database["public"]["Enums"]["fraud_severity"]
+          status?: string
+          timestamp?: string
+          updated_at?: string | null
+          user_email?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          action_taken?: string | null
+          content_excerpt?: string
+          content_id?: string
+          content_type?: string
+          gpt_classification?: string | null
+          gpt_explanation?: string | null
+          id?: string
+          ip_address?: string | null
+          is_false_positive?: boolean | null
+          reason?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          severity?: Database["public"]["Enums"]["fraud_severity"]
+          status?: string
+          timestamp?: string
+          updated_at?: string | null
+          user_email?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "fraud_flags_reviewed_by_fkey"
+            columns: ["reviewed_by"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             foreignKeyName: "fraud_flags_reviewed_by_fkey";
             columns: ["reviewed_by"];
@@ -480,6 +1060,13 @@ export type Database = {
 
           },
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {
             foreignKeyName: "fraud_flags_user_id_fkey";
             columns: ["user_id"];
@@ -653,17 +1240,242 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "fraud_flags_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      hire_requests: {
+        Row: {
+          attachments: Json | null
+          budget_display: string | null
+          budget_max: number | null
+          budget_min: number | null
+          created_at: string
+          expiry_date: string | null
+          id: string
+          project_overview: string
+          project_summary: string | null
+          project_type: string | null
+          requester_email: string
+          requester_id: string | null
+          requester_name: string
+          status: string
+          talent_id: string
+          timeline: string
+          updated_at: string
+        }
+        Insert: {
+          attachments?: Json | null
+          budget_display?: string | null
+          budget_max?: number | null
+          budget_min?: number | null
+          created_at?: string
+          expiry_date?: string | null
+          id?: string
+          project_overview: string
+          project_summary?: string | null
+          project_type?: string | null
+          requester_email: string
+          requester_id?: string | null
+          requester_name: string
+          status?: string
+          talent_id: string
+          timeline: string
+          updated_at?: string
+        }
+        Update: {
+          attachments?: Json | null
+          budget_display?: string | null
+          budget_max?: number | null
+          budget_min?: number | null
+          created_at?: string
+          expiry_date?: string | null
+          id?: string
+          project_overview?: string
+          project_summary?: string | null
+          project_type?: string | null
+          requester_email?: string
+          requester_id?: string | null
+          requester_name?: string
+          status?: string
+          talent_id?: string
+          timeline?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      interviews: {
+        Row: {
+          client_id: string
+          created_at: string
+          duration_minutes: number
+          end_time: string | null
+          id: string
+          interview_type: string
+          meeting_link: string | null
+          meeting_platform: string | null
+          notes: string | null
+          reminder_sent: string | null
+          scheduled_date: string
+          status: string
+          talent_id: string
+          title: string | null
+          updated_at: string
+        }
+        Insert: {
+          client_id: string
+          created_at?: string
+          duration_minutes?: number
+          end_time?: string | null
+          id?: string
+          interview_type?: string
+          meeting_link?: string | null
+          meeting_platform?: string | null
+          notes?: string | null
+          reminder_sent?: string | null
+          scheduled_date: string
+          status?: string
+          talent_id: string
+          title?: string | null
+          updated_at?: string
+        }
+        Update: {
+          client_id?: string
+          created_at?: string
+          duration_minutes?: number
+          end_time?: string | null
+          id?: string
+          interview_type?: string
+          meeting_link?: string | null
+          meeting_platform?: string | null
+          notes?: string | null
+          reminder_sent?: string | null
+          scheduled_date?: string
+          status?: string
+          talent_id?: string
+          title?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      job_applications: {
+        Row: {
+          cover_letter: string | null
+          created_at: string | null
+          id: string
+          is_shortlisted: boolean | null
+          job_id: string
+          match_breakdown: Json | null
+          match_score: number | null
+          match_suggestion: string | null
+          match_summary: string | null
+          resume_id: string | null
+          scored_at: string | null
+          status: string
+          talent_id: string
+          viewed_at: string | null
+        }
+        Insert: {
+          cover_letter?: string | null
+          created_at?: string | null
+          id?: string
+          is_shortlisted?: boolean | null
+          job_id: string
+          match_breakdown?: Json | null
+          match_score?: number | null
+          match_suggestion?: string | null
+          match_summary?: string | null
+          resume_id?: string | null
+          scored_at?: string | null
+          status?: string
+          talent_id: string
+          viewed_at?: string | null
+        }
+        Update: {
+          cover_letter?: string | null
+          created_at?: string | null
+          id?: string
+          is_shortlisted?: boolean | null
+          job_id?: string
+          match_breakdown?: Json | null
+          match_score?: number | null
+          match_suggestion?: string | null
+          match_summary?: string | null
+          resume_id?: string | null
+          scored_at?: string | null
+          status?: string
+          talent_id?: string
+          viewed_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "job_applications_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
           },
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            foreignKeyName: "job_applications_job_id_fkey";
+            columns: ["job_id"];
+            isOneToOne: false;
+            referenced_relation: "jobs";
+            referenced_columns: ["id"];
+          }
+=======
+
+=======
+            foreignKeyName: "job_applications_job_id_fkey";
+            columns: ["job_id"];
+            isOneToOne: false;
+            referenced_relation: "jobs";
+            referenced_columns: ["id"];
+          }
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           },
 
 
@@ -673,6 +1485,16 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "talent_resumes";
             referenced_columns: ["id"];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
           {
             foreignKeyName: "job_applications_talent_id_fkey";
@@ -1023,22 +1845,115 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "project_notes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      projects: {
+        Row: {
+          agreement_url: string | null
+          client_id: string
+          created_at: string
+          id: string
+          job_id: string
+          payment_terms: string
+          scope_summary: string
+          start_date: string
+          status: string
+          talent_id: string
+          updated_at: string
+        }
+        Insert: {
+          agreement_url?: string | null
+          client_id: string
+          created_at?: string
+          id?: string
+          job_id: string
+          payment_terms: string
+          scope_summary: string
+          start_date: string
+          status?: string
+          talent_id: string
+          updated_at?: string
+        }
+        Update: {
+          agreement_url?: string | null
+          client_id?: string
+          created_at?: string
+          id?: string
+          job_id?: string
+          payment_terms?: string
+          scope_summary?: string
+          start_date?: string
+          status?: string
+          talent_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "projects_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
           },
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {
             foreignKeyName: "projects_job_id_fkey"
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             foreignKeyName: "projects_client_id_fkey";
             columns: ["client_id"];
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
           }
           {
@@ -1111,6 +2026,56 @@ export type Database = {
             referenced_columns: ["id"];
           }];
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+      referral_codes: {;
+        Row: {;
+
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "quote_requests_talent_id_fkey"
+            columns: ["talent_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }]
+      }
+      referral_codes: {
+        Row: {
+          code: string
+          created_at: string
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          id?: string
+          updated_at?: string
+          user_id?: string
+      referral_codes: {;
+        Row: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           code: string;
           created_at: string;
           id: string;
@@ -1124,11 +2089,39 @@ export type Database = {
           updated_at?: string;
           user_id: string;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        Update: {
+=======
+        Update: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           code?: string;
           created_at?: string;
           id?: string;
           updated_at?: string;
           user_id?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
         Relationships: [;
           {
@@ -1172,17 +2165,94 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referral_codes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      referral_rewards: {
+        Row: {
+          amount: number | null
+          created_at: string
+          expires_at: string | null
+          id: string
+          partner_id: string | null
+          referral_id: string
+          reward_type: string
+          user_id: string
+        }
+        Insert: {
+          amount?: number | null
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          partner_id?: string | null
+          referral_id: string
+          reward_type: string
+          user_id: string
+        }
+        Update: {
+          amount?: number | null
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          partner_id?: string | null
+          referral_id?: string
+          reward_type?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referral_rewards_partner_id_fkey"
+            columns: ["partner_id"]
+            isOneToOne: false
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
           },
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
             columns: ["referral_id"]
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             foreignKeyName: "referral_rewards_partner_id_fkey";
             columns: ["partner_id"];
             isOneToOne: false;
@@ -1199,6 +2269,13 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "referrals";
             referenced_columns: ["id"];
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
           {
             foreignKeyName: "referral_rewards_user_id_fkey";
@@ -1259,23 +2336,141 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "referral_rewards_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      referrals: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          email: string | null
+          id: string
+          ip_address: string | null
+          partner_id: string | null
+          referral_code: string
+          referred_id: string | null
+          referred_user_type: string | null
+          referrer_id: string
+          referrer_user_type: string | null
+          reward_issued: boolean
+          reward_issued_at: string | null
+          status: Database["public"]["Enums"]["referral_status"]
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          ip_address?: string | null
+          partner_id?: string | null
+          referral_code: string
+          referred_id?: string | null
+          referred_user_type?: string | null
+          referrer_id: string
+          referrer_user_type?: string | null
+          reward_issued?: boolean
+          reward_issued_at?: string | null
+          status?: Database["public"]["Enums"]["referral_status"]
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          ip_address?: string | null
+          partner_id?: string | null
+          referral_code?: string
+          referred_id?: string | null
+          referred_user_type?: string | null
+          referrer_id?: string
+          referrer_user_type?: string | null
+          reward_issued?: boolean
+          reward_issued_at?: string | null
+          status?: Database["public"]["Enums"]["referral_status"]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referrals_partner_id_fkey"
+            columns: ["partner_id"]
+            isOneToOne: false
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
           },
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {
             foreignKeyName: "referrals_referral_code_fkey"
             columns: ["referral_code"]
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+          },
+
+
+=======
+          },
+
+
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             foreignKeyName: "referrals_partner_id_fkey";
             columns: ["partner_id"];
             isOneToOne: false;
@@ -1299,6 +2494,13 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
           {
             foreignKeyName: "referrals_referrer_id_fkey";
@@ -1308,6 +2510,65 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+      reminder_logs: {;
+        Row: {;
+
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "referrals_referrer_id_fkey"
+            columns: ["referrer_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      reminder_logs: {
+        Row: {
+          clicked_at: string | null
+          email_body: string
+          email_subject: string
+          id: string
+          opened_at: string | null
+          reminder_type: string
+          sent_at: string | null
+          user_id: string
+        }
+        Insert: {
+          clicked_at?: string | null
+          email_body: string
+          email_subject: string
+          id?: string
+          opened_at?: string | null
+          reminder_type: string
+          sent_at?: string | null
+          user_id: string
+        }
+        Update: {
+          clicked_at?: string | null
+          email_body?: string
+          email_subject?: string
+          id?: string
+          opened_at?: string | null
+          reminder_type?: string
+          sent_at?: string | null
+          user_id?: string
+      reminder_logs: {;
+        Row: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           clicked_at: string | null;
           email_body: string;
           email_subject: string;
@@ -1327,6 +2588,20 @@ export type Database = {
           sent_at?: string | null;
           user_id: string;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        Update: {
+=======
+        Update: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           clicked_at?: string | null;
           email_body?: string;
           email_subject?: string;
@@ -1335,6 +2610,20 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
         Relationships: [;
           {
@@ -1451,17 +2740,119 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "review_reports_review_id_fkey"
+            columns: ["review_id"]
+            isOneToOne: false
+            referencedRelation: "reviews"
+            referencedColumns: ["id"]
+          }]
+      }
+      reviews: {
+        Row: {
+          communication_rating: number | null
+          created_at: string
+          id: string
+          is_anonymous: boolean
+          is_visible: boolean
+          project_id: string
+          quality_rating: number | null
+          rating: number
+          report_count: number
+          review_text: string
+          reviewee_id: string
+          reviewer_id: string
+          status: string
+          timeliness_rating: number | null
+          updated_at: string
+          would_work_again: boolean | null
+        }
+        Insert: {
+          communication_rating?: number | null
+          created_at?: string
+          id?: string
+          is_anonymous?: boolean
+          is_visible?: boolean
+          project_id: string
+          quality_rating?: number | null
+          rating: number
+          report_count?: number
+          review_text: string
+          reviewee_id: string
+          reviewer_id: string
+          status?: string
+          timeliness_rating?: number | null
+          updated_at?: string
+          would_work_again?: boolean | null
+        }
+        Update: {
+          communication_rating?: number | null
+          created_at?: string
+          id?: string
+          is_anonymous?: boolean
+          is_visible?: boolean
+          project_id?: string
+          quality_rating?: number | null
+          rating?: number
+          report_count?: number
+          review_text?: string
+          reviewee_id?: string
+          reviewer_id?: string
+          status?: string
+          timeliness_rating?: number | null
+          updated_at?: string
+          would_work_again?: boolean | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reviews_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
           },
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             foreignKeyName: "reviews_project_id_fkey";
             columns: ["project_id"];
             isOneToOne: false;
@@ -1478,6 +2869,13 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
           {
             foreignKeyName: "reviews_reviewer_id_fkey";
@@ -1927,6 +3325,21 @@ export type Database = {
     Views: {
       conversion_rates: {
         Row: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          conversion_count: number | null;
+          conversion_rate: number | null;
+          conversion_type: string | null;
+          date: string | null;
+          view_count: number | null;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
         Relationships: [];
       }
@@ -1963,10 +3376,85 @@ export type Database = {
         Relationships: [];
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+
+          conversion_count: number | null
+          conversion_rate: number | null
+          conversion_type: string | null
+          date: string | null
+          view_count: number | null
+        }
+        Relationships: []
+      }
+      daily_page_views: {
+        Row: {
+          date: string | null
+          path: string | null
+          view_count: number | null
+        }
+        Relationships: []
+      }
+      user_metrics: {
+        Row: {
+          job_applications: number | null
+          profile_views: number | null
+          quote_invites: number | null
+          success_rate: number | null
+          user_id: string | null
+        }
+        Insert: {
+          job_applications?: never
+          profile_views?: never
+          quote_invites?: never
+          success_rate?: never
+          user_id?: string | null
+        }
+        Update: {
+          job_applications?: never
+          profile_views?: never
+          quote_invites?: never
+          success_rate?: never
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+    }
+    Functions: {
+      check_users_needing_reminders: {
+        Args: Record<PropertyKey, never>
+        Returns: {
+          user_id: string
+          email: string
+          display_name: string
+          user_type: string
+          last_login: string
+          reminder_type: string
+          days_since_login: number
+          onboarding_status: Json
+        }[]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     Functions: {;
       check_users_needing_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           user_id: string;
           email: string;
           display_name: string;
@@ -1976,6 +3464,20 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -2029,10 +3531,42 @@ export type Database = {
       get_current_tenant_id: {
         Args: Record < PropertyKey, never>;
         Returns: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      get_current_tenant_id: {;
+        Args: Record<PropertyKey never>;
+        Returns: string;
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       get_event_distribution: {
         Args: { days_back?: number }
         Returns: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          date: string;
+          event_type: string;
+          count: number;
+        }[];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       hash_api_key: {
         Args: { api_key: string }
@@ -2079,6 +3613,15 @@ export type Database = {
     }
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type DefaultSchema = Database[Extract < keyof Database, "public">];
 export type Tables<;
   DefaultSchemaTableNameOrOptions extends;
@@ -2163,6 +3706,19 @@ export type Tables<
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
     | { schema: keyof Database };
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2181,17 +3737,50 @@ export type Tables<
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ? R
       : never
     : never
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ? R;
       : never;
     : never;
 export type TablesInsert<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof DefaultSchema["Tables"];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2227,17 +3816,50 @@ export type TablesInsert<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ? I
       : never
     : never
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ? I;
       : never;
     : never;
 export type TablesUpdate<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof DefaultSchema["Tables"];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2273,11 +3895,40 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ? U
       : never
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    | keyof DefaultSchema["Enums"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["Enums"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
@@ -2430,6 +4081,25 @@ export type Enums<;
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never;
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+    | keyof DefaultSchema["Enums"]
+
+
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+=======
+    | { schema: keyof Database },;
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {;
+    schema: keyof Database;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
@@ -2447,6 +4117,16 @@ export type CompositeTypes<
 export type CompositeTypes<;
   PublicCompositeTypeNameOrOptions extends;
     | keyof DefaultSchema["CompositeTypes"];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     | { schema: keyof Database }
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database;
@@ -2454,6 +4134,25 @@ export type CompositeTypes<;
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+    | keyof DefaultSchema["CompositeTypes"]
+
+
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database
+=======
+    | { schema: keyof Database },;
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {;
+    schema: keyof Database;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
@@ -2466,6 +4165,16 @@ export type CompositeTypes<;
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
     : never;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const Constants = {
   public: {
     Enums: {
@@ -2482,6 +4191,17 @@ export const Constants = {
         "accepted";
         "responded";
         "closed";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 ;
 export const Constants = {
@@ -2490,6 +4210,16 @@ export const Constants = {
 
       api_key_scope: [
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 ;
@@ -2624,3 +4354,8 @@ export const Constants = {;
         "archived"];
       referral_status: ["pending", "completed", "expired"]}}} as const;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

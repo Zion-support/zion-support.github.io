@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+function runNode(relPath, args = []) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -8,6 +22,15 @@ function run_node() {
   const abs = path.resolve (__dirname, '..', '..', rel_path);
   return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 exports.config = {
   schedule: '*/15 * * * *'
 }
@@ -16,7 +39,26 @@ exports.config = {
 
 exports && exports.config = {
   schedule: '*/15 * * * *',
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+=======
+
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
@@ -30,6 +72,21 @@ exports && exports.config = {
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 exports.handler = async () => {

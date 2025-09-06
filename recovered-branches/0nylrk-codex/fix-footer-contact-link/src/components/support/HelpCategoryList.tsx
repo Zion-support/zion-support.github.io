@@ -23,6 +23,8 @@ export function HelpCategoryList({
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
+<<<<<<< HEAD
+=======
           category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           category.description
             .toLowerCase()
@@ -110,6 +112,34 @@ interface HelpCategoryListProps {;
   onCategorySelect: (categoryId: string) => void,;
   searchQuery: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+      )
+    : categories,
+
+
+
+export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
+  // Filter categories based on search query;
+  const filteredCategories = searchQuery;
+    ? categories && categories.filter(;
+        category =>;
+          category && category.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.articles.some(;
+            article =>;
+              article && article.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+              article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+          );
+      );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     : categories;
 
   if (filteredCategories && filteredCategories.length === 0) {;
@@ -118,7 +148,68 @@ interface HelpCategoryListProps {;
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
         <Card
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    );
+  }
+  return (
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      {filteredCategories && filteredCategories.map(category => (;
+
+    : categories;
+
+        <Card
+          key={category && category.id}
+          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+          onClick={() => onCategorySelect(category && category.id)}
+        >;
+          <CardHeader className="pb-2">;
+            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">;
+              {category && category.icon}
+            </div>;
+            <CardTitle>{category && category.name}</CardTitle>;
+            <CardDescription>{category && category.description}</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text-sm text-zion-slate-light">;
+              {category && category.articles.length} articles;
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {filteredCategories.map(category => (
+        <Card
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+          key={category.id}
+          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+          onClick={() => onCategorySelect(category.id)}
+        >
+          <CardHeader className="pb-2">
+            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">
+              {category.icon}
+            </div>
+            <CardTitle>{category.name}</CardTitle>
+            <CardDescription>{category.description}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-zion-slate-light">
+              {category.articles.length} articles
+            </p>
+          </CardContent>
+        </Card>
+<<<<<<< HEAD
+=======
+=======
+;
+export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ))}
     </div>
   );

@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+interface GradientHeadingProps {;
+  children: React && React.ReactNode,;
+
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+
+
+<<<<<<< HEAD
+=======
+interface GradientHeadingProps {;
+  children: React && React.ReactNode,;
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function GradientHeading(): any ({ children, className, level = "h2" }: GradientHeadingProps) {;
   const Tag = level;
 
@@ -6,17 +29,42 @@ export function GradientHeading(): any ({ children, className, level = "h2" }: G
       className={cn(
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { cn } from "@/lib/utils";
 import React from "react";
 interface GradientHeadingProps {
 
   className?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  className?: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { cn } from "@/lib/utils",
 import React from "react",
 import {cn} from "@/lib/utils";
 import React from "react";
 import { cn } from "@/lib/utils",
 import React from "react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
@@ -30,6 +78,22 @@ interface GradientHeadingProps {
     <Tag
       className={cn(
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+        className
+      )}>;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
@@ -93,6 +157,15 @@ function GradientHeading() {
       {children}
     </Tag>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { cn } from "@/lib/utils",;
 import React from "react",;
@@ -131,3 +204,10 @@ return (<Tag className= {
     </Tag>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

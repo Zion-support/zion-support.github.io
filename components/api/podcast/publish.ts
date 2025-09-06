@@ -1,4 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -8,10 +12,13 @@ export default async function handler(
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
+<<<<<<< HEAD
   try {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const rssUrl =
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';
 
@@ -24,6 +31,10 @@ export default async function handler(
   const rssUrl = (process && process.env.SITE_URL || 'http: //localhost:3000') + '/podcast && podcast.xml';
   return res && res.status(200).json({ ok: true, rssUrl })
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default async /**
  * handler - Function description
@@ -47,6 +58,7 @@ function handler() {
 
 }
 
+<<<<<<< HEAD
 
 
 }
@@ -59,3 +71,5 @@ function handler() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

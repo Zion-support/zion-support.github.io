@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { supabase } from '@/integrations/supabase/client',
 import { FraudSeverity, FraudFlag } from '@/types/fraud',
@@ -9,6 +19,28 @@ import { FlagResult } from './types',
  */
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export const flagContent = async (;
+  userId: string;
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];
+  contentId: string;
+  contentExcerpt: string;
+  severity: FraudSeverity;
+export const flagContent = async (
+  userId: string;
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];
+  contentId: string;
+  contentExcerpt: string;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Content flagging functionality;
 import {supabase} from '@/integrations / supabase / client';
 import {FraudSeverity, FraudFlag} from '@/types / fraud';
@@ -23,6 +55,8 @@ export const flag_content = async (
   content_id: string;
   content_excerpt: string;
   severity: FraudSeverity;
+<<<<<<< HEAD
+=======
 export const flagContent = async (
   userId: string;
   userEmail: string | undefined;
@@ -30,6 +64,7 @@ export const flagContent = async (
   contentId: string;
   contentExcerpt: string;
   severity: FraudSeverity;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   reason: string
   userId: string,
   userEmail: string | undefined,
@@ -41,6 +76,34 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console.log ('Flagging content for review:', {
+      user_id;
+      content_type;
+      content_id;
+
+      reason;
+      severity;
+    });
+
+    
+    const { error } = await supabase && supabase.from('fraud_flags').insert({
+      user_id: userId;
+      user_email: userEmail;
+      content_type: contentType;
+      content_id: contentId,
+      content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // // // console.log('Flagging content for review:', {
       userId,
       contentType,
@@ -50,6 +113,22 @@ export const flagContent = async (
       reason;
       severity;
     });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const { error } = await supabase.from('fraud_flags').insert({
+      user_id: userId;
+      user_email: userEmail;
+      content_type: contentType;
+      content_id: contentId
+      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       severity;
       reason;
       ip_address: ipAddress;
@@ -59,6 +138,22 @@ export const flagContent = async (
     if (error) throw error;
     return { success: true }
   } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    console.error('Error flagging content:', error);
+    return {
+      success: false
+      error: error instanceof Error ? error.message : 'Unknown error'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 }
@@ -124,12 +219,47 @@ export const flagContent = async (;
     return {;
       success: false;
       error: error instanceof Error ? error.message : 'Unknown error';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      reason;
+      severity;
+    });
+    const { error } = await supabase && supabase.from('fraud_flags').insert({
+      user_id: userId;
+      user_email: userEmail;
+      content_type: contentType;
+      content_id: contentId,
+      content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
+      severity;
+      reason;
+      ip_address: ipAddress;
+      timestamp: new Date().toISOString()
+      status: 'pending'
+    });
+    if (error) throw error;
+    return { success: true }
+  } catch (error) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     console && console.error('Error flagging content:', error);
     return { 
       success: false, 
       error: error instanceof Error ? error && error.message : 'Unknown error' 
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     const { error } = await supabase.from ('fraud_flags').insert ({
       user_id: user_id;
@@ -185,6 +315,9 @@ if (throw error) {
 
     }
   }
+<<<<<<< HEAD
+};
+=======
 }
 ;
 };
@@ -197,3 +330,8 @@ if (throw error) {
     }
   }
 };
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

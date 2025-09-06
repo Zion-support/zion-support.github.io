@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobMatches(jobId: string) {;
+  const [matches, setMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isProcessing, setIsProcessing] = useState(false);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -7,6 +28,15 @@ export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -36,6 +66,27 @@ function useJobMatches() {
       const { data, error } = await supabase
         .from("job_talent_matches")
         .select(`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+  const fetchMatches = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase
+        .from("job_talent_matches")
+        .select(`
+          *;
+          talent_profile: talent_id(
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             id;
             user_id;
             full_name;
@@ -44,6 +95,17 @@ function useJobMatches() {
             hourly_rate;
             bio;
             years_experience;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            key_projects
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           *,
           talent_profile:talent_id(
             id,
@@ -55,10 +117,41 @@ function useJobMatches() {
             bio,
             years_experience,
             key_projects,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             skills
           )
         `)
         .eq("job_id", jobId)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+        .order("match_score", { ascending: false });
+      if (error) throw error;
+      setMatches(data |[])
+        .order("match_score", { ascending: false });
+      if (error) throw error;
+      setMatches(data |[])
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .order("match_score", { ascending: false }),
 
       if (error) throw error,
@@ -120,16 +213,99 @@ if (throw error) {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
       console && console.error("Error triggering AI matching:", error);
       toast({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      const response = await supabase.functions.invoke ('job - talent - matcher', {
+        body: { job_id }});
+=======
+
+=======
+
+        body: { jobId }});
+      if (response.error) throw new Error(response.error.message);
+      toast({
+        title: "AI Matching Complete"
+        description: `Found ${response.data.matches |0} potential talent matches for this job.`});
+        body: { jobId }}),
+      
+      if (response.error) throw new Error(response.error.message),
+      
+      toast({
+        title: "AI Matching Complete",
+        description: `Found ${response.data.matches || 0} potential talent matches for this job.`}),
+      
+      // Refresh the matches list
+      await fetchMatches()
+    } catch (error) {
+      console.error("Error triggering AI matching:", error),
+      toast({
+        title: "Matching Failed";
+        description: "Could not process talent matching. Please try again later."
+        variant: "destructive"})
+    } finally {
+      setIsProcessing(false)
+    }
+  }
+  useEffect(() => {
+    fetchMatches()
+  }, [jobId]);
+  return {
+    matches;
+    isLoading;
+    isProcessing;
+
+    triggerAIMatching
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    }
+  };
+
+  useEffect(() => {
+    fetchMatches()
+  }, [jobId]);
+
+  return {
+    matches;
+    isLoading;
+    isProcessing;
+    triggerAIMatching
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -203,10 +379,29 @@ export function useJobMatches(jobId: string) {;
     triggerAIMatching;
       const response = await supabase.functions.invoke ('job - talent - matcher', {
         body: { job_id }});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        title: "Matching Failed",
+        description: "Could not process talent matching. Please try again later.",
+        variant: "destructive"})
+    } finally {
+      setIsProcessing(false)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   }
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       if (throw new Error (response.error.message)) {
   $2
@@ -223,6 +418,19 @@ export function useJobMatches(jobId: string) {;
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } finally {
       setIsProcessing (false);
     }
@@ -242,4 +450,26 @@ export function useJobMatches(jobId: string) {;
     triggerAIMatching;
 
   }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+  }
+}
+;
+  }
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

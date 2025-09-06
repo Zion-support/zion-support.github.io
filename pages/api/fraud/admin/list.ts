@@ -1,9 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { getFraudStore } from '../../../../utils/fraud/store',;
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
   return token === process.env.ADMIN_TOKEN
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -24,7 +28,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ items })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -42,6 +49,10 @@ function ensureAdmin(req: NextApiRequest): boolean {;
   }
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export default async /**
  * handler - Function description
@@ -73,33 +84,7 @@ export default async function handler(req, res) {
     res.status(405).json({ error: 'Method not allowed' });
     return;
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,;
-  const store = getFraudStore();
-  const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {;
-    source: source as any,;
-    userId,;
-    status: status as any;
-    label: label as any});
-  res.status(200).json({ items });
-  } catch (error) {
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -112,10 +97,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-
-  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>
-  const store = getFraudStore()
   const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
     source: source as any
     userId
@@ -125,5 +106,8 @@ export default async function handler(req, res) {
 };
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

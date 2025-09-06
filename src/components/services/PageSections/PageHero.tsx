@@ -1,9 +1,12 @@
 export function PageHero() {
   return (
-    <div className="text-center mb-12">
-      <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>
-      <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-        Professional IT onsite support services with transparent pricing across 190+ countries worldwide
+    <div className='text-center mb-12'>
+      <GradientHeading className='mb-4'>
+        Global IT Onsite Services
+      </GradientHeading>
+      <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
+        Professional IT onsite support services with transparent pricing across
+        190+ countries worldwide
       </p>
 
 
@@ -15,8 +18,11 @@ export function PageHero() {
 
 
           </div>
-          <h3 className="text-xl font-bold text-white mb-2">Global Coverage</h3>
-          <p className="text-zion-slate-light">IT onsite services available in over 190 countries and territories worldwide</p>
+          <h3 className='text-xl font-bold text-white mb-2'>Global Coverage</h3>
+          <p className='text-zion-slate-light'>
+            IT onsite services available in over 190 countries and territories
+            worldwide
+          </p>
         </div>
 
 

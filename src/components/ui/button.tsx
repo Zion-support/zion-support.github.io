@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   children,
   href,
   onClick,
@@ -8,7 +13,10 @@
   disabled = false,
   style,
 }) => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -60,7 +68,10 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseClasses =
     "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+<<<<<<< HEAD
   const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const sizeClasses = {
     sm: "px-3 py-1.5 text-sm",
@@ -71,6 +82,10 @@ const Button: React.FC<ButtonProps> = ({
   const variantClasses = {
     primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
     secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
@@ -87,12 +102,23 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
 
     </button>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       style={style}
     >
       {content}
     </button>
+<<<<<<< HEAD
   );
 };
 
 export { Button };
 export default Button;
+=======
+
+  );
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

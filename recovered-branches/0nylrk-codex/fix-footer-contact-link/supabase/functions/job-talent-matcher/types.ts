@@ -1,11 +1,18 @@
+<<<<<<< HEAD
+=======
 export interface JobData {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   title: string;
   description: string;
   skills: string[];
   category: string;
   budget: {
+<<<<<<< HEAD
+    min: number,
+=======
     min: number;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     max: number;
   };
   deadline: string;
@@ -19,10 +26,35 @@ export interface TalentProfile {
   bio?: string;
   skills: string[];
   years_experience: number;
+<<<<<<< HEAD
+  talent_id: string;
+  job_id: string;
+  match_score: number;
+=======
   hourly_rate?: number;
   availability_type?: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  hourly_rate?: number,
+  availability_type?: string;
+
+}
+export interface TalentMatch {
+=======
+export interface TalentMatch {
+  hourly_rate?: number
+
+  availability_type?: string
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+export interface TalentMatch {
+
+export interface TalentMatch {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -33,6 +65,8 @@ export interface TalentProfile {
 export interface MatchResult {
   talentId: string;
   score: number;
+<<<<<<< HEAD
+=======
   matchedSkills: string[];
   reason?: string;
 }
@@ -49,6 +83,7 @@ export interface MatchResult {;
   match_score: number;
 }
   score: number;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string,;
   title: string,;
   description: string,;
@@ -97,7 +132,22 @@ export interface MatchResult {
 
 export interface JobData {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   reason?: string;
 }
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

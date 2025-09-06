@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -200,3 +201,10 @@ export default function AICreativityStudio() {
     </Layout>
   );
 }
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

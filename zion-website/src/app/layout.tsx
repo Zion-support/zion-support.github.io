@@ -1,6 +1,23 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+<<<<<<< HEAD
+  viewport: 'width=device-width, initial-scale=1';
+  themeColor: '#000000'}
+export default function RootLayout({
+  children}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
+      <body className={`${inter.class_name} bg - black text - white antialiased`}>;
+        <Navigation />;
+        <main className=&quot;min - h-screen & quot;>;
+          {children}
+        </main>;
+        <Footer />;
+      </body>;
+=======
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -55,3 +72,4 @@ export default function RootLayout({
     </html>
   );
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

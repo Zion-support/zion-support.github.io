@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,10 +26,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 import dynamic from 'next / dynamic';
 ;
 const NotificationCenter = dynamic (
   () => import ('../components / notifications / NotificationCenter'),
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     ssr: false
   }
@@ -42,3 +51,7 @@ export default function NotificationsPage() {;
 export default function NotificationsPage() {;
   return <NotificationCenter />;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

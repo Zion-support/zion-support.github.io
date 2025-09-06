@@ -1,4 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const appeal: TrustAppeal = {
     userId;
     message;
@@ -8,6 +12,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase } from '../../../utils / supabase / client';
 ;
@@ -60,9 +68,12 @@ if ( {) {
 return res.status (200).json ({ ok: true, appeal });
 }
 
+<<<<<<< HEAD
 
 return res.status(200).json({ ok: true, appeal });
 }
 
   return res.status(200).json({ ok: true, appeal });
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

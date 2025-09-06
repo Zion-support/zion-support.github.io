@@ -12,10 +12,6 @@ import { slugify } from "@/lib/slugify",
 import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
 
-
-
-
-
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -45,7 +41,6 @@ export function EnhancedSearchInput({
   searchSuggestions
 }: EnhancedSearchInputProps) {
 
-
   searchSuggestions;
 }: EnhancedSearchInputProps) {;
 
@@ -63,10 +58,8 @@ export function EnhancedSearchInput({
   searchSuggestions
 }: EnhancedSearchInputProps) {
 
-
   const debouncedFetchSuggestions = useMemo(
-    () =>
-      debounce(async (query: string) => {
+
         if (!query.trim()) {
 
 ;
@@ -75,41 +68,7 @@ interface EnhancedSearchInputProps {
   value: string,
   on_change: (value: string, ) => void,
   /**;
-   * Optional callback when a suggestion is selected. This allows parent;
-   * components to perform actions such as navigation.;
-   */;
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
-  placeholder?: string,;
-  /**;
-   * Optional list of fallback suggestions (e.g. recent searches).;
-   * If provided, these will be shown when the input is empty.;
-   */;
-  searchSuggestions?: SearchSuggestion[];
-}
-;
-export function EnhancedSearchInput({;
-  value,;
-  onChange,;
-  onSelectSuggestion,;
-  placeholder = "Search...",;
-  searchSuggestions;
-}: EnhancedSearchInputProps) {;
-  const [isFocused, setIsFocused] = useState(false),;
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),;
-  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1),;
-  const inputRef = useRef<HTMLInputElement>(null),;
-  const containerRef = useRef<HTMLDivElement>(null),;
-  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null),;
-  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false),;
-  const { t } = useTranslation(),;
-  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),;
-  const [loading, setLoading] = useState(false),;
-  const debounced = useDebounce(value, 200),;
-  const debouncedFetchSuggestions = useMemo(;
-    () =>;
-      debounce(async (query: string) => {;
-        if (!query.trim()) {;
-          setApiSuggestions([]),;
+
           return;
         }
         set_loading (true);
@@ -180,7 +139,6 @@ if ( {) {
           setFilteredSuggestions([])
         }
 
-
       }, 300),;
     [];
   ),;
@@ -232,7 +190,6 @@ if ( {) {
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
-
 
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
@@ -290,11 +247,11 @@ if ( {) {
           setHighlightedIndex (prev => (prev + 1) % filtered_suggestions.length);
 
         }
-  const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo
-    () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {
-      if(!currentValue) {
-        setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'))
-        return;
+  const debouncedFilterSuggestions = useMemo (// Changed from useCallback to useMemo;
+    () => debounce ((current_value: string, suggestions: SearchSuggestion[]) => {
+      // Check condition
+if ( {) {
+  $2
 }
 
         setFilteredSuggestions (suggestions.filter (string => s.type === 'recent'));
@@ -315,10 +272,7 @@ if ( {) {
 
   return () => {
     // Cleanup function;
-};
-}, []); [])
-    debouncedFilterSuggestions(value, searchSuggestions)
-    setHighlightedIndex(-1)
+
     return () => {
       debouncedFilterSuggestions.cancel()
 }
@@ -334,7 +288,6 @@ if ( {) {
         setIsFocused(false)
 }
     }
-
 
 import { logInfo, logWarn } from '@/utils/productionLogger';
 
@@ -712,6 +665,7 @@ if ( {) {
         setEnterHandledPostFocus(false),;
         break;
     }
+
   };
 
       // Provide a sensible default navigation if the parent did not supply a handler
@@ -742,9 +696,7 @@ if ( {) {
 
         <Input
 
-
           ref={inputRef}
-
 
           type="text"
           id="enhanced-search-input"
@@ -774,32 +726,8 @@ if ( {) {
             on_change (e.target.value);
             setEnterHandledPostFocus (false);
 
-          }}
-          onFocus={(e) => {
-            setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus
-            const currentVal = e.target.value
-            setValueOnFocus(currentVal)
-            setEnterHandledPostFocus(false)
-            e.target.setSelectionRange(currentVal.length, currentVal.length)
-          }}
-
-
-
           onChange={(e) => {;
-            onChange(e.target.value),;
-            setEnterHandledPostFocus(false);
-          }}
-          onFocus={(e) => {;
-            setIsFocused(true),;
-            setHighlightedIndex(-1), // Explicitly reset on focus;
-            const currentVal = e.target.value,;
-            setValueOnFocus(currentVal),;
-            setEnterHandledPostFocus(false),;
-            e.target.setSelectionRange(currentVal.length, currentVal.length);
-          }}
-          onBlur={(e) => {;
-            const relatedTarget = e.relatedTarget as HTMLElement;
-            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {;
+
               setIsFocused(false);
               setHighlightedIndex(-1);
             ,}
@@ -809,7 +737,6 @@ if ( {) {
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
 
-
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
@@ -818,15 +745,10 @@ if ( {) {
         {value && (
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-            aria-label="Clear search"
-          >
-            <X className="h-4 w-4" />
-          </button>
+
         )}
 
       </div>;
-
 
       <AutocompleteSuggestions
         suggestions = {filteredSuggestions,}
@@ -929,7 +851,6 @@ break ;
     </div>;
   );
 }
-
 
           on_blur={(e) => {
             const related_target = e.related_target as HTMLElement;            if () {) {

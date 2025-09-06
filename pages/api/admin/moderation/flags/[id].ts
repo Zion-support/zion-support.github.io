@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -12,5 +13,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   res.setHeader('AllowGET')
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return res.status(405).end('Method Not Allowed');
 };
+

@@ -4,7 +4,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const {
     slug
     name
@@ -16,6 +19,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } = req.body |{}
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -24,15 +31,24 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     services_offered,
     team_size,
     about,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       slug,
       name,
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {};
   if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
   try {
+<<<<<<< HEAD
     const vendor = registerVendor({
       slug;
       name;
@@ -40,18 +56,29 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const vendor = registerVendor({
       slug;
       name;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
       teamSize: Number(teamSize || 0);
       about;
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
     res && res.status(201).json({ vendor })
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     verification_docs,
     case_studies,
   } = req.body || {}
@@ -90,9 +117,12 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
 
+<<<<<<< HEAD
     res.status(500).json({ error: e.message });
   }    res.status(500).json({ error: e.message })
   }
 }
   }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

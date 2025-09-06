@@ -1,11 +1,22 @@
+<<<<<<< HEAD
 export default function FiveHundred() {;
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='min-h-screen flex items-center justify-center'>;
       Something went wrong.;
     </div>;
   );export default function FiveHundred() {;
   return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
+<<<<<<< HEAD
 }
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default /**
  * FiveHundred - Function description
  */
@@ -20,6 +31,7 @@ function FiveHundred() {
   return <div className="min - h-screen flex items - center justify - center">Something went wrong.</div>;
 }
 
+<<<<<<< HEAD
 }
 
 
@@ -48,3 +60,5 @@ const 500: React.FC<500Props> = ({ className }) => {
 }
 
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

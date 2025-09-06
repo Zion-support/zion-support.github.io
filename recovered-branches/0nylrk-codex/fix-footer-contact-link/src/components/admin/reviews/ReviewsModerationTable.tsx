@@ -6,6 +6,28 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+=======
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -13,6 +35,21 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import {
   Table,
@@ -36,6 +73,20 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
@@ -68,6 +119,16 @@ export function ReviewsModerationTable({
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
 
@@ -80,6 +141,31 @@ export function ReviewsModerationTable({
       const { error } = await supabase
         .from("reviews")
         .update({ status })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+=======
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }
+    }
+    onSuccess: (data) => {
+      toast({
+
+        title: "Review updated"
+        description: `Review has been ${data.status}.`})
+
+      onRefresh();
+      setViewDetailsOpen(false)
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .eq("id", reviewId),
 
       if (error) throw error,
@@ -92,26 +178,96 @@ export function ReviewsModerationTable({
       onRefresh(),
       setViewDetailsOpen(false)
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
+<<<<<<< HEAD
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    }}),
+
+
+<<<<<<< HEAD
+=======
+    }});
+    }}),
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  const getStatusColor = (status: ReviewStatus) => {
+    switch (status) {
+      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "rejected":
         return "bg-red-100 text-red-800 hover:bg-red-200"
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  },
+
+
+<<<<<<< HEAD
+=======
+  }
+  },
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        src={review.reviewer_profile.avatar_url}
+                        alt={review.reviewer_profile.display_name |""}
+
+=======
+<<<<<<< HEAD
+
+  },
+
+
+<<<<<<< HEAD
+=======
+  }
+  },
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -152,6 +308,11 @@ export function ReviewsModerationTable({
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -181,11 +342,51 @@ import {;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
   isLoading: boolean,;
   onRefresh: () => void;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function ReviewsModerationTable(): any ({;
+  reviews;
+  isLoading;
+  onRefresh}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+
+=======
+;
+export function ReviewsModerationTable({;
+  reviews,;
+  isLoading,;
+  onRefresh}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),;
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { mutate: updateReviewStatus, isPending } = useMutation({;
     mutationFn: async ({;
       reviewId,;
@@ -232,6 +433,7 @@ interface ReviewsModerationTableProps {;
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div className="space-y-4">;
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;
@@ -343,11 +545,72 @@ if ( {) {
           <Star;
             key={star}
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    ),;
+  }
+;
+  const handleApprove = (reviewId:string) => {;
+    updateReviewStatus({ reviewId, status:"approved" }),;
+  },;
+;
+  const handleReject = (reviewId:string) => {;
+    updateReviewStatus({ reviewId, status:"rejected" }),;
+  },;
+;
+  const handleViewDetails = (review:Review) => {;
+    setSelectedReview(review),;
+    setViewDetailsOpen(true);
+  },;
+;
+  const renderStars = (rating:number) => {;
+    return (;
+      <div className="flex">;
+        {[1, 2, 3, 4, 5].map((star) => (;
+          <Star;
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />;
+        ))}
+      </div>;
+    );
+  };
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+                    {review.reviewer_profile?.avatar_url ? (;
+                      <AvatarImage;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
                       />
@@ -355,6 +618,25 @@ if ( {) {
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                          : <User className="h-4 w-4" />}
+                      </AvatarFallback>;
+                    )}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                        src={review && review.reviewer_profile.avatar_url}
+                        alt={review && review.reviewer_profile.display_name || ""}
+                      />;
+                    ) : (;
+                      <AvatarFallback>;
+                        {review && review.reviewer_profile?.display_name;
+                          ? getInitials(review && review.reviewer_profile.display_name);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
@@ -397,6 +679,11 @@ if ( {) {
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     )}
                   </div>;
                 </div>;
@@ -427,6 +714,26 @@ if ( {) {
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        onClick={() => handleApprove(review && review.id)}
+=======
+                  {review.status === "pending" && (;
+                    <>;
+                      <Button;
+                        size="sm";
+                        variant="outline";
+                        className="h-8 w-8 p-0";
+                        onClick={() => handleApprove(review.id)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         disabled={isPending}
                       >;
                         <Check className="h-4 w-4 text-green-500" />;
@@ -435,6 +742,24 @@ if ( {) {
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        onClick={() => handleReject(review && review.id)}
+=======
+                      <Button;
+                        size="sm";
+                        variant="outline";
+                        className="h-8 w-8 p-0";
+                        onClick={() => handleReject(review.id)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         disabled={isPending}
                       >;
                         <X className="h-4 w-4 text-red-500" />;
@@ -543,6 +868,52 @@ if ( {) {
                           Mark as rejected;
                         </DropdownMenuItem>)}
                       {review.status === "rejected" && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        onClick={() => handleReject(review.id)}
+                        disabled={isPending}
+                      >
+                        <X className="h-4 w-4 text-red-500" />
+                      </Button>
+                    </>
+                  )}
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="h-8 w-8 p-0"
+                      >
+                        <MoreHorizontal className="h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem onClick={() => handleViewDetails(review)}>
+                        View details
+                      </DropdownMenuItem>
+                      {review.status === "approved" && (
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
+                          Mark as rejected
+                        </DropdownMenuItem>
+                      )}
+                      {review.status === "rejected" && (
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
+                          Mark as approved
+                        </DropdownMenuItem>
+                      )}
+                        <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "approved" })}>;
+                          Mark as approved;
+                        </DropdownMenuItem>)}
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {review.status === "approved" && (;
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"rejected" })}>;
                           Mark as rejected;
@@ -557,10 +928,32 @@ if ( {) {
                 </div>
               </TableCell>
             </TableRow>
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            </TableRow>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           ))}
 
         </TableBody>;
@@ -594,6 +987,61 @@ if ( {) {
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                  </Avatar>;
+                  <div>;
+                    <div className="font-medium">;
+                      {selectedReview && selectedReview.is_anonymous;
+                        ? "Anonymous";
+                        : selectedReview && selectedReview.reviewer_profile?.display_name || "User"}
+                    </div>;
+                    <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;
+                      {selectedReview && selectedReview.status}
+                    </Badge>;
+                  </div>;
+                </div>;
+                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
+              </div>;
+
+              <div className="border rounded-md p-3 bg-muted/20">;
+                <p className="whitespace-pre-wrap">{selectedReview && selectedReview.review_text}</p>;
+              </div>;
+
+              <div className="space-y-2">;
+                <h4 className="text-sm font-medium">Additional Ratings</h4>;
+                <div className="flex flex-wrap gap-2">;
+                  {selectedReview && selectedReview.communication_rating && (;
+                    <Badge variant="outline">;
+                      Communication: {selectedReview && selectedReview.communication_rating}/5;
+                    </Badge>;
+
+=======
+                          : <User className="h-4 w-4" />}
+                    {selectedReview.reviewer_profile?.avatar_url ? (;
+                      <AvatarImage;
+                        src={selectedReview.reviewer_profile.avatar_url}
+                        alt={selectedReview.reviewer_profile.display_name || ""}
+                      />;
+                    ) :(;
+                      <AvatarFallback>;
+                        {selectedReview.reviewer_profile?.display_name;
+                          ? getInitials(selectedReview.reviewer_profile.display_name);
+                          :<User className="h-4 w-4" />}
+                      </AvatarFallback>;
+                    )}
+                  </Avatar>;
+                  <div>;
+                    <div className="font-medium">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant="outline">;
@@ -768,6 +1216,14 @@ if ( {) {
           </DialogContent>;
         </Dialog>)}
     </>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),; import {
   Table;
 TableBody;
@@ -1018,4 +1474,11 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
       )}
     </>
   )
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }

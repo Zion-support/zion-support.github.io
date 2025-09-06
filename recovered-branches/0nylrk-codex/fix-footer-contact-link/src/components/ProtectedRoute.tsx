@@ -9,28 +9,104 @@ import React from 'react';
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+
+  children;
+
+  adminOnly = false;
+
+
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Navigate  } from 'react-router-dom';
+import { useAuth  } from '@/hooks/useAuth';
+import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+export interface ProtectedRouteProps {
+
+  children: React.ReactNode
+
+import {Navigate} from 'react-router-dom';
+import {useAuth} from '@/hooks/useAuth';
+import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+export interface ProtectedRouteProps {
+  children: React.ReactNode,;
+  adminOnly?: boolean;
+  tenantAdminAllowed?: boolean;
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
+}
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   children;
 
   adminOnly = false;
   tenantAdminAllowed = false
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  requiredUserType
+}) => {
+  const { user, isLoading } = useAuth();
+  const { tenant } = useWhitelabel();
+  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id)
+  const isCheckingPermissions = isLoading |isCheckingTenantAdmin;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+  children;
+  adminOnly = false;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+
+  children;
+
+  adminOnly = false;
+
+
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
   adminOnly = false;
 
-
-export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
-
-  children;
-
-  adminOnly = false;
-
-
-
-export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
-  children;
-  adminOnly = false;
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
@@ -46,6 +122,19 @@ export interface ProtectedRouteProps {
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
   children,
   adminOnly = false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  tenantAdminAllowed = false,
+  requiredUserType
+}) => {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
@@ -58,6 +147,11 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -78,6 +172,22 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
     return <Navigate to="/unauthorized" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+
+  }
+  return <>{children}</>
+}
+export default ProtectedRoute;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from 'react',;
 import { Navigate } from 'react-router-dom',;
@@ -90,6 +200,12 @@ export interface ProtectedRouteProps {;
   tenantAdminAllowed?: boolean,;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   children,;
@@ -101,6 +217,18 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
 
 
 export default ProtectedRoute;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+import React from 'react';
+import {Navigate} from 'react-router-dom';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {use_auth} from '@/hooks / use_auth';
 import {useTenantAdminStatus} from '@/hooks / useWhitelabelTenant';
 import {use_whitelabel} from '@/context / WhitelabelContext';
@@ -215,3 +343,10 @@ export const ProtectedRoute:React.FC<ProtectedRouteProps> = ({ ;
   return <>{children}</>;
 };
 export default ProtectedRoute;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   name: string;
   tagline: string;
@@ -28,6 +39,20 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    website: string;
+  }
+
+  {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -44,11 +69,37 @@
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Cloud - based blockchain platform with multi - chain support and enterprise features.';
     launch_date: '2024 - 09 - 01';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    customers: 123;
+
+    rating: 4 && 4.8,
+
+    reviews: 52
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface InnovativeITService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -745,12 +796,51 @@ export interface InnovativeITService2025 {
     marketSize: '$19B blockchain market', growthRate: '40% annual growth',
     variant: 'blockchain-enterprise',
     contactInfo: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
     launchDate: '2024-09-01', customers: 123,
     rating: 4.8,
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    reviews: 52;
+=======
+    reviews: 52;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
   id: string,;
@@ -1805,7 +1895,21 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     customers: 123,;
     rating: 4.8;
     reviews: 52;
+<<<<<<< HEAD
+  }
+];
+=======
 
 
   }
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

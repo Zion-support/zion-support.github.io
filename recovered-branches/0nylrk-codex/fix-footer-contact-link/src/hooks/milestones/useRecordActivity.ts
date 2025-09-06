@@ -1,4 +1,23 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const useRecordActivity = () => {;
+  const { user } = useAuth();
+
+=======
+=======
+
+export const useRecordActivity = () => {;
+  const { user } = useAuth();
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
 import {MilestoneActivity} from './types';
@@ -14,15 +33,47 @@ import {supabase} from '@/integrations/supabase/client';
 import {MilestoneActivity} from './types';
 export const useRecordActivity = () => {;
   const { user } = useAuth();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
 export const useRecordActivity = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const { user } = useAuth(),
+<<<<<<< HEAD
+
+  
+=======
+  
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const recordMilestoneActivity = async (
     milestoneId: string,
     action: string, 
     previousStatus: string | null, 
     newStatus: string,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     comment?: string
   ) => {
     if (!user) return null
@@ -30,17 +81,58 @@ export const useRecordActivity = () => {
       const { data, error } = await supabase
         .from('milestone_activities')
         .insert({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+          milestone_id: milestoneId;
+          user_id: user.id;
+          action;
+          previous_status: previousStatus;
+          new_status: newStatus
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           milestone_id: milestoneId,
           user_id: user.id,
           action,
           previous_status: previousStatus,
           new_status: newStatus,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          comment})
+        .select(`
+          *;
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           comment})
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        .single();
+      if (error) throw error;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .single(),
       
       if (error) throw error,
@@ -95,11 +187,38 @@ if (throw error) {
 ;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      return data
+    } catch (err: any) {
+      console.error("Error recording activity:", err),
+      return null
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   };
   
   return {
     recordMilestoneActivity
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
@@ -134,6 +253,8 @@ export const useRecordActivity = () => {;
       console.error("Error recording activity:", err),;
       return null;
     }
+<<<<<<< HEAD
+=======
 
   };
   return {;
@@ -144,6 +265,7 @@ export const useRecordActivity = () => {;
 };
 
     }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
   return {;
     recordMilestoneActivity;
@@ -160,3 +282,13 @@ export const useRecordActivity = () => {;
   }
 
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

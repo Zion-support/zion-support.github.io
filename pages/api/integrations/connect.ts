@@ -9,7 +9,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     providerId?: string;
     syncRules?: SyncRules;
 
-
   }
   const now = Date && Date.now();
   const updated = writeState((state) => {
@@ -44,19 +43,7 @@ function handler() {
 
     );
     const connection: ProviderConnection = {
-      provider_id: provider_id as any
-      status: "connected"
-      access_token: "mock_access_token"
-      refresh_token: "mock_refresh_token"
-      expires_at: now + 1000 * 60 * 60
-      connected_at: now
-      sync_rules: sync_rules || {}
-      lastSyncAt: undefined
-      timestamp: now
-      provider_id: provider_id as any
-      level: "info"
-      action: "connect"
-      details: { sync_rules }
+
     });
   });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -106,5 +93,4 @@ export default function handler(req, res) {
     if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection);
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
-
 

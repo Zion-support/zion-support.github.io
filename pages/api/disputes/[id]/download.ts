@@ -6,23 +6,19 @@ import { getDisputeById } from "../../../../utils/fsdb";
 import {
 
   parseUserFromRequest
+
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
-
-
-  parseUserFromRequest
-  ensureInvolvedOrAdmin,;
-} from "../../../../utils/auth";
-
-export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {;
@@ -34,7 +30,11 @@ export default async function handler(
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
+<<<<<<< HEAD
     return res.status(400).json({ error: "Invalid parameters" });
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
   const user = parseUserFromRequest(req);
@@ -54,6 +54,10 @@ export default async function handler(
     "Content-Disposition"
     `attachment; filename="${path.basename(att.fileName)}"`
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -64,12 +68,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
+<<<<<<< HEAD
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
@@ -215,3 +224,6 @@ export default async function handler(req, res) {
 }
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

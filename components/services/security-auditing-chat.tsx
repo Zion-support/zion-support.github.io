@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,6 +12,8 @@ const SecurityAuditingChat: NextPage = () => {
   return (
     <div>
       <Head>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -24,7 +27,10 @@ const SecurityAuditingChat: NextPage = () => {;
 
       </Head>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <main>
         <h1>SecurityAuditingChat</h1>
         <p>Service details coming soon...</p>
@@ -43,8 +49,11 @@ const SecurityAuditingChat: NextPage = () => {;
 }
 export default SecurityAuditingChat;
 
+<<<<<<< HEAD
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -65,6 +74,7 @@ const SecurityAuditingChat: NextPage = () => {
 ;
 export default SecurityAuditingChat;
 ;
+<<<<<<< HEAD
     <div>
       <Head>
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
@@ -109,3 +119,6 @@ export default SecurityAuditingChat;
 
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

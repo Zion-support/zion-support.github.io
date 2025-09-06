@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
 
+<<<<<<< HEAD
 
 
 
@@ -15,6 +21,8 @@ import type { GetServerSideProps } from 'next',
 import type { GetServerSideProps } from 'next';
 
 import type { GetServerSideProps } from 'next',;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -43,4 +51,7 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

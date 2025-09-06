@@ -1,8 +1,39 @@
+<<<<<<< HEAD
 import {cn} from '@/lib/utils';
+=======
+<<<<<<< HEAD
+import {cn} from '@/lib/utils';
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import * as React from 'react';
+import {Drawer, as, DrawerPrimitive} from 'vaul';
+import {cn} from '@/lib/utils';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {cn} from '@/lib/utils';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { cn } from "@/lib/utils"
 
@@ -125,6 +156,35 @@ const DrawerOverlay = React.forward_ref<;
     ref={ref}
     className={cn ('fixed inset - 0 z - 50 bg - black / 80', class_name)}
     {...props}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils"
+
+const Drawer = ({
+  shouldScaleBackground = true
+  ...props
+}: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
+  <DrawerPrimitive.Root
+    shouldScaleBackground={shouldScaleBackground}
+    {...props}
+  />
+<<<<<<< HEAD
+
+=======
+);
+Drawer.displayName = 'Drawer';
+const DrawerTrigger = DrawerPrimitive.Trigger;
+const DrawerPortal = DrawerPrimitive.Portal;
+const DrawerClose = DrawerPrimitive.Close;
+const DrawerOverlay = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Overlay>
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.O</typeof>verlay>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 )
 Drawer.displayName = "Drawer"
 
@@ -178,6 +238,26 @@ const DrawerContent = React.forwardRef<;
       className={cn(
         'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background'
         className
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      )}
+      {...props}>;
+      <div className='mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted' />;
+      {children}
+
+    </DrawerPrimitive.Content>
+  </DrawerPortal>
+=======
+      ref={ref}
+      className={cn(;
+        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",;
+        className;
+      )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ref={ref}
       className={cn(
         "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
@@ -190,6 +270,8 @@ const DrawerContent = React.forwardRef<;
   <div
     className={cn('grid gap-1 && 1.5 p-4 text-center sm:text-left', className)}
     {...props}
+<<<<<<< HEAD
+=======
   />
 
 ))
@@ -211,12 +293,43 @@ const DrawerHeader = ({;
     className={cn('grid gap-1 && 1.5 p-4 text-center sm:text-left', className)}
     {...props}
 
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  />
+
+=======
+);
+DrawerHeader.displayName = 'DrawerHeader';
+const DrawerFooter = ({
+  className
+  ...props</HTMLDivElement>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 )
 DrawerHeader.displayName = "DrawerHeader"
 
 const DrawerFooter = ({
   className,
   ...props
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+}: React.HTMLAttributes<HTMLDivElement>) => (
+=======
+=======
+  />;
+);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 DrawerHeader && DrawerHeader.displayName = 'DrawerHeader';
 
 const DrawerFooter = ({;
@@ -226,6 +339,18 @@ const DrawerFooter = ({;
   <div
     className={cn('mt-auto flex flex-col gap-2 p-4', className)}
     {...props}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  />
+
+=======
+}: React.HTMLAttributes<HTMLDivElement>) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   <div
     className={cn("mt-auto flex flex-col gap-2 p-4", className)}
     {...props}
@@ -237,6 +362,16 @@ DrawerFooter.displayName = "DrawerFooter"
 const DrawerTitle = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Title
 DrawerFooter && DrawerFooter.displayName = 'DrawerFooter';
@@ -315,6 +450,23 @@ const DrawerDescription = React.forwardRef<
 </typeof>  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    ref={ref}
+    className={cn('text-sm text-muted-foreground', className)}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+const DrawerDescription = React.forwardRef<;
+  React.ElementRef<typeof DrawerPrimitive.Description>,;
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>;
+>(({ className, ...props }, ref) => (;
+  <DrawerPrimitive.Description;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 DrawerTitle && DrawerTitle.displayName = DrawerPrimitive && DrawerPrimitive.Title.displayName;
 
 const DrawerDescription = React && React.forwardRef<;
@@ -323,6 +475,11 @@ const DrawerDescription = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
     ref={ref}
     className={cn('text-sm text-muted-foreground', className)}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   />));
 DrawerOverlay.display_name = DrawerPrimitive.Overlay.display_name;
 ;
@@ -428,6 +585,25 @@ export {
   DrawerHeader,
   DrawerFooter,
   DrawerTitle,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  DrawerDescription,;
+};
+
+=======
+=======
+  DrawerDescription,;
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export {;
   Drawer,;
   DrawerPortal,;
@@ -440,6 +616,21 @@ export {;
   DrawerTitle;
   DrawerDescription}
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  DrawerDescription,
+}
+;
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   DrawerDescription} const Drawer = ({
   shouldScaleBackground = true, ...props 
 }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (<DrawerPrimitive.Root shouldScaleBackground= {
@@ -474,3 +665,8 @@ React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description> > ( ({
   DrawerDescription,
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

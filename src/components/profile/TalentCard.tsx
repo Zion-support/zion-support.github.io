@@ -1,3 +1,4 @@
+
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -5,3 +6,4 @@ export interface TalentCardProps {
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
+

@@ -1,7 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth";
 import { checkNewRegistration } from "@/utils/authUtils";
@@ -9,6 +28,16 @@ import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from "@/types/auth",
 import { checkNewRegistration } from "@/utils/authUtils",
 import { useNavigate } from 'react-router-dom',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /**
  * Custom hook for auth event handling
  */
@@ -27,6 +56,16 @@ export function useAuthEventHandlers(
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       }
 
@@ -34,6 +73,16 @@ export function useAuthEventHandlers(
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
       setOnboardingStep('profile');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      };
+    }, 0);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     }, 0);
     }, 0),
@@ -41,17 +90,66 @@ export function useAuthEventHandlers(
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
       setOnboardingStep('profile'),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: "Complete your profile"
         description: "Please complete your profile information to get started"
         variant: "default"})
       navigate('/onboarding')
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  },
+
+
+
+<<<<<<< HEAD
+=======
+  }
+  },
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleSignedOut = () => {
     toast({
       title: "Signed out"
       description: "You have been successfully logged out"
       variant: "default"})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { toast } from "@/hooks/use-toast",;
+import type { UserProfile } from "@/types/auth",;
+import { checkNewRegistration } from "@/utils/authUtils",;
+import { useNavigate } from 'react-router-dom',;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
 /**;
@@ -169,8 +267,22 @@ export function useAuthEventHandlers(): any (;
 ) {;
   const navigate = useNavigate(),;
 
+<<<<<<< HEAD
   }
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 

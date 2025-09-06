@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
@@ -7,6 +17,11 @@ import {Configuration, OpenAIApi} from "npm: openai@4 ;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -20,15 +35,56 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const { title, keyFeatures, targetAudience } = await req.json();
+    if (!title) {
+      return new Response(
+        JSON.stringify({
+          error: "Missing required field: title"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         });
         {
           status: 400
@@ -70,10 +126,27 @@ serve(async (req) => {;
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required field: title" 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         });
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
@@ -102,6 +175,7 @@ if ( {) {
           status: 400,
           headers: { ...cors_headers, "Content - Type": "application / json" }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const { title, keyFeatures, targetAudience } = await req.json(),
 
     if (!title) {
@@ -112,11 +186,49 @@ if ( {) {
         { 
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;
+    const { title, keyFeatures, targetAudience } = await req.json(),;
+    if (!title) {;
+      return new Response(;
+        JSON.stringify({;
+          error: "Missing required field: title";
+        }),;
+        {;
+          status: 400,;
+          headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
       )
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
       );
     }
@@ -133,19 +245,101 @@ if ( {) {
 
     
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+        }
+      )
+    }
+
+    const configuration = new Configuration({
+      apiKey: Deno.env.get('OPENAI_API_KEY')});
+    const openai = new OpenAIApi(configuration);
+    const prompt = `Create a professional and detailed service description for the following service:
+Title: ${title}
+Key Features: ${keyFeatures |"Not specified"}
+Target Audience: ${targetAudience |"General users"}
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Create a professional and detailed service description for the following service:;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 Title: ${title}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
 4. Speak directly to the target audience
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+      );
+    }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+5. Include a compelling opening and closing statement`;
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini"
+      messages: [{ role: "user", content: prompt }];
+      temperature: 0.7});
+    const generatedDescription = completion.choices[0].message.content;
+    return new Response(
+      JSON.stringify({ description: generatedDescription });
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+        }
+      );
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     );
   } catch (error) {
@@ -231,6 +425,21 @@ The description should: 1. Be approximately 200 - 300 words;
       JSON.stringify ({ description: generated_description });
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      }
+    );
+  } catch (error) {
+
+=======
+      }
+    );
+  } catch (error) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     console.error ("Error in generate - service - description:", error);
 ;
     return new Response (
@@ -241,6 +450,17 @@ The description should: 1. Be approximately 200 - 300 words;
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Key Features: ${keyFeatures || "Not specified"}
+Target Audience: ${targetAudience || "General users"}
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     );
 
@@ -278,6 +498,7 @@ The description should: 1. Be approximately 200 - 300 words;
 
   }
 });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
@@ -380,3 +601,10 @@ headers: {
     );
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

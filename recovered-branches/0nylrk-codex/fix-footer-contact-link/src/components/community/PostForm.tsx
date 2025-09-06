@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -6,6 +23,22 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 
@@ -15,6 +48,11 @@ import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { useState } from "react",
 import { useForm } from "react-hook-form",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { 
   Card;
   CardContent;
@@ -32,6 +70,31 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",
+
+=======
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",
+
+import { Textarea } from "@/components/ui/textarea";
+import { ForumCategory } from "@/types/community";
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",
+interface PostFormValues {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface PostFormValues {
   title: string,
   content: string,
@@ -45,6 +108,16 @@ interface PostFormValues {
   tags: string
 }
 interface PostFormProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -53,6 +126,20 @@ interface PostFormProps {
 export const PostForm = ({;
   initialValues;
   onSubmit;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -86,17 +173,94 @@ interface PostFormProps {;
   onSubmit: (values: PostFormValues) => void,;
   isEditing?: boolean;
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
 export const PostForm = ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  initialValues;
+  onSubmit;
+<<<<<<< HEAD
+=======
+  initialValues,
+  onSubmit,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {ForumCategory} from "@/types/community";
+interface PostFormValues {;
+  title: string,;
+  content: string,;
+  categoryId: ForumCategory,;
+  tags: string;
+}
+
+interface PostFormProps {;
+  initialValues?: Partial<PostFormValues>;
+  onSubmit: (values: PostFormValues) => void,;
+  isEditing?: boolean;
+}
+
+export const PostForm = ({;
+  initialValues;
+  onSubmit;
+  isEditing = false;
+}: PostFormProps) => {;
+  const form = useForm<PostFormValues>({;
+    defaultValues: {;
+      title: initialValues?.title || "",;
+      content: initialValues?.content || "",;
+      categoryId: initialValues?.categoryId || "project-help",;
+      tags: initialValues?.tags || "";
+
+    }
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+=======
+    }
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -138,6 +302,39 @@ export const PostForm = ({
     try {
       await on_submit (values);
     } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+      title: initialValues?.title |""
+      content: initialValues?.content |""
+      categoryId: initialValues?.categoryId |"project-help"
+      tags: initialValues?.tags |""
+    }
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleSubmit = async (values: PostFormValues) => {
+    setIsSubmitting(true)
+    try {
+      await onSubmit(values)
+    } finally {
+      setIsSubmitting(false)
+    }
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    }
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+    try {
+      await on_submit (values);
+    } finally {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
       title: initialValues?.title || "",
       content: initialValues?.content || "",
@@ -147,6 +344,15 @@ export const PostForm = ({
   };
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   const handleSubmit = async (values: PostFormValues) => {;
@@ -155,6 +361,23 @@ export const PostForm = ({
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    }
+  }
+=======
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card>;
       <CardHeader>;
@@ -372,6 +595,24 @@ export const PostForm = ({
 ;
 export default PostForm;
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default PostForm;
+export default PostForm,
+
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 },
 
 
@@ -564,3 +805,8 @@ export default PostForm,
 export default PostForm;
 export default PostForm,
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

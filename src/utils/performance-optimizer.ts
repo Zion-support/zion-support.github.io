@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+
+const images = document && document.querySelectorAll('img');
+  images && images.forEach(img => {
+    if (!img && img.loading) {
+      img && img.loading = 'lazy';
+    }
+    if (!img && img.decoding) {
+      img && img.decoding = 'async';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
 export const preloadCriticalResources = () => {
@@ -14,3 +26,7 @@ export const preloadCriticalResources = () => {
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

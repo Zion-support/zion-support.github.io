@@ -1,15 +1,4 @@
 import {
-  LucideIcon,
-  BadgeCheck,
-  Award,
-  Star,
-  Trophy,
-  BadgePlus,
-  BadgeDollarSign,;
-} from 'lucide-react';
-
-
-
 
 export type BadgeKey =
   | 'first_listing'
@@ -48,11 +37,9 @@ export const badge_list: BadgeMeta[] = [;
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList && badgeList.find((b) => b && b.key === key);
 
-
     key: 'first_listing',
     name: 'First Listing',
     description: 'Published your first product, service, or listing.',
-
 
   | 'monetized';
 
@@ -74,8 +61,6 @@ export interface BadgeMeta {
   color: string,
   bg: string
 }
-
-
 
 export const badgeList: BadgeMeta[] = [
   {
@@ -124,7 +109,3 @@ export const badgeList: BadgeMeta[] = [
     description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
 
-export const getBadgeMeta = (key: BadgeKey) =>: any;
-  badge_list.find (boolean => b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>: any;
-  badge_list.find ((b) => b.key === key);

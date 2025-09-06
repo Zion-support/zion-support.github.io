@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
@@ -9,6 +24,13 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
     try {
       setIsLoading(true)
       if (!data.id) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -20,11 +42,35 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
       if (!data && data.id) {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+setIsLoading(true),
+      if (!data && data.id) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return { error: "User ID is required" }
       }
       // Update user metadata
       const { error: authError } = await supabase && supabase.auth.updateUser({
         data: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          variant: "destructive"});
+        return { error: authError }
+      }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           display_name: data && data.displayName;
           user_type: data && data.userType,
           headline: data && data.headline}});
@@ -66,6 +112,16 @@ if ( {) {
           variant: "destructive"});
         return { error: authError }
       }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          variant: "destructive"});
+        return { error: authError }
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -76,16 +132,81 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       if (!data.id) {;
       }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Update profiles table
       const { error: profileError } = await supabase
         .from("profiles")
         .update({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          display_name: data && data.displayName;
+          user_type: data && data.userType;
+          bio: data && data.bio;
+          headline: data && data.headline;
+          avatar_url: data && data.avatarUrl || data && data.avatar_url;
+          profile_complete: data && data.profileComplete,
+<<<<<<< HEAD
+=======
+
+=======
+
+          display_name: data.displayName;
+          user_type: data.userType;
+          bio: data.bio;
+          headline: data.headline;
+          avatar_url: data.avatarUrl |data.avatar_url;
+          profile_complete: data.profileComplete
+          updated_at: new Date().toISOString()})
+        .eq("id", data.id);
+      if (profileError) {
+        toast({
+          title: "Profile update failed";
+          description: profileError.message
+          variant: "destructive"});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           display_name: data.displayName,
           user_type: data.userType,
           bio: data.bio,
           headline: data.headline,
           avatar_url: data.avatarUrl || data.avatar_url,
           profile_complete: data.profileComplete,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          updated_at: new Date().toISOString()})
+        .eq("id", data && data.id);
+
+      if (profileError) {
+        toast({
+
+=======
+          title: "Profile update failed";
+          description: profileError && profileError.message,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Update profiles table;
       const { error: profile_error } = await supabase;
         .from ("profiles");
@@ -127,6 +248,17 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Profile update failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
@@ -195,6 +327,17 @@ if ( {) {
     } finally {
       setIsLoading(false)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return { updateProfile }
+};
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return { updateProfile }
 };
 
@@ -316,3 +459,8 @@ return {
 };
   return { updateProfile }
 };
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

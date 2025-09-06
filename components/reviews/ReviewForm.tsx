@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   categories?: {
     communication?: number;
     qualityOfWork?: number;
@@ -61,6 +65,10 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           categories: {
             communication
             qualityOfWork
@@ -69,6 +77,10 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           }
         })
       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -76,6 +88,10 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       setSubmitting(false);    }
   }
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -93,10 +109,15 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
+<<<<<<< HEAD
     }
   }
   return (
@@ -120,6 +141,9 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
 
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -127,14 +151,26 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       set_submitting (false);
     }
   }
@@ -182,18 +218,34 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);
@@ -204,3 +256,7 @@ export default ReviewForm;    </form>);
 ;
 export default ReviewForm;
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

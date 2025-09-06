@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -6,6 +19,12 @@ import {supabase} from "@/integrations/supabase/client";
 import {Loader2, Star, BarChart2, Lightbulb} from "lucide-react";
 import {toast} from "sonner";
 import {JobApplication} from "@/types/jobs";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -16,6 +35,16 @@ import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ApplicationScoreCardProps {
 
   application: JobApplication
@@ -30,6 +59,23 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   // Determine if application has been scored
   const [isScoring, setIsScoring] = useState(false),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  // Determine if application has been scored
+  const hasScore = typeof application.match_score === 'number',
+  
+  // Format the date when the application was scored
+  const scoredDate = application.scored_at 
+    ? new Date(application.scored_at).toLocaleDateString() 
+    : null,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -43,6 +89,27 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      if (error) throw error;
+      toast.success("Resume scoring has been initiated");
+      // Poll for results every 3 seconds for up to 30 seconds
+      let attempts = 0;
+      const maxAttempts = 10;
+      const checkScore = async () => {
+        attempts++;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -73,6 +140,50 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
       case "Strongly Recommended": return "bg-green-100 text-green-800";
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+
+
+=======
+=======
+      case "Strongly Recommended": return "bg-green-100 text-green-800",
+      case "Recommended for Review":
+        return "bg-blue-100 text-blue-800",
+      case "Low Match":
+        return "bg-orange-100 text-orange-800"
+      default:
+        return "bg-gray-100 text-gray-800"
+
+
+
+    }
+  }
+  // Trigger the scoring process
+  const handleScore = async () => {
+    try {
+      setIsScoring(true);
+      // Call the trigger_resume_scoring function
+      const { error } = await supabase.rpc(
+        'trigger_resume_scoring';
+        { application_id: application.id }
+      );
+      if (error) throw error;
+      toast.success("Resume scoring has been initiated");
+      // Poll for results every 3 seconds for up to 30 seconds
+      let attempts = 0;
+      const maxAttempts = 10;
+      const checkScore = async () => {
+        attempts++;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -100,6 +211,18 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Strongly Recommended": return "bg-green-100 text-green-800",;
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 interface ApplicationScoreCardProps {;
   application:JobApplication,;
@@ -123,10 +246,41 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
       case "Strongly Recommended":return "bg-green-100 text-green-800",;
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case "Low Match":;
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+
+=======
+  };
+  // Trigger the scoring process;
+  const handleScore = async () => {;
+    try {;
+      setIsScoring(true);
+      // Call the trigger_resume_scoring function;
+      const { error } = await supabase && supabase.rpc(;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -176,6 +330,21 @@ function ApplicationScoreCard() {
         'trigger_resume_scoring';
         { application_id: application && application.id }
       );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        'trigger_resume_scoring';
+        { application_id: application && application.id }
+      );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },;
   // Trigger the scoring process;
   const handleScore = async () => {;
@@ -188,6 +357,17 @@ function ApplicationScoreCard() {
       ),
       
       if (error) throw error,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       
       toast.success("Resume scoring has been initiated"),
       
@@ -195,11 +375,56 @@ function ApplicationScoreCard() {
       let attempts = 0;
       const maxAttempts = 10;
       const checkScore = async () => {
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        attempts++,
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  };
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+          .single();
+          .single(),
+          
+        if (error) {
+          setIsScoring(false),
+          return toast.error("Failed to check scoring status")
+        }
+        if (data.scored_at) {
+          setIsScoring(false),
+          toast.success("Resume scoring completed"),
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),
+          return
+        }
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore, 3000)
+        } else {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           .single(),
           
@@ -228,6 +453,15 @@ function ApplicationScoreCard() {
           setIsScoring(false);
           return toast && toast.error("Failed to check scoring status");
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  }
+  };
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
         if (data && data.scored_at) {;
@@ -237,6 +471,48 @@ function ApplicationScoreCard() {
           if (onScoreUpdated) onScoreUpdated(data as JobApplication);
           return;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+        if (attempts < maxAttempts) {;
+          setTimeout(checkScore, 3000);
+        } else {;
+
+          setIsScoring(false);
+          toast && toast.info("Scoring is taking longer than expected. Check back later.");
+        }
+
+      };
+=======
+
+  };
+
+=======
+=======
+
+  };
+
+          setIsScoring(false);
+          toast.info("Scoring is taking longer than expected. Check back later.")
+        }
+      }
+      setTimeout(checkScore, 3000)
+    } catch (error: any) {
+      setIsScoring(false)
+      toast.error(`Failed to score resume: ${error.message}`)
+    }
+  }
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
       ),;
@@ -460,6 +736,20 @@ function ApplicationScoreCard() {
                   </div>;
                 </details>;
               </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            )}
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            )}
+
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             )}
 
             )}
@@ -474,6 +764,11 @@ function ApplicationScoreCard() {
             <Button
               onClick={handleScore} 
             )}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               disabled={isScoring}
               className="w-full">;
               {isScoring ? (;
@@ -487,11 +782,67 @@ function ApplicationScoreCard() {
             </Button>;
           </div>;
         )}
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                  </div>;
+                </details>;
+              </div>;
+            )}
+          </div>
+        ) : (
+          <div className="text-center py-4">
+            <p className="text-muted-foreground mb-4">
+              Analyze how well this resume matches your job requirements.
+            </p>
+            <Button
+              onClick={handleScore}
+              disabled={isScoring}
+              className="w-full"
+            >
+              {isScoring ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Scoring Resume...
+                </>
+              ) : (
+                "Score Resume"
+              )}
+            </Button>
+          </div>
+        )}
+      </CardContent>
+    </Card>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 
 
@@ -768,3 +1119,8 @@ return
 }
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

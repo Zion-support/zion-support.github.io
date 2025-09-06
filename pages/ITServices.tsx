@@ -14,21 +14,36 @@ export default function ITServices() {
           <div className="text-center">
 }
 
-
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { 
   Server, 
   Shield, 
   Cloud, 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from 'lucide-react';
 
 const itServices = [
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ];
 
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

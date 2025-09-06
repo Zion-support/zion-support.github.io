@@ -1,13 +1,46 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+import {Badge} from "@/components/ui/badge";
+import {ShieldAlert} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+import { Badge } from "@/components/ui/badge",
+import { ShieldAlert } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { ShieldAlert } from "lucide-react",
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Badge } from '@/components / ui / badge';
 import { ShieldAlert } from './lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Badge } from "@/components/ui/badge",
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
@@ -33,6 +66,24 @@ function DisputeStatusBadge() {
       variant = "outline";
       message = "This dispute has been closed";
       break;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive"
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute";
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
+  let message = "This item has an open dispute",
+  
+  switch (status) {
+    case 'under_review':
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       variant = "secondary",
       message = "This dispute is under review by our team",
       break,
@@ -41,6 +92,31 @@ function DisputeStatusBadge() {
       message = "This dispute has been resolved",
       break,
     case 'closed':
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      variant = "outline",
+      message = "This dispute has been closed",
+      break,
+
+
+=======
+      variant = "outline";
+      message = "This dispute has been closed";
+      break;
+
+      variant = "outline",
+      message = "This dispute has been closed",
+      break,
+      variant = "outline",
+      message = "This dispute has been closed",
+      break,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     default:
       break
   }
@@ -57,12 +133,58 @@ function DisputeStatusBadge() {
       </TooltipContent>
     </Tooltip>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
 interface DisputeStatusBadgeProps {;
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute",;
+  switch (status) {;
+    case 'under_review':;
+      variant = "secondary",;
+      message = "This dispute is under review by our team",;
+      break,;
+    case 'resolved':;
+      variant = "outline",;
+      message = "This dispute has been resolved",;
+      break,;
+    case 'closed':;
+      variant = "outline",;
+      message = "This dispute has been closed";
+      break;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     default:;
       break;
   }
@@ -73,6 +195,26 @@ interface DisputeStatusBadgeProps {;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    default:;
+      break;
+  }
+  return (
+    <Tooltip>;
+      <TooltipTrigger as_child>;
+        <Badge variant={variant} className="flex items - center gap - 1">;
+          <ShieldAlert className="h - 3 w - 3" />;
+          <span > Under Dispute</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
@@ -83,6 +225,16 @@ interface DisputeStatusBadgeProps {;
 
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+    </Tooltip>);
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </Tooltip>);
 }
 }
@@ -118,3 +270,8 @@ message
 ;
     </Tooltip>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

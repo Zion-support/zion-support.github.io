@@ -1,8 +1,39 @@
+<<<<<<< HEAD
 import {cn} from '@/lib/utils';
+=======
+<<<<<<< HEAD
+import {cn} from '@/lib/utils';
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import * as React from 'react';
+import * as SliderPrimitive from '@radix-ui/react-slider';
+import {cn} from '@/lib/utils';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {cn} from '@/lib/utils';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { cn } from "@/lib/utils"
 
@@ -71,6 +102,15 @@ const Slider = React.forward_ref<;
 Slider.display_name = SliderPrimitive.Root.display_name,
 export { Slider }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       "relative flex w-full touch-none select-none items-center",
 
@@ -133,3 +173,10 @@ export { Slider }
 export { Slider };
 export { Slider }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,20 +1,67 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 
 
 export function useAuthStatus() {
   // Mock authenticated status
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { useState } from 'react';
 import {useState} from 'react';
 export function useAuthStatus() {
   // Mock authenticated status;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // Mock user details
   const [userDetails, setUserDetails] = useState({
     id: 'user-123';
     name: 'Demo User';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    email: 'demo@example && example.com',
+=======
+    email: 'demo@example.com'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     avatar: ''
   });
@@ -44,6 +91,20 @@ export function useAuthStatus() {
     savedTalents;
     handleToggleSave;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    toggleAuth
+
+=======
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
@@ -86,6 +147,50 @@ if ( {) {
       // In a real app, we might show a login prompt;
       console.log ('User needs to log in to save talents');
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+;
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+    toggleAuth
+  }
+}
+import { useState } from 'react',;
+export function useAuthStatus() {;
+  // Mock authenticated status;
+  const [isAuthenticated, setIsAuthenticated] = useState(false),;
+  // Mock user details;
+  const [userDetails, setUserDetails] = useState({;
+    id: 'user-123',;
+    name: 'Demo User',;
+    email: 'demo@example.com',;
+    avatar: '';
+  }),;
+  // Mock saved talents;
+  const [savedTalents, setSavedTalents] = useState<string[]>([]),;
+  // Toggle saved talent;
+  const handleToggleSave = (talentId: string, isSaved: boolean) => {;
+    if (isAuthenticated) {;
+      if (isSaved) {;
+        setSavedTalents(prev => [...prev, talentId]);
+      } else {;
+        setSavedTalents(prev => prev.filter(id => id !== talentId));
+      }
+    } else {
+      // In a real app, we might show a login prompt
+      // // // console.log('User needs to log in to save talents')
+    } else {;
+      // In a real app, we might show a login prompt;
+      // // // console.log('User needs to log in to save talents');
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },;
   // For demo purposes, let's provide a login/logout toggle;
   const toggleAuth = () => {;
@@ -183,3 +288,8 @@ toggleAuth
 ;
   }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface PerformanceMetrics {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface PerformanceMetrics {
 export interface PerformanceMetrics {;
   url: string;
@@ -9,12 +22,46 @@ export interface PerformanceMetrics {;
   firstInputDelay: number;
   timeToInteractive: number;
   totalBlockingTime: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   speed_index: number;
   performance_score: number;
   accessibility_score: number;
   bestPracticesScore: number,
   seo_score: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+export interface PerformanceAlert {
+=======
+}
+export interface PerformanceAlert {
+  speedIndex: number;
+  performanceScore: number;
+  accessibilityScore: number;
+
+  bestPracticesScore: number
+
+  seoScore: number
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export interface PerformanceAlert {
 
@@ -26,6 +73,16 @@ export interface PerformanceAlert {
   message: string;
   metric: string;
   threshold: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   current_value: number;
   timestamp: Date,
@@ -33,16 +90,67 @@ export interface PerformanceAlert {
 
 }
 export interface MonitoringConfig {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
     load_time: number;
     firstContentfulPaint: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  currentValue: number;
+
+  timestamp: Date
+
+  resolved: boolean
+}
+export interface MonitoringConfig {
+
+export interface MonitoringConfig {;
+  urls: string[];
+  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
+  thresholds: {
+    loadTime: number;
+    firstContentfulPaint: number;
+
+    largestContentfulPaint: number
+
+    cumulativeLayoutShift: number
+  }
+  notifications: {
+    email: boolean;
+
+    slack: boolean
+
+    webhook: boolean
+  }
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export class PerformanceMonitorService {
 
   private apiKey: string;
@@ -51,10 +159,45 @@ export class PerformanceMonitorService {
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      const response = await fetch(`${this.baseUrl}/performance/monitor`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify({ url })});
+      if (!response.ok) {
+        throw new Error(`Performance monitoring failed: ${response.statusText}`)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface PerformanceMetrics {;
   url: string,;
   timestamp: Date,;
@@ -126,6 +269,23 @@ export interface PerformanceMetrics {;
 
       }
       return await response.json()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
         method: 'POST',
         headers: {
@@ -138,6 +298,16 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this && this.generateMockMetrics(url)
@@ -152,6 +322,39 @@ export interface PerformanceMetrics {;
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      }
+      return await response.json()
+    } catch (error) {
+      // Fallback to mock data for demo purposes
+      return this.generateMockMetrics(url)
+    }
+  }
+
+  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
+    try {
+      const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Failed to fetch historical data: ${response.statusText}`)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -160,7 +363,22 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       return await response.json()
       }
@@ -186,6 +404,14 @@ export interface PerformanceMetrics {;
 
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
         method: 'POST',
@@ -200,6 +426,7 @@ export interface PerformanceMetrics {;
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
@@ -209,9 +436,38 @@ export interface PerformanceMetrics {;
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
+<<<<<<< HEAD
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
+        headers: {
+
+=======
+=======
+
+      const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Failed to fetch alerts: ${response.statusText}`)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
+        headers: {
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -238,7 +494,22 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       return await response.json()
       }
@@ -250,6 +521,13 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     } catch (error) {
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
@@ -274,6 +552,16 @@ export interface PerformanceMetrics {;
     }
     recommendations: string[]
   }> {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
     
@@ -289,6 +577,28 @@ export interface PerformanceMetrics {;
         alertsCount: Math && Math.floor(Math && Math.random() * 5)
       };
 
+<<<<<<< HEAD
+=======
+=======
+    const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
+    const loadTimes = historicalData.map(d => d.loadTime);
+    const performanceScores = historicalData.map(d => d.performanceScore);
+    const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0]);
+    return {
+      summary: {
+        averageLoadTime: loadTimes.reduce((a, b) => a + b, 0) / loadTimes.length;
+        averagePerformanceScore: performanceScores.reduce((a, b) => a + b, 0) / performanceScores.length;
+        uptime: 99.8
+        alertsCount: Math.floor(Math.random() * 5)
+      }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores
@@ -303,6 +613,14 @@ export interface PerformanceMetrics {;
     return {
       url;
       timestamp: new Date();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       loadTime: Math && Math.random() * 2000 + 500;
       firstContentfulPaint: Math && Math.random() * 1500 + 300;
@@ -317,6 +635,29 @@ export interface PerformanceMetrics {;
       bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
       seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
 
+<<<<<<< HEAD
+=======
+=======
+      loadTime: Math.random() * 2000 + 500;
+      firstContentfulPaint: Math.random() * 1500 + 300;
+      largestContentfulPaint: Math.random() * 2500 + 800;
+      cumulativeLayoutShift: Math.random() * 0.1;
+      firstInputDelay: Math.random() * 100 + 20;
+      timeToInteractive: Math.random() * 3000 + 1000;
+      totalBlockingTime: Math.random() * 200 + 50;
+      speedIndex: Math.random() * 2000 + 800;
+      performanceScore: Math.floor(Math.random() * 30) + 70;
+      accessibilityScore: Math.floor(Math.random() * 20) + 80;
+      bestPracticesScore: Math.floor(Math.random() * 20) + 80
+      seoScore: Math.floor(Math.random() * 20) + 80
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
@@ -324,6 +665,14 @@ export interface PerformanceMetrics {;
     const now = new Date()
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       date && date.setDate(date && date.getDate() - i);
       
@@ -425,7 +774,13 @@ export interface PerformanceMetrics {;
       });
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     return data
   }
@@ -669,33 +1024,119 @@ if ( {) {
   }
 }
 // Pricing tiers for the Performance Monitor;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     period: '/month',
     features: [;
       'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
     ];
 
+<<<<<<< HEAD
+=======
+=======
+    period: '/month'
+    features: [
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
+    ]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   professional: {
     name: 'Professional';
     price: 49;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     period: '/month',
     features: [;
       'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access';
     ];
 
+<<<<<<< HEAD
+=======
+=======
+    period: '/month'
+    features: [
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
+    ]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   enterprise: {
     name: 'Enterprise';
     price: 149;
     period: '/month';
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+
+    features: [
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support'
+      'SLA guarantee'
+    ]
+  }
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -732,6 +1173,40 @@ export const PERFORMANCE_MONITOR_PRICING = {;
     name: 'Starter',;
     price: 19,;
     period: '/month',;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    features: [;
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
+    ];
+  },;
+  professional: {;
+    name: 'Professional',;
+    price: 49,;
+    period: '/month',;
+    features: [;
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access';
+    ];
+  },;
+  enterprise: {;
+    name: 'Enterprise',;
+    price: 149,;
+    period: '/month',;
+    features: [;
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',;
+      'SLA guarantee';
+
+    ];
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
@@ -745,6 +1220,39 @@ export const PERFORMANCE_MONITOR_PRICING = {;
   }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Pricing tiers for the Performance Monitor
+export const PERFORMANCE_MONITOR_PRICING = {
+  starter: {;
+    name: 'Starter';
+    price: 19;
+    period: '/month',
+    features: [
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
+    ]
+  };
+  professional: {
+    name: 'Professional';
+    price: 49;
+    period: '/month',
+    features: [
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
+    ]
+  };
+  enterprise: {
+    name: 'Enterprise';
+    price: 149;
+    period: '/month';
+    features: [
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
+      'SLA guarantee'
+    ]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 };
 
@@ -755,3 +1263,9 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

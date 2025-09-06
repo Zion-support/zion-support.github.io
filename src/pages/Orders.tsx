@@ -12,9 +12,6 @@ import {
   TableHead
   TableHeader
 
-
-
-
 export default function OrdersPage() {;
 
   const { user } = useAuth();
@@ -26,28 +23,3 @@ export default function OrdersPage() {;
     switch (status) {;
       case 'in_escrow':;
 
-        return (
-          <Badge variant='warning' className='flex items-center gap-1'>;
-            <Clock className='h-3 w-3' /> In Escrow;
-          </Badge>;
-        );
-      case 'released':;
-      case 'completed':;
-        return (
-          <Badge variant='success' className='flex items-center gap-1'>;
-            <CheckCircle2 className='h-3 w-3' /> Released;
-          </Badge>;
-        );
-      case 'disputed':;
-        return (
-
-        )
-
-      default:
-          <Badge variant='destructive' className='flex items-center gap-1'>;
-            <ShieldAlert className='h-3 w-3' /> Disputed;
-          </Badge>;
-        ),;
-      default:;
-        return status;
-    }

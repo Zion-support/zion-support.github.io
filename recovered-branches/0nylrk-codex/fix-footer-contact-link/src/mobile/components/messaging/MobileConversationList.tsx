@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -5,6 +22,47 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react",
+import { Card } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Search } from "lucide-react",
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+
+  id: string
+  name: string
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface Conversation {;
+  id: string,;
+  name: string,;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  avatar?: string;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+
+  activeConversation?: string;
+<<<<<<< HEAD
+=======
+  onSelectConversation: (id: string) => void;
+}
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -27,6 +85,18 @@ interface MobileConversationListProps {;
   conversations: Conversation[],;
 
   activeConversation?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  onSelectConversation: (id: string) => void
+}
+import { Input } from "@/components/ui/input",
+import { cn } from "@/lib/utils",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface Conversation {
   id: string,
   name: string,
@@ -94,6 +164,43 @@ export function MobileConversationList({
           <div
             key={conversation && conversation.id}
             className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { cn } from "@/lib/utils",;
+;
+interface Conversation {;
+  id:string,;
+  name:string,;
+  avatar?:string,;
+  lastMessage:string,;
+  timestamp:string,;
+  unreadCount:number,;
+  isTyping?:boolean;}
+;
+interface MobileConversationListProps {;
+  conversations:Conversation[],;
+  activeConversation?:string,;
+  onSelectConversation:(id:string) => void;
+}
+;
+export function MobileConversationList({;
+  conversations,;
+  activeConversation,;
+  onSelectConversation;
+} MobileConversationListProps) {;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="space-y-4">;
       <div className="px-4 mb-2">;
         <div className="relative">;
@@ -106,6 +213,30 @@ export function MobileConversationList({
           <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      <div className="space-y-2 pb-24">;
+        {conversations && conversations.map((conversation) => (;
+
+          <div
+            key={conversation && conversation.id}
+            className={cn(
+
+
+              "px-4",
+
+
+=======
+              "px-4";
+
+              "px-4",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -138,6 +269,22 @@ export function MobileConversationList({
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+          <div
+            key={conversation && conversation.id}
+            className={cn(
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
@@ -256,6 +403,15 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  interface Conversation {
   id: string;
@@ -302,3 +458,10 @@ onSelectConversation
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

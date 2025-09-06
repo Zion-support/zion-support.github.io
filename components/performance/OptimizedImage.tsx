@@ -1,5 +1,3 @@
-import React from 'react';
-import Image from 'next/image';
 
 interface OptimizedImageProps {
   src: string;
@@ -12,7 +10,6 @@ interface OptimizedImageProps {
   sizes?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
@@ -22,18 +19,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 75,
   sizes = '100vw'
 }) => {
-  return (
-    <Image
+
       src={src}
       alt={alt}
       width={width}
       height={height}
       className={className}
       priority={priority}
-      quality={quality}
-      sizes={sizes}
-    />
-  );
-};
 
-export default OptimizedImage;

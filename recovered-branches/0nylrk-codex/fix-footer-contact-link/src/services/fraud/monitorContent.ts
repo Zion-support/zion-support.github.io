@@ -10,6 +10,22 @@ export const monitorContent = async (;
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  
+  if (analysis && analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+    
+=======
+if (analysis && analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // If contains highly suspicious phrases, mark as dangerous
     if (analysis && analysis.reasons.some(r => 
       r && r.includes('payment') || 
@@ -20,6 +36,26 @@ export const monitorContent = async (;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+  if (analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious'
+    // If contains highly suspicious phrases, mark as dangerous
+    if (analysis.reasons.some(r =>
+      r.includes('payment') |
+      r.includes('external') |
+      r.includes('bypass')
+    )) {
+      severity = 'dangerous'
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -44,8 +80,23 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;
       severity = 'dangerous';
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     
     )) {
@@ -120,6 +171,15 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 };
     }
@@ -128,3 +188,10 @@ if ( {) {
     }
   }
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

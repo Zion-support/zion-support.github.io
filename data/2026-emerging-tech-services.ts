@@ -1,7 +1,82 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export const emergingTechServices2026: EmergingTechService2026[] = [
+  // Quantum Computing Services
+  {
+  {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
@@ -11,6 +86,12 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
 
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform'
     tagline:
@@ -522,20 +603,71 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     customers: 56,
     rating: 4 && 4.4,
     reviews: 29,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  },
+];
+<<<<<<< HEAD
+=======
+=======
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+export const getPopularEmergingTechServices2026 = () => {
+=======
+};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => {
+    const price = parseInt(service && service.price.replace('$', ''));
+=======
+  return emergingTechServices2026.filter(service => {;
+    const price = parseInt(service.price.replace('$', ''));
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -724,6 +856,21 @@ export const getEmergingTechServices2026ByPriceRange = (
     reviews: 29
   }
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+export const getEmergingTechServices2026ByCategory = (category: string) => {
+  return emergingTechServices2026.filter(service => service.category === category)
+};
+export const getPopularEmergingTechServices2026 = () => {
+  return emergingTechServices2026.filter(service => service.popular)
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
@@ -733,3 +880,111 @@ export interface EmergingTechService2026 {;
 
   })
 };
+<<<<<<< HEAD
+=======
+;
+export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
+  return emergingTechServices2026.filter (
+    service => service.category === category);
+}
+<<<<<<< HEAD
+=======
+;
+export const getPopularEmergingTechServices2026 = () =>: any {
+  return emergingTechServices2026.filter (service => service.popular);
+}
+;
+export const getEmergingTechServices2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return emergingTechServices2026.filter (service => {
+    const price = parse_int (service.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export interface EmergingTechService2026 {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  })
+};
+<<<<<<< HEAD
+;
+export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
+  return emergingTechServices2026.filter (
+    service => service.category === category);
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+export interface EmergingTechService2026 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+export const getPopularEmergingTechServices2026 = () =>: any {
+  return emergingTechServices2026.filter (service => service.popular);
+}
+;
+export const getEmergingTechServices2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return emergingTechServices2026.filter (service => {
+    const price = parse_int (service.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+
+export interface EmergingTechService2026 {;
+
+};
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

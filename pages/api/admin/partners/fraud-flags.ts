@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string)?.toLowerCase()
@@ -16,14 +20,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
+<<<<<<< HEAD
+=======
+
+    const flags: any[] = []
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
         flags.push({ type: 'suspicious_ip', severity: 'medium', ip, count, note: 'High number of events from a single IP in 7 days' })
       }
     })
 
-    return res.status(200).json({ flags })
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
-  }
-};

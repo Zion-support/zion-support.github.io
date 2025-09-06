@@ -21,13 +21,23 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-
 import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 
+<<<<<<< HEAD
 
 
+=======
+export default function BrowserAutomationCloudPage() {
+  const features = [
+    'Parallel Playwright/Puppeteer execution',
+    'Queued jobs with retries and rate limits',
+    'Artifacts: HAR, traces, screenshots, videos',
+    'Rotating proxies and geo targeting',
+    'Webhook callbacks and REST API',;
+  ];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const features = [
     'Parallel Playwright/Puppeteer execution'
@@ -85,6 +95,10 @@ import {Check, ExternalLink} from 'lucide-react';
               rel='noreferrer'
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -154,6 +168,10 @@ function BrowserAutomationCloudPage() {
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -182,6 +200,7 @@ function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }
+<<<<<<< HEAD
 	const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
@@ -300,11 +319,16 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 	),
 }
 
+<<<<<<< HEAD
 	),
 }
 	),
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

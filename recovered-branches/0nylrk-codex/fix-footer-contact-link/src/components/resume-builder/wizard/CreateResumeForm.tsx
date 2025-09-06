@@ -13,6 +13,28 @@ export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+export const CreateResumeForm = ({
+  onCreateResume;
+  onCancel;
+  isLoading
+}: CreateResumeFormProps) => {
+  const [newResumeTitle, setNewResumeTitle] = useState('');
+export const CreateResumeForm = ({ ;
+  onCreateResume;
+  onCancel;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -21,6 +43,18 @@ import { CreateResumeFormProps } from "./types",
 export const CreateResumeForm = ({ 
   onCreateResume,
   onCancel,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  isLoading 
+}: CreateResumeFormProps) => {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isLoading 
 }: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState(''),
@@ -36,6 +70,11 @@ export const CreateResumeForm = ({
 
   isLoading 
 }: CreateResumeFormProps) => {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardContent className="py-8">
@@ -43,14 +82,47 @@ export const CreateResumeForm = ({
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>
           <div className="flex gap-2 max-w-md mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
   isLoading ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <input
               type="text"
               placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -61,21 +133,101 @@ export const CreateResumeForm = ({;
   onCancel,;
   isLoading;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}: CreateResumeFormProps) => {;
+  const [newResumeTitle, setNewResumeTitle] = useState('');
+
+  const handleSubmit = async () => {;
+    if (!newResumeTitle && newResumeTitle.trim()) return;
+    await onCreateResume(newResumeTitle);
+  };
+
+  return (
+=======
+
+import { useState } from "react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { CreateResumeFormProps } from "./types",;
+;
+export const CreateResumeForm = ({ ;
+  onCreateResume,;
+  onCancel,;
+  isLoading ;
+} CreateResumeFormProps) => {;
+  const [newResumeTitle, setNewResumeTitle] = useState(''),;
+;
+  const handleSubmit = async () => {;
+    if (!newResumeTitle.trim()) return,;
+    await onCreateResume(newResumeTitle),;
+  },;
+;
+  return (;
+}: CreateResumeFormProps) => {;
+  const [newResumeTitle, setNewResumeTitle] = useState(''),;
+  const handleSubmit = async () => {;
+    if (!newResumeTitle.trim()) return,;
+    await onCreateResume(newResumeTitle);
+  };
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className="w-full max-w-2xl mx-auto">;
       <CardContent className="py-8">;
         <div className="text-center">;
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          <div className="flex gap-2 max-w-md mx-auto">;
+
+=======
+          <div className="flex gap-2 max-w-md mx-auto">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <input;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               value={newResumeTitle}
 
 
               disabled={!newResumeTitle.trim() || isLoading}
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />
@@ -83,6 +235,16 @@ export const CreateResumeForm = ({;
               onClick={handleSubmit}
               disabled={!newResumeTitle.trim() |isLoading}
               disabled={!newResumeTitle.trim() || isLoading}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Create
@@ -179,3 +341,10 @@ export const CreateResumeForm = ({
     </Card>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

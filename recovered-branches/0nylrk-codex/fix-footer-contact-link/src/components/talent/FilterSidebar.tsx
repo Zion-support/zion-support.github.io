@@ -9,6 +9,21 @@ import {RegionFilter} from "./filters/RegionFilter";
 import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function FilterSidebar(): any ({;
+
+=======
+export function FilterSidebar({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   searchTerm;
   setSearchTerm;
   selectedSkills;
@@ -26,6 +41,24 @@ import {FilterSidebarProps} from "@/types/filters";
   sortOption;
   setSortOption;
   clearFilters;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  isMobileFilterOpen;
+}: FilterSidebarProps) {;
+=======
+
+
+=======
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Filter } from "lucide-react",
@@ -39,6 +72,16 @@ import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -57,6 +100,17 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+  isMobileFilterOpen
+}: FilterSidebarProps) {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
       {/* Filter header */}
@@ -97,6 +151,7 @@ export function FilterSidebar({;
       {/* Filter header */}
   isMobileFilterOpen
 }: FilterSidebarProps) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       {/* Filter header */}
@@ -114,8 +169,20 @@ export function FilterSidebar({;
           Clear All
         </Button>
       </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -165,6 +232,21 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -219,6 +301,20 @@ export function FilterSidebar({;
       )}
     </>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (
+    <>;
+      {/* Filter header */}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex items-center justify-between mb-6">;
         <h3 className="text-lg font-semibold text-white flex items-center">;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
@@ -233,6 +329,11 @@ export function FilterSidebar({;
   return (
     <>;
       {/* Filter header */}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Filter } from './lucide-react';
@@ -266,6 +367,14 @@ function FilterSidebar() {
         </Button>;
       </div>;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  export function FilterSidebar ({
   searchTerm;
@@ -367,3 +476,10 @@ isMobileFilterOpen
 }</>) 
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

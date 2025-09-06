@@ -1,11 +1,40 @@
+<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import {Button} from "@/components/ui/button";
+import {Download} from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
 import { Download } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
@@ -14,6 +43,33 @@ interface ExportToCSVProps {
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+interface ExportToCSVProps {;
+  quotes: QuoteRequest[],;
+  filename?: string;
+}
+
+export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;
+  const handleExport = () => {;
+    // Define CSV Headers;
+    const headers = [;
+
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
+      'StatusCreated Date';
+    ];
+
+=======
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
+      'StatusCreated Date';
+    ];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Button } from '@/components / ui / button';
 import { Download } from './lucide-react';
 import type { QuoteRequest } from "@/types / quotes";
@@ -31,12 +87,41 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 ;
     // Format quote data for CSV;
     const rows = quotes.map (quote => [;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+    const headers = [;
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
+    const headers = [
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
+      'StatusCreated Date'
+    ];
+    // Format quote data for CSV
+    const rows = quotes.map(quote => [
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       quote.id;
       quote.talent_name |'Unknown';
       quote.requester_name;
       quote.requester_email;
       quote.project_name;
       quote.project_summary;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Format quote data for CSV;
     const rows = quotes && quotes.map(quote => [;
       quote && quote.id;
@@ -50,11 +135,52 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
           ? `$${quote && quote.budget_min} - $${quote && quote.budget_max}` ;
           : quote && quote.budget_min ;
             ? `$${quote && quote.budget_min}` ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             : 'Not specified');
       quote && quote.timeline;
       quote && quote.status;
       new Date(quote && quote.created_at).toLocaleDateString();
     ]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+    const headers = [
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
+
+      'StatusCreated Date'
+
+=======
+      quote.budget_display |
+        (quote.budget_min && quote.budget_max
+          ? `$${quote.budget_min} - $${quote.budget_max}`
+          : quote.budget_min
+            ? `$${quote.budget_min}`
+            : 'Not specified');
+      quote.timeline;
+      quote.status;
+      new Date(quote.created_at).toLocaleDateString()
+    ]);
+    // Create CSV content
+    const csvContent = [
+      headers.join();
+      ...rows.map(row =>
+        row.map(cell =>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ],
     
     // Format quote data for CSV
@@ -81,12 +207,42 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       headers.join(),
       ...rows.map(row => 
         row.map(cell => 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes() |cell.includes('"'))
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
       )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+    ].join('\n');
+    // Create download link
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
+    document.body.appendChild(link);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ].join('\n'),
     
     // Create download link
@@ -97,12 +253,32 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),
     document.body.appendChild(link),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+    // Download file and clean up
+    link.click();
+    setTimeout(() => {
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url)
+    }, 100)
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Download file and clean up
     link.click(),
     setTimeout(() => {
       document.body.removeChild(link),
       URL.revokeObjectURL(url)
     }, 100)
+<<<<<<< HEAD
+=======
 import { Button } from "@/components/ui/button",;
 import { Download } from "lucide-react",;
 import type { QuoteRequest } from "@/types/quotes",;
@@ -191,6 +367,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
           : quote.budget_min;
             ? `$${quote.budget_min}`;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Button } from "@/components/ui/button",;
 import { Download } from "lucide-react",;
 import type { QuoteRequest } from "@/types/quotes",;
@@ -219,6 +396,30 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       quote.requester_email,;
       quote.project_name,;
       quote.project_summary,;
+<<<<<<< HEAD
+
+      onClick={handleExport}
+      className="flex items-center gap-2"
+      disabled={quotes.length === 0}
+
+
+    >;
+
+      <Download size={16} />;
+      Export CSV;
+    </Button>;
+  );
+
+
+
+
+};
+      quote.budget_display ||;
+        (quote.budget_min && quote.budget_max;
+          ? `$${quote.budget_min} - $${quote.budget_max}`;
+          : quote.budget_min;
+            ? `$${quote.budget_min}`;
+=======
       quote.budget_display || ;
         (quote.budget_min && quote.budget_max ;
           ? `$${quote.budget_min} - $${quote.budget_max}` ;
@@ -285,6 +486,12 @@ new Date (quote.created at) .toLocaleDateString () ]);
   return (;
     <Button;
       variant="outline";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
@@ -295,6 +502,15 @@ new Date (quote.created at) .toLocaleDateString () ]);
     </Button>;
   );
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       on_click={handle_export}
       className="flex items - center gap - 2";
       disabled={quotes.length === 0}
@@ -304,3 +520,10 @@ new Date (quote.created at) .toLocaleDateString () ]);
     </Button>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

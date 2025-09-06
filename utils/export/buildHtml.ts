@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import type { BookProject } from '../book/bookTypes',;
+export function buildPrintableHtml(project: BookProject): string {;
+  const { meta, chapters, visuals } = project,;
+  const quotesHtml = visuals.quoteCallouts;
+    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+    .join('\n'),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
 export function buildPrintableHtml(project: BookProject): string {;
@@ -5,6 +27,15 @@ export function buildPrintableHtml(project: BookProject): string {;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -26,6 +57,26 @@ export function buildPrintableHtml (project: BookProject): string {
         <div class="content">${paragraphize (c.content)}</div>;
       </section>;
     `);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    .join('\n\n'),;
+  const visualsHtml = [;
+    ...visuals.timelineImages,;
+    ...visuals.daoVoteCharts,;
+    ...visuals.uiScreens];
+    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join('\n'),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -33,12 +84,28 @@ export function buildPrintableHtml (project: BookProject): string {
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
 
 
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     .join ('\n\n'),
   const visuals_html = [;
     ...visuals.timeline_images,
@@ -47,7 +114,25 @@ export function buildPrintableHtml (project: BookProject): string {
     .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join ('\n'),
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
+<<<<<<< HEAD
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return `<!doctype html>;
 <html>;
 <head>;
@@ -136,12 +221,37 @@ function escapeHtml(s: string): string {;
 </head>;
 <body>;
   <section class="cover">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     <div>${escape_html (meta.publisher || '')}</div>;
     <h1>${escape_html (meta.title)}</h1>;
     <h3>${escape_html (meta.subtitle || '')}</h3>;
     <div class="by">By ${escape_html (meta.author)}</div>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    <div>${escapeHtml(meta.publisher |'')}</div>;
+    <h1>${escapeHtml(meta.title)}</h1>;
+    <h3>${escapeHtml(meta.subtitle |'')}</h3>;
+    <div class="by">By ${escapeHtml(meta.author)}</div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ${barcode}
   </section>;
   ${quotes_html}
@@ -150,6 +260,14 @@ function escapeHtml(s: string): string {;
 </body>;
 </html>`;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     <div>${escapeHtml(meta.publisher || '')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
@@ -189,11 +307,31 @@ function paragraphize(text: string): string {;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 function paragraphize (text: string): string {
   // Check condition
@@ -215,10 +353,37 @@ function escape_html (string: string): string {
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

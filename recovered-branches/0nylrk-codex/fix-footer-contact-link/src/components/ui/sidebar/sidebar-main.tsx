@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+import * as React from &quot;react&quot;
+import type { CSSProperties } from &quot;react&quot;
+import { Sheet, SheetContent } from &quot;@/components/ui/sheet&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import { useSidebar } from &quot;./sidebar-context&quot;
+import type { SafeRef } from &quot;../sidebar.types&quot;
+export interface SidebarProps extends React.ComponentProps<&quot;div&quot;> {
+  side?: &quot;left&quot; | &quot;right&quot;
+  variant?: &quot;sidebar&quot; | &quot;floating&quot; | &quot;inset&quot;
+  collapsible?: &quot;offcanvas&quot; | &quot;icon&quot; | &quot;none&quot;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from "react"
 import type { CSSProperties } from "react"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
@@ -10,6 +32,23 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   variant?: "sidebar" | "floating" | "inset"
   collapsible?: "offcanvas" | "icon" | "none"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
+  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+
+=======
+  if (props.collapsible === "none") {
+
+}
+export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
+  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (props.collapsible === &quot;none&quot;) {
     return (
       <div
@@ -28,10 +67,27 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
 
 
   if (props.collapsible === "none") {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return (
       <div
         className={cn(
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           props.className
         )}
           props.className
@@ -61,6 +117,15 @@ if ( {) {
         className={cn (
           &quot;flex h - full w-[--sidebar - width] flex - col bg - sidebar text - sidebar - foreground & quot;,
           props.class_name)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import * as React from "react";
 import type { CSSProperties } from "react";
@@ -87,10 +152,28 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
         )}
           props.className
         )}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ref={ref}
         {...props}
       >;
         {props.children}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </div>);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 // Check condition
 if ( {) {
@@ -98,6 +181,20 @@ if ( {) {
 }
     return (
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  return (
+
+=======
+  return (
+
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div;
       ref={ref}
 className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
@@ -105,10 +202,62 @@ className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
       data - collapsible={state === &quot;collapsed & quot; ? props.collapsible : ""}
       data - variant={props.variant}
       data - side={props.side}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+
+      </div>;
+    );
+  }
+if (isMobile) {
+    return (
+      <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
+        <SheetContent
+          data-sidebar="sidebar"
+          data-mobile="true"
+          className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
+          style={
+            {
+              "--sidebar-width": "18rem"} as CSSProperties
+          }
+          side={props.side}
+        >
+          <div className="flex h-full w-full flex-col">{props.children}</div>
+        </SheetContent>
+      </Sheet>
+    )
+  }
+  return (;
+    <div;
+      ref={ref}
+className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   return (;
     <div;
       ref={ref}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      className="group peer hidden md:block text-sidebar-foreground"
+className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
+      className="group peer hidden md:block text-sidebar-foreground"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       className="group peer hidden md:block text-sidebar-foreground"
 
@@ -116,12 +265,26 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
       data-side={props.side}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     >;
       {/* This is what handles the sidebar gap on desktop */}
 
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     >;
       {/* This is what handles the sidebar gap on desktop */}
 <div
@@ -132,16 +295,59 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === &quot;floating&quot; |props.variant === &quot;inset&quot;
             ? &quot;group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]&quot;
             : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",
           "group-data-[collapsible=offcanvas]:w-0",
           "group-data-[side=right]:rotate-180",
           props.variant === "floating" || props.variant === "inset"
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
       />
       <div
         className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+          "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex&quot;
+          props.side === &quot;left&quot;
+            ? &quot;left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]&quot;
+            : &quot;right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]&quot;
+          // Adjust the padding for floating and inset variants.
+          props.variant === &quot;floating&quot; |props.variant === &quot;inset&quot;
+            ? &quot;p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]&quot;
+            : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l&quot;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",
           props.side === "left"
             ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
@@ -174,6 +380,13 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
             ? &quot;p - 2 group - data-[collapsible = icon]:w-[calc (var (--sidebar - width - icon)_ + _theme (spacing.4)_ + 2px)]&quot;
             : &quot;group - data-[collapsible = icon]:w-[--sidebar - width - icon] group - data-[side = left]:border - r group - data-[side = right]:border - l&quot;,
           props.class_name)}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {...props}
       >;
         <div;
@@ -186,18 +399,127 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
   return (
     <button;
       ref={ref}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+;
+  if (isMobile) {;
+    return (;
+      <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>;
+        <SheetContent;
+          data-sidebar="sidebar";
+          data-mobile="true";
+          className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden";
+          style={;
+            {;
+              "--sidebar-width":"18rem"} as CSSProperties;
+          }
+          side={props.side}
+        >;
+          <div className="flex h-full w-full flex-col">{props.children}</div>;
+        </SheetContent>;
+      </Sheet>;
+    );  }
+;
+  return (;
+    <div;
+      ref={ref}
+      className="group peer hidden md:block text-sidebar-foreground";
+      data-state={state}
+      data-collapsible={state === "collapsed" ? props.collapsible :""}
+      data-variant={props.variant}
+      data-side={props.side}
+    >;
+      {/* This is what handles the sidebar gap on desktop */}
+      <div;
+        className={cn(;
+          "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",;
+          "group-data-[collapsible=offcanvas]:w-0",;
+          "group-data-[side=right]:rotate-180",;
+          props.variant === "floating" || props.variant === "inset";
+            ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]";
+            :"group-data-[collapsible=icon]:w-[--sidebar-width-icon]";
+        )}
+      />;
+      <div;
+        className={cn(;
+          "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex",;
+          props.side === "left";
+            ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]";
+            :"right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",;
+          // Adjust the padding for floating and inset variants.;
+          props.variant === "floating" || props.variant === "inset";
+            ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]";
+            :"group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",;
+          props.className;
+        )}
+        {...props}
+      >;
+        <div;
+          data-sidebar="sidebar";
+          className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow";
+        >;
+          {props.children}
+        </div>;
+      </div>;
+        "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex&quot;
+        &quot;[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize&quot;
+        &quot;[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize&quot;
+        &quot;group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar&quot;
+        &quot;[[data-side=left][data-collapsible=offcanvas]_&]:-right-2&quot;
+        &quot;[[data-side=right][data-collapsible=offcanvas]_&]:-left-2&quot;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
         "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
         "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
         "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar",
         "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
         "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+SidebarRail.displayName = "SidebarRail"
+
+export const SidebarInset = React.forwardRef<
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 SidebarRail.displayName = &quot;SidebarRail&quot;
 export const SidebarInset = React.forwardRef<
   HTMLDivElement
@@ -209,21 +531,62 @@ export const SidebarInset = React.forwardRef<
   React.ComponentProps<&quot;main">
   HTMLDivElement,
   React.ComponentProps<"main">
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >((props, ref) => {
   return (
     <main
       ref={ref as SafeRef<HTMLDivElement>}
       className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        "relative flex min-h-svh flex-1 flex-col bg-background&quot;
+        &quot;peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow&quot;
+        "relative flex min-h-svh flex-1 flex-col bg-background",
+        "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         props.className
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       data - sidebar=&quot;rail & quot;
       aria - label=&quot;Toggle Sidebar & quot;
       tab_index={-1}
@@ -350,3 +713,10 @@ SidebarInset.displayName = "SidebarInset";)
 }) SidebarInset.displayName = "SidebarInset" 
 SidebarInset.displayName = &quot;SidebarInset"
 SidebarInset.displayName = "SidebarInset"
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

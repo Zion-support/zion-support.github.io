@@ -1,6 +1,6 @@
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
     return res.status (500).json ({ error: err.message || 'Unknown error' });
   }
 
@@ -26,6 +26,8 @@ export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_c
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getWalletSummary } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {getWalletSummary} from '../../../utils/token/service';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -77,10 +79,13 @@ if ( {) {
 }
   }
 
-
 }
+<<<<<<< HEAD
     return res.status (500).json ({ error: err.message || 'Unknown error' });
   }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

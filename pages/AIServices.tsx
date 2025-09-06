@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -60,17 +65,28 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Star,
   Clock,
   Users,
   TrendingUp,
   Database,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Network,
   Target,
   Rocket
 } from 'lucide-react';
 const aiServices = [
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
   } catch (error) {
@@ -79,10 +95,18 @@ const aiServices = [
   }
 }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const stats = [
   { number: "500+", label: "AI Models Deployed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24/7", label: "AI Monitoring" },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ];
 import React from "react";
 import Layout from "../components/Layout";
@@ -91,13 +115,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/Layout';
 import React from "react";
 import Layout from "../components/Layout";
-origin/automation-improvements-final
 
 export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -107,7 +133,10 @@ export default function AIServices() {
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -277,6 +306,10 @@ export default function AIServices() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function AIServices() {;
   return (
     <Layout
@@ -295,6 +328,10 @@ export default function AIServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -320,16 +357,23 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
             </p>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -342,7 +386,10 @@ function AIServices() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 
@@ -437,6 +484,7 @@ export default function AIServices() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
   );
 }
     </Layout>);
@@ -453,3 +501,8 @@ origin/automation-improvements-final
 }
 }
 }
+=======
+
+  );
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,9 +1,3 @@
-resetFilters: () => void
-}
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-
-
-
 
   searchQuery
   setSearchQuery
@@ -13,56 +7,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter
   contentTypeFilter
   setContentTypeFilter
-import React from 'react';
-};
-
-interface FraudFiltersProps {;
-  searchQuery: string,;
-  setSearchQuery: (value: string,) => void,;
-  statusFilter: string | null,;
-  setStatusFilter: (value: string | null,) => void,;
-  severityFilter: string | null,;
-  setSeverityFilter: (value: string | null,) => void,;
-  contentTypeFilter: string | null,;
-  setContentTypeFilter: (value: string | null,) => void,;
-  resetFilters: () => void;
-}
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({;
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  severityFilter;
-  setSeverityFilter;
-  contentTypeFilter;
-  setContentTypeFilter;
-  resetFilters}) => {  return (
-
-    <div className="flex flex-col md: flex-row gap-4 mb-6">
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  severityFilter,
-  setSeverityFilter,
-  contentTypeFilter,
-  setContentTypeFilter,
-  resetFilters}) => {
-  return (
-    <div className="flex flex-col md:flex-row gap-4 mb-6">
-
-
 
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder="Search by user or content..."
           value = {searchQuery,}
-
-
-
-      
 
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
@@ -77,10 +27,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
 
-
-
-      
-
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
@@ -92,10 +38,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
-
-
-
-      
 
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
@@ -111,10 +53,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
 
-
-      
-
-
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
@@ -122,7 +60,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   )
 
           onChange = {(e,) => setSearchQuery(e && e.target.value),}
-
 
 },
 import React from "react",;
@@ -140,10 +77,6 @@ interface FraudFiltersProps {;
   contentTypeFilter: string | null,;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
-
-}
-'"},
-;
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery,;
@@ -212,8 +145,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
     </div>;
   );
 };
-
-
 
   search_query: string,
   setSearchQuery: (value: string, ) => void,
@@ -287,4 +218,4 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
     </div>);
 }
 '"},
-}
+

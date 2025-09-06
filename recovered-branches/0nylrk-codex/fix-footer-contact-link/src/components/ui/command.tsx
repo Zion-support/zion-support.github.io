@@ -1,11 +1,57 @@
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+import * as React from "react"
+import { Command as CommandPrimitive } from "cmdk"
+import { Search } from "lucide-react"
+
+
+
+=======
+import * as React from 'react';
+import {Command, as, CommandPrimitive} from 'cmdk';
+import {Search} from 'lucide-react';
+import {cn} from '@/lib/utils';
+import {Dialog, DialogContent} from '@/components/ui/dialog';
+import * as React from "react"
+import { Command as CommandPrimitive } from "cmdk"
+import { Search } from "lucide-react"
+import * as React from "react"
+import { Command as CommandPrimitive } from "cmdk"
+import { Search } from "lucide-react"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { cn } from "@/lib/utils"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
+<<<<<<< HEAD
 import { cn } from "@/lib/utils"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { cn } from "@/lib/utils"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -90,6 +136,20 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, ...props }, ref) => (
   <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />
@@ -102,6 +162,17 @@ const CommandInput = React && React.forwardRef<;
   <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>;
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />;
     <CommandPrimitive&& CommandPrimitive.Input
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ref={ref}
       className={cn(
         'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50'
@@ -121,6 +192,16 @@ const CommandList = React.forwardRef<
   React.ComponentPropsWithoutRef<type</typeof>of CommandPrimitive.List>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.List
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 CommandInput && CommandInput.displayName = CommandPrimitive && CommandPrimitive.Input.displayName;
 
@@ -128,6 +209,17 @@ const CommandList = React && React.forwardRef<;
   React && React.ElementRef<typeof CommandPrimitive && CommandPrimitive.List>,;
   React && React.ComponentPropsWithoutRef<type</typeof>of CommandPrimitive && CommandPrimitive.List>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+  <CommandPrimitive&& CommandPrimitive.List
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 import {cn} from '@/lib / utils';
 import {Dialog, DialogContent} from '@/components / ui / dialog';
@@ -306,6 +398,20 @@ const CommandSeparator = React.forwardRef<
   React.Compone</typeof>ntPropsWithoutRef<typeof CommandPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Separator
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
     ref={ref}
@@ -403,6 +509,22 @@ const CommandSeparator = React.forward_ref<;
   React.Compone</typeof > ntPropsWithoutRef < typeof CommandPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
   <CommandPrimitive.Separator;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    ref={ref}
+    className={cn ('-mx - 1 h - px bg - border', class_name)}
+    {...props}
+<<<<<<< HEAD
+      className
+    )}
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const CommandSeparator = React.forwardRef<;
   React.ElementRef<typeof CommandPrimitive.Separator>,;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>;
@@ -412,9 +534,12 @@ const CommandSeparator = React.forwardRef<;
 
     ref={ref}
     className={cn('-mx-1 h-px bg-border', className)}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {...props}
   />
 ));
+<<<<<<< HEAD
+=======
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
 
 
@@ -475,6 +600,11 @@ export {;
     {...props}
   />;
 ));
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   />));
 CommandSeparator.display_name = CommandPrimitive.Separator.display_name;
 ;
@@ -509,10 +639,112 @@ export {
   CommandGroup,
   CommandItem,
   CommandShortcut,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+=======
+  CommandSeparator,
+}
+;
+  CommandSeparator} const Command = React.forwardRef< React.ElementRef<typeof CommandPrimitive>;
+React.ComponentPropsWithoutRef<typeof CommandPrimitive> > ( ({
+  className, ...props 
+}, ref) => (<CommandPrimitive) 
+}{
+  ...props 
+}/>) ) Command.displayName = CommandPrimitive.displayName interface CommandDialogProps extends React.ComponentPropsWithoutRef<typeof Dialog> {
+  
+}const CommandDialog = ({
+  children, ...props 
+}: CommandDialogProps) => {
+  return (<Dialog {
+  ...props 
+}> </Command> </DialogContent> </Dialog>) 
+}const CommandInput = React.forwardRef< React.ElementRef<typeof CommandPrimitive.Input>;
+React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input> <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" /> <CommandPrimitive.Input ref= {
+  ref 
+}className= {
+  cn ("flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50", className) 
+}{
+  ...props 
+}/> </div>) ) CommandInput.displayName = CommandPrimitive.Input.displayName const CommandList = React.forwardRef< React.ElementRef<typeof CommandPrimitive.List>;
+React.ComponentPropsWithoutRef<typeof CommandPrimitive.List> > ( ({
+  className, ...props 
+}, ref) => (<CommandPrimitive.List ref= {
+  ref 
+}className= {
+  cn ("max-h-[300px] overflow-y-auto overflow-x-hidden", className) 
+}{
+  ...props 
+}/>) ) CommandList.displayName = CommandPrimitive.List.displayName const CommandEmpty = React.forwardRef< React.ElementRef<typeof CommandPrimitive.Empty>;
+React.ComponentPropsWithoutRef<typeof CommandPrimitive.Empty> > ( (props, ref) => (<CommandPrimitive.Empty ref= {
+  ref 
+}className="py-6 text-center text-sm" {
+  ...props 
+}/>) ) CommandEmpty.displayName = CommandPrimitive.Empty.displayName const CommandGroup = React.forwardRef< React.ElementRef<typeof CommandPrimitive.Group>;
+React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group> > ( ({
+  className, ...props 
+}, ref) => (<CommandPrimitive.Group ref= {
+  ref 
+}className= {
+  cn ("overflow-hidden p-1 text-foreground [& [cmdk-group-heading]]:px-2 [& [cmdk-group-heading]]:py-1.5 [& [cmdk-group-heading]]:text-xs [& [cmdk-group-heading]]:font-medium [& [cmdk-group-heading]]:text-muted-foreground", className) 
+}{
+  ...props 
+}/>) ) CommandGroup.displayName = CommandPrimitive.Group.displayName const CommandSeparator = React.forwardRef< React.ElementRef<typeof CommandPrimitive.Separator>;
+React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator> > ( ({
+  className, ...props 
+}, ref) => (<CommandPrimitive.Separator ref= {
+  ref 
+}className= {
+  cn ("-mx-1 h-px bg-border", className) 
+}{
+  ...props 
+}/>) ) CommandSeparator.displayName = CommandPrimitive.Separator.displayName const CommandItem = React.forwardRef< React.ElementRef<typeof CommandPrimitive.Item>;
+React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item> > ( ({
+  className, ...props 
+}, ref) => (<CommandPrimitive.Item ref= {
+  ref 
+}className= {
+  cn ("relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50", className) 
+}{
+  ...props 
+}/>) ) CommandItem.displayName = CommandPrimitive.Item.displayName const CommandShortcut = ({
+  className, ...props 
+}: React.HTMLAttributes<HTMLSpanElement>) => {
+  return (<span className= {
+  cn () 
+}{
+  ...props 
+}/>) 
+}CommandShortcut.displayName = "CommandShortcut" export {
+  Command, CommandDialog, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem, CommandShortcut, CommandSeparator 
+}
+  CommandSeparator}
+;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   CommandSeparator,;
 };
   CommandSeparator}
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -520,3 +752,10 @@ export {
   CommandSeparator,
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

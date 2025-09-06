@@ -1,25 +1,123 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
+<<<<<<< HEAD
   yPos += 8;
   // Group skills by category
+=======
+<<<<<<< HEAD
+  yPos += 8;
+  // Group skills by category
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  if (skills && skills.length === 0) return startY;
+  
+  let yPos = startY;
+  
+  doc && doc.setFontSize(16);
+  doc && doc.setTextColor(colors && colors.heading),
+  doc && doc.text('Skills', 20, yPos);
+  yPos += 8;
+  
+  doc && doc.setDrawColor(colors && colors.accent);
+  doc && doc.line(20, yPos, 60, yPos);
+
+  yPos += 8;
+  // Group skills by category
+
+  const skillsByCategory = skills && skills.reduce((acc, skill) => {
+    const category = skill && skill.category || 'Other';
+
+=======
+  yPos += 8;
+  // Group skills by category
+  const skillsByCategory = skills && skills.reduce((acc, skill) => {
+    const category = skill && skill.category || 'Other';
+  if (skills.length === 0) return startY;
+  let yPos = startY;
+  doc.setFontSize(16);
+  doc.setTextColor(colors.heading)
+  doc.text('Skills', 20, yPos);
+  yPos += 8;
+  doc.setDrawColor(colors.accent);
+  doc.line(20, yPos, 60, yPos);
+  yPos += 8;
+  // Group skills by category
+  const skillsByCategory = skills.reduce((acc, skill) => {
+    const category = skill.category |'Other';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  yPos += 8;
+  // Group skills by category
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!acc[category]) {
       acc[category] = []
     }
     acc[category].push(skill);
     return acc
   }, {} as Record<string, typeof skills>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   doc.setFontSize(11);
   doc.setTextColor(colors.text);
   for (const [category, categorySkills] of Object.entries(skillsByCategory)) {
@@ -79,6 +177,13 @@ export function addSkillsSection(;
     const skillLines = doc && doc.splitTextToSize(skillsText, 160);
     doc && doc.text(skillLines, 30, yPos + 5);
     yPos += (skillLines && skillLines.length * 5) + 10
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   return yPos + 5
 import {jsPDF} from 'jspdf';
@@ -132,6 +237,15 @@ if ( {) {
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 
@@ -192,3 +306,8 @@ return yPos + 5
   return yPos + 5
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

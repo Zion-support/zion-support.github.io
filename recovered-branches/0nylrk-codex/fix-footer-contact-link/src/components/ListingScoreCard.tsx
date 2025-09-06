@@ -1,20 +1,87 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {StarIcon} from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface ListingScoreCardProps {;
+  title: string,;
+  description: string,;
+=======
+import { cn } from '@/lib / utils';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { StarIcon } from './lucide-react';
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
+import { StarIcon } from "lucide-react";
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ListingScoreCardProps {
   title: string,
   description: string,
 
   image?: string;
   category: string,;
+<<<<<<< HEAD
   image?: string;
   category: string,;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  image?: string;
+  category: string,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   tags?: string[];
   author?: string;
   author_image?: string;
   ai_score?: number;
   rating?: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function ListingScoreCard(): any ({ ;
   title;
   description, ;
@@ -22,10 +89,67 @@ export function ListingScoreCard(): any ({ ;
   category, ;
   tags;
   author, ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
+import { StarIcon } from "lucide-react";
+interface ListingScoreCardProps {
+
+  title: string
+  description: string
+  image?: string;
+  category: string
+
+  tags?: string[];
+  author?: string;
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
+  className?: string
+}
+export function ListingScoreCard({
+  title;
+
+  description
+  image
+  category
+  tags;
+  author
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   authorImage;
   aiScore = 0;
   rating = 0;
   reviewCount = 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  className
+}: ListingScoreCardProps) {
+  return (
+    <div className={cn(
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
+import { Button } from "@/components/ui/button",
+import { StarIcon } from "lucide-react",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -40,6 +164,26 @@ interface ListingScoreCardProps {
   className?: string
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function ListingScoreCard({ 
+  title,
+
+<<<<<<< HEAD
+=======
+export function ListingScoreCard({ ;
+  title;
+export function ListingScoreCard({ 
+  title,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   description, 
   image, 
   category, 
@@ -53,6 +197,21 @@ interface ListingScoreCardProps {
 }: ListingScoreCardProps) {
   return (
     <div className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}>
       {image && (
@@ -60,6 +219,16 @@ interface ListingScoreCardProps {
           <img
             src={image}
             alt={title}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className ;
 }: ListingScoreCardProps) {;
   return (
@@ -72,6 +241,12 @@ interface ListingScoreCardProps {
           <img
             src={image} 
             alt={title} 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />;
         </div>;
@@ -87,6 +262,16 @@ interface ListingScoreCardProps {
               <span>{aiScore}%</span>;
             </div>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
@@ -102,6 +287,16 @@ interface ListingScoreCardProps {
               <span>{aiScore}%</span>
             </div>
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
@@ -113,6 +308,31 @@ interface ListingScoreCardProps {
                 <StarIcon
                   key={star}
                   className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        </div>;
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
+        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
+
+=======
+                    "h-4 w-4"
+                    star <= Math.round(rating)
+                      ? "text-zion-cyan fill-zion-cyan"
+
+                      : "text-zion-slate-light"
+                    "h-4 w-4", 
+                    star <= Math.round(rating) 
+                      ? "text-zion-cyan fill-zion-cyan" 
+                      : "text-zion-slate-light"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -210,10 +430,58 @@ export function ListingScoreCard({;
             </span>;
           </div>;
         )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+        {tags && tags.length > 0 && (;
+          <div className="flex flex-wrap gap-2 mb-4">;
+            {tags && tags.map((tag, i) => (;
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {tag}
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+              </Badge>;
+            ))}
+          </div>;
+=======
+              </Badge>;
+            ))}
+          </div>;
+                  )}
+                />
+              ))}
+            </div>
+            <span className="text-sm text-zion-slate-light ml-1">
+              ({reviewCount})
+            </span>
+          </div>
+        )}
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag, i) => (
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
               </Badge>;
             ))}
@@ -326,6 +594,15 @@ function ListingScoreCard() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  interface ListingScoreCardProps {
   title: string;
@@ -382,3 +659,10 @@ className)
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

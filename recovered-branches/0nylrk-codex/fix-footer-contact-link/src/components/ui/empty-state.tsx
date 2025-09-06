@@ -1,25 +1,117 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface EmptyStateProps {
 
   icon: React.ReactNode
   title: string
   description: string
   action?: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from "react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+interface EmptyStateProps {;
+  icon: React && React.ReactNode,;
+  title: string,;
+  description: string,;
+  action?: {;
+    text: string,;
+    href?: string;
+    onClick?: () => void;
+  };
+  secondaryAction?: {;
+    text: string,;
+    href?: string;
+    onClick?: () => void;
+  };
+  className?: string;
+}
+
+export function EmptyState(): any ({;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   icon;
   title;
   description;
   action;
   secondaryAction;
   className}: EmptyStateProps) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+
+    text: string
+
+    href?: string;
+    onClick?: () => void
+  }
+  secondaryAction?: {
+
+    text: string
+
+    href?: string;
+    onClick?: () => void
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     text: string,
     href?: string,
     onClick?: () => void
@@ -29,6 +121,22 @@ interface EmptyStateProps {
     href?: string,
     onClick?: () => void
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+  className?: string
+}
+
+
+
+  className}: EmptyStateProps) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   className?: string
 }
 
@@ -39,6 +147,11 @@ export function EmptyState({;
   action;
   secondaryAction;
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function EmptyState({
   icon,
   title,
@@ -48,10 +161,32 @@ export function EmptyState({
 
 
   className}: EmptyStateProps) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div
 
       className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
         className
@@ -91,11 +226,19 @@ export function EmptyState({;
       )}
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
 
 
         className
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       )}>;
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
         {icon}
@@ -111,12 +254,61 @@ export function EmptyState({;
               <Link to={action && action.href}>{action && action.text}</Link>;
             </Button>;
           ) : (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <Button
+              size="lg" 
+
+=======
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
+        {icon}
+
+  secondaryAction,;
+  className} EmptyStateProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",;
+        className;
+      )}
+    >;
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
+        {icon}
+      </div>;
+      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
+      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
+            <Button
+              size="lg" 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="bg-zion-purple hover:bg-zion-purple-light"
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
           );
         )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+            <Button 
+              size="lg" 
+              className="bg-zion-purple hover:bg-zion-purple-light"
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={action.onClick}
             >
               {action.text}
@@ -124,16 +316,64 @@ export function EmptyState({;
           )
         )}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+=======
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
               <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
             </Button>
           ) : (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+        {secondaryAction && (;
+          secondaryAction && secondaryAction.href ? (;
+            <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">;
+              <Link to={secondaryAction && secondaryAction.href}>{secondaryAction && secondaryAction.text}</Link>;
+            </Button>;
+          ) : (;
+            <Button
+              variant="outline" 
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             <Button 
               variant="outline" 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
@@ -202,6 +442,15 @@ function EmptyState() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  interface EmptyStateProps {
   icon: React.ReactNode;
@@ -264,3 +513,10 @@ className?: string
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

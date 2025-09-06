@@ -8,6 +8,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
+<<<<<<< HEAD
       posts = posts && posts.filter(p => (p && p.topics || []).includes(topic));
     if (tag && typeof tag === 'string')
       posts = posts && posts.filter(p => (p && p.tags || []).includes(tag));
@@ -98,6 +99,9 @@ return res.status(405).end();
   }
   return res && res.status(405).end();
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -192,5 +196,19 @@ if ( {) {
     write_posts (posts);
     return res.status (201).json (post);
   }
+<<<<<<< HEAD
 return res.status (405).end ();
 }
+=======
+
+return res.status(405).end();
+}
+
+}
+}
+  return res.status(405).end();
+
+return res.status (405).end ();
+}
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

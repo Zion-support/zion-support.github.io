@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Server, Clock, MapPin } from './lucide-react';
+
+=======
+
+
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Server, Clock, MapPin} from "lucide-react";
+
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Server, Clock, MapPin } from "lucide-react",
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -31,6 +56,17 @@ function ServiceDetails() {
   // Get datacenters for regions (simplified - in production this would come from a real database);
   const get_datacenters = (country: string): string[] => {
     const data_centers: Record < string, string[]> = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"];
       "United Kingdom": ["London", "Manchester", "Birmingham"];
       "Germany": ["Frankfurt", "Berlin", "Munich"];
@@ -38,6 +74,19 @@ function ServiceDetails() {
       "Australia": ["Sydney", "Melbourne", "Perth"];
       "Singapore": ["Singapore Central"];
       "Canada": ["Toronto", "Montreal", "Vancouver"];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -46,6 +95,27 @@ function ServiceDetails() {
       "Australia": ["Sydney", "Melbourne", "Perth"],
       "Singapore": ["Singapore Central"],
       "Canada": ["Toronto", "Montreal", "Vancouver"],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    return regions[country] |regions["default"]
+  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      // Default for other countries
+      "default": ["Major metropolitan areas"]
+
+=======
+      // Default for other countries
+      "default": ["Major metropolitan areas"]
+    }
+    return dataCenters[country] |dataCenters["default"]
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     
     return dataCenters[country] || dataCenters["default"]
@@ -119,6 +189,16 @@ function ServiceDetails() {
     }
     return regions[country] |regions["default"]
   }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    return regions[country] |regions["default"]
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     
     return regions[country] || regions["default"]
@@ -268,16 +348,72 @@ export function ServiceDetails({ country } ServiceDetailsProps) {;
         </CardTitle>;
         <CardDescription className="text-zion-slate-light">;
           Details about our service locations and capabilities in {country}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </CardDescription>;
       </CardHeader>;
       <CardContent className="space-y-4">;
         <div className="overflow-hidden rounded-lg mb-4">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+          IT Onsite Service in {country}
+        </CardTitle>
+        <CardDescription className="text-zion-slate-light">
+          Details about our service locations and capabilities in {country}
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="overflow-hidden rounded-lg mb-4">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <img
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          />
+        </div>
+        <div className="space-y-4">
+          <div>
+            <h4 className="text-lg font-medium text-white mb-2 flex items-center">
+              <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
+              Service Locations
+            </h4>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+              {datacenters.map((dc, idx) => (
+                <div
+                  key={idx}
+                  className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
+                >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from "lucide-react",;
 interface ServiceDetailsProps {;
@@ -355,6 +491,31 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 
           />;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+          />;
+        </div>;
+          <img ;
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110";
+          />;
+        </div>;
+        ;
+          />;
+        </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+          />;
+        </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-4">;
           <div>;
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">;
@@ -362,11 +523,37 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
               Service Locations;
             </h4>;
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {datacenters.map((dc, idx) => (;
                 <div;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {dc}
                 </div>;
               ))}
@@ -381,6 +568,32 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             </h4>;
             <p className="text-zion-slate-light">;
               {getRegionalInstructions(country)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </p>;
+          </div>;
+
+=======
+                  {dc}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4 className="text-lg font-medium text-white mb-2 flex items-center">
+              <Clock className="mr-2 h-4 w-4 text-zion-purple" />
+              Service Instructions
+            </h4>
+            <p className="text-zion-slate-light">
+              {getRegionalInstructions(country)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </p>
           </div>
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
@@ -414,10 +627,28 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
                   {dc}
                 </div>;
               ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </ul>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardFooter className="border - t border - zion - blue - light pt - 4">;
         <p className="text - sm text - zion - slate - light">;
           For custom enterprise needs or multi - site services in {country}, please contact our enterprise team for tailored pricing.;
@@ -425,6 +656,20 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 
@@ -458,3 +703,10 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

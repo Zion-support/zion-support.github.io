@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
@@ -81,6 +86,10 @@
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
@@ -151,6 +160,10 @@ function Page() {
       </main>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
   } catch (error) {
     console.error("Error:", error);
@@ -158,3 +171,7 @@ function Page() {
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

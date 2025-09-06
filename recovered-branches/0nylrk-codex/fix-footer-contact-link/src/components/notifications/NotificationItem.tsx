@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+// Use the centralized icon wrapper to avoid missing icons;
+<<<<<<< HEAD
+=======
+import React from 'react';
+// Use the centralized icon wrapper to avoid missing icons
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Badge} from '@/components/ui/badge';
@@ -7,10 +24,39 @@ import {cn} from '@/lib/utils';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from '@/components/icons',
@@ -22,6 +68,17 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { useNavigate } from 'react-router-dom',
 import { Notification, NotificationType } from '@/context/notifications',
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -38,6 +95,13 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-yellow-500">⚠️</span>
     default:
       return <span className="text-gray-500">📣</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -48,6 +112,12 @@ export const getTypeIcon = (type: NotificationType) => {
 export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
@@ -61,6 +131,35 @@ export const getTypeIcon = (type: NotificationType) => {;
 };
 
 interface NotificationItemProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  notification: Notification,
+  onMarkAsRead: (id: string) => Promise<void>,
+  onDismiss: (id: string) => Promise<void>
+}
+
+export const NotificationItem: React.FC<NotificationItemProps> = ({ 
+  notification, 
+  onMarkAsRead, 
+  onDismiss 
+}) => {;
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!notification.read) {
+      onMarkAsRead(notification.id)
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
@@ -87,6 +186,21 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-yellow-500">⚠️</span>,;
     default:;
       return <span className="text-gray-500">📣</span>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  }
+}
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 interface NotificationItemProps {
@@ -103,6 +217,16 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   const handleClick = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
@@ -113,11 +237,38 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   const handleClick = () => {;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
@@ -156,6 +307,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   return (
     <div
       className={cn(
+<<<<<<< HEAD
+=======
 
         "p-3 border-b border-zion-blue-light relative group"
         !notification && notification.read ? "bg-zion-blue-dark/30" : ""
@@ -202,6 +355,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   return (
     <div
       className={cn(
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button
                 variant="link"
                 size="sm"
@@ -225,6 +383,52 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 variant="ghost" 
                 size="icon" 
                 className="h-6 w-6"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h-6 w-6";
+                onClick={(e) => {;
+                  e.stopPropagation(),;
+                  onMarkAsRead(notification.id);
+                }}
+              >;
+                <Check className="h-3.5 w-3.5 text-green-400" />;
+              </Button>;
+            </TooltipTrigger>;
+            <TooltipContent>;
+              <p>Mark as read</p>;
+            </TooltipContent>;
+          </Tooltip>;
+        </TooltipProvider>;
+        <TooltipProvider>;
+          <Tooltip>;
+            <TooltipTrigger asChild>;
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h-6 w-6";
+                onClick={(e) => {;
+                  e.stopPropagation();
+                  onDismiss(notification.id);
+                }}
+              >;
+                <Trash2 className="h-3.5 w-3.5 text-red-400" />;
+              </Button>;
+            </TooltipTrigger>;
+            <TooltipContent>;
+              <p>Dismiss</p>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
@@ -233,11 +437,39 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+<<<<<<< HEAD
+    </div>);
+}
+;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
     </div>);
 }
 ;
 };
+<<<<<<< HEAD
     </div>);
 }
 ;
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,9 +1,3 @@
-return (<a;
-          href={href}
-    return(<button
-        ref={ref}
-
-SidebarMenuItem.display_name = "SidebarMenuItem";
 
 export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
@@ -17,10 +11,8 @@ export { SidebarMenuItem, SidebarMenuGroup };
 };
 export { SidebarMenuItem, SidebarMenuGroup };
 
-
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
-
 
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
@@ -135,4 +127,4 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
-export { SidebarMenuItem, SidebarMenuGroup };
+

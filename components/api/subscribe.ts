@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { supabase } from '../../utils/supabase/client';
 
 export default async function handler(
@@ -6,6 +7,8 @@ export default async function handler(
   res: NextApiResponse
 ) {;
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   try {
     // Basic validation
@@ -16,9 +19,9 @@ export default async function handler(
 
     // If placeholders are still used, just accept without DB write
 
-
     const { data, error } = await supabase
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
+<<<<<<< HEAD
     if (isPlaceholder) {
       return res && res.status(200).json({ ok: true, simulated: true })
     }
@@ -26,6 +29,9 @@ export default async function handler(
       .from('email_signups')
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { email } = req.body |{}
   if (!email |typeof email !== 'string')
     return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -59,10 +65,18 @@ export default async function handler(
         source: 'mobile-launch'
         created_at: new Date().toISOString()
       })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       .select('*')
       .single();
 
     if (error) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 import { supabase } from '../../utils / supabase / client';
 ;
@@ -135,8 +149,12 @@ if ( {) {
     }
     return res.status (200).json ({ ok: true, data });
   } catch (e: any) {
+<<<<<<< HEAD
     return res.status(500).send(e?.message |'Unexpected error');
     return res.status(500).send(e?.message || 'Unexpected error');
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status (500).send (e?.message || 'Unexpected error');
   }      }
       return res.status (500).send (error.message || 'Database error');
@@ -147,6 +165,7 @@ if ( {) {
 }
 }
 
+<<<<<<< HEAD
     return res.status(500).send(e?.message || 'Unexpected error');
 
 
@@ -160,3 +179,5 @@ if ( {) {
   }
     return res.status(500).send(e?.message || 'Unexpected error');
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

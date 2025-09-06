@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import React from './react';
+import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
+<<<<<<< HEAD
+
+=======
+
+
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+
+=======
+import React from "react",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+
+=======
+interface FraudTabContentProps {
+  tabValue: string
+}
+import React from "react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
@@ -11,6 +39,23 @@ interface FraudTabContentProps {
           <p className="text-muted-foreground">
             This tab will show fraud flags that are still pending admin review.
           </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from './react';
+import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
+
+
+
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+
+import React from "react",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 interface FraudTabContentProps {
@@ -41,12 +86,35 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows high-priority dangerous flags requiring immediate attention.;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      );
+
+
+        </div>
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>;
       );
         </div>
       );
       ),
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     case 'dangerous':
       return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
@@ -56,6 +124,19 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      );
+      ),
+    
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ),
     
 
@@ -63,6 +144,16 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       );
       ),
     
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      );
+      ),
+    
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
@@ -77,8 +168,32 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       return null
 
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+
+  }
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface FraudTabContentProps {;
@@ -110,6 +225,28 @@ interface FraudTabContentProps {
             This tab shows high-priority dangerous flags requiring immediate attention.;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      );
+  }
+};
+=======
+<<<<<<< HEAD
+      ),;
+<<<<<<< HEAD
+
+    case 'actioned':;
+      return (
+=======
+      ),;
+    ;
+    case 'actioned':;
+      return (;
+    case 'actioned':;
+      return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">;
           <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>;
@@ -175,3 +312,11 @@ default:
       );
   }
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

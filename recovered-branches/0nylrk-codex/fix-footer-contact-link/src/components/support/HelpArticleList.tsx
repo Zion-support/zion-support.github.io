@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+
+
+
+interface HelpArticleListProps {
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
+  searchQuery: string
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
+  searchQuery: string;
+}
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  if (!category) {;
+    return <div>Category not found</div>;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import {
   Card,
@@ -28,6 +59,8 @@ export function HelpArticleList({
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
+<<<<<<< HEAD
+=======
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           article.content.toLowerCase().includes(searchQuery.toLowerCase()),
       )
@@ -36,6 +69,20 @@ export function HelpArticleList({
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           article.content.toLowerCase().includes(searchQuery.toLowerCase()),
       )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    : category.articles,
+  
+=======
+    : category.articles;
+
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div>
       <div className="mb-6">
@@ -53,6 +100,8 @@ export function HelpArticleList({
       ) : (
         <div className="space-y-4">
           {filteredArticles.map((article) => (
+<<<<<<< HEAD
+=======
             <Card
               key={article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -128,6 +177,17 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
             Try adjusting your search query or browse another category.;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ) : (;
+        <div className="space-y-4">;
+          {filteredArticles && filteredArticles.map(article => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Card
               key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -248,6 +308,46 @@ function format_date (date: string): string {
   })
   })
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+function formatDate(date:string):string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year:"numeric",;
+    month:"long",;
+    day:"numeric";
+  }),; interface HelpArticleListProps {
+  categoryId: string;
+onArticleSelect: (articleId: string) => void;
+searchQuery: string 
+}export function HelpArticleList ({
+  categoryId, onArticleSelect, searchQuery 
+}: HelpArticleListProps) {
+  const category = HELP CATEGORIES.find (cat => cat.id === categoryId);
+if (!category) {
+  return <div>Category not found</div> 
+}return (<div> </p> </CardContent> </Card>) ) 
+}</div>) 
+}</div>) 
+}
+}
+
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {
+year: "numeric"
+    month: "long"
+    day: "numeric"
+
+  });
+}
+
+  });
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   })
   })
@@ -261,3 +361,10 @@ function formatDate(date: string): string {;
   });
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -21,14 +21,20 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function SecretsRotationAutomationPage() {
 
   const features = [
@@ -42,6 +48,10 @@ export default function SecretsRotationAutomationPage() {
 
 export default function SecretsRotationAutomationPage() {
   const features = [
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -102,9 +112,32 @@ export default function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+<<<<<<< HEAD
   return (
   return (
   return (
+=======
+
+  return (
+    <>;
+      <SEO;
+        title="Secrets Rotation Automation";
+        description="Automate key and secret rotation across cloud and CI / CD with approvals and audit logs.";
+      />;
+      <main id="main" className="container mx - auto px - 4 py - 24">;
+        <section className="max - w-5xl mx - auto">;
+          <h1 className="text - 4xl font - extrabold tracking - tight">;
+            Secrets Rotation Automation;
+          </h1>;
+          <p className="mt - 4 text - lg text - gray - 300">;
+            Keep credentials short - lived and compliant. Automate rotations;
+            across providers with full auditability.;
+          </p>;
+          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
+            {features.map ((f) => (
+              <div;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -163,6 +196,7 @@ export default function SecretsRotationAutomationPage() {
         </section>;
       </main>;
 
+<<<<<<< HEAD
 
     </>);
 }
@@ -331,7 +365,13 @@ return (
   );
 }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

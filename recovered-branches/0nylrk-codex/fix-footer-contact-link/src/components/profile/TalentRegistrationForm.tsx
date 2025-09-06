@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -20,6 +30,12 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -44,6 +60,19 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -93,6 +122,16 @@ interface CategorizedSkills {
   platforms: string[]
   softSkills: string[]
   other: string[]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -117,6 +156,38 @@ import { toast } from "@/components/ui/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { useAuth } from "@/hooks/useAuth",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Define form schema;
+const talentProfileSchema = z.object({;
+  name: z.string().min(2, "Name must be at least 2 characters long"),;
+  title: z.string().min(5, "Professional title is required"),;
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;
+  location: z.string().min(2, "Location is required"),;
+  skills: z.string().min(2, "Enter at least one skill"),;
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {;
+    message: "Hourly rate must be a number"}),;
+<<<<<<< HEAD
+  availability: z && z.enum(["available", "limited", "unavailable"]);
+  enhancedProfile: z && z.boolean().default(true)}),;
+
+type TalentFormValues = z && z.infer<typeof talentProfileSchema>;
+
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
+
+=======
+  availability: z.enum(["available", "limited", "unavailable"]),;
+  enhancedProfile: z.boolean().default(true)}),;
+type TalentFormValues = z.infer<typeof talentProfileSchema>,;
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface CategorizedSkills {;
   programming: string[],;
   devops: string[],;
@@ -128,14 +199,59 @@ interface EnhancedProfile {
   summary: string
   categorizedSkills: CategorizedSkills
 }
+<<<<<<< HEAD
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export function TalentRegistrationForm() {
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export function TalentRegistrationForm() {
+  // Remove the useToast() hook since we're importing the toast function directly
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [skillTags, setSkillTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function TalentRegistrationForm() {
+  // Remove the useToast() hook since we're importing the toast function directly;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [skillTags, setSkillTags] = useState<string[]>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+  // Remove the useToast() hook since we're importing the toast function directly
+  const { user } = useAuth(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [skillTags, setSkillTags] = useState<string[]>([]),
+  const [isGenerating, setIsGenerating] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema)
@@ -185,6 +301,22 @@ export function TalentRegistrationForm() {;
       hourlyRate: "",;
       availability: "available",;
       enhancedProfile: true}}),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  // Handle adding skill tags;
+  const handleAddSkill = () => {;
+<<<<<<< HEAD
+    const skillInput = form && form.getValues("skills");
+    if (skillInput && !skillTags && skillTags.includes(skillInput)) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setSkillTags([...skillTags, skillInput]);
       form && form.setValue("skills", "");
     }
@@ -222,6 +354,16 @@ export function TalentRegistrationForm() {;
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 
   // Handle removing skill tags;
@@ -235,6 +377,12 @@ export function TalentRegistrationForm() {;
       e && e.preventDefault(),;
       handleAddSkill();
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 
   // Handle avatar upload;
@@ -625,6 +773,13 @@ export function TalentRegistrationForm() {;
           });
         }
       });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
@@ -633,6 +788,23 @@ export function TalentRegistrationForm() {;
 
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
+    }
+  }
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -650,6 +822,21 @@ export function TalentRegistrationForm() {;
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
     }
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   // Send notification email
@@ -817,6 +1004,16 @@ if ( {) {
 }
         throw new Error ("User not authenticated");
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Enhance profile if not already done;
       let final_summary = "";
       let final_skills = skill_tags;
@@ -834,6 +1031,17 @@ if ( {) {
             Object && Object.values(categorizedSkills).forEach(categorySkills => {;
               if (Array && Array.isArray(categorySkills)) {;
                 categorySkills && categorySkills.forEach(skill => {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  if (typeof skill === 'string' && skill) {;
+                    aiSkills && aiSkills.push(skill);
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               talent_data: {
                 name: values.name,
                 title: values.title,
@@ -853,6 +1061,21 @@ if ( {) {
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],
             // Extract skills from each category and ensure they're strings;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+            Object.values(categorizedSkills).forEach(categorySkills => {;
+              if (Array.isArray(categorySkills)) {;
+                categorySkills.forEach(skill => {;
+                  if (typeof skill === 'string' && skill) {;
+                    aiSkills.push(skill);
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   }
                 });
               }
@@ -920,6 +1143,12 @@ if ( {) {
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Object.values (categorized_skills).for_each (category_skills => {
               if () {) {
   $2
@@ -934,11 +1163,52 @@ if ( {) {
                 });
               }
             });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+          }
+
+            }),;
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+
+                  }
+                })
+              }
+            });
+            // Create a unique set of skills
+            finalSkills = [...new Set([...skillTags, ...aiSkills])]
+            }),;
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -947,11 +1217,44 @@ if ( {) {
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+        } catch (error) {;
+          console.error("Error enhancing profile:", error),;
+          // Continue with submission even if enhancement fails;
+          finalSummary = "";
+        }
+      } else if (generatedContent) {
+        finalSummary = generatedContent.summary
+      }
+      // Get user email for notification
+      const { data: userData } = await supabase.auth.getUser()
+      const userEmail = userData.user?.email;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = userData.user?.email,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
@@ -963,6 +1266,27 @@ if ( {) {
           sendEnhancementNotification(user.id, userEmail)
         }
         setIsSubmitting(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+      }, 1500),
+
+
+
+<<<<<<< HEAD
+=======
+      }, 1500);
+      }, 1500),
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Here would be the actual code to save the profile to Supabase
       /*
       const { error } = await supabase
@@ -978,6 +1302,129 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+      // Get user email for notification;
+      const { data: userData } = await supabase && supabase.auth.getUser(),;
+      const userEmail = userData && userData.user?.email;
+<<<<<<< HEAD
+
+=======
+  },;
+;
+  // Get category color;
+  const getCategoryColor = (category:CategoryType) => {;
+    switch (category) {;
+      case 'programming':return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',;
+      case 'devops':return 'bg-green-500/20 hover:bg-green-500/30 text-green-500',;
+      case 'platforms':return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500',;
+      case 'softSkills':return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500',;
+      case 'other':return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;
+      default:return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
+    }
+  },;
+;
+  // Send notification email;
+  const sendEnhancementNotification = async (userId:string, email:string) => {;
+    try {;
+      await supabase.functions.invoke('send-email', {;
+        body:{;
+          to:email,;
+          subject:"Your Zion Talent Profile Has Been Enhanced",;
+          html:`;
+          <div style="font-family:Arial, sans-serif, max-width:600px, margin:0 auto,">;
+            <h2 style="color:#6D28D9,">Profile Enhancement Complete</h2>;
+            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
+            <p>We've added a professional summary and categorized your skills to help you stand out.</p>;
+            <p>You can review and edit these enhancements in your profile dashboard.</p>;
+            <div style="margin-top:30px, padding-top:20px, border-top:1px solid #eee,">;
+              <p style="color:#666, font-size:12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
+            </div>;
+          </div>;
+          `;
+        }
+      }),;
+    } catch (error) {;
+      console.error("Failed to send notification email:", error),;
+    }
+  },;
+;
+  // Handle form submission;
+  const onSubmit = async (values:TalentFormValues) => {;
+    if (skillTags.length === 0) {;
+      toast({;
+        title:"Skills required",;
+        description:"Please add at least one skill to your profile.",;
+        variant:"destructive"}),;
+      return,;
+    }
+;
+    setIsSubmitting(true),;
+;
+    try {;
+      // For actual implementation with Supabase;
+      if (!user?.id) {;
+        throw new Error("User not authenticated"),;
+      }
+      ;
+      // Enhance profile if not already done;
+      let finalSummary = "",;
+      let finalSkills = skillTags,;
+      ;
+      if (values.enhancedProfile && !generatedContent) {;
+        try {;
+          const { data:aiData } = await supabase.functions.invoke('talent-profile-enhancer', {;
+            body:{;
+              talentData:{;
+                name:values.name,;
+                title:values.title,;
+                bio:values.bio,;
+                skills:skillTags,;
+                location:values.location;
+              }
+            }
+          }),;
+          ;
+          if (aiData) {;
+            finalSummary = (aiData as EnhancedProfile).summary,;
+            // Safely merge AI suggested skills with user-provided skills;
+            const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills,;
+            const aiSkills:string[] = [],;
+            ;
+            // Extract skills from each category and ensure they're strings;
+            Object.values(categorizedSkills).forEach(categorySkills => {;
+              if (Array.isArray(categorySkills)) {;
+                categorySkills.forEach(skill => {;
+                  if (typeof skill === 'string' && skill) {;
+                    aiSkills.push(skill);
+                  }
+                }),;
+              }
+            }),;
+            ;
+            // Create a unique set of skills;
+            finalSkills = [...new Set([...skillTags, ...aiSkills])],;
+          }
+        } catch (error) {;
+          console.error("Error enhancing profile:", error),;
+          // Continue with submission even if enhancement fails;
+          finalSummary = "",;
+        }
+      } else if (generatedContent) {;
+        finalSummary = generatedContent.summary,;
+      }
+;
+      // Get user email for notification;
+      const { data:userData } = await supabase.auth.getUser(),;
+      const userEmail = userData.user?.email,;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {;
@@ -992,15 +1439,90 @@ if ( {) {
       if (error) throw error,
       */
     } catch (error: any) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      console.error("Error creating profile:", error);
+=======
+      console.error("Error creating profile:", error),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: "Error Creating Profile"
         description: error.message |"There was an error creating your profile. Please try again."
         variant: "destructive"})
       setIsSubmitting(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      */;
+
+    } catch (error: any) {;
+      console && console.error("Error creating profile:", error);
+      toast({;
+        title: "Error Creating Profile",;
+        description: error && error.message || "There was an error creating your profile. Please try again.",;
+        variant: "destructive"}),;
+      setIsSubmitting(false);
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  };
+  return (;
+=======
+<<<<<<< HEAD
+
+=======
+
+=======
+
+        });
+      if (error) throw error;
+      */;
+    } catch (error: any) {;
+      console && console.error("Error creating profile:", error);
+      toast({;
+        title: "Error Creating Profile",;
+        description: error && error.message || "There was an error creating your profile. Please try again.",;
+        variant: "destructive"}),;
+      setIsSubmitting(false);
+    }
+  }
+  return (
+
+    }
+  }
+
+  return (
+    <div className="max-w-4xl mx-auto p-4 md:p-6">
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader>
+          <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>
+          <CardDescription className="text-zion-slate">
+            Showcase your skills and experience to potential clients and employers.
+          </CardDescription>
+        </CardHeader>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)}>
+            <CardContent className="space-y-8">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -1048,6 +1570,11 @@ if ( {) {
   return (;
   };
   return (;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -1056,10 +1583,33 @@ if ( {) {
             Showcase your skills and experience to potential clients and employers.;
           </CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(onSubmit)}>;
+            <CardContent className="space-y-8">;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
         <Form {...form}>;
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -1311,18 +1861,130 @@ if (throw error) {
                             src={uploadedAvatar}
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          />;
+                        </AspectRatio>;
+                      ) : (;
+=======
+                          <img;
+                            src={uploadedAvatar}
+                            alt="Avatar preview";
+                            className="w-full h-full object-cover";
+                          />;
+                        </AspectRatio>;
+                      ) :(;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         <div className="flex items-center justify-center h-full">;
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;
                         </div>;
                       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                    </div>;
+
+                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
+                      <Upload className="mr-2 h-4 w-4" />;
+                      <span>Upload Photo</span>;
+
+=======
+                    </div>;
+                          />
+                        </AspectRatio>
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
+                        </div>
+                      )}
+                    </div>
+                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
+                      <Upload className="mr-2 h-4 w-4" />
+                      <span>Upload Photo</span>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <input
                         type="file"
                         accept="image/*"
                         className="hidden"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        onChange={handleAvatarUpload}
+
+                      />;
+                    </label>;
+                  </div>;
+                  <p className="text-sm text-zion-slate">;
+=======
+                          <FormMessage className="text - red - 400" />;
+                        </FormItem>)}
+                    />;
+                  </div>;
+                </div>;
+                {/* Upload Avatar */}
+                <div className="space - y-2">;
+                  <FormLabel className="text - zion - slate - light">Profile Picture</FormLabel>;
+                  <div className="flex items - center gap - 6">;
+                    <div className="relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light">;
+                      {uploaded_avatar ? (
+                        <AspectRatio ratio={1 / 1}>;
+                          <img;
+                            src={uploaded_avatar}
+                            alt="Avatar preview";
+                            className="w - full h - full object - cover";
+                          />;
+                        </AspectRatio>) : (
+                        <div className="flex items - center justify - center h - full">;
+                          <UserRound className="h - 10 w - 10 text - zion - slate opacity - 50" />;
+                        </div>)}
+                    </div>;
+                    <label className="flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors">;
+                      <Upload className="mr - 2 h - 4 w - 4" />;
+                      <span > Upload Photo</span>;
+=======
+;
+                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
+                      <Upload className="mr-2 h-4 w-4" />;
+                      <span>Upload Photo</span>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       <input;
                         type="file";
                         accept="image/*";
                         className="hidden";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        on_change={handleAvatarUpload}
+                      />;
+                    </label>;
+                  </div>;
+                  <p className="text - sm text - zion - slate">;
+
+=======
+                        onChange={handleAvatarUpload}
+                      />;
+                    </label>;
+                  </div>;
+                  <p className="text-sm text-zion-slate">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
                   </p>;
                 </div>;
@@ -1373,11 +2035,122 @@ if (throw error) {
                         </FormDescription>;
                       </div>;
                       <FormControl>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                />;
+
+                {form && form.watch("enhancedProfile") && (;
+                  <div className="flex justify-end">;
+
+=======
+                        onChange={handleAvatarUpload}
+                      />
+                    </label>
+                  </div>
+                  <p className="text-sm text-zion-slate">
+                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.
+                  </p>
+                </div>
+              </div>
+              <Separator className="bg-zion-blue-light/50" />
+              {/* Bio Section */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium text-white">Professional Bio</h3>
+                <FormField
+                  control={form.control}
+                  name="bio"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
+                          placeholder="Describe your professional background, expertise, and the value you bring to clients..."
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-400" />
+                      <FormDescription className="text-zion-slate">
+                        {field.value?.length |0}/1000 characters
+                      </FormDescription>
+                    </FormItem>
+                  )}
+                />
+                {/* AI Enhancement Option */}
+                <FormField
+                  control={form.control}
+                  name="enhancedProfile"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
+                      <div className="space-y-0.5">
+                        <FormLabel className="text-white flex items-center">
+                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
+                          AI Profile Enhancement
+                        </FormLabel>
+                        <FormDescription className="text-zion-slate-light">
+                          Let AI help optimize your profile for better visibility and engagement
+                        </FormDescription>
+                      </div>
+                      <FormControl>
+                        <Switch
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          className="data-[state=checked]:bg-zion-purple"
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                {form.watch("enhancedProfile") && (
+                  <div className="flex justify-end">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <Button
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={generateEnhancedProfile}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      disabled={isGenerating}>;
+                      <Sparkles className="mr-2 h-4 w-4" />;
+                      {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
+=======
+                        <Switch;
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          className="data-[state=checked]:bg-zion-purple";
+                        />;
+                      </FormControl>;
+                    </FormItem>;
+                  )}
+                />;
+                ;
+                {form.watch("enhancedProfile") && (;
+                  <div className="flex justify-end">;
+                    <Button;
+                      type="button";
+                      variant="outline";
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+                      onClick={generateEnhancedProfile}
+                      disabled={isGenerating}
+                    >;
+                      <Sparkles className="mr-2 h-4 w-4" />;
+                      {isGenerating ? "Generating..." :"Generate Enhanced Profile"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     </Button>;
                   </div>;
                 )}
@@ -1385,6 +2158,16 @@ if (throw error) {
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>;
                   </div>;
@@ -1401,6 +2184,16 @@ if (throw error) {
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         onClick={applyGeneratedContent}>;
                         <Check className="mr-1 h-3 w-3" /> Apply;
                       </Button>;
@@ -1416,6 +2209,16 @@ if (throw error) {
                           <div className="flex flex-wrap gap-2 mt-1">;
                             {Object && Object.entries(generatedContent && generatedContent.categorizedSkills).map(([category, skills]) => (;
                               <div key={category} className="flex items-center gap-2">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
                                   {category}
@@ -1578,6 +2381,26 @@ if (throw error) {
                                 type="radio"
                                 id="available"
                                 value="available"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                                checked={field && field.value === "available"}
+                                onChange={() => field && field.onChange("available")}
+=======
+                                checked={field && field.value === "available"}
+                                onChange={() => field && field.onChange("available")}
+                              <input;
+                                type="radio";
+                                id="available";
+                                value="available";
+                                checked={field.value === "available"}
+                                onChange={() => field.onChange("available")}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="available" className="text-white flex items-center gap-2">;
@@ -1585,10 +2408,54 @@ if (throw error) {
                                 Available Now;
                               </label>;
                             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                            <div className="flex items-center space-x-2">;
+
+=======
+                                checked={field.value === "available"}
+                                onChange={() => field.onChange("available")}
+                                className="text-zion-purple focus:ring-zion-purple"
+                              />
+                              <label htmlFor="available" className="text-white flex items-center gap-2">
+                                <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                                Available Now
+                              </label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                               <input
                                 type="radio"
                                 id="limited"
                                 value="limited"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                                checked={field && field.value === "limited"}
+                                onChange={() => field && field.onChange("limited")}
+=======
+                                checked={field && field.value === "limited"}
+                                onChange={() => field && field.onChange("limited")}
+;
+                            <div className="flex items-center space-x-2">;
+                              <input;
+                                type="radio";
+                                id="limited";
+                                value="limited";
+                                checked={field.value === "limited"}
+                                onChange={() => field.onChange("limited")}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                                 className="text-zion-purple focus:ring-zion-purple";
                               />;
                               <label htmlFor="limited" className="text-white flex items-center gap-2">;
@@ -1596,10 +2463,127 @@ if (throw error) {
                                 Limited Availability;
                               </label>;
                             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                            <div className="flex items-center space-x-2">;
+
+=======
+                                checked={field.value === "limited"}
+                                onChange={() => field.onChange("limited")}
+                                className="text-zion-purple focus:ring-zion-purple"
+                              />
+                              <label htmlFor="limited" className="text-white flex items-center gap-2">
+                                <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
+                                Limited Availability
+                              </label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                               <input
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                                checked={field && field.value === "unavailable"}
+                                onChange={() => field && field.onChange("unavailable")}
+                                className="text-zion-purple focus:ring-zion-purple";
+                              />;
+                              <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
+                                <div className="h-2 w-2 rounded-full bg-red-500"></div>;
+=======
+                          <Button;
+                            type="button";
+                            variant="outline";
+                            className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";
+                            on_click={handleAddSkill}
+                          >;
+                            Add;
+                          </Button>;
+                        </div>;
+                        <FormDescription className="text - zion - slate">;
+                          Press Enter or click Add to include a skill;
+                        </FormDescription>;
+                        <FormMessage className="text - red - 400" />;
+                      </FormItem>)}
+                  />;
+                  <div className="flex flex - wrap gap - 2 mt - 2">;
+                    {skill_tags.map (skill => (
+                      <Badge;
+                        key={skill}
+                        className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap - 1";
+                      >;
+                        {skill}
+                        <button;
+                          type="button";
+                          on_click={() => handleRemoveSkill (skill)}
+                          className="rounded - full hover:bg - zion - purple - dark / 20 p - 0.5";
+                        >;
+                          <X className="h - 3 w - 3" />;
+                        </button>;
+                      </Badge>))}
+                    {skill_tags.length === 0 && (
+                      <p className="text - zion - slate text - sm italic">No skills added yet</p>)}
+                  </div>;
+                </div>;
+                {/* Availability Section */}
+                <div className="space - y-4">;
+                  <h3 className="text - lg font - medium text - white">Availability</h3>;
+                  <FormField;
+                    control={form.control}
+                    name="availability";
+                    render={({ field }) => (
+                      <FormItem className="space - y-4">;
+                        <FormLabel className="text - zion - slate - light">Current Status</FormLabel>;
+                        <FormControl>;
+                          <div className="space - y-2">;
+                            <div className="flex items - center space - x-2">;
+                              <input;
+                                type="radio";
+                                id="available";
+                                value="available";
+                                checked={field.value === "available"}
+                                on_change={() => field.on_change ("available")}
+                                className="text - zion - purple focus:ring - zion - purple";
+                              />;
+                              <label html_for="available" className="text - white flex items - center gap - 2">;
+                                <div className="h - 2 w - 2 rounded - full bg - green - 500"></div>;
+                                Available Now;
+                              </label>;
+                            </div>;
+                            <div className="flex items - center space - x-2">;
+                              <input;
+                                type="radio";
+                                id="limited";
+                                value="limited";
+                                checked={field.value === "limited"}
+                                on_change={() => field.on_change ("limited")}
+                                className="text - zion - purple focus:ring - zion - purple";
+                              />;
+                              <label html_for="limited" className="text - white flex items - center gap - 2">;
+                                <div className="h - 2 w - 2 rounded - full bg - yellow - 500"></div>;
+                                Limited Availability;
+                              </label>;
+                            </div>;
+                            <div className="flex items - center space - x-2">;
+=======
+;
+                            <div className="flex items-center space-x-2">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                               <input;
                                 type="radio";
                                 id="unavailable";
@@ -1621,6 +2605,65 @@ if (throw error) {
                     <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>;
                     <Textarea
                       placeholder="Describe your availability, working hours, or when you'll be available next..."
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                                checked={field.value === "unavailable"}
+                                onChange={() => field.onChange("unavailable")}
+                                className="text-zion-purple focus:ring-zion-purple"
+                              />
+                              <label htmlFor="unavailable" className="text-white flex items-center gap-2">
+                                <div className="h-2 w-2 rounded-full bg-red-500"></div>
+                                Currently Unavailable
+                              </label>
+                            </div>
+                          </div>
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                  <div className="pt-2">
+                    <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>
+                    <Textarea
+                      placeholder="Describe your availability, working hours, or when you'll be available next..."
+                      className="mt-1.5 bg-zion-blue border-zion-blue-light text-white"
+                    />
+                    <FormDescription className="text-zion-slate mt-1.5 text-sm">
+                      Let clients know about your working hours, time zone, or availability for calls.
+                    </FormDescription>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="border-t border-zion-blue-light pt-6">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                >
+                  Save as Draft
+                </Button>
+                <Button
+                  type="submit"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Creating Profile..." : "Create Profile"}
+                </Button>
+              </div>
+            </CardFooter>
+          </form>
+        </Form>
+      </Card>
+    </div>
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       className="mt-1 && 1.5 bg-zion-blue border-zion-blue-light text-white"
                     />;
                     <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;
@@ -1850,3 +2893,10 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

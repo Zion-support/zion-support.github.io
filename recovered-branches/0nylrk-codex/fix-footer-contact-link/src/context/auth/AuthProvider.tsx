@@ -8,10 +8,46 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {useAuthState} from "./useAuthState";
 import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export const AuthProvider = ({ children }: { children: React && React.ReactNode }) => {;
+=======
+import React, { useEffect } from "react",;
+import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
+import { useAuthOperations } from "../../hooks/useAuthOperations",;
+import { AuthContext } from "./AuthContext",;
+import { cleanupAuthState } from "../../utils/authUtils",;
+import { useNavigate, useLocation } from 'react-router-dom',;
+import { useAuthState } from "./useAuthState",;
+import { useAuthEventHandlers } from "./useAuthEventHandlers",;
+import { mapProfileToUser } from "./profileMapper",;
+;
+export const AuthProvider = ({ children } { children:React.ReactNode }) => {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { ;
     user, setUser, ;
     isLoading, setIsLoading, ;
     onboardingStep, setOnboardingStep ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  const {
+    user, setUser
+    isLoading, setIsLoading
+    onboardingStep, setOnboardingStep
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } = useAuthState();
 
   const navigate = useNavigate();
@@ -28,6 +64,37 @@ import {mapProfileToUser} from "./profileMapper";
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    loginWithWeb3;
+  } = useAuthOperations(setUser, setIsLoading);
+
+
+
+=======
+=======
+    loginWithWeb3
+  } = useAuthOperations(setUser, setIsLoading);
+  // Wrapper for login to match the AuthContextType interface
+  const login = async (email: string, password: string) => {
+    return loginImpl({ email, password })
+  }
+  // Wrapper for signup to match the AuthContextType interface
+  const signup = async (email: string, password: string, userData?: any) => {
+    return signupImpl({ email, password, display_name: userData })
+  }
+  useEffect(() => {
+    // Clean up any potential stale auth state before setting up listeners
+    cleanupAuthState();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -37,12 +104,55 @@ import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 import { mapProfileToUser } from "./profileMapper",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
     isLoading, setIsLoading, 
+<<<<<<< HEAD
     onboardingStep, setOnboardingStep 
   } = useAuthState(),
+=======
+<<<<<<< HEAD
+    onboardingStep, setOnboardingStep 
+  } = useAuthState(),
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    onboardingStep, setOnboardingStep 
+  } = useAuthState(),
+
+=======
+    onboardingStep, setOnboardingStep 
+  } = useAuthState(),
+
+  
+    onboardingStep, setOnboardingStep ;
+  } = useAuthState();
+    onboardingStep, setOnboardingStep 
+  } = useAuthState(),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    onboardingStep, setOnboardingStep 
+  } = useAuthState(),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   
   const navigate = useNavigate(),
   const location = useLocation(),
@@ -70,7 +180,24 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }
   useEffect(() => {
     // Clean up any potential stale auth state before setting up listeners
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    cleanupAuthState(),
+    
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         if (session?.user) {
@@ -78,16 +205,67 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             const { data: profile, error } = await getFromProfiles()
               .select('*')
               .eq('id', session.user.id)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+=======
+
+              .single();
+            if (profile) {
+              const mappedUser = mapProfileToUser(session.user, profile);
+              setUser(mappedUser);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               .single(),
 
             if (profile) {
               const mappedUser = mapProfileToUser(session.user, profile),
               setUser(mappedUser),
               
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               // Show welcome toast when user logs in
               if (event === 'SIGNED_IN') {
                 handleSignedIn(mappedUser)
               }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            } else if (error) {
+              console.error("Error fetching user profile:", error),
+              setUser(null)
+            }
+          } catch (error) {
+            console.error("Error fetching user profile:", error),
+            setUser(null)
+<<<<<<< HEAD
+
+=======
+          }
+        } else {
+          setUser(null);
+          // Show logout toast when user logs out
+          if (event === 'SIGNED_OUT') {
+            handleSignedOut()
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useEffect } from "react",;
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
 import { useAuthOperations } from "../../hooks/useAuthOperations",;
@@ -140,6 +318,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
               // Show welcome toast when user logs in;
               if (event === 'SIGNED_IN') {;
                 handleSignedIn(mappedUser);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }
             } else if (error) {;
               console && console.error("Error fetching user profile:", error);
@@ -188,6 +371,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     logout;
     resetPassword;
     updateProfile;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useEffect } from './react';
 import { supabase, getFromProfiles } from '../../integrations / supabase / client';
 import { useAuthOperations } from '../../hooks / useAuthOperations';
@@ -214,6 +408,18 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     logout;
     reset_password;
     update_profile;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
@@ -340,6 +546,15 @@ if ( {) {
     </AuthContext.Provider>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 };
 
@@ -451,3 +666,10 @@ data: {
 };
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

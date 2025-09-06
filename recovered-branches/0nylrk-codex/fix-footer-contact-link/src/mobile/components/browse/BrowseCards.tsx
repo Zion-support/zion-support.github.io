@@ -4,6 +4,31 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+interface BrowseItem {;
+  id: string,;
+  title: string,;
+  subtitle: string,;
+  description: string,;
+=======
+import React, { useState } from './react';
+import { Card, CardContent } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -17,6 +42,20 @@ interface BrowseItem {
   location?: string;
   badges: string[]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  price?: string;
+  image?: string;
+  match?: number;
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface BrowseItem {;
   id: string,;
@@ -29,12 +68,25 @@ import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+interface BrowseItem {
+  id: string,
+  title: string,
+  subtitle: string,
+  description: string,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface BrowseItem {
   id: string;
   title: string;
   subtitle: string;
   description: string;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   location?: string;
   badges: string[];
   price?: string;
@@ -52,6 +104,12 @@ interface BrowseCardsProps {
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   timePosted?: string
 }
 interface BrowseCardsProps {
@@ -62,6 +120,7 @@ interface BrowseCardsProps {
   onViewDetails: (id: string) => void
 }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
   const [savedItems, setSavedItems] = useState<string[]>([]);
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
@@ -71,9 +130,27 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
   const [savedItems, setSavedItems] = useState<string[]>([]),
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const toggleSaved = (id: string) => {
     setSavedItems((prev) =>
       prev.includes(id)
+<<<<<<< HEAD
+        ? prev.filter(itemId => itemId !== id)
+        : [...prev, id]
+    )
+  price?: string;
+  image?: string;
+  match?: number;
+=======
         ? prev.filter((itemId) => itemId !== id)
         : [...prev, id],
     );
@@ -195,6 +272,11 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
   price?: string;
   image?: string;
   match?: number;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className="space-y-4 pb-24">;
@@ -224,10 +306,59 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                   {savedItems && savedItems.includes(item && item.id) ? (;
                     <BookmarkCheck className="h-5 w-5 text-primary" />;
                   ) : (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />;
+                  )}
+<<<<<<< HEAD
+=======
+=======
+                    <h3 className="font-medium">{item.title}</h3>;
+                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>;
+                  </div>;
+                </div>;
+                ;
+                <button ;
+                  className="h-8 w-8 flex items-center justify-center";
+                  onClick={() => toggleSaved(item.id)}
+                >;
+                  {savedItems.includes(item.id) ? (;
+                    <BookmarkCheck className="h-5 w-5 text-primary" />;
+                  ) :(;
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />;
+                  )}
+                <button
+                <button 
+                  className="h-8 w-8 flex items-center justify-center"
+                  onClick={() => toggleSaved(item.id)}
+                >
+                  {savedItems.includes(item.id) ? (
+                    <BookmarkCheck className="h-5 w-5 text-primary" />
+                  ) : (
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />
+                  )}
+                </button>
+              </div>
+              <div className="mt-3 flex flex-wrap gap-1">
+                {item.badges.map((badge, index) => (
+                  <Badge
+                    key={index}
+                    variant="outline"
+                    className="text-xs font-normal"
+                  >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -305,6 +436,16 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {badge}
                   </Badge>;
                 ))}
@@ -387,6 +528,28 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 )}
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+            <div className="border-t border-border p-3 flex justify-end">;
+
+              <Button
+                size="sm"
+                onClick={() => onViewDetails(item && item.id)}
+=======
+              <Button
+                size="sm"
+                onClick={() => onViewDetails(item && item.id)}
+            ;
+            <div className="border-t border-border p-3 flex justify-end">;
+              <Button ;
+                size="sm";
+                onClick={() => onViewDetails(item.id)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {badge}
                   </Badge>;
                 ))}
@@ -497,6 +660,15 @@ function BrowseCards() {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  interface BrowseItem {
   id: string;
@@ -587,3 +759,10 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

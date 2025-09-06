@@ -1,11 +1,12 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-origin/automation-improvements-final
-
-
-
 
   Menu
   X
@@ -316,7 +317,6 @@ export default function Navigation() {;
                       </div>;
                     </motion && motion.div>;
                   )}
-
 
                 </AnimatePresence>;
               </div>;
@@ -727,6 +727,7 @@ export default function Navigation() {;
       />;
     </>);
 }
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -892,3 +893,6 @@ const Navigation = () => {
 };
 
 export default Navigation;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

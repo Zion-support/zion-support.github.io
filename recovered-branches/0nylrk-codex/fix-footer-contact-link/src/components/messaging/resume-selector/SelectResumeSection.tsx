@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { FileText  } from 'lucide-react';
+import { ResumeOption  } from '../resume-selector/types';
+import { ResumePreviewCard  } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+interface SelectResumeSectionProps {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
@@ -11,6 +32,20 @@ import React from 'react';
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
@@ -23,7 +58,18 @@ interface SelectResumeSectionProps {;
   handleDownloadResume: () => void,;
   isLoading: boolean;
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
@@ -33,6 +79,34 @@ interface SelectResumeSectionProps {;
   isLoading: boolean
 }
 export function SelectResumeSection({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
+  isLoading
+}: SelectResumeSectionProps) {
+  return (
+    <div className="space-y-2">
+      {resumeOptions.length === 0 ? (
+        <p className="text-sm text-zion-slate">No saved resumes found.</p>
+      ) : (
+        <>
+          {resumeOptions.map((option) => (
+            <button
+              key={option.id}
+              className={`w-full text-left p-3 rounded-md transition ${
+                selectedResume?.id === option.id
+                  ? 'bg-zion-purple/20 border border-zion-purple'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {FileText} from 'lucide-react';
 import {ResumeOption} from '../resume - selector / types';
 import {ResumePreviewCard} from './ResumePreviewCard';
@@ -40,6 +114,12 @@ import {ResumePreviewCard} from './ResumePreviewCard';
                 selectedResume?.id === option && option.id 
                   ? 'bg-zion-purple/20 border border-zion-purple' 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option && option.id)}
@@ -58,6 +138,62 @@ import {ResumePreviewCard} from './ResumePreviewCard';
           )}
         </>;
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    </div>;
+  );
+}
+
+<<<<<<< HEAD
+=======
+import {Resume} from '@/types / resume';
+interface SelectResumeSectionProps {
+  resume_options: ResumeOption[],
+  selected_resume: ResumeOption | null,
+  handleResumeSelect: (resume_id: string) => void,
+  handleDownloadResume: () => void,
+  is_loading: boolean;
+}
+export /**
+ * SelectResumeSection - Function description
+ */
+function SelectResumeSection() {
+  return (
+    <div className="space - y-2">;
+      {resume_options.length === 0 ? (
+        <p className="text - sm text - zion - slate">No saved resumes found.</p>) : (
+        <>;
+          {resume_options.map ((option) => (
+            <button;
+              key={option.id}
+              className={`w - full text - left p - 3 rounded - md transition ${
+                selected_resume?.id === option.id;
+                  ? 'bg - zion - purple / 20 border border - zion - purple';
+                  : 'bg - zion - blue - dark / 30 hover:bg - zion - blue - dark / 50';
+              }`}
+              on_click={() => handleResumeSelect (option.id)}
+            >;
+              <div className="flex items - center">;
+                <FileText className="h - 4 w - 4 mr - 2 text - zion - cyan" />;
+                <span className="text - white">{option.title}</span>;
+              </div>;
+            </button>))}
+          {selected_resume?.type === 'ai_resume' && selected_resume.resume && (
+            <ResumePreviewCard;
+              resume={selected_resume.resume as Resume}
+              on_download={handleDownloadResume}
+              is_loading={is_loading}
+            />)}
+        </>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from 'react',;
 import { FileText } from 'lucide-react',;
@@ -155,3 +291,10 @@ export function SelectResumeSection({;
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

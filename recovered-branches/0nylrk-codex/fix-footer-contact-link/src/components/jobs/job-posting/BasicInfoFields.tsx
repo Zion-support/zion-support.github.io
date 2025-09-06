@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {;
   FormField,;
   FormItem,;
@@ -11,6 +30,15 @@ import {;
   FormLabel,
   FormControl,
   FormMessage,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
@@ -35,10 +63,30 @@ FormField
   FormLabel
   FormControl
   FormMessage
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from './react';
 import { Control  } from './react - hook - form';
 import {
@@ -70,10 +118,17 @@ interface BasicInfoFieldsProps {
 }
 
 
+<<<<<<< HEAD
+=======
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="space-y-4">
       <FormField
@@ -297,10 +352,24 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     onChange(e),;
                   }}
                   {...rest}
+<<<<<<< HEAD
+=======
                 />;
               </FormControl>;
               <FormMessage />;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        />;
+
+
+=======
+                  }}
+                  {...rest}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <FormField
           control={control}
           name="budgetMax"
@@ -349,6 +418,8 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     on_change (e);
                   }}
                   {...rest}
+<<<<<<< HEAD
+=======
                 />;
               </FormControl>;
               <FormMessage />;
@@ -486,6 +557,11 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 <Card>
                   }}
                   {...rest}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
@@ -496,17 +572,75 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               </FormControl>;
               <FormMessage />;
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
             jobTitle={control._formValues.title || ""}
             category={control._formValues.category || ""}
             experienceLevel={control._formValues.experienceLevel || ""}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onSuggestionApplied={handleSuggestionApplied}
           />
         </CardContent>
       </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        />;
+      </div>;
+
+      <Card>;
+        <CardContent className="pt-4">;
+          <ClientBudgetRecommender
+            jobTitle={control && control._formValues.title || ""}
+            category={control && control._formValues.category || ""}
+            experienceLevel={control && control._formValues.experienceLevel || ""}
+=======
+            </FormItem>;
+          )}
+        />;
+      </div>;
+      ;
+      <Card>;
+        <CardContent className="pt-4">;
+          <ClientBudgetRecommender;
+            jobTitle={control._formValues.title || ""}
+            category={control._formValues.category || ""}
+            experienceLevel={control._formValues.experienceLevel || ""}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             onSuggestionApplied={handleSuggestionApplied}
           />;
         </CardContent>;
@@ -606,5 +740,18 @@ return (<div className="space-y-4" > <FormField control= {
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 };
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

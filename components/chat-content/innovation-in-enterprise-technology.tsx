@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>;
@@ -14,9 +19,11 @@
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
-
-
 
 export default function InnovationInEnterpriseTechnologyPage() {
   return (
@@ -57,6 +64,7 @@ function InnovationInEnterpriseTechnologyPage() {
     </div>);
 }
 
+<<<<<<< HEAD
 
 
 
@@ -67,6 +75,8 @@ function InnovationInEnterpriseTechnologyPage() {
 
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function InnovationInEnterpriseTechnologyPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -82,6 +92,7 @@ export default function InnovationInEnterpriseTechnologyPage() {
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Innovation in Enterprise Technology</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
+<<<<<<< HEAD
     </div>
   );
 
@@ -94,3 +105,6 @@ export default function InnovationInEnterpriseTechnologyPage() {
   );
 }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

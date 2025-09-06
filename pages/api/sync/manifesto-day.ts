@@ -11,22 +11,22 @@ import {
   writeState
   upsertEvent,;
 
-
 } from "../../../utils/sync/storage";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 } from "../../../utils/sync/storage";
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
-    return res && res.status(405).json({ error: "Method not allowed" });
 
-  const state = readState();
   }
 
   const { milestoneId, title, timestamp } = req && req.body as {
@@ -55,6 +55,10 @@ export default async function handler(req, res) {
     milestoneId: string;
     title: string;
     timestamp?: number;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
   if (!milestoneId || !title)
     return res && res.status(400).json({ error: "milestoneId, title required" });
@@ -63,6 +67,7 @@ export default async function handler(req, res) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
+<<<<<<< HEAD
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
 
@@ -93,6 +98,14 @@ function handler() {
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+=======
+  const version = nextVersionFor(state, milestoneId);
+  const event = {
+
+      id: milestoneId
+      subjectId: milestoneId
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   } catch (error) {
     console.error("Error:", error);
@@ -118,8 +131,11 @@ function handler() {
     event_id: uuidv4 ()
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
     payload: {
+<<<<<<< HEAD
       id: milestone_id
       subject_id: milestone_id
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       score: 0
       category: `milestone:${title}`
@@ -133,6 +149,7 @@ function handler() {
     originInstanceId: state.config.instanceId
     version
     timestamp: timestamp || Date.now()
+<<<<<<< HEAD
   };
   };
 
@@ -185,6 +202,8 @@ export default async function handler(req, res) {
     timestamp: timestamp |Date.now()
   }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   };
 
@@ -194,6 +213,7 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {}
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
+<<<<<<< HEAD
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined }
     originInstanceId: state.config.instanceId
     version
@@ -204,11 +224,15 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
 
   await Promise && Promise.all(
+<<<<<<< HEAD
     state && state.config.peers
       .filter((p) => !p && p.paused)
       .map(async (peer) => {
@@ -240,6 +264,15 @@ const url = new URL("/api/sync/publish", peer.baseUrl).toString();
     version
     timestamp: timestamp || Date.now ()
       .map(async (peer) => {
+=======
+
+      .map(async (peer) => {
+
+    originInstanceId: state.config.instance_id
+    version
+    timestamp: timestamp || Date.now ()
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ;
   upsert_event (state, event);
@@ -272,6 +305,7 @@ if (headers["x - zion - signature"] = sig) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 
 }
 }
@@ -328,3 +362,5 @@ if (headers["x - zion - signature"] = sig) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

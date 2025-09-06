@@ -1,10 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [
     ['MetricValueTrend%'];
 
+<<<<<<< HEAD
 import { requireSuperadminApi } from '../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -16,6 +21,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ['MetricValueTrend%'];
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -25,6 +32,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
 
   res.status(200).send(csv)
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { requireSuperadminApi } from '../../../utils / api / auth';
 export default /**
  * handler - Function description
@@ -35,6 +46,7 @@ function handler() {
 }
 }
 
+<<<<<<< HEAD
 }
 
 
@@ -44,3 +56,5 @@ function handler() {
 }
 }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

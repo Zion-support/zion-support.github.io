@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+import { ServiceVariant } from '../types / service - variants';
+
+export interface Innovative2026AIService {
+
+  {
+
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   contactInfo: {
       
     mobile: string, email: string,
@@ -9,6 +39,42 @@
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
+    launchDate: '2025-06-20'
+    customers: 1900
+    rating: 4.8
+    reviews: 950
+      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
+    launchDate: '2025-06-20',
+    customers: 1900,
+    rating: 4.8,
+    reviews: 950,;
+  },];
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
+    launchDate: '2025-06-20';
+    customers: 1900;
+    rating: 4.8
+
+    reviews: 950
+  }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
@@ -38,6 +104,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 950
       website: 'https://ziontechgroup.com';
@@ -48,6 +120,21 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     customers: 1900;
     rating: 4.8,
     reviews: 950;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+];
+=======
+<<<<<<< HEAD
+];
+=======
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;

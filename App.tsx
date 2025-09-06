@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
@@ -30,5 +31,18 @@ export default function App() {
         </div>
       </Router>
     </ErrorBoundary>
+=======
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Zion Tech Group</h1>
+        <p>Welcome to our application</p>
+      </header>
+    </div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   );
 }
+
+export default App;

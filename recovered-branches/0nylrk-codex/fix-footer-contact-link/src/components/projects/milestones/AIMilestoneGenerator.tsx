@@ -1,4 +1,33 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
+import {Loader2, Sparkles, Plus, Calendar} from 'lucide-react';
+import {format, parseISO} from 'date-fns';
+import {MilestoneInput, GeneratedMilestone, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
+import {Badge} from '@/components/ui/badge';
+interface AIMilestoneGeneratorProps {;
+  scope: string,;
+  startDate: string,;
+  endDate: string | null,;
+  projectType: string,;
+  onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
+  onAddMilestone: (milestone: GeneratedMilestone) => void;
+}
+
+export function AIMilestoneGenerator(): any ({;
+
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 export function AIMilestoneGenerator({;
@@ -28,15 +57,87 @@ interface AIMilestoneGeneratorProps {
 export function AIMilestoneGenerator({
 
 export function AIMilestoneGenerator({;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 export function AIMilestoneGenerator({;
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   scope;
   startDate;
   endDate;
   projectType;
   onAddMilestones;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  onAddMilestone;
+}: AIMilestoneGeneratorProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
+<<<<<<< HEAD
+
+=======
+=======
+  onAddMilestone
+}: AIMilestoneGeneratorProps) {
+  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
+
+  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
+  const handleGenerateMilestones = async () => {
+    if (!scope |!startDate |!projectType) {
+      return
+    }
+    const input: MilestoneInput = {
+      scope;
+      startDate;
+      endDate
+      projectType
+    }
+    await generateMilestones(input);
+    // Initially select all milestones
+    const initialSelection = {}
+    generatedMilestones.forEach((_, index) => {
+      initialSelection[index] = true
+    });
+    setSelectedMilestones(initialSelection)
+  }
+  const handleAddToProject = () => {
+    const selectedMilestonesList = generatedMilestones.filter((_, index) =>
+      selectedMilestones[index]
+    );
+    onAddMilestones(selectedMilestonesList);
+    clearGeneratedMilestones();
+    setSelectedMilestones({})
+  }
+  const toggleMilestoneSelection = (index: number) => {
+    setSelectedMilestones(prev => ({
+      ...prev
+      [index]: !prev[index]
+    }))
+  }
+  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
+    onAddMilestone(milestone)
+  }
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     }
 
@@ -46,6 +147,11 @@ import React, { useState } from 'react';
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -82,6 +188,65 @@ export function AIMilestoneGenerator({;
     if (!scope || !startDate || !projectType) {;
       return;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    const input: MilestoneInput = {;
+<<<<<<< HEAD
+=======
+      scope;
+      startDate;
+      endDate,;
+      projectType;
+    };
+
+    await generateMilestones(input);
+    // Initially select all milestones;
+    const initialSelection = {};
+    generatedMilestones && generatedMilestones.forEach((_, index) => {;
+      initialSelection[index] = true;
+    });
+    setSelectedMilestones(initialSelection);
+  };
+
+  const handleAddToProject = () => {;
+    const selectedMilestonesList = generatedMilestones && generatedMilestones.filter((_, index) => ;
+      selectedMilestones[index];
+    );
+
+    onAddMilestones(selectedMilestonesList);
+    clearGeneratedMilestones();
+    setSelectedMilestones({});
+  };
+
+=======
+;
+    const input: MilestoneInput = {;
+      scope,;
+      startDate,;
+      endDate,;
+      projectType;
+    },;
+    await generateMilestones(input),;
+    // Initially select all milestones;
+    const initialSelection = {},;
+    generatedMilestones.forEach((_, index) => {;
+      initialSelection[index] = true;
+    }),;
+    setSelectedMilestones(initialSelection);
+  },;
+  const handleAddToProject = () => {;
+    const selectedMilestonesList = generatedMilestones.filter((_, index) =>;
+      selectedMilestones[index];
+    ),;
+    onAddMilestones(selectedMilestonesList),;
+    clearGeneratedMilestones(),;
+    setSelectedMilestones({});
+  },;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const toggleMilestoneSelection = (index: number) => {;
     setSelectedMilestones(prev => ({;
       ...prev,;
@@ -92,6 +257,11 @@ export function AIMilestoneGenerator({;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
   },
@@ -198,6 +368,26 @@ export function AIMilestoneGenerator({;
           <Sparkles className="w-5 h-5 mr-2 text-primary" />;
           AI Milestone Generator;
         </h3>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
+<<<<<<< HEAD
+=======
+
+          disabled={isGenerating || !scope || !startDate || !projectType}>;
+=======
+          disabled={isGenerating || !scope || !startDate || !projectType}>;
+        <Button;
+          variant="outline";
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating || !scope || !startDate || !projectType}
+        >;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {isGenerating ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
@@ -214,9 +404,54 @@ export function AIMilestoneGenerator({;
           <CardContent className="pt-6">;
             <div className="flex justify-between items-center mb-4">;
               <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                {generatedMilestones && generatedMilestones.length} milestones generated based on your project scope;
+              </p>;
+              <Button
+                onClick={handleAddToProject}
+                disabled={!Object && Object.values(selectedMilestones).some(Boolean)}>;
+                Add Selected to Project;
+              </Button>;
+            </div>;
+
+            <Accordion type="multiple" className="w-full">;
+              {generatedMilestones && generatedMilestones.map((milestone, index) => (;
+                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">;
+                  <div className="flex items-center justify-between">;
+                    <div className="flex items-center flex-1">;
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                      <input
+                        type="checkbox"
+=======
+                      <input
+                        type="checkbox"
+                {generatedMilestones.length} milestones generated based on your project scope;
+              </p>;
+              <Button ;
+                onClick={handleAddToProject}
+                disabled={!Object.values(selectedMilestones).some(Boolean)}
+              >;
+                Add Selected to Project;
+              </Button>;
+            </div>;
+;
+            <Accordion type="multiple" className="w-full">;
+              {generatedMilestones.map((milestone, index) => (;
+                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">;
+                  <div className="flex items-center justify-between">;
+                    <div className="flex items-center flex-1">;
+                      <input;
+                        type="checkbox";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] |false}
                         onChange={() => toggleMilestoneSelection(index)}
+<<<<<<< HEAD
+=======
                         className="mr-2 w-4 h-4 rounded text-primary";
                       />;
                       <AccordionTrigger className="hover:no-underline flex-1 text-left">;
@@ -232,6 +467,11 @@ export function AIMilestoneGenerator({;
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] |false}
                         onChange={() => toggleMilestoneSelection(index)}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                             AI Suggested;
                           </Badge>;
                         </div>;
@@ -302,6 +542,15 @@ export function AIMilestoneGenerator({;
         </Card>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  await generateMilestones (input);
 //Initially select all milestones const handleAddToProject = () => {
@@ -423,3 +672,10 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -25,6 +25,21 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        drop_debugger: true
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  }
+});
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         drop_debugger: true,
       },
     },
@@ -32,4 +47,10 @@ export default defineConfig({
   optimizeDeps: {
     include: ["react", "react-dom", "framer-motion", "lucide-react"],
   },
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

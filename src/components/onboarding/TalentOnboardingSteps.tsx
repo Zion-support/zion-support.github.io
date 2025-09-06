@@ -1,18 +1,3 @@
-return <OnboardingTracker steps={steps} />
-
-import React from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
-import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
-export /**
- * TalentOnboardingSteps - Function description
- */
-function TalentOnboardingSteps() {
-  const { user } = use_auth ();
-  const onboarding_status = useOnboardingStatus ();
-  const steps: OnboardingStep[] = [;
-
 
   const steps: OnboardingStep[] = [
     {
@@ -20,16 +5,25 @@ function TalentOnboardingSteps() {
       label: "Complete your profile",
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: "skills",
       label: "Add your top skills",
       completed: onboardingStatus.skillsAdded,
       link: "/profile/skills",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       id: "availability",
       label: "Set your availability",
       completed: onboardingStatus.availabilitySet,
       link: "/profile/availability",
+<<<<<<< HEAD
       action: "Set",
     },
     {
@@ -40,7 +34,14 @@ function TalentOnboardingSteps() {
       action: "View Matches",
     },
   ];
+=======
+
+      action: "Set",
+    },
+    {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
+

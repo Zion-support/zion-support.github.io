@@ -55,10 +55,8 @@ export default function handler(req, res) {
     const counts = new Map<string, number>();
     for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
     const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
+<<<<<<< HEAD
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-
-
-  }
-  return res.status(405).end()
-};

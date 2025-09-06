@@ -24,7 +24,6 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
     const encoded = encodeURIComponent(prompt && prompt.text);
     window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
 
-
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
       <p className='mb-4 text-sm'>{prompt.text}</p>
@@ -37,10 +36,9 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
 
-
 }
   );
-};
+
 }
 
 import { useState } from 'react';

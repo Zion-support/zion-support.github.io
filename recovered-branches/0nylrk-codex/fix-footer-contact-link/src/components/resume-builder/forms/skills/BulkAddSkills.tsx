@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -63,6 +80,17 @@ if ( {) {
         }
       }
     } catch (err: any) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (enhancedContent) {;
         try {;
           // Parse the JSON response;
@@ -83,8 +111,15 @@ if ( {) {
 
 
   },
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
   },
+<<<<<<< HEAD
+=======
 
 
 
@@ -99,6 +134,7 @@ if ( {) {
   },
   };
   },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -107,6 +143,93 @@ if ( {) {
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea
           <Textarea 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+            className="min-h-24"
+            placeholder="Python, React, TypeScript, Project Management, Communication..."
+            value={bulkSkills}
+            onChange={(e) => setBulkSkills(e.target.value)}
+          />
+        </div>
+
+
+  },
+  };
+  },
+
+
+
+  return (
+
+  }
+  return (
+
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Loader2, Sparkles } from 'lucide-react',;
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
+import { useResume } from '@/hooks/useResume',;
+import { BulkAddSkillsProps } from './types',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import { Textarea } from '@/components/ui/textarea',;
+;
+export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
+  const [bulkSkills, setBulkSkills] = useState(''),;
+  const [error, setError] = useState<string | null>(null),;
+  const { enhanceContent, isEnhancing } = useResumeEnhancer(),;
+  const { addSkill } = useResume(),;
+;
+  const handleCategorizeSkills = async () => {;
+    if (!bulkSkills || bulkSkills.trim().length === 0) {;
+      setError('Please enter some skills to categorize'),;
+      return,;
+    }
+    ;
+    setError(null),;
+    try {;
+      const enhancedContent = await enhanceContent(;
+        bulkSkills,;
+        'skill-categorization';
+      ),;
+      ;
+      if (enhancedContent) {;
+        try {;
+          // Parse the JSON response;
+          const categorizedSkills = JSON.parse(enhancedContent),;
+          ;
+          // Add the categorized skills;
+          for (const [category, skillsList] of Object.entries(categorizedSkills)) {;
+            if (Array.isArray(skillsList)) {;
+              for (const skillName of skillsList as string[]) {;
+                await addSkill(resumeId, {;
+                  name:skillName,;
+                  category:category,;
+                  proficiency:3}),;
+              }
+            }
+          }
+          ;
+          // Reset the form and bulk input;
+          setBulkSkills(''),;
+          ;
+          // Refresh the skills;
+          await onSuccess(),;
+        } catch (err) {;
+          setError('Failed to parse categorized skills. Please try again.'),;        }
+      }
+    } catch (err:any) {;
+      setError(err.message || 'Failed to categorize skills');
+    }
+  },;
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="bg-muted/40 p-6 rounded-lg">;
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>;
       <div className="space-y-4">;
@@ -125,6 +248,20 @@ if ( {) {
           onClick={handleCategorizeSkills}
           disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className="gap-2"
         >
           {isEnhancing ? (
@@ -218,6 +355,15 @@ if ( {) {
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ;
         <p className="text-xs text-muted-foreground mt-1">;
           AI will identify skills and categorize them automatically. This may take a moment to process.;
@@ -244,3 +390,10 @@ if ( {) {
 },
 };
 },
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

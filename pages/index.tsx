@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+import { useState, useEffect, Suspense } from 'react';
+import { ContactInfo, AnimationState } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+
+  });
+  useEffect(() => {
+    const timer = setTimeout(() => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
     }, 100);
     return () => clearTimeout(timer)
@@ -16,6 +28,7 @@ import React from 'react';
           </button>
         </div>
       </div>
+<<<<<<< HEAD
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -25,6 +38,47 @@ import React from 'react';
   return (
     <>
       <Head>
+=======
+
+import React from 'react';
+
+        {/* Features Section */}
+        <section className="py-20 bg-slate-900/50">
+import Link from 'next/link',
+import Head from 'next/head';
+import { useState, useEffect, Suspense  } from 'react';
+import { ContactInfo, AnimationState  } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary',
+import LoadingSpinner from '../components/LoadingSpinner';
+// import PerformanceMonitor from '../components/PerformanceMonitor';
+
+import Link from 'next/link';
+import Head from 'next/head';
+import {useState, useEffect, Suspense} from 'react';
+import {ContactInfo, AnimationState} from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+
+      setAnimationState(prev => ({ ...prev, isLoaded: true }))
+    }, 100);
+    return () => clearTimeout(timer)
+  }, []);
+  if (animationState.hasError) {
+    return (
+      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+        <div className="text-center text-white">
+          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700"
+          >
+            Reload Page
+          </button>
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
@@ -32,17 +86,26 @@ import React from 'react';
         <link rel="canonical" href={contact.site} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <meta property="og:url" content={contact.site} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
+<<<<<<< HEAD
               id="hero-title"
               className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             >
@@ -52,41 +115,63 @@ import React from 'react';
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+=======
+
+    ),
+  };
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                 aria-label="View all our services"
                 tabIndex={animationState.isLoaded ? 0 : -1}
+
               >
                 View All Services
               </Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                 aria-label="Browse our services catalog"
                 tabIndex={animationState.isLoaded ? 0 : -1}
+
               >
                 Services Catalog
               </Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible"
                 aria-label="Get a quote for our services"
                 tabIndex={animationState.isLoaded ? 0 : -1}
+
               >
                 Get Quote
               </Link>
             </div>
-            <div className={`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-bold text-blue-400 mb-2" aria-label="150 plus micro SaaS products">150+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3>
+
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
+
                 <p className="text-slate-300">IT Solutions</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
                 </p>
               </div>
             </div>
@@ -155,6 +240,11 @@ import React from 'react';
                   Innovative, focused software solutions including AI-Powered Video Clip Maker, 
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
                 </p>
+=======
+
+                </p>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <ul className="text-slate-400 space-y-2 mb-6">
                   <li>• AI-Powered Video Clip Maker</li>
                   <li>• Smart Contract Analyzer</li>
@@ -169,6 +259,10 @@ import React from 'react';
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
                 <p className="text-slate-300 mb-6">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -185,6 +279,10 @@ import React from 'react';
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>
                 <p className="text-slate-300 mb-6">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   DevSecOps automation, and 40+ more enterprise-grade services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -198,6 +296,10 @@ import React from 'react';
                   View All IT Services →
                 </Link>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>
           </div>
         </section>
@@ -208,6 +310,10 @@ import React from 'react';
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               how our innovative solutions can drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -227,14 +333,26 @@ import React from 'react';
             </div>
           </div>
         </section>
+<<<<<<< HEAD
           </main>
         </Suspense>
         <PerformanceMonitor 
+=======
+
+          </main>
+        </Suspense>
+        <PerformanceMonitor 
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded:', metrics)
           }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
         </section>
 
@@ -245,7 +363,11 @@ import React from 'react';
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </div>
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -323,16 +445,7 @@ import React from 'react';
           </div>;
         </section>;
 
-
-
-
-
-
         {/* Why Choose Us */}
-
-
-
-origin/automation-improvements-final
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -350,6 +463,10 @@ origin/automation-improvements-final
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -389,6 +506,35 @@ origin/automation-improvements-final
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
+<<<<<<< HEAD
+=======
+
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="p-6 h-full">
+                    <div className="text-cyan-400 mb-4">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-white">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </Card>
+<p className="text-gray-600">{item.description}</p>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </motion.div>
               ))}
             </div>
@@ -490,6 +636,36 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 </Link>;
                 <Link
                   href="tel:+13024640950"
+<<<<<<< HEAD
+=======
+
+                </Link>
+        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join hundreds of companies that have already revolutionized their operations with our cutting-edge solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="group">
+                  Start Your Journey
+                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button variant="outline" size="lg">
+                  Schedule Consultation
+                </Button>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
@@ -504,25 +680,77 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 Learn More About Us
               </Link>
             </div>
+<<<<<<< HEAD
             </p>
             <a href="/ai-services" className="text-blue-600 hover:text-blue-800">
               Learn More →
             </a>
           </div>
+=======
+
+</Link>
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
+  const featuredServices: Service[] = [
+    {
+      id: 'ai-automation',
+      title: 'AI Automation Platform',
+      description: 'Intelligent automation solutions that streamline business processes and reduce manual work.',
+      category: 'AI Services',
+      features: ['Process Automation', 'Machine Learning', 'Natural Language Processing', 'Predictive Analytics']
+    },
+    {
+      id: 'cloud-optimization',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions designed to optimize performance and reduce costs.',
+      category: 'IT Solutions',
+      features: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Cost Optimization']
+    },
+    {
+      id: 'micro-saas',
+      title: 'Micro SaaS Development',
+      description: 'Focused software solutions that address specific business needs with minimal complexity.',
+      category: 'Micro SaaS',
+      features: ['Rapid Development', 'User-friendly Design', 'API Integration', 'Scalable Architecture']
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  return (
+    <>
+      <Head>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
         </section>
           </div>
         </section>
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>
     </MainLayout>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </main>
     </>
-
-
-
 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">;
                   <Phone className="w-5 h-5 mr-2" />;
@@ -536,3 +764,7 @@ origin/automation-improvements-final
     </MainLayout>;
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

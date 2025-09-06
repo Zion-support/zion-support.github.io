@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+
+  FormField,
+
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Control} from "react-hook-form";
+import {BasicInfoFormData} from "./schema";
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Control } from "react-hook-form",
+import { BasicInfoFormData } from "./schema",
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   FormField,
   FormItem,
@@ -145,6 +159,13 @@ export function ContactFields({ control } ContactFieldsProps) {;
 }
 ;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       />
     </div>
   );
@@ -223,3 +244,8 @@ export function ContactFields({ control } ContactFieldsProps) {;
 }
 ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

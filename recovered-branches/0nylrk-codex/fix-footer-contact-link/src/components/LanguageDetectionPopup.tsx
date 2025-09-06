@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -12,11 +27,39 @@ import { useTranslation } from "react-i18next";
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+AlertDialogTitle,;
+=======
+<<<<<<< HEAD
+AlertDialogTitle,;
+=======
+  AlertDialogTitle,
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
   SupportedLanguage,
   LanguageContextType,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
 import {;
@@ -53,6 +96,21 @@ export function LanguageDetectionPopup() {;
     }
   }, []);
   if (!detectedLanguage) return null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+  const handleAccept = async () => {;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     await changeLanguage(detectedLanguage);
     setOpen(false);
   }
@@ -98,6 +156,11 @@ export function LanguageDetectionPopup() {;
     await changeLanguage(detectedLanguage),
     setOpen(false)
   },
+<<<<<<< HEAD
+
+
+            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
+=======
 
 
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
@@ -135,10 +198,14 @@ export function LanguageDetectionPopup() {;
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
+<<<<<<< HEAD
+);
+=======
 
       setOpen(true),;
     }
@@ -158,11 +225,55 @@ export function LanguageDetectionPopup() {;
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">;
         <AlertDialogHeader>;
           <AlertDialogTitle className="text-white">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {t("language && language.switch_to_detected", { language: languageName })}
+          </AlertDialogTitle>;
+          <AlertDialogDescription className="text-zion-slate-light">;
+            {`${supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.flag || ""} ${languageName}`}
+          </AlertDialogDescription>;
+        </AlertDialogHeader>;
+        <AlertDialogFooter>;
+          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">;
+            {t("general && general.no")}
+          </AlertDialogCancel>;
+
+          <AlertDialogAction
+            onClick={handleAccept}
+=======
+);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
             {t("general && general.yes")}
 
 );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+          <AlertDialogAction
+            onClick={handleAccept}
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+          >
+            {t("general.yes")}
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+<<<<<<< HEAD
+);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
@@ -170,6 +281,15 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t('general.yes')}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {t('language.switch_to_detected', { language:languageName })}
           </AlertDialogTitle>;
           <AlertDialogDescription className="text-zion-slate-light">;
@@ -184,12 +304,75 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark";
           >;
             {t('general.yes')}
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
   );
+<<<<<<< HEAD
   );
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { useState, useEffect  } from './react';
+import { use_translation  } from './react - i18next';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '../components / ui / alert - dialog';
+import {
+  use_language,
+  SupportedLanguage,
+  LanguageContextType,
+} from '../context / LanguageContext';
+export /**
+ * LanguageDetectionPopup - Function description
+ */
+function LanguageDetectionPopup() {
+  const [open, set_open] = useState (false);
+  const { t } = use_translation ();
+  const { change_language, current_language, supported_languages } =;
+    use_language () as LanguageContextType;
+  const [detected_language, setDetectedLanguage] =;
+    useState < SupportedLanguage | null>(null);
+;
+  useEffect (() => {
+    // Check if this is first visit;
+    const has_visited = local_storage.get_item ("zion_has_visited");
+    // Check condition
+if (return) {
+  $2
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
     // Mark as visited;
     local_storage.set_item ("zion_has_visitedtrue");
@@ -247,6 +430,15 @@ if (return null) {
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   ),; if (!detectedLanguage) return null;
 > {
@@ -260,3 +452,8 @@ if (return null) {
   );
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

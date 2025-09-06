@@ -1,15 +1,63 @@
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {type, Company} from "./CompanyDashboard";
+import {Bell, Users, Settings} from "lucide-react";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
 import { Bell, Users, Settings } from "lucide-react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface WorkspaceHeaderProps {
   company: Company
 }
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+=======
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { type Company } from "./CompanyDashboard",;
+import { Bell, Users, Settings } from "lucide-react";
+interface WorkspaceHeaderProps {;
+  company: Company;
+}
+<<<<<<< HEAD
+=======
+;
+export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   return (
 
@@ -55,6 +103,11 @@ interface WorkspaceHeaderProps {;
     </div>;
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / workspace / WorkspaceHeader.tsx;
@@ -115,6 +168,21 @@ function WorkspaceHeader() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 
 
@@ -139,3 +207,10 @@ function WorkspaceHeader() {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

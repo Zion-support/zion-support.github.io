@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -10,10 +16,13 @@ export default /**
  */
 function handler() {
   const { company_id } = req.query;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
   }
   // Check condition
 if ( {) {
@@ -36,4 +45,6 @@ if ( {) {
   return res.status (405).json ({ error: "method_not_allowed" });
 }
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 

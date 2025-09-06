@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+
+
+
+=======
+
+
+
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate  } from 'react-router-dom';
 
@@ -27,6 +49,24 @@ import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import { Form } from "@/components/ui/form";
+import { useJobForm  } from './useJobForm';
+import { BasicInfoFields  } from './BasicInfoFields';
+import { DateFields  } from './DateFields';
+import { DescriptionFields  } from './DescriptionFields';
+import { useJobs } from "@/hooks/useJobs";
+import { JobSchemaType } from './validation';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Form } from "@/components/ui/form",
 import { useJobForm } from './useJobForm',
 import { BasicInfoFields } from './BasicInfoFields',
@@ -34,6 +74,14 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface JobPostingFormProps {
 interface JobPostingFormProps {
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm && JobPostingForm.tsx;
@@ -52,10 +100,46 @@ import {DateFields} from './DateFields';
 import {DescriptionFields} from './DescriptionFields';
 import { use_jobs } from '@/hooks / use_jobs';
 import {JobSchemaType} from './validation';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+export function JobPostingForm(): any ({ jobId, onSuccess }: JobPostingFormProps) {;
+
+=======
+export function JobPostingForm(): any ({ jobId, onSuccess }: JobPostingFormProps) {;
+interface JobPostingFormProps {
+  jobId?: string,
+  onSuccess?: () => void
+}
+
+export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface JobPostingFormProps {
   job_id?: string;
   on_success?: () => void;
@@ -84,6 +168,36 @@ function JobPostingForm() {
     setIsRemote;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+
+
+=======
+
+
+
+export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
+
+  const navigate = useNavigate();
+  const { createJob, updateJob, getJobById } = useJobs();
+  const [isFormLoading, setIsFormLoading] = useState(false);
+  const [editorContent, setEditorContent] = useState("");
+  const navigate = useNavigate(),
+  const { createJob, updateJob, getJobById } = useJobs(),
+  const [isFormLoading, setIsFormLoading] = useState(false),
+  const [editorContent, setEditorContent] = useState(""),
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const {
     form,
     isLoading,
@@ -94,11 +208,43 @@ function JobPostingForm() {
     isRemote,
     setIsRemote,
     submitJob
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+  } = useJobForm({ jobId, onSuccess });
+  const { handleSubmit, setValue, formState } = form;
+  const { isSubmitting } = formState;
+  } = useJobForm({ jobId, onSuccess });
+  const { handleSubmit, setValue, formState } = form;
+  const { isSubmitting } = formState;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } = useJobForm({ jobId, onSuccess }),
 
   const { handleSubmit, setValue, formState } = form,
   const { isSubmitting } = formState,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
     if (jobId) {
       setIsFormLoading(true),
@@ -124,6 +270,16 @@ function JobPostingForm() {
                   setValue(key, value as any)
                 } catch (e) {
                   // Skip fields that don't exist in our form
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect, useCallback } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",;
@@ -163,6 +319,15 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
   useEffect(() => {;
     if (jobId) {;
       setIsFormLoading(true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState, useEffect, useCallback } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",;
@@ -210,23 +375,79 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
         .then((job) => {;
           if (job) {;
             // Set form values;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            Object && Object.entries(job).forEach(([key, value]) => {;
+              if (key === 'published_date' && value) {;
+                setStartDate(new Date(value as string));
+                setValue('published_date', value as string);
+              } else if (key === 'expiry_date' && value) {;
+                setEndDate(new Date(value as string));
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             Object.entries(job).forEach(([key, value]) => {;
               if (key === 'published_date' && value) {;
                 setStartDate(new Date(value as string)),;
                 setValue('published_date', value as string);
               } else if (key === 'expiry_date' && value) {;
                 setEndDate(new Date(value as string)),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 setValue('expiry_date', value as string);
               } else if (key === 'is_remote') {;
                 setIsRemote(value as boolean);
               } else if (key === 'description') {;
+<<<<<<< HEAD
                 setEditorContent(value as string),;
+=======
+<<<<<<< HEAD
+                setEditorContent(value as string),;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                setEditorContent(value as string);
+=======
+                setEditorContent(value as string),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                setEditorContent(value as string),;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 setValue('description', value as string);
               } else {;
                 try {;
                   // @ts-ignore - We know these fields exist in our form;
                   setValue(key, value as any);
                 } catch (e) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     submit_job;
   } = useJobForm ({ job_id, on_success });
 ;
@@ -275,11 +496,39 @@ if ( {) {
                   // @ts - ignore - We know these fields exist in our form;
                   set_value (key, value as any);
                 } catch (e) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   // Skip fields that don't exist in our form;
                 }
               }
             });
           }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                  // Skip fields that don't exist in our form;
+                }
+              }
+            })
+          }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         })
         .catch((error) => {
           console.error("Failed to load job:", error),
@@ -312,6 +561,18 @@ if ( {) {
         toast.success("Job posted successfully!"),
         form.reset(),
         setEditorContent("")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        });
+
+
+=======
+        });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleEditorChange = useCallback((value: string) => {;
     setEditorContent(value),;
     setValue('description', value);
@@ -324,6 +585,42 @@ if ( {) {
         form && form.reset();
         setEditorContent("");
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      if (onSuccess) {;
+        onSuccess();
+      }
+<<<<<<< HEAD
+=======
+    } catch (error: any) {;
+      console && console.error("Error creating/updating job:", error);
+      toast && toast.error(error && error.message || "Failed to post job");
+    } finally {;
+      setIsFormLoading(false);
+        });
+        .catch((error) => {;
+          console.error("Failed to load job:", error),;
+          toast.error("Failed to load job");
+        });
+        .finally(() => {;
+          setIsFormLoading(false);
+        });
+    }
+  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),;
+  const handleEditorChange = useCallback((value: string) => {;
+    setEditorContent(value),;
+    setValue('description', value);
+  }, [setValue]),;
+  const onSubmit = async (values: JobSchemaType) => {;
+    setIsFormLoading(true),;
+    try {;
+      const jobData = await submitJob(values),;
+      if (jobId) {;
+        await updateJob(jobId, jobData),;
+        toast.success("Job updated successfully!");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } else {;
         await createJob(jobData),;
         toast.success("Job posted successfully!"),;
@@ -335,6 +632,7 @@ if ( {) {
       if (onSuccess) {;
         onSuccess();
       }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error: any) {
       console.error("Error creating/updating job:", error);
       toast.error(error.message |"Failed to post job")
@@ -374,6 +672,19 @@ if ( {) {
               id="isRemote"
               checked={isRemote}
               className="mr-2"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    } catch (error: any) {;
+      console.error("Error creating/updating job:", error);
+      toast.error(error.message || "Failed to post job");
+    } finally {;
+      setIsFormLoading(false);
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   };
   if (isLoading || isFormLoading) {;
@@ -393,10 +704,31 @@ if ( {) {
           endDate={endDate}
           setEndDate={setEndDate}
         />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        <div>;
+          <Label htmlFor="isRemote">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Input
               type="checkbox"
               id="isRemote"
               checked={isRemote}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="mr-2"
 
 
@@ -406,6 +738,12 @@ if ( {) {
               type="checkbox";
               id="isRemote";
               checked={isRemote}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
             />
@@ -432,10 +770,34 @@ if ( {) {
         />
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>
       </form>
     </Form>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onChange={(e) => setIsRemote(e && e.target.checked)}
         .catch ((error) => {
           console.error ("Failed to load job:", error);
@@ -513,12 +875,126 @@ if ( {) {
               checked={is_remote}
               className="mr - 2";
               on_change={(e) => setIsRemote (e.target.checked)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+;
+        <div>;
+          <Label htmlFor="isRemote">;
+            <Input;
+              type="checkbox";
+              id="isRemote";
+              checked={isRemote}
+              className="mr-2";
+              onChange={(e) => setIsRemote(e.target.checked)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
             Remote;
           </Label>;
         </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+        <DescriptionFields;
+          control={form.control}
+          handleEditorChange={handleEditorChange}
+          editor_content={editor_content}
+        />;
+        <Button type="submit" disabled={is_submitting || isFormLoading}>;
+          {is_submitting || isFormLoading ? "Submitting..." : job_id ? "Update Job" : "Post Job"}
+        </Button>;
+      </form>;
+    </Form>);
+
+=======
+}
+
+;
+        <DescriptionFields ;
+          control={form.control} ;
+          handleEditorChange={handleEditorChange}
+          editorContent={editorContent}
+        />;
+;
+        <Button type="submit" disabled={isSubmitting || isFormLoading}>;
+          {isSubmitting || isFormLoading ? "Submitting..." :jobId ? "Update Job" :"Post Job"}
+        </Button>;
+      </form>;
+    </Form>;
+  ),; interface JobPostingFormProps {
+  jobId?: string;
+onSuccess?: () => void 
+}export function JobPostingForm ({
+  jobId, onSuccess 
+}: JobPostingFormProps) {
+  const [isFormLoading, setIsFormLoading] = useState (false);
+const [editorContent, setEditorContent] = useState ("");
+  if (job) {
+  //Set form values Object.entries (job) .forEach ( ([key, value]) => {
+  if (key === 'published date' && value) {
+  
+}
+}) 
+}
+}) 
+}) .finally ( () => {
+  setIsFormLoading (false) 
+}) 
+}
+}, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
+}if (onSuccess) {
+  onSuccess () 
+}
+}catch (error: any) {
+  
+}finally {
+  setIsFormLoading (false) 
+}
+};
+if (isLoading || isFormLoading) {
+  
+}return (<Form {
+  ...form 
+}> <form onSubmit= {
+  handleSubmit (onSubmit) 
+}className=" space-y-6"> text-lg font-medium" >Post a Job</h3> <p className="text-sm text-muted-foreground" > Fill in the details below to create a job posting. </p> </div> <BasicInfoFields control= {
+  form.control 
+}/> <DateFields startDate= {
+  startDate 
+}setStartDate= {
+  setStartDate 
+}endDate= {
+  endDate 
+}setEndDate= {
+  setEndDate 
+}/> <div> <Label htmlFor="isRemote" > <Input /> Remote </Label> </div> <DescriptionFields control= {
+  form.control 
+}handleEditorChange= {
+  handleEditorChange 
+}editorContent= {
+  editorContent 
+}/> </Button> </form> </Form>) 
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 ;
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

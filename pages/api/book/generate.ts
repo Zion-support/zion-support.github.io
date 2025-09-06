@@ -3,20 +3,20 @@ import OpenAI from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
-
 
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next'
-import OpenAI from 'openai'
 export default async /**
  * handler - Function description
  */
@@ -33,7 +33,10 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   }
 }
@@ -60,6 +63,10 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
@@ -71,5 +78,8 @@ if ( {) {
 };
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

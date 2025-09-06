@@ -12,6 +12,37 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+=======
+const partnerFormSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." })
+  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal(""))
+  twitter: z.string().optional()
+  instagram: z.string().optional()
+  youtube: z.string().optional()
+  linkedin: z.string().optional()
+  niche: z.string().min(2, { message: "Please specify your niche." })
+  audience_size: z.string()
+  payout_method: z.string()
+  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)})
+type PartnerFormValues = z.infer<typeof partnerFormSchema>;
+export function PartnerRegistrationForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -25,6 +56,21 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -39,14 +85,49 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function PartnerRegistrationForm() {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
     defaultValues: {
@@ -65,7 +146,72 @@ export function PartnerRegistrationForm() {
       .from('partner_profiles')
       .select('id')
       .eq('user_id', user.id)
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+const partnerFormSchema = z && z.object({;
+  name: z && z.string().min(2, { message: "Name must be at least 2 characters." }),;
+  website: z && z.string().url({ message: "Please enter a valid URL." }).optional().or(z && z.literal("")),;
+  twitter: z && z.string().optional(),;
+  instagram: z && z.string().optional(),;
+  youtube: z && z.string().optional(),;
+  linkedin: z && z.string().optional(),;
+  niche: z && z.string().min(2, { message: "Please specify your niche." }),;
+  audience_size: z && z.string(),;
+  payout_method: z && z.string(),;
+  bio: z && z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
+=======
+
+      .single(),
+
+
+type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
+
+
+=======
+
+
+      .single(),
+
+
+type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
+
+
+
+      .single();
+    if (existingPartner) {
+      toast({
+        title: "Already registered"
+        description: "You have already registered as a partner."
+        variant: "destructive"})
+      setIsSubmitting(false);
+      return true
+    }
+    return false
+  }
+      .single(),
+
+    if (existingPartner) {
+      toast({
+        title: "Already registered",
+        description: "You have already registered as a partner.",
+        variant: "destructive"}),
+      setIsSubmitting(false),
+      return true
+    }
+    return false
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -73,12 +219,57 @@ export function PartnerRegistrationForm() {
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+    }
+    setIsSubmitting(true);
+    try {
+      // Check if they already have a partner profile
+      const hasExistingPartner = await checkExistingPartner();
+      if (hasExistingPartner) return;
+      // Insert new partner profile
+      const { data: newPartner, error } = await supabase
+        .from('partner_profiles')
+        .insert([
+          {
+            user_id: user.id
+            name: data.name
+            website: data.website |null
+            social_media: {
+              twitter: data.twitter |null
+              instagram: data.instagram |null
+              youtube: data.youtube |null
+              linkedin: data.linkedin |null}
+            niche: data.niche
+            audience_size: data.audience_size
+            payout_method: data.payout_method
+            bio: data.bio
+            status: 'pending', // Partners need approval
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         ])
         .select();
       if (error) throw error;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -104,10 +295,39 @@ const partnerFormSchema = z.object({;
   payout_method: z.string(),;
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function PartnerRegistrationForm() {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth();
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function PartnerRegistrationForm() {;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { user } = useAuth(),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const form = useForm<PartnerFormValues>({;
     resolver: zodResolver(partnerFormSchema),;
     defaultValues: {;
@@ -125,11 +345,39 @@ export function PartnerRegistrationForm() {;
     const { data: existingPartner } = await supabase;
       .from('partner_profiles');
       .select('id');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      .eq('user_id', user && user.id);
+      .single();
+
+=======
+      .eq('user_id', user.id);
+      .single(),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (existingPartner) {;
       toast({;
         title: "Already registered",;
         description: "You have already registered as a partner.",;
         variant: "destructive"}),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      setIsSubmitting(false);
+      return true;
+    }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setIsSubmitting(false);
       return true;
     }
@@ -156,6 +404,11 @@ export function PartnerRegistrationForm() {;
       setIsSubmitting(false);
       return true;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     setIsSubmitting(true);
     try {;
@@ -260,23 +513,136 @@ if (return) {
             name: data.name
             website: data.website |null
             social_media: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+    }
+;
+    setIsSubmitting(true),;
+    try {;
+      // Check if they already have a partner profile;
+      const hasExistingPartner = await checkExistingPartner(),;
+      if (hasExistingPartner) return,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Insert new partner profile;
       const { data: newPartner, error } = await supabase;
         .from('partner_profiles');
         .insert([;
           {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            user_id: user && user.id,;
+            name: data && data.name,;
+            website: data && data.website || null,;
+            social_media: {;
+              twitter: data && data.twitter || null,;
+              instagram: data && data.instagram || null,;
+              youtube: data && data.youtube || null,;
+              linkedin: data && data.linkedin || null},;
+            niche: data && data.niche,;
+            audience_size: data && data.audience_size,;
+            payout_method: data && data.payout_method,;
+            bio: data && data.bio,;
+            status: 'pending', // Partners need approval;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         ]);
         .select();
       if (error) throw error;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+            user_id: user.id,;
+            name: data.name,;
+            website: data.website || null,;
+            social_media: {;
+              twitter: data.twitter || null,;
+              instagram: data.instagram || null,;
+              youtube: data.youtube || null,;
+              linkedin: data.linkedin || null},;
+            niche: data.niche,;
+            audience_size: data.audience_size,;
+            payout_method: data.payout_method,;
+            bio: data.bio,;
+            status: 'pending', // Partners need approval;
+          }
+        ])
+        .select(),
+
+      if (error) throw error,
+
+      toast({
+        title: "Application submitted!"
+        description: "Your partner application has been submitted for review."
+        variant: "default"})
+      // Create a referral code if they don't have one already
+      const { data: existingCode } = await supabase
+        .from('referral_codes')
+        .select('code')
+        .eq('user_id', user.id)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         .single(),
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        .single();
+        .single(),
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (!existingCode) {
         await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
     } catch (error: any) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      console.error('Error submitting partner application:', error);
+=======
+      console.error('Error submitting partner application:', error),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
@@ -284,6 +650,21 @@ if (return) {
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
   return (
@@ -299,10 +680,43 @@ if (return) {
               <FormField
                 control={form && form.control}
                 name="name"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name / Brand</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Your name or brand name" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         ]);
         .select(),;
       if (error) throw error,;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                )}
+              />
+              <FormField
+        ]);
+        .select(),;
+      if (error) throw error,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({;
         title: "Application submitted!",;
         description: "Your partner application has been submitted for review.",;
@@ -315,6 +729,11 @@ if (return) {
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
               twitter: data.twitter || null,
@@ -610,12 +1029,37 @@ if ( {) {
           </form>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </Card>);
+
+}
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <Button
               type="submit"
             <Button 
@@ -694,8 +1138,21 @@ data: existingCode
 }
 };
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 }
 
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

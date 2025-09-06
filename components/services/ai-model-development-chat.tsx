@@ -30,9 +30,12 @@ const AiModelDevelopmentChat: NextPage = () => {;
 }
 export default AiModelDevelopmentChat;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -74,6 +77,7 @@ const AiModelDevelopmentChat: NextPage = () => {
 ;
 export default AiModelDevelopmentChat;
 ;
+<<<<<<< HEAD
     <div>
       <Head>
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
@@ -121,3 +125,6 @@ export default AiModelDevelopmentChat;
 
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

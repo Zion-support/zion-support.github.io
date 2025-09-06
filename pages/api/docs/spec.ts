@@ -4,6 +4,7 @@
 
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(v1)
+<<<<<<< HEAD
 }
 
 
@@ -40,3 +41,6 @@ export default function handler(req, res) {
 }
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

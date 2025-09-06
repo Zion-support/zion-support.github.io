@@ -19,14 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const version = nextVersionFor(state, resolutionId)
   const event = {
-    eventId: uuidv4()
-    type: "dao_endorsement" as const
-    payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: Date.now()}
-
-
 
   upsertEvent(state, event);
   writeState(state);
@@ -39,6 +31,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
@@ -46,3 +42,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };
+

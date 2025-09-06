@@ -1,8 +1,38 @@
+<<<<<<< HEAD
 
 export interface EnterpriseIt2026ServiceV2 {
-
+=======
+<<<<<<< HEAD
+export interface EnterpriseIt2026ServiceV2 {
+=======
+<<<<<<< HEAD
+export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export interface EnterpriseIt2026ServiceV2 {
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+
+<<<<<<< HEAD
+export interface EnterpriseIt2026ServiceV2 {;
+=======
+<<<<<<< HEAD
+export interface EnterpriseIt2026ServiceV2 {
+
+=======
+=======
+export interface EnterpriseIt2026ServiceV2 {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   name: string;
   tagline: string;
@@ -33,6 +63,21 @@ export interface EnterpriseIt2026ServiceV2 {;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    website: string;
+  }
+
+  {
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -48,11 +93,62 @@ export interface EnterpriseIT2026ServiceV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
+    launchDate: '2026-05-01'
+    customers: 280
+    rating: 4.9
+    reviews: 180
+  }
+      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
+    launchDate: '2026-05-01',
+    customers: 280,
+    rating: 4.9,
+    reviews: 180,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.';
+    launchDate: '2026-05-01';
+    customers: 280;
+    rating: 4.9
+
+    reviews: 180
+  }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
@@ -83,6 +179,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 180
       website: 'https://ziontechgroup.com';
@@ -93,6 +195,21 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     customers: 280;
     rating: 4.9,
     reviews: 180;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+];
+=======
+<<<<<<< HEAD
+];
+=======
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;

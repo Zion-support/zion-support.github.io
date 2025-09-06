@@ -1,8 +1,40 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {ArrowRight, Check, ExternalLink} from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+interface IntegrationCardProps {;
+  title: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void;
@@ -11,6 +43,15 @@ export function IntegrationCard(): any ({;
   title;
   description;
   icon;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -33,6 +74,13 @@ export function IntegrationCard(): any ({;
   title;
   description;
   icon;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface IntegrationCardProps {
   title: string,
   description: string,
@@ -40,10 +88,30 @@ interface IntegrationCardProps {
   status?: "connected" | "disconnected" | "pending",
   href?: string,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  onConnect?: () => void
+}
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   onConnect?: () => void
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function IntegrationCard({;
   title;
   description;
@@ -63,6 +131,13 @@ export function IntegrationCard({
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -104,6 +179,19 @@ export function IntegrationCard({
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -122,6 +210,14 @@ export function IntegrationCard({;
   title,;
   description,;
   icon,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
@@ -154,6 +250,12 @@ export function IntegrationCard({;
   href;
   onConnect}: IntegrationCardProps) {;
   return (;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
@@ -170,6 +272,22 @@ export function IntegrationCard({;
               {icon}
             </div>;
             <div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <h3 className="font-semibold">{title}</h3>;
+            </div>;
+          </div>;
+          {status === "connected" ? (;
+            <Badge variant="outline" className="bg-green-100 text-green-800 gap-1">;
+<<<<<<< HEAD
+              <Check className="h-3 && 3.5 w-3 && 3.5" />;
+=======
+              <Check className="h-3.5 w-3.5" />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <span>Connected</span>;
             </Badge>;
           ) : status === "pending" ? (;
@@ -215,6 +333,22 @@ export function IntegrationCards() {
   );
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+export function IntegrationCards() {;
+  return (
+    <div className="grid md:grid-cols-3 gap-6">;
+      {/* Integration cards would go here */}
+    </div>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
       </CardFooter>;
     </Card>;
@@ -276,6 +410,18 @@ function IntegrationCards() {
   return (
     <div className="grid md:grid - cols - 3 gap - 6">;
       {/* Integration cards would go here */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>);
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 ;
@@ -319,3 +465,14 @@ export function IntegrationCards() {
 }
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -8,17 +21,90 @@ import {useReferrals} from "@/hooks/useReferrals";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function PartnerReferralLinks() {;
+
+=======
+export function PartnerReferralLinks() {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+import { useRef, useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Copy, Download, Link, Plus } from "lucide-react",
+import { toast } from "@/hooks/use-toast",
+import { useReferrals } from "@/hooks/useReferrals",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+export function PartnerReferralLinks() {
+  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
+  const [customParam, setCustomParam] = useState<string>("");
+  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([])
+  // Get the base referral link
+  const baseLink = getReferralLink();
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+
+export function PartnerReferralLinks() {
+  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
+  const [isDialogOpen, setIsDialogOpen] = useState(false),
+  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
+  const [customParam, setCustomParam] = useState<string>(""),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   
   // Get the base referral link
   const baseLink = getReferralLink(),
   
+<<<<<<< HEAD
   
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link)
     toast({
@@ -26,12 +112,38 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
       description: "The referral link has been copied to your clipboard"
       variant: "default"
     })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+  }
+  const handleGenerateLink = () => {
+    if (baseLink) {
+      const url = new URL(baseLink);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink),
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
@@ -43,6 +155,16 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
       const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`
         link: url.toString()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
 
   // Get the base referral link;
@@ -75,10 +197,38 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;
         link: url && url.toString();
       };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
       setCustomParam("");
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+      }
+      setGeneratedLinks(prev => [...prev, newLink]);
+      setIsDialogOpen(false);
+      setCustomParam("")
+    }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       },
       
       setGeneratedLinks(prev => [...prev, newLink]),
@@ -87,10 +237,34 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
     }
   },
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink }
       ...generatedLinks
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  };
+
+=======
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleDownloadLinks = () => {;
     const allLinks = [;
       { name: "Default", link: baseLink },;
@@ -108,6 +282,17 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
     link.click(),
     document.body.removeChild(link)
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
     <div className="space-y-6">
@@ -115,6 +300,93 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+            <Button
+              variant="outline"
+              size="sm"
+            <Button 
+              variant="outline" 
+              size="sm" 
+import { useRef, useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Copy, Download, Link, Plus } from "lucide-react",;
+import { toast } from "@/hooks/use-toast",;
+import { useReferrals } from "@/hooks/useReferrals",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
+import { Label } from "@/components/ui/label",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+export function PartnerReferralLinks() {;
+  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),;
+  const [isDialogOpen, setIsDialogOpen] = useState(false),;
+  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),;
+  const [customParam, setCustomParam] = useState<string>(""),;
+  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
+  // Get the base referral link;
+  const baseLink = getReferralLink(),;
+  const handleCopyLink = (link: string) => {;
+    navigator.clipboard.writeText(link),;
+    toast({;
+      title: "Link copied!",;
+      description: "The referral link has been copied to your clipboard",;
+      variant: "default";
+    });
+  },;
+  const handleGenerateLink = () => {;
+    if (baseLink) {;
+      const url = new URL(baseLink),;
+      // Add custom campaign parameter if selected;
+      if (selectedCampaign !== "default") {;
+        url.searchParams.append("campaign", selectedCampaign);
+      }
+;
+      // Add custom parameter if provided;
+      if (customParam) {;
+        url.searchParams.append("source", customParam);
+      }
+;
+      const newLink = {;
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;
+        link: url.toString();
+      },;
+      setGeneratedLinks(prev => [...prev, newLink]),;
+      setIsDialogOpen(false),;
+      setCustomParam("");
+    }
+  },;
+  const handleDownloadLinks = () => {;
+    const allLinks = [;
+      { name: "Default", link: baseLink },;
+      ...generatedLinks;
+    ],;
+    const csvContent = [;
+      "Name,Link",;
+      ...allLinks.map(l => `${l.name},${l.link}`);
+    ].join("\n"),;
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),;
+    const url = URL.createObjectURL(blob),;
+    const link = document.createElement("a"),;
+    link.setAttribute("href", url),;
+    link.setAttribute("download", "zion_referral_links.csv"),;
+    link.style.visibility = 'hidden',;
+    document.body.appendChild(link),;
+    link.click();
+    document.body.removeChild(link);
+
+      "Name,Link";
+      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
+    ].join("\n");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL && URL.createObjectURL(blob);
     const link = document && document.createElement("a");
@@ -125,6 +397,17 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
     link && link.click();
     document && document.body.removeChild(link);
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  return (
+=======
+  return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useRef, useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -215,6 +498,14 @@ export function PartnerReferralLinks() {;
               variant="outline" 
               size="sm" 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;
             <Button
@@ -228,6 +519,12 @@ export function PartnerReferralLinks() {;
               onClick={handleDownloadLinks}
               className="flex items-center gap-2";
             >;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       "Name,Link";
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
     ].join("\n");
@@ -245,6 +542,20 @@ export function PartnerReferralLinks() {;
               value={baseLink}
               readOnly
               className="font-mono text-sm"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+            <Input;
+              value={baseLink}
+              readOnly;
+              className="font-mono text-sm";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             />;
             <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>;
               <Copy className="h-4 w-4" />;
@@ -414,6 +725,16 @@ if ( {) {
                   value={selected_campaign}
                   onValueChange={setSelectedCampaign}
                 >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <SelectTrigger id="campaign">;
                     <SelectValue placeholder="Select campaign type" />;
                   </SelectTrigger>;
@@ -431,6 +752,41 @@ if ( {) {
               </div>;
             </div>;
             <DialogFooter>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+              <Button;
+                type="button";
+                variant="secondary";
+                on_click={() => setIsDialogOpen (false)}
+              >;
+                Cancel;
+              </Button>;
+              <Button;
+                type="button";
+                on_click={handleGenerateLink}
+                className="bg - zion - purple hover:bg - zion - purple - dark";
+              >;
+
+=======
+              <Button ;
+                type="button" ;
+                variant="secondary" ;
+                onClick={() => setIsDialogOpen(false)}
+              >;
+                Cancel;
+              </Button>;
+              <Button ;
+                type="button" ;
+                onClick={handleGenerateLink}
+                className="bg-zion-purple hover:bg-zion-purple-dark";
+              >;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Generate Link;
               </Button>;
             </DialogFooter>;
@@ -453,6 +809,7 @@ if ( {) {
 
               <Button 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 variant="outline"
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
@@ -471,6 +828,32 @@ if ( {) {
                   </Button>;
                 </div>;
               </CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </Card>))) : (
+          <Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light">;
+            <CardContent className="flex flex - col items - center justify - center p - 6">;
+              <p className="text - zion - slate - light text - center mb - 4">;
+                Create custom campaign links to track different marketing efforts;
+              </p>;
+              <Button;
+                variant="outline";
+                on_click={() => setIsDialogOpen (true)}
+                className="flex items - center gap - 2";
+              >;
+                <Plus className="h - 4 w - 4" />;
+                Create First Link;
+              </Button>;
+            </CardContent>;
+          </Card>)}
+      </div>;
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),; export function PartnerReferralLinks () {
   const {
   referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia 
@@ -523,4 +906,11 @@ document.body.removeChild (link);
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }

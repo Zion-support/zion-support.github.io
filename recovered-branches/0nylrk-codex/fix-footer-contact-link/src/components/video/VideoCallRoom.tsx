@@ -1,9 +1,46 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
+import './video-call.css';
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import './video-call ;
 interface Participant {;
   id: string,;
@@ -23,6 +60,17 @@ interface Participant {
   is_muted?: boolean;
   isVideoEnabled?: boolean;
   isScreenSharing?: boolean;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface VideoCallRoomProps {;
   roomId: string,;
   participants?: Participant[];
@@ -32,15 +80,95 @@ interface VideoCallRoomProps {;
   onToggleScreenShare?: (isSharing: boolean) => void,;
   className?: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
+  roomId,;
+  participants = [], ;
+
+=======
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
+  roomId,;
+  participants = [], ;
+import './video-call.css';
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
+import './video-call.css';
+interface Participant {
+
+  id: string
+  name: string
+
+  avatar?: string;
+  isMuted?: boolean;
+  isVideoEnabled?: boolean;
+  isScreenSharing?: boolean;
+  isHost?: boolean
+}
+interface VideoCallRoomProps {
+
+  roomId: string
+  participants?: Participant[];
+  onLeave?: () => void;
+  onToggleMute?: (isMuted: boolean) => void
+  onToggleVideo?: (isEnabled: boolean) => void
+  onToggleScreenShare?: (isSharing: boolean) => void
+  className?: string
+}
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
+  roomId
+  participants = []
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onLeave;
   onToggleMute;
   onToggleVideo;
   onToggleScreenShare;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  className ;
+}) => {;
+
+=======
+  className ;
+}) => {;
+  className
+}) => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoEnabled, setIsVideoEnabled] = useState(true);
   const [isScreenSharing, setIsScreenSharing] = useState(false);
   const [isAudioOnly, setIsAudioOnly] = useState(false);
   const [callDuration, setCallDuration] = useState(0);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Call duration timer;
   React && React.useEffect(() => {;
     const timer = setInterval(() => {;
@@ -50,15 +178,87 @@ interface VideoCallRoomProps {;
     const hrs = Math && Math.floor(seconds / 3600);
     const mins = Math && Math.floor((seconds % 3600) / 60);
     const secs = seconds % 60,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+  };
+
+  const handleToggleMute = () => {;
+
+=======
+    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+  };
+  const handleToggleMute = () => {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const newMuteState = !isMuted;
     setIsMuted(newMuteState);
     if (onToggleMute) {;
       onToggleMute(newMuteState);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  };
+
+  const handleToggleVideo = () => {;
+
+=======
+  };
+  const handleToggleVideo = () => {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const newVideoState = !isVideoEnabled;
     setIsVideoEnabled(newVideoState);
     if (onToggleVideo) {;
       onToggleVideo(newVideoState);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+  // Call duration timer
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCallDuration(prevDuration => prevDuration + 1)
+    }, 1000);
+    return () => clearInterval(timer)
+  }, []);
+  const formatDuration = (seconds: number) => {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60
+    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`
+  }
+  const handleToggleMute = () => {
+    const newMuteState = !isMuted;
+    setIsMuted(newMuteState);
+    if (onToggleMute) {
+      onToggleMute(newMuteState)
+    }
+  }
+  const handleToggleVideo = () => {
+    const newVideoState = !isVideoEnabled;
+    setIsVideoEnabled(newVideoState);
+    if (onToggleVideo) {
+      onToggleVideo(newVideoState)
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',
+import './video-call.css',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface Participant {
   id: string,
   name: string,
@@ -146,11 +346,29 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (newVideoState) {
       setIsAudioOnly(false)
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    }
+
+
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // If turning video back on, ensure we're not in audio-only mode;
     if (newVideoState) {;
       setIsAudioOnly(false);
     }
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleToggleScreenShare = () => {;
 
     const newScreenShareState = !isScreenSharing;
@@ -182,10 +400,40 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+  };
+
+  }
+  };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },;
   const handleToggleScreenShare = () => {;
     const newScreenShareState = !isScreenSharing,;
     setIsScreenSharing(newScreenShareState),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+    const newScreenShareState = !isScreenSharing;
+    setIsScreenSharing(newScreenShareState);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (onToggleScreenShare) {;
       onToggleScreenShare(newScreenShareState);
     }
@@ -209,6 +457,16 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
         onToggleVideo(false);
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
 
   const handleLeaveCall = () => {;
@@ -219,6 +477,125 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;
+      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">;
+        <div className="flex items-center space-x-2">;
+          <CardTitle className="text-white">Video Call</CardTitle>;
+          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
+
+            Room: {roomId}
+=======
+
+    }
+  }
+  return (
+
+import React, { useState } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',;
+import './video-call.css',;
+;
+interface Participant {;
+  id:string,;
+  name:string,;
+  avatar?:string,;
+  isMuted?:boolean,;
+  isVideoEnabled?:boolean,;
+  isScreenSharing?:boolean,;
+  isHost?:boolean;}
+;
+interface VideoCallRoomProps {;
+  roomId:string,;
+  participants?:Participant[],;
+  onLeave?:() => void,;
+  onToggleMute?:(isMuted:boolean) => void,;
+  onToggleVideo?:(isEnabled:boolean) => void,;
+  onToggleScreenShare?:(isSharing:boolean) => void,;
+  className?:string;
+}
+;
+export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
+  roomId,;
+  participants = [], ;
+  onLeave,;
+  onToggleMute,;
+  onToggleVideo,;
+  onToggleScreenShare,;
+  className ;
+}) => {;
+  const [isMuted, setIsMuted] = useState(false),;
+  const [isVideoEnabled, setIsVideoEnabled] = useState(true),;
+  const [isScreenSharing, setIsScreenSharing] = useState(false),;
+  const [isAudioOnly, setIsAudioOnly] = useState(false),;
+  const [callDuration, setCallDuration] = useState(0),;
+;
+  // Call duration timer;
+  React.useEffect(() => {;
+    const timer = setInterval(() => {;
+      setCallDuration(prevDuration => prevDuration + 1),;
+    }, 1000),;
+    ;
+    return () => clearInterval(timer),;
+  }, []),;
+;
+  const formatDuration = (seconds:number) => {;
+    const hrs = Math.floor(seconds / 3600),;
+    const mins = Math.floor((seconds % 3600) / 60),;
+    const secs = seconds % 60,;
+    ;
+    return `${hrs > 0 ? `${hrs} ` :''}${mins < 10 && hrs > 0 ? '0' :''}${mins} ${secs < 10 ? '0' :''}${secs}`,;
+  },;
+;
+  const handleToggleMute = () => {;
+    const newMuteState = !isMuted,;
+    setIsMuted(newMuteState),;
+    if (onToggleMute) {;
+      onToggleMute(newMuteState),;
+    }
+  },;
+;
+  const handleToggleVideo = () => {;
+    const newVideoState = !isVideoEnabled,;
+    setIsVideoEnabled(newVideoState),;
+    if (onToggleVideo) {;
+      onToggleVideo(newVideoState),;
+    }
+    ;
+    // If turning video back on, ensure we're not in audio-only mode;
+    if (newVideoState) {;
+      setIsAudioOnly(false),;
+    }
+  },;
+;
+  const handleToggleScreenShare = () => {;
+    const newScreenShareState = !isScreenSharing,;
+    setIsScreenSharing(newScreenShareState),;
+    if (onToggleScreenShare) {;
+      onToggleScreenShare(newScreenShareState),;
+    }
+  },;
+;
+    if (onToggleScreenShare) {;
+      onToggleScreenShare(newScreenShareState);
+    }
+  },;
+  const handleToggleAudioOnly = () => {;
+    setIsAudioOnly(!isAudioOnly),;
+    if (!isAudioOnly) {;
+      setIsVideoEnabled(false),;
+      if (onToggleVideo) {;
+            Room:{roomId}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
 
@@ -236,6 +613,16 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
             participants.map ((participant) => (
               <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </Badge>;
           <Badge variant="outline" className="text-white">;
             {participants && participants.length} participant{participants && participants.length !== 1 ? 's' : ''}
@@ -248,6 +635,34 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
             participants && participants.map((participant) => (;
               <div key={participant && participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">;
                 {participant && participant.isVideoEnabled && !participant && participant.isScreenSharing ? (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
+
+                    {/* Placeholder for actual video stream */}
+                    <Video className="h-12 w-12 opacity-50" />;
+                  </div>;
+                ) : participant && participant.isScreenSharing ? (;
+=======
+          </Badge>;
+          <Badge variant="outline" className="text-white">;
+            {participants.length} participant{participants.length !== 1 ? 's' :''}
+          </Badge>;
+        </div>;
+      </CardHeader>;
+      ;
+      <CardContent className="p-0">;
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+          {participants.length > 0 ? (;
+            participants.map((participant) => (;
+              <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">;
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (;
+                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {/* Placeholder for actual video stream */}
                     <Video className="h-12 w-12 opacity-50" />;
                   </div>;
@@ -266,6 +681,77 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
                     </Avatar>;
                   </div>;
                 )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+                
+
+
+<<<<<<< HEAD
+=======
+        onToggleVideo(false);
+      }
+    }
+  },;
+  const handleLeaveCall = () => {;
+    if (onLeave) {;
+      onLeave();
+    }
+  },
+
+  return (
+    <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
+      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
+        <div className="flex items-center space-x-2">
+          <CardTitle className="text-white">Video Call</CardTitle>
+          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
+            Room: {roomId}
+          </Badge>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Badge variant="secondary" className="bg-zion-blue-light text-white">
+            {formatDuration(callDuration)}
+          </Badge>
+          <Badge variant="outline" className="text-white">
+            {participants.length} participant{participants.length !== 1 ? 's' : ''}
+          </Badge>
+        </div>
+      </CardHeader>
+      <CardContent className="p-0">
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {participants.length > 0 ? (
+            participants.map((participant) => (
+              <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (
+                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
+                    {/* Placeholder for actual video stream */}
+                    <Video className="h-12 w-12 opacity-50" />
+                  </div>
+                ) : participant.isScreenSharing ? (
+                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">
+                    {/* Placeholder for screen share */}
+                    <ScreenShare className="h-12 w-12 opacity-50" />
+                  </div>
+                ) : (
+                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">
+                    <Avatar className="h-20 w-20">
+                      <AvatarImage src={participant.avatar} alt={participant.name} />
+                      <AvatarFallback className="bg-zion-purple text-white text-2xl">
+                        {participant.name.charAt(0).toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                  </div>
+                )}
+                
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -284,6 +770,17 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
           )}
         </div>
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="video-metadata flex items-center space-x-2">;
                   <span>{participant && participant.name}</span>;
                   {participant && participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -314,6 +811,11 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
           <Button
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <Button
             variant="outline"
             size="icon"
@@ -468,6 +970,15 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     </Card>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;
 },; interface Participant {
   id: string;
@@ -529,3 +1040,10 @@ if (onToggleVideo) {
 },
 };
 },
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,10 +1,12 @@
-import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
+<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import nextPlugin from '@next/eslint-plugin-next';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import globals from 'globals';
 
 const compat = new FlatCompat({
@@ -16,81 +18,12 @@ const compat = new FlatCompat({
 export default [
   ...compat.extends('next/core-web-vitals'),
   {
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'build/**',
-      'coverage/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**',
-      'automation/**',
-      'backup-problematic-files/**',
-      'src.disabled/**',
-      'components.disabled/**',
-      'pages.disabled/**',
-      'zion-os/**',
-      'zion-website/**',
-      'zion_academy/**',
-      'api/**',
-      'api-backup/**',
-      'api-disabled/**',
-      'api.disabled/**',
-      'backup/**',
-      'backups/**',
-      'broken_files_backup/**',
-      'corrupted-files-backup/**',
-      'cypress_backup/**',
-      'data_backup/**',
-      'deployment/**',
-      'e2e/**',
-      'server/**',
-      'temp_*/**',
-      'test_build/**',
-      'tests/**',
-      '__tests__/**',
-      'types/**',
-      '*.cjs',
-      '*.mjs',
-      'supabase/**',
-      'ultimate-*.cjs',
-      'advanced-*.js',
-      'comprehensive-*.js',
-      'enhanced-*.js',
-      'fix-*.js',
-      'merge-*.js',
-      'run-*.js',
-      'test-*.js',
-      '*.test.js',
-      '*.spec.js',
-      'aggressive-*.js',
-      'batch-*.js',
-      'clean-*.js',
-      'critical-*.js',
-      'execute-*.js',
-      'final-*.js',
-      'health-*.js',
-      'improve-*.js',
-      'maintenance-*.js',
-      'monitoring-*.js',
-      'optimized-*.js',
-      'performance-*.js',
-      'resolve-*.js',
-      'seo-*.js',
-      'simple-*.js',
-      'structural-*.js',
-      'system-*.js',
-      'ultimate-*.js',
-      '*.js'
-    ],
-  },
-  {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
+<<<<<<< HEAD
         ...globals.node,
         jest: 'readonly',
         describe: 'readonly',
@@ -159,4 +92,15 @@ export default [
       'no-console': 'off',
     },
   },
+=======
+        ...globals.node
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error'
+    }
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ];

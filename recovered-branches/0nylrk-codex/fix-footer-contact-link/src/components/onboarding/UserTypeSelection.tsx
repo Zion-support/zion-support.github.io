@@ -1,11 +1,40 @@
+<<<<<<< HEAD
 import {useState} from "react";
 import {Briefcase, Star, User} from "lucide-react";
 import {Button} from "@/components/ui/button";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import {useState} from "react";
+import {Briefcase, Star, User} from "lucide-react";
+import {Button} from "@/components/ui/button";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { Briefcase, Star, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Briefcase, Star, User } from "lucide-react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface UserTypeOption {
 
   id: "serviceProvider" | "talent" | "client"
@@ -40,6 +69,19 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       description: "I want to offer services on the platform",
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
 
       id: "talent"
@@ -47,6 +89,28 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       description: "I want to showcase my skills and find opportunities"
 
       icon: Star
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    },
+
+
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
 
       id: "client"
@@ -54,6 +118,70 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       description: "I want to discover and hire talent or services"
 
       icon: User
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {useState} from "react";
+import {Briefcase, Star, User} from "lucide-react";
+import {Button} from "@/components/ui/button";
+interface UserTypeOption {;
+  id: "serviceProvider" | "talent" | "client",;
+  name: string,;
+  description: string,;
+  icon: React && React.ElementType;
+}
+
+interface UserTypeSelectionProps {;
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,;
+  selectedType: string | null;
+}
+
+export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSelectionProps) {;
+  const userTypes: UserTypeOption[] = [;
+    {;
+      id: "serviceProvider",;
+      name: "Service Provider",;
+      description: "I want to offer services on the platform",;
+      icon: Briefcase;
+    };
+    {;
+      id: "talent",;
+      name: "Talent",;
+      description: "I want to showcase my skills and find opportunities",;
+      icon: Star;
+    };
+    {;
+      id: "client",;
+      name: "Client",;
+      description: "I want to discover and hire talent or services",;
+      icon: User;
+
+    }
+  ];
+=======
+=======
+    }
+  ];
+  ],
+
+  return (
+
+    <div className="space-y-6">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold text-white">Choose your role</h3>
+        <p className="text-zion-slate-light mt-2">
+          This helps us personalize your experience
+        </p>
+      </div>
+      <div className="grid gap-4 md: grid-cols-3">
+        {userTypes.map((type) => {
+  ];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
 
   ],
@@ -112,6 +240,16 @@ function UserTypeSelection() {
           const Icon = type.icon;
           const is_selected = selected_type === type.id,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           const Icon = type.icon;
           const is_selected = selected_type === type.id,
 
@@ -120,6 +258,19 @@ function UserTypeSelection() {
           const isSelected = selectedType === type.id,
           
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          return (
+            <Button;
+              key={type.id}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           return (
             <Button;
               key={type.id}
@@ -127,6 +278,11 @@ function UserTypeSelection() {
           return (
             <Button;
               key={type.id}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
@@ -135,6 +291,31 @@ function UserTypeSelection() {
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+                  {type.description}
+                </p>
+              </div>
+            </Button>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -172,6 +353,62 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     }
   ],;
   return (;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+          return (
+            <Button;
+              key={type.id}
+
+import { useState } from "react",;
+import { Briefcase, Star, User } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+;
+interface UserTypeOption {;
+  id:"serviceProvider" | "talent" | "client",;
+  name:string,;
+  description:string,;
+  icon:React.ElementType;
+}
+;
+interface UserTypeSelectionProps {;
+  onSelect:(userType:"serviceProvider" | "talent" | "client") => void,;
+  selectedType:string | null;
+}
+;
+export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionProps) {;
+  const userTypes:UserTypeOption[] = [;
+    {;
+      id:"serviceProvider",;
+      name:"Service Provider",;
+      description:"I want to offer services on the platform",;
+      icon:Briefcase;
+    },;
+    {;
+      id:"talent",;
+      name:"Talent",;
+      description:"I want to showcase my skills and find opportunities",;
+      icon:Star;
+    },;
+    {;
+      id:"client",;
+      name:"Client",;
+      description:"I want to discover and hire talent or services",;
+      icon:User;
+    }
+  ],;
+;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Choose your role</h3>;
@@ -179,6 +416,17 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
           This helps us personalize your experience;
         </p>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="grid gap-4 md: grid-cols-3">;
         {userTypes && userTypes.map((type) => {;
           const Icon = type && type.icon;
@@ -193,19 +441,54 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 isSelected ;
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   ];
   return (
           return (
             <Button;
               key={type.id}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               }`}
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
               </div>;
               <div className="text-center">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <h4 className="font-medium">{type && type.name}</h4>;
+                <p className="text-sm text-zion-slate-light mt-1">;
+                  {type && type.description}
+                </p>;
+              </div>;
+            </Button>;
+          );
+        })}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>;
     </div>;
   );
@@ -255,3 +538,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 ;
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

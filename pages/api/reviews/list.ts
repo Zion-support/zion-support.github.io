@@ -1,8 +1,10 @@
+
     }
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
 
+<<<<<<< HEAD
 
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
@@ -13,10 +15,14 @@
       if (r.removed || !r.approved) return false;
       const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
 
+=======
+      const matchesTarget =
+        r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
-
 
           x && x.projectId === r && r.projectId &&
           x && x.fromRole !== r && r.fromRole &&
@@ -24,6 +30,7 @@
           x && x.approved &&
           !x && x.removed
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_reviews, read_projects  } from '../../../utils / data_store';
@@ -78,6 +85,8 @@ if (return false) {
           x.to_role !== r.to_role &&;
           x.approved &&;
           !x.removed
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       );
       return counterpart_exists;
     });
@@ -91,7 +100,6 @@ if (return false) {
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
-
 
 try {
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
@@ -121,6 +129,7 @@ const { targetType, targetId } = req.query as {
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
 
+<<<<<<< HEAD
     const totalReviews = publicReviews.length;
     const averageRating = totalReviews
       ? Math.round(
@@ -146,6 +155,8 @@ const { targetType, targetId } = req.query as {
 
     return res.status(200).json({ summary, reviews: publicReviews });
   } catch (error: any) {
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
@@ -153,27 +164,8 @@ const { targetType, targetId } = req.query as {
           authorName = t ? t && t.name : r && r.fromId;
         }
         if (r && r.anonymous) authorName = "Anonymous";
-;
-    // Map to public reviews (mask anonymous author);
-    const public_reviews: PublicReview[] = filtered;
-      .sort (
-        (a, b) =>;
-          new Date (b.created_at).get_time () - new Date (a.created_at).get_time ()
-      );
-      .map ((r) => {
-        let author_name = r.from_id;
-        // Check condition
-if ( {) {
-  $2
-}
-          const t = TALENT_PROFILES.find ((tp) => tp.slug === r.from_id);
-          author_name = t ? t.name : r.from_id;
-        }
-        // Check condition
-if (author_name = "Anonymous") {
-  $2
-}
 
+<<<<<<< HEAD
         return {
 
           ...r
@@ -214,11 +206,12 @@ if (author_name = "Anonymous") {
           (target_type === "client" && p.client_id === target_id))
     ).length;
 ;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const summary: ReviewsSummary = {
       average_rating
       total_reviews
       totalCompletedProjects
-
 
   } catch (error: any) {
 
@@ -229,6 +222,10 @@ if (author_name = "Anonymous") {
 
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
   }
@@ -254,3 +251,7 @@ if (author_name = "Anonymous") {
       .json({ error: "Internal server error", details: error?.message });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

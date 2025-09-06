@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -41,6 +45,10 @@ export function SupportWidget() {
                 className={cn(
                   "font-semibold",
                   theme === "dark" ? "text-white" : "text-gray-800",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
               >
 
@@ -102,6 +110,10 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button
                 variant="ghost"
                 size="icon"
@@ -129,3 +141,7 @@ export function SupportWidget() {;
     </>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

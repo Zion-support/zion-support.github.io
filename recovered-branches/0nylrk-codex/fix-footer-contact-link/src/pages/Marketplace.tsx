@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -14,12 +50,33 @@ import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
 export default function Marketplace() {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -43,10 +100,42 @@ export default function Marketplace() {
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
+  const filterOptions = generateFilterOptions();
+  const navigate = useNavigate(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -54,6 +143,17 @@ export default function Marketplace() {
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -85,6 +185,18 @@ export default function Marketplace() {;
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -102,6 +214,24 @@ export default function Marketplace() {;
     if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
       return false
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return true
+  });
+  const handleFilterChange = (filterType: string, value: string) => {
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+    return true
+  });
+  const handleFilterChange = (filterType: string, value: string) => {
+    console.log(`Filter changed: ${filterType} = ${value}`)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     
     return true
   }),
@@ -111,6 +241,11 @@ export default function Marketplace() {;
     return true
   });
   const handleFilterChange = (filterType: string, value: string) => {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
@@ -185,10 +320,32 @@ export default function Marketplace() {;
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  }
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
@@ -196,10 +353,33 @@ export default function Marketplace() {;
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }),
       
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      });
+      }),
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -209,6 +389,18 @@ export default function Marketplace() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     return true;
   }),;
@@ -255,6 +447,20 @@ export default function Marketplace() {;
         state: { ;
           serviceType: listing && listing.category,;
           specificItem: {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+            id: listing && listing.id,;
+            title: listing && listing.title,;
+            category: listing && listing.category,;
+            image: listing && listing.images?.[0];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -368,20 +574,86 @@ if ( {) {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+    setSelectedRating(null);
+  },;
+  // Handle requesting a quote;
+  const handleRequestQuote = (listingId: string) => {;
+    const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId),;
+    if (listing) {;
+      toast({;
+        title: "Quote Requested",;
+        description: `Your quote request for ${listing.title} has been sent.`;
+      }),;
+      // Navigate to the quote request page with the listing information;
+      navigate("/request-quote", {;
+        state: {;
+          serviceType: listing.category,;
+          specificItem: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             id: listing.id,;
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         }
       });
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  };
+  },
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   };
   },
 
   };
   },
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  };
+  },
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
 
     <AppLayout>;
@@ -451,6 +723,19 @@ if ( {) {
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+            
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 selectedRating
               }}
               filterOptions={filterOptions}
@@ -480,6 +765,13 @@ if ( {) {
               </p>
             </div>
             
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
@@ -496,6 +788,19 @@ if ( {) {
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </p>;
             </div>;
 
@@ -520,6 +825,19 @@ if ( {) {
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
                     Clear Filters;
                   </Button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </div>;
+              )}
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onRemoveRating={() => setSelectedRating (null)}
               onClearSearch={() => setSearchQuery ("")}
             />;
@@ -613,10 +931,33 @@ if ( {) {
     </AppLayout>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </div>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </AppLayout>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </AppLayout>;
   ),; const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions ();
 const filterOptions = generateFilterOptions ();
@@ -705,3 +1046,10 @@ Discover professional services and products for your AI and tech projects. Brows
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

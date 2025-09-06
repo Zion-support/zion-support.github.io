@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
     return res.status(200).json({ url })
@@ -13,14 +16,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Content-Typeapplication/octet-stream')
   res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version || 'draft'}.html"`)
   res.status(200).send(html)
-}
 
-}
-function escapeHtml(str: string) {
-  return String(str)
-    .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
-};
+

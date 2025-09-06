@@ -1,10 +1,19 @@
+<<<<<<< HEAD
+import React, { useState } from './react';
+import { MapPin  } from './lucide-react';
+import { TalentCardSkills  } from './TalentCardSkills';
+
+=======
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
+<<<<<<< HEAD
+=======
   skills: string[] | undefined;
 }
 
@@ -14,6 +23,7 @@ export function TalentCardContent({
   timezone,
   skills,
 }: TalentCardContentProps) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [isHovering, setIsHovering] = useState(false);
 
 
@@ -58,8 +68,25 @@ interface TalentCardContentProps {;
 
 
 
+<<<<<<< HEAD
 }
 
+=======
+<<<<<<< HEAD
+}
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Location */}
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
@@ -67,11 +94,59 @@ interface TalentCardContentProps {;
           <span>{timezone}</span>;
         </div>;
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      {/* Short bio or summary - longer on hover for desktop */}
+      <div
+        className="overflow-hidden transition-all duration-300"
+        style={{ maxHeight: isHovering ? "8rem" : "3rem" }}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <p className="text-zion-slate mb-4">{summary || bio}</p>
+      </div>
+
+=======
+        <p className="text-zion-slate mb-4">{summary || bio}</p>
+      </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+      {/* Short bio or summary - longer on hover for desktop */}
+<<<<<<< HEAD
+      <div
+        className="overflow-hidden transition-all duration-300" 
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+=======
+      ;
+      {/* Short bio or summary - longer on hover for desktop */}
+      <div ;
+        className="overflow-hidden transition-all duration-300" ;
+        style={{ maxHeight:isHovering ? '8rem' :'3rem' }}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >;
@@ -104,6 +179,14 @@ skills: string[] | undefined
   skills 
 }/> </div>) 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export /**
  * TalentCardContent - Function description
  */

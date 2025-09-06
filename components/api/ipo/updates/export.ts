@@ -1,8 +1,18 @@
+<<<<<<< HEAD
+=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+import PDFDocument from 'pdfkit';
+
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -17,6 +27,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -25,6 +37,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const id = String(req && req.query.id || "");
   const updates = readJsonFile("updates && updates.json", [] as any[]);
   const u = updates && updates.find((x: any) => x && x.id === id);
@@ -52,10 +68,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc && doc.fontSize(12).text(u && u.kpis || "");
   doc && doc.end();
   doc && doc.end();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end()
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -96,6 +120,7 @@ function handler() {
   doc.font_size (12).text (u.kpis || "");
   doc.end ();
   doc.end ();
+<<<<<<< HEAD
   doc.end();
 
 
@@ -103,9 +128,16 @@ function handler() {
   doc.fontSize(12).text(u.kpis |"");
   doc.end();
   doc.end();
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end();
+<<<<<<< HEAD
   doc.end();
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

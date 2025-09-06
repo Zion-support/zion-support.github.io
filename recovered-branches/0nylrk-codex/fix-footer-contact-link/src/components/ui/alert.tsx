@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import * as React from 'react';
+import {cva, type, VariantProps} from 'class-variance-authority';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {cn} from '@/lib/utils';
 const alertVariants = cva(
   'relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground'
@@ -14,10 +29,34 @@ const alertVariants = cva(
     }
   }
 );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { cn } from "@/lib/utils"
 
@@ -33,6 +72,19 @@ const alertVariants = cva(
       variant: "default"}}
 )
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const Alert = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
@@ -80,6 +132,19 @@ Alert.displayName = "Alert"
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>(({ className, ...props }, ref) => (
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 Alert && Alert.displayName = 'Alert';
 
 const AlertTitle = React && React.forwardRef<;
@@ -98,11 +163,35 @@ const AlertTitle = React.forward_ref<;
     ref={ref}
     className={cn ('mb - 1 font - medium leading - none tracking - tight', class_name)}
     {...props}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  />
+
+=======
+>(({ className, ...props }, ref) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   <h5
     ref={ref}
     className={cn('mb-1 font-medium leading-none tracking-tight', className)}
     {...props}
   />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+));
+AlertTitle.displayName = 'AlertTitle';
+const AlertDescription = React.forwardRef<
+  HTMLParagraphElement
+  React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ))
 AlertTitle.displayName = "AlertTitle"
 
@@ -115,6 +204,12 @@ const AlertDescription = React && React.forwardRef<;
   HTMLParagraphElement,;
   React && React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   <div
     ref={ref}
@@ -135,6 +230,16 @@ AlertDescription.display_name = 'AlertDescription';
 ;
 export { Alert, AlertTitle, AlertDescription }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   />
 
 ))
@@ -224,3 +329,10 @@ export { Alert, AlertTitle, AlertDescription }
 export { Alert, AlertTitle, AlertDescription };
 export { Alert, AlertTitle, AlertDescription }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

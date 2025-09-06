@@ -16,12 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           method: ep && ep.method
           header: [
             {
-            : undefined
-        }
-      }))
-    )
-      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
-    }
+
     item: [
       {
         name: 'Health Check'
@@ -118,10 +113,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            raw: `{{base_url}}${ep.path}`
-            host: ["{{base_url}}"]
-            path: ep.path.replace (/^\//, "").split ("/")
-          }
+
           body: ep.requestBodySchema;
             ? { mode: "raw", raw: JSON.stringify ({}, null, 2) }
             : undefined

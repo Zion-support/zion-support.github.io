@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -8,6 +21,12 @@ import {Switch} from "@/components/ui/switch";
 import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
 import {Loader2, ShieldCheck, Download} from "lucide-react";
 import {toast} from "sonner";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -20,6 +39,16 @@ import { Loader2, ShieldCheck, Download } from "lucide-react";
 import { toast } from "sonner";
 import { Loader2, ShieldCheck, Download } from "lucide-react",
 import { toast } from "sonner",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SmartContractDeploymentProps {
 
   solidityCode: string
@@ -31,6 +60,16 @@ interface SmartContractDeploymentProps {
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function SmartContractDeployment({
   solidityCode;
   onDeploy;
@@ -41,6 +80,13 @@ export function SmartContractDeployment({ ;
 export function SmartContractDeployment({ 
   solidityCode,
   onDeploy,
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
@@ -49,6 +95,50 @@ export function SmartContractDeployment({
     useEscrow: true
     deployToChain: false
     walletAddress: ''
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useState } from './react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
+import { Label } from '@/components / ui / label';
+import { Input } from '@/components / ui / input';
+import { Switch } from '@/components / ui / switch';
+import { BlockchainNetwork, DeploymentOptions } from '@/types / smart - contracts';
+import { Loader2, ShieldCheck, Download } from './lucide-react';
+import { toast } from './sonner';
+interface SmartContractDeploymentProps {
+  solidity_code: string,
+  on_deploy: (options: DeploymentOptions) => Promise < void>,
+  is_deploying: boolean;
+}
+export /**
+ * SmartContractDeployment - Function description
+ */
+function SmartContractDeployment() {
+  const [deployment_options, setDeploymentOptions] = useState < DeploymentOptions>({
+    network: 'none',
+    use_escrow: true,
+    deployToChain: false,
+    wallet_address: '';
+  });
+;
+
+=======
+
+  }),
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const handleDeployContract = async () => {
     // Check condition
 if ( {) {
@@ -62,6 +152,65 @@ if ( {) {
     } catch (error) {
       console.error ("Deployment error:", error);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+
+
+  }),
+
+
+  const handleDeployContract = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("Please enter a wallet address for blockchain deployment");
+      return;
+    }
+    try {
+      await on_deploy (deployment_options);
+    } catch (error) {
+      console.error ("Deployment error:", error);
+    }
+
+
+  });
+  }),
+
+  const handleDeployContract = async () => {
+    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
+      toast.error("Please enter a wallet address for blockchain deployment"),
+      return
+    }
+    try {
+      await onDeploy(deploymentOptions)
+    } catch (error) {
+      console.error("Deployment error:", error)
+    }
+  }
+  const handleDownloadSolidity = () => {
+    // Create a blob from the Solidity code
+    const blob = new Blob([solidityCode], { type: 'text/plain' })
+    const url = URL.createObjectURL(blob);
+    // Create a temporary anchor to trigger download
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ZionContract.sol';
+    document.body.appendChild(a);
+    a.click();
+    // Clean up
+    URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+    toast.success("Solidity contract downloaded")
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
   const handleDownloadSolidity = () => {
@@ -83,6 +232,17 @@ if ( {) {
     toast.success("Solidity contract downloaded")
   },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <Card className="w-full">
       <CardHeader>
@@ -97,6 +257,20 @@ if ( {) {
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+            <Switch
+              id="deploy-blockchain"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;
@@ -113,6 +287,16 @@ import { Switch } from "@/components/ui/switch",;
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
 import { Loader2, ShieldCheck, Download } from "lucide-react",;
 import { toast } from "sonner",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -129,6 +313,26 @@ interface SmartContractDeploymentProps {;
   onDeploy: (options: DeploymentOptions) => Promise<void>,;
   isDeploying: boolean;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function SmartContractDeployment(): any ({ ;
+  solidityCode;
+  onDeploy;
+=======
+;
+export function SmartContractDeployment({;
+  solidityCode,;
+  onDeploy,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isDeploying;
 }: SmartContractDeploymentProps) {;
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
@@ -136,11 +340,176 @@ interface SmartContractDeploymentProps {;
     useEscrow: true,;
     deployToChain: false,;
     walletAddress: '';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  });
+
+  const handleDeployContract = async () => {;
+    if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {;
+      toast && toast.error("Please enter a wallet address for blockchain deployment");
+      return;
+    }
+
+    try {;
+      await onDeploy(deploymentOptions);
+    } catch (error) {;
+      console && console.error("Deployment error:", error);
+    }
+  };
+
+  const handleDownloadSolidity = () => {;
+    // Create a blob from the Solidity code;
+    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
+    const url = URL && URL.createObjectURL(blob);
+
+    // Create a temporary anchor to trigger download;
+    const a = document && document.createElement('a');
+    a && a.href = url;
+    a && a.download = 'ZionContract && ZionContract.sol';
+    document && document.body.appendChild(a);
+    a && a.click();
+
+    // Clean up;
+    URL && URL.revokeObjectURL(url);
+    document && document.body.removeChild(a);
+
+    toast && toast.success("Solidity contract downloaded");
+  };
+
+  return (
+=======
+
+import React, { useState } from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Switch } from "@/components/ui/switch",;
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
+import { Loader2, ShieldCheck, Download } from "lucide-react",;
+import { toast } from "sonner",;
+;
+interface SmartContractDeploymentProps {;
+  solidityCode:string,;
+  onDeploy:(options:DeploymentOptions) => Promise<void>,;
+  isDeploying:boolean;
+}
+;
+export function SmartContractDeployment({ ;
+  solidityCode,;
+  onDeploy,;
+  isDeploying;
+} SmartContractDeploymentProps) {;
+  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
+    network:'none',;
+    useEscrow:true,;
+    deployToChain:false,;
+    walletAddress:'';
+  }),;
+;
+  const handleDeployContract = async () => {;
+    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {;
+      toast.error("Please enter a wallet address for blockchain deployment"),;
+      return,;
+    }
+    ;
+    try {;
+      await onDeploy(deploymentOptions),;
+    } catch (error) {;
+      console.error("Deployment error:", error),;
+    }
+  },;
+  ;
+  const handleDownloadSolidity = () => {;
+    // Create a blob from the Solidity code;
+    const blob = new Blob([solidityCode], { type:'text/plain' }),;
+    const url = URL.createObjectURL(blob),;
+    ;
+  }),;
+  const handleDeployContract = async () => {;
+    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {;
+      toast.error("Please enter a wallet address for blockchain deployment"),;
+      return;
+    }
+;
+    try {;
+      await onDeploy(deploymentOptions);
+    } catch (error) {;
+      console.error("Deployment error:", error);
+    }
+  },;
+  const handleDownloadSolidity = () => {;
+    // Create a blob from the Solidity code;
+    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
+    const url = URL.createObjectURL(blob),;
+    // Create a temporary anchor to trigger download;
+    const a = document.createElement('a'),;
+    a.href = url,;
+    a.download = 'ZionContract.sol',;
+    document.body.appendChild(a),;
+    a.click(),;
+    // Clean up;
+    URL.revokeObjectURL(url),;
+    document.body.removeChild(a),;
+    toast.success("Solidity contract downloaded");
+  },;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+  const handleDownloadSolidity = () =>: any {
+    // Create a blob from the Solidity code;
+    const blob = new Blob ([solidity_code], { type: 'text / plain' }),
+    const url = URL.createObjectURL (blob);
+;
+    // Create a temporary anchor to trigger download;
+    const array = document.create_element ('a');
+    a.href = url;
+    a.download = 'ZionContract.sol';
+    document.body.append_child (a);
+    a.click ();
+;
+    // Clean up;
+    URL.revokeObjectURL (url);
+    document.body.remove_child (a);
+;
+    toast.success ("Solidity contract downloaded");
+  }
+;
+  return (
+    <Card className="w - full">;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          <ShieldCheck className="h - 5 w - 5 text - primary" />;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -259,10 +628,40 @@ interface SmartContractDeploymentProps {;
                   onChange={(e) => setDeploymentOptions({;
 
                     ...deploymentOptions;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    walletAddress: e && e.target.value;
+=======
+
+=======
+                <Input
+                  id="wallet-address"
+                  placeholder="0x..."
+                  value={deploymentOptions.walletAddress |''}
+                  onChange={(e) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    walletAddress: e.target.value
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   })}
 
                 />;
@@ -270,6 +669,12 @@ interface SmartContractDeploymentProps {;
 
               <div className="flex items-center space-x-2">;
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   onChange={(e) => setDeploymentOptions({
                     ...deploymentOptions;
                     walletAddress: e.target.value
@@ -408,6 +813,20 @@ interface SmartContractDeploymentProps {;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
       <CardFooter className="flex justify - between">;
         <Button variant="outline" on_click={handleDownloadSolidity}>;
@@ -495,3 +914,8 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
 ;
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

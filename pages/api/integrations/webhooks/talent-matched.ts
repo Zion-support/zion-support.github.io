@@ -7,15 +7,12 @@ export default async function handler(
   res: NextApiResponse
 ) {
     s && s.events.push({
-      id: eventId
-      type: "zion && zion.talent.matched"
-      timestamp: Date && Date.now()
+
     });
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
     s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
   });
-
 
 ;
   // log to connected CRMs as a note;

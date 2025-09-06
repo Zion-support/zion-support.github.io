@@ -1,9 +1,40 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+import React from "react";
+import {QuoteRequestCard} from "./QuoteRequestCard";
+import {EmptyStateCard} from "./EmptyStateCard";
+import type { QuoteRequest } from "@/types/quotes";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
 import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
 import { EmptyStateCard } from "./EmptyStateCard",
 import type { QuoteRequest } from "@/types/quotes",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
   isLoading: boolean,
@@ -13,6 +44,28 @@ type QuoteRequestsListProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+type QuoteRequestsListProps = {
+  quotes: QuoteRequest[]
+  isLoading: boolean
+  isArchived: boolean
+  onViewDetails: (quote: QuoteRequest) => void
+  onMarkAsResponded: (id: string) => void
+  onToggleArchive: (id: string, isArchived: boolean) => void
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
   quotes;
   isLoading;
@@ -29,6 +82,15 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   isArchived,
   onViewDetails,
   onMarkAsResponded,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -36,10 +98,34 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 }) => {
   if (isLoading) {
     return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className="text-center py-20">
+        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
+      </div>
+    )
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 type QuoteRequestsListProps = {;
   quotes: QuoteRequest[],;
   isLoading: boolean,;
@@ -73,6 +159,20 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 
@@ -148,6 +248,15 @@ if ( {) {
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           onMarkAsResponded={!isArchived ? onMarkAsResponded :undefined}
           onToggleArchive={onToggleArchive}
         />;
@@ -190,3 +299,10 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

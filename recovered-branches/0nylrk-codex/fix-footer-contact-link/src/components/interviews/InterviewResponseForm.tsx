@@ -1,8 +1,29 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  interview: Interview;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+  interview: Interview;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Interview } from "@/types/interview",
 import { format, parseISO } from "date-fns",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 import React from './react';
@@ -27,6 +48,12 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
 import { format, parseISO } from "date-fns";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface InterviewResponseFormProps {
   interview: Interview,
@@ -35,12 +62,37 @@ interface InterviewResponseFormProps {
   isLoading: boolean
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+export function InterviewResponseForm({
+  interview,
+  onConfirm,
+  onClose,
+  isLoading,
+}: InterviewResponseFormProps) {
+  // Format interview date and time;
+  const interviewDate = parseISO(interview.scheduled_date);
+  const formattedDate = format(interviewDate, "EEEE, MMMM d");
+  const formattedTime = format(interviewDate, "h: mm a");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
   // Format interview date and time
   const interviewDate = parseISO(interview.scheduled_date),
   const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
   const formattedTime = format(interviewDate, 'h: mm a'),
 
+<<<<<<< HEAD
+=======
 
 
   // Calculate when interview ends;
@@ -55,6 +107,11 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </p>
         
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -62,6 +119,17 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           </div>
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div>{formattedTime} - {formattedEndTime}</div>
           </div>
           <div className="flex items-center gap-3">
@@ -127,16 +195,65 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           </div>;
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const endTime = new Date(interviewDate);
   endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
   const formattedEndTime = format(endTime, "h: mm a");
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {formattedTime} - {formattedEndTime}
             </div>;
           </div>;
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Duration:</div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div>{interview && interview.duration_minutes} minutes</div>;
+          </div>;
+          {interview && interview.meeting_platform && (;
+            <div className="flex items-center gap-3">;
+              <div className="w-24 text-sm text-zion-slate-light">;
+                Platform:;
+              </div>;
+              <div className="capitalize">{interview && interview.meeting_platform}</div>;
+            </div>;
+          )}
+          {interview && interview.notes && (;
+            <div className="flex gap-3">;
+              <div className="w-24 text-sm text-zion-slate-light">Notes:</div>;
+              <div className="text-sm">{interview && interview.notes}</div>;
+            </div>;
+          )}
+
+        </div>;
+      </div>;
+
+=======
+            <div>{formattedTime} - {formattedEndTime}</div>;
+          </div>;
+          <div className="flex items-center gap-3">;
+            <div className="w-24 text-sm text-zion-slate-light">Duration:</div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <div>{interview.duration_minutes} minutes</div>;
           </div>;
           {interview.meeting_platform && (;
@@ -150,16 +267,48 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
               <div className="w-24 text-sm text-zion-slate-light">Notes:</div>;
             </div>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>;
+      </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <div className="flex justify-end gap-3 pt-4">;
         <Button variant="outline" onClick={onClose} disabled={isLoading}>;
           Cancel;
         </Button>;
         <Button onClick={onConfirm} disabled={isLoading}>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {isLoading ? "Confirming..." : "Confirm Interview"}
         </Button>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   on_confirm: () => Promise < void>;
   on_close: () => void;
   is_loading: boolean;
@@ -223,6 +372,22 @@ function InterviewResponseForm() {
         </Button>;
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+<<<<<<< HEAD
+=======
+=======
+}
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 
@@ -271,3 +436,8 @@ return (<div className="space-y-4" > <div className="p-4 bg-zion-blue-light/20 r
 }
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

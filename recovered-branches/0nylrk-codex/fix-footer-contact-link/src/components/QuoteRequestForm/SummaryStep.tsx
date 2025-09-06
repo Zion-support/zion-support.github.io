@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -6,6 +19,41 @@ import {Textarea} from "@/components/ui/textarea";
 import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+interface SummaryStepProps {
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
+}
+
+export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
+  const [isMatching, setIsMatching] = useState(false);
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+  
+  // Run AI matching when the component mounts
+  useEffect(() => {
+    const runMatching = async () => {
+      if (!formData.projectDescription) return;
+      
+      setIsMatching(true);
+      try {
+        // Create a query string from the form data
+        const queryString = `
+          ${formData.projectName} 
+          ${formData.projectDescription} 
+          ${formData.serviceType} 
+          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
+          ${formData.timeline}
+        `;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
@@ -29,6 +77,38 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     const runMatching = async () => {
       if (!formData.projectDescription) return;
       setIsMatching(true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      try {
+        // Create a query string from the form data
+        const queryString = `
+          ${formData.projectName}
+          ${formData.projectDescription}
+          ${formData.serviceType}
+          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
+          ${formData.timeline}
+        `;
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
+import { toast } from "@/hooks/use-toast",
+interface SummaryStepProps {
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
+import { useEffect, useState } from "react",;
+import { QuoteFormData } from "@/types/quotes",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Label } from "@/components/ui/label",;
+import { Textarea } from "@/components/ui/textarea",;
+import { AIMatchingResults } from "@/components/AIMatchingResults",;
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
+import { toast } from "@/hooks/use-toast",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SummaryStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
@@ -95,6 +175,20 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           queryString,
           formData.serviceType,
           3
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+          queryString;
+          formData && formData.serviceType;
+          3;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         );
 
   const [isMatching, setIsMatching] = useState(false);
@@ -159,9 +253,38 @@ if (return) {
     
 
 
+<<<<<<< HEAD
       } finally {
         setIsMatching (false);
       }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        );
+        setMatches(results)
+      } catch (error) {
+        console.error("Error during AI matching:", error);
+        toast({
+          title: "Matching Error"
+          description: "We couldn't find matches for your request. Please try again."
+          variant: "destructive"})
+      } finally {
+        setIsMatching(false)
+      }
+    }
+    },
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      } finally {
+        setIsMatching (false);
+      }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -173,11 +296,36 @@ if (return) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+  }
+  // Extract just the items from each MatchResult for the AIMatchingResults component
+  const matchItems = matches.map(match => match.item);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -185,6 +333,24 @@ if (return) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+  }
+
+  return (
+    <div className="space-y-6">
+      <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   
   return (
@@ -236,6 +402,11 @@ if (return) {
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -300,10 +471,31 @@ if (return) {
                   </div>
                 </div>
               )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
               
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+              
+              
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -441,6 +633,102 @@ if (return) {
             <div className="space-y-4">;
               <div>;
                 <Label className="text-zion-slate-light">Project Name</Label>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <div className="text-white">{formData && formData.projectName}</div>;
+              </div>;
+
+              <div>;
+                <Label className="text-zion-slate-light">Project Description</Label>;
+                <div className="text-white whitespace-pre-wrap">{formData && formData.projectDescription}</div>;
+=======
+    }
+;
+    run_matching ();
+  }, [form_data]);
+;
+  const handleSelectMatch = (match: MatchResult) =>: any {
+    // Update the form with the selected match;
+    updateFormData ({
+      specific_item: match.item,
+      service_category: match.item.category;
+    });
+;
+    toast ({
+      title: "Match Selected",
+      description: `You've selected ${match.item.title}`});
+  }
+;
+  // Extract just the items from each MatchResult for the AIMatchingResults component;
+  const match_items = matches.map (match => match.item);
+;
+  // Map the onSelectMatch handler to work with the item directly;
+  const handleItemSelect = (item: any) =>: any {
+    // Find the original MatchResult that contains this item;
+    const match_result = matches.find (match => match.item.id === item.id),
+    // Check condition
+if ( {) {
+  $2
+}
+<<<<<<< HEAD
+=======
+      handleSelectMatch (match_result);
+    }
+  }
+;
+  return (
+    <div className="space - y-6">;
+      <h3 className="text - xl font - semibold text - white mb - 4">Review Your Request</h3>;
+      {/* AI Matching Results */}
+      <AIMatchingResults;
+        service_type={form_data.service_type}
+        project_description={form_data.project_description}
+        matches={match_items}
+        onSelectMatch={handleItemSelect}
+        is_loading={is_matching}
+      />;
+      {/* Service Information */}
+      <div>;
+        <h4 className="text - lg font - medium text - white mb - 2">Service Information</h4>;
+        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
+          <CardContent className="pt - 4">;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+              <div>;
+                <Label className="text - zion - slate - light">Service Type</Label>;
+                <div className="text - white">{form_data.service_type}</div>;
+              </div>;
+              {form_data.specific_item && (
+                <div>;
+                  <Label className="text - zion - slate - light">Selected Item</Label>;
+                  <div className="text - white">{form_data.specific_item.title}</div>;
+                </div>)}
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+      {/* Project Details */}
+      <div>;
+        <h4 className="text - lg font - medium text - white mb - 2">Project Details</h4>;
+        <Card className="bg - zion - blue - dark border border - zion - blue - light">;
+          <CardContent className="pt - 4">;
+            <div className="space - y-4">;
+              <div>;
+                <Label className="text - zion - slate - light">Project Name</Label>;
+                <div className="text - white">{form_data.project_name}</div>;
+              </div>;
+              <div>;
+                <Label className="text - zion - slate - light">Project Description</Label>;
+                <div className="text - white whitespace - pre - wrap">{form_data.project_description}</div>;
+=======
+                <div className="text-white">{formData.projectName}</div>;
+              </div>;
+              ;
+              <div>;
+                <Label className="text-zion-slate-light">Project Description</Label>;
+                <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </div>;
             </div>;
           </CardContent>;
@@ -504,3 +792,8 @@ if (return) {
 };
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

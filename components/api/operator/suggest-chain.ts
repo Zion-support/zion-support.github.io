@@ -1,5 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const stake = Number(stakeUsd || 0);
 
@@ -7,6 +10,10 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
@@ -15,14 +22,18 @@ export default async function handler(
   const { region, stakeUsd } = req.body |{}
   const stake = Number(stakeUsd |0);
 
+<<<<<<< HEAD
   const stake = Number(stakeUsd || 0);
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
 
+<<<<<<< HEAD
 
 
   let candidates = ['polygon', 'bnb', 'avalanche'];
@@ -50,10 +61,16 @@ export default async function handler(
   }
   let candidates = ['polygonbnbavalanche'];
   if (stake > 5000) candidates = ['arbitrumoptimismethereum'];
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
   res
     .status(200)
     .json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const regionLc = (region || '').toString().toLowerCase();
   if (regionLc && regionLc.includes('apac') || regionLc && regionLc.includes('asia')) {
     candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon']
@@ -142,3 +159,7 @@ if (||) {
   const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

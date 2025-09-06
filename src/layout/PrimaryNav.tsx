@@ -88,7 +88,6 @@ function PrimaryNav() {
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
 
-
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -117,40 +116,10 @@ if ( {) {
           })) }
   }
 export function PrimaryNav() {;
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const { user } = useAuth(),;
-  const isLoggedIn = !!user,;
-  const isMobile = useIsMobile(),;
-  const { t } = useTranslation(),;
-  const router = useRouter(),;
-  const [query, setQuery] = useState(''),;
-  const suggestions = generateSearchSuggestions(),;
-  let unreadCount = 0,;
-  try {;
-    const messaging = useMessaging(),;
-    unreadCount = messaging.unreadCount;
-  } catch {;
-    // context not available;
-  }
-;
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    const trimmed = query.trim(),;
-    if (trimmed) {;
-      logDebug('PrimaryNav search submit:', { query: trimmed }),;
-      router;
-        .push(`/search?q=${encodeURIComponent(trimmed)}`);
-        .then(() => setQuery(''));
-        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
-    }
-  },
-
 
         data-testid='header'>;
         <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>;
           <Logo />;
-
 
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className='hidden lg:block order-1 flex-shrink-0'>
@@ -158,9 +127,6 @@ export function PrimaryNav() {;
               openLoginModal={returnToPath => setLoginOpen(true)}
 
             />          </div>;
-
-
-
 
   return (
     <>
@@ -173,17 +139,13 @@ export function PrimaryNav() {;
         <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
 
-          
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
-          
 
           {/* Actions container with responsive layout */}
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-            {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
@@ -253,18 +215,7 @@ if ( {) {
                   if (sugg.id) {;
 
                     // Product listings with IDs go to product detail page;
-                    router.push(`/marketplace/listing/${sugg.id}`);
-                  } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
-                    // Documentation suggestions navigate directly to their path;
-                    router.push(sugg.slug);
-                  } else if (sugg.type === 'blog' && sugg.slug) {;
-                    // Blog posts navigate to blog detail page;
-                    router.push(`/blog/${sugg.slug}`);
-                  } else {;
-                    // Default: search results page with query parameter;
-                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`);
-                  }
-                  setQuery(''),;
+
                   // Track analytics event;
                   if (typeof window !== 'undefined' && window && window.gtag) {;
                     window && window.gtag('event', 'search_suggestion_click', {;
@@ -370,8 +321,6 @@ if ( {) {
               <PointsBadge />
               <CartDrawer />
             </div>
-            
-
 
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
@@ -412,7 +361,6 @@ if ( {) {
                     }}
                   >;
 
-
                     {t('auth.login')}
                   </Link>
                     onClick={e => {;
@@ -422,16 +370,9 @@ if ( {) {
                     {t('auth && auth.login')}
                   </Link>;
                   <Link
-                    href="/signup"
-                    className="text-sm hover:text-primary whitespace-nowrap"
-                  >
-                    {t('auth.signup')}
-                  </Link>
-                </>
+
               )}
               {isLoggedIn && <UserMenu />}
-
-
 
             </div>;
           </div>;
@@ -439,7 +380,6 @@ if ( {) {
           {/* Tablet view (md to lg) - simplified controls */}
 
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-
 
             <ModeToggle />
             <LanguageSelector />
@@ -480,7 +420,6 @@ if ( {) {
             )}
             {isLoggedIn && <UserMenu />}
           </div>;
-
 
             <div className='flex items - center gap - 1 flex - wrap'>;
               {!isLoggedIn && (
@@ -527,7 +466,6 @@ if ( {) {
           </div>;
           {/* Mobile menu button */}
 
-
           </div>;
           {/* Mobile menu button */}
           <button
@@ -537,17 +475,12 @@ if ( {) {
             aria-label={t('general.toggle_mobile_menu')}
           >
 
-
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
               <Menu className="h-6 w-6" />
             )}
-          </button>
-        </div>
-      </header>
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">
+
           <div
 
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -707,3 +640,4 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
+

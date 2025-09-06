@@ -1,4 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
   if (typeof id !== 'string' |typeof metric !== 'string') return res.status(400).json({ error: 'Invalid params' });
@@ -17,6 +21,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (!post) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics })
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { increment_metric } from '@/utils / data / blog_store';
 export default /**
  * handler - Function description
@@ -60,6 +68,7 @@ function handler() {
 
 }
 
+<<<<<<< HEAD
 
 
 }
@@ -72,3 +81,5 @@ function handler() {
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

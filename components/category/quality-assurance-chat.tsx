@@ -30,9 +30,12 @@ const QualityAssuranceChat: NextPage = () => {;
 }
 export default QualityAssuranceChat;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -74,6 +77,7 @@ const QualityAssuranceChat: NextPage = () => {
 ;
 export default QualityAssuranceChat;
 ;
+<<<<<<< HEAD
     <div>
       <Head>
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
@@ -121,3 +125,6 @@ export default QualityAssuranceChat;
 
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -7,17 +7,63 @@ import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && 
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface TenantInfo {
   id: string;
   brand_name: string;
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
+const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+
+if (!supabaseUrl || !supabaseServiceKey) {
+
+=======
+const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
+const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+if (!supabaseUrl || !supabaseServiceKey) {
+
+  logo_url: string | null
+  theme_preset: string
+}
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age': '86400'}
+// Initialize Supabase client
+const supabaseUrl = Deno.env.get('SUPABASE_URL');
+const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+if (!supabaseUrl |!supabaseServiceKey) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   throw new Error('Required environment variables are not set')
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -29,6 +75,16 @@ serve(async (req) => {
       headers: corsHeaders})
   }
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const url = new URL(req && req.url);
     const hostnameParam = url && url.searchParams.get('host');
     const subdomainParam = url && url.searchParams.get('subdomain');
@@ -38,6 +94,25 @@ serve(async (req) => {
     const hostname = hostnameParam || 
       (forwardedHost ? forwardedHost && forwardedHost.split()[0].trim().split(':')[0] : null) ||
       url && url.hostname;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+    const url = new URL(req.url);
+    const hostnameParam = url.searchParams.get('host');
+    const subdomainParam = url.searchParams.get('subdomain');
+    // Get hostname from parameters or headers
+    const forwardedHost = req.headers.get('x-forwarded-host');
+    const hostname = hostnameParam |
+      (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) |
+      url.hostname;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided')
     }
@@ -74,12 +149,38 @@ serve(async (req) => {
             .eq('subdomain', subdomain)
             .eq('is_active', true)
             .single();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          if (!subdomainResult.error) {
+            tenantInfo = subdomainResult.data as TenantInfo
+import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7',;
+interface TenantInfo {;
+  id: string,;
+  brand_name: string,;
+  subdomain: string,;
+  custom_domain: string | null,;
+  primary_color: string,;
+  logo_url: string | null,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
           if (!subdomainResult && subdomainResult.error) {
             tenantInfo = subdomainResult && subdomainResult.data as TenantInfo
 
   logo_url: string | null,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   theme_preset: string;
 }
 const cors_headers = {
@@ -156,6 +257,75 @@ if ( {) {
         .single ();
 ;
       // If no match on custom domain, try subdomain;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  theme_preset: string;
+}
+;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age': '86400'},;
+// Initialize Supabase client;
+const supabaseUrl = Deno.env.get('SUPABASE_URL'),;
+const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'),;
+if (!supabaseUrl || !supabaseServiceKey) {;
+  throw new Error('Required environment variables are not set');
+}
+;
+const supabase = createClient(supabaseUrl, supabaseServiceKey),;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === 'OPTIONS') {;
+    return new Response(null, {;
+      status: 204,;
+      headers: corsHeaders});
+  }
+;
+  try {;
+    const url = new URL(req.url),;
+    const hostnameParam = url.searchParams.get('host'),;
+    const subdomainParam = url.searchParams.get('subdomain'),;
+    // Get hostname from parameters or headers;
+    const forwardedHost = req.headers.get('x-forwarded-host'),;
+    const hostname = hostnameParam ||;
+      (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) ||;
+      url.hostname,;
+    if (!hostname && !subdomainParam) {;
+      throw new Error('No hostname or subdomain provided');
+    }
+;
+    // Extract tenant info;
+    let tenantInfo: TenantInfo | null = null,;
+    if (subdomainParam) {;
+      // Direct subdomain lookup;
+      const { data, error } = await supabase;
+        .from('whitelabel_tenants');
+        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
+        .eq('subdomain', subdomainParam);
+        .eq('is_active', true);
+        .single(),;
+      if (error) {;
+        console.error('Database error:', error),;
+        throw new Error(`Database error: ${error.message}`);
+      }
+;
+      tenantInfo = data as TenantInfo;
+    } else {;
+      // Try matching custom domain first;
+      let { data, error } = await supabase;
+        .from('whitelabel_tenants');
+        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
+        .eq('custom_domain', hostname);
+        .eq('is_active', true);
+        .single(),;
+      // If no match on custom domain, try subdomain;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (!data && !error) {;
         const subdomain = hostname.split('.')[0],;
         if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {;
@@ -169,6 +339,16 @@ if ( {) {
             tenantInfo = subdomainResult.data as TenantInfo;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Check condition
 if ( {) {
   $2
@@ -189,6 +369,16 @@ if ( {) {
   $2
 }
             tenant_info = subdomain_result.data as TenantInfo;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }
         }
       } else // Check condition
@@ -216,7 +406,29 @@ if ( {) {
           ...corsHeaders}}
     )
   } catch (error) {
+<<<<<<< HEAD
         status: 'error'
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    console && console.error('Tenant detector error:', error);
+    return new Response(
+
+      JSON && JSON.stringify({ 
+        error: error && error.message || 'Internal server error',
+
+=======
+      JSON && JSON.stringify({ 
+        error: error && error.message || 'Internal server error',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        status: 'error'
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return new Response (
       JSON.stringify ({
         tenant: tenant_info,
@@ -233,15 +445,48 @@ if ( {) {
       JSON.stringify ({
         error: error.message || 'Internal server error',
         status: 'error';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     console.error('Tenant detector error:', error);
     return new Response(
       JSON.stringify({
         error: error.message |'Internal server error'
         status: 'error'
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       });
       {
         status: 500;
         headers: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+          'Content-Type': 'application/json'
+          ...corsHeaders}}
+    )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     return new Response(;
       JSON.stringify({;
@@ -264,6 +509,18 @@ if ( {) {
         headers: {;
           'Content-Type': 'application/json',;
           ...corsHeaders}});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 });
 
@@ -279,6 +536,15 @@ if ( {) {
   }
 });
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from 'https://deno.land/std@0.208.0/http/server.ts',;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7',;
 ;
@@ -411,3 +677,10 @@ if (subdomainParam) {
   }
 });
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

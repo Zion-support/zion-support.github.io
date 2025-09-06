@@ -1,10 +1,5 @@
 interface Speaker {
-  name: string
-  title: string
-  avatar: string
-  twitter?: string
-  linkedin?: string
-  linkedin?: string
+
 }
 interface Speaker {
   name: string,
@@ -22,7 +17,6 @@ interface Speaker {
   linkedin?: string
 }
 
-
   name: string,
   title: string,
   avatar: string,
@@ -36,8 +30,6 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
-
-
 
   linkedin?: string
 }

@@ -20,10 +20,7 @@ function BackToTopButton() {
     document.document_element.scroll_to (opts);
     document.body.scroll_to (opts);
   }
-      >;
-      <ArrowUp className='h - 5 w - 5' />;
-    </button>);
-}"}
+
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react",;
 export function BackToTopButton() {;
@@ -52,9 +49,3 @@ export function BackToTopButton() {;
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
 
-    >;
-      <ArrowUp className="h-5 w-5" />;
-    </button>;
-  );
-}
-;

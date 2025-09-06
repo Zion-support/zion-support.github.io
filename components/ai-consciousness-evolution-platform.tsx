@@ -18,10 +18,18 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   opacity: 0, y: 20
 }animate= {
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
   opacity: 0, y: 20
 }animate= {
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -32,6 +40,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   once: true
 }transition= {
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -47,7 +59,10 @@ import {
   Star
 } from 'lucide-react';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion && motion.button ;
 };
 const containerVariants = {;
@@ -62,8 +77,6 @@ visible: {;
 
 };
 
-
-
 export default AIConsciousnessEvolutionPlatform;
 
 }
@@ -73,7 +86,10 @@ export default AIConsciousnessEvolutionPlatform;
 
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 }
@@ -143,10 +159,17 @@ visible: {
 }
 ;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 }export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 ;
 
+<<<<<<< HEAD
 
 }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

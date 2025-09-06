@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { ScrollArea  } from '@/components/ui/scroll-area';
+import { Skeleton  } from '@/components/ui/skeleton';
+import { Button  } from '@/components/ui/button';
+import { NotificationItem  } from './NotificationItem';
+import { Notification } from '@/context/notifications';
+interface NotificationListProps {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -11,6 +33,20 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   error;
   notifications;
   onMarkAsRead;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -25,7 +61,18 @@ interface NotificationListProps {;
   onDismiss: (id: string) => Promise<void>,;
   onRetry: () => void;
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   loading: boolean
   error: string | null
@@ -36,6 +83,33 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import {ScrollArea} from '@/components/ui/scroll-area';
+import {Skeleton} from '@/components/ui/skeleton';
+import {Button} from '@/components/ui/button';
+import {NotificationItem} from './NotificationItem';
+import {Notification} from '@/context/notifications';
+interface NotificationListProps {;
+  loading: boolean,;
+  error: string | null,;
+  notifications: Notification[],;
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>,;
+  onRetry: () => void;
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({;
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {ScrollArea} from '@/components / ui / scroll - area';
 import {Skeleton} from '@/components / ui / skeleton';
 import {Button} from '@/components / ui / button';
@@ -50,14 +124,47 @@ interface NotificationListProps {
   on_retry: () => void;
 }
 export const NotificationList: React.FC < NotificationListProps> = ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   loading;
   error;
   notifications;
   onMarkAsRead;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+  onDismiss
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   loading,
   error,
   notifications,
   onMarkAsRead,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  onDismiss,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onRetry
   on_dismiss,
   on_retry;
@@ -67,6 +174,16 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   onDismiss,;
   onRetry;
 }) => {;
@@ -75,6 +192,19 @@ export const NotificationList: React.FC < NotificationListProps> = ({
       {error ? (;
         <div className="p-8 text-center text-amber-500">;
           <p>{error}</p>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <Button
+            variant="outline" 
+            size="sm" 
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className="mt-2"
             onClick={onRetry}>;
             Try Again;
@@ -138,6 +268,14 @@ export const NotificationList: React.FC < NotificationListProps> = ({
     </ScrollArea>);
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </ScrollArea>;
   ),;
 },; {
@@ -200,3 +338,10 @@ export const NotificationList: React.FC < NotificationListProps> = ({
     </ScrollArea>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

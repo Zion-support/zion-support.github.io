@@ -2,16 +2,24 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+<<<<<<< HEAD
     "lint": "next lint",
     "type-check": "tsc --noEmit",
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "postbuild": "echo \"Build completed\"",
+<<<<<<< HEAD
+=======
+    "lint": "next lint",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "test": "jest --config jest.config.cjs",
@@ -183,8 +191,9 @@
     "automation:log-analyzer": "node scripts/intelligent/log-analyzer.js",
     "automation:resource-optimizer": "node scripts/intelligent/resource-optimizer.js",
     "security:fix": "npm audit fix --force",
-    "sitemap": "node scripts/generate-sitemap.js",
+    "sitemap": "node scripts/generate-dynamic-sitemap.js",
     "sitemap:generate": "node scripts/generate-sitemap.js",
+    "seo:generate": "node scripts/generate-dynamic-sitemap.js",
     "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
     "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
     "pm2:fastads:stop": "pm2 stop ecosystem.fast-ads.local.cjs || true",
@@ -297,8 +306,13 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.9.0",
+<<<<<<< HEAD
     "@stripe/stripe-js": "^7.9.0",
     "@sendgrid/mail": "^8.1.5",
+=======
+    "@sendgrid/mail": "^8.1.5",
+    "@stripe/stripe-js": "^7.9.0",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -306,6 +320,7 @@
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
+    "@types/mongodb": "^4.0.6",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",
@@ -335,7 +350,7 @@
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
     "mongodb": "^6.19.0",
-    "next": "^15.5.2",
+    "next": "^14.2.5",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
@@ -362,9 +377,6 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.10.2",
-    "@axe-core/react": "^4.10.2",
-    "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
@@ -380,6 +392,12 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.8",
+    "@types/next": "^8.0.7",
+    "@types/node": "^18.0.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
@@ -404,8 +422,12 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
+<<<<<<< HEAD
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
+=======
+    "vite": "^7.1.4"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
   "engines": {
     "node": ">=18.0.0",

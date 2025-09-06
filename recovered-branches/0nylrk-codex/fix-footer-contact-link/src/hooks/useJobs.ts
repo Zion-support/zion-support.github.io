@@ -17,6 +17,23 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+=======
+  const clientId = userId |user?.id;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
@@ -29,6 +46,19 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  
+  const clientId = userId || user?.id,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false);
@@ -44,16 +74,50 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  
+  const clientId = userId || user?.id,
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false),
       return
     }
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      setIsLoading(true);
+      setIsLoading(true),
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       let query = supabase
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { Job, JobStatus } from '@/types / jobs';
@@ -133,6 +197,18 @@ if (throw fetch_error) {
   
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  }
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
       const { error: updateError } = await supabase
@@ -140,12 +216,28 @@ if (throw fetch_error) {
         .update({ status: newStatus })
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       
       if (updateError) throw updateError,
       
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Update local state
       setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
       toast && toast.success("Job status updated successfully");
@@ -155,6 +247,40 @@ if (throw fetch_error) {
       toast && toast.error("Failed to update job status");
       return false
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+  },
+  
+
+
+<<<<<<< HEAD
+=======
+      if (updateError) throw updateError;
+      
+      if (updateError) throw updateError,
+      
+      // Update local state
+      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),
+      toast.success("Job status updated successfully"),
+      return true
+    } catch (err: any) {
+      console.error("Error updating job status:", err),
+      toast.error("Failed to update job status"),
+      return false
+    }
+  }
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const deleteJob = async (jobId: string) => {
     try {
       const { error: deleteError } = await supabase
@@ -162,12 +288,28 @@ if (throw fetch_error) {
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         
       if (deleteError) throw deleteError,
       
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Update local state
       setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
       toast && toast.success("Job deleted successfully");
@@ -191,6 +333,50 @@ if (throw fetch_error) {
     getJobById;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      if (deleteError) throw deleteError;
+        
+      if (deleteError) throw deleteError,
+      
+      // Update local state
+      setJobs(jobs.filter(job => job.id !== jobId)),
+      toast.success("Job deleted successfully"),
+      return true
+    } catch (err: any) {
+      console.error("Error deleting job:", err),
+      toast.error("Failed to delete job"),
+      return false
+    }
+  }
+  // Fetch jobs when component mounts or dependencies change
+  useEffect(() => {
+    fetchJobs()
+  }, [clientId, status]);
+  return {
+    jobs;
+    isLoading;
+    error;
+    refetch: fetchJobs;
+    updateJobStatus;
+    deleteJob;
+    createJob;
+    updateJob
+    getJobById
+  }
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -282,9 +468,30 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+};
+=======
+<<<<<<< HEAD
+
+
+  }
+}
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 };
   }
 };
   }
 };
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

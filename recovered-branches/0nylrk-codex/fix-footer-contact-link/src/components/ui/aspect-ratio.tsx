@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import * as AspectRatioPrimitive from &quot;@radix - ui / react - aspect - ratio & quot;
+;
+const AspectRatio = AspectRatioPrimitive.Root;
+
+export { AspectRatio }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
 
@@ -12,9 +28,22 @@ const AspectRatio = AspectRatioPrimitive.Root
 
 export { AspectRatio }
 ;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export { AspectRatio };
 
 export { AspectRatio }
 ;
 
 export { AspectRatio }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

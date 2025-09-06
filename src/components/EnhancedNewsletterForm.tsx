@@ -1,7 +1,10 @@
+
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   const lastSubmit = useRef(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -9,17 +12,19 @@
     const now = Date.now();
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
+
       return;
     }
 
     setIsSubmitting(true);
+
     try {
+
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed }),
       });
-
 
       setIsSubmitting (false);
 
@@ -27,8 +32,6 @@
   }
 
       const data = await res.json().catch(() => ({})),
-
-
 
       if (res.ok) {
         // Handle different success statuses
@@ -51,6 +54,7 @@
       setIsSubmitting(false)
     }
   }
+
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;
@@ -82,28 +86,12 @@
           </p>
         </div>
       </div>
-      
-
-
-      <div className='mt-4 flex items-center text-xs text-zion-slate-light'>;
-        <div className='flex -space-x-1 mr-2'>;
-          {[...Array(3)].map((_, i) => (;
-
-            <div
-              key={i}
-              className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'>              {String && String.fromCharCode(65 + i)}
-            </div>;
-          ))}
-
-            We&apos;ll keep you updated with the latest from Zion.
-          </p>
-
-      
 
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
+
         </div>
       ) : (
         <form
@@ -152,7 +140,6 @@
       </div>
     </div>
   )
-
 
             type="email"
             id="enhanced-newsletter-email"
@@ -239,56 +226,6 @@
       </div>;
     </div>;
   );
-}
-
-
-
-      {is_submitted ? (
-        <div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;
-          <p className='text - white font - medium'>Thank you for subscribing!</p>;
-          <p className='text - zion - slate - light mt - 1'>;
-            We & apos;ll keep you updated with the latest from Zion.;
-          </p>;
-        </div>) : (
-        <form;
-          on_submit={handle_submit}
-          className='flex flex - col space - y-3 sm:flex - row sm:space - y-0 sm:space - x-2';
-        >;
-          <label html_for='enhanced - newsletter - email' className='sr - only'>;
-            Email address for newsletter subscription;
-          </label>;
-          <Input;
-            type='email';
-            id='enhanced - newsletter - email';
-            name='email';
-            placeholder='Enter your email';
-            className='flex - grow bg - zion - blue - dark text - white border - zion - purple / 20 focus:border - zion - purple focus:ring - zion - purple';
-            value={email}
-            on_change={(e: React.ChangeEvent < HTMLInputElement>) =>;
-              set_email (e.target.value);
-            }
-            auto_complete='email';
-            required;
-          />;
-          <Button;
-            type='submit';
-            disabled={is_submitting}
-            className='bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white hover:from - zion - purple - light hover:to - zion - purple'          >;
-            {is_submitting ? 'Subscribing...' : 'Subscribe'}
-          </Button>;
-        </form>)}
-      <div className='mt - 4 flex items - center text - xs text - zion - slate - light'>;
-        <div className='flex -space - x-1 mr - 2'>;
-          {[...Array (3)].map ((_, i) => (
-            <div;
-              key={i}
-              className='h - 5 w - 5 rounded - full border border - zion - blue - dark bg - zion - blue flex items - center justify - center text - zion - cyan';
-            >              {String.fromCharCode (65 + i)}
-            </div>))}
-        </div>;
-        <span > Join 10, 000+ tech professionals who already subscribe</span>;
-      </div>;
-    </div>);
-
 
 }
+

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Test setup file for Jest
 import "@testing-library/jest-dom";
 
@@ -5,6 +9,17 @@ import "@testing-library/jest-dom";
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
+<<<<<<< HEAD
+=======
+
+import '@testing-library/jest-dom';
+
+// Mock window && window.matchMedia
+Object && Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest && jest.fn().mockImplementation(query => ({
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     matches: false,
     media: query,
     onchange: null,
@@ -16,14 +31,21 @@ Object.defineProperty(window, "matchMedia", {
   })),
 });
 
-
 // Mock IntersectionObserver
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   constructor() {}
   disconnect() {}
   observe() {}
@@ -34,9 +56,12 @@ Object.defineProperty(window, "matchMedia", {
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
 
-
 beforeAll(() => {
   console.error = (...args: any[]) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ) {
       return;
     }
@@ -48,6 +73,10 @@ beforeAll(() => {
     if (
       typeof args[0] === "string" &&
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ) {
       return;
     }
@@ -57,3 +86,7 @@ beforeAll(() => {
 });
 
 afterAll(() => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

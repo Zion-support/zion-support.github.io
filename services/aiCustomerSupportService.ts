@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface Attachment {
 export interface Attachment {;
   id: string;
@@ -6,10 +18,36 @@ export interface Attachment {;
   mimeType: string;
   size: number;
   url: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   uploaded_at: Date,
   uploaded_by: string;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export interface SupportTicket {
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface Attachment {
   id: string;
   filename: string;
@@ -33,6 +71,19 @@ export interface SupportTicket {
   tags: string[];
   attachments: Attachment[];
   messages: TicketMessage[];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  id: string;
+  content: string;
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   created_at: Date;
   updated_at: Date;
@@ -55,11 +106,26 @@ export interface TicketMessage {
 
 }
 export interface Customer {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   name: string;
   email: string;
   company?: string;
   plan: 'free' | 'basic' | 'pro' | 'enterprise';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   total_tickets: number;
   resolved_tickets: number,
@@ -70,16 +136,66 @@ export interface Customer {
 
 }
 export interface SupportAgent {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  total_tickets: number;
+  resolved_tickets: number,
+  averageResponseTime: number, // in minutes;
+  satisfaction_score: number, // 1 - 5;
+  lastContactDate: Date,
+  created_at: Date;
+}
+export interface SupportAgent {
+  totalTickets: number;
+
+  resolvedTickets: number
+  averageResponseTime: number, // in minutes
+  satisfactionScore: number, // 1-5
+  lastContactDate: Date
+
+  createdAt: Date
+}
+export interface SupportAgent {
+
+export interface SupportAgent {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   id: string;
   name: string;
   email: string;
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   is_available: boolean;
   current_tickets: number;
   max_tickets: number,
   performance: AgentPerformance;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export interface AgentPerformance {
   tickets_resolved: number,
@@ -98,18 +214,68 @@ export interface ChatbotSession {
   intent: string;
   confidence: number;
   resolved: boolean;
+<<<<<<< HEAD
   escalated: boolean,
   satisfaction: number, // 1 - 5;
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+  escalated: boolean,
+  satisfaction: number, // 1 - 5;
+
+=======
+  escalated: boolean
+
+  satisfaction: number, // 1-5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  escalated: boolean,
+  satisfaction: number, // 1 - 5;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export interface ChatbotMessage {
   id: string;
   content: string;
   sender: 'customer' | 'bot';
   timestamp: Date;
+<<<<<<< HEAD
   intent?: string,
   confidence?: number;
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+  intent?: string,
+  confidence?: number;
+
+=======
+  intent?: string
+
+  confidence?: number
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  intent?: string,
+  confidence?: number;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export interface KnowledgeBaseArticle {
   id: string;
@@ -119,6 +285,16 @@ export interface KnowledgeBaseArticle {
   tags: string[];
   views: number;
   helpful: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   not_helpful: number;
   last_updated: Date,
@@ -137,15 +313,69 @@ export interface SupportAnalytics {
   top_categories: Array<{ category: string, count: number }>;
   agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  notHelpful: number;
+
+  lastUpdated: Date
+
+  createdBy: string
+}
+export interface SupportAnalytics {
+  totalTickets: number;
+  openTickets: number;
+  resolvedTickets: number;
+  averageResolutionTime: number;
+  averageFirstResponseTime: number;
+  customerSatisfaction: number;
+
+  chatbotResolutionRate: number
+  topCategories: Array<{ category: string, count: number }>;
+
+  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export interface AIRecommendation {
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
   title: string;
   description: string;
   impact: 'low' | 'medium' | 'high';
+<<<<<<< HEAD
   confidence: number,
   action_items: string[];
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+  confidence: number,
+  action_items: string[];
+
+=======
+  confidence: number
+
+  actionItems: string[]
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  confidence: number,
+  action_items: string[];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 class AICustomerSupportService {
   private tickets: SupportTicket[] = [];
@@ -154,6 +384,11 @@ class AICustomerSupportService {
   private chatbot_sessions: ChatbotSession[] = [];
   private knowledge_base: KnowledgeBaseArticle[] = [];
   private analytics: SupportAnalytics;
+<<<<<<< HEAD
+  }
+  private initializeSampleData() {
+    // Initialize sample customers
+=======
 
     this && this.initializeSampleData(),
     this && this.updateAnalytics()
@@ -168,6 +403,11 @@ class AICustomerSupportService {
   }
   private initializeSampleData() {
     // Initialize sample customers
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {
         id: 'cust_001';
         name: 'John Doe';
@@ -177,6 +417,23 @@ class AICustomerSupportService {
         total_tickets: 5;
         resolved_tickets: 4;
         averageResponseTime: 15;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+        satisfactionScore: 4 && 4.5;
+        lastContactDate: new Date('2025-01-10'),
+
+        createdAt: new Date('2024-06-01')
+=======
+        satisfaction_score: 4.5;
+        lastContactDate: new Date ('2025 - 01 - 10'),
+        created_at: new Date ('2024 - 06 - 01');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     this.customers = [
       {
         id: 'cust_001';
@@ -217,6 +474,12 @@ class AICustomerSupportService {
         satisfaction_score: 4.5;
         lastContactDate: new Date ('2025 - 01 - 10'),
         created_at: new Date ('2024 - 06 - 01');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       {
         id: 'cust_002';
@@ -227,10 +490,38 @@ class AICustomerSupportService {
         total_tickets: 3;
         resolved_tickets: 3;
         averageResponseTime: 25;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         satisfactionScore: 4 && 4.0;
         lastContactDate: new Date('2025-01-08'),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        email: 'jane.smith@startup.com';
+        company: 'StartupXYZ';
+        plan: 'basic';
+        totalTickets: 3;
+        resolvedTickets: 3;
+        averageResponseTime: 25;
+        satisfactionScore: 4.0;
+        lastContactDate: new Date('2025-01-08')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         createdAt: new Date('2024-08-15')
       }
     ];
@@ -261,6 +552,14 @@ class AICustomerSupportService {
           customer_satisfaction: 4.6;
           firstResponseTime: 12,
           escalation_rate: 8;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     this.agents = [
       {
         id: 'agent_001';
@@ -307,6 +606,12 @@ class AICustomerSupportService {
           customer_satisfaction: 4.6;
           firstResponseTime: 12,
           escalation_rate: 8;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
       };
       {
@@ -319,11 +624,42 @@ class AICustomerSupportService {
         current_tickets: 1;
         max_tickets: 8;
         performance: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           averageResolutionTime: 1 && 1.8;
           customerSatisfaction: 4 && 4.4;
           firstResponseTime: 8,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        email: 'lisa.chen@ziontech.com';
+        role: 'tier1';
+        skills: ['General SupportBillingAccount Management'];
+        isAvailable: true;
+        currentTickets: 1;
+        maxTickets: 8;
+        performance: {
+          ticketsResolved: 78;
+          averageResolutionTime: 1.8;
+          customerSatisfaction: 4.4;
+          firstResponseTime: 8
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           escalationRate: 15
         }
       }
@@ -342,6 +678,22 @@ class AICustomerSupportService {
 ;
     // Initialize sample tickets;
     this.tickets = [;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+=======
+    this.tickets = [
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {
         id: 'ticket_001';
         title: 'API Integration Issue';
@@ -357,6 +709,15 @@ class AICustomerSupportService {
           {
             id: 'msg_001';
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             sender_type: 'customer';
             sender_id: 'cust_001';
@@ -373,6 +734,83 @@ class AICustomerSupportService {
         title: 'Getting Started with API Integration';
         content: 'Learn how to integrate our API with your existing systems...';
         category: 'API Documentation';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        tags: ['apiintegrationgetting-started'];
+        views: 1250;
+        helpful: 89;
+        notHelpful: 12;
+        lastUpdated: new Date('2025-01-05')
+        createdBy: 'agent_001'
+export interface Attachment {;
+  id: string,;
+  filename: string,;
+  originalName: string,;
+  mimeType: string,;
+  size: number,;
+  url: string,;
+  uploadedAt: Date,;
+  uploadedBy: string;
+}
+;
+export interface SupportTicket {;
+  id: string,;
+  title: string,;
+  description: string,;
+  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
+  priority: 'low' | 'medium' | 'high' | 'critical',;
+  category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general',;
+  customerId: string,;
+  assignedAgentId?: string,;
+  tags: string[],;
+  attachments: Attachment[],;
+  messages: TicketMessage[],;
+  createdAt: Date,;
+  updatedAt: Date,;
+  resolvedAt?: Date,;
+  firstResponseTime?: number, // in minutes;
+  resolutionTime?: number, // in hours;
+}
+;
+export interface TicketMessage {;
+  id: string,;
+  content: string,;
+  senderType: 'customer' | 'agent' | 'system',;
+  senderId: string,;
+  isInternal: boolean,;
+  createdAt: Date,;
+  attachments: Attachment[];
+}
+;
+export interface Customer {;
+  id: string,;
+  name: string,;
+  email: string,;
+  company?: string,;
+  plan: 'free' | 'basic' | 'pro' | 'enterprise',;
+  totalTickets: number,;
+  resolvedTickets: number,;
+  averageResponseTime: number, // in minutes;
+  satisfactionScore: number, // 1-5;
+  lastContactDate: Date,;
+  createdAt: Date;
+}
+;
+export interface SupportAgent {;
+  id: string,;
+  name: string,;
+  email: string,;
+  role: 'tier1' | 'tier2' | 'tier3' | 'supervisor',;
+  skills: string[],;
+  isAvailable: boolean,;
+  currentTickets: number,;
+  maxTickets: number,;
+  performance: AgentPerformance;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 export interface AgentPerformance {;
@@ -811,6 +1249,214 @@ class AICustomerSupportService {;
             senderId: 'agent_001',;
             isInternal: false,;
             createdAt: new Date('2025-01-10T10:15:00Z'),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  is_available: boolean;
+  current_tickets: number;
+  max_tickets: number,
+  performance: AgentPerformance;
+}
+export interface AgentPerformance {
+  tickets_resolved: number,
+  averageResolutionTime: number, // in hours;
+  customer_satisfaction: number, // 1 - 5;
+  firstResponseTime: number, // in minutes;
+  escalation_rate: number, // percentage;
+}
+export interface ChatbotSession {
+  id: string;
+  customer_id: string;
+  start_time: Date;
+  end_time?: Date;
+  messages: ChatbotMessage[];
+  intent: string;
+  confidence: number;
+  resolved: boolean;
+  escalated: boolean,
+  satisfaction: number, // 1 - 5;
+}
+export interface ChatbotMessage {
+  id: string;
+  content: string;
+  sender: 'customer' | 'bot';
+  timestamp: Date;
+  intent?: string,
+  confidence?: number;
+}
+export interface KnowledgeBaseArticle {
+  id: string;
+  title: string;
+  content: string;
+  category: string;
+  tags: string[];
+  views: number;
+  helpful: number;
+  not_helpful: number;
+  last_updated: Date,
+  created_by: string;
+}
+export interface SupportAnalytics {
+  total_tickets: number;
+  open_tickets: number;
+  resolved_tickets: number;
+  averageResolutionTime: number;
+  averageFirstResponseTime: number;
+  customer_satisfaction: number;
+  chatbotResolutionRate: number,
+  top_categories: Array<{ category: string, count: number }>;
+  agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }>;
+}
+export interface AIRecommendation {
+  type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
+  title: string;
+  description: string;
+  impact: 'low' | 'medium' | 'high';
+  confidence: number,
+  action_items: string[];
+}
+class AICustomerSupportService {
+  private tickets: SupportTicket[] = [];
+  private customers: Customer[] = [];
+  private agents: SupportAgent[] = [];
+  private chatbot_sessions: ChatbotSession[] = [];
+  private knowledge_base: KnowledgeBaseArticle[] = [];
+  private analytics: SupportAnalytics;
+    this && this.initializeSampleData(),
+    this && this.updateAnalytics()
+  }
+  private initializeSampleData() {
+    // Initialize sample customers
+    this && this.customers = [
+;
+  constructor () {
+    this.initializeSampleData (),
+    this.update_analytics ();
+  }
+  private initializeSampleData () {
+    // Initialize sample customers;
+    this.customers = [;
+      {
+        id: 'cust_001';
+        name: 'John Doe';
+        email: 'john && john.doe@company && company.com';
+        company: 'TechCorp Inc.';
+        plan: 'pro';
+        total_tickets: 5;
+        resolved_tickets: 4;
+        averageResponseTime: 15;
+        satisfactionScore: 4 && 4.5;
+        lastContactDate: new Date('2025-01-10'),
+        createdAt: new Date('2024-06-01')
+        satisfaction_score: 4.5;
+        lastContactDate: new Date ('2025 - 01 - 10'),
+        created_at: new Date ('2024 - 06 - 01');
+      }
+      {
+        id: 'cust_002';
+        name: 'Jane Smith';
+        email: 'jane && jane.smith@startup && startup.com';
+        company: 'StartupXYZ';
+        plan: 'basic';
+        total_tickets: 3;
+        resolved_tickets: 3;
+        averageResponseTime: 25;
+        satisfactionScore: 4 && 4.0;
+        lastContactDate: new Date('2025-01-08'),
+        createdAt: new Date('2024-08-15')
+      }
+    ];
+    // Initialize sample agents
+    this && this.agents = [
+        satisfaction_score: 4.0;
+        lastContactDate: new Date ('2025 - 01 - 08'),
+        created_at: new Date ('2024 - 08 - 15');
+      }
+    ];
+;
+    // Initialize sample agents;
+    this.agents = [;
+      {
+        id: 'agent_001';
+        name: 'Mike Johnson';
+        email: 'mike && mike.johnson@ziontech && ziontech.com';
+        role: 'tier2';
+        skills: ['Technical SupportAPI IntegrationDatabase Issues'];
+        is_available: true;
+        current_tickets: 2;
+        max_tickets: 5;
+        performance: {
+          averageResolutionTime: 2 && 2.5;
+          customerSatisfaction: 4 && 4.6;
+          firstResponseTime: 12,
+          escalationRate: 8
+          tickets_resolved: 45;
+          averageResolutionTime: 2.5;
+          customer_satisfaction: 4.6;
+          firstResponseTime: 12,
+          escalation_rate: 8;
+        }
+      }
+      {
+        id: 'agent_002';
+        name: 'Lisa Chen';
+        email: 'lisa && lisa.chen@ziontech && ziontech.com';
+        role: 'tier1';
+        skills: ['General SupportBillingAccount Management'];
+        is_available: true;
+        current_tickets: 1;
+        max_tickets: 8;
+        performance: {
+          averageResolutionTime: 1 && 1.8;
+          customerSatisfaction: 4 && 4.4;
+          firstResponseTime: 8,
+          escalationRate: 15
+        }
+      }
+    ];
+    // Initialize sample tickets
+    this && this.tickets = [
+          tickets_resolved: 78;
+          averageResolutionTime: 1.8;
+          customer_satisfaction: 4.4;
+          firstResponseTime: 8,
+          escalation_rate: 15;
+        }
+      }
+    ];
+;
+    // Initialize sample tickets;
+    this.tickets = [;
+      {
+        id: 'ticket_001';
+        title: 'API Integration Issue';
+        description: 'Getting 500 error when trying to integrate with our CRM system';
+        status: 'in_progress';
+        priority: 'high';
+        category: 'technical';
+        customer_id: 'cust_001';
+        assignedAgentId: 'agent_001';
+        tags: ['apiintegrationerror'];
+        attachments: [];
+        messages: [;
+          {
+            id: 'msg_001';
+            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
+            sender_type: 'customer';
+            sender_id: 'cust_001';
+            is_internal: false;
+            created_at: new Date ('2025 - 01 - 10T10:00:00Z'),
+            attachments: [];
+          }
+          {
+            id: 'msg_002'
+            content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             sender_type: 'agent';
             sender_id: 'agent_001';
@@ -826,6 +1472,42 @@ class AICustomerSupportService {;
     ];
 ;
     // Initialize knowledge base;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    this.knowledge_base = [;
+
+=======
+            attachments: [];
+          }
+        ],;
+        createdAt: new Date('2025-01-10T10:00:00Z'),;
+        updatedAt: new Date('2025-01-10T10:15:00Z'),;
+        firstResponseTime: 15;
+      }
+    ],;
+    // Initialize knowledge base;
+    this.knowledgeBase = [;
+      {;
+        id: 'kb_001',;
+        title: 'Getting Started with API Integration',;
+        content: 'Learn how to integrate our API with your existing systems...',;
+        category: 'API Documentation',;
+        tags: ['apiintegrationgetting-started'],;
+        views: 1250,;
+        helpful: 89,;
+        notHelpful: 12,;
+        lastUpdated: new Date('2025-01-05'),;
+        createdBy: 'agent_001';
+    this.knowledge_base = [;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {
         id: 'kb_001';
         title: 'Getting Started with API Integration';
@@ -834,13 +1516,44 @@ class AICustomerSupportService {;
         tags: ['apiintegrationgetting - started'];
         views: 1250;
         helpful: 89;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        not_helpful: 12;
+        last_updated: new Date ('2025 - 01 - 05'),
+        created_by: 'agent_001';
+
+      }
+    ];
+  }
+
+
+export interface Attachment {;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
     ]
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
@@ -853,17 +1566,68 @@ class AICustomerSupportService {;
       messages: [];
       createdAt: new Date()
       updatedAt: new Date()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     };
 
     this && this.tickets.push(ticket);
     this && this.updateAnalytics();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return ticket
   }
   async assignTicket(ticketId: string, agentId: string): Promise<void> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  }
+  async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
+    if (ticket) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+        not_helpful: 12;
+        last_updated: new Date ('2025 - 01 - 05'),
+        created_by: 'agent_001';
+      }
+    ];
+  }
+    };
+    this && this.tickets.push(ticket);
+    this && this.updateAnalytics();
+    return ticket
+  }
+  async assignTicket(ticketId: string, agentId: string): Promise<void> {
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
+    if (ticket) {
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ticket && ticket.assignedAgentId = agentId;
       ticket && ticket.status = 'in_progress';
       ticket && ticket.updatedAt = new Date(),
@@ -874,6 +1638,17 @@ class AICustomerSupportService {;
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
     const ticket: SupportTicket = {;
@@ -909,7 +1684,22 @@ class AICustomerSupportService {;
         ticket.resolvedAt = new Date(),;
         if (ticket.createdAt && ticket.resolvedAt) {;
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         }
       }
       this.updateAnalytics()
@@ -927,6 +1717,18 @@ class AICustomerSupportService {;
       }
       
       this && this.updateAnalytics()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 
@@ -949,6 +1751,16 @@ class AICustomerSupportService {;
       throw new Error(`Ticket ${ticketId} not found`)
     }
     const message: TicketMessage = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       createdAt: new Date()
@@ -959,15 +1771,63 @@ class AICustomerSupportService {;
     ticket && ticket.updatedAt = new Date();
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    };
+    ticket && ticket.messages.push(message);
+    ticket && ticket.updatedAt = new Date();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Update first response time if this is the first agent response
     if (message && message.senderType === 'agent' && !ticket && ticket.firstResponseTime) {
       const firstResponseTime = (message && message.createdAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60);
       ticket && ticket.firstResponseTime = firstResponseTime
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
     this && this.updateAnalytics();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    this && this.updateAnalytics();
+      id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      ...messageData;
+      createdAt: new Date()
+    }
+    ticket.messages.push(message);
+    ticket.updatedAt = new Date();
+    // Update first response time if this is the first agent response
+    if (message.senderType === 'agent' && !ticket.firstResponseTime) {
+      const firstResponseTime = (message.createdAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60);
+      ticket.firstResponseTime = firstResponseTime
+    }
+    this.updateAnalytics();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return message
   }
   async startChatbotSession(customerId: string): Promise<ChatbotSession> {
@@ -1059,15 +1919,56 @@ if ( {) {
       id: `chat_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
       customer_id;
       start_time: new Date ();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+=======
+      id: `chat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      customerId;
+      startTime: new Date();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       messages: [];
       intent: '';
       confidence: 0;
       resolved: false;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     };
 
     this && this.chatbotSessions.push(session);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    };
+    this && this.chatbotSessions.push(session);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return session
   }
   async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
@@ -1076,6 +1977,16 @@ if ( {) {
       throw new Error(`Session ${sessionId} not found`)
     }
     const message: ChatbotMessage = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       id: `chat_msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       timestamp: new Date()
@@ -1087,6 +1998,27 @@ if ( {) {
 
     // Simulate AI intent detection
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    };
+    session && session.messages.push(message);
+    // Simulate AI intent detection
+
+      id: `chat_msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      ...messageData;
+      timestamp: new Date()
+    }
+    session.messages.push(message);
+    // Simulate AI intent detection
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (message.sender === 'customer') {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
@@ -1148,34 +2080,130 @@ if ( {) {
       const intent = this.detectIntent(message.content),;
       session.intent = intent.intent,;
       session.confidence = intent.confidence;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     }
     return message
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    }
+    return message
+  }
+
+
+  private detectIntent(message: string): { intent: string, confidence: number } {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     return message
   }
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
     } else if (lowerMessage.includes('api') |lowerMessage.includes('integration')) {
       return { intent: 'technical_support', confidence: 0.8 }
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       escalated: false,
       satisfaction: 0;
     }
@@ -1272,6 +2300,16 @@ if ( {) {
       notHelpful: 0;
       createdBy: 'system'
       lastUpdated: new Date()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     };
 
@@ -1289,6 +2327,12 @@ if ( {) {
       session.satisfaction = satisfaction,;
       this.updateAnalytics();
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 ;
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {;
@@ -1303,7 +2347,24 @@ if ( {) {
     },;
     this.knowledgeBase.push(article),;
     return article;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -1321,13 +2382,32 @@ if ( {) {
       article && article.tags.some(tag => tag && tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b && b.views - a && a.views)
   }
+<<<<<<< HEAD
+=======
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
 
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  async getAIRecommendations(): Promise<AIRecommendation[]> {
+    const recommendations: AIRecommendation[] = [];
+    // Ticket prioritization recommendation
+    ).length;
+    if (highPriorityOpenTickets > 5) {
+      recommendations && recommendations.push({
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
     // Ticket prioritization recommendation
@@ -1338,6 +2418,11 @@ if ( {) {
     ).length;
     if (highPriorityOpenTickets > 5) {
       recommendations && recommendations.push({
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   async endChatbotSession (session_id: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise < void> {
     const session = this.chatbot_sessions.find (string => s.id === session_id);
     // Check condition
@@ -1384,6 +2469,16 @@ if ( {) {
   $2
 }
       recommendations.push ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -1402,10 +2497,28 @@ if ( {) {
     ).length;
     if (highPriorityOpenTickets > 5) {
       recommendations.push({
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         type: 'ticket_prioritization';
         title: 'High Priority Ticket Backlog';
         description: 'Too many high priority tickets are waiting for attention';
         impact: 'high';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     const availableAgents = this && this.agents.filter(a => a && a.isAvailable && a && a.currentTickets < a && a.maxTickets);
     const unassignedTickets = this && this.tickets.filter(t => !t && t.assignedAgentId && t && t.status === 'open').length;
@@ -1413,6 +2526,19 @@ if ( {) {
     if (availableAgents && availableAgents.length > 0 && unassignedTickets > 0) {
       recommendations && recommendations.push({
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         confidence: 90,
         action_items: [;
           'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria';
@@ -1428,6 +2554,16 @@ if ( {) {
   $2
 }
       recommendations.push ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         confidence: 90
         actionItems: [
           'Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria'
@@ -1439,10 +2575,28 @@ if ( {) {
     const unassignedTickets = this.tickets.filter(t => !t.assignedAgentId && t.status === 'open').length;
     if (availableAgents.length > 0 && unassignedTickets > 0) {
       recommendations.push({
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         type: 'agent_assignment';
         title: 'Unassigned Tickets Available';
         description: 'There are unassigned tickets and available agents';
         impact: 'medium';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
         confidence: 85,
         action_items: [;
@@ -1458,11 +2612,57 @@ if ( {) {
 }
       recommendations.push ({
 
+<<<<<<< HEAD
+=======
+=======
+        confidence: 85
+        actionItems: [
+          'Automatically assign tickets to available agentsImplement load balancing for ticket distributionReview agent availability and workload'
+        ]
+      })
+    }
+    // Knowledge base recommendation
+    const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10);
+    if (lowViewedArticles.length > 5) {
+      recommendations.push({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         type: 'knowledge_base';
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
         impact: 'low';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+        confidence: 75
+        actionItems: [
+          'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
+        ]
+      })
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
     const recommendations: AIRecommendation[] = [],;
@@ -1512,9 +2712,28 @@ if ( {) {
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     return recommendations
   }
@@ -1560,6 +2779,13 @@ if ( {) {
       .map(([category, count]) => ({ category, count }))
       .sort((a, b) => b && b.count - a && a.count)
       .slice(0, 5);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
     const agentPerformance = this && this.agents.map(agent => ({
@@ -1570,6 +2796,20 @@ if ( {) {
 
     this && this.analytics = {
 
+<<<<<<< HEAD
+=======
+=======
+    this && this.analytics = {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    this && this.analytics = {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       totalTickets;
       openTickets;
       resolvedTickets;
@@ -1633,6 +2873,16 @@ if ( {) {
       averageFirstResponseTime;
       customer_satisfaction;
       chatbotResolutionRate;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       topCategories;
       agentPerformance
 ;
@@ -1682,7 +2932,24 @@ if ( {) {
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+      top_categories;
+      agent_performance;
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
 
@@ -1761,6 +3028,16 @@ if ( {) {
 }
 export const aiCustomerSupportService = new AICustomerSupportService ();
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const aiCustomerSupportService = new AICustomerSupportService();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
   private updateAnalytics():void {;
     const totalTickets = this.tickets.length,;
@@ -1989,3 +3266,11 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 export const aiCustomerSupportService = new AICustomerSupportService();
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

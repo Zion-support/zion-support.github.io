@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Slider } from "@/components/ui/slider",
+import { Switch } from "@/components/ui/switch",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { X, Filter } from "lucide-react",
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
+import { Badge } from "@/components/ui/badge",
+=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -20,6 +31,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
@@ -35,9 +47,35 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
   };
 
   const removeFilter = (filter: string) => {
+<<<<<<< HEAD
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  }
+
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Slider } from '@/components / ui / slider';
+import { Switch } from '@/components / ui / switch';
+import { Input } from '@/components / ui / input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { X, Filter } from './lucide-react';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from '@/components / ui / sheet';
+import { Badge } from '@/components / ui / badge';
+import { Label } from '@/components / ui / label';
+
+import { Label } from "@/components/ui/label",
+interface BrowseFiltersProps {
+  type: "jobs" | "talents";
+}
+  
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  },
+  
+=======
     setActiveFilters(activeFilters.filter((f) => f !== filter));
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -151,6 +189,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
+<<<<<<< HEAD
+interface BrowseFiltersProps {
+  type: "jobs" | "talents";
+}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         className="my-4"
                       />;
                       <div className="flex justify-between text-xs text-muted-foreground">;
@@ -201,6 +245,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  
 }export function BrowseFilters ({
@@ -298,3 +351,10 @@ if (!activeFilters.includes (filter) ) {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

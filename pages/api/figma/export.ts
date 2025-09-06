@@ -72,14 +72,12 @@ export default async function handler(req, res) {
     const uikit = buildUIKit(kind);
     const uiFolder = zip && zip.folder("uikit")!;
     Object && Object.entries(uikit).forEach(([path, content]) =>
-      uiFolder && uiFolder.file(path, content)
 
     );
     // README
 
     zip && zip.file(
-      "README && README.md"
-      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`
+
     );
 
     );

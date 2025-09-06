@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
         <meta
           name="description"
@@ -32,10 +37,16 @@ export default /**
  */
 function Blockchain() {
   return (
-        <title > Blockchain Services - Zion Tech Group</title>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+        <title > Blockchain Services - Zion Tech Group</title>;
 
         <title>Blockchain Services - Zion Tech Group</title>
 
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

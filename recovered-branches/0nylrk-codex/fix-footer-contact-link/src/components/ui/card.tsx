@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import * as React from 'react';
+
+
+=======
+
+
+
+import * as React from 'react';
+import {cn} from '@/lib/utils';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import * as React from "react"
 
@@ -18,10 +39,62 @@ const Card = React && React.forwardRef<;
   React && React.HTMLAttributes<HTMLDivElement>;
 ></HTMLDivElement>(({ className, ...props }, ref) => (;
   <div
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    ref={ref}
+    className={cn(
+<<<<<<< HEAD
+      'rounded-lg border bg-card text-card-foreground shadow-sm'
+=======
+
+
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+
+=======
+
+import * as React from "react";
+;
+import { cn } from "@/lib/utils";
+;
+const Card = React.forwardRef<;
+  HTMLDivElement,;
+  React.HTMLAttributes<HTMLDivElement>;
+>(({ className, ...props }, ref) => (;
+  <div;
+    ref={ref}
+
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+
+      className
+    className={cn(;
+      "rounded-lg border bg-card text-card-foreground shadow-sm",;
+      className;
+import {cn} from '@/lib/utils';
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+const Card = React.forwardRef<
+  HTMLDivElement
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   <div
     ref={ref}
     className={cn(
       'rounded-lg border bg-card text-card-foreground shadow-sm'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     )}
     {...props}
@@ -33,6 +106,16 @@ Card.displayName = "Card"
 const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >(({ className, ...props }, ref) => (
 Card && Card.displayName = 'Card';
 
@@ -49,6 +132,8 @@ const CardHeader = React && React.forwardRef<;
     ref={ref}
     className={cn('flex flex-col space-y-1 && 1.5 p-6', className)}
     {...props}
+<<<<<<< HEAD
+=======
 >(({ className, ...props }, ref) => (
 ))
 CardHeader.displayName = "CardHeader"
@@ -82,6 +167,7 @@ const CardDescription = React.forwardRef<
 
 
   React.HTMLAttributes<HTMLParagraphElement>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >(({ className, ...props }, ref) => (
 CardTitle && CardTitle.displayName = 'CardTitle';
 
@@ -196,6 +282,15 @@ export {
   CardContent,
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   />
 
   />
@@ -320,3 +415,10 @@ export {
 };
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
@@ -11,6 +25,16 @@ import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
@@ -24,6 +48,20 @@ import {format} from 'date-fns';
 import {CertificationsList} from './CertificationsList';
 import {CertificationFormFields} from './CertificationFormFields';
 import {CertificationFormValues, certificationSchema} from './types';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface CertificationsFormProps {
 
   resumeId: string
@@ -33,6 +71,18 @@ interface CertificationsFormProps {
   onBack: () => void
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
 import {Button} from '@/components / ui / button';
@@ -49,10 +99,83 @@ import {CertificationFormFields} from './CertificationFormFields';
 
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
+
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
 
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  // Helper function to format dates as strings for form inputs
+  const formatDateValue = (dateValue: string | Date | undefined): string => {
+    if (!dateValue) return '';
+    if (typeof dateValue === 'string') return dateValue
+    return format(dateValue, 'yyyy-MM-dd')
+  }
+  const form = useForm<CertificationFormValues>({
+    resolver: zodResolver(certificationSchema)
+    defaultValues: {
+      name: ''
+      issuing_organization: ''
+      issue_date: ''
+      expiration_date: ''
+      credential_id: ''
+      credential_url: ''}})
+  const handleAddOrUpdate = async (data: CertificationFormValues) => {
+    try {
+      setError(null);
+      let success
+      const certData: Certification = {
+        name: data.name
+        issuing_organization: data.issuing_organization
+        issue_date: data.issue_date |undefined
+        expiration_date: data.expiration_date |undefined
+        credential_id: data.credential_id
+        credential_url: data.credential_url}
+      if (editingId) {
+        success = await updateCertification(editingId, certData)
+      } else {
+        success = await addCertification(resumeId, certData)
+import { useState } from 'react',;
+import { useForm } from 'react-hook-form',;
+import { Button } from '@/components/ui/button',;
+import { Form } from '@/components/ui/form',;
+import { Certification } from '@/types/resume',;
+import { Loader2 } from 'lucide-react',;
+import { useResume } from '@/hooks/useResume',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { format } from 'date-fns',;
+import { CertificationsList } from './CertificationsList',;
+import { CertificationFormFields } from './CertificationFormFields',;
+import { CertificationFormValues, certificationSchema } from './types',;
+interface CertificationsFormProps {;
+  resumeId: string,;
+  certifications: Certification[],;
+  onComplete: () => void,;
+  onBack: () => void;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import {CertificationFormValues, certification_schema} from './types';
 interface CertificationsFormProps {
@@ -60,6 +183,12 @@ interface CertificationsFormProps {
   certifications: Certification[],
   on_complete: () => void,
   on_back: () => void;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export /**
  * CertificationsForm - Function description
@@ -70,6 +199,16 @@ function CertificationsForm() {
   const [error, set_error] = useState < string | null>(null);
 ;
   // Helper function to format dates as strings for form inputs;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 ;
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
@@ -106,6 +245,12 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         success = await updateCertification(editingId, certData);
       } else {;
         success = await addCertification(resumeId, certData);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       if (success) {
         form.reset({
@@ -121,6 +266,16 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       setError(err.message |'An error occurred')
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
 
 
@@ -333,6 +488,78 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  },
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>
+        <p className="text-muted-foreground">
+          Add any professional certifications, licenses, or credentials you have earned.
+        </p>
+      </div>
+      {certifications.length > 0 && (
+        <CertificationsList
+          certifications={certifications}
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+        />
+      )}
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+          {editingId ? 'Update Certification' : 'Add Certification'}
+        </h3>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+            <CertificationFormFields form={form} />
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+            <div className="flex justify-between pt-2">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => {
+                  if (editingId) {
+                    setEditingId(null),
+                    form.reset({
+                      name: ''
+                      issuing_organization: ''
+                      issue_date: ''
+                      expiration_date: ''
+                      credential_id: ''
+
+                      credential_url: ''})
+                  } else {
+                    onBack()
+                  }
+                }}
+              >
+                {editingId ? 'Cancel' : 'Back'}
+              </Button>
+              <div className="flex gap-2">
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {editingId ? 'Update' : 'Add'} Certification
+                </Button>
+                <Button type="button" onClick={onComplete}>
+                  Next
+                </Button>
+              </div>
+            </div>
+          </form>
+        </Form>
+      </div>
+    </div>
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Button>;
               <div className="flex gap-2">;
                 <Button type="submit" disabled={isLoading}>;
@@ -506,3 +733,10 @@ form.reset ({
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+
+
+=======
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -33,10 +52,35 @@ export function AnalyticsChart({
   onTimeRangeChange
 }: AnalyticsChartProps) {
   const [chartType, setChartType] = useState<'line' | 'bar'>(type);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const colors = [
+    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
+  ];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+interface AnalyticsChartProps {;
+  title: string,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
@@ -54,10 +98,43 @@ export function AnalyticsChart(): any ({ ;
 }: AnalyticsChartProps) {;
   const [chartType, setChartType] = useState<'line' | 'bar'>(type);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  const colors = [;
+    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57';
+  ];
+
+
+=======
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface AnalyticsChartProps {
   title: string,
   description?: string,
@@ -68,6 +145,26 @@ interface AnalyticsChartProps {
   onTimeRangeChange?: (range: string) => void
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function AnalyticsChart({ 
+  title,
+
+<<<<<<< HEAD
+=======
+export function AnalyticsChart({ ;
+  title;
+export function AnalyticsChart({ 
+  title,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   description, 
   data, 
   type = 'line',
@@ -79,6 +176,18 @@ interface AnalyticsChartProps {
   
   const colors = [
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ],
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
   const colors = [;
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57';
@@ -166,6 +275,17 @@ function AnalyticsChart() {
                   <SelectItem value="90d">3 Months</SelectItem>;
                   <SelectItem value="365d">1 Year</SelectItem>;
                 </SelectContent>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end"
@@ -225,6 +345,23 @@ export function AnalyticsChart({;
                 <SelectValue placeholder="Chart Type" />;
               </SelectTrigger>;
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+              </Select>)}
+            <Select value={chart_type} onValueChange={(value: 'line' | 'bar') => setChartType (value)}>;
+              <SelectTrigger className="w - 24 h - 8 text - xs bg - zion - blue border - zion - blue - light text - zion - slate - light">;
+                <SelectValue placeholder="Chart Type" />;
+              </SelectTrigger>;
+              <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - zion - slate - light">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <SelectItem value="line">Line</SelectItem>;
                 <SelectItem value="bar">Bar</SelectItem>;
               </SelectContent>;
@@ -232,6 +369,18 @@ export function AnalyticsChart({;
           </div>;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                  textAnchor="end";
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   height={50}
 
                 />;
@@ -254,10 +403,13 @@ export function AnalyticsChart({;
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />;
                 <XAxis;
                   dataKey="date";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end";
                   height={50}
+<<<<<<< HEAD
+=======
                 />
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
                 <Tooltip
@@ -269,10 +421,29 @@ export function AnalyticsChart({;
                 />
                 <Legend />
                 {dataKeys.map((key, index) => (
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <Line
                     key={key}
                     type="monotone"
                     dataKey={key}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    stroke={colors[index % colors && colors.length]}
+                    activeDot={{ r: 8 }}
+                    strokeWidth={2}
+                  />;
+                ))}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardContent className="p - 0">;
         <div className="h - 72 w - full p - 4">;
           <ResponsiveContainer width="100%" height="100%">;
@@ -328,10 +499,30 @@ export function AnalyticsChart({;
                     dataKey={key}
                   />))}
               </BarChart>)}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </ResponsiveContainer>;
         </div>;
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <CardContent className="p-0">;
         <div className="h-72 w-full p-4">;
           <ResponsiveContainer width="100%" height="100%">;
@@ -451,3 +642,10 @@ bg-zion-blue-dark border-zion-blue-light overflow-hidden"> <CardHeader className
 }</ResponsiveContainer> </div> </CardContent> </Card>) 
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

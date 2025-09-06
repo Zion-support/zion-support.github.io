@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle } from '@/components/ui/dialog';
+import { AIEnhancementPanel  } from './AIEnhancementPanel';
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+interface AIEnhancementDialogProps {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -13,6 +36,20 @@ import React from 'react';
   onClose;
   onApply;
   defaultOptions;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',;
 import {;
   Dialog,;
@@ -29,7 +66,18 @@ interface AIEnhancementDialogProps {;
   defaultOptions: AIEnhancementOptions,;
   initialContent?: string;
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   title: string
   isOpen: boolean
@@ -40,6 +88,28 @@ interface AIEnhancementDialogProps {;
   initialContent?: string
 }
 export function AIEnhancementDialog({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
+import {AIEnhancementPanel} from './AIEnhancementPanel';
+import {AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
+interface AIEnhancementDialogProps {;
+  title: string,;
+  isOpen: boolean,;
+  onClose: () => void,;
+  onApply: (content: string) => void,;
+  defaultOptions: AIEnhancementOptions,;
+  initialContent?: string;
+}
+
+export function AIEnhancementDialog(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title;
   isOpen;
   onClose;
@@ -63,6 +133,17 @@ export function AIEnhancementDialog({
     onApply(content),;
     onClose();
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   },
 
@@ -77,6 +158,29 @@ export function AIEnhancementDialog({
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+
+=======
+=======
+        />;
+      </DialogContent>;
+    </Dialog>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
@@ -112,6 +216,15 @@ function AIEnhancementDialog() {
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  <DialogHeader> <DialogTitle> {
   title 
@@ -130,3 +243,10 @@ function AIEnhancementDialog() {
     </Dialog>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

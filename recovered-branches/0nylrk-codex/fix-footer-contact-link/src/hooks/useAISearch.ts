@@ -24,6 +24,28 @@ interface SearchFilters {
   skills?: string[] | null;
   location?: string | null;
   budget?: { min: number, max: number } | null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  availability?: string | null;
+}
+
+
+
+=======
+=======
+  availability?: string | null
+}
+export function useAISearch() {
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [loading, setLoading] = useState(false);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -60,6 +82,27 @@ export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const search = async (query: string) => {
+    setLoading(true),
+    try {
+      const response = await fetch(
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
+        {
+  availability?: string | null;
+}
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export /**
  * useAISearch - Function description
  */
@@ -70,6 +113,27 @@ function useAISearch() {
   const search = async (query: string) => {
     set_loading (true);
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+          method: "POST"
+          headers: { "Content-Type": "application/json" }
+          body: JSON.stringify({ query })}
+      );
+      const data = await response.json();
+      const filters: SearchFilters = data.filters |{}
+      const items: SearchResult[] = [];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query })}
@@ -78,6 +142,20 @@ function useAISearch() {
       const filters: SearchFilters = data.filters || {},
 
       const items: SearchResult[] = [],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+      const matchSkill = (skills: string[] | undefined) => {
+        if (!filters.skills |filters.skills.length === 0) return true
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           method: "POST",
           headers: { "Content-Type": "application/json" };
           body: JSON && JSON.stringify({ query })}
@@ -95,24 +173,72 @@ function useAISearch() {
 
       if (!filters.type || filters.type === "talent" || filters.type === "all") {
         TALENT_PROFILES.forEach((t) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
+          if (!matchSkill(t.skills)) return;
+=======
+          if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,
+          if (!matchSkill(t.skills)) return,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         return skills?.some((s) =>
           filters && filters.skills!.some((f) => s && s.toLowerCase().includes(f && f.toLowerCase()))
         )
         TALENT_PROFILES.forEach((t) => {
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,
           if (!matchSkill(t.skills)) return,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title })
         })
       }
       if (!filters.type |filters.type === "job" |filters.type === "all") {
         JOB_POSTS.forEach((j) => {
+<<<<<<< HEAD
           if (!matchSkill(j.skills)) return,
+=======
+<<<<<<< HEAD
+          if (!matchSkill(j.skills)) return,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          if (!matchSkill(j.skills)) return;
+=======
+          if (!matchSkill(j.skills)) return,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          if (!matchSkill(j.skills)) return,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           items.push({ id: j.id, type: "job", title: j.title, description: j.description })
         })
       }
       if (!filters.type |filters.type === "project" |filters.type === "all") {
         PROJECTS.forEach((p) => {
           items.push({ id: p.id, type: "project", title: p.job?.title |"Project", description: p.scope_summary })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       };
       if (!filters && filters.type || filters && filters.type === "talent" || filters && filters.type === "all") {
         TALENT_PROFILES && TALENT_PROFILES.forEach((t) => {
@@ -130,10 +256,41 @@ function useAISearch() {
       if (!filters && filters.type || filters && filters.type === "project" || filters && filters.type === "all") {
         PROJECTS && PROJECTS.forEach((p) => {
           items && items.push({ id: p && p.id, type: "project", title: p && p.job?.title || "Project", description: p && p.scope_summary })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         })
       }
       setResults(items)
     } catch (err) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      console && console.error("search error", err);
+      setResults([])
+    } finally {
+      setLoading(false)
+
+=======
+    }
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setResults([])
     } finally {
       setLoading(false)
@@ -158,6 +315,30 @@ if (return true, ) {
 }
         return skills?.some ((s) =>;
           filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+=======
+      console.error("search error", err),
+      setResults([])
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return { results, loading, search }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
@@ -186,6 +367,18 @@ export function useAISearch() {;
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,;
           if (!matchSkill(t.skills)) return,;
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        });
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
 ;
       // Check condition
@@ -234,4 +427,99 @@ if ( {) {
 }
   }
 ;
+<<<<<<< HEAD
   return { results, loading, search }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return { results, loading, search }
+<<<<<<< HEAD
+}
+=======
+}
+  return { results, loading, search }
+
+import { useState } from "react",;
+import { TALENT_PROFILES } from "@/data/talentData",;
+import { JOB_POSTS } from "@/data/jobsData",;
+import { PROJECTS } from "@/data/projectsData",;
+;
+export interface SearchResult {;
+  id:string,;
+  type:"talent" | "job" | "project",;
+  title:string,;
+  description:string;
+}
+;
+interface SearchFilters {;
+  type?:string | null,;
+  skills?:string[] | null,;
+  location?:string | null,;
+  budget?:{ min:number, max:number } | null,;
+  availability?:string | null,;
+}
+;
+export function useAISearch() {;
+  const [results, setResults] = useState<SearchResult[]>([]),;
+  const [loading, setLoading] = useState(false),;
+;
+  const search = async (query:string) => {;
+    setLoading(true),;
+    try {;
+      const response = await fetch(;
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",;
+        {;
+          method:"POST",;
+          headers:{ "Content-Type":"application/json" },;
+          body:JSON.stringify({ query })}
+      ),;
+      const data = await response.json(),;
+      const filters:SearchFilters = data.filters || {},;
+;
+      const items:SearchResult[] = [],;
+      const matchSkill = (skills:string[] | undefined) => {;
+        if (!filters.skills || filters.skills.length === 0) return true,;
+        return skills?.some((s) =>;
+          filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()));
+        );
+      },;
+;
+      if (!filters.type || filters.type === "talent" || filters.type === "all") {;
+        TALENT_PROFILES.forEach((t) => {;
+          if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,;
+          if (!matchSkill(t.skills)) return,;
+          items.push({ id:t.id, type:"talent", title:t.full_name, description:t.professional_title }),;
+        }),;
+      }
+;
+      if (!filters.type || filters.type === "job" || filters.type === "all") {;
+        JOB_POSTS.forEach((j) => {;
+          if (!matchSkill(j.skills)) return,;
+          items.push({ id: j.id, type: "job", title: j.title, description: j.description });
+        });
+      }
+;
+      if (!filters.type || filters.type === "project" || filters.type === "all") {;
+        PROJECTS.forEach((p) => {;
+          items.push({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary });
+        });
+      }
+;
+      setResults(items);
+    } catch (err) {;
+      console.error("search error", err);
+      setResults([]);
+    } finally {;
+      setLoading(false);
+    }
+  };
+  return { results, loading, search }
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

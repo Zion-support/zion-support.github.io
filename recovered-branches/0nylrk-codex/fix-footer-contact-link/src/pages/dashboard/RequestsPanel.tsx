@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -54,6 +90,16 @@ import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {
   const { user } = useAuth();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -222,23 +268,98 @@ function RequestsPanel() {
     markAsViewed;
     markAsResponded;
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <ProtectedRoute>;
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
+<<<<<<< HEAD
             <RequestsHeader
+=======
+<<<<<<< HEAD
+            <RequestsHeader
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            <RequestsHeader;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            <RequestsHeader
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+            />;
+
+=======
+            <RequestsHeader;
+              unreadCount={unreadCount}              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+            />;
+            ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
                 <TabsTrigger value="active">Active Requests</TabsTrigger>;
                 <TabsTrigger value="archived">Archived</TabsTrigger>;
               </TabsList>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              <TabsContent value="active">;
+
+=======
+                <QuoteRequestsList
+                  quotes={activeQuotes}
+                  isLoading={isLoading}
+              ;
+              <TabsContent value="active">;
+                <QuoteRequestsList;
+                  quotes={activeQuotes}                  isLoading={isLoading}
+            <RequestsHeader;
+              unreadCount={unreadCount}
+              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+            />
+            {/* Main Content */}
+            <Tabs defaultValue="active" className="mb-6">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
+                <TabsTrigger value="active">Active Requests</TabsTrigger>
+                <TabsTrigger value="archived">Archived</TabsTrigger>
+              </TabsList>
+              <TabsContent value="active">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -246,6 +367,36 @@ function RequestsPanel() {
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                />;
+              </TabsContent>;
+
+              <TabsContent value="archived">;
+
+=======
+                />;
+              </TabsContent>;
+                <QuoteRequestsList
+                  quotes={archivedQuotes}
+                  isLoading={isLoading}
+              ;
+              <TabsContent value="archived">;
+                <QuoteRequestsList;
+                  quotes={archivedQuotes}                  isLoading={isLoading}
+                />
+              </TabsContent>
+              <TabsContent value="archived">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -253,10 +404,43 @@ function RequestsPanel() {
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                />;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+          onClose={() => {;
+            setShowDetails(false);
+            setSelectedQuote(null);
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 />;
               </TabsContent>;
             </Tabs>;
@@ -286,6 +470,13 @@ function RequestsPanel() {
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           }}
         />
         <Footer />
@@ -369,6 +560,14 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             setShowDetails(false),;
             setSelectedQuote(null),;
           }}
@@ -426,3 +625,10 @@ const [showDetails, setShowDetails] = useState (false);
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

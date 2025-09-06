@@ -7,6 +7,18 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface ReviewFormValues {;
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -25,6 +37,22 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+
+
+
+=======
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { useForm } from "react-hook-form",
@@ -52,6 +80,15 @@ import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 import { Switch } from "@/components/ui/switch",
 import { Review } from "@/types/reviews",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -70,6 +107,13 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -98,6 +142,21 @@ export function ReviewForm(): any ({;
   revieweeName;
   onSubmit;
   defaultValues;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
@@ -141,6 +200,8 @@ export function ReviewForm({
   onSubmit,
   defaultValues,
   isSubmitting}: ReviewFormProps) {
+<<<<<<< HEAD
+=======
 
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
@@ -151,6 +212,11 @@ export function ReviewForm({
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
   isSubmitting}: ReviewFormProps) {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -160,6 +226,31 @@ export function ReviewForm({
       timeliness_rating: defaultValues.timeliness_rating
       would_work_again: defaultValues.would_work_again
       is_anonymous: defaultValues.is_anonymous} : {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  });
+  const handleSubmit = async (values: ReviewFormValues) => {
+    const formattedData = {
+      ...values
+      project_id: projectId
+      reviewee_id: revieweeId}
+    const success = await onSubmit(formattedData);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      rating: 0
+      review_text: ""
+      communication_rating: undefined
+      quality_rating: undefined
+      timeliness_rating: undefined
+      would_work_again: undefined
+      is_anonymous: false}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
@@ -184,6 +275,19 @@ export function ReviewForm({
       would_work_again: undefined,;
       is_anonymous: false}
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+  }),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
 
   const handleSubmit = async (values: ReviewFormValues) => {;
@@ -705,6 +809,232 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        />;
+
+        <Button
+          type="submit"
+          className="w-full"
+          disabled={isSubmitting || !form && form.formState.isValid}>;
+          {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
+=======
+        />;
+  }),;
+  const handleSubmit = async (values: ReviewFormValues) => {;
+    const formattedData = {;
+      ...values,;
+      project_id: projectId,;
+      reviewee_id: revieweeId},;
+    const success = await onSubmit(formattedData),;
+    if (success) {;
+      form.reset();
+    }
+  },
+  
+  const watchRating = form.watch("rating"),
+  
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+        
+  },;
+  const watchRating = form.watch("rating"),;
+  return (;
+    <Form {...form}>;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
+        {/* Review Text */}
+        <FormField
+          control={form.control}
+          name="review_text"
+          rules={{
+            required: "Please provide feedback"
+            minLength: {
+              value: 20
+
+              message: "Review must be at least 20 characters"}}}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Your Review</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Share your experience and feedback..."
+                  className="min-h-24 resize-none"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {/* Additional Rating Categories (only shown if main rating is provided) */}
+        {watchRating > 0 && (
+          <div className="space-y-6 border-t pt-6">
+            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
+            
+            {/* Communication */}
+            <FormField
+              control={form.control}
+              name="communication_rating"
+              render={({ field }) => (
+                <FormItem className="space-y-2">
+                  <FormLabel>Communication</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={(value) => field.onChange(parseInt(value))}
+                      defaultValue={field.value?.toString()}
+                      className="flex flex-wrap gap-4"
+                    >
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <FormItem
+                          key={value}
+                          className="flex items-center space-x-2"
+                        >
+                          <FormControl>
+                            <RadioGroupItem value={value.toString()} />
+                          </FormControl>
+                          <FormLabel className="cursor-pointer font-normal">
+                            {value}
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Quality */}
+            <FormField
+              control={form.control}
+              name="quality_rating"
+              render={({ field }) => (
+                <FormItem className="space-y-2">
+                  <FormLabel>Quality of Work</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={(value) => field.onChange(parseInt(value))}
+                      defaultValue={field.value?.toString()}
+                      className="flex flex-wrap gap-4"
+                    >
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <FormItem
+                          key={value}
+                          className="flex items-center space-x-2"
+                        >
+                          <FormControl>
+                            <RadioGroupItem value={value.toString()} />
+                          </FormControl>
+                          <FormLabel className="cursor-pointer font-normal">
+                            {value}
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Timeliness */}
+            <FormField
+              control={form.control}
+              name="timeliness_rating"
+              render={({ field }) => (
+                <FormItem className="space-y-2">
+                  <FormLabel>Timeliness</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={(value) => field.onChange(parseInt(value))}
+                      defaultValue={field.value?.toString()}
+                      className="flex flex-wrap gap-4"
+                    >
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <FormItem
+                          key={value}
+                          className="flex items-center space-x-2"
+                        >
+                          <FormControl>
+                            <RadioGroupItem value={value.toString()} />
+                          </FormControl>
+                          <FormLabel className="cursor-pointer font-normal">
+                            {value}
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Would Work Again */}
+            <FormField
+              control={form.control}
+              name="would_work_again"
+              render={({ field }) => (
+                <FormItem>
+                  <div className="flex items-center gap-2">
+                    <FormLabel>Would you work with {revieweeName} again?</FormLabel>
+                    <FormControl>
+                      <div className="flex items-center space-x-2">
+                        <Switch
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                        <span className="text-sm text-muted-foreground">
+                          {field.value ? "Yes" : "No"}
+                        </span>
+                      </div>
+                    </FormControl>
+                  </div>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        )}
+        {/* Anonymous Review */}
+        <FormField
+          control={form.control}
+          name="is_anonymous"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex items-center gap-2">
+                <FormControl>
+                  <Switch
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                </FormControl>
+                <FormLabel className="cursor-pointer font-normal">
+                  Submit anonymously
+                </FormLabel>
+              </div>
+              <p className="text-xs text-muted-foreground mt-1">
+                Anonymous reviews won't display your name but will still be linked to your account.
+              </p>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button
+          type="submit"
+          className="w-full"
+          disabled={isSubmitting |!form.formState.isValid}
+        >
+          {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
+        </Button>
+      </form>
+    </Form>
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </Button>;
       </form>;
     </Form>;
@@ -883,3 +1213,10 @@ defaultValues: defaultValues ? {
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

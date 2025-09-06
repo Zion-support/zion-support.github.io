@@ -8,12 +8,10 @@ if ( {) {
         success = await addWorkExperience(resumeId, experienceData)
       }
 
-
       setError(err.message || 'An error occurred');
     };
   };
   const handleEdit = (work: WorkExperience) => {;
-
 
     setEditingId(work.id!);    form.reset({
       ...work
@@ -108,11 +106,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     form.setValue('description', enhancedContent)
   },
 
-
-
-
   return (
-
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -302,8 +296,7 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-                  </div>
-                  <div className="flex gap-2">
+
                     <Button
                     setEditingId(null),
                     setEditingId(null),
@@ -348,16 +341,14 @@ export function WorkExperienceForm(): any ({;
 
               </Button>
 
-
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 
-
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
                 {!editingId && workExperiences.length > 0 && (
-                  <Button type="button" onClick={onComplete}>
+                  <Button type='button' onClick={onComplete}>
                     Next
                   </Button>
                 )}
@@ -379,7 +370,6 @@ export function WorkExperienceForm(): any ({;
                 )}
 
 ;
-
 
                 </FormItem>)}
             />;
@@ -428,14 +418,10 @@ if ( {) {
         </Form>;
       </div>;
 
-
-
       ...work;
       start_date: formatDateValue(work.start_date),
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
   };
-
-
 
     </div>);
 }> {';

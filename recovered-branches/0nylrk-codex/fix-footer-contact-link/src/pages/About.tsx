@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function About() {
   return (
     <>
@@ -164,13 +173,96 @@ export default function About() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
+  )
+
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+
+
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { GradientHeading } from "@/components/GradientHeading";
+
+      />;
+      <Header />;
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+          <div className="text-center mb-16">;
+            <GradientHeading>About Zion</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              The world's first free marketplace dedicated to high-tech and artificial intelligence;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">;
+            <div>;
+              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>;
+              <p className="text-zion-slate-light text-lg mb-6">;
+                a global community where the future of technology is being built today.;
+              </p>;
+            </div>;
+            <div className="rounded-lg overflow-hidden">;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">;
+            <div>;
+              <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>;
+              <p className="text-zion-slate-light text-lg mb-6">;
+                a community that shapes the future of how we live, work, and interact with technology.;
+              </p>;
+            </div>;
+            <div className="rounded-lg overflow-hidden lg:order-first">;
+          <div className="text-center mb-16">;
+            <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">;
+                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">;
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
+                  </svg>;
+                </div>;
+                <h3 className="text-xl font-bold text-white mb-3">Innovation</h3>;
+                <p className="text-zion-slate-light">;
+                  We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible.;
+                </p>;
+              </div>;
+                  </svg>;
+                </div>;
+                <h3 className="text-xl font-bold text-white mb-3">Community</h3>;
+                <p className="text-zion-slate-light">;
+                  We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive.;
+                </p>;
+              </div>;
+                  </svg>;
+                </div>;
+                <h3 className="text-xl font-bold text-white mb-3">Trust</h3>;
+                <p className="text-zion-slate-light">;
+                  We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+=======
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 }
 ;
     </>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </>;
   ),;}
  export default function About () {
@@ -184,3 +276,10 @@ export default function About() {
 ;
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

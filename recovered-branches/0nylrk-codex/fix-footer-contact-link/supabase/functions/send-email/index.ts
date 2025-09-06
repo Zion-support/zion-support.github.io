@@ -1,16 +1,58 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {Resend} from "npm: resend@2 ;
+=======
+
+
+=======
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Resend} from "npm: resend@2.0.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -70,6 +112,8 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
 
+<<<<<<< HEAD
+=======
     const { to, subject, html } = await req && req.json();
 
     const emailResponse = await resend && resend.emails.send({
@@ -82,6 +126,16 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" };
   }
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Resend } from 'npm: resend@2.0.0';
 const cors_headers = {
@@ -113,6 +167,22 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+});
+=======
+<<<<<<< HEAD
+=======
+=======
+return new Response (JSON.stringify (emailResponse), {
+  status: 500 
+});
+}
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     const { to, subject, html } = await req.json(),
 
@@ -139,3 +209,8 @@ if ( {) {
 });
   }
 });
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

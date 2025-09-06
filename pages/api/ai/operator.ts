@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-
 
 const ipToRequests: Record<string, { timestamps: number[] }> = {}
 
@@ -8,18 +13,26 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] || { timestamps: [] }
   // Drop old timestamps
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!limited) {
     bucket.timestamps.push(now)
   }
   ipToRequests[ip] = bucket
   return limited
+
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -30,6 +43,10 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -41,7 +58,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
+
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
@@ -70,7 +92,10 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
 
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
 
     const completion = await openai.chat.completions.create({
@@ -79,8 +104,6 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
       messages: [
         { role: 'system', content: sys }
         { role: 'user', content: prompt }
-      ]
-    })
 
     return res.status(200).json({ text })
   } catch (err: any) {
@@ -88,3 +111,4 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     return res.status(500).json({ error: 'Internal Server Error' })
   }
 };
+

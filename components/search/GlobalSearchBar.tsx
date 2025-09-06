@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -10,7 +15,10 @@ export default function GlobalSearchBar() {;
     if (!query) {
       setSuggestions([]);
       return;      return
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -119,7 +127,6 @@ import { useEffect, useMemo, useRef, useState } from 'react';
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
 
-
     rec.start()
   }
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
@@ -145,6 +152,31 @@ import { useEffect, useMemo, useRef, useState } from 'react';
           <ul className="max-h-64 overflow-auto py-1 text-sm">;
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
+<<<<<<< HEAD
+=======
+
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+export default function GlobalSearchBar() {
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
+  useEffect(() => {
+    if (!query) {
+      setSuggestions([]);
+      return;      return;
+      setSuggestions([]);
+      return
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
     controller.current?.abort();
     controller.current = new AbortController();
@@ -198,6 +230,10 @@ import { useEffect, useMemo, useRef, useState } from 'react';
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <button
                   type="button"
                   onClick={() => {;
@@ -205,9 +241,12 @@ import { useEffect, useMemo, useRef, useState } from 'react';
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
+<<<<<<< HEAD
 
                 >
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -217,11 +256,19 @@ import { useEffect, useMemo, useRef, useState } from 'react';
           </ul>;
         </div>;
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
                   {s}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </button>
               </li>
             ))}
@@ -229,6 +276,10 @@ import { useEffect, useMemo, useRef, useState } from 'react';
         </div>
       )}
     </form>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { use_router } from 'next / router';
 export default /**
  * GlobalSearchBar - Function description
@@ -397,8 +448,12 @@ if (return) {
         </div>)}
     </form>));
 }
+<<<<<<< HEAD
   );
 
 );  )
 }
   );
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

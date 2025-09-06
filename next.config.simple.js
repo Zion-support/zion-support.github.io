@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   reactStrictMode: true,
@@ -6,6 +22,33 @@
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  page_extensions: ['tsx', 'ts', 'jsx', 'js'],
+  // Image optimization;
+  images: {
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image / webp', 'image / avif'],
+  },
+  // Output configuration;
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+=======
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+
+>>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Image optimization
   images: {
     domains: [

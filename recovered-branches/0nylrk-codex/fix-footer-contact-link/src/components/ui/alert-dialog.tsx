@@ -1,12 +1,51 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+import * as React from 'react';
+import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {cn} from '@/lib/utils';
 import {buttonVariants} from '@/components/ui/button';
 const AlertDialog = AlertDialogPrimitive.Root;
 const AlertDialogTrigger = AlertDialogPrimitive.Trigger;
 const AlertDialogPortal = AlertDialogPrimitive.Portal;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
@@ -17,17 +56,55 @@ const AlertDialogTrigger = AlertDialogPrimitive.Trigger
 
 const AlertDialogPortal = AlertDialogPrimitive.Portal
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const AlertDialogOverlay = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Overlay>
 ></typeof>(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Overlay
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+const AlertDialog = AlertDialogPrimitive && AlertDialogPrimitive.Root;
+
+const AlertDialogTrigger = AlertDialogPrimitive && AlertDialogPrimitive.Trigger;
+
+const AlertDialogPortal = AlertDialogPrimitive && AlertDialogPrimitive.Portal;
+
+const AlertDialogOverlay = React && React.forwardRef<;
+  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Overlay>,;
+  React && React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Overlay>;
+></typeof>(({ className, ...props }, ref) => (;
+  <AlertDialogPrimitive&& AlertDialogPrimitive.Overlay
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     className={cn(
       'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
     className={cn(
 
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
       className
     )}
@@ -58,6 +135,28 @@ const AlertDialogContent = React && React.forwardRef<;
     <AlertDialogOverlay />;
     <AlertDialogPrimitive&& AlertDialogPrimitive.Content
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+
+AlertDialogOverlay.displayName = AlertDialogPrimitive.Overlay.displayName;
+;
+      ref={ref}
+      className={cn(
+        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const AlertDialogContent = React.forwardRef<;
   React.ElementRef<typeof AlertDialogPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Content>;
@@ -65,6 +164,18 @@ const AlertDialogContent = React.forwardRef<;
   <AlertDialogPortal>;
     <AlertDialogOverlay />;
     <AlertDialogPrimitive.Content;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
@@ -101,6 +212,24 @@ const AlertDialogHeader = ({;
       "flex flex-col space-y-2 text-center sm:text-left",
 
       className
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName;
+;
+const AlertDialogHeader = ({;
+  className,;
+  ...props;
+} React.HTMLAttributes<HTMLDivElement>) => (;
+  <div;
+    className={cn(;
+      "flex flex-col space-y-2 text-center sm:text-left",;
+      className;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ref={ref}
       className={cn(
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
@@ -245,6 +374,8 @@ const AlertDialogAction = React.forwardRef<;
     ref={ref}
     className={cn ('text - lg font - semibold', class_name)}
     {...props}
+<<<<<<< HEAD
+=======
 
 
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
@@ -286,6 +417,11 @@ const AlertDialogDescription = React && React.forwardRef<;
     ref={ref}
     className={cn ('text - lg font - semibold', class_name)}
     {...props}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   />));
 AlertDialogTitle.display_name = AlertDialogPrimitive.Title.display_name;
 ;
@@ -294,6 +430,17 @@ const AlertDialogDescription = React.forward_ref<;
   React.Compon</typeof > entPropsWithoutRef < typeof AlertDialogPrimitive.Description>;
 >(({ class_name, ...props }, ref) => (
   <AlertDialogPrimitive.Description;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   <AlertDialogPrimitive.Description;
 
 
@@ -305,6 +452,12 @@ const AlertDialogDescription = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
   <AlertDialogPrimitive.Description;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ref={ref}
     className={cn('text-sm text-muted-foreground', className)}
     {...props}
@@ -325,6 +478,34 @@ const AlertDialogAction = React.forwardRef<
 </typeof>  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Action
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    ref={ref}
+    className={cn ('text - sm text - muted - foreground', class_name)}
+    {...props}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    ref={ref}
+    className={cn(buttonVariants(), className)}
+    {...props}
+  />
+));
+AlertDialogAction.displayName = AlertDialogPrimitive.Action.displayName;
+const AlertDialogCancel = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.</typeof>Cancel>
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Cancel
+    ref={ref}
+    ref={ref}
+    className={cn ('text - sm text - muted - foreground', class_name)}
+    {...props}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 AlertDialogDescription && AlertDialogDescription.displayName =;
   AlertDialogPrimitive && AlertDialogPrimitive.Description.displayName;
 
@@ -336,6 +517,11 @@ const AlertDialogAction = React && React.forwardRef<;
     ref={ref}
     className={cn ('text - sm text - muted - foreground', class_name)}
     {...props}
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   />));
 AlertDialogDescription.display_name =;
   AlertDialogPrimitive.Description.display_name;
@@ -348,6 +534,16 @@ const AlertDialogAction = React.forward_ref<;
     ref={ref}
     className={cn(buttonVariants(), className)}
     {...props}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 AlertDialogAction && AlertDialogAction.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Action.displayName;
 
 const AlertDialogCancel = React && React.forwardRef<;
@@ -355,6 +551,24 @@ const AlertDialogCancel = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Cancel>;
 >(({ className, ...props }, ref) => (;
   <AlertDialogPrimitive&& AlertDialogPrimitive.Cancel
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    ref={ref}
+
+
+
+=======
+=======
+    className={cn(
+      buttonVariants({ variant: 'outline' })
+      'mt-2 sm:mt-0'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const AlertDialogAction = React.forwardRef<;
   React.ElementRef<typeof AlertDialogPrimitive.Action>,;
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>;
@@ -372,6 +586,21 @@ const AlertDialogCancel = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <AlertDialogPrimitive.Cancel;
     ref={ref}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+    className={cn(
+      buttonVariants({ variant: "outline" }),
+      "mt-2 sm:mt-0",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       className
     className={cn(
       buttonVariants({ variant: "outline" }),
@@ -390,6 +619,12 @@ const AlertDialogCancel = React.forwardRef<;
       buttonVariants({ variant:"outline" }),;
       "mt-2 sm:mt-0",;
       className;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     className={cn(
       buttonVariants({ variant: "outline" }),
       "mt-2 sm:mt-0",
@@ -461,6 +696,25 @@ export {
   AlertDialogTitle,
   AlertDialogDescription,
   AlertDialogAction,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  AlertDialogCancel,;
+};
+
+=======
+=======
+  AlertDialogCancel,;
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export {;
   AlertDialog,;
   AlertDialogPortal,;
@@ -474,6 +728,21 @@ export {;
   AlertDialogAction;
   AlertDialogCancel}
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  AlertDialogCancel,
+}
+;
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   AlertDialogCancel}import * as React from "react" import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog" const AlertDialog = AlertDialogPrimitive.Root const AlertDialogTrigger = AlertDialogPrimitive.Trigger const AlertDialogPortal = AlertDialogPrimitive.Portal const AlertDialogOverlay = React.forwardRef< React.ElementRef<typeof AlertDialogPrimitive.Overlay>;
 React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Overlay> > ( ({
   className, ...props 
@@ -525,3 +794,8 @@ React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel> > ( ({
   AlertDialogCancel,
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -30,9 +30,12 @@ const BusinessIntelligenceChat: NextPage = () => {;
 }
 export default BusinessIntelligenceChat;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -74,6 +77,7 @@ const BusinessIntelligenceChat: NextPage = () => {
 ;
 export default BusinessIntelligenceChat;
 ;
+<<<<<<< HEAD
     <div>
       <Head>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
@@ -121,3 +125,6 @@ export default BusinessIntelligenceChat;
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

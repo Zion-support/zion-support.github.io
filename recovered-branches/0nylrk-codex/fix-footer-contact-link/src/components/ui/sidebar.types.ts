@@ -1,6 +1,8 @@
 import React from "react";
 // This file fixes the ref type issues in sidebar components
 
+<<<<<<< HEAD
+=======
 // Export a placeholder to ensure the file is recognized as a module
 export const SIDEBAR_REF_TYPE_FIX = true;
 
@@ -9,6 +11,7 @@ export type ForwardRefComponent<T, P = {}> = React.ForwardRefExoticComponent<
   React.PropsWithoutRef<P> & React.RefAttributes<T>
 >;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Helper type for component refs
 export type ElementRef<T extends React.ElementType> =
   React.ComponentPropsWithRef<T>["ref"];
@@ -69,6 +72,9 @@ export type SidebarContext = {
   set_open: (open: boolean) => void;
   open_mobile: boolean;
   setOpenMobile: (open: boolean) => void;
+<<<<<<< HEAD
+};
+=======
   isMobile: boolean;
   toggleSidebar: () => void;
 };
@@ -174,3 +180,8 @@ export type SidebarContext = {;
   toggleSidebar: () => void;
 };
 };
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

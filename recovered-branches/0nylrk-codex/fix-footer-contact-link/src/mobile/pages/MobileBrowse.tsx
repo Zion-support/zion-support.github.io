@@ -10,6 +10,19 @@ import {BrowseFilters} from "../components/browse/BrowseFilters";
 import {BrowseCards} from "../components/browse/BrowseCards";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -95,6 +108,16 @@ export function MobileBrowse() {
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: "1",
     title: "Senior React Developer",
     subtitle: "TechCorp Inc.",
@@ -165,6 +188,21 @@ const talentsData = [
   }
 ],
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  },
+  
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function MobileBrowse() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
@@ -181,6 +219,19 @@ export function MobileBrowse() {
 
   },
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -193,6 +244,31 @@ export function MobileBrowse() {
             variant={browseType === "jobs" ? "default" : "ghost"}
             className="rounded-full"
             onClick={() => setBrowseType("jobs")}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          >
+            Jobs
+          </Button>
+          <Button
+            variant={browseType === "talents" ? "default" : "ghost"}
+            className="rounded-full"
+            onClick={() => setBrowseType("talents")}
+          >
+            Talents
+          </Button>
+        </div>
+      </div>
+      <BrowseFilters type={browseType} />
+      <div className="py-4 px-4">
+        <BrowseCards
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           items={browseType === "jobs" ? jobsData : talentsData}
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -241,6 +317,17 @@ const talentsData = [;
     image: "",;
     match: 82;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+];
+
+export function MobileBrowse() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
@@ -269,6 +356,16 @@ const talentsData = [;
             variant={browseType === "talents" ? "default" : "ghost"}
             className="rounded-full"
             onClick={() => setBrowseType("talents")}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -381,11 +478,45 @@ function MobileBrowse() {
             variant={browse_type === "talents" ? "default" : "ghost"}
             className="rounded - full";
             on_click={() => setBrowseType ("talents")}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+          <Button;
+            variant={browseType === "talents" ? "default" :"ghost"}
+            className="rounded-full";
+            onClick={() => setBrowseType("talents")}
+          <Button;
+            variant={browseType === "talents" ? "default" : "ghost"}
+            className="rounded-full";
+            onClick={() => setBrowseType("talents")}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           >;
             Talents;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <BrowseCards
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      <BrowseFilters type={browseType} />;
+      <div className="py-4 px-4">;
+        <BrowseCards;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}
@@ -413,6 +544,15 @@ function MobileBrowse() {
       <BottomNavigation />;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ;
       <BrowseFilters type={browseType} />;
       ;
@@ -446,3 +586,10 @@ return (<div className="min-h-screen" > <MobileHeader title= {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

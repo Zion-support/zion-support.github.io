@@ -1,5 +1,10 @@
+<<<<<<< HEAD
  
  
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }function getAllServices () : Service[] {
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
 }return {
@@ -14,8 +19,12 @@ fallback: false
   service: Service
 }) {
   return (<Layout> <Head> <title> {
+<<<<<<< HEAD
 }function getAllServices () : Service[] {
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+}function getAllServices () : Service[] {
 
 2) 
   service.name 
@@ -34,7 +43,6 @@ null;
 2) 
 }function getAllServices () : Service[] {
 
-
 2) 
   service.name 
 }| Zion Tech Group</title> ;
@@ -44,6 +52,10 @@ null;
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
 }</ul> </div> <div>) ) 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contactInfo.mobile.replace (/[^+\\d]/g, '')
@@ -66,15 +78,27 @@ null;
   /* Market Position & ROI */
 }<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   service.marketPosition 
 }</p>
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }</p>
 }{
   service.competitors?.length ? () : null
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }function getAllServices(): any () : Service[] {;
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) ;
 }return {;
@@ -100,9 +124,12 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
 type Service = typeof enhancedRealMicroSaasServices[number];
 
+<<<<<<< HEAD
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export default ServiceDetail
 export default ServiceDetail
@@ -163,24 +190,34 @@ null;
 };
 export default ServiceDetail ;
 export default ServiceDetail;
+<<<<<<< HEAD
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 
 export default ServiceDetail
 
+<<<<<<< HEAD
 
 export default ServiceDetail
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 };
 export default ServiceDetail 
 export default ServiceDetail
+<<<<<<< HEAD
 };
 ;
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
   return enhancedRealMicroSaasServices .concat (extra_services as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);
 }return {
@@ -239,3 +276,7 @@ null;
 export default ServiceDetail;
 export default ServiceDetail;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

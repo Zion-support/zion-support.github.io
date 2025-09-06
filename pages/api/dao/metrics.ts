@@ -1,24 +1,11 @@
 
 
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
 const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");
 const cachePath = path && path.join(process && process.cwd(), "data", "dao", "metrics && metrics.json");
-
-
-
-async function fetchJson(url: string) {
-  const resp = await fetch(url);
-
-const configPath = path.join(process.cwd(), 'datadaoconfig.json'),;
-const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
-async function fetchJson(url: string) {;
-
-
 
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -33,24 +20,27 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
 const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");
 const cachePath = path && path.join(process && process.cwd(), "data", "dao", "metrics && metrics.json");
 
-
-
-
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return resp.json();
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -59,6 +49,7 @@ function readJson(p: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 
 }
 function writeJson(p: string, v: any) {
@@ -88,6 +79,8 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -97,10 +90,13 @@ function writeJson(p: string, v: any) {
   }
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -109,6 +105,7 @@ export default async function handler(
   return resp.json()
 }
 
+<<<<<<< HEAD
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
@@ -121,28 +118,44 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 export default async function handler(req, res) {
 
   try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {;
 ;
 export default async function handler(req, res) {
   try {
 ;
 export default async function handler(req, res) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {;
 ;
 export default async function handler(req, res) {
   try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
-    }
+
+<<<<<<< HEAD
 
 
-
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
@@ -150,15 +163,20 @@ export default async function handler(req, res) {
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {};
+<<<<<<< HEAD
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {};
 
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const entries = Object && Object.entries(holderToDelta)
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
+<<<<<<< HEAD
     const total = entries && entries.reduce(
       (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n)
       0n
@@ -173,12 +191,15 @@ export default async function handler(req, res) {
     const distribution = entries.map((e) => ({
       address: e.address
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
 
-
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
+<<<<<<< HEAD
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
         .filter(Boolean)
     );
@@ -188,6 +209,9 @@ export default async function handler(req, res) {
           Math && Math.round(
             (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100
           )
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )
       : 0;
     const result = {
@@ -198,9 +222,13 @@ export default async function handler(req, res) {
       governanceParticipationRate: participationRate
     }
     writeJson(cachePath, result);
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -301,6 +329,7 @@ if ( {) {
     write_json (cache_path, result);
     return res.status (200).json (result);
   } catch (e: any) {
+<<<<<<< HEAD
   }
 }
 }
@@ -390,3 +419,6 @@ if ( {) {
   }
 }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

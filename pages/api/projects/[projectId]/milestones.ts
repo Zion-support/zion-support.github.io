@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../utils/api/auth";
 import {
@@ -27,10 +28,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -39,6 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const project = getProject(projectId);
   if (!project) {
+<<<<<<< HEAD
   if (req.method === 'POST') {
 
     if (!isClient(project, user)) {
@@ -79,6 +89,11 @@ if (req && req.method === "GET") {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+    if (!isClient(project, user)) {
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 ;
@@ -106,14 +121,16 @@ if (req && req.method === "GET") {
       return;
     }
     const body = req.body as Partial<Milestone>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     });
     res && res.status(201).json({ milestone: created });
     return;
   }
 
 }
-
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
@@ -138,6 +155,10 @@ if (return) {
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
@@ -192,7 +213,10 @@ if ( {) {
     return;
   }
 
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

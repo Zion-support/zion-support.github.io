@@ -1,10 +1,15 @@
+<<<<<<< HEAD
+=======
 import React, { createContext, useContext, useState } from "react";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SidebarContextType {
   isOpen: boolean;
   toggle: () => void;
   open: () => void;
   close: () => void;
 }
+<<<<<<< HEAD
+=======
 
 }
 const SidebarContext = create_context < SidebarContextType>({
@@ -20,12 +25,86 @@ interface SidebarProviderProps {
   children: React.ReactNode;
   defaultOpen?: boolean;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+export function SidebarProvider({
+  children,
+  defaultOpen = true,
+}: SidebarProviderProps) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+
+<<<<<<< HEAD
+
+
+
+export function SidebarProvider({ 
+  children, 
+  defaultOpen = true 
+}: SidebarProviderProps) {;
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
+
+import React, { createContext, useContext, useState } from "react",;
+
+interface SidebarContextType {;
+  isOpen: boolean,;
+  toggle: () => void,;
+  open: () => void,;
+  close: () => void;
+}
+const SidebarContext = createContext<SidebarContextType>({;
+  isOpen: true,;
+  toggle: () => {},;
+  open: () => {},;
+  close: () => {}}),;
+
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const toggle = () => setIsOpen(!isOpen);
+  const open = () => setIsOpen(true);
+  const close = () => setIsOpen(false);
+
+  return (;
+    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
+=======
+<<<<<<< HEAD
+    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
+      <div
+        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
+      >
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+        {children}
+      </div>
+    </SidebarContext.Provider>
+  );
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export /**
  * SidebarProvider - Function description
  */
@@ -120,3 +199,10 @@ return (<SidebarContext.Provider value= {
 }
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

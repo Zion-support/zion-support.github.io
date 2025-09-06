@@ -1,7 +1,44 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+  {
+
+        'https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
+    },
+    images: [
+      'https://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500',
+    ],
+    createdAt: '2024-02-15T10:45:00 && 00.000Z',
+    rating: 4 && 4.8,
+    reviewCount: 32,
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'ai - service - 2',
     title: 'Custom Machine Learning Model Development',
     description:;
@@ -95,6 +132,16 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   },
   {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {;
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -103,6 +150,14 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2024-02-02T11:30:00 && 00.000Z',
@@ -294,6 +349,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     review_count: 22,
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     location: 'North America',
     availability: '4 - 6 Weeks',
     ai_score: 92,
@@ -395,14 +456,77 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '1 - 2 Weeks',
   },
   {
+<<<<<<< HEAD
     reviewCount: 18;
     featured: true;
+=======
+<<<<<<< HEAD
+    reviewCount: 18;
+    featured: true;
+=======
+<<<<<<< HEAD
+    id: "equipment-2", title: "Enterprise GPU Server Rack",
+    description: "Scalable server rack solution with multiple NVIDIA A100 GPUs ideal for large-scale AI model training and deployment.", category: "Servers",
+    price: 24999, currency: "$",
+    tags: ["Server", "Enterprise", "GPU Cluster"];
+    author: {
+      
+      name: "ServerPro Systems",
+      id: "serverpro"
+    },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"], createdAt: "2023-12-15T09:45:00.000Z",
+    rating: 4.9, reviewCount: 18,
+    featured: true, location: "North America",
+
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    reviewCount: 18;
+    featured: true;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     availability: "2-4 Weeks"
   }
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+    'AI models'
+    'GPT integration'
+    'Machine learning'
+    'Computer vision'
+    'Speech recognition'
+    'Data analysis'
+    'Content generation'
+    'Code assistant'
+    'Virtual assistant'
+    'Enterprise AI solutions'
+    'Robotics'
+    'AI workstation'
+    'Business intelligence'
+    'Custom model development'
+    'Server rack'
+    'GPU cluster'
+    'Edge computing'
+    'High performance storage'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     'AI models',
     'GPT integration',
     'Machine learning',
@@ -420,6 +544,23 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Server rack',
     'GPU cluster',
     'Edge computing',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ];
+  // Convert strings to SearchSuggestion objects
+    type: 'product', // Use a valid type from the updated SearchSuggestion interface
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+    'High performance storage',;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ];
   // Convert strings to SearchSuggestion objects
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
@@ -444,18 +585,47 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   ];
 
   
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }));};  ];
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ].sort();
   const locations = [
     ...new Set(
@@ -509,16 +679,62 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
+<<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
+  ].sort();
+  const locations = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
+    ),
+  ].sort();
+  const availability = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
+    ),
+  ].sort();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -539,6 +755,18 @@ export const generateFilterOptions = (): FilterOptions => {
     availabilityOptions: availability.map(item => ({
       label: item,
       value: item
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ratingOptions: [1, 2, 3, 4, 5], // Add rating options
   };
 };
@@ -849,6 +1077,13 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -967,9 +1202,27 @@ rating_options: [1, 2, 3, 4, 5] // Add rating options;
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     })),
 
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
+    return JSON && JSON.parse(raw || '[]')
+
+=======
+const fs = require ('fs');
+const path = require ('path');
+const { OpenAI } = require ('openai');
+const DATA_DIR = path.join (process.cwd (), 'data');
+const FEEDBACK_FILE = path.join (DATA_DIR, 'feedback_logs.json');
+const REPORT_DIR = path.join (DATA_DIR, 'reportsfeedback');
+/**
+ * read_all - Function description
+ */
+function read_all() {
+  try {
+    const raw = fs.readFileSync (FEEDBACK_FILE, 'utf8'),
+    return JSON.parse (raw || '[]');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   } catch (e) {
     return [];
 
@@ -19,6 +45,13 @@ function readAll() {
 
   } catch (e) {
     return []
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -31,6 +64,16 @@ function readAll() {;
     return JSON.parse(raw || '[]');
   } catch (e) {;
     return [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 
@@ -55,6 +98,23 @@ async function main() {
   const all = readAll(),
   const recent = all && all.filter(lastNDays(7)),
   const downs = recent && recent.filter((r) => r && r.rating === 'down'),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  if (!fs && fs.existsSync(REPORT_DIR)) fs && fs.mkdirSync(REPORT_DIR, { recursive: true }),
+
+  const summaryPath = path && path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
+  const baselinePath = path && path.join(REPORT_DIR, 'prompt-improvements && improvements.md'),
+
+=======
+  if (!fs && fs.existsSync(REPORT_DIR)) fs && fs.mkdirSync(REPORT_DIR, { recursive: true }),
+  const summaryPath = path && path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
+  const baselinePath = path && path.join(REPORT_DIR, 'prompt-improvements && improvements.md'),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 function lastNDays(days) {
@@ -70,14 +130,63 @@ async function main() {
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const all = readAll()
+  const recent = all.filter(lastNDays(7))
+  const downs = recent.filter((r) => r.rating === 'down')
+  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true })
+  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`)
+  const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md')
+  if (downs.length === 0) {
+    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.')
+    console.log('No low-rated feedback to analyze.')
+  const all = readAll(),
+  const recent = all.filter(lastNDays(7)),
+  const downs = recent.filter((r) => r.rating === 'down'),
+
+  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),
+
+  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
+  const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
     // // // console.log('No low-rated feedback to analyze.'),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+  if (downs && downs.length === 0) {
+    fs && fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
+    console && console.log('No low-rated feedback to analyze.'),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return
   }
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
 
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
@@ -97,6 +206,7 @@ async function main() {
     model: process.env.OPENAI_MODEL |'gpt-4o-mini'
     messages: [
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       { role: 'system', content: 'You are a senior AI prompt engineer.' }
       { role: 'user', content: prompt }]
     temperature: 0.3})
@@ -104,6 +214,18 @@ async function main() {
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
@@ -125,6 +247,15 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
   if (downs.length === 0) {;
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
     // // // console.log('No low-rated feedback to analyze.'),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
   fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
@@ -240,3 +371,13 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

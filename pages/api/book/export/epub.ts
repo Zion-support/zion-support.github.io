@@ -1,7 +1,5 @@
 
 
-
-
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -9,8 +7,7 @@ import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: "10mb"
-    }
+
   },;
 };
 
@@ -46,8 +43,7 @@ export default async function handler(
     } catch {}
   }
 }
-    title: project.meta.title, author: project.meta.author
-    publisher: project.meta.publisher || 'Zion'
+
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -90,8 +86,6 @@ export default async function handler(req, res) {
     res.setHeader('Content-Typeapplication/epub+zip')
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"')
     res.status(200).send(buf)
-
-
 
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });

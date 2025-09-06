@@ -123,15 +123,7 @@ interface SearchResponse {;
   query: string;
 
   hasMore: boolean;
-}
-;
-// Highlight search terms in text;
-const HighlightText: React.FC<{ text: string, searchTerm: string, className?: string }> = ({;
-  text,;
-  searchTerm,;
-  className = '';
-}) => {;
-  if (!searchTerm.trim()) {;
+
     return <span className={className}>{text}</span>;
   }
 
@@ -139,15 +131,12 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
     new RegExp(`(${searchTerm && searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
   );
 
-
   return (
 
     <span className={className}>
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
-
-
 
             {part}
           </mark>
@@ -215,7 +204,6 @@ const SearchResultCard: React.FC<{;
       ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer';
       : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4';
 
-
   return (
     <div onClick={handleClick} className={cardClass}>
       {result.image && (
@@ -230,8 +218,6 @@ const SearchResultCard: React.FC<{;
             }          />;
         </div>;
       )}
-
-
 
     </span>;
   );
@@ -262,8 +248,6 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
-
-
 
         </div>
       )}
@@ -304,7 +288,6 @@ const SearchResultCard: React.FC<{;
           </div>;
           {result.price && (
 
-
       <div className='flex-1'>;
         <div className='flex items-start justify-between mb-2'>;
           <div>;
@@ -339,7 +322,6 @@ const SearchResultCard: React.FC<{;
           )}
         </div>
 
-
         <p className="text-muted-foreground mb-3 line-clamp-2">
           <HighlightText text={result.description} searchTerm={searchTerm} />
         </p>
@@ -372,33 +354,12 @@ const SearchResultCard: React.FC<{;
             {result.category && (;
               <Badge variant="outline" className="text-xs">;
 
-
                 {result.category}
 
         </div>;
-      )}
-;
-      <div className="flex-1">;
-        <div className="flex items-start justify-between mb-2">;
-          <div>;
-            <h3 className="font-semibold text-lg mb-1">;
-              <HighlightText text={result.title} searchTerm={searchTerm} />;
-            </h3>;
-            <Badge variant="secondary" className="text-xs">;
-              {result.type}
-            </Badge>;
-          </div>;
-          {result.price && (;
-            <div className="text-right">;
-              <span className="font-bold text-primary">;
-                {result.currency === 'USD' ? '$' : ''}{result.price}
-              </span>;
-              {result.type === 'talent' && <span className="text-sm text-muted-foreground">/hr</span>}
-            </div>;
-          )}
-        </div>;
-        <p className="text-muted-foreground mb-3 line-clamp-2">;
-          <HighlightText text={result.description} searchTerm={searchTerm} />;
+
+        <p className='text-muted-foreground mb-3 line-clamp-2'>;
+          <HighlightText text={result && result.description} searchTerm={searchTerm} />;
         </p>;
 
         <div className='flex items-center justify-between'>;
@@ -465,7 +426,6 @@ const FilterSidebar: React.FC<{
               </Badge>
             ))}
           </div>
-          
 
           {result.rating && (
             <div className="flex items-center gap-1">
@@ -478,38 +438,6 @@ const FilterSidebar: React.FC<{
       </div>;
     </div>;
   );
-},;
-// Filter Sidebar Component;
-const FilterSidebar: React.FC<{;
-  filters: SearchFilters,;
-  onFiltersChange: (filters: SearchFilters) => void,;
-  availableCategories: string[];
-}> = ({ filters, onFiltersChange, availableCategories }) => {;
-  const typeOptions = [;
-    { id: 'product', label: 'Products' },;
-    { id: 'talent', label: 'Talent' },;
-    { id: 'service', label: 'Services' },;
-    { id: 'blog', label: 'Blog Posts' }
-  ],
-
-  const handleTypeChange = (typeId: string, checked: boolean) => {
-    const newTypes = checked 
-      ? [...filters.types, typeId]
-      : filters.types.filter(t => t !== typeId),
-    
-    onFiltersChange({ ...filters, types: newTypes })
-  },
-
-  const handlePriceChange = (values: number[]) => {
-    onFiltersChange({ 
-      ...filters, 
-      minPrice: values[0] ?? 0, 
-      maxPrice: values[1] ?? 10000 
-    })
-  },
-
-
-
 
   return (
 
@@ -519,7 +447,6 @@ const FilterSidebar: React.FC<{;
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
-
 
                 {option.label}
               </label>
@@ -576,14 +503,12 @@ const FilterSidebar: React.FC<{;
           <SelectContent>;
             <SelectItem value='all'>All Categories</SelectItem>;
 
-
         <h3 className="font-semibold mb-3">Category</h3>
         <Select value={filters.category} onValueChange={(value) => 
           onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
         }>
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
-
 
           </SelectTrigger>
           <SelectContent>
@@ -624,11 +549,9 @@ const FilterSidebar: React.FC<{;
             max={10000}
             step={50}
 
-
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
-
 
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
@@ -657,23 +580,21 @@ const FilterSidebar: React.FC<{;
             onFiltersChange({ ...filters, minRating: parseFloat(value) });
           }
 
-
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
         <Select value={filters.minRating.toString()} onValueChange={(value) => 
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
 
-
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="0">Any Rating</SelectItem>
-            <SelectItem value="1">1+ Stars</SelectItem>
-            <SelectItem value="2">2+ Stars</SelectItem>
-            <SelectItem value="3">3+ Stars</SelectItem>
-            <SelectItem value="4">4+ Stars</SelectItem>
-            <SelectItem value="4.5">4.5+ Stars</SelectItem>
+            <SelectItem value='0'>Any Rating</SelectItem>
+            <SelectItem value='1'>1+ Stars</SelectItem>
+            <SelectItem value='2'>2+ Stars</SelectItem>
+            <SelectItem value='3'>3+ Stars</SelectItem>
+            <SelectItem value='4'>4+ Stars</SelectItem>
+            <SelectItem value='4.5'>4.5+ Stars</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -714,7 +635,6 @@ const FilterSidebar: React.FC<{;
 // No Results Component;
 const NoResultsState: React.FC<{
 
-
 },
 
 // No Results Component
@@ -731,20 +651,18 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
     "Blockchain Development"
   ],
 
-
-
   return (
-    <div className="text-center py-12">
-      <div className="mb-6">
-        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
-        <h2 className="text-2xl font-semibold mb-2">No results found</h2>
-        <p className="text-muted-foreground mb-6">
-          We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
+    <div className='text-center py-12'>
+      <div className='mb-6'>
+        <Search className='mx-auto h-16 w-16 text-muted-foreground mb-4' />
+        <h2 className='text-2xl font-semibold mb-2'>No results found</h2>
+        <p className='text-muted-foreground mb-6'>
+          We couldn't find anything matching "{searchTerm}". Try adjusting your
+          search or filters.
         </p>
       </div>
 
         >          <SelectTrigger>;
-
 
       <div className="max-w-md mx-auto space-y-4">
         <div>
@@ -774,41 +692,44 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
             <SelectValue />;
           </SelectTrigger>;
           <SelectContent>;
-            <SelectItem value="0">Any Rating</SelectItem>;
-            <SelectItem value="1">1+ Stars</SelectItem>;
-            <SelectItem value="2">2+ Stars</SelectItem>;
-            <SelectItem value="3">3+ Stars</SelectItem>;
-            <SelectItem value="4">4+ Stars</SelectItem>;
-            <SelectItem value="4.5">4.5+ Stars</SelectItem>;
+            <SelectItem value='0'>Any Rating</SelectItem>;
+            <SelectItem value='1'>1+ Stars</SelectItem>;
+            <SelectItem value='2'>2+ Stars</SelectItem>;
+            <SelectItem value='3'>3+ Stars</SelectItem>;
+            <SelectItem value='4'>4+ Stars</SelectItem>;
+            <SelectItem value='4 && 4.5'>4 && 4.5+ Stars</SelectItem>;
           </SelectContent>;
         </Select>;
       </div>;
     </div>;
   );
-},;
+};
+
 // No Results Component;
-const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({;
-  searchTerm,;
-  onNewSearch;
-}) => {;
-  const suggestions = [;
-    "AI & Machine Learning",;
-    "Web Development",;
-    "Mobile App Development",;
-    "Data Analysis",;
-    "UI/UX Design",;
-    "Blockchain Development";
-  ],;
-  return (;
-    <div className="text-center py-12">;
-      <div className="mb-6">;
-        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />;
-        <h2 className="text-2xl font-semibold mb-2">No results found</h2>;
-        <p className="text-muted-foreground mb-6">;
-          We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.;
+const NoResultsState: React.FC<{;
+  searchTerm: string;
+  onNewSearch: (term: string) => void;
+}> = ({ searchTerm, onNewSearch }) => {  const suggestions = [;
+    'AI & Machine Learning',;
+    'Web Development',;
+    'Mobile App Development',;
+    'Data Analysis',;
+    'UI/UX Design',;
+    'Blockchain Development',;
+  ];
+
+  return (
+    <div className='text-center py-12'>;
+      <div className='mb-6'>;
+        <Search className='mx-auto h-16 w-16 text-muted-foreground mb-4' />;
+        <h2 className='text-2xl font-semibold mb-2'>No results found</h2>;
+        <p className='text-muted-foreground mb-6'>;
+          We couldn't find anything matching "{searchTerm}". Try adjusting your;
+          search or filters.;
         </p>;
       </div>;
-      <div className="max-w-md mx-auto space-y-4">;
+
+      <div className='max-w-md mx-auto space-y-4'>;
         <div>;
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>;
           <div className='flex flex-wrap gap-2 justify-center'>;
@@ -821,17 +742,13 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 onClick={() => onNewSearch(suggestion)}
               >;
 
-
                 {suggestion}
               </Button>;
             ))}
 
-
-
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
-
 
             <li>• Try different keywords</li>
             <li>• Check your spelling</li>
@@ -893,8 +810,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 // Main Search Results Page Component;
 export const AdvancedSearchResults: React.FC = () => {
 
-
-
 },
 
 // Main Search Results Page Component
@@ -908,9 +823,6 @@ export const AdvancedSearchResults: React.FC = () => {
   const [hasMore, setHasMore] = useState(false),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
-  
-
-
 
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
@@ -919,9 +831,8 @@ export const AdvancedSearchResults: React.FC = () => {
     maxPrice: 10000,
     minRating: 0,
 
-
   // Sync search term with URL
-  useEffect(() => {
+  useEffect((,) => {
     if (router.isReady && router.query.q) {
 
   const router = use_router ();
@@ -1059,19 +970,15 @@ if ( {) {
     }
   }
 
-
   const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
 
-
     (filters.minRating > 0 ? 1 : 0)
           </div>;
         </div>;
-        <div className="text-sm text-muted-foreground">;
-          <p>Tips for better results: </p>;
-          <ul className="mt-2 space-y-1">;
+
             <li>• Try different keywords</li>;
             <li>• Check your spelling</li>;
             <li>• Use fewer filters</li>;
@@ -1081,123 +988,24 @@ if ( {) {
       </div>;
     </div>;
   );
-},;
-// Main Search Results Page Component;
-export const AdvancedSearchResults: React.FC = () => {;
-  const router = useRouter(),;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [results, setResults] = useState<SearchResult[]>([]),;
-  const [loading, setLoading] = useState(false),;
-  const [totalCount, setTotalCount] = useState(0),;
-  const [currentPage, setCurrentPage] = useState(1),;
-  const [hasMore, setHasMore] = useState(false),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [showFilters, setShowFilters] = useState(false),;
+
   const [filters, setFilters] = useState<SearchFilters>({;
     types: [],;
     category: '',;
     minPrice: 0,;
     maxPrice: 10000,;
     minRating: 0,;
-    sort: 'relevance';
-  }),;
-  const suggestions = generateSearchSuggestions(),;
-  // Extract available categories from results for filter;
-  const availableCategories = useMemo(() => {;
-    const categories = new Set<string>(),;
-    results.forEach(result => {;
-      if (result.category) categories.add(result.category);
-    }),;
-    return Array.from(categories).sort();
-  }, [results]),;
-  // Sync search term with URL;
-  useEffect(() => {;
-    if (router.isReady && router.query.q) {;
-      const urlTerm = router.query.q as string,;
-      setSearchTerm(urlTerm);
-    }
-  }, [router.isReady, router.query.q]),;
-  // Search function;
-  const performSearch = async (term: string, page: number = 1, newFilters?: SearchFilters) => {;
-    if (!term.trim()) {;
-      setResults([]),;
-      setTotalCount(0),;
-      return;
-    }
-;
-    setLoading(true),;
-    try {;
-      const searchFilters = newFilters || filters,;
-      const params = new URLSearchParams({;
-        query: term,;
-        page: page.toString(),;
-        limit: '20';
-      }),;
-      if (searchFilters.types.length > 0) {;
-        params.append('type', searchFilters.types.join());
-      }
-      if (searchFilters.category) {;
-        params.append('category', searchFilters.category);
-      }
-      if (searchFilters.minPrice > 0) {;
-        params.append('minPrice', searchFilters.minPrice.toString());
-      }
-      if (searchFilters.maxPrice < 10000) {;
-        params.append('maxPrice', searchFilters.maxPrice.toString());
-      }
-      if (searchFilters.minRating > 0) {;
-        params.append('minRating', searchFilters.minRating.toString());
-      }
-      if (searchFilters.sort !== 'relevance') {;
-        params.append('sort', searchFilters.sort);
-      }
-;
-      const response = await fetch(`/api/search?${params}`),;
-      const data: SearchResponse = await response.json(),;
-      if (page === 1) {;
-        setResults(data.results);
-      } else {;
-        setResults(prev => [...prev, ...data.results]);
-      }
-;
-      setTotalCount(data.totalCount),;
-      setCurrentPage(data.page),;
-      setHasMore(data.hasMore),;
-      logInfo('Search completed', {;
-        term,;
-        resultCount: data.results.length,;
-        totalCount: data.totalCount;
-      });
-    } catch (error) {;
-      logErrorToProduction('Search failed', { data: error }),;
-      setResults([]),;
+
       setTotalCount(0);
     } finally {;
       setLoading(false);
     }
-  },;
-  // Search when term or filters change;
-  useEffect(() => {;
-    if (searchTerm.trim()) {;
-      performSearch(searchTerm, 1, filters),;
-      setCurrentPage(1);
-    }
-  }, [searchTerm, filters]),;
-  // Handle search input;
-  const handleSearch = (term: string) => {;
-    setSearchTerm(term),;
-    router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true });
-  },;
-  // Handle filter changes;
-  const handleFiltersChange = (newFilters: SearchFilters) => {;
-    setFilters(newFilters);
-  },;
+
   // Load more results;
   const loadMore = () => {;
     if (hasMore && !loading) {;
       performSearch(searchTerm, currentPage + 1);
     }
-  },
 
   // Active filters count
   const activeFiltersCount = filters.types.length + 
@@ -1205,26 +1013,16 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0),
 
-
-
-
-
   return (
-    <div className="container mx-auto px-4 py-6">
-      {/* Search Header */}
-      <div className="mb-6">
-        <div className="flex gap-4 mb-4">
-          <div className="flex-1">
+
             <EnhancedSearchInput
               value={searchTerm}
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion.text)}
               searchSuggestions={suggestions}
 
-
               placeholder="Search products, talent, services, and more..."
             />
-
 
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
@@ -1232,11 +1030,13 @@ export const AdvancedSearchResults: React.FC = () => {;
           </Button>
         </div>
         {searchTerm && (
-          <div className="flex items-center justify-between">
+          <div className='flex items-center justify-between'>
             <div>
-              <h1 className="text-2xl font-bold">Search Results</h1>
-              <p className="text-muted-foreground">
-                {loading ? 'Searching...' : `${totalCount} results for "${searchTerm}"`}
+              <h1 className='text-2xl font-bold'>Search Results</h1>
+              <p className='text-muted-foreground'>
+                {loading
+                  ? 'Searching...'
+                  : `${totalCount} results for "${searchTerm}"`}
               </p>
             </div>
 
@@ -1264,8 +1064,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                 value={filters.sort}
                 onValueChange={value => setFilters({ ...filters, sort: value })}
 
-
-
             <div className="flex items-center gap-2">
               {/* Sort Options */}
               <Select value={filters.sort} onValueChange={(value) => 
@@ -1274,13 +1072,12 @@ export const AdvancedSearchResults: React.FC = () => {;
                 <SelectTrigger className="w-40">
                   <SelectValue />
 
-
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="relevance">Relevance</SelectItem>
-                  <SelectItem value="price_asc">Price: Low to High</SelectItem>
-                  <SelectItem value="price_desc">Price: High to Low</SelectItem>
-                  <SelectItem value="rating">Highest Rated</SelectItem>
+                  <SelectItem value='relevance'>Relevance</SelectItem>
+                  <SelectItem value='price_asc'>Price: Low to High</SelectItem>
+                  <SelectItem value='price_desc'>Price: High to Low</SelectItem>
+                  <SelectItem value='rating'>Highest Rated</SelectItem>
                 </SelectContent>
               </Select>
               >;
@@ -1337,7 +1134,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                 </SelectContent>;
               </Select>;
 
-
                   size="sm"
                   onClick={() => setViewMode('grid')}
                 >
@@ -1349,7 +1145,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                   onClick={() => setViewMode('list')}
                 >
                   <List className="h-4 w-4" />
-
 
                 </Button>
               </div>
@@ -1421,7 +1216,6 @@ export const AdvancedSearchResults: React.FC = () => {;
 
           </div>;
 
-
         )}
 
       </div>;
@@ -1430,11 +1224,7 @@ export const AdvancedSearchResults: React.FC = () => {;
         <div className='flex gap-6'>;
 
           {/* Desktop Filters Sidebar */}
-          <div className="hidden lg:block w-64 flex-shrink-0">
-            <div className="bg-card border rounded-lg p-4 sticky top-4">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="font-semibold">Filters</h2>
-                {activeFiltersCount > 0 && (
+
                   <Button
 
                     onClick={() =>;
@@ -1456,7 +1246,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                 filters = {filters,}
                 onFiltersChange = {handleFiltersChange,}
                 availableCategories = {availableCategories,}
-
 
                     variant="ghost"
                     size="sm"
@@ -1486,6 +1275,5 @@ export const AdvancedSearchResults: React.FC = () => {;
 
                 </div>;
 
-
                 {/* Load More Button */}
-                {hasMore && (
+

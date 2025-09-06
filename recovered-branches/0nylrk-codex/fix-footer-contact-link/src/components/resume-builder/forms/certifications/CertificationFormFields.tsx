@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { UseFormReturn  } from './react - hook - form';
+import { CertificationFormValues  } from './types';
+
+interface CertificationFormFieldsProps {
+  form: UseFormReturn < CertificationFormValues>;
+}
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
+import {Input} from '@/components/ui/input';
+import {UseFormReturn} from 'react-hook-form';
+import {CertificationFormValues} from './types';
+
+interface CertificationFormFieldsProps {
+  form: UseFormReturn<CertificationFormValues>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
+import { Input } from '@/components/ui/input',;
+import { UseFormReturn } from 'react-hook-form',;
+import { CertificationFormValues } from './types';
+interface CertificationFormFieldsProps {;
+  form: UseFormReturn<CertificationFormValues>;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   FormField,
 
@@ -23,6 +53,26 @@ export function CertificationFormFields({
         <FormField
           control={form && form.control}
           name="name"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <FormItem>;
+              <FormLabel > Certification Name</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder="AWS Certified Solutions Architect, PMP, etc.";
+                  {...field}
+                <Input 
+                  type="date" 
+                  {...field}
+                  value={field.value || ''}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export /**
  * CertificationFormFields - Function description
  */
@@ -33,6 +83,71 @@ function CertificationFormFields() {
         <FormField;
           control={form.control}
           name="name";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Certification Name</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="AWS Certified Solutions Architect, PMP, etc."
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />;
+
+
+        <FormField
+          control={form && form.control}
+          name="issuing_organization"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Issuing Organization</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Amazon Web Services, PMI, etc."
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <FormField;
+=======
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Issuing Organization</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Amazon Web Services, PMI, etc."
+                  {...field}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+<<<<<<< HEAD
+=======
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <FormField
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           control={form.control}
           name="issuing_organization";
 
@@ -46,11 +161,19 @@ function CertificationFormFields() {
             </FormItem>
           )}
           control={form.control}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           name="expiration_date"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Expiration Date (Optional)</FormLabel>
               <FormControl>
+<<<<<<< HEAD
+=======
                 <Input type="date" {...field} value={field.value || ""} />
               </FormControl>
               <FormMessage />
@@ -68,6 +191,13 @@ function CertificationFormFields() {
           )}
         />;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <FormField
           control={form && form.control}
           name="expiration_date"
@@ -150,6 +280,13 @@ function CertificationFormFields() {
 }
 ;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <FormItem>
               <FormLabel>Credential URL (Optional)</FormLabel>
               <FormControl>
@@ -190,3 +327,8 @@ function CertificationFormFields() {
 }
 ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

@@ -1,18 +1,78 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+import * as React from "react"
+
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {cn} from "@/lib/utils"
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
  
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+const Breadcrumb = React.forwardRef<
+<<<<<<< HEAD
+=======
+import * as React from "react";
+import {Slot} from "@radix-ui/react-slot";
+import {ChevronRight} from "lucide-react";
+
+import {cn} from "@/lib/utils";
+
+const Breadcrumb = React && React.forwardRef<;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   HTMLElement;
   React && React.ComponentPropsWithoutRef<"nav"> & {;
     separator?: React && React.ReactNode;
   }
 >(({ className, separator, ...props }, ref) => (;
  
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
@@ -23,6 +83,51 @@ const Breadcrumb = React.forwardRef<
     ref={ref}
     aria-label="breadcrumb"
     className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "inline-flex items-center gap-1 text-sm text-zion-slate-light"
+      className
+    )}
+    {...props}
+
+  />;
+));
+Breadcrumb && Breadcrumb.displayName = "Breadcrumb";
+
+const BreadcrumbList = React && React.forwardRef<;
+
+=======
+
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { ChevronRight } from "lucide-react";
+ ;
+import { cn } from "@/lib/utils";
+ ;
+const Breadcrumb = React.forwardRef<;
+  HTMLElement,;
+  React.ComponentPropsWithoutRef<"nav"> & {;
+    separator?:React.ReactNode;  }
+>(({ className, separator, ...props }, ref) => (;
+  <nav;
+    ref={ref}
+    aria-label="breadcrumb";
+    className={cn(;
+      "inline-flex items-center gap-1 text-sm text-zion-slate-light",;
+      className;
+    )}
+    {...props}
+  />;
+));
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   HTMLOListElement;
   React && React.ComponentPropsWithoutRef<"ol">;
 >(({ className, ...props }, ref) => (;
@@ -151,26 +256,78 @@ export {
   </span>;
 );
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export {;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export {;
 export {
  
 export {;
 export {;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+  BreadcrumbEllipsis}
+
+export {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
  
 
 
   BreadcrumbEllipsis}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   BreadcrumbEllipsis}
     &#8230,;
   </span>;
@@ -202,3 +359,8 @@ return (<Comp ref= {
   BreadcrumbEllipsis}
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

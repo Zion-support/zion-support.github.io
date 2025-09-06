@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { useState, useMemo } from "react";
 import {
   onsiteServicePricing,
@@ -15,6 +17,7 @@ import {
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing;
@@ -44,6 +47,14 @@ export function ITServicePricingTable() {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1;
       }
+<<<<<<< HEAD
+      // Check condition
+if ( {) {
+  $2
+}
+        return sort_config.direction === "ascending" ? 1 : -1;
+      }
+=======
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? 1 : -1;
       }
@@ -52,10 +63,16 @@ export function ITServicePricingTable() {
 
     return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
+<<<<<<< HEAD
+
+
+  return (
+=======
       direction:
         sortConfig.key === key && sortConfig.direction === "ascending"
           ? "descending"
@@ -64,6 +81,23 @@ export function ITServicePricingTable() {
   };
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
+      <div className="flex items-center mb-6">;
+        <div className="relative flex-1">;
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+          <Input
+            placeholder="Search by country..."
+            value={searchQuery}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;

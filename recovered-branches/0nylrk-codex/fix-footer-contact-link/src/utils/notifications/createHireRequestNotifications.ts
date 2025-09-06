@@ -1,7 +1,29 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
 /**
@@ -13,14 +35,62 @@ export async function createHireRequestNotifications({;
   requesterName;
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import { createNotification } from './createNotification',
+import { HireRequestNotificationParams } from './types',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 /**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {
   const projectInfo = projectType 
     ? `${projectType} project` 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  talentId;
+  adminId;
+  requesterName;
+
+  requesterEmail
+
+  projectType;
+  projectSummary;
+  hireRequestId
+}: HireRequestNotificationParams) {
+
+  const projectInfo = projectType
+    ? `${projectType} project`
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -49,10 +119,42 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+      talentNotification,
+
+      adminNotification
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   talentId,
   adminId,
   requesterName,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      success: talentNotification.success && adminNotification.success;
+      talentNotification
+      adminNotification
+  talentId,
+  adminId,
+  requesterName,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   requesterEmail, 
   projectType,
   projectSummary,
@@ -95,6 +197,18 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
 /**;
@@ -201,11 +315,27 @@ if ( {) {
   return {
     success: talent_notification.success,
     talent_notification;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     }
   }
   return {
     success: talentNotification.success
 
     talentNotification
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }

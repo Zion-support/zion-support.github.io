@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 const SEOEnhancer.dynamic = () => {
   return (
@@ -7,4 +11,8 @@ const SEOEnhancer.dynamic = () => {
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default SEOEnhancer.dynamic;

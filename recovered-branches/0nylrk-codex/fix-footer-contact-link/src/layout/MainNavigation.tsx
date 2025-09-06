@@ -2,12 +2,32 @@ import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface MainNavigationProps {;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -27,6 +47,18 @@ interface MainNavigationProps {
   className?: string
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const { user } = useAuth();
   const isAuthenticated = !!user;
@@ -39,40 +71,180 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user,
   const location = useLocation(),
   
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const links = [
     {
       name: "Home"
       href: "/"
       matches: (path: string) => path === "/"
-    {
-      name: "Marketplace"
-      href: "/marketplace"
-      matches: (path: string) => path.startsWith("/marketplace")
-    {
-      name: "Categories"
-      href: "/categories"
-      matches: (path: string) => path.startsWith("/categories")
-    {
-      name: "Talent"
-      href: "/talent"
-      matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
-    {
-      name: "Equipment"
-      href: "/equipment"
-      matches: (path: string) => path.startsWith("/equipment")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
 
     },
 
 
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    {
+      name: "Marketplace"
+      href: "/marketplace"
+      matches: (path: string) => path.startsWith("/marketplace")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    },
+
+
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    {
+      name: "Categories"
+      href: "/categories"
+      matches: (path: string) => path.startsWith("/categories")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    },
+
+
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    {
+      name: "Talent"
+      href: "/talent"
+      matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    },
+
+
+=======
+    },
+
+
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+    {
+      name: "Equipment"
+      href: "/equipment"
+      matches: (path: string) => path.startsWith("/equipment")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    }
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+    },
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     {
       name: "Community"
       href: "/community"
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ],
   
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  ];
+  ],
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -89,6 +261,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith("/analytics")
     })
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>
       <ul className="flex items-center gap-1">
@@ -125,6 +309,24 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard";
     });
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  // Add admin-only links;
+  if (isAdmin) {;
+    links && links.push({;
+      name: "Analytics",;
+      href: "/analytics",;
+      matches: (path: string) => path && path.startsWith("/analytics");
+    });
+  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
@@ -150,15 +352,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
         ))}
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
             <Link
               to="/messages"
               className={cn(
+<<<<<<< HEAD
+=======
 
 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
@@ -167,6 +374,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -198,6 +410,17 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               {unreadCount > 0 && (;
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </span>;
               )}
             </Link>;
@@ -313,6 +536,15 @@ if ( {) {
       </ul>;
     </nav>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ),;}
  interface MainNavigationProps {
   isAdmin?: boolean;
@@ -408,3 +640,10 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
     </nav>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

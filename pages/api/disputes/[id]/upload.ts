@@ -12,7 +12,6 @@ import {
 } from "../../../../utils/fsdb";
 import {
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
@@ -39,11 +38,15 @@ export default async function handler(
 
     return res && res.status(400).json({ error: "Invalid id" });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -85,7 +88,11 @@ if ( {) {
     }
     const { files } =;
       req.body ||;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       { recursive: true }
+
       (err: any) => {
         if (return reject (err)) {
   $2
@@ -96,6 +103,7 @@ if ( {) {
       }
     );
   });
+<<<<<<< HEAD
 }
 
 }
@@ -113,6 +121,9 @@ if ( {) {
 
 }
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -138,10 +149,13 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 
 }
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
   } catch (error) {
@@ -235,3 +249,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

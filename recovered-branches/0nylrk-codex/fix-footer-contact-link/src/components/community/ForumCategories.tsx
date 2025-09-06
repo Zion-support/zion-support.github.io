@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+=======
+import {Link} from "react-router-dom";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
+import {ForumCategory, ForumCategoryInfo} from "@/types/community";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -18,6 +38,15 @@ const categories: ForumCategoryInfo[] = [
     icon: "Briefcase"
   }
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
@@ -29,6 +58,20 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Briefcase"
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
 
     id: "project-help"
@@ -37,13 +80,53 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "MessageSquare"
+<<<<<<< HEAD
   },
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+  }
+  {
+
+    id: "ai-tools"
+    name: "AI Tools Discussion"
+    description: "Discuss AI tools, frameworks, and best practices.";
+    adminOnly: false
+
+    icon: "Code"
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
     id: "ai-tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
     icon: "Code"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  },
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
 
     id: "feedback"
@@ -52,6 +135,28 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "FileText"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+  },
+
+
+=======
+  },
+
+
+  }
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   {
 
     id: "announcements"
@@ -60,6 +165,35 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {Link} from "react-router-dom";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
+import {ForumCategory, ForumCategoryInfo} from "@/types/community";
+
+=======
+
+],
+
+
+=======
+
+
+],
+
+
+];
+],
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const iconMap = {
   Briefcase,
   MessageSquare,
@@ -124,6 +258,18 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+];
+
+const iconMap = {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
@@ -198,6 +344,8 @@ export const ForumCategories = () => {;
         );
       })}
 export default ForumCategories;
+<<<<<<< HEAD
+=======
 
   Megaphone;
 }
@@ -325,3 +473,8 @@ export default ForumCategories;
 
 
 export default ForumCategories;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

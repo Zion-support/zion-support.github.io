@@ -11,6 +11,18 @@ type EnhancementType =
   | 'job-post'
   | 'proposal'
   | 'general';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   enhancementType: EnhancementType;
   content?: string;
   context?: string
@@ -29,6 +41,8 @@ type EnhancementType =;
 ;
 export interface AIEnhancementOptions {
   enhancement_type: EnhancementType;
+<<<<<<< HEAD
+=======
 
 
 export interface AIEnhancementOptions {;
@@ -44,6 +58,11 @@ export function useAIContentEnhancer() {;
 
 export interface AIEnhancementOptions {
   enhancement_type: EnhancementType;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async ({
@@ -55,6 +74,26 @@ export interface AIEnhancementOptions {
     setIsEnhancing(true);
     setError(null);
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
+        body: { 
+
+=======
+      const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
+        body: { 
+      const { data, error } = await supabase.functions.invoke('ai-content-enhancer', {
+        body: {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           content;
           enhancementType;
           context
@@ -72,6 +111,23 @@ export interface AIEnhancementOptions {
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        throw new Error(error.message)
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
@@ -110,6 +166,21 @@ export function useAIContentEnhancer() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       
       return data.enhancedContent
@@ -119,6 +190,20 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed",
         description: errorMessage,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         variant: "destructive"
       });
       console && console.error('Enhancement error:', err);
@@ -180,4 +265,126 @@ if ( {) {
     }
   }
 ;
+<<<<<<< HEAD
   }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return {
+    enhance_content;
+    is_enhancing;
+    error;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+<<<<<<< HEAD
+}
+=======
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { toast } from '@/hooks/use-toast',;
+;
+type EnhancementType = ;
+  | 'resume-summary' ;
+  | 'work-description' ;
+  | 'job-post' ;
+  | 'proposal' ;
+  | 'general',;
+;
+export interface AIEnhancementOptions {;
+  enhancementType:EnhancementType,;
+  content?:string,;
+  context?:string,;
+  instructions?:string;}
+;
+export function useAIContentEnhancer() {;
+  const [isEnhancing, setIsEnhancing] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  ;
+  const enhanceContent = async ({;
+    enhancementType,;
+    content = '',;
+    context = '',;
+    instructions = '';
+  } AIEnhancementOptions):Promise<string | null> => {;
+    setIsEnhancing(true),;
+    setError(null),;
+    ;
+    try {;
+      const { data, error } = await supabase.functions.invoke('ai-content-enhancer', {;
+        body:{ ;
+          content,;
+          enhancementType,;
+          context,;
+          instructions;
+        }
+      }),;
+      ;
+      if (error) {;
+        throw new Error(error.message),;
+      }
+      ;
+      return data.enhancedContent,;
+    } catch (err:any) {;
+      const errorMessage = err.message || 'Failed to enhance content',;
+      setError(errorMessage),;
+      toast({;
+        title:"AI Enhancement Failed",;
+        description:errorMessage,;
+        variant:"destructive";
+      }),;
+      console.error('Enhancement error:', err),;
+      return null,;
+    } finally {;
+      setIsEnhancing(false),;
+    }
+  },;
+  ;
+  return {;
+    enhanceContent,;
+    isEnhancing,;
+    error;
+  },; type EnhancementType = | 'resume-summary' | 'work-description' | 'job-post' | 'proposal' | 'general';
+}finally {
+  setIsEnhancing (false) 
+}
+};
+return {
+  enhanceContent;
+isEnhancing;
+error 
+}
+}
+
+    error
+  }
+}
+;
+      return data.enhancedContent;
+    } catch (err: any) {;
+      const errorMessage = err.message || 'Failed to enhance content',;
+      setError(errorMessage),;
+      toast({;
+        title: "AI Enhancement Failed",;
+        description: errorMessage,;
+        variant: "destructive";
+      }),;
+      console.error('Enhancement error:', err),;
+      return null;
+    } finally {;
+      setIsEnhancing(false);
+    }
+  },;
+  return {;
+    enhanceContent;
+    isEnhancing;
+    error;
+  }
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

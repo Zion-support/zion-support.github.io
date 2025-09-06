@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -7,6 +8,7 @@ import Head from 'next/head';
 <<<<<<< HEAD:pages/white-papers.tsx
 import React from 'react';
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -39,8 +41,6 @@ import React from 'react';
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-529b
 
 
 import React from 'react';
@@ -284,9 +284,12 @@ import {
   Clock,
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   Tag,
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -522,9 +525,12 @@ import {
   ArrowRight, 
   Tag, 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1292,6 +1298,8 @@ export default function WhitePapersPage() {
                 Download our comprehensive white papers on technology trends and best practices.
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               </p>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
@@ -1299,6 +1307,7 @@ export default function WhitePapersPage() {
 =======
 <<<<<<< HEAD:pages/white-papers.tsx
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -2228,9 +2237,12 @@ export default function WhitePapersPage() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </MainLayout>
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2369,6 +2381,9 @@ export default function WhitePapersPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }

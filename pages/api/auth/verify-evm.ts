@@ -13,6 +13,10 @@ export default async function handler(
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -20,6 +24,7 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {
       return res && res.status(401).json({ error: "Invalid signature" });
     }
+<<<<<<< HEAD
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
@@ -39,6 +44,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
       return res && res.status(400).json({ error: "Nonce mismatch" });
@@ -61,8 +69,11 @@ const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req, res) {
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
 
-
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from './next';
 import jwt from './jsonwebtoken';
 import { ethers  } from './ethers';
@@ -112,6 +123,10 @@ function handler() {
     return res.status (200).json ({ ok: true });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Verify failed" });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 }
 
@@ -121,6 +136,7 @@ function handler() {
   }
 }
 
+<<<<<<< HEAD
 
   }
 }
@@ -161,3 +177,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

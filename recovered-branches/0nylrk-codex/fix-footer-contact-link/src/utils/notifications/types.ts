@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+;
+=======
 export type NotificationType =
   | "message"
   | "quote_request"
@@ -5,6 +9,7 @@ export type NotificationType =
   | "hire_request"
   | "onboarding"
   | "system";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface CreateNotificationParams {
 
@@ -51,6 +56,19 @@ export interface HireRequestNotificationParams {;
   projectSummary?: string;
   hireRequestId: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   related_id?: string | null;
   send_email?: boolean;
   action_url?: string | null,
@@ -78,13 +96,59 @@ export interface OnboardingNotificationParams {
 }
 export interface SystemNotificationParams {
   user_id: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export interface OnboardingNotificationParams {;
+
+<<<<<<< HEAD
+=======
+export interface OnboardingNotificationParams {
+
+export interface OnboardingNotificationParams {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   userId: string;
   missingMilestone: string;
   userRole: "talent" | "client";
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+export interface SystemNotificationParams {;
+
+  userId: string;
+<<<<<<< HEAD
+  title: string;
+  message: string;
+
+export interface CreateNotificationParams {
+  user_id: string;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   title: string;
   message: string;
   actionUrl?: string | null;
   actionText?: string | null;
   sendEmail?: boolean;
 }
+<<<<<<< HEAD
+export interface SystemNotificationParams {
+  user_id: string;
+  title: string;
+  message: string;
+}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

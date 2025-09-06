@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react';
 
 import Head from 'next/head';
@@ -5,10 +9,13 @@ import Head from 'next/head';
 import React from 'react';
 import Head from 'next/head';
 
+<<<<<<< HEAD
 
 
 import React from 'react';
 import Head from 'next / head';
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {
   Check
   Star
@@ -307,6 +314,7 @@ import {
   enhancedRealMicroSaasServices,
   getServicesByCategory,;
   getPopularServices,;
+<<<<<<< HEAD
 } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
@@ -333,14 +341,24 @@ export default function PricingPage() {
     ...enhancedRealMicroSaasServices,
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
@@ -349,11 +367,24 @@ export default function PricingPage(req, res) {
   try {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ...enhancedRealMicroSaasServices;
     ...nextGenerationAIServices;
     ...cuttingEdgeITServices;
     ...innovativeMicroSaasV2Services;
   ];
+<<<<<<< HEAD
+=======
+
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ...innovativeMicroSaasV2Services,  ];
 
   // Enhanced service categories with pricing
@@ -372,22 +403,42 @@ export default function PricingPage(req, res) {
     {
       name: 'Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },;
     {;
       name: 'Cutting-Edge IT Infrastructure',;
       description: 'Advanced infrastructure solutions',;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },;
     {;
       name: 'Innovative Micro SaaS',;
       description: 'Creative and practical SaaS tools',;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },;
     {;
       name: 'Quantum & Space Technology',;
       description: 'Quantum computing and space solutions',;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },;
     {;
       name: 'Enterprise IT Services',;
       description: 'Comprehensive enterprise solutions',;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         'Zero Trust Architecture',
         'Edge Computing Orchestration',
         '5G Private Networks',
@@ -425,6 +476,7 @@ export default function PricingPage(req, res) {
       savings: 'Save 45-65% vs. competitors',
     },  ];
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -446,6 +498,8 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
     {;
       name: 'Enterprise IT Services',;
       description: 'Comprehensive enterprise solutions',;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -455,6 +509,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
       period: billingCycle === "monthly" ? "/month" : "/month",
       savings: billingCycle === "yearly" ? "Save 20%" : "",
       features: [
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       ],
       icon: <Sparkles className='w - 8 h - 8' />,
       variant: 'quantum' as const,
@@ -609,6 +667,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
       description: 'Bank - level security with 99.99% uptime',
       icon: <Shield className='w - 8 h - 8' />,
       metric: '99.99%',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
@@ -624,6 +686,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           name='keywords'
           content='pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing'
         />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -637,8 +703,12 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
         <meta property='og:url' content='https://ziontechgroup.com/pricing' />
         <meta
           property='og:image'
+<<<<<<< HEAD
           content='https://ziontechgroup.com/og-image.jpg'
         />
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -651,6 +721,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
         />
         <meta
           name='twitter:image'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           content='https://ziontechgroup.com/og-image.jpg'
         />
       </Head>
@@ -707,6 +781,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
             generous free trials and access to our revolutionary AI & quantum
             computing services.
           </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <meta;
           name='description';
           content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49 / month), Professional ($149 / month), or Enterprise ($499 / month) plans with generous free trials.';
@@ -768,6 +846,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
             </p>
 
             <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>;
             <span
@@ -776,6 +858,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
             </span>;
             <button
 
+<<<<<<< HEAD
 
               href="/comprehensive-pricing-2026"
               variant="primary"
@@ -794,21 +877,38 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
               Monthly
             </span>
             <button
+=======
+              Monthly
+            </span>
+            <button
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               onClick={() =>
                 setBillingCycle(
                   billingCycle === 'monthly' ? 'yearly' : 'monthly'
                 )
               }
+<<<<<<< HEAD
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
+=======
+
+              <span
+                className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
             >
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
+<<<<<<< HEAD
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             </span>
           </div>
         </div>
@@ -817,6 +917,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 variant={tier && tier.variant}
                 interactive={true}
 
+<<<<<<< HEAD
 
               <UltraFuturisticCard
                 key={tier && tier.name}
@@ -824,6 +925,8 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 interactive={true}
                 )}
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {/* New 2026 Pricing Link */}
           <div className='mb - 8 p - 6 bg - gradient - to - r from - purple - 800 / 60 to - pink - 800 / 60 border border - purple - 700 / 50 rounded - 2xl max - w-4xl mx - auto'>;
             <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -878,23 +981,38 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 key={tier.name}
                 variant={tier.variant}
                 interactive={true}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 glow_intensity={tier.popular ? 'high' : 'medium'}
                 className={`relative h - full ${tier.popular ? 'scale - 105' : ''}`}
               >;
                 {tier.popular && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {tier.savings && (
                       <div className='text - green - 400 text - sm mt - 2'>;
                         {tier.savings}
 
+<<<<<<< HEAD
 
 
 
                 glowIntensity={tier.popular ? "high" : "medium"}
                 className={`relative h-full ${tier.popular ? "scale-105" : ""}`}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <p className="text-gray-300 mb-6">{tier.description}</p>
                   <div className="mb-6">
                     <div className="flex items-baseline justify-center">
@@ -905,7 +1023,6 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                       </span>;
                     </div>;
 
-
                     </div>
                     {tier.savings && (
                       <div className="text-green-400 text-sm mt-2">
@@ -915,12 +1032,15 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                   </div>
 
                   <ul className="text-left space-y-3 mb-8">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className='flex items-start'>
                         <Check className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
                         <span className='text-gray-300'>{feature}</span>
                       </li>
-
 
                 <div className='text-center p-8'>;
                   <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>;
@@ -955,12 +1075,18 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                         <Check className='w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0' />;
                         <span className='text-gray-300'>{feature}</span>;
                       </li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     ))}
                   </ul>;
 
-
-
                   <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -983,11 +1109,19 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                   >
                     {tier.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     size="lg"
                     className="w-full"
 
                   >
                     {tier.cta}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </Button>
                 </div>
               </UltraFuturisticCard>
@@ -997,7 +1131,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           </div>;
         </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* Value Propositions */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
@@ -1005,8 +1142,11 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map((proposition, index) => (;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   >
                     {tier.cta}
                     <ArrowRight className='ml-2 w-5 h-5' />                  </Button>
@@ -1024,7 +1164,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valuePropositions.map((proposition, index) => (
               <UltraFuturisticCard
+<<<<<<< HEAD
             ))}
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 key={index  } catch (error) {
     console.error("Error:", error);
@@ -1073,15 +1216,23 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{proposition.metric}</div>
                 <div className="text-sm text-gray-400">{proposition.detail}</div>
               </UltraFuturisticCard>
+<<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </div>;
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       </div>)}
                   </div>;
                   <ul className='text - left space - y-3 mb - 8'>;
@@ -1140,6 +1291,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {serviceCategoryPricing.map ((category, index) => (
               <UltraFuturisticCard;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 key={index}
                 variant={
                   index % 3 === 0;
@@ -1180,9 +1335,6 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                     </li>;
                   ))}
 
-
-
-
                 </ul>
                 </ul>;
 
@@ -1200,16 +1352,28 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="p-6"
               >
                 <div className="flex items-center mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white">{category.category}</h3>
                     <div className="text-cyan-400 font-semibold">{category.startingPrice}</div>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {category.services.map((service, idx) => (
                     <li
                       key={idx}
@@ -1219,6 +1383,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                       {service}
                     </li>
                   ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <ul className="space-y-2 mb-4">
                   {category.services.map((service, idx) => (
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
@@ -1226,6 +1394,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                       {service}
                     </li>
                   ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 </ul>
                 
                 <Button
@@ -1237,6 +1409,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                   Explore Services
                 </Button>
 
+<<<<<<< HEAD
                 </ul>
                 
                 <Button
@@ -1246,6 +1419,8 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                   className="w-full"
                 >
                   Explore Services
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             ))}
           </div>
         </div>
@@ -1254,6 +1429,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
             Popular Services Pricing
           </h2>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1269,13 +1448,24 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
             Popular Services Pricing;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map((service, index) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularServices.slice(0, 6).map((service, index) => (
 
+<<<<<<< HEAD
 
               <UltraFuturisticCard
+=======
+              <UltraFuturisticCard
+
+              <UltraFuturisticCard
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1298,14 +1488,26 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 key={service.id}
                 variant={service.variant as any}
                 interactive={true}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 className="p-6"
               >
                 <div className="text-center mb-4">
                   <div className="text-3xl mb-3">{service.icon}</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.category}</div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     Key Features:
                   </div>
                   <ul className="text-xs text-gray-300 space-y-1">
@@ -1319,6 +1521,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 </div>
                 <Button
                   href={service.link}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <div className="mb-4">
                   <div className="text-xs text-gray-400 mb-2">Key Features:</div>
                   <ul className="text-xs text-gray-300 space-y-1">
@@ -1333,10 +1539,13 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                   </ul>;
                 </div>;
 
+<<<<<<< HEAD
 
                     ))}
                   </ul>;
                 </div>;
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button
                   href={service && service.link}
                   variant='primary'
@@ -1345,13 +1554,18 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                   Learn More;
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <Button
                   href={service.link}
                   variant="primary"
                   size="sm"
                   className="w-full"
 
+<<<<<<< HEAD
 
 
                 >
@@ -1359,6 +1573,11 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                   <ExternalLink className="ml-2 w-4 h-4" />
                 </Button>
               </UltraFuturisticCard>
+=======
+                </Button>
+              </UltraFuturisticCard>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             ))}
           </div>
         </div>
@@ -1368,6 +1587,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 trial.
               </p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Can I change my plan later?
               </h3>
               <p className='text-gray-300'>
@@ -1376,6 +1599,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 adjustments.
               </p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 What support is included?
               </h3>
               <p className='text-gray-300'>
@@ -1383,11 +1610,19 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 plans include priority support with dedicated account managers.
               </p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 Is there a setup fee?
               </h3>
               <p className='text-gray-300'>
                 No setup fees for any plan. All services are designed for
                 instant deployment with our AI-powered setup wizards.
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 {contactInfo.address}
               </p>
               <p className="text-gray-400 text-sm mt-2">
@@ -1424,8 +1659,12 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
           </div>
         </div>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
             <UltraFuturisticCard variant="quantum" className="p-6">
@@ -1447,6 +1686,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
           </div>
         </div>
         {/* Contact Information */}
@@ -1482,6 +1722,9 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
         </div>
           </div>
         </div>
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
         </div>;
 
@@ -1571,6 +1814,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
               <p className='text-gray-400 text-sm mt-2'>Global operations</p>            </UltraFuturisticCard>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1592,6 +1839,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
               Ready to Get Started?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>
@@ -1602,6 +1853,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <Button
                 href='/services'
                 variant='primary'
@@ -1611,6 +1866,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
                 <Play className='ml-2 w-5 h-5' />;
               </Button>;
               <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <p>
                 ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant
                 Setup
@@ -1621,15 +1880,23 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
             </div>
               </p>{" "}
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </UltraFuturisticCard>
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
             <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
   );
 
     </UltraFuturisticBackground>
   )
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
         <div className="mb-20">;
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>;
@@ -1696,7 +1963,6 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">;
 
-
                 className='text-lg px-8 py-4'>;
                 Contact Sales;
                 <MessageSquare className='ml-2 w-5 h-5' />;
@@ -1733,19 +1999,20 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
           </UltraFuturisticCard>;
         </div>;
       </div>;
+<<<<<<< HEAD
   );
   );
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
-
-
 
     </UltraFuturisticBackground>
 
 }
 
-
-
     </UltraFuturisticBackground>
+<<<<<<< HEAD
   );
 }
   )
@@ -1763,14 +2030,18 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
     </UltraFuturisticBackground>
   )
 }
-ursor/integrate-build-improve-and-re-verify-b76c
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-origin/cursor/integrate-build-improve-and-re-verify-242d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
-origin/main
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
+=======
+
   );
 }
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+ursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+  );
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

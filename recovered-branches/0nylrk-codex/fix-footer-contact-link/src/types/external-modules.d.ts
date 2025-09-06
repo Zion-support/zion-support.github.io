@@ -1,9 +1,65 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+declare module '@tanstack/react-query';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+declare module "@radix - ui / react - hover - card";
+declare module "input - otp";
+declare module "react - markdown";
+declare module "@radix - ui / react - menubar";
+declare module "@radix - ui / react - navigation - menu";
+declare module "react - resizable - panels";
+declare module "@radix - ui / react - toggle - group";
+declare module "@radix - ui / react - toggle";
+;
+declare module '@tanstack / react - query';
+declare module 'react - day - picker' {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 declare module '@tanstack/react-query';
 
   export interface DateRange {
     from?: Date;
     to?: Date;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+declare module "cmdk",;
+declare module "@radix-ui/react-context-menu",;
+declare module "vaul",;
+declare module "@radix-ui/react-hover-card",;
+declare module "input-otp",;
+declare module "react-markdown",;
+declare module "@radix-ui/react-menubar",;
+declare module "@radix-ui/react-navigation-menu",;
+declare module "react-resizable-panels",;
+declare module "@radix-ui/react-toggle-group",;
+declare module "@radix-ui/react-toggle",;
+;
+declare module '@tanstack/react-query',;
+declare module 'react-day-picker' {;
+  export interface DateRange {;
+    from?:Date,;
+    to?:Date,;
+  }
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;
   // TypeScript compiler can understand the imports without requiring the real;
@@ -11,6 +67,11 @@ declare module '@tanstack/react-query';
 }
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -22,12 +83,32 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
 declare module "vaul",;
@@ -44,6 +125,20 @@ declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
     to?: Date;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 
 declare module 'sonner';
@@ -55,6 +150,12 @@ import {FC, SVGProps} from 'react';
   export interface DateRange {;
     from?: Date;
     to?: Date
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   // Minimal placeholder for the DayPicker component used in the app
   // The actual library provides full typings but we stub them here so the
@@ -62,10 +163,41 @@ import {FC, SVGProps} from 'react';
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   export const DayPicker: any
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 declare module 'sonner';
 declare module 'lucide-react' {
 
 import {FC, SVGProps} from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  export type LucideProps = SVGProps < SVGSVGElement>;
+  export type LucideIcon = FC < LucideProps>;
+;
+
+=======
+  export type LucideProps = SVGProps<SVGSVGElement>;
+  export type LucideIcon = FC<LucideProps>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   export const AlertCircle: LucideIcon;
   export const AlertTriangle: LucideIcon;
   export const Apple: LucideIcon;
@@ -312,6 +444,28 @@ declare module 'i18next - browser - languagedetector';
 declare module 'react - helmet - async';
 declare module 'react - hook - form' {
   import type { ComponentType, ReactElement, ReactNode } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+;
+  // Minimal generic typings to satisfy local usage without full type defs;
+  export type FieldValues = Record < string, any>;
+  export type FieldPath < TFieldValues extends FieldValues> =;
+    keyof TFieldValues & string;
+  export type Control < TFieldValues extends FieldValues = FieldValues> = any;
+  export interface UseFormReturn<;
+
+=======
+
+
+  export interface UseFormReturn<;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     TFieldValues extends FieldValues = FieldValues;
   > {
     control: Control < TFieldValues>;
@@ -377,6 +531,12 @@ declare module 'react-hook-form' {
   export type FieldPath<TFieldValues extends FieldValues> =
     keyof TFieldValues & string
   export type Control<TFieldValues extends FieldValues = FieldValues> = any
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   export interface UseFormReturn<
 
   export interface UseFormReturn<;
@@ -395,6 +555,16 @@ declare module 'react-hook-form' {
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
   export interface ControllerProps<
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   export function useForm<;
     TFieldValues extends FieldValues = FieldValues;
@@ -404,6 +574,22 @@ declare module 'react-hook-form' {
   >(options: any): any
 
   export interface ControllerProps<;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+    TFieldValues extends FieldValues = FieldValues;
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
   > {
@@ -740,6 +926,13 @@ declare module 'react-hook-form' {;
     form_state: any;
     [key: string]: any;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   export function use_form<;
     TFieldValues extends FieldValues = FieldValues;
   >(options?: any): UseFormReturn < TFieldValues>;
@@ -749,6 +942,16 @@ declare module 'react-hook-form' {;
   export interface ControllerProps<;
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath < TFieldValues> = FieldPath < TFieldValues>,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   > {
     name: TName;
     control?: Control < TFieldValues>;
@@ -756,6 +959,20 @@ declare module 'react-hook-form' {;
     default_value?: any;
     render: (props: any) => ReactElement;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  export const Controller: ComponentType < ControllerProps < any, any>>;
+  export interface FormProviderProps<;
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   export const Controller: ComponentType<ControllerProps<any, any>>
 
 
@@ -763,11 +980,31 @@ declare module 'react-hook-form' {;
 
   export const Controller: ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode;
     [key: string]: any;
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+declare module 'react - i18next';
+declare module 'react-dom / client';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   export const FormProvider: ComponentType < FormProviderProps < any>>;
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
@@ -1114,3 +1351,8 @@ declare module 'tailwind-merge';
 }
 declare module 'react - i18next';
 declare module 'react-dom / client';
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

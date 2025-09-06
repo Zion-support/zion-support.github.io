@@ -1,14 +1,22 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export { default as StarRating } from './StarRating',
 export { default as ReviewForm } from './ReviewForm',
 export { default as ReviewCard } from './ReviewCard',
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export { default as StarRating } from './StarRating',;
 export { default as ReviewForm } from './ReviewForm',;
 export { default as ReviewCard } from './ReviewCard',;
 
 export { default as ReviewSummary } from './ReviewSummary';
+<<<<<<< HEAD
 export { default as ReviewSummary } from './ReviewSummary';
 export { default as StarRating } from './StarRating',;
 export { default as ReviewForm } from './ReviewForm',;
@@ -22,3 +30,6 @@ export { default as ReviewForm } from './ReviewForm',;
 export { default as ReviewCard } from './ReviewCard',;
 export { default as ReviewSummary } from './ReviewSummary';
 export { default as ReviewSummary } from './ReviewSummary';
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

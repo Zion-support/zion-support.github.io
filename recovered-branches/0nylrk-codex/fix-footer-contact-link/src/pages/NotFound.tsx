@@ -1,7 +1,17 @@
+<<<<<<< HEAD
+
+import {useLocation} from "react-router-dom";
+import {useEffect} from "react";
+const NotFound = () => {
+  const location = useLocation();
+import { useLocation } from "react-router-dom",
+import { useEffect } from "react",
+=======
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 const NotFound = () => {
   const location = useLocation();
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 import { useLocation } from "react-router-dom",
@@ -10,6 +20,29 @@ import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const NotFound = () => {
+  const location = useLocation(),
+
+  useEffect(() => {
+    console.error(
+      "404 Error: User attempted to access non-existent route:"
+      location.pathname
+    )
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+const NotFound = () => {
+  const location = useLocation(),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const NotFound = () => {
   const location = useLocation(),
 
@@ -26,6 +59,18 @@ const NotFound = () => {
     );
   }, [location.pathname]);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  }, [location.pathname]);
+  }, [location.pathname]),
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="text-center">
@@ -33,6 +78,19 @@ const NotFound = () => {
         <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
         <a href="/" className="text-blue-500 hover: text-blue-700 underline">
           Return to Home
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </Link>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        </a>
+=======
+        </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       </div>
     </div>
   );
@@ -63,6 +121,16 @@ const NotFound = () =>: any {
 }
 ;
 export default NotFound;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 },;
 ;export default NotFound,
  const NotFound = () => {
@@ -75,3 +143,10 @@ location.pathname)
 export default NotFound;
 },;
 export default NotFound;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

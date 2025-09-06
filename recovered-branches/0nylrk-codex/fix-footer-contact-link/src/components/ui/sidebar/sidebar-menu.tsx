@@ -2,28 +2,78 @@ import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
+  icon?: React && React.ReactNode;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   active?: boolean;
   href?: string;
   target?: string;
   badge?: React && React.ReactNode;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { forwardRef } from "react",
 import { ChevronDown } from "lucide-react",
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   active?: boolean;
   href?: string;
   target?: string;
   badge?: React && React.ReactNode;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
   href?: string,
   target?: string,
   badge?: React.ReactNode
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -34,6 +84,19 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,;
   target?: string,;
   badge?: React.ReactNode;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
@@ -61,10 +124,56 @@ if ( {) {
           href={href}
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
+            active && "bg-accent font-medium text-accent-foreground",
+
+            className
+          )}>;
+=======
+=======
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
+            active && "bg-accent font-medium text-accent-foreground",
+
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
+            active && "bg-accent font-medium text-accent-foreground",
+            className
+          )}>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
             active && "bg-accent font-medium text-accent-foreground",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+
+const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
+  ({ icon, active, children, href, target, badge, className, ...props }, ref) => {
+    if (href) {
+      return (
+        <a
+          href={href}
+          target={target}
+          rel={target === "_blank" ? "noopener noreferrer" : undefined}
+          className={cn(
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
+            active && "bg-accent font-medium text-accent-foreground"
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
+            active && "bg-accent font-medium text-accent-foreground",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             className
           )}
         >
@@ -75,6 +184,22 @@ if ( {) {
           {badge && <span>{badge}</span>}
         </a>
       )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(;
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;
@@ -82,6 +207,17 @@ if ( {) {
             className;
           )}
         >;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            className
+          )}>;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
@@ -113,6 +249,11 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
           <div className="flex items-center gap-2">;            {icon && <span className="text-muted-foreground">{icon}</span>}
             className
           )}>;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           <div className="flex items-center gap-2">;
             {icon && <span className="text-muted-foreground">{icon}</span>}
             <span>{children}</span>;
@@ -138,10 +279,29 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
     return (
       <button;
         ref={ref}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
+          active && "bg-accent font-medium text-accent-foreground",
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
           active && "bg-accent font-medium text-accent-foreground",
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           className
         )}
         {...props}>;
@@ -167,6 +327,41 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
         </div>;
         {badge && <span>{badge}</span>}
       </button>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    );
+  }
+
+<<<<<<< HEAD
+SidebarMenuItem.displayName = "SidebarMenuItem",
+
+=======
+
+=======
+
+
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
+          active && "bg-accent font-medium text-accent-foreground"
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
+          active && "bg-accent font-medium text-accent-foreground",
+          className
+        )}
+        {...props}
+      >
+        <div className="flex items-center gap-2">
+          {icon && <span className="text-muted-foreground">{icon}</span>}
+          <span>{children}</span>
+        </div>
+        {badge && <span>{badge}</span>}
+      </button>
+    )
+  }
+);
+SidebarMenuItem.displayName = "SidebarMenuItem";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ),
 ),
 
@@ -180,6 +375,11 @@ SidebarMenuItem.displayName = "SidebarMenuItem",
 
 SidebarMenuItem.displayName = "SidebarMenuItem",
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   children: React.ReactNode
@@ -191,10 +391,40 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+}
+export { SidebarMenuItem, SidebarMenuGroup }
+
+},
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export { SidebarMenuItem, SidebarMenuGroup },
 ),;
 SidebarMenuItem.displayName = "SidebarMenuItem",;
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
 
 interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
@@ -203,10 +433,46 @@ interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivEle
 }
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {;
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    ),;
+  }
+),;
+;
+SidebarMenuItem.displayName = "SidebarMenuItem",;
+;
+interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
+  title:string,;
+  children:React.ReactNode;
+}
+;
+const SidebarMenuGroup:React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {;
+  return (;
+  title: string,;
+  children: React.ReactNode;
+}
+;
+const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {;
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     <div className="space-y-1" {...props}>;
       <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>;
       <div className="pl-2">{children}</div>;
     </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
 
 );
@@ -247,6 +513,17 @@ export { SidebarMenuItem, SidebarMenuGroup }
 },
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export { SidebarMenuItem, SidebarMenuGroup };
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export { SidebarMenuItem, SidebarMenuGroup };
   ),;
 },;
@@ -297,3 +574,8 @@ className)
 },;
 export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup };
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

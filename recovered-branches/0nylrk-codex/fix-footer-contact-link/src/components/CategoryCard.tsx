@@ -1,17 +1,52 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { ReactNode } from "react";
 import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
 import { slugify } from "@/lib/slugify",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface CategoryCardProps {
 
   title: string
@@ -23,6 +58,21 @@ interface CategoryCardProps {
    * accent colour is used. Previously this prop was ignored which meant
    * callers could not customise the icon colour as intended.
    */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { ReactNode } from "react";
+import {cn} from "@/lib/utils";
+import {slugify} from "@/lib/slugify";
+import {Link} from "react-router-dom";
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   color?: string,
   count?: number,
   className?: string
@@ -32,12 +82,41 @@ export function CategoryCard({ title, description, icon, color, count, className
   // Create a URL-friendly slug from the category title
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  // Create a URL-friendly slug from the category title;
+  const slug = slugify(title);
+  // Create a URL-friendly slug from the category title
+  const slug = slugify(title),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const slug = slugify(title);
   return (
     <Link
       to={`/category/${slug}`}
       className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+
+=======
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className
       )}
     >
@@ -49,6 +128,16 @@ import React, { ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { slugify } from "@/lib/slugify",;
 import { Link } from "react-router-dom",;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface CategoryCardProps {;
   title: string,;
   description: string,;
@@ -58,6 +147,17 @@ interface CategoryCardProps {;
    * accent colour is used. Previously this prop was ignored which meant;
    * callers could not customise the icon colour as intended.;
    */;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   color?: string;
   count?: number;
   className?: string;
@@ -72,6 +172,20 @@ interface CategoryCardProps {;
       )}>;
       <div
         className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          "mb-4 p-3 bg-zion-blue-dark rounded-full"
+
+          !color && "text-zion-cyan"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         )}
         className={cn (
           "mb - 4 p - 3 bg - zion - blue - dark rounded - full";
@@ -85,6 +199,14 @@ interface CategoryCardProps {;
       {count !== undefined && (
         <div className="mt - 3 text - sm text - zion - cyan">{count} listings</div>)}
     </Link>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           "mb-4 p-3 bg-zion-blue-dark rounded-full"
           !color && "text-zion-cyan"
         )}
@@ -151,4 +273,11 @@ icon: ReactNode | string;
       )}
     </Link>
   )
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }

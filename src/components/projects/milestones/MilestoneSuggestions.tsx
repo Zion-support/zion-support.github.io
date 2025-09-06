@@ -1,19 +1,11 @@
 interface MilestoneSuggestionsProps {
-  projectName: string;
-  scopeSummary: string;
-  startDate: Date; import React, { useState } from 'react'
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator'
-import { Loader2, Sparkles, Check } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
-interface MilestoneSuggestionsProps {
 
+interface MilestoneSuggestionsProps {
 
   endDate?: Date;
   projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
-
-
 
 export function MilestoneSuggestions({
 import React, { useState } from 'react';
@@ -27,8 +19,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles, Check } from 'lucide-react';import { Badge } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 
-
-
 interface MilestoneSuggestionsProps {;
   projectName: string;
   scopeSummary: string;
@@ -36,7 +26,6 @@ interface MilestoneSuggestionsProps {;
 import { Button } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-
 
 }
 
@@ -82,17 +71,13 @@ export function MilestoneSuggestions(): any ({;
 }: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),
   const [ showSuggestions, setShowSuggestions ] = useState(false),
 
-
       }
     }
   };
 
-
-
       return format (parseISO (date_string), 'MMM dd, yyyy');
       return date_string;
     }
-  },
 
   return (
 
@@ -103,10 +88,6 @@ export function MilestoneSuggestions(): any ({;
       return dateString
     }
   };
-
-
-
-
 
 }
 
@@ -119,22 +100,16 @@ export function MilestoneSuggestions({
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
 
-
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
 
-
-
-
-
   return (
     <div className="space-y-4">
       {!showSuggestions && (
         <Button
-
 
           variant="outline"
           onClick={handleGenerateMilestones}
@@ -145,8 +120,6 @@ export function MilestoneSuggestions({
           {isGenerating ? (
             <>
 
-
-
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Generating milestones...
             </>
@@ -154,8 +127,6 @@ export function MilestoneSuggestions({
             <>
 
               <Sparkles className="mr-2 h-4 w-4" />
-
-
 
               Suggest Project Milestones with AI
             </>
@@ -185,14 +156,11 @@ export function MilestoneSuggestions({
               Suggest Project Milestones with AI;
             </>;
 
-
           )}
         </Button>
       )}
 
           <CardHeader className="pb-3">
-
-
 
             <CardTitle className="text-lg flex items-center">
               <Sparkles className="h-5 w-5 mr-2 text-primary" />
@@ -201,7 +169,6 @@ export function MilestoneSuggestions({
           </CardHeader>
           <CardContent>
 
-
             <div className="space-y-3">
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
@@ -210,11 +177,10 @@ export function MilestoneSuggestions({
                       {milestone.title}
                       <Badge variant="secondary" className="ml-2 text-xs">
 
-
                         AI Suggested
                       </Badge>
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className='text-sm text-muted-foreground'>
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>
@@ -234,7 +200,6 @@ export function MilestoneSuggestions({
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>
-
 
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
                   <div className="flex justify-between items-center mt-2 text-sm">
@@ -243,13 +208,7 @@ export function MilestoneSuggestions({
                 </div>
               ))}
 
-
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
-
-
-
-
-
 
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
@@ -258,7 +217,6 @@ export function MilestoneSuggestions({
           </CardContent>
         </Card>
       )}
-
 
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
         <Card>;

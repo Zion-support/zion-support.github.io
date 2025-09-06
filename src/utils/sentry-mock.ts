@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -6,6 +11,10 @@ const mockSentry = {
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
@@ -28,6 +37,10 @@ const mockSentry = {
 
         next(),
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -106,11 +119,8 @@ const mockSentry = {;
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor() {}
 
-
     },
   },
-
-
 
   // Transport
   makeBrowserOfflineTransport: noopReturn,
@@ -238,18 +248,13 @@ export const createTransport = mockSentry && mockSentry.createTransport;
 export const SDK_VERSION = mockSentry && mockSentry.SDK_VERSION;
 export const Severity = mockSentry && mockSentry.Severity;
 
-
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
 
-
-
   // Browser-specific methods
 
   onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
-  
-
 
 // Additional exports for compatibility;
 export { mockSentry as Sentry };
@@ -335,4 +340,8 @@ export const SDK_VERSION = mock_sentry.SDK_VERSION;
 export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
+<<<<<<< HEAD
 // All exports are already defined above;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

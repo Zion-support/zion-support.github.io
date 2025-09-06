@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -11,6 +15,7 @@ export default async function handler(
     return res && res.status(405).json({ error: "Method not allowed" });
 
   }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
@@ -51,6 +56,9 @@ export default async function handler(
   if (!fraudId |!action) {
     return res.status(400).json({ error: "Missing fraudId or action" });
 
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
@@ -66,7 +74,6 @@ export default async function handler(
     adminId
     timestamp: new Date().toISOString()
   };
-
 
 }
 
@@ -94,11 +101,14 @@ function ensureAdmin(req: NextApiRequest): boolean {;
   }
 }
 
+<<<<<<< HEAD
 
 
   store.addAdminAction(adminAction);
 
 }
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
@@ -166,3 +176,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

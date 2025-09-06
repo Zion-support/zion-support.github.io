@@ -1,14 +1,18 @@
+<<<<<<< HEAD
+=======
+
+
+import React from 'react'
+}
+import React, { Suspense, lazy } from 'react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface LazyComponentProps {
   children: ReactNode;
   fallback?: ReactNode;
-}
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  children, 
-  fallback = <LoadingSpinner /> 
-}) => {
   return (
+<<<<<<< HEAD
     <Suspense fallback={fallback}>
       {children}
     </Suspense>
@@ -16,3 +20,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 };
 
 export default LazyComponent;
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

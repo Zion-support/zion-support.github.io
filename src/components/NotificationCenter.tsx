@@ -1,8 +1,3 @@
-unreadCount, ;
-    markAsRead, ;
-
-  const handleFilterChange = (newFilter: FilterType,) => {;
-
 
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
@@ -23,7 +18,6 @@ export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
 
-
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -38,8 +32,6 @@ export const NotificationCenter: React.FC = () => {
   const [error, setError] = useState<string | null>(null),
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
-
-
 
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
@@ -58,12 +50,8 @@ export const NotificationCenter: React.FC = () => {
     }
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
-    setFilter(newFilter as any);
-  };
 
   return (
-
-
 
           )}
 
@@ -78,18 +66,13 @@ export const NotificationCenter: React.FC = () => {
         <NotificationFilter
           filter = {filter as FilterType,}
           onFilterChange = {handleFilterChange,}
-        />;
 
-
-        <NotificationList
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
           onMarkAsRead = {markAsRead,}
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
-
-        />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
@@ -130,4 +113,3 @@ export const NotificationCenter: React.FC = () => {
 },
 ;
 
-        <NotificationHeader

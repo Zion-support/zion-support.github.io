@@ -1,76 +1,55 @@
+
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './components/ThemeProvider';
 import ErrorBoundary from './components/ErrorBoundary';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ToastContainer from './components/ToastContainer';
+import { ThemeProvider } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-
-// Pages
-import Home from './pages/Home';
+import BackToTop from './components/BackToTop';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Home from './pages/Home';
 import Pricing from './pages/Pricing';
-import NotFound from './pages/NotFound';
-
-// Service Pages
-import AIServices from './pages/AIServices';
-import ITServices from './pages/ITServices';
-import MicroSaaS from './pages/MicroSaaS';
-import Cybersecurity from './pages/Cybersecurity';
-import CloudMigration from './pages/CloudMigration';
-import MobileDevelopment from './pages/MobileDevelopment';
-
-// Additional Pages
-import FAQ from './pages/FAQ';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Support from './pages/Support';
 
 function App() {
   return (
+
+import React, { Suspense, lazy } from 'react';
+import Footer from './components/Footer';
+// Enhanced Components
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+// Lazy load pages for better performance - only import existing pages
+const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
+// Service Pages
+  return (
     <ErrorBoundary>
-      <HelmetProvider>
-        <ThemeProvider>
-          <AccessibilityEnhancer>
-            <Router>
-              <ScrollToTop />
-              <PerformanceMonitor />
-              <div className="min-h-screen bg-background text-foreground" id="main-content">
-                <Routes>
-                  {/* Main Routes */}
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/services" element={<Services />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/pricing" element={<Pricing />} />
-                  
-                  {/* Service Routes */}
-                  <Route path="/services/ai-services" element={<AIServices />} />
-                  <Route path="/services/it-services" element={<ITServices />} />
-                  <Route path="/services/micro-saas" element={<MicroSaaS />} />
-                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                  <Route path="/services/cloud-solutions" element={<CloudMigration />} />
-                  <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-                  
-                  {/* Additional Routes */}
-                  <Route path="/faq" element={<FAQ />} />
-                  <Route path="/privacy" element={<Privacy />} />
-                  <Route path="/terms" element={<Terms />} />
-                  <Route path="/support" element={<Support />} />
-                  
-                  {/* 404 Route */}
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </ThemeProvider>
-      </HelmetProvider>
-    </ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <Header />
+          <Sidebar />
+          <main className="flex-1 lg:ml-80">
+            <Suspense fallback={<LoadingSpinner />}>
+
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/pricing" element={<Pricing />} />
+              </Routes>
+            </main>
+            <Footer />
+            <ToastContainer />
+            <BackToTop />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </ThemeProvider>
   );
 }
 
-export default App;

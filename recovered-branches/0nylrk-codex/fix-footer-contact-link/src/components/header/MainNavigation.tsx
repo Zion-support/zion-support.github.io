@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Link} from 'react-router-dom';
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
@@ -8,12 +18,33 @@ import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+import React from 'react';
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Link  } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {Link} from 'react-router-dom';
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
@@ -23,10 +54,28 @@ import { NavLink } from './react-router-dom';
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface MainNavigationProps {
   className?: string
 }
@@ -38,11 +87,43 @@ interface MainNavigationProps {
   class_name?: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {Link} from 'react-router-dom';
+import {cn} from "@/lib/utils";
+import {NavLink} from "react-router-dom";
+interface MainNavigationProps {;
+  className?: string;
+}
+
+export function MainNavigation(): any ({ className }: MainNavigationProps) {;
+  return (
+    <nav className={cn("hidden md:flex items-center space-x-6", className)}>;
+      <NavLink
+        to="/"
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         className={({ isActive }) =>;
           cn(;
             "text-sm font-medium transition-colors hover: text-primary",;
             isActive ? "text-zion-cyan" : "text-muted-foreground";
           );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export /**
  * MainNavigation - Function description
  */
@@ -132,6 +213,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
     </nav>);
 }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             "text-sm font-medium transition-colors hover:text-primary",
 
 
@@ -172,6 +254,25 @@ export function MainNavigation({ className } MainNavigationProps) {;
         to="/partners"
         className={({ isActive }) =>
           cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            "text-sm font-medium transition-colors hover:text-primary",
+
+=======
+            "text-sm font-medium transition-colors hover:text-primary",
+
+            "text-sm font-medium transition-colors hover: text-primary"
+            "text-sm font-medium transition-colors hover:text-primary",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -181,10 +282,27 @@ export function MainNavigation({ className } MainNavigationProps) {;
       <NavLink
         to="/signup"
         className={({ isActive }) =>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           cn(
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground"
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           cn(;
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground",
@@ -254,3 +372,35 @@ function MainNavigation() {
       </NavLink>;
     </nav>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+
+  ),;}
+ interface MainNavigationProps {
+  className?: string 
+}export function MainNavigation ({
+  className 
+}: MainNavigationProps) {
+  return (<nav className= {
+  cn ("hidden md:flex items-center space-x-6", className) 
+}> <NavLink to="/" className= {
+  ({
+  isActive 
+}) => text-sm font-medium transition-colors hover:text-primary";
+isActive ? " text-zion-cyan": " text-muted-foreground") 
+}> Home </NavLink> <Link to=" /talent"className=" text-zion-slate-light hover:text-white transition-colors"> Find Talent </Link> <Link to=" /services"className=" text-zion-slate-light hover:text-white transition-colors"> Services </Link> <Link to=" /equipment"className=" text-zion-slate-light hover:text-white transition-colors"> Equipment </Link> <Link to=" /blog"className=" text-zion-slate-light hover:text-white transition-colors"> Blog </Link> <Link to=" /categories"className=" text-zion-slate-light hover:text-white transition-colors"> Categories </Link> <NavLink cn (" text-sm font-medium transition-colors hover:text-primary";
+isActive ? " text-zion-cyan": " text-muted-foreground") 
+}> Partner Program </NavLink> <NavLink cn (" text-sm font-medium transition-colors hover:text-primary";
+isActive ? " text-zion-cyan": " text-muted-foreground";
+" bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light") 
+}> Register </NavLink> </nav>) 
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

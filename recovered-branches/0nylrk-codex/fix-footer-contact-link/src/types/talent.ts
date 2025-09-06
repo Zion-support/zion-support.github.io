@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 export interface TalentProfile {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   user_id: string;
   full_name: string;
@@ -7,6 +10,9 @@ export interface TalentProfile {
   bio?: string;
   summary?: string;
   location?: string;
+<<<<<<< HEAD
+    title: string,
+=======
   skills?: string[];
   hourly_rate?: number;
   years_experience?: number;
@@ -17,18 +23,27 @@ export interface TalentProfile {
   is_verified?: boolean;
   key_projects?: {
     title: string;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     description: string;
   }[];
 }
 export interface TalentProfileFilters {
   search?: string;
   skills?: string[];
+<<<<<<< HEAD
+=======
   availabilities?: string[];
   regions?: string[];
   priceRange?: [number, number];
   experienceRange?: [number, number];
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 export interface HireRequest {
   id: string;
@@ -38,9 +53,13 @@ export interface HireRequest {
   project_description: string;
   budget: {
     min: number;
+<<<<<<< HEAD
+  }
+=======
     max: number;
     currency: string;
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   timeline: {
     startDate: string;
     endDate?: string;
@@ -55,6 +74,17 @@ export interface TalentProfile {;
 
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export interface TalentProfile {;
@@ -114,3 +144,8 @@ export interface HireRequest {;
 }
 ;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

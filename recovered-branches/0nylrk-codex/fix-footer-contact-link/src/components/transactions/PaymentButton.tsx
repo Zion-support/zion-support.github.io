@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -6,6 +23,22 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface PaymentButtonProps {;
+  amount: number,;
+  serviceId: string,;
+  providerId: string,;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -25,6 +58,23 @@ interface PaymentButtonProps {
   onPaymentInitiated?: () => void;
   redirectUrl?: string;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+export function PaymentButton(): any ({;
+
+=======
+export function PaymentButton(): any ({;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   amount;
   serviceId;
   providerId;
@@ -52,6 +102,13 @@ interface PaymentButtonProps {
       });
       return;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -59,7 +116,26 @@ interface PaymentButtonProps {
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+  redirectUrl?: string
+}
+
+
+
+=======
+  redirectUrl?: string
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function PaymentButton({;
   amount;
   serviceId;
@@ -148,6 +224,18 @@ export function PaymentButton({;
       setIsProcessing(true),;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       
       // Call the create-checkout edge function
@@ -160,13 +248,44 @@ export function PaymentButton({;
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
       
+<<<<<<< HEAD
       
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (error) {
         throw error
       }
       if (data?.url) {
         // Open Stripe checkout in a new tab
         window.open(data.url, '_blank')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+      });
+      return;
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { cn } from '@/lib / utils';
@@ -239,6 +358,16 @@ if ( {) {
         throw new Error ("No checkout URL returned");
       }
     } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       console.error ("Payment error:", error);
       toast ({
         title: "Payment error",
@@ -250,6 +379,27 @@ if ( {) {
       if (onPaymentInitiated) {;
         onPaymentInitiated();
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+      } else {
+        throw new Error("No checkout URL returned")
+      }
+    } catch (error) {
+      console.error("Payment error:", error),
+      toast({
+        title: "Payment error"
+        description: "There was a problem initiating your payment. Please try again."
+        variant: "destructive"})
+    } finally {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
@@ -278,14 +428,88 @@ if ( {) {
       } else {;
         throw new Error("No checkout URL returned");
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    } catch (error) {;
+      console && console.error("Payment error:", error);
+=======
+    } catch (error) {;
+      console && console.error("Payment error:", error);
+    }
+  }
+  return (
+    <Button
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
+        "relative min-w-[120px]";
+
+;
+      // Call the create-checkout edge function;
+      const { data, error } = await supabase.functions.invoke("create-checkout", {;
+        body: {;
+          amount,;
+          serviceId,;
+          providerId,;
+          userId: user?.id,;
+          successUrl: redirectUrl || window.location.href,;
+          cancelUrl: window.location.href}}),;
+      if (error) {;
+        throw error;
+      }
+;
+      if (data?.url) {;
+        // Open Stripe checkout in a new tab;
+        window.open(data.url, '_blank');
+      } else {;
+        throw new Error("No checkout URL returned");
+      }
+;
+    } catch (error) {;
+      console.error("Payment error:", error),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       toast({;
         title: "Payment error",;
         description: "There was a problem initiating your payment. Please try again.",;
         variant: "destructive"});
     } finally {;
       // Reset button state after a short delay;
+<<<<<<< HEAD
   return (;
     <Button;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      setTimeout(() => {;
+        setIsProcessing(false);
+      }, 1500);
+    }
+  };
+<<<<<<< HEAD
+
+  return (;
+    <Button;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return (;
+    <Button;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
@@ -311,9 +535,49 @@ if ( {) {
       ) : (;
         buttonText;
       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </Button>;
+  );
+=======
+
+    </Button>;
+  );
+=======
+=======
+=======
+        className
+      )}
+    >
+      {isProcessing ? (
+        <>
+          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+          Processing...
+        </>
+      ) : (
+        buttonText
+      )}
+
+    </Button>;
+  );
+
+    </Button>
+  )
 }
     </Button>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+}
+    </Button>;
+  );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </Button>;
   );
 }
@@ -324,6 +588,15 @@ if ( {) {
 
     </Button>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </Button>;
+  );
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </Button>;
   );
 
@@ -345,6 +618,14 @@ if ( {) {
         </>) : (
         button_text)}
     </Button>);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -365,6 +646,8 @@ interface PaymentButtonProps {;
   redirectUrl?:string;
 }
 ;
+<<<<<<< HEAD
+=======
 export function PaymentButton({;
   amount,;
   serviceId,;
@@ -519,3 +802,8 @@ return (<Button)
 }
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

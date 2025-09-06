@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+}},
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -14,6 +17,7 @@
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -46,6 +50,8 @@ const qualityChecks = [{
         
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -72,6 +78,7 @@ const qualityChecks = [{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }},
   {
     "name": 'Prettier Code Formatting',
@@ -84,6 +91,8 @@ const qualityChecks = [{
         
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -110,6 +119,7 @@ const qualityChecks = [{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }},
   {
     "name": 'Code Complexity Analysis',
@@ -125,6 +135,8 @@ const qualityChecks = [{
         if (fs.existsSync(dir)) {
           const files = fs
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -148,6 +160,7 @@ const qualityChecks = [{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
 
@@ -164,6 +177,8 @@ const qualityChecks = [{
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -178,6 +193,7 @@ const qualityChecks = [{
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       console.log(`Average lines per file: ${avgLinesPerFile}`);
       console.log(`Total files analyzed: ${totalFiles}`);
     },
@@ -190,6 +206,8 @@ const qualityChecks = [{
       
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -200,6 +218,7 @@ const qualityChecks = [{
       
       
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }},
   {
     "name": 'Import/Export Analysis',
@@ -219,6 +238,8 @@ const qualityChecks = [{
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -233,6 +254,7 @@ const qualityChecks = [{
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         console.log(`Total imports: ${importCount}`);
         console.log(`Total exports: ${exportCount}`);
       }
@@ -247,6 +269,8 @@ const qualityChecks = [{
         
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -258,6 +282,7 @@ const qualityChecks = [{
         
         
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }},
   {
@@ -292,6 +317,8 @@ const qualityChecks = [{
           });
         });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -306,6 +333,7 @@ const qualityChecks = [{
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         console.log(`Potential unused imports: ${unusedImports}`);
       }
     },
@@ -318,6 +346,8 @@ const qualityChecks = [{
         
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -328,6 +358,7 @@ const qualityChecks = [{
 
         
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }},
 ];
@@ -356,6 +387,8 @@ const report = {
   "checks": qualityChecks.map(check => ({
     name: check.name,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -366,6 +399,7 @@ const report = {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     status: 'completed',
   })),
   summary: {
@@ -374,6 +408,8 @@ const report = {
     failed: totalCount - successCount,
   },
 };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -389,11 +425,18 @@ const report = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+<<<<<<< HEAD
+
+
+
+
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -425,6 +468,7 @@ const report = {
 
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -433,6 +477,8 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -466,6 +512,7 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -482,6 +529,11 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
     "status"
+<<<<<<< HEAD
+    "status"
+    "status"
+    "status"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -511,3 +563,4 @@ console.log(' Code Quality Checker Starting...\n')
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

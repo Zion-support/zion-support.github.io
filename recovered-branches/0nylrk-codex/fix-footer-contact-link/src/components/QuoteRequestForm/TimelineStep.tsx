@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils";
+import { QuoteFormData } from "@/types/quotes";
+import {useState} from "react";
+import {format} from "date-fns";
+import {Calendar} from "@/components/ui/calendar";
+import {Button} from "@/components/ui/button";
+import {Label} from "@/components/ui/label";
+import {CalendarIcon} from "@/components/icons";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {cn} from "@/lib/utils";
+import {QuoteFormData} from "@/types/quotes";
+
+
+import {useState} from "react";
+import {format} from "date-fns";
+import {Calendar} from "@/components/ui/calendar";
+import {Button} from "@/components/ui/button";
+import {Label} from "@/components/ui/label";
+import {CalendarIcon} from "@/components/icons";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {cn} from "@/lib/utils";
+import {QuoteFormData} from "@/types/quotes";
+
+import { useState } from "react",
+import { format } from "date-fns",
+import { Calendar } from "@/components/ui/calendar",
+import { Button } from "@/components/ui/button",
+import { Label } from "@/components/ui/label",
+import { CalendarIcon } from "@/components/icons",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { cn } from "@/lib/utils",
+import { QuoteFormData } from "@/types/quotes",
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react";
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
@@ -20,10 +56,28 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
     <div className="space-y-6">
       <div>
+<<<<<<< HEAD
+=======
         <h3 className="text-xl font-semibold text-white mb-4">
           When do you need this?
         </h3>
 
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
+=======
+        <h3 className="text-xl font-semibold text-white mb-4">
+          When do you need this?
+        </h3>
+
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
             <div
@@ -39,6 +93,37 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                 I have specific start and end dates
               </p>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            <div
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                formData.timeline === "flexible"
+                  ? "bg-zion-purple/20 border-zion-purple"
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+              }`}
+              onClick={() => updateFormData({ timeline: "flexible" })}
+            >
+              <h4 className="font-medium text-white">Flexible Timeline</h4>
+              <p className="text-sm text-zion-slate-light">
+                I'm flexible on the timing
+              </p>
+            </div>
+          </div>
+
+          {formData.timeline === "fixed" && (
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
           {formData.timeline === "fixed" && (
@@ -52,6 +137,86 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline"
                       className={cn(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark"
+                        !formData.startDate && "text-zion-slate-light"
+=======
+import { useState  } from './react';
+import { format  } from './date - fns';
+import { Calendar  } from '@/components / ui / calendar';
+import { Button  } from '@/components / ui / button';
+import { Label  } from '@/components / ui / label';
+import { CalendarIcon  } from '@/components / icons';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components / ui / popover';
+import { cn  } from '@/lib / utils';
+import { QuoteFormData  } from '@/types / quotes';
+interface TimelineStepProps {
+  form_data: QuoteFormData;
+  updateFormData: (data: Partial < QuoteFormData>) => void;
+}
+export /**
+ * TimelineStep - Function description
+ */
+function TimelineStep() {
+  return (
+    <div className="space - y-6">;
+      <div>;
+        <h3 className="text - xl font - semibold text - white mb - 4">;
+          When do you need this?;
+        </h3>;
+        <div className="space - y-4">;
+          <div className="flex items - center space - x-4">;
+            <div;
+              className={`flex - 1 p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
+                form_data.timeline === "fixed";
+                  ? "bg - zion - purple / 20 border - zion - purple";
+                  : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
+              }`}
+              on_click={() => updateFormData ({ timeline: "fixed" })}
+            >;
+              <h4 className="font - medium text - white">Fixed Dates</h4>;
+              <p className="text - sm text - zion - slate - light">;
+                I have specific start and end dates;
+              </p>;
+            </div>;
+            <div;
+              className={`flex - 1 p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
+                form_data.timeline === "flexible";
+                  ? "bg - zion - purple / 20 border - zion - purple";
+                  : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
+              }`}
+              on_click={() => updateFormData ({ timeline: "flexible" })}
+            >;
+              <h4 className="font - medium text - white">Flexible Timeline</h4>;
+              <p className="text - sm text - zion - slate - light">;
+                I'm flexible on the timing;
+              </p>;
+            </div>;
+          </div>;
+          {form_data.timeline === "fixed" && (
+            <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 4 mt - 6">;
+              <div>;
+                <Label className="block mb - 2 text - zion - slate - light">;
+                  Start Date;
+                </Label>;
+                <Popover>;
+                  <PopoverTrigger as_child>;
+                    <Button;
+                      variant="outline";
+                      className={cn (
+                        "w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover:bg - zion - blue - dark",
+                        !form_data.start_date && "text - zion - slate - light",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       )}
                     >;
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
@@ -170,6 +335,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                 </Popover>
               </div>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div>
                 <Label className="block mb-2 text-zion-slate-light">
                   End Date
@@ -179,8 +345,11 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                     <Button
                       variant="outline"
                       className={cn(
+<<<<<<< HEAD
+=======
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
                         !formData.endDate && "text-zion-slate-light",
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -201,6 +370,20 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                       onSelect={(date) => updateFormData({ endDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
+<<<<<<< HEAD
+import { useState } from "react",;
+import { format } from "date-fns",;
+import { Calendar } from "@/components/ui/calendar",;
+import { Button } from "@/components/ui/button",;
+import { Label } from "@/components/ui/label",;
+import { CalendarIcon } from "@/components/icons",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { cn } from "@/lib/utils",;
+import { QuoteFormData } from "@/types/quotes",;
+interface TimelineStepProps {;
+  formData: QuoteFormData,;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+=======
                       disabled={(date) =>
                         date < (formData.startDate || new Date())
                       }
@@ -214,6 +397,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
       </div>
     </div>
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
@@ -328,6 +512,29 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+  );
+}
+;
+=======
+
+            </div>)}
+        </div>;
+      </div>;
+    </div>);
+=======
+
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 </div>
       </div>
     </div>
@@ -339,3 +546,10 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

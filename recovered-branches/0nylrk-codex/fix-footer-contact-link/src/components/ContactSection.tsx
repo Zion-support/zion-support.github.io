@@ -81,20 +81,82 @@ export function ContactSection() {
                     <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
                       Name
                     </label>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <input
                       type="text"
                       id="name"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
                       Email
                     </label>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <input
                       type="email"
                       id="email"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            <div className="absolute inset - 0 bg - gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 rounded - lg filter blur - 3xl opacity - 30"></div>;
+            <div className="relative bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 8">;
+              <h3 className="text - xl font - bold mb - 6 text - white">;
+                Send Us a Message;
+              </h3>;
+              <form className="space - y-6">;
+                <div className="grid grid - cols - 1 gap - 6 sm:grid - cols - 2">;
+                  <div>;
+                    <label;
+                      html_for="name";
+                      className="block text - sm font - medium text - zion - slate - light mb - 1";
+                    >;
+=======
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>;
+            <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">;
+              <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>;
+              <form className="space-y-6">;
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">;
+                  <div>;
+                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                       Name;
                     </label>;
                     <input;
@@ -105,10 +167,32 @@ export function ContactSection() {
                     <input;
                       type="email";
                       id="email";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
+
+=======
+                      className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     />;
                   </div>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     />
                   </div>
                 </div>
@@ -161,6 +245,18 @@ export function ContactSection() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+    </section>
+  );
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -247,6 +343,8 @@ export function ContactSection() {;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
     </section>;
   );
 }
@@ -261,6 +359,7 @@ export function ContactSection() {;
 }
     </section>);
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </section>;
   );}
  export function ContactSection () {
@@ -269,3 +368,10 @@ export function ContactSection() {;
 }></textarea> </div> <div> <Button className=" w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Send Message </Button> </div> </form> </div> </div> </div> </div> </section>) 
 }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

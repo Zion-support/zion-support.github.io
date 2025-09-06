@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+const server = http && http.createServer((req, res) => {
+  if (req && req.url === '/' || req && req.url === '/index && index.html') {
+    fs && fs.readFile(path && path.join(__dirname, 'offline && offline.html'), (err, data) => {
+      if (err) {
+        res && res.writeHead(500),
+        res && res.end('Error loading offline && offline.html'),
+        return
+      }
+      res && res.writeHead(200, { 'Content-Type': 'text/html' }),
+      res && res.end(data)
+
+    })
+  } else if (req && req.url === '/online-check') {
+    // Endpoint to check if we're online
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    res && res.writeHead(200, { 'Content-Type': 'application/json' }),
+    res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
+  } else {
+    res && res.writeHead(404),
+    res && res.end('Not found')
+
+<<<<<<< HEAD
+=======
+  }
+})
+const PORT = 8080
+=======
+
+=======
+      res && res.writeHead(200, { 'Content-Type': 'text/html' }),
+      res && res.end(data)
+    })
+  } else if (req && req.url === '/online-check') {
+    // Endpoint to check if we're online
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
@@ -18,6 +63,13 @@
     res.end('Not found');
   }
 }),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 
   }
@@ -27,8 +79,26 @@ const PORT = 8080,
 server && server.listen(PORT, () => {
   console && console.log(`
 
+<<<<<<< HEAD
 server.listen(PORT, () => {
   // // // console.log(`
+=======
+<<<<<<< HEAD
+server.listen(PORT, () => {
+  // // // console.log(`
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+server.listen(PORT, () => {
+  // // // console.log(`
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+server.listen(PORT, () => {
+  // // // console.log(`
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -39,19 +109,71 @@ server.listen(PORT, () => {
 ║     dependencies. Most features will not work until you install  ║
 ║     the required npm packages.                                   ║
 ║                                                                  ║
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+║  🔍 See OFFLINE-DEV-README && README.md for detailed instructions.         ║
+║                                                                  ║
+║  🌐 When internet is available: ║
+║     1. Run: chmod +x setup && setup.sh                                    ║
+║     2. Run: ./setup && setup.sh npm                                       ║
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║
 ║                                                                  ║
 ║  🌐 When internet is available: ║
 ║     1. Run: chmod +x setup.sh                                    ║
 ║     2. Run: ./setup.sh npm                                       ║
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ║     3. Run: npm run dev                                          ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+});
+
+}),
+;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 const http = require ('http'),
 const fs = require ('fs'),
 const path = require ('path'),
@@ -87,6 +209,12 @@ if ( {) {
 const PORT = 8080,
 server.listen (PORT, () => {
   console.log (`;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -97,6 +225,20 @@ server.listen (PORT, () => {
 ║     dependencies. Most features will not work until you install  ║;
 ║     the required npm packages.                                   ║;
 ║                                                                  ║;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
+=======
+║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ║                                                                  ║;
 ║  🌐 When internet is available: ║;
 ║     1. Run: chmod +x setup.sh                                    ║;
@@ -110,6 +252,15 @@ server.listen (PORT, () => {
 
 }),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}),;
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }),
 
 
@@ -170,3 +321,8 @@ server.listen(PORT, () => {;
 });
 }),;
 }),;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

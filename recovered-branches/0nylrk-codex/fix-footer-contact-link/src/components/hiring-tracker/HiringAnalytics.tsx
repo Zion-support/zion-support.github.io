@@ -1,7 +1,97 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import { useState, useEffect } from './react';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+
+interface HiringAnalyticsProps {
+  job_id?: string;
+}
+
+=======
+import { useState, useEffect } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+interface HiringAnalyticsProps {
+  jobId?: string
+}
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+interface HiringAnalyticsProps {;
+  jobId?: string;
+}
+
+export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
+  const { applications, isLoading } = useJobApplications(jobId);
+=======
+interface HiringAnalyticsProps {
+  jobId?: string
+}
+
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
+  const { applications, isLoading } = useJobApplications(jobId);
+  const [analyticsData, setAnalyticsData] = useState<{
+
+    statusDistribution: any[]
+    timeToHire: number
+    conversionRate: number
+    funnelData: any[]
+  }>({
+    statusDistribution: []
+    timeToHire: 0
+    conversionRate: 0
+    funnelData: []})
+  useEffect(() => {
+    if (applications && applications.length > 0) {
+      // Calculate status distribution
+      const statusCounts: Record<string, number> = {}
+      applications.forEach(app => {
+        statusCounts[app.status] = (statusCounts[app.status] |0) + 1
+      });
+      const statusDistribution = Object.entries(statusCounts).map(([status, count]) => ({
+        status;
+        count}));
+      // Calculate time to hire (in days)
+      const hiredApplications = applications.filter(app => app.status === 'hired');
+      let avgTimeToHire = 0;
+      if (hiredApplications.length > 0) {
+        const totalDays = hiredApplications.reduce((sum, app) => {
+          const hireDate = new Date(app.updated_at);
+          const applyDate = new Date(app.created_at);
+          const daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24);
+          return sum + daysDiff
+        }, 0);
+        avgTimeToHire = Math.round(totalDays / hiredApplications.length)
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  const { applications, isLoading } = useJobApplications(jobId);
+interface HiringAnalyticsProps {;
+  jobId?: string;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       }
       // Calculate conversion rate
       const conversionRate = hiredApplications.length > 0
@@ -111,6 +201,109 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   }
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+  if (isLoading) {;
+    return <div>Loading analytics data...</div>;
+  }
+  if (!applications || applications.length === 0) {;
+    return (
+
+import { useState, useEffect } from "react",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
+;
+interface HiringAnalyticsProps {;
+  jobId?:string,;
+}
+;
+export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
+  const { applications, isLoading } = useJobApplications(jobId),;
+  const [analyticsData, setAnalyticsData] = useState<{;
+    statusDistribution:any[],;
+    timeToHire:number,;
+    conversionRate:number,;
+    funnelData:any[];
+  }>({;
+    statusDistribution:[],;
+    timeToHire:0,;
+    conversionRate:0,;
+    funnelData:[]}),;
+  ;
+  useEffect(() => {;
+    if (applications && applications.length > 0) {;
+      // Calculate status distribution;
+      const statusCounts:Record<string number> = {},;
+      applications.forEach(app => {;
+        statusCounts[app.status] = (statusCounts[app.status] || 0) + 1,;
+      }),;
+      ;
+      const statusDistribution = Object.entries(statusCounts).map(([status, count]) => ({;
+        status,;
+        count})),;
+      ;
+      // Calculate time to hire (in days);
+      const hiredApplications = applications.filter(app => app.status === 'hired'),;
+      let avgTimeToHire = 0,;
+      ;
+      const statusCounts: Record<string number> = {},;
+      applications.forEach(app => {;
+        statusCounts[app.status] = (statusCounts[app.status] || 0) + 1;
+      }),;
+      const statusDistribution = Object.entries(statusCounts).map(([status, count]) => ({;
+        status,;
+        count})),;
+      // Calculate time to hire (in days);
+      const hiredApplications = applications.filter(app => app.status === 'hired'),;
+      let avgTimeToHire = 0,;
+      if (hiredApplications.length > 0) {;
+        const totalDays = hiredApplications.reduce((sum, app) => {;
+          const hireDate = new Date(app.updated_at),;
+          const applyDate = new Date(app.created_at),;
+          const daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24),;
+
+
+  }
+  
+  if (!applications || applications.length === 0) {
+
+          return sum + daysDiff;
+        }, 0),;
+        avgTimeToHire = Math.round(totalDays / hiredApplications.length);
+      }
+;
+      // Calculate conversion rate;
+      const conversionRate = hiredApplications.length > 0;
+        ? Math.round((hiredApplications.length / applications.length) * 100);
+        : 0,;
+      // Funnel data;
+      const funnelData = [;
+        { name: 'Applied', value: applications.length },;
+        { name: 'Shortlisted', value: applications.filter(app => app.status === 'shortlisted').length },;
+        { name: 'Interview', value: applications.filter(app => app.status === 'interview').length },;
+        { name: 'Hired', value: applications.filter(app => app.status === 'hired').length }],;
+      setAnalyticsData({;
+        statusDistribution,;
+        timeToHire: avgTimeToHire,;
+        conversionRate,;
+        funnelData});
+    }
+  }, [applications]);
+  if (isLoading) {;
+    return <div>Loading analytics data...</div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
   
   if (!applications || applications.length === 0) {
@@ -125,6 +318,24 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
       </Card>
     )
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+  
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
+  
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
@@ -199,6 +410,8 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
               <XAxis type="number" />;
               <YAxis dataKey="name" type="category" width={100} />;
               <Tooltip />;
+<<<<<<< HEAD
+=======
               <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>;
 export /**
  * HiringAnalytics - Function description
@@ -435,11 +648,32 @@ if ( {) {
               <XAxis type="number" />;
               <YAxis dataKey="name" type="category" width={100} />;
               <Tooltip />;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </div>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </div>;
   ),; interface HiringAnalyticsProps {
   jobId?: string 
@@ -487,3 +721,10 @@ if (applications && applications.length > 0) {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

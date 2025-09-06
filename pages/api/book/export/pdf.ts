@@ -1,5 +1,5 @@
 
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 import puppeteer from 'puppeteer',;
 export const config = {
   api: {
@@ -74,7 +74,6 @@ export default async function handler(req, res) {
   const browser = await puppeteer.launch({;
     headless: true;
 
-
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
   try {
@@ -105,6 +104,4 @@ export default async function handler(req, res) {
   }
   }
 }
-
-
 

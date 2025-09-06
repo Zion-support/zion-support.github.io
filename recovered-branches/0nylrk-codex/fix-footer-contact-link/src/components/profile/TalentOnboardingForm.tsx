@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -36,6 +51,41 @@ import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Uplo
 import {useAuth} from "@/hooks/useAuth";
 import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import React, { useState } from "react",
+import { useForm, useFieldArray } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { useNavigate } from "react-router-dom",
+import { 
+  Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { 
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
+} from "@/components/ui/select",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
+import { 
+  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft;
+  Trash2, Plus, CheckCircle2
+} from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
   // Step 1: Basic Info;
@@ -84,6 +134,63 @@ type TalentFormValues = z && z.infer<typeof talentSchema>;
 
 export function TalentOnboardingForm() {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",
+import { useForm, useFieldArray } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { useNavigate } from "react-router-dom",
+import { 
+  Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { 
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
+} from "@/components/ui/select",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
+import { 
+  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft;
+  Trash2, Plus, CheckCircle2
+} from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
+import { supabase } from "@/integrations/supabase/client";
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
+import { supabase } from "@/integrations/supabase/client",
+// Define the form schema with validation
+
+const talentSchema = z.object({
+  // Step 1: Basic Info
+  basicInfo: z.object({
+    fullName: z.string().min(2, "Name must be at least 2 characters");
+    professionalTitle: z.string().min(2, "Professional title is required");
+    profilePicture: z.any().optional()})
+    fullName: z.string().min(2, "Name must be at least 2 characters"),
+    professionalTitle: z.string().min(2, "Professional title is required"),
+    profilePicture: z.any().optional()}),
+=======
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [currentStep, setCurrentStep] = useState(1);
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
+  const [cvFileName, setCvFileName] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+  const totalSteps = 4;
+<<<<<<< HEAD
+=======
+    ).min(1, "Add at least one key project"),
+    yearsOfExperience: z.string().min(1, "Years of experience is required")}),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   
   // Step 3: Skills & Tech Stack
   skills: z.object({
@@ -104,11 +211,34 @@ export function TalentOnboardingForm() {;
   const [cvFileName, setCvFileName] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+  const totalSteps = 4;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ).min(1, "Add at least one key project"),
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
   
   // Step 3: Skills & Tech Stack
   skills: z.object({
+<<<<<<< HEAD
+    skillsList: z.string().min(2, "Add at least one skill");
+    toolsUsed: z.string().optional()})
+  // Step 4: Availability & Preferences
+  availability: z.object({
+    availabilityType: z.string().min(1, "Select your availability");
+    timezone: z.string().min(1, "Timezone is required");
+    hourlyRate: z.string().optional()
+    portfolioLinks: z.array(
+      z.object({
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
+=======
     skillsList: z.string().min(2, "Add at least one skill"),
     toolsUsed: z.string().optional()}),
   
@@ -125,6 +255,38 @@ export function TalentOnboardingForm() {;
 
 type TalentFormValues = z.infer<typeof talentSchema>,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+export function TalentOnboardingForm() {;
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [currentStep, setCurrentStep] = useState(1);
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
+  const [cvFileName, setCvFileName] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+export function TalentOnboardingForm() {
+  const { user } = useAuth(),
+  const navigate = useNavigate(),
+  const [currentStep, setCurrentStep] = useState(1),
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),
+  const [cvFileName, setCvFileName] = useState<string | null>(null),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false),
+  
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
+  
+  const totalSteps = 4,
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
@@ -156,15 +318,56 @@ type TalentFormValues = z.infer<typeof talentSchema>,
       control: form.control})
   // Handle profile picture upload
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     const file = e.target.files?.[0],
     if (!file) return,
     
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const file = e.target.files?.[0],
+    if (!file) return,
+    
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+    }
+    reader.readAsDataURL(file);
+    // Store the file in the form data
+    form.setValue("basicInfo.profilePicture", file)
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     reader.readAsDataURL(file),
     
@@ -177,6 +380,12 @@ type TalentFormValues = z.infer<typeof talentSchema>,
       
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     if (cvError) {
       console.error("Error uploading CV:", cvError);
       throw new Error("Failed to upload CV")
@@ -186,6 +395,45 @@ type TalentFormValues = z.infer<typeof talentSchema>,
 
   const totalSteps = 4;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+};
+
+<<<<<<< HEAD
+=======
+=======
+  // Handle CV upload
+  const handleCvUpload = async (file: File) => {
+    const fileName = `cv-${user?.id}-${Date.now()}`,
+    const { error: cvError } = await supabase.storage
+      .from('resumes')
+      .upload(fileName, file);
+      .upload(fileName, file),
+      
+    if (cvError) {
+      console.error("Error uploading CV:", cvError),
+      throw new Error("Failed to upload CV")
+    }
+    // Get the public URL
+    const { data: { publicUrl } } = supabase.storage
+      .from('resumes')
+      .getPublicUrl(fileName);
+    return publicUrl
+  }
+
+  // Rest of the file remains unchanged...
+  // [Previous implementation continues...]
+  return null
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -251,6 +499,21 @@ export function TalentOnboardingForm() {;
   const [showSuccessScreen, setShowSuccessScreen] = useState(false),;
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
   const totalSteps = 4,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+  const totalSteps = 4;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentSchema),;
     defaultValues: {;
@@ -553,6 +816,16 @@ if ( {) {
   // [Previous implementation continues...];
   return null;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 
@@ -732,3 +1005,10 @@ return publicUrl;
 }
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

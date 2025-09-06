@@ -1,7 +1,35 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -22,20 +50,71 @@ export function useJobSuggestions(talentId?: string) {
       if (!talentId) return;
       try {
         setIsLoading(true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       if (!talentId) return,
       
       try {
         setIsLoading(true),
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         // Get job matches with job details
         const { data, error } = await supabase
           .from("job_talent_matches")
           .select(`
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            *;
+            job:job_id (*)
+          `)
+          .eq("talent_id", talentId)
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
             *,
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          .order("created_at", { ascending: false });
+        if (error) throw error;
+        setJobMatches(data |[])
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           .order("created_at", { ascending: false }),
           
         if (error) throw error,
@@ -55,20 +134,64 @@ export function useJobSuggestions(talentId?: string) {
     }
     fetchSuggestedJobs()
   }, [talentId]);
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       } finally {
         setIsLoading(false)
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     },
     
     fetchSuggestedJobs()
   }, [talentId]),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+      }
+      const { error } = await supabase
+        .from("job_talent_matches")
+        .update(updates)
+        .eq("id", matchId);
+      if (error) throw error;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       },
       
       const { error } = await supabase
@@ -87,10 +210,34 @@ export function useJobSuggestions(talentId?: string) {
       
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      // Update local state
+      setJobMatches(matches =>
+        matches.map(match =>
+          match.id === matchId
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
       );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ),
+      
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       // Show appropriate message
       if (status === 'applied') {
         toast({
@@ -104,12 +251,41 @@ export function useJobSuggestions(talentId?: string) {
         })
       }
     } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      console && console.error("Error updating job match status:", error);
+      toast({
+
+=======
+      console.error("Error updating job match status:", error),
+      toast({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         title: "Error";
         description: "Failed to update job status"
         variant: "destructive"})
     }
   }
   // Filter matches by status
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const newMatches = jobMatches.filter(match => match.status === 'new');
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied');
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
   const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
@@ -127,6 +303,20 @@ export function useJobSuggestions(talentId?: string) {
       appliedMatches
 
       declinedMatches
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        title: "Error",
+        description: "Failed to update job status",
+        variant: "destructive"})
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -158,8 +348,21 @@ export function useJobSuggestions(talentId?: string) {;
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
+<<<<<<< HEAD
     }
   }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    }
+  }
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
     fetchSuggestedJobs ();
   }, [talent_id]);
@@ -229,6 +432,21 @@ if ( {) {
       viewed_matches;
       applied_matches,
       declined_matches;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  }
+}
+=======
+<<<<<<< HEAD
+
+
+    }
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 }
 
@@ -368,3 +586,8 @@ job:job id (*) `)
     }
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

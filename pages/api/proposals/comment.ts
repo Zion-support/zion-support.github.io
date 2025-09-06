@@ -13,11 +13,9 @@ async function ensure() {
 }
 export default async function handler(
 
-
   req: NextApiRequest
   res: NextApiResponse
 ) {;
-
 
   await ensure();
   if (req.method === "GET") {
@@ -35,6 +33,10 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -63,13 +65,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
     const data = await fs.readJson(FILE_PATH);
     const comment = {
+<<<<<<< HEAD
       id: Date.now().toString(), proposalId: body.proposalId
       region: body.region || 'Global', author: body.author || 'anon'
       id: Date.now().toString()
       proposalId: body.proposalId
       region: body.region || 'Global'
       author: body.author || 'anon'
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       text: body.text || ''
+
       createdAt: new Date().toISOString()
     };
     data.comments.push(comment);
@@ -145,6 +152,7 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
+<<<<<<< HEAD
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
@@ -250,3 +258,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

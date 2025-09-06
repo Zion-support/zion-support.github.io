@@ -1,12 +1,50 @@
+<<<<<<< HEAD
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import React from 'react',
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+interface VideoCallRoomProps {;
+
+=======
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 interface VideoCallRoomProps {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   room?: string;
   token?: string;
   serverUrl?: string;
   onDisconnect?: () => void;
   className?: string;
+<<<<<<< HEAD
+interface VideoCallRoomProps {
+  room?: string,
+  token?: string,
+  serverUrl?: string,
+  onDisconnect?: () => void,
+  className?: string
+}
+export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+  return (
+
+
+import React from 'react',;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+interface VideoCallRoomProps {;
+  room?: string,;
+  token?: string,;
+  serverUrl?: string,;
+  onDisconnect?: () => void;
+  className?: string;
+=======
 }
 
 export function VideoCallRoom({
@@ -32,6 +70,7 @@ export function VideoCallRoom({
       </CardContent>
     </Card>
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
@@ -84,6 +123,20 @@ function VideoCallRoom() {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
 
 
@@ -132,3 +185,10 @@ className?: string
 }
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

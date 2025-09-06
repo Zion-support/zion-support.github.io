@@ -3,11 +3,18 @@
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
@@ -18,12 +25,18 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 if (newMetrics && newMetrics.loadTime > 3000) {;
   const formatTime = (ms: number) : string => {;
   if (ms === 0) return 'N/A';
+<<<<<<< HEAD
 
 
 
 };
 
 
+=======
+
+};
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -35,13 +48,19 @@ const getPerformanceScore = () => {
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 else score += 25 
 
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -67,6 +86,10 @@ if (score >= 50) return 'Needs Improvement';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default PerformanceMonitor;
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
   return new Promise ( (resolve) => {
@@ -215,7 +238,11 @@ if (return 'Needs Improvement') {
 ;
 export default PerformanceMonitor;
 ;
+<<<<<<< HEAD
 export default PerformanceMonitor;
 }
 
 }
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
