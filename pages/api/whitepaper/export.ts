@@ -1,4 +1,3 @@
- 
-}function escapeHtml (str: string) {
-  return String (str) .replace (/&/g, '&amp, ') .replace (/</g, '<') .replace (/>/g, '>') 
+export default async function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
 }

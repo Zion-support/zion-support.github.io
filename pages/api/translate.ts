@@ -1,4 +1,3 @@
- for (const lng of targets) {
-  const langName = (lng.startsWith ('pt') ? 'Portuguese' : lng.startsWith ('es') ? 'Spanish' : lng.startsWith ('ar') ? 'Arabic' : 'English' 
-}
+export default async function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
 }

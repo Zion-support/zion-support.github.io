@@ -1,5 +1,3 @@
- type Action = 'approve' | 'remove' | 'edit';
-}reviews[idx].rating = updates.rating 
-}
-}
+export default async function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
 }

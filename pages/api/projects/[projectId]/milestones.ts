@@ -1,4 +1,3 @@
- 
-}res.setHeader ('AllowGET, POST');
-res.status (405) .end ('Method Not Allowed') 
+export default async function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
 }

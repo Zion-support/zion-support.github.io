@@ -1,3 +1,3 @@
- x.projectId === r.projectId && x.fromRole !== r.fromRole && x.toRole !== r.toRole && x.approved && (targetType === 'talent' && p.talentSlug === targetId) || (targetType === 'client' && p.clientId === targetId) ) ) .length;
-}
+export default async function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
 }

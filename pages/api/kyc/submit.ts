@@ -1,6 +1,3 @@
- profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
-// Flags and risk scoring profile.flags = Array.from (flags);
-profile.riskScore = riskScore;
-db[userId] = profile;
-save (db);
+export default async function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
 }

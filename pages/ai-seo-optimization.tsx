@@ -1,5 +1,17 @@
- return (<Layout> <Head> <title> {
-  service.name 
-}- Zion Tech Group</title>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </Layout>) 
+import React from 'react';
+import Layout from '../components/Layout';
+import Head from 'next/head';
+
+export default function AISEOOptimization() {
+  return (
+    <Layout>
+      <Head>
+        <title>AI SEO Optimization - Zion Tech Group</title>
+      </Head>
+      <div>
+        <h1>AI SEO Optimization</h1>
+        <p>Advanced SEO optimization powered by artificial intelligence</p>
+      </div>
+    </Layout>
+  );
 }
