@@ -2,16 +2,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   connectOrbit,
   appendChatMessage,
-  recordVote,
+  recordVote,;
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse;
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 
@@ -46,5 +45,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
     return res.status(500).json({ error: e.message })
-  };
+};
 }

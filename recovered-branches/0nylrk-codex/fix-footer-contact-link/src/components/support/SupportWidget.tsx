@@ -1,16 +1,42 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
 import {MessageSquare, Info, X} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useTheme} from "@/hooks/useTheme";
-export function SupportWidget() {
+export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
   
   return (
     <>
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { ChatBotPanel } from "./ChatBotPanel",
+import { MessageSquare, Info, X } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { useTheme } from "@/hooks/useTheme",
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false),
+  const { theme } = useTheme(),
+  
+  return (
+    <>
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { ChatBotPanel } from "./ChatBotPanel",;
+import { MessageSquare, Info, X } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useTheme } from "@/hooks/useTheme",;
+export function SupportWidget() {;
+  const [isOpen, setIsOpen] = useState(false),;
+  const { theme } = useTheme();
+  return (;
+    <>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
@@ -27,7 +53,7 @@ export function SupportWidget() {
       {isOpen && (
         <div 
           className={cn(
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
               : "bg-white border border-gray-200"
@@ -62,10 +88,10 @@ export function SupportWidget() {
               </Button>
             </div>
           </div>
-          
           <ChatBotPanel />
         </div>
       )}
     </>
   )
 }
+;

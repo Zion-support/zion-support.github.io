@@ -41,7 +41,6 @@ const EnhancedFooter = () => {
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
           </div>
-
           {/* Services */}
           <div>
             <h3 className='text-lg font-semibold mb-4'>Services</h3>
@@ -84,7 +83,6 @@ const EnhancedFooter = () => {
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Blockchain Solutions</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
           </div>
-
           {/* Company */}
           <div>
             <h3 className='text-lg font-semibold mb-4'>Company</h3>
@@ -129,7 +127,6 @@ const EnhancedFooter = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
       <div className='border-t border-gray-700 py-6'>
         <div className='container mx-auto px-4'>
@@ -141,7 +138,7 @@ const EnhancedFooter = () => {
         </div>
       </div>
     </footer>
-  );
+);
 };
 
 export default EnhancedFooter;},

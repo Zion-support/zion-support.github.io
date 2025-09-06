@@ -1,30 +1,120 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { enterpriseStore } from '../../../../../utils/data/enterpriseStore';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import { store } from "../../../../../utils/data/enterpriseStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
-  
-  if (!companyId || Array.isArray(companyId)) {
-    return res.status(400).json({ error: 'Invalid company ID' });
+  if (!companyId || typeof companyId !== "string") {
+    return res.status(400).json({ error: "companyId required" });
+  }
+  const company = store.getCompanyById(companyId);
+  if (!company) return res.status(404).json({ error: "Company not found" });
+  if (req.method === "GET") {
+    return res.status(200).json(company.plan.usageLimits);
   }
 
-  if (req.method === 'GET') {
-    const company = enterpriseStore.getCompany(companyId);
-    if (!company) {
-      return res.status(404).json({ error: 'Company not found' });
+  if (req.method === "PATCH") {
+    const { monthlyJobPosts, budgetCapUsd } = req.body || {};
+    if (
+      typeof monthlyJobPosts !== "number" ||
+      typeof budgetCapUsd !== "number"
+    ) {
+      return res
+        .status(400)
+        .json({ error: "monthlyJobPosts and budgetCapUsd must be numbers" });
     }
-
-    // Get usage statistics (placeholder)
-    const usage = {
-      apiCalls: 1000,
-      storageUsed: '2.5GB',
-      activeUsers: 25,
-      lastUpdated: new Date().toISOString()
-    };
-
-    return res.status(200).json(usage);
+    const ok = store.setUsageLimits(companyId, monthlyJobPosts, budgetCapUsd);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "company_not_found" });
   }
 
-  res.setHeader('Allow', 'GET');
-  return res.status(405).json({ error: 'method_not_allowed' });
+return res.status(405).json({ error: "method_not_allowed" });
 }
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ usage: [] });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '../../../../../utils/data/enterpriseStore';
+export default function handler(req, res) {
+  try {
+  const { companyId } = req.query;
+  if (!companyId || typeof companyId !== 'string') {;
+    return res.status(400).json({ error: 'companyId required' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const company = store.getCompanyById(companyId);
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    const { monthlyJobPosts, budgetCapUsd } = req.body || {};
+    if (typeof monthlyJobPosts !== 'number' || typeof budgetCapUsd !== 'number') {;
+      return res.status(400).json({ error: 'monthlyJobPosts and budgetCapUsd must be numbers' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const ok = store.setUsageLimits(companyId, monthlyJobPosts, budgetCapUsd);
+    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'company_not_found' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  return res.status(405).json({ error: 'method_not_allowed' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

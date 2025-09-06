@@ -5,8 +5,12 @@ import {getServiceById} from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';
 import Button from '../../components/ui/Button';
 import {ArrowLeft, ExternalLink} from 'lucide-react';
+<<<<<<< HEAD
+export default function ServiceDetailPage() {;
+=======
 
 export default function ServiceDetailPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const router = useRouter();
   const { id } = router.query;
 
@@ -27,9 +31,6 @@ export default function ServiceDetailPage() {
           <p className="text-gray-400 mb-6">The requested service could not be found.</p>
           <Button href="/services" variant="primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
-
-            Back to Services
-
           </Button>
         </div>
       </div>
@@ -59,12 +60,10 @@ export default function ServiceDetailPage() {
           <p className="text-gray-400 mb-6">The requested service "{id}" could not be found.</p>
           <Button href="/services" variant="primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
-
-            Back to Services
           </Button>
         </div>
       </div>
-
+    );    )
   }
 
   return (
@@ -78,9 +77,7 @@ export default function ServiceDetailPage() {
         />
         <meta property='og:description' content={service.description} />
         <meta name='twitter:card' content='summary_large_image' />
-
       </Head>
-
       <div className='min-h-screen bg-black'>
         {/* Navigation */}
         <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50'>
@@ -98,30 +95,52 @@ export default function ServiceDetailPage() {
                 href={service.website}
                 variant='primary'
                 size='sm'
-                icon={<ExternalLink className='w-4 h-4' />}              >
-
+                icon={<ExternalLink className='w-4 h-4' />}              >      </Head>
+      <div className="min-h-screen bg-black">
+        {/* Navigation */}
+        <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
+              <Button
+                href="/services"
+                variant="ghost"
+                size="sm"
+                className="text-gray-400 hover:text-white"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Services
               </Button>
               <Button
                 href={service.website}
-
+                variant='primary'
+                size='sm'
+                icon={<ExternalLink className='w-4 h-4' />}                variant="primary"
+                size="sm"
+                icon={<ExternalLink className="w-4 h-4" />}
               >
-
                 Visit Service
               </Button>
             </div>
           </div>
         </nav>
+<<<<<<< HEAD
+        {/* Service Detail Content */}
+        <ServiceDetail service={service} />
+=======
 
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+=======
 
               Looking for Something Else?
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
@@ -143,8 +162,27 @@ export default function ServiceDetailPage() {
                 variant="primary"
                 size="lg"
                 className="shadow-2xl shadow-blue-500/25"
-
-              >
                 View All Services
               </Button>
+<<<<<<< HEAD
               <Button
+                href='/contact'
+                variant='outline'
+                size='lg'
+                className='border-white/20 text-white hover:border-white/40'                href="/contact"
+                variant="outline"
+                size="lg"
+                className="border-white/20 text-white hover:border-white/40"
+                Get Custom Solution
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+;
+=======
+              <Button
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

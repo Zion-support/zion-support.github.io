@@ -1,8 +1,12 @@
+<<<<<<< HEAD
+</div> </div>) ) 
+=======
  </div> </div>) ) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
-export async function getServerSideProps() {
+export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datanews-digest.json');
   let items: NewsItem[] = [];  let generatedAt = '';
   try {
@@ -33,6 +37,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
           </div>
         ))}
       </div>
-    </div>
-  );
+    </div>;
+);
 }

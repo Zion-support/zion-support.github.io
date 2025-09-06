@@ -13,7 +13,7 @@ import {
   MapPin,
   Video,
   MessageSquare,
-  Building,
+  Building,;
 } from "lucide-react";
 
 const timeSlots = [
@@ -124,7 +124,6 @@ export default function CalendarPage() {
           content="schedule, consultation, book call, free consultation, AI experts, IT consulting"
         />
       </Head>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -160,7 +159,6 @@ export default function CalendarPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Consultation Types */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -219,7 +217,6 @@ export default function CalendarPage() {
           </div>
         </div>
       </section>
-
       {/* Team Members */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -270,7 +267,6 @@ export default function CalendarPage() {
           </div>
         </div>
       </section>
-
       {/* Time Slots */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -311,7 +307,6 @@ export default function CalendarPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -403,7 +398,6 @@ export default function CalendarPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
@@ -437,6 +431,6 @@ export default function CalendarPage() {
           </motion.div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 }

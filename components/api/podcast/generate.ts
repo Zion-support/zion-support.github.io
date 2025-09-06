@@ -14,11 +14,40 @@ function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+
+};
+episodes.unshift (episode);
+writeEpisodes (episodes);
+
+function writeEpisodes(episodes: any[]) {
+  ensureStorage();
+  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+function readEpisodes(): any[] {
+  ensureStorage();
+  return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'))
+}
+
+function writeEpisodes(episodes: any[]) {
+  ensureStorage();
+  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const { persona, invitee, topic, operatorPrompt } = req.body || {};
   const id = uuidv4();
@@ -47,8 +76,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         max_tokens: 2048,
       });
       content = completion.choices?.[0]?.message?.content || '';
-
-    } else {
       content = JSON.stringify({
         title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion'}`,
         questions: [
@@ -90,9 +117,49 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         .json({ error: 'Failed to generate structured content' });    }
 
     const episodes = readEpisodes();
-    const episode = {
-
+    const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
 
     const episodes = readEpisodes();
+<<<<<<< HEAD
     const episode = {
+      id,
+      createdAt: new Date().toISOString(),
+      persona,
+      invitee,
+      topic,
+      title: generated.title,
+      questions: generated.questions || [],
+      timeMarkers: generated.timeMarkers || {
+        intro: '00:00',
+        segments: [],
+        closing: '14:30',
+      },
+      transcript: generated.transcript,
+      youtubeDescription: generated.youtubeDescription || '',
+      spotifyDescription: generated.spotifyDescription || '',
+      bestQuote: generated.bestQuote || '',
+      audio: {},
+    };
+    episodes.unshift(episode);
+    writeEpisodes(episodes);
+
+    return res.status(200).json({ episode });
+  } catch (error: any) {
+    console.error(error);
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+  }    episodes.unshift(episode);
+    writeEpisodes(episodes);
+
+    return res.status(200).json({ episode })
+  } catch (error: any) {
+    console.error(error);
+    return res.status(500).json({ error: error?.message || 'Unknown error' })
+};
+}
+
+}
+}
+=======
+    const episode = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

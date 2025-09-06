@@ -7,7 +7,7 @@ const ANDROID_APP_URL =
   process.env.NEXT_PUBLIC_ANDROID_APP_URL ||
   'https://play.google.com/store/apps/details?id=com.zion.app';
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';export default function OpenApp() {
-  useEffect(() => {
+  useEffect(() => {;
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     const isAndroid = /Android/i.test(navigator.userAgent);
     const now = Date.now();

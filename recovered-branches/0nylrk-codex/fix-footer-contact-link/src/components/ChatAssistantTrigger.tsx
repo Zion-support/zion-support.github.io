@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {ChatAssistant} from "@/components/ChatAssistant";
-export function ChatAssistantTrigger() {
+export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false);
+=======
+import { useState } from "react",
+import { MessageSquare } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { ChatAssistant } from "@/components/ChatAssistant",
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -12,10 +21,10 @@ export function ChatAssistantTrigger() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"};
+          "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
-        })});
+        })}),
       
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
@@ -23,14 +32,46 @@ export function ChatAssistantTrigger() {
       
       return Promise.resolve()
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:", error),
       return Promise.resolve()
+<<<<<<< HEAD
     }
   };
 
   return (
     <>
       <Button
+=======
+import { useState } from "react",;
+import { MessageSquare } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { ChatAssistant } from "@/components/ChatAssistant",;
+export function ChatAssistantTrigger() {;
+  const [isOpen, setIsOpen] = useState(false),;
+  // Handle sending messages to the AI chat assistant;
+  const handleSendMessage = async (message: string): Promise<void> => {;
+    try {;
+      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {;
+        method: "POST",;
+        headers: {;
+          "Content-Type": "application/json"},;
+        body: JSON.stringify({;
+          messages: [{ role: "user", content: message }];
+        })}),;
+      if (!response.ok) {;
+        throw new Error("Failed to get response from AI assistant");
+      }
+;
+      return Promise.resolve();
+    } catch (error) {;
+      console.error("Error in AI chat:", error),;
+      return Promise.resolve();
+    }
+  },;
+  return (;
+    <>;
+      <Button;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         onClick={() => setIsOpen(true)}
         size="icon"
         variant="outline"
@@ -39,7 +80,6 @@ export function ChatAssistantTrigger() {
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
-      
       {isOpen && (
         <ChatAssistant
           isOpen={isOpen}
@@ -56,3 +96,4 @@ export function ChatAssistantTrigger() {
     </>
   )
 }
+;

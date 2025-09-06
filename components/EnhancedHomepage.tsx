@@ -1,4 +1,5 @@
- //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+<<<<<<< HEAD
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -13,6 +14,21 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
   opacity: 0 
+=======
+import React from 'react';
+
+interface EnhancedHomepageProps {
+  className?: string;
+}
+
+const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedHomepage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 visible: {
   opacity: 1, transition: {
@@ -172,22 +188,18 @@ const EnhancedHomepage: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
-        
         {/* Performance and SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#00d4ff" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
-        
         {/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </Head>
-
       {/* Enhanced Navigation */}
       <EnhancedNavigation />
-
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
         {/* Hero Section */}
         <motion.section 
@@ -204,7 +216,6 @@ const EnhancedHomepage: React.FC = () => {
             >
               Zion Tech Group
             </motion.h1>
-            
             <motion.p 
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
@@ -212,7 +223,10 @@ const EnhancedHomepage: React.FC = () => {
               Pioneering the Future of Technology with Revolutionary AI Consciousness,
               Quantum Computing, and Autonomous Solutions
             </motion.p>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Buttons */}
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
@@ -228,7 +242,6 @@ const EnhancedHomepage: React.FC = () => {
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </motion.button>
               </Link>
-              
               <Link href="/quote">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
@@ -240,7 +253,6 @@ const EnhancedHomepage: React.FC = () => {
                 </motion.button>
               </Link>
             </motion.div>
-
             {/* Contact Information */}
             <motion.div 
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
@@ -260,7 +272,6 @@ const EnhancedHomepage: React.FC = () => {
               </div>
             </motion.div>
           </div>
-
           {/* Floating Elements */}
           <motion.div
             className="absolute top-20 left-10 text-cyan-400/20"
@@ -269,7 +280,6 @@ const EnhancedHomepage: React.FC = () => {
           >
             <Atom className="w-8 h-8" />
           </motion.div>
-          
           <motion.div
             className="absolute top-40 right-20 text-blue-400/20"
             variants={floatingVariants}
@@ -278,7 +288,6 @@ const EnhancedHomepage: React.FC = () => {
           >
             <Brain className="w-6 h-6" />
           </motion.div>
-          
           <motion.div
             className="absolute bottom-40 left-20 text-purple-400/20"
             variants={floatingVariants}
@@ -288,7 +297,6 @@ const EnhancedHomepage: React.FC = () => {
             <Rocket className="w-7 h-7" />
           </motion.div>
         </motion.section>
-
         {/* Category Filter */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
@@ -303,7 +311,6 @@ const EnhancedHomepage: React.FC = () => {
             >
               Explore Our Revolutionary Services
             </motion.h2>
-            
             <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}
@@ -327,7 +334,10 @@ const EnhancedHomepage: React.FC = () => {
             </motion.div>
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Grid */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
@@ -360,7 +370,6 @@ const EnhancedHomepage: React.FC = () => {
                 />
               ))}
             </motion.div>
-            
             {getFilteredServices().length > 12 && (
               <motion.div 
                 className="text-center mt-12"
@@ -380,7 +389,10 @@ const EnhancedHomepage: React.FC = () => {
             )}
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Featured Service Showcase */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
@@ -395,7 +407,6 @@ const EnhancedHomepage: React.FC = () => {
             >
               Featured Revolutionary Services
             </motion.h2>
-            
             <motion.div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}
@@ -413,11 +424,9 @@ const EnhancedHomepage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-4">
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
-                    
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
-                    
                     <div className="flex flex-wrap gap-4 mb-6">
                       {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
                         <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
@@ -425,7 +434,6 @@ const EnhancedHomepage: React.FC = () => {
                         </span>
                       ))}
                     </div>
-                    
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -437,7 +445,6 @@ const EnhancedHomepage: React.FC = () => {
                       </motion.button>
                     </Link>
                   </div>
-                  
                   <div className="relative">
                     <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center">
                       <div className="text-center">
@@ -453,7 +460,6 @@ const EnhancedHomepage: React.FC = () => {
             </motion.div>
           </div>
         </motion.section>
-
         {/* Call to Action */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
@@ -468,7 +474,6 @@ const EnhancedHomepage: React.FC = () => {
             >
               Ready to Transform Your Business?
             </motion.h2>
-            
             <motion.p 
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
@@ -476,7 +481,6 @@ const EnhancedHomepage: React.FC = () => {
               Join the future of technology with Zion Tech Group's revolutionary solutions. 
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
-            
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}
@@ -491,7 +495,6 @@ const EnhancedHomepage: React.FC = () => {
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </motion.button>
               </Link>
-              
               <Link href="/contact">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
@@ -506,7 +509,10 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
       </UltraFuturisticBackground>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (

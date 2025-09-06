@@ -21,7 +21,7 @@ import {
   Gamepad2,
   Bot,
   Factory,
-  Car,
+  Car,;
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {
@@ -208,7 +208,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                         }`}
                       />
                     </button>
-
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
@@ -255,7 +254,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             >
               <Search className="w-5 h-5" />
             </motion.button>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Notifications */}
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
@@ -266,7 +268,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               <Bell className="w-5 h-5" />
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -293,7 +298,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </motion.button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -314,7 +322,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                 />
               </div>
-
               {/* Navigation Items */}
               {navigationItems.map((item) => (
                 <div key={item.name} className="space-y-2">
@@ -325,7 +332,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   >
                     {item.name}
                   </Link>
-
                   {item.hasDropdown && item.dropdownItems && (
                     <div className="ml-4 space-y-1">
                       {item.dropdownItems.map((dropdownItem) => (
@@ -356,7 +362,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   </div>
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className="pt-4">
                 <Link
@@ -372,6 +377,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         )}
       </AnimatePresence>
     </nav>
-  );
+);
 };
+<<<<<<< HEAD
 export default EnhancedNavigation;
+=======
+
+export default EnhancedNavigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

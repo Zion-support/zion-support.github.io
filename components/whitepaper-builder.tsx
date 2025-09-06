@@ -1,12 +1,16 @@
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 import {
-  getWhitepaperSections,
+  getWhitepaperSections,;
   OPERATOR_PROMPT,;
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+<<<<<<< HEAD
+export default function WhitepaperBuilderPage() {;
+=======
 export default function WhitepaperBuilderPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
 
@@ -23,7 +27,6 @@ export default function WhitepaperBuilderPage() {
           Investor and Developer editions. Toggle, review, and download as PDF.
         </p>
       </div>
-
       <div className='flex flex-wrap gap-3 items-center'>
         <label className='font-medium'>Edition</label>
         <select
@@ -44,7 +47,6 @@ export default function WhitepaperBuilderPage() {
         <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>
         <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Toggle, review, and download as PDF.</p>
       </div>
-
       <div className="flex flex-wrap gap-3 items-center">
         <label className="font-medium" htmlFor="input-Edition">Edition</label>
         <select
@@ -62,14 +64,12 @@ export default function WhitepaperBuilderPage() {
           </a>
         </Link>
       </div>
-
       <div className='rounded border p-4 bg-gray-50 dark:bg-gray-900'>
         <h2 className='text-xl font-semibold mb-2'>Operator Prompt</h2>
         <pre className='whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200'>
           {OPERATOR_PROMPT}
         </pre>
       </div>
-
       <div className='space-y-10'>
         {sections.map(s => (
           <section key={s.id} className='space-y-2'>
@@ -86,5 +86,5 @@ export default function WhitepaperBuilderPage() {
         ))}
       </div>
     </div>
-  );
+);
 }

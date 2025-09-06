@@ -1,17 +1,24 @@
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
-    "Synthetic traffic for staging",
+    "Synthetic traffic for staging",;
   ];
 
+<<<<<<< HEAD
+return (
+=======
   return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     <>
       <SEO
         title="API Performance Testing"

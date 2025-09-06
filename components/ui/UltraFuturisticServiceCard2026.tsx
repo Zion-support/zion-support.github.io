@@ -1,7 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import {Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket} from 'lucide-react';
-
 interface Service {
   id: string,
   name: string,
@@ -142,7 +141,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">
         {/* Enhanced Background Glow */}
         <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+<<<<<<< HEAD
+=======
         
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Popular Badge */}
         {service.popular && (
           <motion.div
@@ -161,27 +163,22 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles.iconBg} flex items-center justify-center border ${styles.iconBorder} text-4xl backdrop-blur-sm`}>
             {service.icon}
           </div>
-          
           <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">
             {service.name}
           </h3>
-          
           <p className="text-gray-300 text-sm mb-4 leading-relaxed">
             {service.tagline}
           </p>
-          
           <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">
             {service.price}
             <span className="text-lg text-gray-400 font-normal">/{service.period}</span>
           </div>
-          
           {/* Category Badge */}
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gray-800/50 border border-gray-600/30 rounded-full text-xs text-gray-300">
             <CategoryIcon className="w-3 h-3" />
             <span>{service.category}</span>
           </div>
         </div>
-        
         {/* Features List */}
         <div className="space-y-3 mb-8 relative z-10">
           <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">
@@ -201,7 +198,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
         
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -209,7 +209,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <span className="text-gray-400">Market Price:</span>
               <span className="text-green-400 font-semibold">{service.marketPrice}</span>
             </div>
-            
             {service.competitors && (
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
@@ -225,7 +224,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <div className="text-gray-400 mb-2">Target Market:</div>
               <div className="text-gray-300">{service.targetMarket}</div>
             </div>
-            
             {service.useCases && (
               <div className="text-xs mt-3">
                 <div className="text-gray-400 mb-2">Use Cases:</div>
@@ -263,7 +261,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Get Started
           </motion.button>
         </div>
+<<<<<<< HEAD
+=======
         
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -273,4 +274,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 
+<<<<<<< HEAD
 export default UltraFuturisticServiceCard2026;
+=======
+export default UltraFuturisticServiceCard2026;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

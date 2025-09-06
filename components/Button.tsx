@@ -1,16 +1,14 @@
 import React from 'react';
 
 interface ButtonProps {
-  children: React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';
-
+  children: React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';interface ButtonProps {
+  children: React.ReactNode,
   variant?: 'primary' | 'secondary' | 'outline';
-
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-
 export default function Button({
   children,
   variant = 'primary',
@@ -20,7 +18,7 @@ export default function Button({
   type = 'button',
   disabled = false,
 }: ButtonProps) {
-  const baseClasses =
+  const baseClasses =;
     'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
 
   const variantClasses = {
@@ -48,19 +46,27 @@ export default function Button({
       {children}
     </button>
   );
-}
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',
-
+}  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',
+  
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
-
+  
   return (
     <button
       type={type}
       className={classes}
       onClick={onClick}
       disabled={disabled}
+<<<<<<< HEAD
+      {children}
+    </button>
+);
+}
+
+}
+=======
 
     >
       {children}
     </button>
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

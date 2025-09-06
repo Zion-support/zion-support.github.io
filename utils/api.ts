@@ -1,9 +1,5 @@
-// Define RequestInit if not available
-interface File extends Blob {
-  name: string;
-  lastModified: number;
-}
 
+<<<<<<< HEAD
 interface Blob {
   size: number;
   type: string;
@@ -117,7 +113,7 @@ class ApiClient {
         ...options,
         signal: controller.signal,
         headers: {
-          ...this.defaultHeaders,
+...this.defaultHeaders,
           ...options.headers,
         },
       });
@@ -174,3 +170,5 @@ class ApiClient {
 
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

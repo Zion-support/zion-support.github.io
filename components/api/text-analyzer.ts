@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 interface TextAnalysisResult {
   text: string;
   statistics: {
@@ -46,14 +45,12 @@ interface TextAnalysisResult {
     trigrams: Array<{ phrase: string, count: number }>
   }
 }
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });  }
-
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
@@ -66,9 +63,11 @@ export default async function handler(
     if (text.length > 10000) {
       return res
         .status(400)
-        .json({ error: 'Text too long (max 10,000 characters)' });    }
-
+        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res.status(400).json({ error: 'Text is required' })
     }
+
+    if (text.length > 10000) {
+      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
 
     // Basic statistics
     const characters = text.length;
@@ -82,7 +81,9 @@ export default async function handler(
       .filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text
       .split(/\n\s*\n/)
-      .filter(para => para.trim().length > 0).length;
+      .filter(para => para.trim().length > 0).length;    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
+    const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
 
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
@@ -95,9 +96,11 @@ export default async function handler(
     };
 
     const syllables = text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word);    }, 0);
+      return total + syllableCount(word);    }, 0);      return matches ? matches.length : 1
+    };
 
-    }, 0);
+    const syllables = text.split(/\s+/).reduce((total, word) => {
+      return total + syllableCount(word)
 
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
     const readingTime = Math.ceil(words / 200);
@@ -141,7 +144,6 @@ export default async function handler(
       0,
       4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43
     );
-
     const averageGrade = Math.round(
       (fleschKincaidGrade +
         gunningFog +
@@ -207,15 +209,15 @@ export default async function handler(
         wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1)
       }
     });
-
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
       .map(([word, count]) => ({
         word,
         count,
-        frequency: Math.round((count / words) * 1000) / 10,      }));
-
+        frequency: Math.round((count / words) * 1000) / 10,      }));        word;
+        count;
+        frequency: Math.round((count / words) * 1000) / 10
       }));
 
     // Bigrams and trigrams
@@ -224,15 +226,19 @@ export default async function handler(
     const trigramCounts = new Map<string, number>();
 
     for (let i = 0; i < wordsArray.length - 1; i++) {
-
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1);
     }
 
     for (let i = 0; i < wordsArray.length - 2; i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
-      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);    }
+      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);    }      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
+      bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
+    }
 
+    for (let i = 0, i < wordsArray.length - 2, i++) {
+      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
+      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
     }
 
     const bigrams = Array.from(bigramCounts.entries())
@@ -250,9 +256,72 @@ export default async function handler(
     const confidence = isEnglish ? 0.95 : 0.5;
 
     const result: TextAnalysisResult = {
-      text,
-
+      text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
 
+<<<<<<< HEAD
     const result: TextAnalysisResult = {
+      text,
+        characters,
+        charactersNoSpaces,
+        words,
+        sentences,
+        paragraphs,
+        syllables,
+        readingTime,
+        speakingTime,
+      },
+      readability: {
+        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100,
+        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
+        gunningFog: Math.round(gunningFog * 100) / 100,
+        smog: Math.round(smog * 100) / 100,
+        colemanLiau: Math.round(colemanLiau * 100) / 100,
+        automatedReadability: Math.round(automatedReadability * 100) / 100,
+        averageGrade,
+      },
+      sentiment: {
+        score: sentimentScore,
+        label: sentimentLabel,
+        positiveWords: textWords.filter(word => positiveWords.includes(word)),
+        negativeWords: textWords.filter(word => negativeWords.includes(word)),
+      },
+      language: {
+        detectedLanguage,
+        confidence,
+        isEnglish,
+      },
+      keywords: {
+        topWords,
+        bigrams,
+        trigrams,
+      },
+    };
+
+    res.status(200).json(result);
+  } catch (error) {
+    console.error('Text analysis error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }        score: sentimentScore;
+        label: sentimentLabel;
+        positiveWords: textWords.filter(word => positiveWords.includes(word));
+        negativeWords: textWords.filter(word => negativeWords.includes(word))};
+      language: {
+        detectedLanguage;
+        confidence;
+        isEnglish};
+      keywords: {
+        topWords;
+        bigrams;
+        trigrams}};
+
+    res.status(200).json(result)
+  } catch (error) {
+    console.error('Text analysis error:', error);
+    res.status(500).json({ error: 'Internal server error' })
+  }
+}
+=======
+    const result: TextAnalysisResult = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

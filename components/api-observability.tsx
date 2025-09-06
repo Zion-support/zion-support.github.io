@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+=======
  return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   service.name 
 }- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
@@ -7,7 +11,11 @@ import {Shield, Phone, Mail, MapPin, Check, ArrowRight} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+export default function ApiObservabilityPage() {;
+=======
 export default function ApiObservabilityPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
   if (!service) return null;
 
@@ -55,3 +63,7 @@ export default function ApiObservabilityPage() {
   );
 }
 
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

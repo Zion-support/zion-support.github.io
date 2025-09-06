@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -12,44 +13,100 @@ import {Separator} from '@/components/ui/separator';
 import {Switch} from '@/components/ui/switch';
 import {Label} from '@/components/ui/label';
 import {toast} from 'sonner';
-export default function AccountSettings() {
+export default function AccountSettings() {;
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+import { useState, useEffect } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { useAuth } from '@/hooks/useAuth',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Wallet, Database, Save } from "lucide-react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Separator } from '@/components/ui/separator',
+import { Switch } from '@/components/ui/switch',
+import { Label } from '@/components/ui/label',
+import { toast } from 'sonner',
+export default function AccountSettings() {
+  const { user } = useAuth(),
+  const [displayWeb3, setDisplayWeb3] = useState(false),
+  const [didHandle, setDidHandle] = useState(''),
+  const [enableBackup, setEnableBackup] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('account_settings');
+      const saved = localStorage.getItem('account_settings'),
       if (saved) {
-        const parsed = JSON.parse(saved);
-        setDisplayWeb3(!!parsed.displayWeb3);
-        setDidHandle(parsed.didHandle || '');
+        const parsed = JSON.parse(saved),
+        setDisplayWeb3(!!parsed.displayWeb3),
+        setDidHandle(parsed.didHandle || ''),
         setEnableBackup(!!parsed.enableBackup)
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Wallet, Database, Save } from "lucide-react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Separator } from '@/components/ui/separator',;
+import { Switch } from '@/components/ui/switch',;
+import { Label } from '@/components/ui/label',;
+import { toast } from 'sonner',;
+export default function AccountSettings() {;
+  const { user } = useAuth(),;
+  const [displayWeb3, setDisplayWeb3] = useState(false),;
+  const [didHandle, setDidHandle] = useState(''),;
+  const [enableBackup, setEnableBackup] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  useEffect(() => {;
+    try {;
+      const saved = localStorage.getItem('account_settings'),;
+      if (saved) {;
+        const parsed = JSON.parse(saved),;
+        setDisplayWeb3(!!parsed.displayWeb3),;
+        setDidHandle(parsed.didHandle || ''),;
+        setEnableBackup(!!parsed.enableBackup);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch (e) {
       console.error('Error loading account settings', e)
     }
+<<<<<<< HEAD
   }, []);
+=======
+  }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSave = () => {
-    setIsSubmitting(true);
+    setIsSubmitting(true),
 
     // Simulate API call
     setTimeout(() => {
       try {
         localStorage.setItem(
-          'account_settings';
+          'account_settings',
           JSON.stringify({ displayWeb3, didHandle, enableBackup })
-        );
-        console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+        ),
+        // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),
         toast.success('Account settings updated successfully')
       } catch (e) {
-        console.error('Failed to save settings', e);
+        console.error('Failed to save settings', e),
         toast.error('Failed to save settings')
       } finally {
         setIsSubmitting(false)
+<<<<<<< HEAD
       }
     }, 1000)
   };
@@ -80,6 +137,52 @@ export default function AccountSettings() {
         const ensName = await provider.lookupAddress(address);
         if (ensName) {
           setDidHandle(ensName)
+=======
+  }, []),;
+  const handleSave = () => {;
+    setIsSubmitting(true),;
+    // Simulate API call;
+    setTimeout(() => {;
+      try {;
+        localStorage.setItem(;
+          'account_settings',;
+          JSON.stringify({ displayWeb3, didHandle, enableBackup });
+        ),;
+        // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),;
+        toast.success('Account settings updated successfully');
+      } catch (e) {;
+        console.error('Failed to save settings', e),;
+        toast.error('Failed to save settings');
+      } finally {;
+        setIsSubmitting(false);
+      }
+    }, 1000);
+  },;
+  const handleConnectWallet = async () => {;
+    try {;
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum,;
+      if (!ethereum) {;
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),;
+        return;
+      }
+;
+      // Request accounts;
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),;
+      const address = accounts[0],;
+      // Sign message to verify ownership;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,;
+      await ethereum.request({;
+        method: 'personal_sign',;
+        params: [address, message];
+      }),;
+      // Auto-set DID handle if ENS is available;
+      try {;
+        const provider = new (window as any).ethers.providers.Web3Provider(ethereum),;
+        const ensName = await provider.lookupAddress(address);
+        if (ensName) {;
+          setDidHandle(ensName);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       } catch (error) {
         console.error('ENS lookup error:', error)
@@ -89,7 +192,11 @@ export default function AccountSettings() {
     } catch (error: any) {
       toast.error(error.message || 'Failed to connect wallet')
     }
+<<<<<<< HEAD
   };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <>
@@ -97,7 +204,6 @@ export default function AccountSettings() {
       <Header />
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
             <CardHeader>
@@ -114,7 +220,6 @@ export default function AccountSettings() {
                   className="bg-gray-100"
                 />
               </div>
-              
               <div className="space-y-2">
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>
                 <div className="flex gap-2">
@@ -138,7 +243,6 @@ export default function AccountSettings() {
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
-              
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
@@ -150,9 +254,7 @@ export default function AccountSettings() {
                   onCheckedChange={setDisplayWeb3}
                 />
               </div>
-              
               <Separator />
-              
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
@@ -169,7 +271,6 @@ export default function AccountSettings() {
                   onCheckedChange={setEnableBackup}
                 />
               </div>
-              
               {enableBackup && (
                 <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
                   Data will be backed up to decentralized storage. This feature is in beta.
@@ -186,7 +287,6 @@ export default function AccountSettings() {
               </Button>
             </CardContent>
           </Card>
-          
           <Card>
             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
@@ -235,7 +335,6 @@ export default function AccountSettings() {
                   </div>
                 )}
               </div>
-              
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -265,7 +364,6 @@ export default function AccountSettings() {
                   </div>
                 </div>
               </div>
-              
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button 
@@ -289,3 +387,4 @@ export default function AccountSettings() {
     </>
   )
 }
+;

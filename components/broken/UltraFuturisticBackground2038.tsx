@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraFuturisticBackground2038Props {
   intensity?: 'low' | 'medium' | 'high';
   theme?:
     | 'quantum'
@@ -15,13 +14,10 @@ interface UltraFuturisticBackground2038Props {
 export default function UltraFuturisticBackground2038({
   intensity = 'medium',
   theme = 'consciousness',
-  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ 
+  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
   intensity = 'medium';
   theme = 'consciousness';
   children
-
-}: UltraFuturisticBackground2038Props) {
-
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -33,7 +29,8 @@ export default function UltraFuturisticBackground2038({
       '(prefers-reduced-motion: reduce)'
     ).matches;
     const intensityMultiplier =
-      intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
+      intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -43,10 +40,8 @@ export default function UltraFuturisticBackground2038({
       if (rect) {
         canvas.width = rect.width * (window.devicePixelRatio || 1);
         canvas.height = rect.height * (window.devicePixelRatio || 1);
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);      }
-
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);      }        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
       }
-
     };
 
     resizeCanvas();
@@ -89,8 +84,6 @@ export default function UltraFuturisticBackground2038({
               '#f59e0b',
               '#ef4444',
             ],
-
-          };
         case 'neon':
           return {
             primary: [
@@ -270,9 +263,6 @@ export default function UltraFuturisticBackground2038({
             accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4'],
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
           }
-
-      }
-
     };
 
     const colors = getThemeColors();
@@ -323,8 +313,6 @@ export default function UltraFuturisticBackground2038({
       consciousness: number,
       quantumState: number
 
-    }> = [];
-
     // Initialize particles with enhanced consciousness and quantum effects
     const initParticles = () => {
       particles = [];
@@ -338,14 +326,12 @@ export default function UltraFuturisticBackground2038({
               ? 'quantum-field'
               : Math.random() > 0.3
                 ? 'hologram'
-                : 'particle';
-
+                : 'particle';      
       for (let i = 0, i < particleCount, i++) {
         const type = Math.random() > 0.7 ? 'consciousness' : 
                     Math.random() > 0.5 ? 'quantum-field' : 
                     Math.random() > 0.3 ? 'hologram' : 'particle';
-
-        particles.push({
+        
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 2 * intensityMultiplier,
@@ -354,10 +340,9 @@ export default function UltraFuturisticBackground2038({
           opacity: Math.random() * 0.8 + 0.2,
           color:
             colors.primary[Math.floor(Math.random() * colors.primary.length)],
-          type,          life: Math.random() * 100,
-
+          type,          life: Math.random() * 100,          color: colors.primary[Math.floor(Math.random() * colors.primary.length)],
+          type;
           life: Math.random() * 100,
-
           maxLife: 100,
           rotation: Math.random() * Math.PI * 2,
           rotationSpeed: (Math.random() - 0.5) * 0.1,
@@ -367,10 +352,10 @@ export default function UltraFuturisticBackground2038({
           entanglement: [Math.random(), Math.random()],
           consciousness: Math.random(),
           quantumState: Math.random(),
-        });      }
-
-      }
-
+        });      }          entanglement: [Math.random(), Math.random()];
+          consciousness: Math.random(),
+          quantumState: Math.random()
+        })
     };
 
     // Enhanced animation loop with consciousness and quantum effects
@@ -389,10 +374,22 @@ export default function UltraFuturisticBackground2038({
             const alpha = (noise + 0.5) * 0.1;
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
+<<<<<<< HEAD
+              ctx.fillRect(x, y, 20, 20);            }      // Create quantum field effects
+      if (theme === 'consciousness' || theme === 'quantum') {
+        const time = Date.now() * 0.001;
+        for (let x = 0, x < canvas.width, x += 20) {
+          for (let y = 0, y < canvas.height, y += 20) {
+            const noise = Math.sin(x * 0.01 + time) * Math.cos(y * 0.01 + time) * 0.5;
+            const alpha = (noise + 0.5) * 0.1;
+            if (alpha > 0.05) {
+              ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
+              ctx.fillRect(x, y, 20, 20)
+=======
               ctx.fillRect(x, y, 20, 20);            }
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
-
           }
         }
       }
@@ -414,10 +411,9 @@ export default function UltraFuturisticBackground2038({
             if (index !== otherIndex && Math.random() > 0.99) {
               const distance = Math.sqrt(
                 Math.pow(particle.x - otherParticle.x, 2) +
-                  Math.pow(particle.y - otherParticle.y, 2)              );
-
+                  Math.pow(particle.y - otherParticle.y, 2)              );                Math.pow(particle.x - otherParticle.x, 2) + 
+                Math.pow(particle.y - otherParticle.y, 2)
               );
-
               if (distance < 100) {
                 ctx.strokeStyle = `rgba(139, 92, 246, ${0.3 * (1 - distance / 100)})`;
                 ctx.lineWidth = 1;
@@ -430,13 +426,20 @@ export default function UltraFuturisticBackground2038({
           });        }
 
         // Consciousness wave effects
-        if (particle.type === 'consciousness') {
-
-        }
+        if (particle.type === 'consciousness') {                ctx.stroke()
+              }
+            }
+          })
 
         // Consciousness wave effects
         if (particle.type === 'consciousness') {
-
+          const waveX =
+            particle.x + Math.sin(particle.phase) * particle.amplitude;
+          const waveY =
+            particle.y + Math.cos(particle.phase) * particle.amplitude;
+          const waveX = particle.x + Math.sin(particle.phase) * particle.amplitude;
+          const waveY = particle.y + Math.cos(particle.phase) * particle.amplitude;
+          
           ctx.strokeStyle = `rgba(255, 0, 128, ${particle.opacity * 0.6})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
@@ -447,13 +450,28 @@ export default function UltraFuturisticBackground2038({
         // Holographic effects
         if (particle.type === 'hologram') {
           const hologramSize =
-            particle.size * (1 + Math.sin(particle.phase) * 0.3);
-
+            particle.size * (1 + Math.sin(particle.phase) * 0.3);          ctx.stroke()
         }
 
         // Holographic effects
         if (particle.type === 'hologram') {
-
+          const hologramSize =
+            particle.size * (1 + Math.sin(particle.phase) * 0.3);
+          ctx.strokeStyle = `rgba(78, 205, 196, ${particle.opacity})`;
+          ctx.lineWidth = 1;
+          ctx.strokeRect(
+            particle.x - hologramSize / 2,
+            particle.y - hologramSize / 2,
+            hologramSize,
+            hologramSize
+          );        }          ctx.strokeStyle = `rgba(78, 205, 196, ${particle.opacity})`;
+          ctx.lineWidth = 1;
+          ctx.strokeRect(
+            particle.x - hologramSize / 2, 
+            particle.y - hologramSize / 2, 
+            hologramSize, 
+            hologramSize
+          )
         }
 
         // Quantum field effects
@@ -470,7 +488,6 @@ export default function UltraFuturisticBackground2038({
           gradient.addColorStop(
             0,
             `rgba(139, 92, 246, ${particle.opacity * 0.8})`
-
           );
           gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
 
@@ -486,15 +503,60 @@ export default function UltraFuturisticBackground2038({
         if (particle.type === 'particle') {
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255)
             .toString(16)
-            .padStart(2, '0')}`;
-
+            .padStart(2, '0')}`;          );
+          gradient.addColorStop(0, `rgba(139, 92, 246, ${particle.opacity * 0.8})`);
+          gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
+          
+          ctx.fillStyle = gradient;
+          ctx.fillRect(
+            particle.x - fieldSize / 2, 
+            particle.y - fieldSize / 2, 
+            fieldSize, 
+            fieldSize
+          )
         }
 
         // Standard particle rendering
         if (particle.type === 'particle') {
+          ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255)
+            .toString(16)
+            .padStart(2, '0')}`;
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
 
+<<<<<<< HEAD
+        // Boundary wrapping with quantum tunneling effect
+        if (
+          particle.x < 0 ||
+          particle.x > canvas.width ||
+          particle.y < 0 ||
+          particle.y > canvas.height
+        ) {
+          if (Math.random() > 0.8) {
+            // Quantum tunneling
+            particle.x = Math.random() * canvas.width;
+            particle.y = Math.random() * canvas.height;
+          } else {
+            particle.x = (particle.x + canvas.width) % canvas.width;
+            particle.y = (particle.y + canvas.height) % canvas.height;          }          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          ctx.fill()
+        }
+
+        // Boundary wrapping with quantum tunneling effect
+        if (particle.x < 0 || particle.x > canvas.width || 
+            particle.y < 0 || particle.y > canvas.height) {
+          if (Math.random() > 0.8) { // Quantum tunneling
+            particle.x = Math.random() * canvas.width;
+            particle.y = Math.random() * canvas.height
+          } else {
+            particle.x = (particle.x + canvas.width) % canvas.width;
+            particle.y = (particle.y + canvas.height) % canvas.height
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
-
         }
 
         // Regenerate particles
@@ -507,9 +569,11 @@ export default function UltraFuturisticBackground2038({
         }
       });
 
-      requestAnimationFrame(animate);    };
+      requestAnimationFrame(animate);    };          particle.quantumState = Math.random() * Math.PI * 2
+        }
+      });
 
-    };
+      requestAnimationFrame(animate)
 
     initParticles();
     animate();
@@ -517,7 +581,6 @@ export default function UltraFuturisticBackground2038({
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
-
   }, [intensity, theme]);
 
   return (
@@ -547,8 +610,19 @@ export default function UltraFuturisticBackground2038({
                 className='absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20'
                 style={{
                   left: `${(i * 5) % 100}%`,
+<<<<<<< HEAD
+                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
+                animate={{
+                  height: [32, 64, 32];
+                  opacity: [0.2, 0.6, 0.2]}}
+                transition={{
+                  duration: 3 + i * 0.2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+=======
                   top: `${(i * 3) % 100}%`,
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }}
                 animate={{
                   height: [32, 64, 32],
@@ -566,14 +640,28 @@ export default function UltraFuturisticBackground2038({
         {/* Holographic grid */}
         {theme === 'holographic' && (
           <div className='absolute inset-0'>
-
             {[...Array(15)].map((_, i) => (
               <motion.div
                 key={i}
                 className='absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
                 style={{
+<<<<<<< HEAD
+                  top: `${(i * 7) % 100}%`,            {[...Array(15)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+                style={{
+                  top: `${(i * 7) % 100}%`}}
+                animate={{
+                  opacity: [0.3, 0.8, 0.3]}}
+                transition={{
+                  duration: 4 + i * 0.3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+=======
                   top: `${(i * 7) % 100}%`,
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3],
@@ -590,15 +678,31 @@ export default function UltraFuturisticBackground2038({
         {/* Consciousness waves */}
         {theme === 'consciousness' && (
           <div className='absolute inset-0'>
-
             {[...Array(8)].map((_, i) => (
               <motion.div
                 key={i}
                 className='absolute w-96 h-96 border border-pink-500/20 rounded-full'
                 style={{
                   left: `${(i * 12) % 100}%`,
+<<<<<<< HEAD
+                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-96 h-96 border border-pink-500/20 rounded-full"
+                style={{
+                  left: `${(i * 12) % 100}%`,
+                  top: `${(i * 8) % 100}%`}}
+                animate={{
+                  scale: [1, 1.5, 1];
+                  opacity: [0.2, 0.6, 0.2]}}
+                transition={{
+                  duration: 6 + i * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+=======
                   top: `${(i * 8) % 100}%`,
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }}
                 animate={{
                   scale: [1, 1.5, 1],
@@ -613,7 +717,10 @@ export default function UltraFuturisticBackground2038({
           </div>
         )}
       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {children}
     </div>
   );
@@ -648,4 +755,10 @@ animate ();
 }</div>) 
 }</div> {
   children 
+<<<<<<< HEAD
+}</div>)   )
+}
+;
+=======
 }</div>)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

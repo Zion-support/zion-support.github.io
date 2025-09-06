@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -17,7 +18,7 @@ const mockTalent: TalentProfile = {
   profile_picture_url: '',
   skills: ['ReactNode.jsSmart Contracts']},
 
-export function ContractBuilderContent() {
+export function ContractBuilderContent() {;
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
@@ -38,21 +39,76 @@ export function ContractBuilderContent() {
       isSmartContract: false
     }
   ]);
+=======
+import { useState } from 'react',;
+import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
+import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
+import { ContractHeader } from './ContractHeader',;
+import { ContractTypeCards } from './ContractTypeCards',;
+import { RecentContractsTable } from './RecentContractsTable',;
+import { TalentProfile } from '@/types/talent',;
+import { useAuth } from '@/hooks/useAuth',;
+// Mock data for demo purposes;
+const mockTalent: TalentProfile = {;
+  id: 'talent-123',;
+  user_id: 'user-abc-123',;
+  full_name: 'Alex Chen',;
+  professional_title: 'Full Stack Developer',;
+  hourly_rate: 85,;
+  profile_picture_url: '',;
+  skills: ['ReactNode.jsSmart Contracts']},;
+export function ContractBuilderContent() {;
+  const { user } = useAuth(),;
+  const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none'),;
+  const [recentContracts, setRecentContracts] = useState([;
+    {;
+      id: 'contract-1',;
+      title: 'Website Redesign',;
+      client: 'Acme Corp',;
+      talent: 'Alex Chen',;
+      date: '2025-05-15',;
+      isSmartContract: true;
+    },;
+    {;
+      id: 'contract-2',;
+      title: 'Mobile App Development',;
+      client: 'TechStart Inc',;
+      talent: 'Sarah Williams',;
+      date: '2025-05-10',;
+      isSmartContract: false;
+    }
+  ]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleContractGenerated = (content: string) => {
-    console.log('Contract generated:', content.substring(0, 100) + '...')
-  };
+    // // // console.log('Contract generated:', content.substring(0, 100) + '...')
+  },
 
   const handleViewContract = (contractId: string) => {
-    console.log('Viewing contract:', contractId);
+    // // // console.log('Viewing contract:', contractId),
     // Future implementation: View specific contract details
-  };
+  },
 
   return (
     <>
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
       
       <ContractTypeCards 
+<<<<<<< HEAD
+=======
+  ]),;
+  const handleContractGenerated = (content: string) => {;
+    // // // console.log('Contract generated:', content.substring(0, 100) + '...');
+  },;
+  const handleViewContract = (contractId: string) => {;
+    // // // console.log('Viewing contract:', contractId);
+    // Future implementation: View specific contract details;
+  };
+  return (;
+    <>;
+      <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />;
+      <ContractTypeCards;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         onStandardClick={() => setShowBuilderType('standard')}
         onSmartClick={() => setShowBuilderType('smart')}
       />
@@ -61,7 +117,6 @@ export function ContractBuilderContent() {
         contracts={recentContracts}
         onViewContract={handleViewContract}
       />
-      
       {showBuilderType === 'standard' && (
         <ContractBuilder
           isOpen={true}
@@ -84,3 +139,4 @@ export function ContractBuilderContent() {
     </>
   )
 }
+;

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+const getInitialPosition = () => {
+=======
  const getInitialPosition = () => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   switch (direction) {
-  case 'up': 
+  case 'up':
 
 export const LazySection: React.FC<LazySectionProps> = ({
   children,
@@ -8,7 +12,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
   threshold = 0.1,
   delay = 0,
   direction = 'up',
-}) => {
+}) => {;
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
 
@@ -41,7 +45,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
     }
   };
 
-  
     >
       {children}
     </motion.div>

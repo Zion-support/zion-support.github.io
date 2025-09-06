@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
     const supabase = createServerClient();
     const talentId = (req.query.talentId as string) || null,
 
@@ -83,4 +83,7 @@ export default async function handler(
       ],
     });
   }
+}
+
+}
 }

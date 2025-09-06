@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -111,7 +112,6 @@ const ProductsIndex: NextPage = () => {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-          
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -128,7 +128,6 @@ const ProductsIndex: NextPage = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
@@ -146,7 +145,6 @@ const ProductsIndex: NextPage = () => {
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2 justify-center mb-8">
                 {categories.map((category) => (
@@ -163,7 +161,6 @@ const ProductsIndex: NextPage = () => {
                   </button>
                 ))}
               </div>
-
               <div className="text-center">
                 <button
                   onClick={() => {
@@ -178,7 +175,6 @@ const ProductsIndex: NextPage = () => {
             </div>
           </div>
         </section>
-
         {/* Products Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -207,15 +203,12 @@ const ProductsIndex: NextPage = () => {
                         )}
                       </div>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {product.name}
                     </h3>
-                    
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {product.description}
                     </p>
-                    
                     <div className="space-y-2 mb-4">
                       <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
@@ -227,7 +220,6 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>
                       <ul className="space-y-1">
@@ -239,14 +231,12 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="space-y-2 mb-6">
                       <div className="flex justify-between items-center">
                         <span className="text-sm font-medium text-gray-900">Pricing:</span>
                         <span className="text-lg font-bold text-blue-600">{product.pricing}</span>
                       </div>
                     </div>
-                    
                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -255,7 +245,6 @@ const ProductsIndex: NextPage = () => {
                 </motion.div>
               ))}
             </div>
-
             {filteredProducts.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-gray-400 mb-4">
@@ -267,7 +256,6 @@ const ProductsIndex: NextPage = () => {
             )}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -307,3 +295,22 @@ export default ProductsIndex;
 };
 
 export default Index;
+=======
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const Index: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name="description" content="Index page" />
+      </Head>
+      <main>
+        <h1>Index</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+  )
+},
+export default Index,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

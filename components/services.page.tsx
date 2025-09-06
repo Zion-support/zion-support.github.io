@@ -1,6 +1,9 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -16,8 +19,6 @@ export default function ServicesPage() {
             Dedicated squads to launch your MVP in weeks with tight feedback
             cycles.
           </p>
-
-        </section>
         <section
           id='security'
           className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'
@@ -41,14 +42,17 @@ export default function ServicesPage() {
             product.
           </p>        </section>
       </div>
-    </EnhancedLayout>
+    </EnhancedLayout>;
   );
 }        <section id="ai" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <BadgeCheck className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">AI Integrations</div>
           <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>
-
-        </section>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

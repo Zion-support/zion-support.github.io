@@ -123,6 +123,7 @@ export type Database = {
             referencedColumns: ["user_id"]
           }]
       }
+<<<<<<< HEAD
       api_logs: {
         Row: {
           api_key_id: string | null
@@ -159,6 +160,44 @@ export type Database = {
           status_code?: number
           user_agent?: string | null
           user_id?: string | null
+=======
+      api_logs: {;
+        Row: {;
+          api_key_id: string | null;
+          created_at: string;
+          endpoint: string;
+          id: string;
+          ip_address: string | null;
+          method: string;
+          response_time_ms: number | null;
+          status_code: number;
+          user_agent: string | null;
+          user_id: string | null;
+        }
+        Insert: {;
+          api_key_id?: string | null;
+          created_at?: string;
+          endpoint: string;
+          id?: string;
+          ip_address?: string | null;
+          method: string;
+          response_time_ms?: number | null;
+          status_code: number;
+          user_agent?: string | null;
+          user_id?: string | null;
+        }
+        Update: {;
+          api_key_id?: string | null;
+          created_at?: string;
+          endpoint?: string;
+          id?: string;
+          ip_address?: string | null;
+          method?: string;
+          response_time_ms?: number | null;
+          status_code?: number;
+          user_agent?: string | null;
+          user_id?: string | null;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         Relationships: [
           {
@@ -166,8 +205,13 @@ export type Database = {
             columns: ["api_key_id"]
             isOneToOne: false
             referencedRelation: "api_keys"
-            referencedColumns: ["id"]
+<<<<<<< HEAD
+            referencedColumns: ["id"];
           };
+=======
+            referencedColumns: ["id"]
+          },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {
             foreignKeyName: "api_logs_user_id_fkey"
             columns: ["user_id"]
@@ -464,7 +508,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          },
           {
             foreignKeyName: "fraud_flags_user_id_fkey"
             columns: ["user_id"]
@@ -643,14 +687,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "job_applications_talent_id_fkey"
             columns: ["talent_id"]
@@ -746,7 +790,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "project_milestones"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "milestone_activities_user_id_fkey"
             columns: ["user_id"]
@@ -1090,7 +1134,7 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          },
           {
             foreignKeyName: "profiles_tenant_id_fkey"
             columns: ["tenant_id"]
@@ -1146,7 +1190,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          },
           {
             foreignKeyName: "project_milestones_project_id_fkey"
             columns: ["project_id"]
@@ -1184,7 +1228,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "project_notes_user_id_fkey"
             columns: ["user_id"]
@@ -1240,14 +1284,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          },
           {
             foreignKeyName: "projects_job_id_fkey"
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "projects_talent_id_fkey"
             columns: ["talent_id"]
@@ -1327,7 +1371,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "quote_requests_talent_id_fkey"
             columns: ["talent_id"]
@@ -1336,6 +1380,7 @@ export type Database = {
             referencedColumns: ["id"]
           }]
       }
+<<<<<<< HEAD
       referral_codes: {
         Row: {
           code: string
@@ -1357,6 +1402,29 @@ export type Database = {
           id?: string
           updated_at?: string
           user_id?: string
+=======
+      referral_codes: {;
+        Row: {;
+          code: string;
+          created_at: string;
+          id: string;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {;
+          code: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {;
+          code?: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         Relationships: [
           {
@@ -1405,14 +1473,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
             columns: ["referral_id"]
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "referral_rewards_user_id_fkey"
             columns: ["user_id"]
@@ -1477,21 +1545,21 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "referrals_referral_code_fkey"
             columns: ["referral_code"]
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
-          };
+          },
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          },
           {
             foreignKeyName: "referrals_referrer_id_fkey"
             columns: ["referrer_id"]
@@ -1500,6 +1568,7 @@ export type Database = {
             referencedColumns: ["user_id"]
           }]
       }
+<<<<<<< HEAD
       reminder_logs: {
         Row: {
           clicked_at: string | null
@@ -1530,6 +1599,38 @@ export type Database = {
           reminder_type?: string
           sent_at?: string | null
           user_id?: string
+=======
+      reminder_logs: {;
+        Row: {;
+          clicked_at: string | null;
+          email_body: string;
+          email_subject: string;
+          id: string;
+          opened_at: string | null;
+          reminder_type: string;
+          sent_at: string | null;
+          user_id: string;
+        }
+        Insert: {;
+          clicked_at?: string | null;
+          email_body: string;
+          email_subject: string;
+          id?: string;
+          opened_at?: string | null;
+          reminder_type: string;
+          sent_at?: string | null;
+          user_id: string;
+        }
+        Update: {;
+          clicked_at?: string | null;
+          email_body?: string;
+          email_subject?: string;
+          id?: string;
+          opened_at?: string | null;
+          reminder_type?: string;
+          sent_at?: string | null;
+          user_id?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         Relationships: [
           {
@@ -1612,7 +1713,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          },
           {
             foreignKeyName: "review_reports_review_id_fkey"
             columns: ["review_id"]
@@ -1683,14 +1784,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          };
+          },
           {
             foreignKeyName: "reviews_reviewer_id_fkey"
             columns: ["reviewer_id"]
@@ -1844,7 +1945,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "whitelabel_tenants"
             referencedColumns: ["id"]
-          };
+          },
           {
             foreignKeyName: "tenant_administrators_user_id_fkey"
             columns: ["user_id"]
@@ -2176,6 +2277,7 @@ export type Database = {
         Relationships: []
       }
     }
+<<<<<<< HEAD
     Functions: {
       check_users_needing_reminders: {
         Args: Record<PropertyKey, never>
@@ -2189,6 +2291,21 @@ export type Database = {
           days_since_login: number
           onboarding_status: Json
         }[]
+=======
+    Functions: {;
+      check_users_needing_reminders: {;
+        Args: Record<PropertyKey never>;
+        Returns: {;
+          user_id: string;
+          email: string;
+          display_name: string;
+          user_type: string;
+          last_login: string;
+          reminder_type: string;
+          days_since_login: number;
+          onboarding_status: Json;
+        }[];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -2204,9 +2321,15 @@ export type Database = {
         }
         Returns: string
       }
+<<<<<<< HEAD
       create_scheduled_reminders: {
         Args: Record<PropertyKey, never>
         Returns: undefined
+=======
+      create_scheduled_reminders: {;
+        Args: Record<PropertyKey never>;
+        Returns: undefined;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       flag_suspicious_content: {
         Args: {
@@ -2237,9 +2360,15 @@ export type Database = {
         Args: { key_prefix: string, provided_key: string }
         Returns: string
       }
+<<<<<<< HEAD
       get_current_tenant_id: {
         Args: Record<PropertyKey, never>
         Returns: string
+=======
+      get_current_tenant_id: {;
+        Args: Record<PropertyKey never>;
+        Returns: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       get_event_distribution: {
         Args: { days_back?: number }
@@ -2253,9 +2382,15 @@ export type Database = {
         Args: { api_key: string }
         Returns: string
       }
+<<<<<<< HEAD
       schedule_email_reminders: {
         Args: Record<PropertyKey, never>
         Returns: number
+=======
+      schedule_email_reminders: {;
+        Args: Record<PropertyKey never>;
+        Returns: number;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -2297,15 +2432,19 @@ type DefaultSchema = Database[Extract<keyof Database, "public">]
 
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+<<<<<<< HEAD
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
     | { schema: keyof Database };
+=======
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+    | { schema: keyof Database },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never;
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
       Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
       Row: infer R
@@ -2324,14 +2463,18 @@ export type Tables<
 
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]
+<<<<<<< HEAD
+    | keyof DefaultSchema["Tables"];
     | { schema: keyof Database };
+=======
+    | keyof DefaultSchema["Tables"]
+    | { schema: keyof Database },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never;
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Insert: infer I
     }
@@ -2347,14 +2490,18 @@ export type TablesInsert<
 
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]
+<<<<<<< HEAD
+    | keyof DefaultSchema["Tables"];
     | { schema: keyof Database };
+=======
+    | keyof DefaultSchema["Tables"]
+    | { schema: keyof Database },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never;
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
       Update: infer U
     }
@@ -2370,14 +2517,18 @@ export type TablesUpdate<
 
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
-    | keyof DefaultSchema["Enums"]
+<<<<<<< HEAD
+    | keyof DefaultSchema["Enums"];
     | { schema: keyof Database };
+=======
+    | keyof DefaultSchema["Enums"]
+    | { schema: keyof Database },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never;
-> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
@@ -2385,14 +2536,18 @@ export type Enums<
 
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
-    | keyof DefaultSchema["CompositeTypes"]
+<<<<<<< HEAD
+    | keyof DefaultSchema["CompositeTypes"];
     | { schema: keyof Database };
+=======
+    | keyof DefaultSchema["CompositeTypes"]
+    | { schema: keyof Database },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never;
-> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
@@ -2401,14 +2556,23 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
-      api_key_scope: [
+<<<<<<< HEAD
+      api_key_scope: [;
         "jobs:read";
         "jobs:write";
         "talent:read";
         "quotes:write";
+=======
+      api_key_scope: [
+        "jobs:read",
+        "jobs:write",
+        "talent:read",
+        "quotes:write",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         "webhooks:manage"],
-      fraud_severity: ["safe", "suspicious", "dangerous"];
+      fraud_severity: ["safe", "suspicious", "dangerous"],
       quote_request_status: [
+<<<<<<< HEAD
         "new";
         "in_review";
         "accepted";
@@ -2416,3 +2580,126 @@ export const Constants = {
         "closed";
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const
+;
+=======
+        "new",
+        "in_review",
+        "accepted",
+        "responded",
+        "closed",
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+type DefaultSchema = Database[Extract<keyof Database, "public">];
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {;
+      Row: infer R;
+    }
+    ? R;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"]);
+    ? (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
+        Row: infer R;
+      }
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Insert: infer I;
+    }
+    ? I;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Insert: infer I;
+      }
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Update: infer U;
+    }
+    ? U;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Update: infer U;
+      }
+      ? U;
+      : never;
+    : never;
+export type Enums<;
+  DefaultSchemaEnumNameOrOptions extends;
+    | keyof DefaultSchema["Enums"];
+    | { schema: keyof Database },;
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
+    : never;
+export type CompositeTypes<;
+  PublicCompositeTypeNameOrOptions extends;
+    | keyof DefaultSchema["CompositeTypes"];
+    | { schema: keyof Database },;
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
+    : never;
+export const Constants = {;
+  public: {;
+    Enums: {;
+      api_key_scope: [;
+        "jobs:read",;
+        "jobs:write",;
+        "talent:read",;
+        "quotes:write",;
+        "webhooks:manage"],;
+      fraud_severity: ["safe", "suspicious", "dangerous"],;
+      quote_request_status: [;
+        "new",;
+        "in_review",;
+        "accepted",;
+        "responded",;
+        "closed",;
+        "archived"];
+      referral_status: ["pending", "completed", "expired"]}}} as const;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

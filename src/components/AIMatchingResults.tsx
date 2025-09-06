@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+import { useState } from 'react'
+import { MatchResultItem } from '@/lib/ai-matchmaking'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from '@/components/ui/skeleton'
+import { cn } from '@/lib/utils'
+=======
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+interface AIMatchingResultsProps {
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem) => void
+  isLoading?: boolean;
+  projectDescription?: string;
+  serviceType?: string;interface AIMatchingResultsProps {
+  matches: MatchResultItem[],
+  onSelectMatch?: (match: MatchResultItem,) => void,
+  isLoading?: boolean,
+  projectDescription?: string,
+  serviceType?: string
+}
+
+<<<<<<< HEAD
 export function AIMatchingResults({
   matches,
   onSelectMatch,
@@ -5,8 +40,7 @@ export function AIMatchingResults({
   projectDescription = '',
   serviceType: _serviceType = '',
 }: AIMatchingResultsProps) {
-  const [activeTab, setActiveTab] = useState('all');
-
+  const [activeTab, setActiveTab] = useState('all')
   // Group matches by category
   const categories = {
     all: matches,
@@ -19,10 +53,14 @@ export function AIMatchingResults({
     equipment: matches.filter(match =>
       match.category.toLowerCase().includes('equipment')
     ),
-  };
-
+  }
   // Get the icon for a category
-
+  const getCategoryIcon = (category: string) => {
+    const lowerCategory = category.toLowerCase()
+    if (lowerCategory.includes('talent')) return User
+    if (lowerCategory.includes('equipment')) return Monitor
+    return BriefcaseIcon
+  }
   if (isLoading) {
     return (
       <div className='space-y-4'>
@@ -33,7 +71,7 @@ export function AIMatchingResults({
           <Skeleton className='h-[120px] w-full' />
         </div>
       </div>
-    );
+    )
   }
 
   if (matches.length === 0) {
@@ -54,7 +92,7 @@ export function AIMatchingResults({
           )}
         </CardContent>
       </Card>
-    );
+    )
   }
 
   return (
@@ -91,8 +129,12 @@ export function AIMatchingResults({
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
-
-                  >
+        {Object.entries(categories).map(([tab, items]) => (
+          <TabsContent key={tab} value={tab} className='mt-4 space-y-3'>
+            {items.length > 0 ? (
+              items.map(match => {
+                const CategoryIcon = getCategoryIcon(match.category)
+                    onClick={() => onSelectMatch && onSelectMatch(match)}                  >
                     <div className='flex'>
                       <div
                         className={cn(
@@ -118,7 +160,6 @@ export function AIMatchingResults({
                               </AvatarFallback>
                             )}
                           </Avatar>
-
                           <div className='flex-1'>
                             <div className='flex justify-between'>
                               <div>
@@ -140,26 +181,71 @@ export function AIMatchingResults({
                                       .includes('talent')
                                       ? '/hour'
                                       : ''}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                                   </div>
                                 </div>
                               )}
                             </div>
-
-                            </div>
+<<<<<<< HEAD
+                            <div className='mt-2 flex flex-wrap gap-1'>
+                              <Badge variant='outline'>{match.category}</Badge>
+                              {match.skills &&
+                                match.skills
+                                  .slice(0, 3)
+                                  .map((skill: string, i: number) => (
+                                    <Badge key={i} variant='outline'>
+                                      {skill}
+                                    </Badge>
+                                  ))}                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </Card>
-                );
+                )
               })
             ) : (
               <div className='text-center py-8 text-zion-slate-light'>
                 No {tab} matches found.
               </div>
+=======
+                            
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline">
+                                {match.category}
+                              </Badge>
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                                <Badge key={i} variant="outline">
+                                  {skill}
+                                </Badge>;
+                              ))}
+                            </div>;
+                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </Card>;
+                );
+              });
+            ) : (;
+              <div className="text-center py-8 text-zion-slate-light">;
+                No {tab} matches found.;
+              </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             )}
           </TabsContent>
         ))}
+<<<<<<< HEAD
       </Tabs>
     </div>
+  )
+};
+;
+}
+=======
+      </Tabs>;
+    </div>;
   );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

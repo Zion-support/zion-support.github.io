@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+setIsMobile (isMobileDevice);
+=======
  setIsMobile (isMobileDevice);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();
@@ -10,13 +14,11 @@ window.addEventListener ('resize', checkOrientation);
 const handleTouchStart = (e: TouchEvent) => {
   if (e.touches.length === 1) {
   touchStartRef.current = {
-  
 
 };
 const handleTouchMove = (e: TouchEvent) => {
   if (e.touches.length === 1 && touchStartRef.current) {
   touchMoveRef.current = {
-  
 
 });
 const handleTouchEnd = (e: TouchEvent) => {
@@ -57,7 +59,6 @@ connection.addEventListener ('change', updateNetworkSpeed);
 }//Minimum distance and duration thresholds if (distance < 50 || duration < 100) return null;
 //Determine direction if (Math.abs (deltaX) > Math.abs (deltaY) ) {
   return {
-  
 
 };
 const handleGestureAction = (gesture: TouchGesture) => {
@@ -146,7 +147,6 @@ if (!showPanel || !isVisible) return null;
 };
 const getStatusIcon = (status: string) => {
   switch (status) {
-  
 
 };
 children 
@@ -167,3 +167,15 @@ children
 };
 export default MobileOptimizer;
 export default MobileOptimizer;
+<<<<<<< HEAD
+
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

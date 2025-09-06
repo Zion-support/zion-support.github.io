@@ -6,20 +6,23 @@ import {
   MapPin,
   Check,
   ArrowRight,
-  Sparkles,
+  Sparkles,;
   Star,;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/metaverse-ai-development-platform')
+    s.link.endsWith('/metaverse-ai-development-platform');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function MetaverseAIPlatformPage() {
+export default function MetaverseAIPlatformPage() {;
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/metaverse-ai-development-platform'));
   if (!service) return null;
 
@@ -113,3 +116,8 @@ export default function MetaverseAIPlatformPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,38 +1,43 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',;
+;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  const { articleId, helpful } = req.body as { articleId: string, helpful: boolean },
+  if (!articleId || helpful === undefined) return res.status(400).json({ error: 'articleId and helpful required' }),
 
-function writeJson(filePath: string, data: any) {
-  const fullPath = path.join(process.cwd(), 'data', filePath);
-  const dir = path.dirname(fullPath);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(fullPath, JSON.stringify(data, null, 2));
-}
-
+  const feedback = readJson<any[]>('support/feedback.json', []),
+  feedback.push({ articleId, helpful, ts: Date.now() }),
+  writeJson('support/feedback.json', feedback),
+  return res.status(200).json({ ok: true });
+};
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
-  }
-
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb';
+export default async function handler(req, res) {
   try {
-    const { message, rating, category } = req.body;
-    
-    if (!message) {
-      return res.status(400).json({ error: 'Message is required' });
-    }
-
-    const feedback = {
-      id: Date.now().toString(),
-      message,
-      rating: rating || 5,
-      category: category || 'general',
-      timestamp: new Date().toISOString()
-    };
-
-    writeJson('support/feedback.json', feedback);
-    return res.status(200).json({ ok: true });
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to save feedback' });
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { articleId, helpful } = req.body as { articleId: string, helpful: boolean },;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const feedback = readJson<any[]>('support/feedback.json', []),;
+  feedback.push({ articleId, helpful, ts: Date.now() });
+  writeJson('support/feedback.json', feedback);
+  return res.status(200).json({ ok: true });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

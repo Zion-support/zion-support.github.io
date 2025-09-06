@@ -142,7 +142,7 @@ class ComprehensiveSyntaxFixer {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const fixedContent = this.fixFileContent(content, filePath);
-
+      
       if (content !== fixedContent) {
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         this.fixedFiles.push(filePath);
@@ -150,8 +150,90 @@ class ComprehensiveSyntaxFixer {
         return true;
       }      return false;
 
-      return false;
 
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔧 Starting Comprehensive Syntax Fixer...');
+
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.fixedFiles = [];
+    this.errors = [];
+    this.reportPath = path.join(__dirname, '..', 'automation-reports', 'syntax-fix-report.json');
+    this.ensureReportDir();
+  }
+
+  ensureReportDir() {
+    const reportDir = path.dirname(this.reportPath);
+    if (!fs.existsSync(reportDir)) {
+      fs.mkdirSync(reportDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async fixImportStatements(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+
+      // Fix import statements with commas instead of semicolons
+      const importRegex = /^import\s+.*?,\s*$/gm;
+      const matches = content.match(importRegex);
+      
+      if (matches) {
+        content = content.replace(importRegex, (match) => {
+          return match.replace(/,\s*$/, ';');
+        });
+        modified = true;
+      }
+
+      // Fix export statements with commas
+      const exportRegex = /^export\s+.*?,\s*$/gm;
+      const exportMatches = content.match(exportRegex);
+      
+      if (exportMatches) {
+        content = content.replace(exportRegex, (match) => {
+          return match.replace(/,\s*$/, ';');
+        });
+        modified = true;
+      }
+
+      // Fix function declarations with commas
+      const functionRegex = /^export\s+.*?function\s+.*?,\s*$/gm;
+      const functionMatches = content.match(functionRegex);
+      
+      if (functionMatches) {
+        content = content.replace(functionRegex, (match) => {
+          return match.replace(/,\s*$/, ';');
+        });
+        modified = true;
+      }
+
+      // Fix const/let/var declarations with commas
+      const constRegex = /^(const|let|var)\s+.*?,\s*$/gm;
+      const constMatches = content.match(constRegex);
+      
+      if (constMatches) {
+        content = content.replace(constRegex, (match) => {
+          return match.replace(/,\s*$/, ';');
+        });
+        modified = true;
+      }
+
+      if (modified) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed syntax in: ${filePath}`);
+        return true;
+      }
+
+      return false;
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
@@ -161,10 +243,10 @@ class ComprehensiveSyntaxFixer {
 
   async findAndFixFiles() {
     this.log('🔍 Finding files with syntax errors...');
-
+    
     const srcDir = path.join(this.projectRoot, 'src');
     const filesToFix = [];
-
+    
     // Find all JS/JSX/TS/TSX files
     const findFiles = (dir) => {
       const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -177,24 +259,24 @@ class ComprehensiveSyntaxFixer {
         }
       }
     };
-
+    
     findFiles(srcDir);
-
+    
     this.log(`📁 Found ${filesToFix.length} files to check`);
-
+    
     // Fix each file
     for (const file of filesToFix) {
       await this.fixFile(file);
     }
-
+    
     return filesToFix.length;
   }
 
   async run() {
     this.log('🚀 Starting Comprehensive Syntax Fixer');
-
+    
     const totalFiles = await this.findAndFixFiles();
-
+    
     const report = {
       timestamp: new Date().toISOString(),
       totalFiles,
@@ -203,12 +285,12 @@ class ComprehensiveSyntaxFixer {
       fixedFileList: this.fixedFiles,
       errorList: this.errors
     };
-
+    
     fs.writeFileSync(
       path.join(this.projectRoot, 'comprehensive-syntax-fix-report.json'),
       JSON.stringify(report, null, 2)
     );
-
+    
     this.log(`🎉 Comprehensive Syntax Fix Complete!`);
     this.log(`📊 Fixed ${this.fixedFiles.length}/${totalFiles} files`);
     this.log(`❌ ${this.errors.length} errors encountered`);
@@ -221,6 +303,26 @@ fixer.run().catch(console.error);    }
   }
 }
 
+      this.log('🎉 Comprehensive syntax fixing completed successfully!');
+      this.log(`📊 Fixed ${this.fixedFiles.length} files`);
+      this.log(`❌ ${this.errors.length} errors encountered`);
+    } catch (error) {
+      this.log(`❌ Comprehensive syntax fixing failed: ${error.message}`);
+      process.exit(1);
     }
   }
 }
+
+// Main execution
+if (require.main === module) {
+  const fixer = new ComprehensiveSyntaxFixer();
+  fixer.run().catch(console.error);
+}
+
+module.exports = ComprehensiveSyntaxFixer;
+// Run the syntax fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.run().catch(console.error);
+// Run the syntax fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.run().catch(console.error);

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
 interface EducationSectionProps {
@@ -7,7 +8,7 @@ interface EducationSectionProps {
 
 export function EducationSection({ education }: EducationSectionProps) {
   // Sort education by date (newest first)
-  const sortedEducation = [...education].sort((a, b) => {
+  const sortedEducation = [...education].sort((a, b) => {;
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     
@@ -20,11 +21,32 @@ export function EducationSection({ education }: EducationSectionProps) {
     if (!date) return '',
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
+=======
+import { Education } from '@/types/resume',;
+import { format } from 'date-fns',;
+interface EducationSectionProps {;
+  education: Education[];
+}
+;
+export function EducationSection({ education }: EducationSectionProps) {;
+  // Sort education by date (newest first);
+  const sortedEducation = [...education].sort((a, b) => {;
+    if (a.is_current && !b.is_current) return -1,;
+    if (!a.is_current && b.is_current) return 1,;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date),;
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
+    return dateB.getTime() - dateA.getTime();
+  }),;
+  const formatDate = (date: Date | string | undefined) => {;
+    if (!date) return '',;
+    if (typeof date === 'string') {;
+      return format(new Date(date), 'MMM yyyy');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     return format(date, 'MMM yyyy')
-  };
+  },
 
-  if (sortedEducation.length === 0) return null;
+  if (sortedEducation.length === 0) return null,
   
   return (
     <div className="mb-6">
@@ -53,3 +75,4 @@ export function EducationSection({ education }: EducationSectionProps) {
     </div>
   )
 }
+;

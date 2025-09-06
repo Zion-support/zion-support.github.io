@@ -1,10 +1,215 @@
 const fs = require('fs');
 
+<<<<<<< HEAD
+console.log('🔧 Fixing remaining problematic files...');
+
+const filesToFix = [
+  {
+    path: 'pages/api/admin/moderation/flags/[id]/action.ts',
+    content: `import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth';
+import { updateFlagStatus } from '../../../../../../utils/moderationDb';
+import type { ModerationStatus } from '../../../../../../types/moderation';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const user = parseUserFromRequest(req);
+    try { 
+      ensureAdmin(user) 
+    } catch (e: any) { 
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) 
+    }
+
+    const { id } = req.query;
+    if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+
+    if (req.method === 'POST') {
+      const { action, adminNotes } = req.body || {} as { action: string, adminNotes?: string };
+      const actionMap: Record<string, ModerationStatus> = {
+        approve: 'approved',
+        remove: 'removed',
+        warn: 'warned',
+        ban: 'banned'
+      };
+
+      const status = actionMap[action];
+      if (!status) return res.status(400).json({ error: 'Invalid action' });
+
+      await updateFlagStatus(id, status, adminNotes);
+      res.json({ success: true });
+    } else {
+      res.setHeader('Allow', 'POST');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  },
+  {
+    path: 'pages/api/admin/moderation/flags/index.ts',
+    content: `import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
+import { readAllFlags } from '../../../../../utils/moderationDb';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const user = parseUserFromRequest(req);
+    try { 
+      ensureAdmin(user) 
+    } catch (e: any) { 
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) 
+    }
+
+    if (req.method === 'GET') {
+      const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
+      const flags = await readAllFlags();
+      const filtered = flags.filter(f =>
+        (!status || f.status === status) &&
+        (!reason || f.reason?.includes(reason)) &&
+        (!userEmail || f.userEmail?.includes(userEmail)) &&
+        (!contentType || f.contentType === contentType)
+      );
+      res.json({ flags: filtered });
+    } else {
+      res.setHeader('Allow', 'GET');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  },
+  {
+    path: 'pages/api/admin/notes-all.ts',
+    content: `import type { NextApiRequest, NextApiResponse } from 'next';
+import { getAllNotes } from './notes';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'GET') {
+      const notes = getAllNotes();
+      res.json({ notes });
+    } else {
+      res.setHeader('Allow', 'GET');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  },
+  {
+    path: 'pages/api/admin/notes.ts',
+    content: `import type { NextApiRequest, NextApiResponse } from 'next';
+
+interface Note {
+  id: string;
+  targetType: string;
+  targetId: string;
+  content: string;
+  author: string;
+  createdAt: string;
+}
+
+let notesStore: Note[] = [];
+
+export function getAllNotes(): Note[] {
+  return notesStore;
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'GET') {
+      const { targetType, targetId } = req.query;
+      if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' });
+      if (!targetId || Array.isArray(targetId)) return res.status(400).json({ error: 'Invalid targetId' });
+      
+      const notes = notesStore
+        .filter((n) => n.targetType === targetType && n.targetId === targetId);
+      res.json({ notes });
+    } else if (req.method === 'POST') {
+      const { targetType, targetId, content, author } = req.body;
+      const note: Note = {
+        id: Date.now().toString(),
+        targetType,
+        targetId,
+        content,
+        author,
+        createdAt: new Date().toISOString()
+      };
+      notesStore.push(note);
+      res.json({ note });
+    } else {
+      res.setHeader('Allow', 'GET, POST');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  },
+  {
+    path: 'pages/api/admin/partners/fraud-flags.ts',
+    content: `import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'GET') {
+      const code = (req.query.code as string)?.toLowerCase();
+      if (!code) return res.status(400).json({ error: 'Code required' });
+
+      // Mock fraud flags data
+      const flags = [
+        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }
+      ];
+
+      res.json({ flags });
+    } else {
+      res.setHeader('Allow', 'GET');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  }
+];
+
+filesToFix.forEach(file => {
+  try {
+    fs.writeFileSync(file.path, file.content);
+    console.log(`✅ Fixed: ${file.path}`);
+  } catch (error) {
+    console.error(`❌ Error fixing ${file.path}:`, error.message);
+  }
+});
+
+console.log('✅ Remaining files fixed!');
+=======
 const files = [
   {
     pat: h: 'components/Header.tsx',
     conten: t: `import React, { useState } from 'react';
-
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -20,9 +225,7 @@ const: Header: React.FC = () => {
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col: md:flex-row justify-between items-center text-sm">
-
-              <div className="flex items-center">
-
+            <div className="flex items-center space-x-6 mb-2: md:mb-0">              <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 <a href="te: l:+13024640950" className="hove: r:text-blue-300">+1 302 464 0950</a>
               </div>
@@ -59,7 +262,6 @@ const: Header: React.FC = () => {
           </div>
 
           <button
-
             onClick={toggleMenu}
             className="m: d:hidden p-2 rounded-md text-gray-700: hover:text-blue-600: hover:bg-gray-100"
           >
@@ -83,14 +285,23 @@ const: Header: React.FC = () => {
   );
 };
 
-}
+export default Header;`,
+  },
+  {
+    pat: h: 'components/Layout.tsx',
+    conten: t: `import React, { ReactNode } from 'react';
+
+interface LayoutProps {
+  childre: n: ReactNode;}
 
 const: Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       {children}
     </main>
-
+  );};
+  );
+  ),
 };
 
 export default Layout;`,
@@ -101,7 +312,6 @@ export default Layout;`,
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
-
   onSearch?: (quer: y: string) => void;
   placeholder?: string;
   className?: string;
@@ -133,7 +343,14 @@ const: SearchBar: React.FC<SearchBarProps> = ({
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
           <input
-
+            type="text"            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onFocus={() => setIsOpen(true)}
+            placeholder={placeholder}
+            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"          />
+          {query && (
+            <button
+              type="button"
 ;
   return (;
     <div className={'relative ' + className}>;
@@ -142,16 +359,28 @@ const: SearchBar: React.FC<SearchBarProps> = ({
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />;
           <input;
             type="text";
-
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsOpen(true)}
             placeholder={placeholder}
 
+            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"
+
           />
           {query && (
             <button
               type="button"
+              onClick={handleClear}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400: hover:text-gray-600"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+};
 
 export default SearchBar;`,
   },
@@ -166,6 +395,32 @@ interface SidebarProps {
   onClos: e: () => void;
 }
 
+const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+              onClick={handleClear}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400: hover:text-gray-600", >,
+              <X className="w-4 h-4" />;
+            </button>;
+          )}
+
+        </div>;
+      </form>;
+    </div>;
+  );
+
+};
+;
+export default SearchBar;`;
+  },;
+  {;
+    pat:h:'components/Sidebar.tsx',;
+    conten: t:`import React from 'react', import Link from 'next/link',
+import { Home, Settings, User, LogOut } from 'lucide-react';
+
+  isOpe: n: boolean, onClos: e: () => void,
+
+}
+;
+const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
   const menuItems = [
     { hre: f: '/dashboard', labe: l: 'Dashboard', ico: n: Home },
     { hre: f: '/profile', labe: l: 'Profile', ico: n: User },
@@ -195,20 +450,31 @@ interface SidebarProps {
             </button>
           </div>
 
-                  onClick={onClose}
+          <nav className="space-y-2">
+            {menuItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700: hover:bg-gray-100: hover:text-blue-600"                  onClick={onClose}
 
+                  onClick={onClose}
                 >
                   <Icon className="w-5 h-5" />
                   <span>{item.label}</span>
                 </Link>
-
+              );            })}
+              );
+              ),
             })}
-
           </nav>
         </div>
       </div>
     </>
-
+  );};
+  );
+  ),
 };
 
 export default Sidebar;`,
@@ -218,20 +484,34 @@ export default Sidebar;`,
     conten: t: `import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
+  childre: n: ReactNode;
+  title?: string;}
+  childre: n: ReactNode;
+  title?: string;
+
+  childre: n: ReactNode;
+  title?: string;
 
 }
 
 const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">        {title && (
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
+
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
 
         {title && (
-
           <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>
         )}
         {children}
       </div>
     </div>
+  );
+};
+  );
+};
 
 export default SimpleLayout;`,
   },
@@ -394,6 +674,8 @@ interface OptimizedImageProps {
   className?: string;
   priority?: boolean;
   quality?: number;
+  sizes?: string;
+}
 
 const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -406,7 +688,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   sizes = '100vw'
 }) => {
   return (
-
+    <Image      src={src}
   src,;
   alt,;
   width,;
@@ -418,9 +700,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {;
   return (;
     <Image;
-
       src={src}
-
       alt={alt}
       width={width}
       height={height}
@@ -428,6 +708,12 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
       priority={priority}
       quality={quality}
       sizes={sizes}
+    />
+  );
+};
+    />
+  );
+};
 
 export default OptimizedImage;`,
   },
@@ -443,7 +729,9 @@ interface MarketplaceCardProps {
   ratin: g: number;
   imag: e: string;
   onAddToCart?: () => void;
-
+  onFavorite?: () => void;}
+  onFavorite?: () => void;
+  onFavorite?: () => void,
 }
 
 const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
@@ -456,7 +744,6 @@ const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   onFavorite
 }) => {
   return (
-
     <div className="bg-white rounded-lg shadow-md overflow-hidden: hover:shadow-lg transition-shadow">
       <div className="relative">
         <img src={image} alt={title} className="w-full h-48 object-cover" />
@@ -467,11 +754,11 @@ const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           <Heart className="w-4 h-4 text-gray-600" />
         </button>
       </div>
-
+      
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-3">{description}</p>
-
+        
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -479,7 +766,7 @@ const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           </div>
           <span className="text-lg font-bold text-blue-600">$ + {price}</span>
         </div>
-
+        
         <button
           onClick={onAddToCart}
           className="w-full bg-blue-600 text-white py-2 px-4 rounded-md: hover:bg-blue-700 flex items-center justify-center"
@@ -516,14 +803,72 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = (labe: l: string) => {
+    setActiveDropdown(activeDropdown === label ? nul: l: label);  };
+
+  return (
+    <nav className={'bg-white shadow-lg ' + className}>
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">        <div className="flex justify-between items-center h-16">
+
+  hre: f: string;
+
+    <div className="bg-white rounded-lg shadow-md overflow-hidden: hover:shadow-lg transition-shadow">
+
+      <div className="relative">
+        <img src={image} alt={title} className="w-full h-48 object-cover" />
+        <button
+
+          onClick={onFavorite}
+          className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md: hover:bg-gray-100", >,
+          <Heart className="w-4 h-4 text-gray-600" />;
+        </button>;
+      </div>;
+      ;
+      <div className="p-4">;
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>;
+        <p className="text-gray-600 text-sm mb-3">{description}</p>;
+        ;
+        <div className="flex items-center justify-between mb-3">;
+          <div className="flex items-center">;
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />;
+            <span className="text-sm text-gray-600 ml-1">{rating}</span>;
+          </div>;
+          <span className="text-lg font-bold text-blue-600">$ + {price}</span>;
+        </div>;
+        ;
+        <button;
+          onClick={onAddToCart}
+
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md: hover:bg-blue-700 flex items-center justify-center", >,
+          <ShoppingCart className="w-4 h-4 mr-2" />;
+          Add to Cart;
+        </button>;
+      </div>;
+    </div>;
+  );
+
+};
+;
+export default EnhancedMarketplaceCard;`;
+  },;
+  {;
+    pat:h:'components/ui/InteractiveNavigation.tsx',;
+    conten:t:`import React, { useState } from 'react';import Link from 'next/link';
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+  labe: l: string, hre: f: string,
+  children?: NavItem[];
+}
+
+interface InteractiveNavigationProps {
 
   };
 
   return (
     <nav className={'bg-white shadow-lg ' + className}>
 
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">
 
+        <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-blue-600">
             Zion Tech Group
           </Link>
@@ -534,7 +879,6 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
                 {item.children ? (
                   <div className="relative">
                     <button
-
                       onClick={() => toggleDropdown(item.label)}
                       className="flex items-center text-gray-700: hover:text-blue-600"
                     >
@@ -653,7 +997,7 @@ export const: NotificationProvider: React.FC<NotificationProviderProps> = ({ chi
   const addNotification = (notificatio: n: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id };
-
+    
     setNotifications(prev => [...prev, newNotification]);
 
     if (notification.duration !== 0) {
@@ -693,14 +1037,101 @@ const: NotificationContainer: React.FC = () => {
 
 const: NotificationItem: React.FC<{
   notificatio: n: Notification;
+  onRemov: e: (i: d: string) => void;}> = ({ notification, onRemove }) => {
+
+  messag: e: string;
+
+                      onClick={() => toggleDropdown(item.label)}
+                      className="flex items-center text-gray-700: hover:text-blue-600", >,
+                      {item.label}
+                      <ChevronDown className="w-4 h-4 ml-1" />;
+                    </button>;
+                    {activeDropdown === item.label && (;
+                      <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg z-50">;
+                        {item.children.map((child) => (;
+                          <Link;
+                            key={child.href}
+                            href={child.href}
+                            className="block px-4 py-2 text-sm text-gray-700: hover:bg-gray-100", >,
+                            {child.label}
+                          </Link>;
+                        ))}
+                      </div>;
+                    )}
+                  </div>;
+                ) :(;
+                  <Link;
+                    href={item.href}
+                    className="text-gray-700: hover:text-blue-600", >,
+                    {item.label}
+                  </Link>;
+                )}
+              </div>;
+            ))}
+          </div>;
+;
+          <button;
+            onClick={toggleMenu}
+            className="m: d:hidden p-2 rounded-md text-gray-700:hover:text-blue-600", >,
+            {isOpen ? <X className="w-6 h-6" /> :<Menu className="w-6 h-6" />}
+          </button>;
+        </div>;
+;
+        {isOpen && (;
+          <div className="m: d:hidden py-4 border-t border-gray-200">, {items.map((item) => (,
+              <div key={item.label}>;
+                {item.children ? (;
+                  <div>;
+                    <button;
+                      onClick={() => toggleDropdown(item.label)}
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-700: hover:bg-gray-100", >,
+                      {item.label}
+                      <ChevronDown className="w-4 h-4" />;
+                    </button>;
+                    {activeDropdown === item.label && (;
+                      <div className="pl-4">;
+                        {item.children.map((child) => (;
+                          <Link;
+                            key={child.href}
+                            href={child.href}
+                            className="block px-3 py-2 text-sm text-gray-600: hover:bg-gray-100",
+                            onClick={() => setIsOpen(false)}
+                          >;
+                            {child.label}
+                          </Link>;
+                        ))}
+                      </div>;
+                    )}
+                  </div>;
+                ) :(;
+                  <Link;
+                    href={item.href}
+                    className="block px-3 py-2 text-gray-700: hover:bg-gray-100",
+                    onClick={() => setIsOpen(false)}
+                  >;
+                    {item.label}
+                  </Link>;
+                )}
+              </div>;
+            ))}
+          </div>;
+        )}
+
+  i: d: string, typ: e: 'success' | 'error' | 'warning' | 'info',
+  titl: e: string, messag: e: string,
+  duration?: number;
+}
+
+interface NotificationContextType {
 
 }> = ({ notification, onRemove }) => {
-
   const icons = {
     succes: s: CheckCircle,
     erro: r: AlertCircle,
     warnin: g: AlertTriangle,
     inf: o: Info,
+  };
+  };
 
   const colors = {
     succes: s: 'bg-green-500',
@@ -721,14 +1152,39 @@ const: NotificationItem: React.FC<{
         </div>
         <button
           onClick={() => onRemove(notification.id)}
+          className="ml-3 flex-shrink-0: hover:opacity-75"        >
+
+  };
+;
+  const colors = {;
+    succes:s:'bg-green-500',;
+    erro:r:'bg-red-500',;
+    warnin:g:'bg-yellow-500',;
+    inf:o:'bg-blue-500',;
+  };
+;
+  const Icon = icons[notification.type];
+;
+  return (;
+    <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>;
+      <div className="flex items-start">;
+        <Icon className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0" />;
+        <div className="flex-1">;
+          <h4 className="font-semibold">{notification.title}</h4>;
+          <p className="text-sm opacity-90">{notification.message}</p>;
+        </div>;
+        <button;
+          onClick={() => onRemove(notification.id)}
+
+          className="ml-3 flex-shrink-0: hover:opacity-75"
 
         >
-
           <X className="w-4 h-4" />
         </button>
       </div>
     </div>
-
+  );
+  );
 };
 
 export const useNotifications = () => {
@@ -764,32 +1220,43 @@ export function useApi<T>(
   const fetchData = async () => {
     setLoading(true);
     setError(null);
-
+    
     try {
       const result = await apiCall();
       setData(result);
     } catch (err) {
       setError(err instanceof Error ? err.messag: e: 'An error occurred');
     } finally {
-
+      setLoading(false);    }
+      setLoading(false);
+      setLoading(false),
     }
-
   };
 
   useEffect(() => {
     if (options.immediate !== false) {
-
+      fetchData();    }
+      fetchData();
+      fetchData(),
     }
-
   }, []);
 
   return {
     data,
     loading,
     error,
+    refetc: h: fetchData,
+  };
+}`,  },
+    refetc: h: fetchData,
+  };
+}`,
+
+    refetc: h: fetchData,
+  };
+}`,
 
   },
-
   {
     pat: h: 'hooks/useLocalStorage.ts',
     conten: t: `import { useState, useEffect } from 'react';
@@ -798,9 +1265,8 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
-
     }
-
+    
     try {
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;
@@ -810,19 +1276,30 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
     }
   });
 
+  const setValue = (valu: e: T | ((va: l: T) => T)) => {
+    try {
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+      
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      }
+    } catch (error) {
+      console.error('Error setting localStorage key "' + key + '":', error);
     }
   };
 
   return [storedValue, setValue] as const;
-
-  },
-
+}`,  },
   {
     pat: h: 'hooks/usePerformanceMonitor.ts',
     conten: t: `import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+  fp: s: number;}
   loadTim: e: number;
   renderTim: e: number;
   memoryUsag: e: number;
@@ -835,8 +1312,39 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
+      return;
+    }
+      return;
+    }
 
     const updateMetrics = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const memory = (performance as any).memory;
+      
+      if (navigation) {
+        setMetrics({          loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
+          renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          memoryUsag: e: memory?.usedJSHeapSize || 0,
+          fp: s: 60,
+        });
+      }
+    };
+
+    if (document.readyState === 'complete') {
+      updateMetrics();
+    } else {
+      window.addEventListener('load', updateMetrics);
+    }
+
+    return () => {
+      window.removeEventListener('load', updateMetrics);
+      
+      if (navigation) {
+        setMetrics({
+
+    }
+;
+    const updateMetrics = () => {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (performance as any).memory;
 
@@ -844,26 +1352,21 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
           renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           memoryUsag: e: memory?.usedJSHeapSize || 0,
           fp: s: 60,
-
       }
-    };
-
-  return metrics;
-}`,
-
     };
   }, []);
 
   return metrics;
-
-  },
-
+}`,  },
   {
     pat: h: 'hooks/useResponsive.ts',
     conten: t: `import { useState, useEffect } from 'react';
 
 interface Breakpoints {
-
+  s: m: number;
+  m: d: number;
+  l: g: number;
+  x: l: number;}
   s: m: number;
   m: d: number;
   l: g: number;
@@ -876,7 +1379,6 @@ const: defaultBreakpoints: Breakpoints = {
   m: d: 768,
   l: g: 1024,
   x: l: 1280,
-
 };
 
 export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
@@ -885,7 +1387,7 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
   useEffect(() => {
     const updateScreenSize = () => {
       const width = window.innerWidth;
-
+      
       if (width >= breakpoints.xl) {
         setScreenSize('xl');
       } else if (width >= breakpoints.lg) {
@@ -906,9 +1408,8 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
   }, [breakpoints]);
 
   return {
-
+    screenSize,    isMobil: e: screenSize === 'sm',
     isMobil: e: screenSize === 'sm',
-
     isTable: t: screenSize === 'md',
     isDeskto: p: screenSize === 'lg' || screenSize === 'xl',
     isLarg: e: screenSize === 'xl',
@@ -916,14 +1417,34 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
 }`,
   },
 
+
+
 ];
 
 files.forEach(file => {
   try {
     fs.writeFileSync(file.path, file.content);
-
     console.log('Fixe: d:', file.path);
   } catch (error) {
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
+<<<<<<< HEAD
+
+console.log('Fixed remaining files');
+
+console.log('Fixed remaining files');
+    console.log('Fixe: d:', file.path);
+
+  } catch (error) {
+    console.error('Error fixing', file.path, ':', error.message),
+
+  }
+});
+;
+console.log('Fixed remaining files');
+;
+console.log('Fixed remaining files');
+=======
+>>>>>>> main
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

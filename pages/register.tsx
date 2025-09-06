@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
 import Layout from "../components/Layout";
 
-export default function RegisterPage() {
+export default function RegisterPage() {;
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -85,7 +85,6 @@ export default function RegisterPage() {
               Join Zion Tech Group and start your digital transformation journey
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -117,7 +116,6 @@ export default function RegisterPage() {
                     />
                   </div>
                 </div>
-
                 <div>
                   <label
                     htmlFor="lastName"
@@ -137,7 +135,6 @@ export default function RegisterPage() {
                   />
                 </div>
               </div>
-
               <div>
                 <label
                   htmlFor="email"
@@ -162,7 +159,6 @@ export default function RegisterPage() {
                   />
                 </div>
               </div>
-
               <div>
                 <label
                   htmlFor="company"
@@ -180,7 +176,6 @@ export default function RegisterPage() {
                   placeholder="Your company name"
                 />
               </div>
-
               <div>
                 <label
                   htmlFor="password"
@@ -215,7 +210,6 @@ export default function RegisterPage() {
                     )}
                   </button>
                 </div>
-
                 {/* Password Requirements */}
                 <div className="mt-2 space-y-1">
                   {Object.entries(passwordRequirements).map(
@@ -240,7 +234,6 @@ export default function RegisterPage() {
                   )}
                 </div>
               </div>
-
               <div>
                 <label
                   htmlFor="confirmPassword"
@@ -282,7 +275,6 @@ export default function RegisterPage() {
                     </p>
                   )}
               </div>
-
               <div className="space-y-4">
                 <div className="flex items-center">
                   <input
@@ -314,7 +306,6 @@ export default function RegisterPage() {
                     </Link>
                   </label>
                 </div>
-
                 <div className="flex items-center">
                   <input
                     id="subscribeNewsletter"
@@ -332,7 +323,6 @@ export default function RegisterPage() {
                   </label>
                 </div>
               </div>
-
               <div>
                 <button
                   type="submit"
@@ -345,7 +335,6 @@ export default function RegisterPage() {
                   Create account
                 </button>
               </div>
-
               <div className="text-center">
                 <p className="text-sm text-gray-300">
                   Already have an account?{" "}

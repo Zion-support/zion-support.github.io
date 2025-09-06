@@ -1,10 +1,18 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
+<<<<<<< HEAD
 import {TooltipProvider} from "@/components/ui/tooltip"
 import {useIsMobile} from "@/hooks/use-mobile"
 import {cn} from "@/lib/utils"
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+;
+=======
+import { TooltipProvider } from "@/components/ui/tooltip"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -26,20 +34,25 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   onOpenChange?: (open: boolean) => void
 }
 
-export const SidebarProvider = React.forwardRef<
+<<<<<<< HEAD
+export const SidebarProvider = React.forwardRef<;
   HTMLDivElement;
+=======
+export const SidebarProvider = React.forwardRef<
+  HTMLDivElement,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   SidebarProviderProps
 >(
   (
     {
-      defaultOpen = true;
+      defaultOpen = true,
       open: openProp,
       onOpenChange: setOpenProp,
-      className;
-      style;
-      children;
+      className,
+      style,
+      children,
       ...props
-    };
+    },
     ref
   ) => {
     const isMobile = useIsMobile()
@@ -57,6 +70,7 @@ export const SidebarProvider = React.forwardRef<
         } else {
           _setOpen(openState)
         }
+<<<<<<< HEAD
 
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
@@ -80,6 +94,29 @@ export const SidebarProvider = React.forwardRef<
         ) {
           event.preventDefault()
           toggleSidebar()
+=======
+;
+        // This sets the cookie to keep the sidebar state.;
+        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
+      },;
+      [setOpenProp, open];
+    );
+    // Helper to toggle the sidebar.;
+    const toggleSidebar = React.useCallback(() => {;
+      return isMobile;
+        ? setOpenMobile((open) => !open);
+        : setOpen((open) => !open);
+    }, [isMobile, setOpen, setOpenMobile]);
+    // Adds a keyboard shortcut to toggle the sidebar.;
+    React.useEffect(() => {;
+      const handleKeyDown = (event: KeyboardEvent) => {;
+        if (;
+          event.key === SIDEBAR_KEYBOARD_SHORTCUT &&;
+          (event.metaKey || event.ctrlKey);
+        ) {;
+          event.preventDefault();
+          toggleSidebar();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
 
@@ -93,13 +130,13 @@ export const SidebarProvider = React.forwardRef<
 
     const contextValue = React.useMemo(
       (): SidebarContextType => ({
-        state;
-        open;
-        setOpen;
-        isMobile;
-        openMobile;
-        setOpenMobile;
-        toggleSidebar});
+        state,
+        open,
+        setOpen,
+        isMobile,
+        openMobile,
+        setOpenMobile,
+        toggleSidebar}),
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
     )
 
@@ -109,12 +146,12 @@ export const SidebarProvider = React.forwardRef<
           <div
               style={
               {
-                "--sidebar-width": "16rem";
-                "--sidebar-width-icon": "3rem";
+                "--sidebar-width": "16rem",
+                "--sidebar-width-icon": "3rem",
                 ...style} as CSSProperties
               }
             className={cn(
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
               className
             )}
             ref={ref}
@@ -129,4 +166,10 @@ export const SidebarProvider = React.forwardRef<
 )
 SidebarProvider.displayName = "SidebarProvider"
 
+<<<<<<< HEAD
+export { SidebarContext };
+;
+=======
 export { SidebarContext }
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

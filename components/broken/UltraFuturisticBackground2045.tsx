@@ -22,10 +22,13 @@ life: Math.random () * 100 + 50
 
 const UltraFuturisticBackground2045: React.FC<
   UltraFuturisticBackground2045Props
-> = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);
+> = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface UltraFuturisticBackground2045Props {
+  children: React.ReactNode
+}
 
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
+const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props> = ({ children }) => {
   const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
@@ -51,10 +54,18 @@ const UltraFuturisticBackground2045: React.FC<
     }> = [];
 
     // Create initial particles
-    for (let i = 0; i < 100; i++) {      particles.push({
+    for (let i = 0; i < 100; i++) {      particles.push({      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      alpha: number,
+      life: number
+    }> = [];
 
-      particles.push({
-
+    // Create initial particles
+    for (let i = 0, i < 100, i++) {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
@@ -63,9 +74,10 @@ const UltraFuturisticBackground2045: React.FC<
         color: `hsl(${Math.random() * 360}, 70%, 60%)`,
         alpha: Math.random() * 0.8 + 0.2,
         life: Math.random() * 100 + 50,
-      });    }
-
-    }
+      });    }        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+        alpha: Math.random() * 0.8 + 0.2,
+        life: Math.random() * 100 + 50
+      })
 
     // Animation loop
     const animate = () => {
@@ -108,40 +120,38 @@ const UltraFuturisticBackground2045: React.FC<
             color: `hsl(${Math.random() * 360}, 70%, 60%)`,
             alpha: Math.random() * 0.8 + 0.2,
             life: Math.random() * 100 + 50,
-          };        }
-
-        }
-
+          };        }            color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+            alpha: Math.random() * 0.8 + 0.2,
+            life: Math.random() * 100 + 50
+          }
       });
 
       // Draw connecting lines between nearby particles
       particles.forEach((particle1, i) => {
-        particles.slice(i + 1).forEach(particle2 => {          const dx = particle1.x - particle2.x;
-
+        particles.slice(i + 1).forEach(particle2 => {          const dx = particle1.x - particle2.x;        particles.slice(i + 1).forEach((particle2) => {
           const dx = particle1.x - particle2.x;
-
           const dy = particle1.y - particle2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 150) {
             ctx.save();
-            ctx.globalAlpha = ((150 - distance) / 150) * 0.3;            ctx.strokeStyle = '#00ffff';
-
+            ctx.globalAlpha = ((150 - distance) / 150) * 0.3;            ctx.strokeStyle = '#00ffff';            ctx.globalAlpha = (150 - distance) / 150 * 0.3;
             ctx.strokeStyle = '#00ffff';
-
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
             ctx.lineTo(particle2.x, particle2.y);
             ctx.stroke();
             ctx.restore();
-
           }
         });
       });
 
-      animationRef.current = requestAnimationFrame(animate);    };
+      animationRef.current = requestAnimationFrame(animate);    };          }
+        })
+      });
 
+      animationRef.current = requestAnimationFrame(animate)
     };
 
     animate();
@@ -149,8 +159,7 @@ const UltraFuturisticBackground2045: React.FC<
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;    };
-
+      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
 
     window.addEventListener('resize', handleResize);
@@ -158,7 +167,6 @@ const UltraFuturisticBackground2045: React.FC<
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
-
       }
       window.removeEventListener('resize', handleResize);
     };
@@ -175,7 +183,6 @@ const UltraFuturisticBackground2045: React.FC<
             'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)',
         }}
       />
-
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>
         {/* Animated Grid */}
@@ -194,12 +201,43 @@ const UltraFuturisticBackground2045: React.FC<
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: 'linear',          }}
+            ease: 'linear',          }}      }
+      window.removeEventListener('resize', handleResize)
+    }
+  }, []);
 
+  return (
+    <div className="relative min-h-screen bg-black overflow-hidden">
+      {/* Animated Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        style={{ background: 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' }}
+      />
+      {/* Floating Geometric Shapes */}
+      <div className="fixed inset-0 pointer-events-none z-10">
+        {/* Animated Grid */}
+        <motion.div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+            `;
+            backgroundSize: '50px 50px'
           }}
-
+          animate={{
+            backgroundPosition: ['0px 0px50px 50px']}}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear'
+          }}
         />
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Floating Neon Shapes */}
         <motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -213,15 +251,12 @@ const UltraFuturisticBackground2045: React.FC<
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',
-
-          }}
+            ease: 'easeInOut',          }}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
           animate={{
@@ -234,7 +269,6 @@ const UltraFuturisticBackground2045: React.FC<
             ease: 'easeInOut'
           }}
         />
-
         <motion.div
           animate={{
             rotate: [360, 0];
@@ -243,15 +277,12 @@ const UltraFuturisticBackground2045: React.FC<
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut',
-
-          }}
+            ease: 'easeInOut',          }}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transform rotate-45'
           animate={{
@@ -264,7 +295,6 @@ const UltraFuturisticBackground2045: React.FC<
             ease: 'easeInOut'
           }}
         />
-
         <motion.div
           animate={{
             rotate: [45, 405];
@@ -273,9 +303,7 @@ const UltraFuturisticBackground2045: React.FC<
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: 'easeInOut',
-
-          }}
+            ease: 'easeInOut',          }}
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -286,7 +314,10 @@ const UltraFuturisticBackground2045: React.FC<
             ease: 'easeInOut'
           }}
         />
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Additional floating elements */}
         <motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
@@ -299,15 +330,12 @@ const UltraFuturisticBackground2045: React.FC<
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: 'easeInOut',
-
-          }}
+            ease: 'easeInOut',          }}
           transition={{
             duration: 4,
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12'
           animate={{
@@ -320,7 +348,7 @@ const UltraFuturisticBackground2045: React.FC<
             duration: 12,
             repeat: Infinity,
             ease: 'linear',
-
+            ease: 'linear'
           }}
           transition={{
             duration: 12,
@@ -335,7 +363,6 @@ const UltraFuturisticBackground2045: React.FC<
             ease: 'easeInOut'
           }}
         />
-
         <motion.div
           animate={{
             rotate: [12, 372];
@@ -346,7 +373,10 @@ const UltraFuturisticBackground2045: React.FC<
             ease: 'linear'
           }}
         />
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Energy Orbs */}
         <motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
@@ -360,15 +390,12 @@ const UltraFuturisticBackground2045: React.FC<
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: 'easeInOut',
-
-          }}
+            ease: 'easeInOut',          }}
           transition={{
             duration: 3,
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50'
           animate={{
@@ -381,7 +408,6 @@ const UltraFuturisticBackground2045: React.FC<
             ease: 'easeInOut'
           }}
         />
-
         <motion.div
           animate={{
             scale: [1, 1.8, 1];
@@ -390,9 +416,7 @@ const UltraFuturisticBackground2045: React.FC<
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: 'easeInOut',
-
-          }}
+            ease: 'easeInOut',          }}
           transition={{
             duration: 4,
             repeat: Infinity,
@@ -404,17 +428,16 @@ const UltraFuturisticBackground2045: React.FC<
           }}
         />
       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />
-
-      </div>
-
       {/* Content */}
       <div className='relative z-30'>{children}</div>
-
       {/* Animated Border Effects */}
       <div className='fixed inset-0 pointer-events-none z-40'>
         <motion.div
@@ -435,11 +458,21 @@ const UltraFuturisticBackground2045: React.FC<
       </div>
     </div>
   );
-};export default UltraFuturisticBackground2045;
-
+};export default UltraFuturisticBackground2045;            ease: 'linear'
           }}
         />
       </div>
     </div>
+  );
+};  )
+};
 
+<<<<<<< HEAD
 export default UltraFuturisticBackground2045;
+
+}
+}
+}
+=======
+export default UltraFuturisticBackground2045;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

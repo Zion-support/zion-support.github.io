@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { role = "guest", talent } = req.query as {
+  const { role = "guest", talent } = req.query as {;
     role?: string;
     talent?: string;
   };
   export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { role = "guest", talent } = req.query as {
+    const { role = "guest", talent } = req.query as {;
       role?: string;
       talent?: string;
     };
@@ -41,7 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   set("userId", role === "guest" ? "" : "test-user");
 
-  headers["Set-Cookie"] = cookies.join();
+headers["Set-Cookie"] = cookies.join();
   res.writeHead(302, { ...headers, Location: "/" });
   res.end();
 }

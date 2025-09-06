@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {
@@ -8,14 +7,29 @@ function useCounter(target: number, durationMs: number) {
       if (start === null) start = ts;
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);
-
+      if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null,
+    let raf: number,
     const step = (ts: number) => {
       if (start === null) start = ts,
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
+<<<<<<< HEAD
+      if (progress < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [target, durationMs]);
+  return value;}
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf)
+  }, [target, durationMs]);
+  return value
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
-export default function InteractiveStats() {
+export default function InteractiveStats() {;
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
@@ -38,7 +52,11 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
       <div className="text-3xl font-bold">{value}{suffix}</div>
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
     </div>
+<<<<<<< HEAD
+);
+=======
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 function Stat({
   label,
   value,
@@ -56,4 +74,9 @@ function Stat({
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
+<<<<<<< HEAD
   );
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

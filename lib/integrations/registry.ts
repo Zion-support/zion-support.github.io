@@ -43,12 +43,18 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     name: "BambooHR",
     category: "ats",
     description: "HRIS & ATS",
-  },
+  },;
 ];
 
 export function getProviderById(
   id: string,
+<<<<<<< HEAD
+): IntegrationProviderMeta | undefined {;
+  return PROVIDERS.find((p) => p.id === id);
+}
+=======
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

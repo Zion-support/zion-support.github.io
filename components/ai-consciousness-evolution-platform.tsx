@@ -1,11 +1,15 @@
+<<<<<<< HEAD
+const AIConsciousnessEvolutionPlatform: React.FC = () => {
+=======
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
   opacity: 0, y: 20 
 }animate= {
   {
-  opacity: 1, y: 0 
+  opacity: 1, y: 0
 
 }transition= {
   {
@@ -80,3 +84,13 @@ visible: {
 };
 
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
+<<<<<<< HEAD
+
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

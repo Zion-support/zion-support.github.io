@@ -11,26 +11,34 @@ const nextConfig = {
   },
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   trailingSlash: true,
-  
-  // Image optimization
   images: {
     domains: [
+<<<<<<< HEAD
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com",
+=======
       'localhost',
       'ziontechgroup.com',
       'images.unsplash.com',
-      'via.placeholder.com',
+      'via.placeholder.com'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     ],
-    formats: ['image/webp', 'image/avif'],
+    formats: ["image/webp", "image/avif"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
     minimumCacheTTL: 31536000,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+=======
+    minimumCacheTTL: 31536000
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
         ignored: [
+<<<<<<< HEAD
           "**/node_modules/**",
           "**/.git/**",
           "**/pages_backup*/**",
@@ -65,7 +73,7 @@ const nextConfig = {
           "**/performance-*.txt",
           "**/apps/**",
         ],
-        poll: 1000,
+poll: 1000,
         aggregateTimeout: 300,
       };
     }
@@ -104,12 +112,10 @@ const nextConfig = {
       },
     ];
   },
-  
-  // Webpack configuration
-  webpack: (config, { dev, isServer }) => {
-    if (dev) {
-      config.watchOptions = {
-        ignored: [
+};
+
+export default nextConfig;
+=======
           '**/node_modules/**',
           '**/.git/**',
           '**/pages_backup*/**',
@@ -148,29 +154,8 @@ const nextConfig = {
         aggregateTimeout: 300
       }
     }
-    
-    // Exclude apps directory from compilation
-    config.module.rules.push({
-      test: /\.(ts|tsx|js|jsx)$/,
-      include: /apps\//,
-      use: 'ignore-loader'
-    });
-    
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\/]node_modules[\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    
-    return config;
-  },
-};
-
-export default nextConfig;
+    return config
+  }
+}
+export default nextConfig
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

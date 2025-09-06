@@ -200,7 +200,7 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-  DizzyFace2,
+  DizzyFace2,;
 } from "lucide-react";
 
 const guides = [
@@ -306,7 +306,11 @@ const categories = [
   { name: "Performance", count: 1, icon: Zap },
 ];
 
-export default function GuidesPage() {
+interface GuidesProps {
+  className?: string;
+}
+
+const Guides: React.FC<GuidesProps> = ({ className }) => {
   return (
     <Layout>
       <Head>
@@ -316,7 +320,6 @@ export default function GuidesPage() {
           content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
         />
       </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -353,7 +356,6 @@ export default function GuidesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Categories Section */}
         <section id="categories" className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -371,7 +373,6 @@ export default function GuidesPage() {
                 skill level.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
               {categories.map((category, index) => (
                 <motion.div
@@ -394,7 +395,6 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
-
         {/* Guides Grid */}
         <section id="guides" className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -412,7 +412,6 @@ export default function GuidesPage() {
                 technologies.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {guides.map((guide, index) => (
                 <motion.div
@@ -445,7 +444,6 @@ export default function GuidesPage() {
                       </span>
                     </div>
                   </div>
-
                   <div className="p-6">
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center">
@@ -457,12 +455,10 @@ export default function GuidesPage() {
                         {guide.author}
                       </div>
                     </div>
-
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {guide.title}
                     </h3>
                     <p className="text-gray-600 mb-4">{guide.description}</p>
-
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
                         <div className="flex items-center">
@@ -483,7 +479,6 @@ export default function GuidesPage() {
                         </span>
                       </div>
                     </div>
-
                     <div className="flex flex-wrap gap-2 mb-6">
                       {guide.tags.map((tag) => (
                         <span
@@ -494,7 +489,6 @@ export default function GuidesPage() {
                         </span>
                       ))}
                     </div>
-
                     <div className="flex gap-2">
                       <Link
                         href="#"
@@ -516,7 +510,6 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <div className="container mx-auto px-4">
@@ -553,6 +546,6 @@ export default function GuidesPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </Layout>;
   );
 }

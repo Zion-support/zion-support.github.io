@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -6,14 +7,24 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
+=======
+import React from "react",
+import { Card } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Search } from "lucide-react",
+import { Input } from "@/components/ui/input",
+import { cn } from "@/lib/utils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface Conversation {
   id: string,
   name: string,
-  avatar?: string;
+  avatar?: string,
   lastMessage: string,
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
+<<<<<<< HEAD
 }
 
 interface MobileConversationListProps {
@@ -22,9 +33,37 @@ interface MobileConversationListProps {
   onSelectConversation: (id: string) => void
 }
 
-export function MobileConversationList({
+export function MobileConversationList({;
   conversations;
   activeConversation;
+=======
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { cn } from "@/lib/utils",;
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+;
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+  activeConversation?: string,;
+  onSelectConversation: (id: string) => void;
+}
+
+export function MobileConversationList({
+  conversations,
+  activeConversation,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -38,7 +77,6 @@ export function MobileConversationList({
           />
         </div>
       </div>
-      
       <div className="px-4 pb-4 space-y-2">
         <div className="flex space-x-2">
           <Badge variant="secondary" className="rounded-full px-3">All</Badge>
@@ -47,13 +85,12 @@ export function MobileConversationList({
           <Badge variant="outline" className="rounded-full px-3">Projects</Badge>
         </div>
       </div>
-      
       <div className="space-y-2 pb-24">
         {conversations.map((conversation) => (
           <div
             key={conversation.id}
             className={cn(
-              "px-4";
+              "px-4",
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -65,7 +102,6 @@ export function MobileConversationList({
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-              
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
                   <h3 className="font-medium truncate">{conversation.name}</h3>
@@ -73,14 +109,12 @@ export function MobileConversationList({
                     {conversation.timestamp}
                   </span>
                 </div>
-                
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
                     {conversation.isTyping 
-                      ? <em>Typing...</em> 
+                      ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>
-                  
                   {conversation.unreadCount > 0 && (
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}

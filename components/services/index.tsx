@@ -1,11 +1,15 @@
+<<<<<<< HEAD
+export default function ServicesIndexPage () {
+=======
  export default function ServicesIndexPage () {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api/quote-request', {
   method: 'POST', headers: {
-  'Content-Type': 'application/json' 
+  'Content-Type': 'application/json' ;
 };
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
@@ -42,7 +46,7 @@ const ServicesPage: NextPage = () => {
 
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
-    .concat(
+    .concat(;
       extraServices as any[];
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
@@ -136,7 +140,10 @@ export default function ServicesIndexPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -148,3 +155,10 @@ export default function ServicesIndexPage() {
 };
 
 export default ServicesPage;
+<<<<<<< HEAD
+
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -73,11 +73,9 @@ const PerformanceDashboard: React.FC = () => {
       >
         📊 Performance
       </button>
-
       {isVisible && (
         <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl p-6 w-80 border">
           <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>
-
           <div className="space-y-3">
             {metrics.loadTime && (
               <div className="flex justify-between items-center">
@@ -123,7 +121,6 @@ const PerformanceDashboard: React.FC = () => {
               </div>
             )}
           </div>
-
           <div className="mt-4 pt-4 border-t">
             <div className="text-xs text-gray-500">
               Core Web Vitals monitoring in real-time

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -8,6 +9,26 @@ import {FormValues} from "./useHireRequestForm";
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>,
   talent?: TalentProfile
+=======
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { TalentProfile } from "@/types/talent",
+import { FormValues } from "./useHireRequestForm",
+interface BudgetFieldsProps {
+  form: UseFormReturn<FormValues>,
+  talent?: TalentProfile
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { TalentProfile } from "@/types/talent",;
+import { FormValues } from "./useHireRequestForm",;
+interface BudgetFieldsProps {;
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
@@ -57,3 +78,4 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
     </>
   )
 }
+;

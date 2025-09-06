@@ -1,6 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+export function VerifiedBadge({ labels }: { labels: string[] }) {;
+=======
 
 export function VerifiedBadge({ labels }: { labels: string[] }) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!labels || labels.length === 0) return null;
   return (
     <div className='flex gap-2 items-center'>
@@ -30,3 +34,8 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
     </div>
   );
 }
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

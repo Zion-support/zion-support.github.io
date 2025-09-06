@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const id = String(req.query.id || "");
   if (id) {
     const updates = readJsonFile("updates.json", [] as any[]);
@@ -12,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   }
   const pixel = Buffer.from(
-    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+"R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
   );
   res.setHeader("Content-Type", "image/gif");

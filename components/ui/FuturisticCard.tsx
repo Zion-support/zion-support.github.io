@@ -14,6 +14,10 @@ export default function FuturisticCard({ title, description, cta }: Props) {
         <p className="text-sm text-gray-300 mt-1">{description}</p>
         {cta && <div className="mt-3">{cta}</div>}
       </div>
+<<<<<<< HEAD
+    </div>;
+=======
     </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }

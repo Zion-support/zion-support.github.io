@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
+=======
+import { QuoteFormData } from "@/types/quotes",
+import { Label } from "@/components/ui/label",
+import { Slider } from "@/components/ui/slider",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface BudgetStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -10,10 +16,33 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
-        budget: {
+<<<<<<< HEAD
+        budget: {;
           ...formData.budget;
           type,
           maxAmount: formData.budget.amount + 5000
+=======
+        budget: {
+          ...formData.budget,
+          type,
+          maxAmount: formData.budget.amount + 5000
+import { QuoteFormData } from "@/types/quotes",;
+import { Label } from "@/components/ui/label",;
+import { Slider } from "@/components/ui/slider",;
+interface BudgetStepProps {;
+  formData: QuoteFormData,;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+;
+export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
+  const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {;
+    if (type === "range" && !formData.budget.maxAmount) {;
+      updateFormData({;
+        budget: {;
+          ...formData.budget,;
+          type,;
+          maxAmount: formData.budget.amount + 5000;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       })
     } else {
@@ -24,7 +53,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
         }
       })
     }
+<<<<<<< HEAD
   };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -32,13 +65,12 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
       currency: 'USD',
       maximumFractionDigits: 0
     }).format(value)
-  };
+  },
 
   return (
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What's your budget?</h3>
-        
         <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div 
@@ -52,7 +84,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
               <h4 className="font-medium text-white">Fixed Budget</h4>
               <p className="text-sm text-zion-slate-light">I have a set amount</p>
             </div>
-            
             <div 
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "hourly" 
@@ -64,7 +95,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
               <h4 className="font-medium text-white">Hourly Rate</h4>
               <p className="text-sm text-zion-slate-light">Pay per hour of work</p>
             </div>
-            
             <div 
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "range" 
@@ -77,7 +107,10 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
               <p className="text-sm text-zion-slate-light">I have a min and max</p>
             </div>
           </div>
+<<<<<<< HEAD
+=======
           
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
@@ -130,6 +163,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   defaultValue={[formData.budget.amount]}
                   max={50000}
                   step={500}
+<<<<<<< HEAD
                   onValueChange={(value) => {
                     const newAmount = value[0];
                     const maxAmount = formData.budget.maxAmount || 50000;
@@ -139,6 +173,16 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                         ...formData.budget, 
                         amount: newAmount,
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
+=======
+                  onValueChange={(value) => {;
+                    const newAmount = value[0],;
+                    const maxAmount = formData.budget.maxAmount || 50000,;
+                    updateFormData({;
+                      budget: {;
+                        ...formData.budget;
+                        amount: newAmount;
+                        maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       }
                     })
                   }}
@@ -149,7 +193,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   <span>$50,000</span>
                 </div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light mb-4 block">
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount || 0)}
@@ -175,4 +218,4 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
       </div>
     </div>
   )
-}
+};

@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import {useTranslation} from 'react-i18next';
 import i18n from '../../utils/i18n';
 import {supportedLocales, isRtl} from '../../utils/i18n';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const localeToFlag: Record<string, string> = {
   en: 'us',
   pt: 'br',
@@ -15,7 +18,7 @@ const localeLabelKey: Record<string, string> = {
   es: 'lang.spanish',
   ar: 'lang.arabic',
 };  ar: 'lang.arabic'},
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher() {;
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage || i18n.language || 'en';
@@ -94,5 +97,5 @@ export default function LanguageSwitcher() {
         </ul>
       )}
     </div>
-  );
+);
 }

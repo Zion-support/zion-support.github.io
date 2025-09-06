@@ -9,16 +9,8 @@ export default function EnterpriseIT({ }: EnterpriseITProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src.pages.disabled/EnterpriseIT.jsx
+:src.pages.disabled/EnterpriseIT.jsx
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.pages.disabled/EnterpriseIT.jsx
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
 }
 }

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const localeLabelKey: Record<string, string> = {
   en: "lang.english",
   pt: "lang.portuguese",
   es: "lang.spanish",
   ar: "lang.arabic",
 };
-export default function LanguageSwitchPrompt() {
+export default function LanguageSwitchPrompt() {;
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
 
@@ -69,5 +72,9 @@ export default function LanguageSwitchPrompt() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+);
+=======
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

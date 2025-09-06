@@ -30,7 +30,7 @@ function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
   if (!id) return res.status(400).json({ error: 'Missing id' });
 
@@ -66,3 +66,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
  const response = await client.chat.completions.create ({
   model: 'gpt-4o-mini';
 messages: [ {
   role: 'system', content: 'You are a helpful assistant.' 
+=======
+// Create utility
+export const Create = () => {
+  // Implementation here
+  return null;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 {
   role: 'user', content: prompt 
@@ -43,7 +50,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 
   const { name, email, budget, timeline, description, talentSlug } =
@@ -57,7 +64,7 @@ export default async function handler(
   };
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const { name, email, budget, timeline, description, talentSlug } = req.body || {};
@@ -99,5 +106,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
-  return res.status(200).json({ id, status: 'ok' });
+return res.status(200).json({ id, status: 'ok' });
 }

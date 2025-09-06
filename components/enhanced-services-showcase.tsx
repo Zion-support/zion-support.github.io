@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+=======
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -226,3 +230,13 @@ const Button = ({
     </button>
   )
 };
+<<<<<<< HEAD
+
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

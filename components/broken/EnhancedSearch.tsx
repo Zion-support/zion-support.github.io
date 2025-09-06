@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+=======
  //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 }];
 setIsSearching (true);
@@ -41,7 +45,7 @@ setIsSearching (false)
 
 }animate= {
   {
-  opacity: 1, y: 0, scale: 1 
+  opacity: 1, y: 0, scale: 1
 
 }exit= {
   {
@@ -186,3 +190,15 @@ function debounce<T extends (...args: any[]) => any>(
 }
 
 export default EnhancedSearch;
+<<<<<<< HEAD
+
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

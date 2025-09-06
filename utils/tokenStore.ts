@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-export interface TokenTransaction {
+export interface TokenTransaction {;
   id: string;
   userId: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -11,7 +11,7 @@ export interface TokenTransaction {
   metadata?: Record<string, any>;
 }
 
-export interface TokenConfig {
+export interface TokenConfig {;
   name: string;
   symbol: string;
   totalSupply: number;
@@ -77,11 +77,11 @@ function getDefaultConfig(): TokenConfig {
   };
 }
 
-export function getAllTransactions(): TokenTransaction[] {
+export function getAllTransactions(): TokenTransaction[] {;
   return loadTransactions();
 }
 
-export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {;
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
     ...transaction,
@@ -94,15 +94,15 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
   return newTransaction;
 }
 
-export function getConfig(): TokenConfig {
+export function getConfig(): TokenConfig {;
   return loadConfig();
 }
 
-export function setConfig(config: TokenConfig): void {
+export function setConfig(config: TokenConfig): void {;
   saveConfig(config);
 }
 
-export function getUserBalance(userId: string): number {
+export function getUserBalance(userId: string): number {;
   const transactions = loadTransactions();
   let balance = 0;
   

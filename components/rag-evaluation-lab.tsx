@@ -54,7 +54,6 @@ import Link from 'next/link';
               </div>
             ))}
           </div>
-
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -121,7 +120,6 @@ import Link from 'next/link';
               .
             </p>
           </div>
-
           <div className='mt-12 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'

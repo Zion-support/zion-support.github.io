@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <main className='mx-auto max-w-5xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>
@@ -10,7 +13,6 @@ import Link from 'next/link';
         These automations run entirely in the cloud, orchestrate tasks
         intelligently, and sync changes back to the repository.
       </p>
-
       <div className='mt-8 space-y-6'>
         <div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm'>
           <h2 className='text-lg font-semibold text-gray-900'>
@@ -34,7 +36,6 @@ import Link from 'next/link';
             </a>
           </div>
         </div>
-
         <div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm'>
           <h2 className='text-lg font-semibold text-gray-900'>
             AI Content Curator

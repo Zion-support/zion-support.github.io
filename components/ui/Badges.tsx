@@ -2,7 +2,7 @@ import React from 'react';
 
 export function TrustBadge({
   type,
-}: {
+}: {;
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {
   const colorMap = {
@@ -21,7 +21,7 @@ export function TrustBadge({
 export function MicroTestimonial({
   quote,
   author,
-}: {
+}: {;
   quote: string;
   author: string;
 }) {
@@ -47,6 +47,14 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     <figure className="border rounded-md p-3 text-sm">
       <blockquote className="italic opacity-90">“{quote}”</blockquote>
       <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
+<<<<<<< HEAD
+    </figure>;
+);
+}
+
+}
+=======
     </figure>
   );
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

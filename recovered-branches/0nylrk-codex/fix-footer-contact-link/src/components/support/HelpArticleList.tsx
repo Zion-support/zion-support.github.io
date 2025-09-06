@@ -1,18 +1,40 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
+<<<<<<< HEAD
 }
 
-export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
   
   if (!category) {
     return <div>Category not found</div>
+=======
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
+  searchQuery: string;
+}
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  if (!category) {;
+    return <div>Category not found</div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   
   // Filter articles based on search query
@@ -22,7 +44,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           article.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : category.articles;
+    : category.articles,
   
   return (
     <div>
@@ -30,7 +52,6 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
-      
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>
@@ -71,4 +92,16 @@ function formatDate(date: string): string {
     month: "long",
     day: "numeric"
   })
+<<<<<<< HEAD
 }
+=======
+;
+function formatDate(date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric";
+    month: "long";
+    day: "numeric";
+  });
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -15,7 +16,7 @@ import {
   Clock,
   BarChart3,
   Cloud,
-  Shield
+  Shield;
 } from 'lucide-react';
 
 const caseStudies = [
@@ -81,7 +82,6 @@ const stats = [
   { number: "99.9%", label: "Success Rate" },
   { number: "24/7", label: "Support Available" }
 ];
-
 export default function CaseStudiesPage() {
   return (
     <MainLayout
@@ -96,7 +96,6 @@ export default function CaseStudiesPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -117,7 +116,6 @@ export default function CaseStudiesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -140,7 +138,6 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-
         {/* Case Studies */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -159,7 +156,6 @@ export default function CaseStudiesPage() {
                 different industries achieve their technology goals.
               </p>
             </motion.div>
-
             <div className="max-w-6xl mx-auto">
               <div className="space-y-16">
                 {caseStudies.map((study, index) => (
@@ -179,14 +175,12 @@ export default function CaseStudiesPage() {
                           </span>
                           <span className="text-gray-500 text-sm">{study.duration}</span>
                         </div>
-
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">
                           {study.title}
                         </h3>
                         <p className="text-gray-600 mb-6">
                           <strong>Client:</strong> {study.client}
                         </p>
-
                         <div className="space-y-4 mb-6">
                           <div>
                             <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
@@ -197,7 +191,6 @@ export default function CaseStudiesPage() {
                             <p className="text-gray-600">{study.solution}</p>
                           </div>
                         </div>
-
                         <div className="mb-6">
                           <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
                           <ul className="space-y-2">
@@ -209,7 +202,6 @@ export default function CaseStudiesPage() {
                             ))}
                           </ul>
                         </div>
-
                         <div className="flex flex-wrap gap-2 mb-6">
                           {study.technologies.map((tech, idx) => (
                             <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
@@ -217,7 +209,6 @@ export default function CaseStudiesPage() {
                             </span>
                           ))}
                         </div>
-
                         <div className="flex items-center justify-between">
                           <div className="flex items-center text-sm text-gray-600">
                             <Users className="w-4 h-4 mr-2" />
@@ -232,7 +223,6 @@ export default function CaseStudiesPage() {
                           </a>
                         </div>
                       </div>
-
                       <div className="bg-gradient-to-br from-green-500 to-teal-600 p-8 flex items-center justify-center">
                         <div className="text-center text-white">
                           <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />
@@ -249,7 +239,6 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <div className="container mx-auto px-4">
@@ -285,7 +274,7 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </MainLayout>;
   );
 }
 import Link from 'next/link';
@@ -310,10 +299,16 @@ export default function CaseStudiesPage() {
           Proven outcomes and detailed success stories. Coming soon.
         </p>
       </section>
-    </Layout>
+    </Layout>;
   );
 
- </Head> </section> </Layout> 
+ </Head> </section> </Layout>
+=======
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+export default function CaseStudiesPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 	return (
 		<Layout>
 			<Head>
@@ -327,4 +322,31 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
+<<<<<<< HEAD
 }
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+export default function CaseStudiesPage(req, res) {
+  try {
+	return (;
+		<Layout>;
+			<Head>;
+				<title>Case Studies | Zion Tech Group</title>;
+				<link rel="canonical" href="https://ziontechgroup.com/case-studies" />;
+				<meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />;
+			</Head>;
+			<section className="container mx-auto px-4 py-24">;
+				<h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Case Studies</h1>;
+				<p className="text-gray-300">Proven outcomes and detailed success stories. Coming soon.</p>;
+			</section>;
+		</Layout>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

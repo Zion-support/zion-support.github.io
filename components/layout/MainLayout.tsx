@@ -26,17 +26,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   return (
     <>
       <Head>
-
         <title>{title}</title>
         <meta name="description" content={description} />
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
 
-        
         <meta property="og:type" content={type} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -49,18 +46,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="twitter:description" content={description} />
         {image && <meta name="twitter:image" content={image} />}
       </Head>
-      
-
         <Header />
         <main className="flex-1">
           {children}
         </main>
         <Footer />
       </div>
-    </>
-
+</>
   );
-
 
 export default MainLayout;
   title = 'Zion Tech Group - Leading Technology Solutions Provider',

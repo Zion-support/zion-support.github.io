@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
+=======
+import { Certification } from '@/types/resume',;
+import { format } from 'date-fns',;
+interface CertificationsSectionProps {;
+  certifications: Certification[];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {
@@ -11,10 +18,15 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
     }
-    return format(date, 'MMM yyyy')
+<<<<<<< HEAD
+    return format(date, 'MMM yyyy');
   };
+=======
+    return format(date, 'MMM yyyy')
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
-  if (certifications.length === 0) return null;
+  if (certifications.length === 0) return null,
   
   return (
     <div>
@@ -36,7 +48,7 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
               <p className="text-sm">
                 <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                   View Credential
-                </a>
+                </Link>
               </p>
             )}
           </div>
@@ -45,3 +57,4 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     </div>
   )
 }
+;

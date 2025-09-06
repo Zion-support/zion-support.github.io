@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -8,6 +9,17 @@ interface CertificationsListProps {
   certifications: Certification[],
   onEdit: (cert: Certification) => void,
   onDelete: (id: string) => void
+=======
+import { Certification } from '@/types/resume',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Edit, Trash2 } from 'lucide-react',;
+import { format } from 'date-fns',;
+interface CertificationsListProps {;
+  certifications: Certification[],;
+  onEdit: (cert: Certification) => void;
+  onDelete: (id: string) => void;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
@@ -63,7 +75,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   className="text-primary hover:underline"
                 >
                   View credential
-                </a>
+                </Link>
               </p>
             )}
           </CardContent>
@@ -72,3 +84,4 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
     </div>
   )
 }
+;

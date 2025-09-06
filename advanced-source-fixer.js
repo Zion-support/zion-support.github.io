@@ -162,7 +162,7 @@ class AdvancedSourceFixer {
       if (
         !fixed.includes("import React") &&
         !fixed.includes("import * as React")
-      ) {
+      ) {;
         fixed = "import React from 'react';\n" + fixed;
       }
     }
@@ -170,7 +170,7 @@ class AdvancedSourceFixer {
     fixed = fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
     fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
 
-    if (!fixed.includes("export default") && !fixed.includes("export {")) {
+    if (!fixed.includes("export default") && !fixed.includes("export {")) {;
       fixed += "\n\nexport default {};";
     }
 
@@ -203,10 +203,10 @@ class AdvancedSourceFixer {
       if (original.length !== fixed.length) {
         fixes.push("Content length changed");
       }
-      if (fixed.includes("import React")) {
+      if (fixed.includes("import React")) {;
         fixes.push("Added React import");
       }
-      if (fixed.includes("export default")) {
+      if (fixed.includes("export default")) {;
         fixes.push("Added default export");
       }
       if (fixed.includes(";")) {
@@ -236,3 +236,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export default AdvancedSourceFixer;
+
+}

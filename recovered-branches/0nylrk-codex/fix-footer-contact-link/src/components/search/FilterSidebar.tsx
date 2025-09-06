@@ -1,27 +1,43 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
+=======
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Checkbox } from "@/components/ui/checkbox",
+import { Filter, X, Star } from "lucide-react",
+import { FilterOptions } from "@/types/search",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface FilterSidebarProps {
   filters: {
     selectedProductTypes: string[],
     selectedLocations: string[],
     selectedAvailability: string[],
     selectedRating: number | null
-  };
+  },
   filterOptions: FilterOptions,
   onFilterChange: (filterType: string, value: string) => void,
   onRatingChange: (rating: number | null) => void,
   onClearFilters: () => void
 }
 
-export function FilterSidebar({
+<<<<<<< HEAD
+export function FilterSidebar({;
   filters;
   filterOptions;
   onFilterChange;
   onRatingChange;
+=======
+export function FilterSidebar({
+  filters,
+  filterOptions,
+  onFilterChange,
+  onRatingChange,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onClearFilters
 }: FilterSidebarProps) {
   return (
@@ -34,12 +50,49 @@ export function FilterSidebar({
           variant="outline" 
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { Filter, X, Star } from "lucide-react",;
+import { FilterOptions } from "@/types/search",;
+interface FilterSidebarProps {;
+  filters: {;
+    selectedProductTypes: string[],;
+    selectedLocations: string[],;
+    selectedAvailability: string[],;
+    selectedRating: number | null;
+  },;
+  filterOptions: FilterOptions,;
+  onFilterChange: (filterType: string, value: string) => void,;
+  onRatingChange: (rating: number | null) => void,;
+  onClearFilters: () => void;
+}
+;
+export function FilterSidebar({;
+  filters,;
+  filterOptions,;
+  onFilterChange;
+  onRatingChange;
+  onClearFilters;
+}: FilterSidebarProps) {;
+  return (;
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
+      <div className="flex items-center justify-between mb-4">;
+        <h3 className="text-lg font-medium text-white flex items-center">;
+          <Filter className="mr-2 h-5 w-5" /> Filters;
+        </h3>;
+        <Button;
+          variant="outline";
+          size="sm";
+          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           onClick={onClearFilters}
         >
           Clear All
         </Button>
       </div>
-      
       {/* Product Type Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -64,7 +117,6 @@ export function FilterSidebar({
           ))}
         </div>
       </div>
-      
       {/* Location Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -89,7 +141,6 @@ export function FilterSidebar({
           ))}
         </div>
       </div>
-      
       {/* Availability Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -114,7 +165,6 @@ export function FilterSidebar({
           ))}
         </div>
       </div>
-      
       {/* Rating Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">

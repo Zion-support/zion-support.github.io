@@ -6,15 +6,53 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  }
 
   const { userId, reviewerId, type, note } = req.body || {};
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
+    return res.status(400).json({ error: 'Missing or invalid fields' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST'),
+    return res.status(405).json({ error: 'Method not allowed' })
+;
+  const { userId, reviewerId, type, note } = req.body || {};
+<<<<<<< HEAD
+  if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
     return res.status(400).json({ error: 'Missing or invalid fields' });
-
   }
 
-  const { userId, reviewerId, type, note } = req.body || {};
+  const review: TrustPeerReview = {
+    userId,
+    reviewerId,
+    type,
+    note,
+    createdAt: new Date().toISOString(),
+  };
+
+  try {
+    await supabase.from('trust_peer_reviews').insert(review);
+  } catch {}
+
+  return res.status(200).json({ ok: true, review });  }
+
+  const review: TrustPeerReview = {
+    userId;
+    reviewerId;
+    type;
+    note;
+    createdAt: new Date().toISOString()};
+
+  try {
+    await supabase.from('trust_peer_reviews').insert(review)
+  } catch {}
+
+return res.status(200).json({ ok: true, review });
+}
+
+}
+}
+=======
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

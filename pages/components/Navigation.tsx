@@ -42,7 +42,7 @@ import {
   Truck,
   Users,
   X,
-  Zap,
+  Zap,;
 } from "lucide-react";
 
 const navigationItems = [
@@ -260,10 +260,11 @@ const quickLinks = [
   { title: "API Docs", href: "/api-docs", icon: Code },
 ];
 
-export default function Navigation() {
+export default function Navigation() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
@@ -297,7 +298,6 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -315,7 +315,6 @@ export default function Navigation() {
               </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -333,7 +332,6 @@ export default function Navigation() {
                   <span>{item.title}</span>
                   <ChevronDown className="w-4 h-4" />
                 </Link>
-
                 {/* Submenu */}
                 {activeSubmenu === item.title && (
                   <motion.div
@@ -388,7 +386,6 @@ export default function Navigation() {
               ))}
             </div>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -397,7 +394,6 @@ export default function Navigation() {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <motion.div

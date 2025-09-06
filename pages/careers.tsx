@@ -16,7 +16,7 @@ import {
   Briefcase,
   GraduationCap,
   Globe,
-  CheckCircle,
+  CheckCircle,;
 } from "lucide-react";
 
 const jobOpenings = [
@@ -150,7 +150,11 @@ const values = [
   },
 ];
 
-export default function CareersPage() {
+interface CareersProps {
+  className?: string;
+}
+
+const Careers: React.FC<CareersProps> = ({ className }) => {
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -164,7 +168,6 @@ export default function CareersPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -200,7 +203,6 @@ export default function CareersPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Why Join Us */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -220,7 +222,6 @@ export default function CareersPage() {
                 technology solutions.
               </p>
             </motion.div>
-
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {benefits.map((benefit, index) => (
@@ -245,7 +246,6 @@ export default function CareersPage() {
             </div>
           </div>
         </section>
-
         {/* Our Values */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -264,7 +264,6 @@ export default function CareersPage() {
                 culture.
               </p>
             </motion.div>
-
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {values.map((value, index) => (
@@ -286,7 +285,6 @@ export default function CareersPage() {
             </div>
           </div>
         </section>
-
         {/* Open Positions */}
         <section id="open-positions" className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -305,7 +303,6 @@ export default function CareersPage() {
                 you.
               </p>
             </motion.div>
-
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {jobOpenings.map((job, index) => (
@@ -323,12 +320,10 @@ export default function CareersPage() {
                       </span>
                       <span className="text-gray-500 text-sm">{job.type}</span>
                     </div>
-
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {job.title}
                     </h3>
                     <p className="text-gray-600 mb-4">{job.description}</p>
-
                     <div className="space-y-2 mb-6">
                       <div className="flex items-center text-sm text-gray-600">
                         <MapPin className="w-4 h-4 mr-2" />
@@ -339,7 +334,6 @@ export default function CareersPage() {
                         {job.experience}
                       </div>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2">
                         Key Requirements:
@@ -358,7 +352,6 @@ export default function CareersPage() {
                           ))}
                       </ul>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2">
                         Benefits:
@@ -374,7 +367,6 @@ export default function CareersPage() {
                         ))}
                       </div>
                     </div>
-
                     <a
                       href={`/careers/${job.id}`}
                       className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center"
@@ -388,7 +380,6 @@ export default function CareersPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
@@ -424,6 +415,6 @@ export default function CareersPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </MainLayout>;
   );
 }

@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import type {
-  GrantApplication,
+  GrantApplication,;
   UpdateGrantPayload,;
 } from '../../../types/grants';
 
@@ -43,7 +43,11 @@ function writeGrant(record: GrantApplication) {
   ensureDir(),
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { id } = req.query as { id: string };
   if (!id) {
     res.status(400).json({ error: 'Missing id' });

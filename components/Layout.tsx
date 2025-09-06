@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
@@ -67,7 +68,6 @@ const Layout: React.FC<LayoutProps> = ({
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={canonical} />
         <meta property="og:type" content="website" />
-
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={ogTitle || title} />
@@ -76,19 +76,51 @@ const Layout: React.FC<LayoutProps> = ({
           content={ogDescription || description}
         />
         <meta name="twitter:image" content={ogImage} />
-
         {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
-
       <Header />
       <main>{children}</main>
       <Footer />
     </div>
+=======
+import React, { ReactNode } from "react";
+interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 };
-
 export default Layout;

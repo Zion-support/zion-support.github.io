@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
@@ -7,6 +8,14 @@ export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system'
 interface NotificationFilterProps {
   filter: FilterType,
   onFilterChange: (filter: FilterType) => void
+=======
+import React from 'react',;
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;
+interface NotificationFilterProps {;
+  filter: FilterType,;
+  onFilterChange: (filter: FilterType) => void;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
@@ -28,5 +37,10 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
         </TabsList>
       </Tabs>
     </div>
-  )
+<<<<<<< HEAD
+  );
 };
+=======
+  )
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -72,6 +72,7 @@ async function main() {
       // non-fatal
     }
   } catch {}
+<<<<<<< HEAD
 
   // Generate automation ideas if key present
   try {
@@ -81,4 +82,18 @@ async function main() {
   console.log('Cloud autonomous run complete:', status.updatedAt)
 }
 
-main().catch((e) => { console.error(e), process.exit(1) }),
+main().catch((e) => { console.error(e), process.exit(1) }),;
+=======
+;
+  // Generate automation ideas if key present;
+  try {;
+    await generateIdeasIfPossible();
+  } catch {}
+
+  // // // console.log('Cloud autonomous run complete:', status.updatedAt)
+;
+  // // // console.log('Cloud autonomous run complete:', status.updatedAt);
+}
+;
+main().catch((e) => { console.error(e), process.exit(1) }),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 import {
-  NotificationItem,
+  NotificationItem,;
   NotificationType,;
 } from '../../../utils/notifications';
 
@@ -18,7 +18,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  try {
+  try {;
     const userId = getUserId(req);
     const {
       filter = 'all',
@@ -33,7 +33,7 @@ export default async function handler(
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
     const userId = getUserId(req);
     const { filter = 'all', countOnly, limit = '50', offset = '0' } = req.query as Record<string, string>;
 
@@ -125,7 +125,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ notifications: data as NotificationItem[] });
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' });
+return res.status(500).json({ error: 'Unexpected error' });
   }    return res.status(500).json({ error: 'Unexpected error' })
   };
 }

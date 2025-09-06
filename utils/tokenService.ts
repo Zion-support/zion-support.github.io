@@ -5,11 +5,11 @@ export function issueTokens(userId: string, amount: number, reason: string) {
     userId,
     type: 'earn',
     amount,
-    description: reason
+    description: reason;
   });
 }
 
-export function revokeTokens(userId: string, amount: number, reason: string) {
+export function revokeTokens(userId: string, amount: number, reason: string) {;
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
   

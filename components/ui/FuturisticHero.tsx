@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import AnimatedBackground from './AnimatedBackground';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function FuturisticHero() {
   return (
     <section className='relative py-20 sm:py-28'>
@@ -49,6 +52,14 @@ export default function FuturisticHero() {
           </p>
         </div>
       </div>
+<<<<<<< HEAD
+    </section>;
+  );
+}
+
+}
+=======
     </section>
   );
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

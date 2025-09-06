@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+=======
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */ 
 }<motion.div </div>) ) 
@@ -30,7 +34,7 @@ import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
 
-export default function Careers() {
+export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
 
   const departments = [
@@ -145,7 +149,10 @@ export default function Careers() {
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div 
@@ -161,7 +168,10 @@ export default function Careers() {
             Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
           </p>
         </motion.div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Company Culture */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -182,7 +192,10 @@ export default function Careers() {
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Benefits */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -202,7 +215,10 @@ export default function Careers() {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Job Openings */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -211,7 +227,6 @@ export default function Careers() {
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
-          
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {departments.map((dept) => (
@@ -228,7 +243,10 @@ export default function Careers() {
               </button>
             ))}
           </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job) => (
@@ -264,9 +282,7 @@ export default function Careers() {
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
                 </div>
-                
                 <p className="text-gray-300 mb-4">{job.description}</p>
-                
                 <div>
                   <h4 className="text-white font-semibold mb-2">Requirements:</h4>
                   <ul className="space-y-1">
@@ -281,7 +297,6 @@ export default function Careers() {
               </motion.div>
             ))}
           </div>
-
           {filteredJobs.length === 0 && (
             <div className="text-center py-12">
               <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
@@ -293,7 +308,10 @@ export default function Careers() {
             </div>
           )}
         </motion.div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* General Application */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

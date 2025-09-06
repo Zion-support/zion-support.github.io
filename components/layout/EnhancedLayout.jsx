@@ -11,5 +11,4 @@ import EnhancedFooter from './EnhancedFooter';
     </div>
   );
 },
-
 export default EnhancedLayout;

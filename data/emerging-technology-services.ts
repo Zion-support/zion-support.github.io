@@ -1,4 +1,5 @@
-export interface EmergingTechnologyService {
+export interface EmergingTechnologyService {;
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -13,33 +14,54 @@ export interface EmergingTechnologyService {
     email: string;
     address: string;
   };
+=======
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export const emergingTechnologyServices: EmergingTechnologyService[] = [
   {
-    id: 'blockchain-platform',
-    name: 'Blockchain Development Platform',
-    tagline: 'Build and deploy blockchain applications',
-    price: '$179/month',
-    description:
-      'Comprehensive blockchain development platform for creating decentralized applications.',
+    id: "blockchain-platform",
+    name: "Blockchain Development Platform",
+    tagline: "Build and deploy blockchain applications",
+    price: "$179/month",
+    description: "Comprehensive blockchain development platform for creating decentralized applications.",
     features: [
-      'Smart contract development',
-      'DApp deployment',
-      'Blockchain integration',
-      'Security auditing',
-      'Performance monitoring',
+      "Smart contract development",
+      "DApp deployment",
+      "Blockchain integration",
+      "Security auditing",
+      "Performance monitoring"
     ],
-    link: '/services/blockchain-platform',
-    category: 'Emerging Tech',
+    link: "/services/blockchain-platform",
+    category: "Emerging Tech",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
-  },
+  },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

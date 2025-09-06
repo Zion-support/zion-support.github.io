@@ -4,7 +4,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
     const provider = process.env.MAIL_PROVIDER || 'none';
     if (provider === 'none') {
@@ -14,7 +14,7 @@ export default async function handler(
     // TODO: Integrate with actual provider
     return res.status(200).json({ status: 'queued', provider });
   } catch (e: any) {
-    return res
+return res
       .status(500)
       .json({ error: e.message || 'Failed to queue emails' });
   }    return res.status(500).json({ error: e.message || 'Failed to queue emails' })

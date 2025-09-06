@@ -1,11 +1,15 @@
+<<<<<<< HEAD
+return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
+=======
  return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 import Head from 'next/head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Star} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-export default function QuantumAICognitivePage() {
+export default function QuantumAICognitivePage() {;
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
 
   if (!service) {
@@ -21,7 +25,6 @@ export default function QuantumAICognitivePage() {
         <meta name="description" content={service.description} />
         <link rel="canonical" href={service.link} />
       </Head>
-
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
@@ -30,7 +33,6 @@ export default function QuantumAICognitivePage() {
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-purple-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
@@ -44,7 +46,6 @@ export default function QuantumAICognitivePage() {
                 ))}
               </ul>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
@@ -65,7 +66,6 @@ export default function QuantumAICognitivePage() {
               </div>
             </div>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
               <h3 className="text-xl font-semibold mb-3">Who is this for</h3>
@@ -86,3 +86,7 @@ export default function QuantumAICognitivePage() {
   );
 }
 
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

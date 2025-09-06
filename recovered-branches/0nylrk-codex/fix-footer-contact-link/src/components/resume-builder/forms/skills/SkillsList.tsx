@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 import {Skill} from '@/types/resume';
 import {SkillCategory} from './SkillCategory';
@@ -7,7 +8,7 @@ interface SkillsListProps {
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
   
   useEffect(() => {
@@ -26,12 +27,37 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   
   if (Object.keys(skillsByCategory).length === 0) {
     return null
+=======
+import { useState, useEffect } from 'react',;
+import { Skill } from '@/types/resume',;
+import { SkillCategory } from './SkillCategory',;
+interface SkillsListProps {;
+  skills: Skill[],;
+  onDeleteSkill: (id: string, category: string) => Promise<void>;
+}
+;
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
+  const [skillsByCategory, setSkillsByCategory] = useState<Record<string Skill[]>>({}),;
+  useEffect(() => {;
+    // Group skills by category;
+    const grouped = skills.reduce((acc, skill) => {;
+      const category = skill.category || 'Other',;
+      if (!acc[category]) {;
+        acc[category] = [];
+      }
+      acc[category].push(skill),;
+      return acc;
+    }, {} as Record<string Skill[]>),;
+    setSkillsByCategory(grouped);
+  }, [skills]);
+  if (Object.keys(skillsByCategory).length === 0) {;
+    return null;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
-      
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory 
@@ -41,7 +67,13 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
             onDelete={onDeleteSkill} 
           />
         ))}
+<<<<<<< HEAD
       </div>
     </div>
   )
+=======
+      </div>;
+    </div>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };

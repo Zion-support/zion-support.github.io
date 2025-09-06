@@ -1,10 +1,15 @@
+<<<<<<< HEAD
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
+=======
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
-async function executeProviderAction<T>(
+async function mockProviderCall<T>(
   connection: ProviderConnection,
   action: string,
-  details: Record<string, any>
+  details: Record<string, any>,
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: uuidv4(),
@@ -23,22 +28,22 @@ export const crm = {
   async syncContact(
     connection: ProviderConnection,
     contact: Record<string, any>,
-  ) {
-    return executeProviderAction(connection, 'syncContact', { contact });
+  ) {;
+    return mockProviderCall(connection, "sync_contact", { contact });
   },
 
   async addEmailTouchpoint(
     connection: ProviderConnection,
-    touchpoint: Record<string, any>
+    touchpoint: Record<string, any>,
   ) {
-    return executeProviderAction(connection, 'addEmailTouchpoint', { touchpoint });
+    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
   },
 
   async addProjectNote(
     connection: ProviderConnection,
-    note: Record<string, any>
+    note: Record<string, any>,
   ) {
-    return executeProviderAction(connection, 'addProjectNote', { note });
+    return mockProviderCall(connection, "add_project_note", { note });
   },
 };
 
@@ -46,18 +51,13 @@ export const crm = {
 export const ats = {
   async updateStatus(
     connection: ProviderConnection,
-    status: Record<string, any>
-  ) {
-    return executeProviderAction(connection, 'updateStatus', { status });
-  },
-
-  async createCandidate(
-    connection: ProviderConnection,
-    candidate: Record<string, any>
-  ) {
-    return executeProviderAction(connection, 'createCandidate', { candidate });
+    status: Record<string, any>,
+  ) {;
+    return mockProviderCall(connection, "update_status", { status });
   },
 };
+<<<<<<< HEAD
+=======
 
 // Email actions
 export const email = {
@@ -68,3 +68,4 @@ export const email = {
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
 };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -7,7 +7,7 @@ useEffect ( () => {
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = 0.1,
   width,
-  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
   src;
   alt;
   className = '',
@@ -15,9 +15,6 @@ useEffect ( () => {
   threshold = 0.1;
   width;
   height
-
-}) => {
-
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -33,13 +30,27 @@ useEffect ( () => {
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-
+      observer.observe(imgRef.current);          observer.disconnect()
+        }
+      };
       { threshold }
     );
 
     if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
 
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  const handleLoad = () => {
+    setIsLoaded(true);  };    }
+
+    return () => observer.disconnect()
+  }, [threshold]);
+
+  const handleLoad = () => {
+    setIsLoaded(true)
   };
 
   return (
@@ -47,15 +58,21 @@ useEffect ( () => {
       {/* Placeholder */}
       <img
         src={placeholder}
+<<<<<<< HEAD
+        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
+=======
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
       />
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Actual Image */}
       {isInView && (
         <motion.img
@@ -74,9 +91,20 @@ useEffect ( () => {
   );
 };
 
-export default LazyImage;
-
+export default LazyImage;          className="w-full h-full object-cover"
+          loading="lazy"
           style={{ width, height }}
         />
       )}
+<<<<<<< HEAD
     </div>
+  );
+};
+
+export default LazyImage;  )
+};
+
+export default LazyImage;
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

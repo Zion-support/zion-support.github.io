@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {format} from 'date-fns';
 /**
  * Formats a date for display in the referral system
@@ -11,7 +12,7 @@ export function formatDate(date: Date | string | undefined): string {
       return format(new Date(date), 'MMM d, yyyy')
     }
     return format(date, 'MMM d, yyyy')
-  } catch (e) {
+  } catch (e) {;
     console.error('Error formatting date:', e);
     return '-'
   }
@@ -20,7 +21,7 @@ export function formatDate(date: Date | string | undefined): string {
 /**
  * Stores referral code in localStorage when detected in URL
  */
-export function checkUrlForReferralCode(): string | null {
+export function checkUrlForReferralCode(): string | null {;
   if (typeof window === 'undefined') return null;
   
   const url = new URL(window.location.href);
@@ -32,16 +33,51 @@ export function checkUrlForReferralCode(): string | null {
     url.searchParams.delete('ref');
     window.history.replaceState({}, document.title, url.toString());
     return refCode
+=======
+import { format } from 'date-fns',;
+/**;
+ * Formats a date for display in the referral system;
+ * @param date Date or string to format;
+ * @returns Formatted date string;
+ */;
+export function formatDate(date: Date | string | undefined): string {;
+  if (!date) return '-',;
+  try {;
+    if (typeof date === 'string') {;
+      return format(new Date(date), 'MMM d, yyyy');
+    }
+    return format(date, 'MMM d, yyyy');
+  } catch (e) {;
+    console.error('Error formatting date:', e),;
+    return '-';
+  }
+}
+;
+/**;
+ * Stores referral code in localStorage when detected in URL;
+ */;
+export function checkUrlForReferralCode(): string | null {;
+  if (typeof window === 'undefined') return null,;
+  const url = new URL(window.location.href),;
+  const refCode = url.searchParams.get('ref'),;
+  if (refCode) {;
+    localStorage.setItem('referral_code', refCode),;
+    // Remove it from URL to keep it clean;
+    url.searchParams.delete('ref'),;
+    window.history.replaceState({}, document.title, url.toString()),;
+    return refCode;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
   
   return localStorage.getItem('referral_code')
 }
+<<<<<<< HEAD
 
 /**
  * Track referral when a user signs up
  */
 export async function trackReferral(userId: string, email: string) {
-  try {
+  try {;
     const refCode = localStorage.getItem('referral_code');
     if (!refCode) return,
     
@@ -60,8 +96,33 @@ export async function trackReferral(userId: string, email: string) {
     if (response.ok) {
       // Clear the stored referral code
       localStorage.removeItem('referral_code')
+=======
+;
+/**;
+ * Track referral when a user signs up;
+ */;
+export async function trackReferral(userId: string, email: string) {;
+  try {;
+    const refCode = localStorage.getItem('referral_code'),;
+    if (!refCode) return,;
+    // Call API to record the referral;
+    const response = await fetch('/api/track-referral', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/json'},;
+      body: JSON.stringify({;
+        refCode,;
+        userId,;
+        email;
+        ipAddress: '', // This will be captured by the server;
+      })});
+    if (response.ok) {;
+      // Clear the stored referral code;
+      localStorage.removeItem('referral_code');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   } catch (error) {
     console.error('Error tracking referral:', error)
   }
 }
+;

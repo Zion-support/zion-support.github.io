@@ -1,34 +1,47 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 import {SmartContractInfo} from "@/types/smart-contracts";
+=======
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { TalentProfile } from "@/types/talent",
+import { SmartContractInfo } from "@/types/smart-contracts",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ContractPreviewProps {
-  contractContent?: string;
+  contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
-  status?: 'draft' | 'ready' | 'pending';
-  talent?: TalentProfile;
-  onDeploy?: () => void;
-  onSign?: () => void;
-  onClose?: () => void;
-  deployStatus?: string;
+  status?: 'draft' | 'ready' | 'pending',
+  talent?: TalentProfile,
+  onDeploy?: () => void,
+  onSign?: () => void,
+  onClose?: () => void,
+  deployStatus?: string,
   deploymentInfo?: SmartContractInfo | null
 }
 
-export function ContractPreview({ 
+<<<<<<< HEAD
+export function ContractPreview({ ;
   contractContent;
+=======
+export function ContractPreview({ 
+  contractContent,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   generatedContract, 
   status = 'ready', 
   onDeploy, 
-  onSign;
-  onClose;
-  deployStatus;
+  onSign,
+  onClose,
+  deployStatus,
   deploymentInfo
 }: ContractPreviewProps) {
   
   // Use either contractContent or generatedContract, whichever is provided
-  const displayContent = contractContent || generatedContract || "";
+  const displayContent = contractContent || generatedContract || "",
   
   return (
     <div className="space-y-4">
@@ -50,9 +63,60 @@ export function ContractPreview({
           </Badge>
         ) : (
           <Badge variant="outline">Draft</Badge>
+<<<<<<< HEAD
+=======
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { TalentProfile } from "@/types/talent",;
+import { SmartContractInfo } from "@/types/smart-contracts",;
+interface ContractPreviewProps {;
+  contractContent?: string,;
+  generatedContract?: string, // Added to support both naming conventions;
+  status?: 'draft' | 'ready' | 'pending',;
+  talent?: TalentProfile,;
+  onDeploy?: () => void,;
+  onSign?: () => void,;
+  onClose?: () => void,;
+  deployStatus?: string,;
+  deploymentInfo?: SmartContractInfo | null;
+}
+;
+export function ContractPreview({;
+  contractContent,;
+  generatedContract,;
+  status = 'ready',;
+  onDeploy,;
+  onSign,;
+  onClose,;
+  deployStatus;
+  deploymentInfo;
+}: ContractPreviewProps) {;
+  // Use either contractContent or generatedContract, whichever is provided;
+  const displayContent = contractContent || generatedContract || "";
+  return (;
+    <div className="space-y-4">;
+      <div className="flex justify-between items-center mb-4">;
+        <h2 className="text-2xl font-bold">Contract Preview</h2>;
+        {status === 'ready' ? (;
+          <Badge;
+            variant="secondary";
+            className="text-sm bg-green-100 text-green-800";
+          >;
+            Ready to Sign;
+          </Badge>;
+        ) : status === 'pending' ? (;
+          <Badge;
+            variant="outline";
+            className="text-sm bg-yellow-100 text-yellow-800";
+          >;
+            Pending Review;
+          </Badge>;
+        ) : (;
+          <Badge variant="outline">Draft</Badge>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
       </div>
-      
       {/* Contract content */}
       <div className="border rounded-lg p-6 bg-muted/50">
         {/* Render the contract content as markdown or formatted text */}
@@ -60,7 +124,6 @@ export function ContractPreview({
           {displayContent}
         </div>
       </div>
-
       {/* Deployment info if available */}
       {deploymentInfo && (
         <div className="mt-4 p-4 bg-primary/10 rounded-lg">
@@ -94,3 +157,4 @@ export function ContractPreview({
     </div>
   )
 }
+;

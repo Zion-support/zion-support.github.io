@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-
-export type AIAssistantProps = {
+export type AIAssistantProps = {;
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
@@ -16,7 +15,7 @@ export default function AIAssistant({
   systemPrompt,
   onAccept,
   authorizationToken,
-}: AIAssistantProps) {
+}: AIAssistantProps) {;
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -85,7 +84,6 @@ export default function AIAssistant({
       >
         {buttonLabel}
       </button>
-
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />
@@ -99,7 +97,6 @@ export default function AIAssistant({
                 Close
               </button>{" "}
             </div>
-
             <div className="p-4 space-y-3">
               <div>
                 <label
@@ -115,7 +112,6 @@ export default function AIAssistant({
                   className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
                 />
               </div>
-
               <div className="flex items-center gap-2">
                 <button
                   onClick={callOperator}
@@ -154,7 +150,6 @@ export default function AIAssistant({
                   Accept
                 </button>
               </div>
-
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>
                 <label
@@ -181,5 +176,5 @@ export default function AIAssistant({
         </div>
       )}
     </>
-  );
+);
 }

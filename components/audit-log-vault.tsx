@@ -11,11 +11,11 @@ export default function AuditLogVaultPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com';
   };
 
   const features = [
-    'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
+    'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns';
   ];
 
   return (
@@ -25,7 +25,6 @@ export default function AuditLogVaultPage() {
         <meta name="description" content="Immutable, indexed, long-term audit trails for compliance and forensics with search, exports and cryptographic attestations." />
         <link rel="canonical" href="https://ziontechgroup.com/audit-log-vault" />
       </Head>
-
       <div className="min-h-screen pt-24 pb-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
@@ -34,7 +33,6 @@ export default function AuditLogVaultPage() {
             </h1>
             <p className="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">Compliance-first audit log storage and search with WORM options, retention, attestations and exports.</p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <Card className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50">
               <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
@@ -67,3 +65,7 @@ export default function AuditLogVaultPage() {
   );
 }
 
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

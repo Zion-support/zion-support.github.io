@@ -16,7 +16,7 @@ export function useApi<T>(url: string, options?: RequestInit) {
   const [state, setState] = useState<ApiState<T>>({
     data: null,
     loading: true,
-    error: null,
+    error: null,;
   });
 
   useEffect(() => {
@@ -58,7 +58,7 @@ interface UseApiOptions {
 export const useApi = <T = any>(
   apiFunction: (...args: any[]) => Promise<T>,
   options: UseApiOptions = {}
-) => {
+) => {;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
   const execute = useCallback(async (...args: any[]) => {
@@ -89,6 +89,10 @@ export default function UseApi({ }: UseApiProps) {
     <div>
       <h1>UseApi</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
  import type { NextApiRequest, NextApiResponse } from 'next';
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface EmailValidationResult {
   email: string;
   isValid: boolean;
@@ -19,7 +23,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<EmailValidationResult | { error: string }>
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
 

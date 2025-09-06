@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -14,7 +15,7 @@ import {
   Users,
   Globe,
   Code,
-  Shield,
+  Shield,;
 } from "lucide-react";
 import Layout from "../components/Layout";
 
@@ -160,7 +161,6 @@ const stats = [
   { number: "25+", label: "Countries Represented" },
   { number: "95%", label: "Employee Satisfaction" },
 ];
-
 export default function TeamPage() {
   return (
     <Layout
@@ -195,7 +195,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -217,7 +216,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -229,7 +227,6 @@ export default function TeamPage() {
               Visionary leaders driving innovation and growth
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.slice(0, 3).map((member, index) => (
               <motion.div
@@ -288,7 +285,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* All Team Members */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -300,7 +296,6 @@ export default function TeamPage() {
               Dedicated professionals across all departments
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
@@ -360,7 +355,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Departments */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -372,7 +366,6 @@ export default function TeamPage() {
               Specialized teams working together to deliver excellence
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {departments.map((dept, index) => (
               <motion.div
@@ -393,7 +386,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -418,7 +410,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
@@ -437,7 +428,6 @@ export default function TeamPage() {
               Get Free Consultation
             </Link>
           </div>
-
           {/* Contact Information */}
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="flex items-center justify-center">
@@ -455,7 +445,7 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-    </Layout>
+    </Layout>;
   );
 }
 import Head from "next/head";
@@ -511,7 +501,7 @@ export default function TeamPage() {
           Profiles coming soon. For inquiries, contact us.
         </p>
       </div>
-    </>
+    </>;
   );
   return (
     <>
@@ -528,4 +518,25 @@ export default function TeamPage() {
       </div>
     </>
   );
+
 }
+=======
+import React from 'react',
+import SEO from '../components/SEO',
+export default function TeamPage() {
+	return (
+		<>
+			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
+			<div className="container mx-auto px-4 py-16">
+				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
+				<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
+			</div>
+		</>
+	)
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

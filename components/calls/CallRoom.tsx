@@ -4,10 +4,9 @@ import {
   RoomEvent,
   RemoteParticipant,
   LocalParticipant,
-  createLocalTracks,
+  createLocalTracks,;
   VideoPresets,;
 } from 'livekit-client';
-
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 
@@ -33,12 +32,28 @@ export default function CallRoom({
   token,
   startMode,
   onLeave,
-}: Props) {
+}: Props) {;
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<
     Array<RemoteParticipant | LocalParticipant>
-  >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);
+  >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
+import Controls from './Controls';
+export type StartMode = 'video' | 'audio';
 
+type Props = {
+  projectId: string,
+  userId: string,
+  displayName: string,
+  roomName: string,
+  serverUrl: string,
+  token: string,
+  startMode: StartMode,
+  onLeave?: (durationSec: number) => void
+};
+
+export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+  const [room, setRoom] = useState<Room | null>(null);
+  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
 
   const connect = useCallback(async () => {
@@ -57,7 +72,6 @@ export default function CallRoom({
         audio: true,
         video: VideoPresets.h720,
       });
-
     } else {
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
@@ -67,16 +81,25 @@ export default function CallRoom({
     });
 
     // publish local tracks
+    
+    setRoom(r);
+    setConnectedAt(Date.now());
+    rebuild(r);
+    // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {
+      localTracks = await createLocalTracks({ audio: true, video: false })
+    }
+
+    await r.connect(serverUrl, token, {
+      autoSubscribe: true}),
+    // publish local tracks
+    for (const t of localTracks) {
+      await r.localParticipant.publishTrack(t)
+    }
 
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
-    // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);
-
-    setRoom(r);
-    setConnectedAt(Date.now());
-    rebuild(r);
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [serverUrl, token, startMode]);
 
   const rebuild = (current?: Room | null) => {
@@ -86,8 +109,8 @@ export default function CallRoom({
       r.localParticipant,
       ...Array.from(r.participants.values()),
     ];
-    setParticipants(list);  };
-
+    setParticipants(list);  };    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
+    setParticipants(list)
   };
 
   useEffect(() => {
@@ -99,22 +122,33 @@ export default function CallRoom({
     };  }, [connect]);
 
   const handleLeave = () => {
-    if (room) {
-
+    if (room) {        room.disconnect()
+      }
+    }
   }, [connect]);
 
   const handleLeave = () => {
     if (room) {
+<<<<<<< HEAD
+      room.disconnect();
+    }
+    const durationSec = connectedAt
+      ? Math.round((Date.now() - connectedAt) / 1000)
+      : 0;
+    onLeave?.(durationSec);  };      room.disconnect()
+    }
+    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
+    onLeave?.(durationSec)
+=======
 
   };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const gridCols = useMemo(() => {
     const count = participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
     if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
-
-    if (count <= 6) return 'grid-cols-2 md:grid-cols-3';
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
   }, [participants.length]);
 
@@ -126,16 +160,34 @@ export default function CallRoom({
           <p className='text-xs text-gray-400'>Room {roomName}</p>
         </div>
         <Controls room={room} onLeave={handleLeave} accent='cyan' />      </div>
-
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
-        {participants.map((p, idx) => (
-
+        {participants.map((p, idx) => (        <Controls room={room} onLeave={handleLeave} accent="cyan" />
       </div>
-
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
+<<<<<<< HEAD
+          <ParticipantTile
+            key={String((p as any).sid || (p as any).identity) + idx}
+            participant={p}
+            isLocal={p instanceof LocalParticipant}
+            displayName={
+              (p as any).name ||
+              (p instanceof LocalParticipant ? 'You' : undefined)
+            }
+          />        ))}
+      </div>
+    </div>
+  );
+}          <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
+        ))}
+      </div>
+    </div>
+);
+}
+=======
 
         ))}
       </div>
     </div>
   );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

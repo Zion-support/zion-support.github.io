@@ -13,7 +13,7 @@ const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
 
-export const useAccessibility = () => {
+export const useAccessibility = () => {;
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -29,7 +29,7 @@ interface AccessibilityProviderProps {
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   children,
-}) => {
+}) => {;
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);

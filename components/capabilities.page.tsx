@@ -1,5 +1,8 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const CAPABILITIES = [
   'Full‑stack Web',
   'Mobile (iOS/Android)',
@@ -28,6 +31,11 @@ export default function CapabilitiesPage() {
           </div>
         ))}
       </div>
-    </EnhancedLayout>
-  );
+    </EnhancedLayout>;
+);
 }
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

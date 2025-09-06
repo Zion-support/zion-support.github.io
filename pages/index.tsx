@@ -1,201 +1,175 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
-import { ErrorBoundary } from '../src/components/ErrorBoundary'; 
+import { ErrorBoundary } from '../src/components/ErrorBoundary';
 
 interface AnimationState {
-  isLoaded: boolean 
-  hasError: boolean 
+  isLoaded: boolean;
+  hasError: boolean;
 }
 
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
-  }) 
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimationState(prev => ({ ...prev, isLoaded: true }))
-    }, 100) 
-    return () => clearTimeout(timer)
-  }, []) 
+      setAnimationState(prev => ({ ...prev, isLoaded: true }));
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   if (animationState.hasError) {
     return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-          <button 
-            onClick={() => window.location.reload()} 
-            className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+          <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Reload Page
+            Refresh Page
           </button>
         </div>
       </div>
-    ) 
+    );
   }
+
   return (
     <ErrorBoundary>
       <Suspense fallback={<div>Loading...</div>}>
         <main>
-        {/* Hero Section */}
-        <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
-          <div className="max-w-4xl mx-auto">
-            <h1 
-              id="hero-title"
-              className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}
-            >
-              Zion Tech Group
-            </h1>
-            <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>
-              Innovative Micro SaaS, AI Services & IT Solutions
-            </p>
-            <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products,
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale
-              efficiently and securely in the digital age.
-            </p>
-            <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-1000 delay-600 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`} role="navigation" aria-label="Main navigation">
-              <Link  
-                href="/services"  
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible" 
-                aria-label="View all our services" 
-                tabIndex={animationState.isLoaded ? 0 :-1}
-              > 
-                View All Services 
-              </Link> 
-              <Link  
-                href="/services-catalog"  
-                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible" 
-                aria-label="Browse our services catalog" 
-                tabIndex={animationState.isLoaded ? 0 :-1}
-              > 
-                Services Catalog 
-              </Link> 
-              <Link  
-                href="/contact"  
-                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900 focus:visible" 
-                aria-label="Get a quote for our services" 
-                tabIndex={animationState.isLoaded ? 0 :-1}
-              > 
-                Get Quote 
-              </Link> 
-            </div> 
-            <div className={`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}> 
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105"> 
-                <h3 className="text-2xl font-bold text-blue-400 mb-2" aria-label="150 plus micro SaaS products">150+</h3> 
-                <p className="text-slate-300">Micro SaaS Products</p> 
-              </div> 
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105"> 
-                <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3> 
-                <p className="text-slate-300">AI Services</p> 
-              </div> 
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105"> 
-                <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3> 
-                <p className="text-slate-300">IT Solutions</p> 
-              </div> 
-            </div> 
-          </div> 
-        </section> 
-        {/* Services Overview */}
-        <section className="py-16 px-4" role="main"> 
-          <div className="max-w-6xl mx-auto"> 
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" id="service-categories"> 
-              Our Service Categories 
-            </h2> 
-            <div className="grid md:grid-cols-3 gap-8"> 
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors"> 
-                <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3> 
-                <p className="text-slate-300 mb-6"> 
-                  Innovative, focused software solutions including AI-Powered Video Clip Maker,  
-                  Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools. 
-                </p> 
-                <ul className="text-slate-400 space-y-2 mb-6"> 
-                  <li>• AI-Powered Video Clip Maker</li> 
-                  <li>• Smart Contract Analyzer</li> 
-                  <li>• Cybersecurity Threat Intelligence</li> 
-                  <li>• Multi-Language Website Translator</li> 
-                  <li>• Predictive Inventory Optimizer</li> 
-                </ul> 
-                <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold"> 
-                  View All Micro SaaS → 
-                </Link> 
-              </div> 
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors"> 
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3> 
-                <p className="text-slate-300 mb-6"> 
-                  Advanced artificial intelligence solutions including autonomous AI agents,  
-                  financial trading systems, legal document analysis, and 40+ more AI-powered services. 
-                </p> 
-                <ul className="text-slate-400 space-y-2 mb-6"> 
-                  <li>• Autonomous AI Agents</li> 
-                  <li>• AI-Powered Financial Trading</li> 
-                  <li>• AI Legal Document Analysis</li> 
-                  <li>• AI-Powered Voice Analytics</li> 
-                  <li>• AI-Powered Search & Discovery</li> 
-                </ul> 
-                <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold"> 
-                  View All AI Services → 
-                </Link> 
-              </div> 
-              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors"> 
-                <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3> 
-                <p className="text-slate-300 mb-6"> 
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions,  
-                  DevSecOps automation, and 40+ more enterprise-grade services. 
-                </p> 
-                <ul className="text-slate-400 space-y-2 mb-6"> 
-                  <li>• Quantum Computing Consulting</li> 
-                  <li>• Blockchain & Web3 Solutions</li> 
-                  <li>• DevSecOps & Security Automation</li> 
-                  <li>• Enterprise Data Platform</li> 
-                  <li>• High-Performance Computing Solutions</li> 
-                </ul> 
-                <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold"> 
-                  View All IT Services → 
-                </Link> 
-              </div> 
-            </div> 
-          </div> 
-        </section> 
-        {/* Contact Section */}
-        <section className="py-16 px-4 bg-slate-900/40"> 
-          <div className="max-w-4xl mx-auto text-center"> 
-            <h2 className="text-3xl md:text-4xl font-bold mb-8"> 
-              Ready to Transform Your Business? 
-            </h2> 
-            <p className="text-lg text-slate-300 mb-8"> 
-              Get in touch with our experts to discuss your project requirements and discover  
-              how our innovative solutions can drive your business forward. 
-            </p> 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"> 
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"> 
-                Call {contact.phone}
-              </a> 
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"> 
-                Email {contact.email}
-              </a> 
-              <Link href="/contact" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"> 
-                Contact Form 
-              </Link> 
-            </div> 
-            <div className="text-slate-400"> 
-              <p>{contact.address}</p> 
-              <p className="mt-2">Visit us at <a href={contact.site} className="text-blue-400 hover:text-blue-300">{contact.site}</a></p> 
-            </div> 
-          </div> 
-        </section>
-      </main>
-      {/* <PerformanceMonitor 
-        showMetrics={process.env.NODE_ENV === 'development'}
-        logMetrics={true}
-        onThresholdExceeded={(metrics) => { 
-          console.warn('Performance thresholds exceeded:', metrics) 
-        }}
-      /> */}
-    </Suspense>
+          {/* Hero Section */}
+          <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
+            <div className="max-w-4xl mx-auto">
+              <h1
+                id="hero-title"
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${
+                  animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                Welcome to Zion Tech Group
+              </h1>
+              <p
+                className={`text-xl md:text-2xl text-gray-600 mb-8 transition-all duration-1000 delay-200 ${
+                  animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                Empowering businesses with cutting-edge technology solutions and innovative AI services.
+              </p>
+              <div
+                className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-400 ${
+                  animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                <Link
+                  href="/services"
+                  className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Explore Services
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="py-20 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Why Choose Zion Tech Group?
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    title: 'AI & Machine Learning',
+                    description: 'Advanced AI solutions that transform your business operations and decision-making processes.',
+                    icon: '🤖'
+                  },
+                  {
+                    title: 'Micro SaaS Products',
+                    description: 'Innovative, focused software solutions designed for modern business needs.',
+                    icon: '⚡'
+                  },
+                  {
+                    title: 'IT Services',
+                    description: 'Comprehensive IT solutions for enterprise-grade operations and scalability.',
+                    icon: '🔧'
+                  },
+                  {
+                    title: 'Cloud Solutions',
+                    description: 'Scalable cloud infrastructure and migration services for optimal performance.',
+                    icon: '☁️'
+                  },
+                  {
+                    title: 'Cybersecurity',
+                    description: 'Bank-level security measures to protect your data and systems.',
+                    icon: '🛡️'
+                  },
+                  {
+                    title: 'Data Analytics',
+                    description: 'Transform your data into actionable insights with advanced analytics tools.',
+                    icon: '📊'
+                  }
+                ].map((feature, index) => (
+                  <div
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                  >
+                    <div className="text-4xl mb-4">{feature.icon}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 bg-blue-600 text-white">
+            <div className="max-w-4xl mx-auto text-center px-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl mb-8">
+                Let's discuss how our innovative solutions can help you achieve your goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get a Quote
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  View Pricing
+                </Link>
+              </div>
+            </div>
+          </section>
+        </main>
+      </Suspense>
     </ErrorBoundary>
   );
 }

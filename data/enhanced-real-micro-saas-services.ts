@@ -23,6 +23,7 @@ export const microSaasServices: MicroSaasService[] = [{
   icon: '🤖',
   category: 'AI & Machine Learning'
 }];
+
 export const categories = [
   'All',
   'AI & Machine Learning',

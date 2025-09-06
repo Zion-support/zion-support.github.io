@@ -2,18 +2,31 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   appendLog,
   evaluateReflexes,
-  readState,
+  readState,;
   writeState,;
 } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
-  return !superToken || token === superToken;
-
+  return !superToken || token === superToken;import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
+  return !superToken || token === superToken;
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req));
+    return res.status(401).json({ error: 'Unauthorized' });
+
+  if (req.method === 'GET') {
+    const state = readState<{ metrics?: unknown }>();
+    return res.status(200).json({ metrics: state.metrics || {} });  }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
+
+  if (req.method === 'GET') {
+    const state = readState<{ metrics?: unknown }>();
+    return res.status(200).json({ metrics: state.metrics || {} })
   }
 
   if (req.method === 'POST') {
@@ -45,10 +58,19 @@ function isAuthorized(req: NextApiRequest): boolean {
       return res.status(500).json({ error: 'Reflex failure' });    }
   }
 
+return res.status(405).json({ error: 'Method not allowed' });
+}      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
+      return res.status(200).json({ triggers })
+    } catch (e: any) {
+      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
+      return res.status(500).json({ error: 'Reflex failure' })
+  }
+
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
-    }
-  }
-
+}
+=======
   return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

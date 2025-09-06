@@ -17,7 +17,6 @@ const EnhancedNavigation = () => {
               Zion Tech Group
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             <Link
@@ -73,7 +72,6 @@ const EnhancedNavigation = () => {
             </div>
             <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
@@ -98,7 +96,6 @@ const EnhancedNavigation = () => {
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <button
             className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -122,7 +119,6 @@ const EnhancedNavigation = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className='lg:hidden border-t border-gray-200 py-4'>
@@ -191,7 +187,7 @@ const EnhancedNavigation = () => {
         )}
       </div>
     </nav>
-  );
+);
 };
 
 export default EnhancedNavigation;},

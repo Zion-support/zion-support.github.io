@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+// All services combined const allServices = [ ...advancedAIMLServices;
+=======
  // All services combined const allServices = [ ...advancedAIMLServices;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
@@ -16,7 +20,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 }transition= {
   {
-  duration: 0.8 
+  duration: 0.8
 
 }className="text-center" > <h1 className="text-4xl md:text-6xl font-bold mb-6"> 2025 Comprehensive Services Showcase </h1> <p className="text-xl md:text-2xl mb-8 text-blue-100"> Transform your business with our innovative portfolio of micro SAAS, IT infrastructure, and AI services </p> <div className="flex flex-wrap justify-center gap-4 text-sm"> <span className="bg-blue-600/20 px-4 py-2 rounded-full border border-blue-400/30"> {
   allServices.length 
@@ -294,7 +298,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
@@ -325,7 +332,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                       </div>
                       <h3 className="text-xl font-bold mb-2">{service.name}</h3>
                       <p className="text-blue-100 text-sm">{service.tagline}</p>
+<<<<<<< HEAD
+=======
                       
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Price */}
                       <div className="mt-4">
                         <span className="text-2xl font-bold">
@@ -333,11 +343,17 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                         </span>
                       </div>
                     </div>
+<<<<<<< HEAD
+                    {/* Service Content */}
+                    <div className="p-6">
+                      <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
+=======
 
                     {/* Service Content */}
                     <div className="p-6">
                       <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
                       
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Price */}
                       <div className="mb-4">
                         <span className="text-3xl font-bold text-gray-900">
@@ -347,7 +363,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                           {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                         </span>
                       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Features */}
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -360,7 +379,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                           ))}
                         </ul>
                       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -368,7 +390,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                           <span className="ml-1">{service.category}</span>
                         </span>
                       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
@@ -378,7 +403,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days
                         </div>
                       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* ROI and Popularity */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-sm">
@@ -393,7 +421,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                             <span className="text-sm font-medium">Popular</span>
                           </div>
                         </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {/* Price and Features */}
                         <div className="lg:w-1/3">
                           <div className="text-right mb-4">
@@ -404,7 +435,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                               {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>
                           </div>
+<<<<<<< HEAD
+=======
                           
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -416,14 +450,20 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                               ))}
                             </ul>
                           </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                               {getCategoryIcon(service.category)}
                               <span className="ml-1">{service.category}</span>
                             </span>
+<<<<<<< HEAD
+=======
                             
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             <a
                               href={service.link}
                               target="_blank"
@@ -442,7 +482,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
               </motion.div>
             )}
           </AnimatePresence>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
@@ -455,7 +498,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
           )}
         </div>
       </section>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -467,7 +513,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
               We deliver innovative, enterprise-grade solutions that transform businesses and drive growth
             </p>
           </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -483,7 +532,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -498,7 +550,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                 Bank-grade security and compliance for mission-critical business applications
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -516,7 +571,10 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -526,7 +584,6 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let's discuss how our innovative services can help you achieve your business goals
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -544,7 +601,6 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
@@ -568,3 +624,26 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 };
 
 export default ComprehensiveServicesShowcase;
+<<<<<<< HEAD
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

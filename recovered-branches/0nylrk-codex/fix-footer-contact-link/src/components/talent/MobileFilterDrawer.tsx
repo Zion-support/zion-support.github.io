@@ -1,15 +1,26 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Drawer} from "@/components/ui/drawer";
 import {FilterSidebar} from "@/components/talent/FilterSidebar";
+=======
+import React from "react",
+import { Drawer } from "@/components/ui/drawer",
+import { FilterSidebar } from "@/components/talent/FilterSidebar",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface MobileFilterDrawerProps {
   isMobileFilterOpen: boolean,
   setIsMobileFilterOpen: (isOpen: boolean) => void,
   filterProps: any, // We'll pass all filter-related props through this object
 }
 
-export function MobileFilterDrawer({ 
+<<<<<<< HEAD
+export function MobileFilterDrawer({ ;
   isMobileFilterOpen;
+=======
+export function MobileFilterDrawer({ 
+  isMobileFilterOpen,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   setIsMobileFilterOpen, 
   filterProps
 }: MobileFilterDrawerProps) {
@@ -17,6 +28,27 @@ export function MobileFilterDrawer({
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">
         <FilterSidebar 
+<<<<<<< HEAD
+=======
+import React from "react",;
+import { Drawer } from "@/components/ui/drawer",;
+import { FilterSidebar } from "@/components/talent/FilterSidebar",;
+interface MobileFilterDrawerProps {;
+  isMobileFilterOpen: boolean,;
+  setIsMobileFilterOpen: (isOpen: boolean) => void,;
+  filterProps: any, // We'll pass all filter-related props through this object;
+}
+;
+export function MobileFilterDrawer({;
+  isMobileFilterOpen;
+  setIsMobileFilterOpen;
+  filterProps;
+}: MobileFilterDrawerProps) {;
+  return (;
+    <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>;
+      <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;
+        <FilterSidebar;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {...filterProps}
           isMobileFilterOpen={isMobileFilterOpen}
         />

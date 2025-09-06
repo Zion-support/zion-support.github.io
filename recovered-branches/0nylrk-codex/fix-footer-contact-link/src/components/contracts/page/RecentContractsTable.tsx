@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 interface Contract {
   id: string;
@@ -9,14 +10,33 @@ interface Contract {
 }
 
 interface RecentContractsTableProps {
+=======
+
+import { Button } from "@/components/ui/button",
+interface Contract {
+  id: string,
+  title: string,
+  client: string,
+  talent: string,
+  date: string,
+  isSmartContract: boolean
+import { Button } from "@/components/ui/button",;
+interface Contract {;
+  id: string,;
+  title: string,;
+  client: string,;
+  talent: string,;
+  date: string,;
+  isSmartContract: boolean;
+}
+;
+interface RecentContractsTableProps {;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   contracts: Contract[];
   onViewContract: (contractId: string) => void;
 }
 
-export function RecentContractsTable({
-  contracts,
-  onViewContract,
-}: RecentContractsTableProps) {
+export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
   return (
     <>
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>
@@ -24,34 +44,19 @@ export function RecentContractsTable({
         <table className="min-w-full divide-y divide-border">
           <thead className="bg-muted">
             <tr>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"
-              >
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
                 Contract Title
               </th>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"
-              >
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
                 Client
               </th>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"
-              >
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
                 Talent
               </th>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"
-              >
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
                 Date
               </th>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider"
-              >
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
                 Type
               </th>
               <th scope="col" className="relative px-6 py-3">
@@ -86,8 +91,8 @@ export function RecentContractsTable({
                   )}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm">
-                  <Button
-                    variant="ghost"
+                  <Button 
+                    variant="ghost" 
                     size="sm"
                     onClick={() => onViewContract(contract.id)}
                   >
@@ -96,9 +101,15 @@ export function RecentContractsTable({
                 </td>
               </tr>
             ))}
+<<<<<<< HEAD
           </tbody>
         </table>
       </div>
-    </>
+=======
+          </tbody>;
+        </table>;
+      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    </>;
   );
 }

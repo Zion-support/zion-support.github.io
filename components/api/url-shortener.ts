@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 interface ShortUrl {
   id: string;
   originalUrl: string;
@@ -16,7 +15,8 @@ interface UrlShortenerRequest {
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
-  error?: string;
+  error?: string;  error?: string
+}
 
 // In-memory storage (in production, use a database)
 const urlStorage = new Map<string, ShortUrl>();
@@ -25,24 +25,28 @@ const urlStorage = new Map<string, ShortUrl>();
 function generateShortCode(length: number = 6): string {
   const chars =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
   let result = '';
   for (let i = 0; i < length; i++) {
     result += chars.charAt(Math.floor(Math.random() * chars.length));
   }
-  return result;
+  return result;  let result = '';
+  for (let i = 0, i < length, i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length))
+  }
+  return result
+}
 
 // Validate URL format
 function isValidUrl(url: string): boolean {
   try {
     new URL(url);
     return true;
-
   } catch {
     return false;
   }  } catch {
     return false
   }
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -50,7 +54,7 @@ export default async function handler(
 ) {
   if (req.method === 'POST') {
     // Create short URL
-    try {
+    try {;
       const { originalUrl, customCode }: UrlShortenerRequest = req.body;
 
       if (!originalUrl) {
@@ -60,16 +64,18 @@ export default async function handler(
         });      }
 
       if (!isValidUrl(originalUrl)) {
-        return res.status(400).json({
-
+        return res.status(400).json({          success: false;
+          error: 'Original URL is required'
+        })
       }
 
       if (!isValidUrl(originalUrl)) {
         return res.status(400).json({
-
           success: false,
           error: 'Invalid URL format',
-
+        });      }          success: false;
+          error: 'Invalid URL format'
+        })
       }
 
       // Check if URL already exists
@@ -85,12 +91,32 @@ export default async function handler(
 
       // Generate short code
       let shortCode = customCode || generateShortCode();
-
+          success: true;
+          data: existingUrl
+        })
       }
 
       // Generate short code
       let shortCode = customCode || generateShortCode();
 
+      while (urlStorage.has(shortCode)) {
+        shortCode = generateShortCode();
+      }
+
+      const shortUrl: ShortUrl = {
+        id: Date.now().toString(),
+        originalUrl,
+        shortCode,
+        shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`,
+        createdAt: new Date().toISOString(),
+        clicks: 0,
+        isActive: true,      };        id: Date.now().toString();
+        originalUrl;
+        shortCode,
+        shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`;
+        createdAt: new Date().toISOString();
+        clicks: 0,
+        isActive: true
       };
 
       urlStorage.set(shortCode, shortUrl);
@@ -103,10 +129,16 @@ export default async function handler(
       res.status(500).json({
         success: false,
         error: 'Internal server error',
-      });    }
-
+      });    }        success: true;
+        data: shortUrl
+      })
+    } catch (error) {
+      console.error('URL shortening error:', error);
+      res.status(500).json({
+        success: false,
+        error: 'Internal server error'
+      })
     }
-
   } else if (req.method === 'GET') {
     // Get all URLs (for demo purposes)
     const urls = Array.from(urlStorage.values());
@@ -114,8 +146,6 @@ export default async function handler(
       success: true,
       data: urls as any,
     });
-
-  } else {
     res.status(405).json({
       success: false,
       error: 'Method not allowed',
@@ -125,20 +155,16 @@ export default async function handler(
 // Handle redirects for short URLs
 export async function getServerSideProps({
   params,
-}: {
+}: {;
   params: { shortCode: string };
-}) {  const shortCode = params.shortCode;
-
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
   const shortCode = params.shortCode;
-
   const shortUrl = urlStorage.get(shortCode);
 
   if (!shortUrl || !shortUrl.isActive) {
     return {
-      notFound: true,    };
-
+      notFound: true,    };      notFound: true
     };
-
   }
 
   // Increment click count
@@ -151,4 +177,12 @@ export async function getServerSideProps({
       destination: shortUrl.originalUrl,
       permanent: false,
     },
+<<<<<<< HEAD
+  };      destination: shortUrl.originalUrl;
+      permanent: false
+    }
+};
+}
+=======
   };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

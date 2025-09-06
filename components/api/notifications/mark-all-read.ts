@@ -14,7 +14,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || '';
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
@@ -22,7 +22,7 @@ export default async function handler(
   return 'demo-user-1'
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
     const userId = getUserId(req);
@@ -41,5 +41,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }    return res.status(200).json({ ok: true })
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
-  };
+};
 }
+<<<<<<< HEAD
+
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

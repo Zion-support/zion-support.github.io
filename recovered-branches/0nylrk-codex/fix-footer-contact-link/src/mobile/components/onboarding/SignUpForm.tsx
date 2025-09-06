@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
@@ -7,28 +8,41 @@ import {useNavigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
 import {AlertCircle} from "lucide-react";
 import {Alert, AlertDescription} from "@/components/ui/alert";
-
-export function SignUpForm() {
+export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
+=======
+import React, { useState } from "react",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { AlertCircle } from "lucide-react",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+
+export function SignUpForm() {
+  const navigate = useNavigate(),
+  const { signup, login, loginWithGoogle } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     name: ""}),
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
     setError("")
-  };
+  },
   
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
+    e.preventDefault(),
+    setError(""),
     setIsLoading(true),
     
     try {
@@ -42,13 +56,59 @@ export function SignUpForm() {
         
         navigate("/mobile")
       } else {
-        const { error } = await login(formData.email, formData.password);
+        const { error } = await login(formData.email, formData.password),
         
         if (error) {
           throw new Error(error)
         }
         
         navigate("/mobile")
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { useNavigate } from "react-router-dom",;
+import { useAuth } from "@/hooks/useAuth",;
+import { AlertCircle } from "lucide-react",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+export function SignUpForm() {;
+  const navigate = useNavigate(),;
+  const { signup, login, loginWithGoogle } = useAuth(),;
+  const [formData, setFormData] = useState({;
+    email: "",;
+    password: "",;
+    name: ""}),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [signupMode, setSignupMode] = useState(true),;
+  const [error, setError] = useState(""),;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target,;
+    setFormData(prev => ({ ...prev, [name]: value })),;
+    setError("");
+  },;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setError(""),;
+    setIsLoading(true),;
+    try {;
+      if (signupMode) {;
+        const { error } = await signup(formData.email, formData.password, {;
+          name: formData.name}),;
+        if (error) {;
+          throw new Error(error);
+        }
+;
+        navigate("/mobile");
+      } else {;
+        const { error } = await login(formData.email, formData.password),;
+        if (error) {;
+          throw new Error(error);
+        }
+;
+        navigate("/mobile");
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch (err: any) {
       setError(err.message)
@@ -56,6 +116,7 @@ export function SignUpForm() {
       setIsLoading(false)
     }
   };
+<<<<<<< HEAD
   
   const handleGoogleLogin = async () => {
     try {
@@ -64,13 +125,21 @@ export function SignUpForm() {
       setError(err.message)
     }
   };
+=======
+  const handleGoogleLogin = async () => {;
+    try {;
+      await loginWithGoogle();
+    } catch (err: any) {;
+      setError(err.message);
+    }
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
-      
       <div className="space-y-2">
         <Button 
           variant="outline" 
@@ -85,7 +154,6 @@ export function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
-
         <Button 
           variant="outline" 
           className="w-full py-6 relative"
@@ -96,13 +164,11 @@ export function SignUpForm() {
           Continue with Facebook
         </Button>
       </div>
-
       <div className="relative flex items-center">
         <div className="flex-grow border-t border-border"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
-      
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -137,7 +203,6 @@ export function SignUpForm() {
             placeholder="Enter your email"
           />
         </div>
-        
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
           <Input
@@ -150,7 +215,6 @@ export function SignUpForm() {
             placeholder="Create a password"
           />
         </div>
-        
         <Button 
           type="submit" 
           className="w-full py-6"
@@ -164,7 +228,6 @@ export function SignUpForm() {
           }
         </Button>
       </form>
-      
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
@@ -181,3 +244,4 @@ export function SignUpForm() {
     </div>
   )
 }
+;

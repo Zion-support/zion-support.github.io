@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+// File system database utilities
+export const fsDb = {
+  // Add file system database functionality here
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+};
+=======
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -44,3 +54,4 @@ export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void
     console.error('Error writing JSON file:', error);
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

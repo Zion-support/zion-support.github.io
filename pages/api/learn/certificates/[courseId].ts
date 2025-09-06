@@ -1,8 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import PDFDocument from 'pdfkit';
 
+const doc = new PDFDocument ({
+  size: 'A4', margin: 50 
+});
+// Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
+doc.fill ('#ffffff');
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+  if (req.method !== 'GET') {;
     res.setHeader('Allow', 'GET');
     return res.status(405).end('Method Not Allowed');
   }
@@ -11,40 +18,194 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     courseId: string;
     userId?: string;
   };
-
   try {
-    const doc = new PDFDocument({
-      size: 'A4',
-      margin: 50
-    });
+    const users = readJson(usersPath);
+    const courses = readJson(coursesPath);
+    const course = courses.find((c: any) => c.id === courseId);
+    const user = users[userId];
+    if (!course) return res.status(404).json({ error: 'Course not found' });
+    if (!user) return res.status(404).json({ error: 'User not found' });
 
-    // Set response headers
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', `attachment; filename="certificate-${courseId}.pdf"`);
-
-    // Pipe PDF to response
+    res.setHeader(
+      'Content-Disposition',
+      `attachment; filename="${courseId}-certificate.pdf"`
+    );
+    const doc = new PDFDocument({ size: 'A4', margin: 50 });
+    res.setHeader('Content-Typeapplication/pdf');
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
+    const doc = new PDFDocument({ size: 'A4', margin: 50 }),
+    // Pipe to response
+    // @ts-ignore
     doc.pipe(res);
-
-    // Certificate content
+    // Zion certificate template (simple)
     doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
     doc.fill('#ffffff');
-    
-    doc.fontSize(24)
-       .text('Certificate of Completion', 50, 100, { align: 'center' });
-    
-    doc.fontSize(16)
-       .text(`Course: ${courseId}`, 50, 150, { align: 'center' });
-    
-    doc.fontSize(14)
-       .text(`Student: ${userId}`, 50, 200, { align: 'center' });
-    
-    doc.fontSize(12)
-       .text('This certifies that the above student has successfully completed the course.', 50, 250, { align: 'center' });
-    
-    doc.text('Date: ' + new Date().toLocaleDateString(), 50, 300, { align: 'center' });
+
+    doc
+      .fontSize(28)
+      .text('Zion AI Marketplace', { align: 'center', underline: false });    doc.moveDown(0.5);
+    doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
+    doc.moveDown(1.5);
+    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+    doc.moveDown(0.5);
+    doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
+    doc.moveDown(0.5);
+    doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
+    doc.moveDown(0.5);
+    doc.fontSize(20).text(course.title, { align: 'center' });
+    doc.moveDown(0.5);
+    doc
+      .fontSize(12)
+      .text(`Badge: ${course.certificationBadge}`, { align: 'center' });
+    const date = new Date().toLocaleDateString();
+    doc.moveDown(2);
+    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
 
     doc.end();
   } catch (e: any) {
+    res
+      .status(500)
+      .json({ error: e?.message ?? 'Failed to generate certificate' });
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ certificate: 'PDF certificate' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import PDFDocument from 'pdfkit';
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),;
+function readJson(p: string) {;
+  return JSON.parse(fs.readFileSync(p, 'utf-8'));
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.setHeader('AllowGET');
+    return res.status(405).end('Method Not Allowed');
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string },
+  try {
+    const users = readJson(usersPath),
+    const courses = readJson(coursesPath),
+    const course = courses.find((c: any) => c.id === courseId),
+    const user = users[userId],
+    if (!course) return res.status(404).json({ error: 'Course not found' }),
+    if (!user) return res.status(404).json({ error: 'User not found' }),
+    res.setHeader('Content-Typeapplication/pdf'),
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`),
+    const doc = new PDFDocument({ size: 'A4', margin: 50 }),
+    // Pipe to response
+    // @ts-ignore
+    doc.pipe(res),
+    // Zion certificate template (simple)
+    doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a'),
+    doc.fill('#ffffff'),
+    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false }),
+    doc.moveDown(0.5),
+    doc.fontSize(18).text('Certificate of Completion', { align: 'center' }),
+    doc.moveDown(1.5),
+    doc.fontSize(14).text(`This certifies that`, { align: 'center' }),
+    doc.moveDown(0.5),
+    doc.fontSize(22).text(user.name || user.userId, { align: 'center' }),
+    doc.moveDown(0.5),
+    doc.fontSize(14).text(`has successfully completed`, { align: 'center' }),
+    doc.moveDown(0.5),
+    doc.fontSize(20).text(course.title, { align: 'center' }),
+    doc.moveDown(0.5),
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' }),
+    const date = new Date().toLocaleDateString(),
+    doc.moveDown(2),
+    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' }),
+    doc.end()
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
+;
+  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string },;
+  try {
+    const users = readJson(usersPath);
+    const courses = readJson(coursesPath);
+    const course = courses.find((c: any) => c.id === courseId);
+    const user = users[userId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    res.setHeader('Content-Typeapplication/pdf');
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
+    const doc = new PDFDocument({ size: 'A4', margin: 50 });
+    // Pipe to response;
+    // @ts-ignore;
+    doc.pipe(res);
+    // Zion certificate template (simple);
+    doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
+    doc.fill('#ffffff');
+    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
+    doc.moveDown(0.5);
+    doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
+    doc.moveDown(1.5);
+    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+    doc.moveDown(0.5);
+    doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
+    doc.moveDown(0.5);
+    doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
+    doc.moveDown(0.5);
+    doc.fontSize(20).text(course.title, { align: 'center' });
+    doc.moveDown(0.5);
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
+    const date = new Date().toLocaleDateString();
+    doc.moveDown(2);
+    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
+    doc.end();
+  } catch (error) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

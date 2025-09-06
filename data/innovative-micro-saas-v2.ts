@@ -42,7 +42,6 @@ export interface InnovativeMicroSaasV2 {
 }
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
-  // Innovative Business Solutions
   {
     id: 'ai-content-generator-v2',
     name: 'AI Content Generator Pro',

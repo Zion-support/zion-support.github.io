@@ -7,7 +7,7 @@ console.log('🔧 Fixing all syntax errors...');
 
 // Fix accessibility.tsx
 const fixAccessibility = () => {
-  try {
+  try {;
     let content = fs.readFileSync('pages/accessibility.tsx', 'utf8');
     
     // Fix the malformed JSX structure
@@ -27,11 +27,11 @@ const fixAccessibility = () => {
 
 // Fix api.tsx
 const fixApi = () => {
-  try {
+  try {;
     let content = fs.readFileSync('pages/api.tsx', 'utf8');
     
     // Ensure proper closing structure
-    if (!content.includes('export default')) {
+    if (!content.includes('export default')) {;
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
     
@@ -46,7 +46,7 @@ const fixApi = () => {
 
 // Fix careers.tsx
 const fixCareers = () => {
-  try {
+  try {;
     let content = fs.readFileSync('pages/careers.tsx', 'utf8');
     
     // Fix malformed JSX structure
@@ -66,7 +66,7 @@ const fixCareers = () => {
 
 // Fix support.tsx
 const fixSupport = () => {
-  try {
+  try {;
     let content = fs.readFileSync('pages/support.tsx', 'utf8');
     
     // Fix malformed JSX structure
@@ -86,7 +86,7 @@ const fixSupport = () => {
 
 // Fix webinars.tsx
 const fixWebinars = () => {
-  try {
+  try {;
     let content = fs.readFileSync('pages/webinars.tsx', 'utf8');
     
     // Fix malformed JSX structure
@@ -105,7 +105,7 @@ const fixWebinars = () => {
 };
 
 // Main execution
-const main = () => {
+const main = () => {;
   console.log('Starting comprehensive syntax fixes...');
   
   const fixes = [
@@ -113,7 +113,7 @@ const main = () => {
     fixApi,
     fixCareers,
     fixSupport,
-    fixWebinars
+    fixWebinars;
   ];
   
   let successCount = 0;

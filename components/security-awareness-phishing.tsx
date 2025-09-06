@@ -4,11 +4,14 @@ import {Phone, Mail, MapPin, Check, ArrowRight, Shield} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function SecurityAwarenessPhishingPage() {
   const service = extraServices.find(s =>
-    s.link.endsWith('/security-awareness-phishing')
-  );  if (!service) return null;export default function SecurityAwarenessPhishingPage() {
+    s.link.endsWith('/security-awareness-phishing');
+  );  if (!service) return null;export default function SecurityAwarenessPhishingPage() {;
   const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'));
   if (!service) return null;
 
@@ -99,3 +102,8 @@ export default function SecurityAwarenessPhishingPage() {
   );
 }
 
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

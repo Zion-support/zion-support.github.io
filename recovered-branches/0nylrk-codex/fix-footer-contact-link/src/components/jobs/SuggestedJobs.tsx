@@ -1,35 +1,50 @@
 
+<<<<<<< HEAD
 import {useAuth} from "@/hooks/useAuth";
 import {Loader2} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {useJobSuggestions} from "@/hooks/useJobSuggestions";
 import {JobMatchesCard} from "./JobMatchesCard";
 import {NoJobsCard} from "./NoJobsCard";
+=======
+import { useAuth } from "@/hooks/useAuth",
+import { Loader2 } from "lucide-react",
+import { Badge } from "@/components/ui/badge",
+import { useJobSuggestions } from "@/hooks/useJobSuggestions",
+import { JobMatchesCard } from "./JobMatchesCard",
+import { NoJobsCard } from "./NoJobsCard",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface SuggestedJobsProps {
   talentId?: string
 }
 
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
+<<<<<<< HEAD
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
+=======
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { 
-    isLoading;
+    isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
       newMatches, 
       viewedMatches, 
       appliedMatches 
     } 
-  } = useJobSuggestions(currentTalentId);
+  } = useJobSuggestions(currentTalentId),
 
   const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
+    updateJobMatchStatus(matchId, 'applied'),
     // In a real app, this might redirect to application form or open a modal
-  };
+  },
 
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
-  };
+  },
 
   if (isLoading) {
     return (
@@ -37,6 +52,44 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
+<<<<<<< HEAD
+=======
+import { useAuth } from "@/hooks/useAuth",;
+import { Loader2 } from "lucide-react",;
+import { Badge } from "@/components/ui/badge",;
+import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
+import { JobMatchesCard } from "./JobMatchesCard",;
+import { NoJobsCard } from "./NoJobsCard",;
+interface SuggestedJobsProps {;
+  talentId?: string;
+}
+;
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
+  const { user } = useAuth(),;
+  const currentTalentId = talentId || user?.id,;
+  const {;
+    isLoading,;
+    updateJobMatchStatus,;
+    categorizedMatches: {;
+      newMatches,;
+      viewedMatches,;
+      appliedMatches;
+    } ;
+  } = useJobSuggestions(currentTalentId),;
+  const handleApply = (matchId: string, jobId: string) => {;
+    updateJobMatchStatus(matchId, 'applied'),;
+    // In a real app, this might redirect to application form or open a modal;
+  };
+  const handleDecline = (matchId: string) => {;
+    updateJobMatchStatus(matchId, 'declined');
+  };
+  if (isLoading) {;
+    return (;
+      <div className="flex items-center justify-center p-6">;
+        <Loader2 className="w-6 h-6 animate-spin text-primary" />;
+      </div>;
+    );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
@@ -54,7 +107,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
               {newMatches.length} New
             </Badge>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -74,7 +126,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -94,7 +145,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 
@@ -103,6 +153,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onApply={handleApply} 
                 onDecline={handleDecline}
                 showApplied={true}
+<<<<<<< HEAD
               />
             ))}
           </div>
@@ -111,3 +162,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     </div>
   )
 }
+;
+=======
+              />;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

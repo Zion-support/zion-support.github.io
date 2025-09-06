@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import {useForm} from 'react-hook-form';
 import {z} from 'zod';
@@ -52,7 +53,7 @@ export function WhitelabelRequestForm() {
         landing_page_copy: {
           headline: values.headline,
           subtitle: values.subtitle,
-          cta: values.cta}
+          cta: values.cta};
       };
       
       // Submit to Supabase
@@ -77,6 +78,79 @@ export function WhitelabelRequestForm() {
         description: error.message || 'Something went wrong'})
     }
   };
+=======
+import React from 'react',;
+import { useForm } from 'react-hook-form',;
+import { z } from 'zod',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { Input } from '@/components/ui/input',;
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form',;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
+import { toast } from '@/hooks/use-toast',;
+import { supabase } from '@/integrations/supabase/client',;
+// Form schema;
+const formSchema = z.object({;
+  brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' }),;
+  subdomain: z.string();
+    .min(3, { message: 'Subdomain must be at least 3 characters' });
+    .max(20, { message: 'Subdomain must be at most 20 characters' });
+    .regex(/^[a-z0-9-]+$/, { message: 'Subdomain can only contain lowercase letters, numbers, and hyphens' }),;
+  custom_domain: z.string().optional(),;
+  primary_color: z.string().regex(/^#([0-9A-F]{6})$/i, { message: 'Must be a valid hex color' }),;
+  theme_preset: z.enum(['lightdarkneoncorporatestartup']),;
+  headline: z.string().min(5, { message: 'Headline must be at least 5 characters' }),;
+  subtitle: z.string().min(5, { message: 'Subtitle must be at least 5 characters' }),;
+  cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })}),;
+type FormValues = z.infer<typeof formSchema>,;
+export function WhitelabelRequestForm() {;
+  const form = useForm<FormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      brand_name: '',;
+      subdomain: '',;
+      custom_domain: '',;
+      primary_color: '#9b87f5',;
+      theme_preset: 'light',;
+      headline: 'AI Marketplace',;
+      subtitle: 'Find the best AI talent',;
+      cta: 'Get Started'}}),;
+  const onSubmit = async (values: FormValues) => {;
+    try {;
+      // Prepare the data;
+      const tenantData = {;
+        brand_name: values.brand_name,;
+        subdomain: values.subdomain,;
+        custom_domain: values.custom_domain || null,;
+        primary_color: values.primary_color,;
+        theme_preset: values.theme_preset,;
+        landing_page_copy: {;
+          headline: values.headline,;
+          subtitle: values.subtitle,;
+          cta: values.cta}
+      },;
+      // Submit to Supabase;
+      const { data, error } = await supabase;
+        .from('whitelabel_tenants');
+        .insert(tenantData);
+        .select();
+        .single(),;
+      if (error) throw error,;
+      toast({;
+        title: 'White-label tenant created!',;
+        description: `${values.brand_name} has been set up with subdomain ${values.subdomain}`}),;
+      // Reset form;
+      form.reset();
+    } catch (error: any) {;
+      toast({;
+        variant: 'destructive',;
+        title: 'Error creating tenant';
+        description: error.message || 'Something went wrong'});
+    }
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <Card className="w-full max-w-2xl">
@@ -179,7 +253,6 @@ export function WhitelabelRequestForm() {
               
               <div className="border rounded-md p-4 space-y-4">
                 <h3 className="text-sm font-medium">Landing Page Copy</h3>
-                
                 <FormField
                   control={form.control}
                   name="headline"
@@ -223,7 +296,6 @@ export function WhitelabelRequestForm() {
                 />
               </div>
             </div>
-            
             <Button type="submit" className="w-full" size="lg">
               Create White-Label Instance
             </Button>
@@ -239,3 +311,4 @@ export function WhitelabelRequestForm() {
     </Card>
   )
 }
+;

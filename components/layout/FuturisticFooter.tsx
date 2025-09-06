@@ -8,14 +8,18 @@ import {
   Zap,
   Bot,
   Cloud,
-  Shield,
+  Shield,;
   ArrowRight,;
 } from 'lucide-react';
+<<<<<<< HEAD
+export default function FuturisticFooter() {;
+=======
 
 export default function FuturisticFooter() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
-export default function FuturisticFooter() {
+export default function FuturisticFooter() {;
   const currentYear = new Date().getFullYear();
   
     mobile: '+1 302 464 0950',
@@ -75,7 +79,6 @@ export default function FuturisticFooter() {
         <div className='absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent' />
         <div className='absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent' />
       </div>
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         {/* Main footer content */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>
@@ -122,7 +125,6 @@ export default function FuturisticFooter() {
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -153,7 +155,10 @@ export default function FuturisticFooter() {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Quick Links */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -180,7 +185,10 @@ export default function FuturisticFooter() {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Services */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -207,7 +215,10 @@ export default function FuturisticFooter() {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -236,7 +247,6 @@ export default function FuturisticFooter() {
                   </a>
                 </div>
               </div>
-
               <div className='flex items-start space-x-3'>
                 <Mail className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
                 <div>
@@ -253,7 +263,6 @@ export default function FuturisticFooter() {
                   </a>
                 </div>
               </div>
-
               <div className='flex items-start space-x-3'>
                 <MapPin className='w-5 h-5 text-purple-400 mt-1 flex-shrink-0' />
                 <div>
@@ -266,14 +275,12 @@ export default function FuturisticFooter() {
             </div>
           </div>
         </div>
-
         {/* Bottom section */}
         <div className='pt-8 border-t border-gray-800'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             <div className='text-gray-400 text-sm'>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
             <div className='flex space-x-6 text-sm'>
               <Link
                 href='/privacy'
@@ -292,7 +299,6 @@ export default function FuturisticFooter() {
                 className='text-gray-400 hover:text-white transition-colors duration-200'
               >                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Privacy Policy
@@ -307,7 +313,6 @@ export default function FuturisticFooter() {
           </div>
         </div>
       </div>
-
       {/* Floating elements */}
       <div className='absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse' />
       <div className='absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000' />
@@ -317,5 +322,11 @@ export default function FuturisticFooter() {
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-  );
+);
 }
+<<<<<<< HEAD
+
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

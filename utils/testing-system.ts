@@ -1,10 +1,11 @@
+<<<<<<< HEAD
 export class TestingSystem {
   static async testUserInteraction(
     element: HTMLElement,
     action: 'click' | 'type' | 'hover'
   ) {
     switch (action) {
-      case 'click':
+      case 'click':;
         element.click();
         break;
       case 'type': // Handle typing
@@ -13,3 +14,8 @@ export class TestingSystem {
         break;
     }
   }
+
+}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

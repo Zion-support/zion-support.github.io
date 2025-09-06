@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
@@ -12,7 +13,6 @@ import {format} from 'date-fns';
 import {CertificationsList} from './CertificationsList';
 import {CertificationFormFields} from './CertificationFormFields';
 import {CertificationFormValues, certificationSchema} from './types';
-
 interface CertificationsFormProps {
   resumeId: string,
   certifications: Certification[],
@@ -20,7 +20,7 @@ interface CertificationsFormProps {
   onBack: () => void
 }
 
-export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -59,6 +59,62 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         success = await updateCertification(editingId, certData)
       } else {
         success = await addCertification(resumeId, certData)
+=======
+import { useState } from 'react',;
+import { useForm } from 'react-hook-form',;
+import { Button } from '@/components/ui/button',;
+import { Form } from '@/components/ui/form',;
+import { Certification } from '@/types/resume',;
+import { Loader2 } from 'lucide-react',;
+import { useResume } from '@/hooks/useResume',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { format } from 'date-fns',;
+import { CertificationsList } from './CertificationsList',;
+import { CertificationFormFields } from './CertificationFormFields',;
+import { CertificationFormValues, certificationSchema } from './types',;
+interface CertificationsFormProps {;
+  resumeId: string,;
+  certifications: Certification[],;
+  onComplete: () => void,;
+  onBack: () => void;
+}
+;
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
+  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume(),;
+  const [editingId, setEditingId] = useState<string | null>(null),;
+  const [error, setError] = useState<string | null>(null),;
+  // Helper function to format dates as strings for form inputs;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '',;
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  },;
+  const form = useForm<CertificationFormValues>({;
+    resolver: zodResolver(certificationSchema),;
+    defaultValues: {;
+      name: '',;
+      issuing_organization: '',;
+      issue_date: '',;
+      expiration_date: '',;
+      credential_id: '',;
+      credential_url: ''}}),;
+  const handleAddOrUpdate = async (data: CertificationFormValues) => {;
+    try {;
+      setError(null),;
+      let success,;
+      const certData: Certification = {;
+        name: data.name,;
+        issuing_organization: data.issuing_organization,;
+        issue_date: data.issue_date || undefined,;
+        expiration_date: data.expiration_date || undefined,;
+        credential_id: data.credential_id,;
+        credential_url: data.credential_url},;
+      if (editingId) {;
+        success = await updateCertification(editingId, certData);
+      } else {;
+        success = await addCertification(resumeId, certData);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
 
       if (success) {
@@ -74,6 +130,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     } catch (err: any) {
       setError(err.message || 'An error occurred')
     }
+<<<<<<< HEAD
   };
 
   const handleEdit = (cert: Certification) => {
@@ -89,6 +146,21 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       await deleteCertification(id)
     }
   };
+=======
+  },;
+  const handleEdit = (cert: Certification) => {;
+    setEditingId(cert.id!),;
+    form.reset({;
+      ...cert,;
+      issue_date: formatDateValue(cert.issue_date),;
+      expiration_date: formatDateValue(cert.expiration_date)});
+  },;
+  const handleDelete = async (id: string) => {;
+    if (confirm('Are you sure you want to delete this certification?')) {;
+      await deleteCertification(id);
+    }
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className="space-y-6">
@@ -98,7 +170,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           Add any professional certifications, licenses, or credentials you have earned.
         </p>
       </div>
-
       {certifications.length > 0 && (
         <CertificationsList 
           certifications={certifications} 
@@ -111,11 +182,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
-
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
@@ -124,7 +193,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-                    setEditingId(null);
+                    setEditingId(null),
                     form.reset({
                       name: '',
                       issuing_organization: '',
@@ -139,13 +208,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
               >
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
-
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
-
                 <Button type="button" onClick={onComplete}>
                   Next
                 </Button>
@@ -157,3 +224,4 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     </div>
   )
 }
+;

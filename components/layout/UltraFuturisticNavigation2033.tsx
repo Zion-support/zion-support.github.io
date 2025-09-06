@@ -23,14 +23,12 @@ import {
   Briefcase,
   DollarSign,
   BookOpen,
-  Users,
-  MessageCircle,;} from 'lucide-react';import { 
-  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
+  Users,;
+  MessageCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
   Cpu, Target, Microscope, Shield, Zap, Sparkles;
   Menu, X, Search, ChevronDown, Home, Briefcase, 
   DollarSign, BookOpen, Users, MessageCircle
-
-} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -106,10 +104,10 @@ const contactInfo = {
 }) ) 
 }{
   /* Contact Button */ 
-}<motion.div whileHover= {  {
+}<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
+};
 
-  {
-
+const serviceCategories = [
     title: '🧠 Revolutionary AI',
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
@@ -145,9 +143,6 @@ const contactInfo = {
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3,999/month' }
     ]
   };
-
-  {
-
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
@@ -197,9 +192,6 @@ const contactInfo = {
       { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1,199/month' }
     ]
   };
-
-  {
-
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-600',
@@ -235,9 +227,6 @@ const contactInfo = {
       { name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2,999/month' }
     ]
   };
-
-  {
-
     title: '🌌 Space & Metaverse Tech',
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
@@ -307,9 +296,7 @@ const quickLinks = [
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
 
-];
-
-export default function UltraFuturisticNavigation2033() {
+export default function UltraFuturisticNavigation2033() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -323,9 +310,10 @@ export default function UltraFuturisticNavigation2033() {
       if (e.key === 'Escape') closeMenu();
     };
     document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);  }, []);
-
-  }, []);
+    return () => document.removeEventListener('keydown', handleEscape);  }, []);      if (e.key === 'Escape') closeMenu()
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape)
 
   return (
     <>
@@ -349,7 +337,6 @@ export default function UltraFuturisticNavigation2033() {
                 <MapPin className="w-3 h-3 text-purple-400" />
                 <span>{contactInfo.address}</span>
               </div>
-
               <div className='flex items-center space-x-2'>
                 <Mail className='w-3 h-3 text-purple-400' />
                 <span>{contactInfo.email}</span>
@@ -360,20 +347,19 @@ export default function UltraFuturisticNavigation2033() {
                 <MapPin className='w-3 h-3 text-purple-400' />
                 <span>{contactInfo.address}</span>
               </div>
-
+              <div className='flex items-center space-x-2'>
+                <Globe className='w-3 h-3 text-purple-400' />                <span>{contactInfo.website}</span>              <div className="flex items-center space-x-2">
+                <Globe className="w-3 h-3 text-purple-400" />
                 <span>{contactInfo.website}</span>
-
               </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className='bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
-
             {/* Logo */}
             <motion.div
               className='flex items-center space-x-3'
@@ -391,18 +377,31 @@ export default function UltraFuturisticNavigation2033() {
                   <span className='text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                     Zion Tech Group
                   </span>
-                  <span className='text-xs text-purple-300 font-medium'>                    Future Technology Solutions
-
+                  <span className='text-xs text-purple-300 font-medium'>                    Future Technology Solutions            {/* Logo */}
+            <motion.div 
+              className="flex items-center space-x-3"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <Link href="/" className="flex items-center space-x-3">
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl">
+                    <Rocket className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse"></div>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </span>
+                  <span className="text-xs text-purple-300 font-medium">
                     Future Technology Solutions
-
                   </span>
                 </div>
               </Link>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
-
               {/* Services Mega Menu */}
               <div className='relative group'>
                 <button
@@ -411,10 +410,23 @@ export default function UltraFuturisticNavigation2033() {
                   className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
                 >
                   <span>Services</span>
+<<<<<<< HEAD
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
+              <div className="relative group">
+                <button
+                  onMouseEnter={() => setActiveCategory('services')}
+                  onMouseLeave={() => setActiveCategory(null)}
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                >
+                  <span>Services</span>
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+=======
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
 
                 </button>
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Mega Menu */}
                 <AnimatePresence>
                   {activeCategory === 'services' && (
@@ -426,7 +438,10 @@ export default function UltraFuturisticNavigation2033() {
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
                       className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map(category => (
@@ -459,10 +474,41 @@ export default function UltraFuturisticNavigation2033() {
                                     </div>
                                     <p className='text-sm text-gray-400'>
                                       {service.description}
+<<<<<<< HEAD
+                                    </p>                                  </div>                    >
+                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        {serviceCategories.map((category) => (
+                          <div key={category.title} className="space-y-4">
+                            <div className="flex items-center space-x-3">
+                              <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                                <category.icon className="w-5 h-5 text-white" />
+                              </div>
+                              <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                            </div>
+                            <div className="space-y-3">
+                              {category.services.map((service) => (
+                                <Link
+                                  key={service.name}
+                                  href={service.href}
+                                  className="block group"
+                                >
+                                  <div className="p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200">
+                                    <div className="flex items-center justify-between mb-2">
+                                      <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                        {service.name}
+                                      </h4>
+                                      <span className="text-sm text-purple-400 font-medium">
+                                        {service.price}
+                                      </span>
+                                    </div>
+                                    <p className="text-sm text-gray-400">{service.description}</p>
+                                  </div>
+=======
                                     </p>                                  </div>
 
                                   </div>
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                                 </Link>
                               ))}
                             </div>
@@ -473,16 +519,27 @@ export default function UltraFuturisticNavigation2033() {
                   )}
                 </AnimatePresence>
               </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Quick Links */}
               {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
+<<<<<<< HEAD
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >              {quickLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+=======
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
                 >
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
@@ -494,18 +551,15 @@ export default function UltraFuturisticNavigation2033() {
               >
                 <Link
                   href='/contact'
-                  className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'                >
-
+                  className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'                >                  href="/contact"
+                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
                 >
-
                   Get Started
                 </Link>
               </motion.div>
             </div>
-
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>
-
               <button
                 onClick={toggleMenu}
                 className='text-gray-300 hover:text-white transition-colors duration-200 p-2'
@@ -514,14 +568,19 @@ export default function UltraFuturisticNavigation2033() {
                   <X className='w-6 h-6' />
                 ) : (
                   <Menu className='w-6 h-6' />
-                )}              </button>
-
+                )}              </button>              <button
+                onClick={toggleMenu}
+                className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
+              >
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
-
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -531,8 +590,11 @@ export default function UltraFuturisticNavigation2033() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
+<<<<<<< HEAD
+=======
 
             >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Services */}
                 <div className='space-y-4'>
@@ -554,14 +616,11 @@ export default function UltraFuturisticNavigation2033() {
                       <h4 className="font-medium text-purple-300">{category.title}</h4>
                       <div className="ml-4 space-y-1">
                         {category.services.map((service) => (
-
-                          <Link
                             key={service.name}
                             href={service.href}
                             onClick={closeMenu}
-
+                            className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                           >
-
                             {service.name}
                           </Link>
                         ))}
@@ -569,7 +628,10 @@ export default function UltraFuturisticNavigation2033() {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Mobile Quick Links */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white'>
@@ -584,30 +646,33 @@ export default function UltraFuturisticNavigation2033() {
                   <h3 className="text-lg font-semibold text-white">Quick Links</h3>
                   <div className="grid grid-cols-2 gap-2">
                     {quickLinks.map((link) => (
-
-                      <Link
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
-
+                        className='text-sm text-gray-400 hover:text-cyan-400 transition-colors'                        className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                       >
-
                         {link.name}
                       </Link>
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
+                {/* Mobile Contact Button */}
+                <div className='pt-4'>
+=======
 
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <Link
                     href='/contact'
                     onClick={closeMenu}
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200'                  >
-
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200'                  >                  <Link
+                    href="/contact"
+                    onClick={closeMenu}
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
                   >
-
                     Get Started
                   </Link>
                 </div>
@@ -617,7 +682,7 @@ export default function UltraFuturisticNavigation2033() {
         </AnimatePresence>
       </nav>
     </>
-  );
+);
 
 }whileTap= {
   {
@@ -629,4 +694,8 @@ export default function UltraFuturisticNavigation2033() {
 }</div> </div>) ) 
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+<<<<<<< HEAD
+}</AnimatePresence> </nav> </>) }
+=======
 }</AnimatePresence> </nav> </>)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

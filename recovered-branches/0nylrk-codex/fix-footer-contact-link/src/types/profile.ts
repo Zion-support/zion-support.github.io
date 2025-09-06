@@ -4,8 +4,9 @@ export interface ProfileSkill {
   level: number, // 1-5
   endorsements?: number
 }
+<<<<<<< HEAD
 
-export interface ProfileProject {
+export interface ProfileProject {;
   id: string;
   title: string;
   description: string;
@@ -15,7 +16,7 @@ export interface ProfileProject {
   date: string
 }
 
-export interface ProfileExperience {
+export interface ProfileExperience {;
   id: string;
   role: string;
   company: string;
@@ -25,14 +26,14 @@ export interface ProfileExperience {
   current?: boolean
 }
 
-export interface Availability {
+export interface Availability {;
   status: 'available' | 'limited' | 'unavailable';
   nextAvailable?: string;
   message?: string,
   availableHours?: { day: string, hours: string }[]
 }
 
-export interface ProfileData {
+export interface ProfileData {;
   id: string;
   name: string;
   title: string;
@@ -51,3 +52,53 @@ export interface ProfileData {
   hourlyRate?: number,
   contactEmail?: string
 }
+=======
+;
+export interface ProfileProject {;
+  id: string,;
+  title: string,;
+  description: string,;
+  imageUrl?: string,;
+  tags?: string[],;
+  url?: string,;
+  date: string;
+}
+;
+export interface ProfileExperience {;
+  id: string,;
+  role: string,;
+  company: string,;
+  description: string,;
+  startDate: string,;
+  endDate?: string,;
+  current?: boolean;
+}
+;
+export interface Availability {;
+  status: 'available' | 'limited' | 'unavailable',;
+  nextAvailable?: string,;
+  message?: string,;
+  availableHours?: { day: string, hours: string }[];
+}
+;
+export interface ProfileData {;
+  id: string,;
+  name: string,;
+  title: string,;
+  avatarUrl: string,;
+  coverImageUrl?: string,;
+  bio: string,;
+  location?: string,;
+  rating?: number,;
+  reviewCount?: number,;
+  aiScore?: number,;
+  profileType: 'service' | 'talent',;
+  skills: ProfileSkill[],;
+  projects: ProfileProject[],;
+  experience: ProfileExperience[],;
+  availability: Availability,;
+  hourlyRate?: number;
+  contactEmail?: string;
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import type {
-  CreateGrantPayload,
+  CreateGrantPayload,;
   GrantApplication,;
 } from '../../../types/grants';
 
@@ -23,16 +23,29 @@ function readAllGrants(): GrantApplication[] {
     return JSON.parse(raw) as GrantApplication;
   });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
-    const list = readAllGrants().filter(g => {      return (
+    const list = readAllGrants().filter(g => {      return (function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  }
+}
+
+function readAllGrants(): GrantApplication[] {
+  ensureDir();
+  const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json'));
+  return files.map((file) => {
+    const full = path.join(GRANTS_DIR, file);
+    const raw = fs.readFileSync(full, 'utf8');
+    return JSON.parse(raw) as GrantApplication
+  })
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
-
+    const list = readAllGrants().filter(g => {    const list = readAllGrants().filter((g) => {
       return (
-
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
         (region ? g.region === region : true) &&
@@ -40,9 +53,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       );
     });
     res.status(200).json({ items: list });
-    return;  }
-
-  }
+    return;  }      )
+    });
+    res.status(200).json({ items: list });
+    return
 
   if (req.method === 'POST') {
     try {
@@ -55,10 +69,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         !payload.timeline
       ) {
         res.status(400).json({ error: 'Missing required fields' });
-        return;      }
-
+        return;      }      if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
+        res.status(400).json({ error: 'Missing required fields' });
+        return
       }
-
       ensureDir();
       const id = uuidv4();
       const now = new Date().toISOString();
@@ -89,7 +103,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         'utf8'
       );
       res.status(201).json({ id, record });
-
     } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' });
     }
@@ -97,4 +110,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
+  res.status(405).end('Method Not Allowed');    } catch (e: any) {
+      res.status(500).json({ error: e?.message || 'Failed to create grant' })
+    }
+    return
+  }
+
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+
+}
+}
+}
+=======
   res.status(405).end('Method Not Allowed');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

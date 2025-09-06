@@ -60,7 +60,6 @@ const EnhancedNavigation: React.FC = () => {
               Zion Tech Group
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
@@ -72,7 +71,10 @@ const EnhancedNavigation: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
+<<<<<<< HEAD
+=======
               
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {activeDropdown === 'services' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -103,7 +105,10 @@ const EnhancedNavigation: React.FC = () => {
                 </motion.div>
               )}
             </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Company Dropdown */}
             <div className="relative">
               <button
@@ -113,7 +118,6 @@ const EnhancedNavigation: React.FC = () => {
                 <span>Company</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
               </button>
-              
               {activeDropdown === 'company' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -142,7 +146,6 @@ const EnhancedNavigation: React.FC = () => {
                 </motion.div>
               )}
             </div>
-
             {/* CTA Button */}
             <Link
               href="/contact"
@@ -151,7 +154,10 @@ const EnhancedNavigation: React.FC = () => {
               Get Started
             </Link>
           </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -160,7 +166,10 @@ const EnhancedNavigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Mobile Menu */}
         {isOpen && (
           <motion.div
@@ -190,7 +199,6 @@ const EnhancedNavigation: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Mobile Company */}
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Company</h3>
@@ -211,7 +219,6 @@ const EnhancedNavigation: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-gray-200">
                 <Link
@@ -230,4 +237,8 @@ const EnhancedNavigation: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedNavigation;
+=======
+export default EnhancedNavigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

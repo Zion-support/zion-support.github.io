@@ -2,11 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import {
-  getSessionFromReq,
+  getSessionFromReq,;
   isInternalAgentRequest,;
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req),
   if (!session && !internal) {
@@ -27,5 +26,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
     : { items: [], updatedAt: null };
 
-  res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
+res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
 }

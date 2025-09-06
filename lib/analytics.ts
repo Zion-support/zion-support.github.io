@@ -1,6 +1,6 @@
 // Analytics utilities
 export const trackEvent = (event: string, data?: any) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {;
     window.gtag('event', event, data);
   }
 };
@@ -8,7 +8,7 @@ export const trackEvent = (event: string, data?: any) => {
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
-      page_path: url,
+      page_path: url,;
     });
   }
 };
@@ -18,7 +18,7 @@ export const trackEvent = (
   eventName: string,
   properties?: Record<string, string | number | boolean>
 ) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {;
     window.gtag('event', eventName, properties);
   }
 };
@@ -26,13 +26,17 @@ export const trackEvent = (
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
+<<<<<<< HEAD
+      page_path: url,;
+=======
       page_path: url,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     });
   }
 };
 
 export const measurePerformance = () => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
+  if (typeof window !== 'undefined' && 'performance' in window) {;
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
@@ -56,7 +60,7 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
       event_label: metric.id,
-      non_interaction: true,
+      non_interaction: true,;
     });
   }
 };
@@ -67,7 +71,7 @@ export const event = ({
   category,
   label,
   value,
-}: {
+}: {;
   action: string;
   category: string;
   label?: string;

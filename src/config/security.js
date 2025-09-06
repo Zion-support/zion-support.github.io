@@ -31,5 +31,4 @@ export const securityConfig = {
     max: 100 // limit each IP to 100 requests per windowMs
   }
 };
-
 export default securityConfig;

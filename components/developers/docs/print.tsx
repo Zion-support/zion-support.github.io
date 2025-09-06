@@ -1,14 +1,18 @@
+<<<<<<< HEAD
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+=======
  export const getStaticProps: GetStaticProps<PageProps> = async () => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return {
     props: {
       docs: content as DocsContent,
-    },
+    },;
   };};import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
 export type Section = {
   id: string,
-  title: string,
+  title: string,;
   html?: string;
   code?: { language?: string, content: string }[]
 };
@@ -28,7 +32,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
       docs: content as DocsContent}}
 
 export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
+  useEffect(() => {;
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id);
   }, []);
@@ -66,5 +70,10 @@ export default function PrintDocs({ docs }: PageProps) {
         ))}
       </div>
     </div>
-  );
+);
 }
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

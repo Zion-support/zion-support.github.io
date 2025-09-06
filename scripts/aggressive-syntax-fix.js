@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const winston = require('winston');
 const logger = winston.createLogger({
   level: 'info',
@@ -20,7 +21,7 @@ if (process.env.NODE_ENV !== 'production') {
   }))
 }
 
-
+;
 const fs = require('fs');
 const path = require('path');
 const { glob } = require('glob');
@@ -29,6 +30,36 @@ class AggressiveSyntaxFixer {
         this.projectRoot = process.cwd(),
         this.fixedFiles = [],
         this.errors = []
+=======
+const winston = require('winston'),;
+const logger = winston.createLogger({;
+  level: 'info',;
+  format: winston.format.combine(;
+    winston.format.timestamp(),;
+    winston.format.errors({ stack: true }),;
+    winston.format.json();
+  ),;
+  defaultMeta: { service: 'automation-script' },;
+  transports: [;
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),;
+    new winston.transports.File({ filename: 'logs/combined.log' });
+  ];
+}),;
+if (process.env.NODE_ENV !== 'production') {;
+  logger.add(new winston.transports.Console({;
+    format: winston.format.simple();
+  }));
+}
+;
+const fs = require('fs'),;
+const path = require('path'),;
+const { glob } = require('glob'),;
+class AggressiveSyntaxFixer {;
+    constructor() {;
+        this.projectRoot = process.cwd(),;
+        this.fixedFiles = [],;
+        this.errors = [];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     log(message) {
@@ -109,6 +140,7 @@ class AggressiveSyntaxFixer {
 
         return errorPatterns.some(pattern => pattern.test(content))
     }
+<<<<<<< HEAD
 
     createValidFile(filePath) {
         const ext = path.extname(filePath),
@@ -118,7 +150,7 @@ class AggressiveSyntaxFixer {
         // Convert invalid characters to valid ones
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
         
-        if (ext === '.tsx' || ext === '.jsx') {
+if (ext === '.tsx' || ext === '.jsx') {;
             return `import React from 'react';
 default function ${validFileName}() {
   return (
@@ -138,6 +170,35 @@ const ${validFileName} = {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality
 }`
+=======
+;
+    createValidFile(filePath) {;
+        const ext = path.extname(filePath),;
+        const fileName = path.basename(filePath, ext),;
+        const dirName = path.dirname(filePath),;
+        // Convert invalid characters to valid ones;
+        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),;
+        if (ext === '.tsx' || ext === '.jsx') {;
+            return `import React from 'react',;
+default function ${validFileName}() {;
+  return (;
+    <div>;
+      <h1>${validFileName}</h1>;
+      <p>Component placeholder</p>;
+    </div>;
+  );
+}`;
+        } else if (ext === '.ts') {;
+            return `// ${validFileName} module placeholder;
+const ${validFileName} = {;
+  // TODO: Implement ${validFileName} functionality;
+}`;
+        } else if (ext === '.js') {;
+            return `// ${validFileName} module placeholder;
+const ${validFileName} = {;
+  // TODO: Implement ${validFileName} functionality;
+}`;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         
         return `// ${validFileName} placeholder
@@ -201,14 +262,31 @@ module.exports = AggressiveSyntaxFixer,
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {
-  console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+  // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   // Add cleanup logic here
   process.exit(0)
 }),
 
 process.on('SIGTERM', () => {
-  console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+  // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here
   process.exit(0)
 }),
 
+<<<<<<< HEAD
+;
+=======
+;
+module.exports = AggressiveSyntaxFixer,;
+// Graceful shutdown handling;
+process.on('SIGINT', () => {;
+  // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),;
+  // Add cleanup logic here;
+  process.exit(0);
+}),;
+process.on('SIGTERM', () => {;
+  // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),;
+  // Add cleanup logic here;
+  process.exit(0);
+});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

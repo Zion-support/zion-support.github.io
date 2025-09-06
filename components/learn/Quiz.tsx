@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 type Question = {
   id: string;
   question: string;
@@ -19,7 +18,7 @@ type Props = {
   questions: Question[],
   onComplete: (score: number) => void
 
-export default function Quiz({ questions, onComplete }: Props) {
+export default function Quiz({ questions, onComplete }: Props) {;
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -97,5 +96,11 @@ export default function Quiz({ questions, onComplete }: Props) {
   );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
-  );
+);
 }
+<<<<<<< HEAD
+
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

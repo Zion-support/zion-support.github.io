@@ -1,12 +1,13 @@
 
+<<<<<<< HEAD
 export type ForumCategory = 
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
-  | 'feedback'
+  | 'feedback';
   | 'announcements';
 
-export interface ForumCategoryInfo {
+export interface ForumCategoryInfo {;
   id: ForumCategory;
   name: string;
   description: string;
@@ -14,7 +15,7 @@ export interface ForumCategoryInfo {
   icon: string
 }
 
-export interface ForumPost {
+export interface ForumPost {;
   id: string;
   title: string;
   content: string;
@@ -35,7 +36,7 @@ export interface ForumPost {
   isFeatured?: boolean
 }
 
-export interface ForumReply {
+export interface ForumReply {;
   id: string;
   postId: string;
   parentReplyId?: string;
@@ -51,7 +52,7 @@ export interface ForumReply {
   isAnswer?: boolean
 }
 
-export interface Badge {
+export interface Badge {;
   id: string;
   name: string;
   description: string;
@@ -59,13 +60,13 @@ export interface Badge {
   color: string
 }
 
-export interface UserBadge {
+export interface UserBadge {;
   userId: string;
   badgeId: string,
   awardedAt: string
 }
 
-export interface CommunityUser {
+export interface CommunityUser {;
   id: string;
   name: string;
   avatar?: string;
@@ -77,3 +78,83 @@ export interface CommunityUser {
   isVerified: boolean,
   isModerator: boolean
 }
+=======
+export type ForumCategory =;
+  | 'getting-hired';
+  | 'project-help';
+  | 'ai-tools';
+  | 'feedback';
+  | 'announcements',;
+export interface ForumCategoryInfo {;
+  id: ForumCategory,;
+  name: string,;
+  description: string,;
+  adminOnly: boolean,;
+  icon: string;
+}
+;
+export interface ForumPost {;
+  id: string,;
+  title: string,;
+  content: string,;
+  authorId: string,;
+  authorName: string,;
+  authorAvatar?: string,;
+  authorRole?: string,;
+  categoryId: ForumCategory,;
+  tags: string[],;
+  createdAt: string,;
+  updatedAt: string,;
+  upvotes: number,;
+  downvotes: number,;
+  replyCount: number,;
+  isAnswered?: boolean,;
+  isPinned?: boolean,;
+  isLocked?: boolean,;
+  isFeatured?: boolean;
+}
+;
+export interface ForumReply {;
+  id: string,;
+  postId: string,;
+  parentReplyId?: string,;
+  content: string,;
+  authorId: string,;
+  authorName: string,;
+  authorAvatar?: string,;
+  authorRole?: string,;
+  createdAt: string,;
+  updatedAt: string,;
+  upvotes: number,;
+  downvotes: number,;
+  isAnswer?: boolean;
+}
+;
+export interface Badge {;
+  id: string,;
+  name: string,;
+  description: string,;
+  icon: string,;
+  color: string;
+}
+;
+export interface UserBadge {;
+  userId: string,;
+  badgeId: string,;
+  awardedAt: string;
+}
+;
+export interface CommunityUser {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  role: string,;
+  reputation: number,;
+  postCount: number,;
+  replyCount: number,;
+  badges: Badge[],;
+  isVerified: boolean;
+  isModerator: boolean;
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -23,7 +23,6 @@ export default function ServicesAdvertisingPage() {
         <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
           Services Advertising
         </h1>
-
         {/* Quick contact */}
         <div className='flex flex-col md:flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800'>
           <a
@@ -59,7 +58,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </div>
-
         {/* New: Core micro SaaS and AI additions */}
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
@@ -86,7 +84,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Resume & Cover Letter Builder
@@ -112,7 +109,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Document Summarizer
@@ -138,7 +134,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Subscription Manager Hub
@@ -161,7 +156,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section>
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
             Featured Offerings
@@ -226,7 +220,6 @@ export default function ServicesAdvertisingPage() {
             ))}
           </div>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             API Performance Testing
@@ -251,7 +244,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section>
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
             Average Market Prices
@@ -388,7 +380,6 @@ export default function ServicesAdvertisingPage() {
             </div>
           </div>
         </section>
-
         <section>
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
             Explore by Category
@@ -405,7 +396,6 @@ export default function ServicesAdvertisingPage() {
             ))}
           </div>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Podcast Transcription & Insights
@@ -430,7 +420,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ai-evaluation-orchestrator' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Evaluation Orchestrator
@@ -448,7 +437,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Vector Search Starter
@@ -466,7 +454,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='managed-postgres-ha' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Managed Postgres HA
@@ -483,7 +470,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Guardrails & Safety
@@ -503,7 +489,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Identity & SSO/SCIM
@@ -520,7 +505,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         {/* New sections with average market prices and references */}
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
@@ -539,7 +523,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             TLS Certificate Monitor
@@ -555,7 +538,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Domain & DNS Monitor
@@ -571,7 +553,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Affiliate Attribution & Payouts Hub
@@ -589,7 +570,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             API Security Scanner
@@ -606,7 +586,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Podcast Transcription & Insights
@@ -624,7 +603,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Edge Feature Flags
@@ -641,7 +619,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Micro CRM for Local Business
@@ -658,7 +635,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Employee Scheduling Suite
@@ -675,7 +651,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>LMS Starter</h2>
           <p className='text-slate-300'>
@@ -689,7 +664,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             SMB Website Analytics
@@ -705,7 +679,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Automated Email Follow-ups
@@ -721,7 +694,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Red Teaming Suite
@@ -748,7 +720,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             API Schema Diff & Registry
@@ -774,7 +745,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             GitHub Secrets Scanner Plus
@@ -801,7 +771,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             GDPR DSAR Portal Lite
@@ -827,7 +796,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Kubernetes Cost Rightsizer
@@ -853,7 +821,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             PII Redaction Proxy
@@ -879,7 +846,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Postgres Index Advisor Pro
@@ -905,7 +871,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             S3 Lifecycle Optimizer
@@ -931,7 +896,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <div className='pt-4 text-slate-400 text-sm'>
           See also:{' '}
           <a className='text-cyan-400 underline' href='/market-pricing'>
@@ -939,7 +903,6 @@ export default function ServicesAdvertisingPage() {
           </a>{' '}
           for a broader list of benchmarks and links.
         </div>
-
         {/* Latest Real Additions (concise) */}
         <section id='latest-real-additions' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
@@ -1119,7 +1082,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ai-email-responder' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Email Responder
@@ -1138,7 +1100,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='mobile-first-survey-tool' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Mobile-first Survey Tool
@@ -1154,7 +1115,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='event-management-dashboard' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Event Management Dashboard
@@ -1170,7 +1130,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='affiliate-tracking-hub' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Affiliate Tracking Hub
@@ -1186,7 +1145,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='smb-website-analytics' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             SMB Website Analytics
@@ -1202,7 +1160,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='it-helpdesk-suite' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             IT Helpdesk Suite
@@ -1218,7 +1175,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ecommerce-returns-center' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             E‑commerce Returns Center
@@ -1234,7 +1190,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ai-seo-optimizer' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI SEO Content Optimizer
@@ -1251,7 +1206,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             API Contract Testing Suite
@@ -1268,7 +1222,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Data Quality & ETL Monitor
@@ -1285,7 +1238,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='cloud-cost-optimization-accelerator' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Cloud Cost Optimization Accelerator
@@ -1303,7 +1255,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='backup-dr-runbook-hub' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Backup & DR Runbook Hub
@@ -1321,7 +1272,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             PII Data Vault & Tokenization
@@ -1338,7 +1288,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Edge Feature Flag Proxy
@@ -1356,7 +1305,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='eks-kubernetes-ops' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Managed Kubernetes on AWS EKS
@@ -1370,7 +1318,6 @@ export default function ServicesAdvertisingPage() {
             <li>References: {ext('https://aws.amazon.com/eks/pricing/')}</li>
           </ul>
         </section>
-
         <section id='gke-kubernetes-ops' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Managed Kubernetes on Google GKE
@@ -1387,7 +1334,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='cloudflare-zero-trust' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Zero Trust SASE with Cloudflare
@@ -1403,7 +1349,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='microsoft-intune-mdm' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             MDM/MAM with Microsoft Intune
@@ -1422,7 +1367,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='voice-cloning-studio' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Voice Cloning Studio
@@ -1436,7 +1380,6 @@ export default function ServicesAdvertisingPage() {
             <li>References: {ext('https://elevenlabs.io/pricing')}</li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Support Triage Router
@@ -1454,7 +1397,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             E‑commerce Returns Management
@@ -1471,7 +1413,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Podcast Transcription & Notes
@@ -1488,7 +1429,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Automated Email Follow‑ups
@@ -1505,7 +1445,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Freelancer Portfolio Builder
@@ -1521,7 +1460,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Scheduling & Appointments
@@ -1537,7 +1475,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Feature Flags & Experiments
@@ -1553,7 +1490,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Data Contract Governance Suite
@@ -1571,7 +1507,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             PII Tokenization Vault Pro
@@ -1588,7 +1523,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Edge Personalization Engine
@@ -1606,7 +1540,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Incident Auto‑Responder AI
@@ -1624,7 +1557,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Warehouse CDC Starter
@@ -1642,7 +1574,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Privacy Guard for LLMs
@@ -1659,7 +1590,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Feature Flag Insights Pro
@@ -1676,7 +1606,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='it-asset-discovery-agent' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             IT Asset Discovery Agent
@@ -1695,7 +1624,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ai-meeting-notes' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Meeting Notes & Action Items
@@ -1717,7 +1645,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='privacy-request-portal' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Privacy Request Portal (DSAR/CCPA/GDPR)
@@ -1743,7 +1670,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='accessibility-scanner' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Accessibility Compliance Scanner
@@ -1767,7 +1693,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='image-optimizer-cdn' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Image Optimizer CDN
@@ -1789,7 +1714,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='mlops-starter' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             MLOps Pipeline Starter
@@ -1812,7 +1736,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='warehouse-accelerator' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Data Warehouse Accelerator
@@ -1837,7 +1760,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='ai-synthetic-data-studio' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Synthetic Data Studio
@@ -1854,7 +1776,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='zero-trust-sso-mesh' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Zero-Trust SSO Mesh
@@ -1871,7 +1792,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='etl-reliability-copilot' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             ETL Reliability Copilot
@@ -1888,7 +1808,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='edge-personalization-kit' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Edge Personalization Kit
@@ -1905,7 +1824,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         {/* New 2029 Q3 diversified additions */}
         <section id='ai-revenue-forecasting-copilot' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
@@ -1923,7 +1841,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         {/* New 2030 Q1 additions */}
         <section id='ai-knowledge-graph-studio' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
@@ -1941,7 +1858,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='llm-guarded-api-gateway' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             LLM Guarded API Gateway
@@ -1958,7 +1874,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='serverless-lakehouse-starter' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Serverless Lakehouse Starter
@@ -1976,7 +1891,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='customer-journey-orchestration' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Customer Journey Orchestration
@@ -1993,7 +1907,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='kubernetes-runbooks-as-code' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Kubernetes Runbooks as Code
@@ -2009,7 +1922,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='security-posture-copilot' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Security Posture Copilot
@@ -2025,7 +1937,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='itsm-ai-agent' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>ITSM AI Agent</h2>
           <p className='text-slate-300'>
@@ -2041,7 +1952,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='warehouse-native-reverse-etl' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Warehouse-native Reverse ETL
@@ -2057,7 +1967,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='data-contracts-hub' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Data Contracts Hub
@@ -2073,7 +1982,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ai-sales-playbook-generator' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Sales Playbook Generator
@@ -2089,7 +1997,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='customer-data-platform-lite' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Customer Data Platform (CDP) Lite
@@ -2105,7 +2012,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='data-quality-observability' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Data Quality & Observability
@@ -2121,7 +2027,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='feature-store-starter' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Feature Store Starter
@@ -2137,7 +2042,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='edge-ab-testing' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Edge A/B & Personalization
@@ -2153,7 +2057,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='reverse-etl-starter' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Reverse ETL Starter
@@ -2169,7 +2072,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='consent-preference-center' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Consent & Preference Center
@@ -2185,7 +2087,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='vendor-risk-dashboard' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Vendor Risk Dashboard
@@ -2201,7 +2102,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='soc2-evidence-vault' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             SOC 2 Evidence Vault
@@ -2217,7 +2117,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ai-knowledge-base-search' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Knowledge Base Search
@@ -2234,7 +2133,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='engineering-productivity-insights' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Engineering Productivity Insights
@@ -2250,7 +2148,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='it-asset-discovery-agent' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             IT Asset Discovery Agent
@@ -2267,7 +2164,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='incident-autocomplete-copilot' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Incident Autocomplete Copilot
@@ -2283,7 +2179,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='voice-ivr-studio' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Voice IVR Studio
@@ -2299,7 +2194,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ai-sales-enablement-engine' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Sales Enablement Content Engine
@@ -2316,7 +2210,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='iot-device-fleet-manager' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             IoT Device Fleet Manager
@@ -2333,7 +2226,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='security-awareness-training' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Security Awareness Training Platform
@@ -2350,7 +2242,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='vulnerability-patch-orchestrator' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Vulnerability & Patch Orchestrator
@@ -2368,7 +2259,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='hr-onboarding-automation' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             HR Onboarding Automation Hub
@@ -2386,7 +2276,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='shopify-speed-optimizer' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Shopify Speed & Core Web Vitals Optimizer
@@ -2403,7 +2292,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='llm-observability-tracing' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             LLM Observability & Tracing
@@ -2420,7 +2308,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='dpia-privacy-toolkit' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             DPIA & Privacy Impact Toolkit
@@ -2438,7 +2325,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='b2b-customer-portal-starter' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             B2B Customer Portal Starter
@@ -2455,7 +2341,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='policy-as-code-governance' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Policy‑as‑Code Governance
@@ -2472,7 +2357,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='apple-mdm-suite' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Apple MDM Suite (ABM/DEP)
@@ -2489,7 +2373,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='soc2-continuous-controls' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             SOC 2 Continuous Controls Monitoring
@@ -2506,7 +2389,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ai-red-team-testing' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Red Team & Prompt Injection Testing
@@ -2523,7 +2405,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='api-monetization-dev-portal' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             API Monetization & Developer Portal
@@ -2541,7 +2422,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='consent-compliance-kit' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Consent & Cookie Compliance Kit
@@ -2560,7 +2440,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='api-backfill-reconciliation' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             API Backfill & Reconciliation
@@ -2577,7 +2456,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='data-quality-sla-monitor' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Data Quality & Freshness SLAs
@@ -2594,7 +2472,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='postgres-index-advisor' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Postgres Index Advisor & Tuner
@@ -2610,7 +2487,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='gitops-drift-monitor' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             GitOps Policy & Drift Monitor
@@ -2626,7 +2502,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='soc2-readiness-scanner' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             SOC 2 Readiness Scanner
@@ -2643,7 +2518,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='cloud-asset-attack-surface' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Cloud Asset Inventory & Attack Surface
@@ -2661,7 +2535,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='llm-red-team-simulator' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             LLM Red Team & Jailbreak Simulator
@@ -2680,7 +2553,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='affiliate-fraud-detector' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Affiliate Fraud Detector
@@ -2697,7 +2569,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='personalization-api' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Content Personalization API
@@ -2714,7 +2585,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='lead-enrichment-routing' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Lead Enrichment & Routing Engine
@@ -2730,7 +2600,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='k8s-quota-cost-guard' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Kubernetes Quota & Cost Guard
@@ -2746,7 +2615,6 @@ export default function ServicesAdvertisingPage() {
             </li>
           </ul>
         </section>
-
         <section id='ai-contract-risk-analyzer' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             AI Contract Risk Analyzer
@@ -2771,7 +2639,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='finops-ri-sp-optimizer' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             FinOps RI/SP Optimizer
@@ -2797,7 +2664,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='k8s-slo-auto-tuner' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Kubernetes SLO Auto‑Tuner
@@ -2822,7 +2688,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='vendor-security-questionnaire-ai' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Vendor Security Questionnaire AI
@@ -2847,7 +2712,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='invoice-reconciliation-copilot' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Invoice Reconciliation Copilot
@@ -2872,7 +2736,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='policy-drift-compliance-monitor' className='space-y-6'>
           <h2 className='text-2xl font-semibold text-white'>
             Policy Drift & Compliance Monitor
@@ -2897,7 +2760,6 @@ export default function ServicesAdvertisingPage() {
             </a>
           </div>
         </section>
-
         <section id='diversified-expansions-2026' className='space-y-8'>
           <h2 className='text-2xl font-semibold text-white'>
             New Diversified Additions
@@ -2926,7 +2788,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='multi-tenant-rate-limiter' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Multi‑tenant Rate Limiter & Quotas
@@ -2952,7 +2813,10 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -2978,7 +2842,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='api-contract-mock-sandbox' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               API Mock Server & Contract Sandbox
@@ -3005,7 +2868,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='stripe-billing-migration' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Stripe Billing Migration & Dunning Optimizer
@@ -3031,7 +2893,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='ai-sales-call-coach' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               AI Sales Call Scoring & Coaching
@@ -3056,7 +2917,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='sku-demand-forecast' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               SKU Demand Forecast Copilot
@@ -3081,7 +2941,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='video-subtitle-dubbing' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Video Subtitling & Dubbing Studio
@@ -3106,7 +2965,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='app-store-review-insights' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               App Store Review Insights
@@ -3131,7 +2989,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='b2b-pricing-entitlements' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               B2B SaaS Pricing & Entitlement Planner
@@ -3157,7 +3014,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='sso-billing-entitlements-sync' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               SSO Billing & Entitlements Sync
@@ -3183,7 +3039,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section id='email-dmarc-monitor' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Email DMARC/SPF/DKIM Monitor & Autopilot
@@ -3209,7 +3064,6 @@ export default function ServicesAdvertisingPage() {
             </div>
           </section>
         </section>
-
         {/* Contact CTA */}
         <div className='flex flex-col md:flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800'>
           <a
@@ -3232,7 +3086,7 @@ export default function ServicesAdvertisingPage() {
           </a>
         </div>
       </div>
-    </div>
+    </div>;
   );
 
   /* Quick contact */ 
@@ -3818,7 +3672,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://joinhomebase.com/pricing/')}, {ext('https://wheniwork.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">LMS Starter</h2>
 					<p className="text-slate-300">Courses, quizzes, certificates, and progress tracking in days.</p>
@@ -3827,7 +3680,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://teachable.com/pricing')}, {ext('https://www.thinkific.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">SMB Website Analytics</h2>
 					<p className="text-slate-300">Privacy-friendly dashboards with goals and funnels. Cookie-less.</p>
@@ -3836,7 +3688,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://plausible.io/pricing')}, {ext('https://usefathom.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Automated Email Follow-ups</h2>
 					<p className="text-slate-300">Time and event sequences with A/B tests and performance analytics.</p>
@@ -3845,7 +3696,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://mailshake.com/pricing')}, {ext('https://www.gmass.co/pricing')}</li>
 					</ul>
 				</section>
-				
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Red Teaming Suite</h2>
 					<p className="text-slate-300">Continuously stress-test LLM apps with curated jailbreak and prompt injection attack packs, automated safety regressions, and scorecards.</p>
@@ -3855,7 +3705,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: https://openai.com/safety, https://www.anthropic.com/news, https://www.promptfoo.dev/pricing</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Schema Diff & Registry</h2>
 					<p className="text-slate-300">Versioned OpenAPI registry with CI diffs, breaking-change detection, docs, and SDK hooks to ship safer APIs faster.</p>
@@ -3865,7 +3714,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: https://swagger.io/tools/swaggerhub/pricing/, https://stoplight.io/pricing, https://www.openapis.org/</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">GitHub Secrets Scanner Plus</h2>
 					<p className="text-slate-300">High-signal secret detectors with CI blocking, auto-rotation playbooks, and repository quarantine policies.</p>
@@ -3875,7 +3723,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: https://docs.github.com/code-security/secret-scanning, https://github.com/features/security, https://github.com/trufflesecurity/trufflehog</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">GDPR DSAR Portal Lite</h2>
 					<p className="text-slate-300">Branded DSAR portal with identity verification, workflows, templated redaction, and auditor-ready exports.</p>
@@ -3885,7 +3732,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: https://www.osano.com/pricing, https://www.transcend.io/platform</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Kubernetes Cost Rightsizer</h2>
 					<p className="text-slate-300">SLO-aware CPU/memory rightsizing recommendations with manifest PRs and savings reports.</p>
@@ -3895,7 +3741,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: https://www.kubecost.com/pricing, https://prometheus.io/</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">PII Redaction Proxy</h2>
 					<p className="text-slate-300">Lossless PII/PHI masking for logs, prompts, and events with low-latency SDKs and audit logs.</p>
@@ -3905,7 +3750,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: https://www.skyflow.com/pricing, https://www.verygoodsecurity.com/pricing</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Postgres Index Advisor Pro</h2>
 					<p className="text-slate-300">Query-aware index recommendations with safe rollout PRs and auto-rollback on regressions.</p>
@@ -3915,7 +3759,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: https://pganalyze.com/pricing, https://www.postgresql.org/docs/current/auto-explain.html</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">S3 Lifecycle Optimizer</h2>
 					<p className="text-slate-300">Analyze access patterns to apply storage class transitions (IA/Glacier) and retention policies automatically.</p>
@@ -3925,9 +3768,7 @@ export default function ServicesAdvertisingPage() {
 						<li>References: https://aws.amazon.com/s3/pricing/, https://aws.amazon.com/s3/storage-classes/</li>
 					</ul>
 				</section>
-
 				<div className="pt-4 text-slate-400 text-sm">See also: <a className="text-cyan-400 underline" href="/market-pricing">Market Pricing</a> for a broader list of benchmarks and links.</div>
-
 				{/* Latest Real Additions (concise) */}
 				<section id="latest-real-additions" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Latest Real Additions</h2>
@@ -3970,7 +3811,6 @@ export default function ServicesAdvertisingPage() {
 						</li>
 					</ul>
 				</section>
-
 				<section id="ai-email-responder" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Email Responder</h2>
 					<p className="text-slate-300">Autonomous replies, prioritization, and sentiment analysis integrated with your CRM.</p>
@@ -3979,7 +3819,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://workspace.google.com/pricing')}, {ext('https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products')}</li>
 					</ul>
 				</section>
-
 				<section id="mobile-first-survey-tool" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Mobile-first Survey Tool</h2>
 					<p className="text-slate-300">Adaptive surveys with conditional logic and real-time dashboards.</p>
@@ -3988,7 +3827,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.typeform.com/pricing/')}, {ext('https://www.surveymonkey.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="event-management-dashboard" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Event Management Dashboard</h2>
 					<p className="text-slate-300">Ticketing, registration, scheduling, and post-event insights.</p>
@@ -3997,7 +3835,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.eventbrite.com/organizer/pricing/')}, {ext('https://ti.to/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="affiliate-tracking-hub" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Affiliate Tracking Hub</h2>
 					<p className="text-slate-300">Cross-device attribution, fraud prevention, and automated payouts.</p>
@@ -4006,7 +3843,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://partnerstack.com/')}, {ext('https://impact.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="smb-website-analytics" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">SMB Website Analytics</h2>
 					<p className="text-slate-300">Privacy-first dashboards with goals, funnels, and UTM insights.</p>
@@ -4015,7 +3851,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://plausible.io/pricing')}, {ext('https://usefathom.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="it-helpdesk-suite" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">IT Helpdesk Suite</h2>
 					<p className="text-slate-300">Ticketing, SLAs, KB, and self-service portal for IT teams and MSPs.</p>
@@ -4024,7 +3859,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.zendesk.com/pricing/')}, {ext('https://www.freshworks.com/freshdesk/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="ecommerce-returns-center" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">E‑commerce Returns Center</h2>
 					<p className="text-slate-300">Self-service returns, labels, and exchanges with analytics.</p>
@@ -4033,7 +3867,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.loopreturns.com/pricing/')}, {ext('https://www.returnsgo.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="ai-seo-optimizer" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI SEO Content Optimizer</h2>
 					<p className="text-slate-300">AI guidance for keywords, structure, and readability with brief exports.</p>
@@ -4042,7 +3875,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.surferseo.com/pricing/')}, {ext('https://www.semrush.com/prices/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Contract Testing Suite</h2>
 					<p className="text-slate-300">Automated OpenAPI/GraphQL contract tests with CI gates, schema diffs, and rollback guidance.</p>
@@ -4051,7 +3883,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.postman.com/pricing/')}, {ext('https://www.optic.dev/')}, {ext('https://stoplight.io/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Data Quality & ETL Monitor</h2>
 					<p className="text-slate-300">Freshness SLAs, schema drift detection, and anomaly alerts for your warehouse and lakes.</p>
@@ -4060,7 +3891,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://www.bigeye.com/')}, {ext('https://soda.io/')}</li>
 					</ul>
 				</section>
-
 				<section id="cloud-cost-optimization-accelerator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Cloud Cost Optimization Accelerator</h2>
 					<p className="text-slate-300">Rightsizing, SP/RI planning, and anomaly alerts with actionable FinOps guardrails.</p>
@@ -4069,7 +3899,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.kubecost.com/pricing')}, {ext('https://www.cloudzero.com/pricing')}, {ext('https://www.finout.io/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="backup-dr-runbook-hub" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Backup & DR Runbook Hub</h2>
 					<p className="text-slate-300">Automated backup policies, restore rehearsal, and audit-ready evidence.</p>
@@ -4078,7 +3907,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://velero.io/')}, {ext('https://aws.amazon.com/backup/pricing/')}, {ext('https://www.veeam.com/pricing.html')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">PII Data Vault & Tokenization</h2>
 					<p className="text-slate-300">Vault PII and tokenize sensitive fields with KMS-backed encryption and audit logs.</p>
@@ -4087,7 +3915,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.skyflow.com/pricing')}, {ext('https://www.verygoodsecurity.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Edge Feature Flag Proxy</h2>
 					<p className="text-slate-300">Serve flags from the edge with geo targeting, kill switches, and provider compatibility.</p>
@@ -4096,7 +3923,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://launchdarkly.com/pricing/')}, {ext('https://www.flagsmith.com/pricing')}, {ext('https://www.split.io/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="eks-kubernetes-ops" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Managed Kubernetes on AWS EKS</h2>
 					<p className="text-slate-300">Production-grade EKS with autoscaling, observability, and security baselines.</p>
@@ -4105,7 +3931,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://aws.amazon.com/eks/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="gke-kubernetes-ops" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Managed Kubernetes on Google GKE</h2>
 					<p className="text-slate-300">Hardened GKE with GitOps, progressive delivery, and FinOps guardrails.</p>
@@ -4114,7 +3939,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://cloud.google.com/kubernetes-engine/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="cloudflare-zero-trust" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Zero Trust SASE with Cloudflare</h2>
 					<p className="text-slate-300">ZTNA, SWG, DNS filtering, and device posture for secure access.</p>
@@ -4123,7 +3947,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.cloudflare.com/plans/zero-trust/')}, {ext('https://www.cloudflare.com/plans/')}</li>
 					</ul>
 				</section>
-
 				<section id="microsoft-intune-mdm" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">MDM/MAM with Microsoft Intune</h2>
 					<p className="text-slate-300">Device enrollment, compliance, app protection, and conditional access.</p>
@@ -4132,7 +3955,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans')}</li>
 					</ul>
 				</section>
-
 				<section id="voice-cloning-studio" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Voice Cloning Studio</h2>
 					<p className="text-slate-300">High-quality synthetic voices for product, support, and content teams.</p>
@@ -4141,7 +3963,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://elevenlabs.io/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Support Triage Router</h2>
 					<p className="text-slate-300">Classify, summarize, and route tickets across email, chat, and web with grounded AI suggestions.</p>
@@ -4150,7 +3971,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.zendesk.com/pricing/')}, {ext('https://freshdesk.com/pricing')}, {ext('https://www.intercom.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">E‑commerce Returns Management</h2>
 					<p className="text-slate-300">Automate RMAs, labels, exchanges, and refunds for a delightful post‑purchase experience.</p>
@@ -4159,7 +3979,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.loopreturns.com/pricing')}, {ext('https://www.aftership.com/returns-center/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Podcast Transcription & Notes</h2>
 					<p className="text-slate-300">Accurate transcriptions with chapters and show notes drafts for SEO & accessibility.</p>
@@ -4168,7 +3987,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.pigment.com/')}, {ext('https://www.anaplan.com/platform/overview')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Automated Email Follow‑ups</h2>
 					<p className="text-slate-300">Lead nurturing sequences triggered by activity with AI‑personalized copy and CRM sync.</p>
@@ -4177,7 +3995,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://mailchimp.com/pricing/')} (automations), {ext('https://customer.io/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Freelancer Portfolio Builder</h2>
 					<p className="text-slate-300">Beautiful portfolios with case studies, testimonials, and SEO.
@@ -4187,7 +4004,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://webflow.com/pricing')}, {ext('https://www.squarespace.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Scheduling & Appointments</h2>
 					<p className="text-slate-300">Booking pages, reminders, no‑show reduction, and payments.</p>
@@ -4196,7 +4012,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://calendly.com/pricing')}, {ext('https://cal.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Feature Flags & Experiments</h2>
 					<p className="text-slate-300">Safe launches and A/B tests with audit trails and targeting.</p>
@@ -4205,7 +4020,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://launchdarkly.com/pricing/')}, {ext('https://www.flagsmith.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Data Contract Governance Suite</h2>
 					<p className="text-slate-300">API and data contracts with schema diffs, lineage, and CI gates to prevent breaks.</p>
@@ -4214,7 +4028,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.optic.dev/')}, {ext('https://stoplight.io/')}, {ext('https://www.postman.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">PII Tokenization Vault Pro</h2>
 					<p className="text-slate-300">KMS-backed tokenization, access policies, and audit trails for sensitive data.</p>
@@ -4223,7 +4036,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.skyflow.com/pricing')}, {ext('https://www.verygoodsecurity.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Edge Personalization Engine</h2>
 					<p className="text-slate-300">Geo and audience‑aware content with edge rendering, flags, and experiments.</p>
@@ -4232,7 +4044,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.optimizely.com/pricing/')}, {ext('https://vwo.com/plans/')}, {ext('https://www.mutinyhq.com/product')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Incident Auto‑Responder AI</h2>
 					<p className="text-slate-300">Draft incident updates and postmortems with SLO context and suggested actions.</p>
@@ -4241,7 +4052,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.incident.io/pricing')}, {ext('https://www.rootly.com/pricing')}, {ext('https://www.blameless.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Warehouse CDC Starter</h2>
 					<p className="text-slate-300">CDC templates, SCD handling, and data tests for warehouse-native analytics.</p>
@@ -4250,7 +4060,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.fivetran.com/pricing')}, {ext('https://airbyte.com/pricing')}, {ext('https://www.getdbt.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Privacy Guard for LLMs</h2>
 					<p className="text-slate-300">PII/PHI detection, redaction, and consent-aware policies for prompts/outputs.</p>
@@ -4259,7 +4068,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.lakera.ai/')}, {ext('https://www.protectai.com/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Feature Flag Insights Pro</h2>
 					<p className="text-slate-300">Usage analytics, experiments, and guardrails on top of your flags.</p>
@@ -4268,7 +4076,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://launchdarkly.com/pricing/')}, {ext('https://www.flagsmith.com/pricing')}, {ext('https://www.split.io/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="it-asset-discovery-agent" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">IT Asset Discovery Agent</h2>
 					<p className="text-slate-300">Agentless discovery of cloud, endpoints, and SaaS via APIs with drift alerts and CMDB export.</p>
@@ -4277,7 +4084,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://aws.amazon.com/systems-manager/pricing/')}, {ext('https://www.okta.com/pricing/')}, {ext('https://workspace.google.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="ai-meeting-notes" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Meeting Notes & Action Items</h2>
 					<p className="text-slate-300">Multi-speaker transcripts, summaries, and CRM-synced action items with redaction.</p>
@@ -4287,7 +4093,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/ai-meeting-notes">Learn more</a></div>
 				</section>
-
 				<section id="privacy-request-portal" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Privacy Request Portal (DSAR/CCPA/GDPR)</h2>
 					<p className="text-slate-300">Accept, verify, and fulfill privacy requests with audit logs and SLAs.</p>
@@ -4297,7 +4102,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/privacy-request-portal">Learn more</a></div>
 				</section>
-
 				<section id="accessibility-scanner" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Accessibility Compliance Scanner</h2>
 					<p className="text-slate-300">Automated WCAG checks with CI annotations and remediation guidance.</p>
@@ -4307,7 +4111,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/accessibility-scanner">Learn more</a></div>
 				</section>
-
 				<section id="image-optimizer-cdn" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Image Optimizer CDN</h2>
 					<p className="text-slate-300">On-the-fly transforms, AVIF/WebP, edge caching, signed URLs, and analytics.</p>
@@ -4317,7 +4120,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/image-optimizer-cdn">Learn more</a></div>
 				</section>
-
 				<section id="mlops-starter" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">MLOps Pipeline Starter</h2>
 					<p className="text-slate-300">Model registry, CI gates, and monitoring to ship ML safely and faster.</p>
@@ -4327,7 +4129,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/mlops-starter">Learn more</a></div>
 				</section>
-
 				<section id="warehouse-accelerator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Data Warehouse Accelerator</h2>
 					<p className="text-slate-300">ELT connectors, dbt models, and finance/ops dashboards in days.</p>
@@ -4337,7 +4138,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/warehouse-accelerator">Learn more</a></div>
 				</section>
-
 				<section id="ai-synthetic-data-studio" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Synthetic Data Studio</h2>
 					<p className="text-slate-300">Generate privacy-safe datasets for ML with controllable distributions and differential privacy.</p>
@@ -4346,7 +4146,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://gretel.ai/pricing')}, {ext('https://mostly.ai/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="zero-trust-sso-mesh" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Zero-Trust SSO Mesh</h2>
 					<p className="text-slate-300">Layer device posture and risk-based access on top of your IdP for continuous verification.</p>
@@ -4355,7 +4154,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.zscaler.com/products/zero-trust-exchange')}</li>
 					</ul>
 				</section>
-
 				<section id="etl-reliability-copilot" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">ETL Reliability Copilot</h2>
 					<p className="text-slate-300">Freshness forecasts, schema drift detection, and anomaly alerts for warehouses and lakes.</p>
@@ -4364,7 +4162,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://www.bigeye.com/')}, {ext('https://soda.io/')}</li>
 					</ul>
 				</section>
-
 				<section id="edge-personalization-kit" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Edge Personalization Kit</h2>
 					<p className="text-slate-300">Geo, device, and audience-targeted content rules at the CDN edge with experiments.</p>
@@ -4373,7 +4170,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://vercel.com/pricing')}, {ext('https://www.cloudflare.com/plans/')}</li>
 					</ul>
 				</section>
-
 				{/* New 2029 Q3 diversified additions */}
 				<section id="ai-revenue-forecasting-copilot" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Revenue Forecasting Copilot</h2>
@@ -4383,7 +4179,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.hubspot.com/pricing/sales')}, {ext('https://www.salesforce.com/editions-pricing/sales-cloud/')}</li>
 					</ul>
 				</section>
-
 				{/* New 2030 Q1 additions */}
 				<section id="ai-knowledge-graph-studio" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Knowledge Graph Studio</h2>
@@ -4393,7 +4188,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.neo4j.com/pricing/')}, {ext('https://www.elastic.co/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="llm-guarded-api-gateway" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">LLM Guarded API Gateway</h2>
 					<p className="text-slate-300">Policy, PII redaction, and safety guardrails for LLM apps with audit logs.</p>
@@ -4402,7 +4196,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://openai.com/index/safety/')}, {ext('https://www.lakera.ai/')}</li>
 					</ul>
 				</section>
-
 				<section id="serverless-lakehouse-starter" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Serverless Lakehouse Starter</h2>
 					<p className="text-slate-300">Templates, dbt models, and dashboards for a cost-guarded analytics stack.</p>
@@ -4411,7 +4204,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.getdbt.com/pricing/')}, {ext('https://airbyte.com/pricing')}, {ext('https://www.metabase.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="customer-journey-orchestration" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Customer Journey Orchestration</h2>
 					<p className="text-slate-300">Drag-and-drop journeys across email, SMS, and in-app with attribution.</p>
@@ -4420,7 +4212,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://customer.io/pricing')}, {ext('https://www.braze.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="kubernetes-runbooks-as-code" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Kubernetes Runbooks as Code</h2>
 					<p className="text-slate-300">Versioned runbooks with diagnostics, ChatOps, and audit trails.</p>
@@ -4429,7 +4220,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://grafana.com/pricing/')}, {ext('https://www.datadoghq.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="security-posture-copilot" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Security Posture Copilot</h2>
 					<p className="text-slate-300">Control mapping, evidence pulls, and remediation playbooks.</p>
@@ -4438,7 +4228,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://drata.com/pricing')}, {ext('https://www.vanta.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="itsm-ai-agent" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">ITSM AI Agent</h2>
 					<p className="text-slate-300">Auto-triage, summarize, and resolve common IT tickets.</p>
@@ -4447,7 +4236,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.servicenow.com/')}, {ext('https://www.atlassian.com/software/jira/service-management/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="warehouse-native-reverse-etl" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Warehouse-native Reverse ETL</h2>
 					<p className="text-slate-300">CDC syncs, transforms, and backfills to CRMs, ads, and support.</p>
@@ -4456,7 +4244,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://hightouch.com/pricing')}, {ext('https://www.getcensus.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="data-contracts-hub" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Data Contracts Hub</h2>
 					<p className="text-slate-300">Schema diffs, lineage, and CI gates for stable data.</p>
@@ -4465,7 +4252,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.optic.dev/')}, {ext('https://stoplight.io/')}</li>
 					</ul>
 				</section>
-
 				<section id="ai-sales-playbook-generator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Sales Playbook Generator</h2>
 					<p className="text-slate-300">Industry‑specific playbooks, emails, and call guides with exports.</p>
@@ -4474,7 +4260,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.salesloft.com/pricing/')}, {ext('https://www.outreach.io/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="customer-data-platform-lite" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Customer Data Platform (CDP) Lite</h2>
 					<p className="text-slate-300">Unify events into profiles with traits and audiences, privacy-safe.</p>
@@ -4483,7 +4268,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://segment.com/pricing')}, {ext('https://www.rudderstack.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="data-quality-observability" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Data Quality & Observability</h2>
 					<p className="text-slate-300">Freshness, volume, schema, lineage monitors with on-call alerts.</p>
@@ -4492,7 +4276,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.datadoghq.com/pricing/')}, {ext('https://www.soda.io/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="feature-store-starter" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Feature Store Starter</h2>
 					<p className="text-slate-300">Low-latency online features, batch backfills, and governance.</p>
@@ -4501,7 +4284,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://feast.dev')}, {ext('https://www.tecton.ai')}</li>
 					</ul>
 				</section>
-
 				<section id="edge-ab-testing" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Edge A/B & Personalization</h2>
 					<p className="text-slate-300">Fast experiments and targeting at the edge with geo/device rules.</p>
@@ -4510,7 +4292,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://vercel.com/pricing')}, {ext('https://www.cloudflare.com/plans/')}</li>
 					</ul>
 				</section>
-
 				<section id="reverse-etl-starter" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Reverse ETL Starter</h2>
 					<p className="text-slate-300">Sync warehouse audiences and metrics to CRMs and ad platforms.</p>
@@ -4519,7 +4300,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://hightouch.com/pricing')}, {ext('https://www.getcensus.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="consent-preference-center" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Consent & Preference Center</h2>
 					<p className="text-slate-300">Manage consent, email/SMS preferences, and DSARs with audit logs.</p>
@@ -4528,7 +4308,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://transcend.io/product/')}, {ext('https://www.skyflow.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="vendor-risk-dashboard" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Vendor Risk Dashboard</h2>
 					<p className="text-slate-300">Automated questionnaires, evidence, and risk scoring across vendors.</p>
@@ -4537,7 +4316,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://drata.com/pricing')}, {ext('https://www.vanta.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="soc2-evidence-vault" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">SOC 2 Evidence Vault</h2>
 					<p className="text-slate-300">Collect and attest evidence automatically across systems for audits.</p>
@@ -4546,7 +4324,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://drata.com/pricing')}, {ext('https://www.vanta.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="ai-knowledge-base-search" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Knowledge Base Search</h2>
 					<p className="text-slate-300">Semantic search with answer synthesis and citations for docs and support.</p>
@@ -4555,7 +4332,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.pinecone.io/pricing/')}, {ext('https://weaviate.io/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="engineering-productivity-insights" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Engineering Productivity Insights</h2>
 					<p className="text-slate-300">DORA metrics, PR analytics, and flaky test detection with actions.</p>
@@ -4564,7 +4340,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.datadoghq.com/pricing/')}, {ext('https://linear.app/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="it-asset-discovery-agent" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">IT Asset Discovery Agent</h2>
 					<p className="text-slate-300">Continuous discovery of devices, software, and shadow IT with enrichment.</p>
@@ -4573,7 +4348,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.lansweeper.com/pricing/')}, {ext('https://www.atera.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="incident-autocomplete-copilot" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Incident Autocomplete Copilot</h2>
 					<p className="text-slate-300">Draft incident updates, status posts, and postmortem timelines.</p>
@@ -4582,7 +4356,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.pagerduty.com/pricing/')}, {ext('https://www.atlassian.com/software/statuspage/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="voice-ivr-studio" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Voice IVR Studio</h2>
 					<p className="text-slate-300">Drag-and-drop IVR flows with speech-to-intent and analytics.</p>
@@ -4591,7 +4364,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.twilio.com/pricing')}, {ext('https://www.vonage.com/communications-apis/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="ai-sales-enablement-engine" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Sales Enablement Content Engine</h2>
 					<p className="text-slate-300">Battlecards, email cadences, and one-pagers auto‑generated from your product and win/loss data.</p>
@@ -4600,7 +4372,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.jasper.ai/pricing')}, {ext('https://www.copy.ai/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="iot-device-fleet-manager" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">IoT Device Fleet Manager</h2>
 					<p className="text-slate-300">Provisioning, OTA updates, telemetry, and alerts for sensor fleets with secure identities.</p>
@@ -4609,7 +4380,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://aws.amazon.com/iot-core/pricing/')}, {ext('https://www.golioth.io/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="security-awareness-training" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Security Awareness Training Platform</h2>
 					<p className="text-slate-300">Phishing simulations, micro‑lessons, and compliance reporting for the whole company.</p>
@@ -4618,7 +4388,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.knowbe4.com/pricing')}, {ext('https://getcurricula.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="vulnerability-patch-orchestrator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Vulnerability & Patch Orchestrator</h2>
 					<p className="text-slate-300">Agentless asset discovery, risk‑based vuln prioritization, and automated patch windows.</p>
@@ -4627,7 +4396,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.tenable.com/products/tenable-io/pricing')}, {ext('https://www.rapid7.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="hr-onboarding-automation" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">HR Onboarding Automation Hub</h2>
 					<p className="text-slate-300">Automated preboarding, account provisioning, and training checklists across HRIS and IT.</p>
@@ -4636,7 +4404,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.bamboohr.com/pricing/')}, {ext('https://www.rippling.com/pricing')}, {ext('https://gusto.com/product/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="shopify-speed-optimizer" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Shopify Speed & Core Web Vitals Optimizer</h2>
 					<p className="text-slate-300">Theme profiling, image/CSS/JS optimization, and A/B testing for conversion impact.</p>
@@ -4645,7 +4412,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://nitropack.io/pricing')}, {ext('https://www.shopify.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="llm-observability-tracing" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">LLM Observability & Tracing</h2>
 					<p className="text-slate-300">Prompt/version tracking, cost/latency budgets, evals, and error analysis.</p>
@@ -4654,7 +4420,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://wandb.ai/site/pricing')}, {ext('https://whylabs.ai/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="dpia-privacy-toolkit" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">DPIA & Privacy Impact Toolkit</h2>
 					<p className="text-slate-300">Templates, workflows, and risk scoring for DPIA/PIA with audit trails.</p>
@@ -4663,7 +4428,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.onetrust.com/platform/privacy-management/')}, {ext('https://trustarc.com/plans/')}</li>
 					</ul>
 				</section>
-
 				<section id="b2b-customer-portal-starter" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">B2B Customer Portal Starter</h2>
 					<p className="text-slate-300">Secure portal with SSO, invoices, usage, and self‑service entitlements.</p>
@@ -4672,7 +4436,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://stripe.com/pricing')}, {ext('https://auth0.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="policy-as-code-governance" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Policy‑as‑Code Governance</h2>
 					<p className="text-slate-300">Author, test, and enforce org policies across services and CI with OPA/Rego.</p>
@@ -4681,7 +4444,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.openpolicyagent.org/')}, {ext('https://www.styra.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="apple-mdm-suite" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Apple MDM Suite (ABM/DEP)</h2>
 					<p className="text-slate-300">Zero‑touch enrollment, app management, and compliance for macOS/iOS fleets.</p>
@@ -4690,7 +4452,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.jamf.com/pricing/')}, {ext('https://www.kandji.io/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="soc2-continuous-controls" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">SOC 2 Continuous Controls Monitoring</h2>
 					<p className="text-slate-300">Integrations, evidence collection, and gap alerts mapped to Trust Services Criteria.</p>
@@ -4699,7 +4460,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.vanta.com/pricing')}, {ext('https://drata.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="ai-red-team-testing" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Red Team & Prompt Injection Testing</h2>
 					<p className="text-slate-300">Automated jailbreaks, sensitive data leaks, and safety evals with reports and fixes.</p>
@@ -4708,7 +4468,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.lakera.ai/')}, {ext('https://github.com/leondz/garak')}</li>
 					</ul>
 				</section>
-
 				<section id="api-monetization-dev-portal" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Monetization & Developer Portal</h2>
 					<p className="text-slate-300">Plans, metering, billing, keys, and a docs portal with SDK generation.</p>
@@ -4717,7 +4476,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://stripe.com/pricing')}, {ext('https://recurly.com/pricing/')}, {ext('https://konghq.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="consent-compliance-kit" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Consent & Cookie Compliance Kit</h2>
 					<p className="text-slate-300">IAB TCF v2 banners, geo-targeted policies, consent receipts, and audit logs.</p>
@@ -4726,7 +4484,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://iabeurope.eu/transparency-consent-framework/')} , {ext('https://www.cookiebot.com/en/pricing/')} , {ext('https://www.onetrust.com/products/cookie-consent/')}</li>
 					</ul>
 				</section>
-
 				<section id="api-backfill-reconciliation" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Backfill & Reconciliation</h2>
 					<p className="text-slate-300">Find and fix data gaps across SaaS APIs with idempotent replays and reports.</p>
@@ -4735,7 +4492,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://fivetran.com/pricing')} , {ext('https://airbyte.com/pricing')} (related ETL context)</li>
 					</ul>
 				</section>
-
 				<section id="data-quality-sla-monitor" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Data Quality & Freshness SLAs</h2>
 					<p className="text-slate-300">Freshness, null/outlier checks, schema drift detection, and lineage dashboards.</p>
@@ -4744,7 +4500,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.montecarlodata.com/pricing/')} , {ext('https://www.greatexpectations.io/')} (open‑source)</li>
 					</ul>
 				</section>
-
 				<section id="postgres-index-advisor" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Postgres Index Advisor & Tuner</h2>
 					<p className="text-slate-300">Index suggestions, autovacuum tuning, and slow query remediation.</p>
@@ -4753,7 +4508,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://pganalyze.com/pricing')} , {ext('https://ottertune.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="gitops-drift-monitor" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">GitOps Policy & Drift Monitor</h2>
 					<p className="text-slate-300">Detect config drift, enforce OPA policies, and auto‑PR remediations.</p>
@@ -4762,7 +4516,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://argo-cd.readthedocs.io/')} , {ext('https://www.openpolicyagent.org/')}</li>
 					</ul>
 				</section>
-
 				<section id="soc2-readiness-scanner" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">SOC 2 Readiness Scanner</h2>
 					<p className="text-slate-300">Control mapping, evidence checks, and exportable auditor reports.</p>
@@ -4771,7 +4524,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://trustservicescriteria.aicpa.org/')} , {ext('https://www.vanta.com/pricing')} , {ext('https://drata.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="cloud-asset-attack-surface" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Cloud Asset Inventory & Attack Surface</h2>
 					<p className="text-slate-300">Discover assets, detect public exposures, and auto‑ticket remediation.</p>
@@ -4780,7 +4532,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://aws.amazon.com/config/pricing/')} , {ext('https://azure.microsoft.com/pricing')} , {ext('https://cloud.google.com/asset-inventory/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="llm-red-team-simulator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">LLM Red Team & Jailbreak Simulator</h2>
 					<p className="text-slate-300">Adversarial prompts, PII checks, and CI safety gates with dashboards.</p>
@@ -4789,7 +4540,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://github.com/leondz/garak')} , {ext('https://owasp.org/www-project-top-10-for-large-language-model-applications/')}</li>
 					</ul>
 				</section>
-
 				<section id="affiliate-fraud-detector" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Affiliate Fraud Detector</h2>
 					<p className="text-slate-300">Stop self‑referrals and coupon abuse with risk signals and payout holds.</p>
@@ -4798,7 +4548,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://partnerstack.com/')} , {ext('https://impact.com/')}</li>
 					</ul>
 				</section>
-
 				<section id="personalization-api" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Content Personalization API</h2>
 					<p className="text-slate-300">Audience rules and AI‑assisted segments with edge‑low latency.</p>
@@ -4807,7 +4556,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://vercel.com/pricing')} , {ext('https://www.cloudflare.com/plans/')} , {ext('https://segment.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section id="lead-enrichment-routing" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Lead Enrichment & Routing Engine</h2>
 					<p className="text-slate-300">Firmographic enrichment, round‑robin/territories, and SLA tracking.</p>
@@ -4816,7 +4564,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.clearbit.com/pricing')} , {ext('https://www.hubspot.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="k8s-quota-cost-guard" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Kubernetes Quota & Cost Guard</h2>
 					<p className="text-slate-300">Enforce quotas and right‑size workloads with cost guardrails.</p>
@@ -4825,7 +4572,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.kubecost.com/pricing')} , {ext('https://www.cloudzero.com/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="ai-contract-risk-analyzer" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Contract Risk Analyzer</h2>
 					<p className="text-slate-300">Flag risky clauses, generate playbook-aligned redlines, and export audit-ready changes.</p>
@@ -4835,7 +4581,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/services/ai-contract-risk-analyzer">Learn more</a></div>
 				</section>
-
 				<section id="finops-ri-sp-optimizer" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">FinOps RI/SP Optimizer</h2>
 					<p className="text-slate-300">Simulate savings plans and reserved instances with commitment pacing and guardrails.</p>
@@ -4845,7 +4590,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/services/finops-ri-sp-optimizer">Learn more</a></div>
 				</section>
-
 				<section id="k8s-slo-auto-tuner" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Kubernetes SLO Auto‑Tuner</h2>
 					<p className="text-slate-300">Derive realistic SLOs, simulate error budgets, and open GitOps PRs safely.</p>
@@ -4855,7 +4599,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/services/k8s-slo-auto-tuner">Learn more</a></div>
 				</section>
-
 				<section id="vendor-security-questionnaire-ai" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Vendor Security Questionnaire AI</h2>
 					<p className="text-slate-300">Auto‑fill SIG/CAIQ with mapped controls, citations, and reviewer workflows.</p>
@@ -4865,7 +4608,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/services/vendor-security-questionnaire-ai">Learn more</a></div>
 				</section>
-
 				<section id="invoice-reconciliation-copilot" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Invoice Reconciliation Copilot</h2>
 					<p className="text-slate-300">Three‑way match POs, invoices, and receipts with anomaly detection and approvals.</p>
@@ -4875,7 +4617,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/services/invoice-reconciliation-copilot">Learn more</a></div>
 				</section>
-
 				<section id="policy-drift-compliance-monitor" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Policy Drift & Compliance Monitor</h2>
 					<p className="text-slate-300">Detect config drift across cloud and SaaS. Auto‑PR fixes with evidence.</p>
@@ -4885,7 +4626,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/services/policy-drift-compliance-monitor">Learn more</a></div>
 				</section>
-
 				<section id="diversified-expansions-2026" className="space-y-8">
 					<h2 className="text-2xl font-semibold text-white">New Diversified Additions</h2>
 					<section id="license-key-usage-metering" className="space-y-2">
@@ -4897,7 +4637,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/license-key-usage-metering">Learn more</a></div>
 					</section>
-
 					<section id="multi-tenant-rate-limiter" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">Multi‑tenant Rate Limiter & Quotas</h3>
 						<p className="text-slate-300">Tenant‑aware quotas, burst limits, and fairness with headers, dashboards, and alerts.</p>
@@ -4907,7 +4646,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/multi-tenant-rate-limiter">Learn more</a></div>
 					</section>
-
 					<section id="data-residency-geo-router" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">Data Residency & Geo Routing Proxy</h3>
 						<p className="text-slate-300">Route API traffic by geography and data class to meet residency and localization policies.</p>
@@ -4917,7 +4655,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/data-residency-geo-router">Learn more</a></div>
 					</section>
-
 					<section id="api-contract-mock-sandbox" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">API Mock Server & Contract Sandbox</h3>
 						<p className="text-slate-300">Spin up realistic mocks from OpenAPI/GraphQL with contract tests and golden recordings.</p>
@@ -4927,7 +4664,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/api-contract-mock-sandbox">Learn more</a></div>
 					</section>
-
 					<section id="stripe-billing-migration" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">Stripe Billing Migration & Dunning Optimizer</h3>
 						<p className="text-slate-300">Plan/price migration playbooks, tax, proration, coupons, and best‑practice dunning sequences.</p>
@@ -4937,7 +4673,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/stripe-billing-migration">Learn more</a></div>
 					</section>
-
 					<section id="ai-sales-call-coach" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">AI Sales Call Scoring & Coaching</h3>
 						<p className="text-slate-300">Auto‑score discovery/demo calls, detect next steps, and generate coaching snippets synced to CRM.</p>
@@ -4947,7 +4682,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/ai-sales-call-coach">Learn more</a></div>
 					</section>
-
 					<section id="sku-demand-forecast" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">SKU Demand Forecast Copilot</h3>
 						<p className="text-slate-300">Weekly SKU forecasts with confidence bands and purchase order suggestions.</p>
@@ -4957,7 +4691,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/sku-demand-forecast">Learn more</a></div>
 					</section>
-
 					<section id="video-subtitle-dubbing" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">Video Subtitling & Dubbing Studio</h3>
 						<p className="text-slate-300">Generate multi‑language subtitles and voiceovers with style controls and review workflows.</p>
@@ -4967,7 +4700,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/video-subtitle-dubbing">Learn more</a></div>
 					</section>
-
 					<section id="app-store-review-insights" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">App Store Review Insights</h3>
 						<p className="text-slate-300">Aggregate reviews across stores, detect themes, and surface product issues automatically.</p>
@@ -4977,7 +4709,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/app-store-review-insights">Learn more</a></div>
 					</section>
-
 					<section id="b2b-pricing-entitlements" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">B2B SaaS Pricing & Entitlement Planner</h3>
 						<p className="text-slate-300">Model plans/features, gates, and usage tiers with entitlements diffed to code.</p>
@@ -4987,7 +4718,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/b2b-pricing-entitlements">Learn more</a></div>
 					</section>
-
 					<section id="sso-billing-entitlements-sync" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">SSO Billing & Entitlements Sync</h3>
 						<p className="text-slate-300">Bridge IdP groups/SCIM to billing entitlements for least‑privilege, audit‑ready access.</p>
@@ -4997,7 +4727,6 @@ export default function ServicesAdvertisingPage() {
 						</ul>
 						<div><a className="text-cyan-400 underline" href="/services/sso-billing-entitlements-sync">Learn more</a></div>
 					</section>
-
 					<section id="email-dmarc-monitor" className="space-y-2">
 						<h3 className="text-xl font-semibold text-white">Email DMARC/SPF/DKIM Monitor & Autopilot</h3>
 						<p className="text-slate-300">Monitor authentication, guide DNS fixes, and improve deliverability with safe rollouts.</p>
@@ -5008,7 +4737,6 @@ export default function ServicesAdvertisingPage() {
 						<div><a className="text-cyan-400 underline" href="/services/email-dmarc-monitor">Learn more</a></div>
 					</section>
 				</section>
-
 				{/* Contact CTA */}
 				<div className="flex flex-col md: flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800">
 					<a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a>
@@ -5018,4 +4746,9 @@ export default function ServicesAdvertisingPage() {
 			</div>
 		</div>
 	),
+<<<<<<< HEAD
+};
+;
+=======
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

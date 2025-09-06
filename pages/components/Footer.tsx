@@ -9,7 +9,7 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-  Github,
+  Github,;
 } from "lucide-react";
 
 const Footer = () => {
@@ -103,7 +103,6 @@ const Footer = () => {
               </div>
             </motion.div>
           </div>
-
           {/* Services */}
           <div>
             <motion.div
@@ -126,7 +125,6 @@ const Footer = () => {
               </ul>
             </motion.div>
           </div>
-
           {/* Solutions */}
           <div>
             <motion.div
@@ -149,7 +147,6 @@ const Footer = () => {
               </ul>
             </motion.div>
           </div>
-
           {/* Company */}
           <div>
             <motion.div
@@ -172,7 +169,6 @@ const Footer = () => {
               </ul>
             </motion.div>
           </div>
-
           {/* Resources & Legal */}
           <div>
             <motion.div
@@ -193,7 +189,6 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-
               <h3 className="text-lg font-semibold mb-6">Legal</h3>
               <ul className="space-y-3">
                 {footerLinks.legal.map((link, index) => (
@@ -210,7 +205,6 @@ const Footer = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -222,7 +216,6 @@ const Footer = () => {
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

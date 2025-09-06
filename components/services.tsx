@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+...realMicroSaasServices2025;
+=======
  ...realMicroSaasServices2025;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ...innovativeAIServices2025;
 ...innovativeITServices2025;
 ...emergingTechServices2025;
@@ -56,7 +60,11 @@ and micro SAAS services designed to transform your business and drive innovation
   opacity: 0, y: 20 
 }animate= {
   {
+<<<<<<< HEAD
+  opacity: 1, y: 0
+=======
   opacity: 1, y: 0 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 }transition= {
   {
@@ -150,7 +158,6 @@ and micro SAAS services designed to transform your business and drive innovation
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
-
       <Layout>
         <div className="min-h-screen bg-black text-white relative overflow-hidden">
           {/* Enhanced Futuristic Background Effects */}
@@ -158,7 +165,6 @@ and micro SAAS services designed to transform your business and drive innovation
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.15),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_50%)]"></div>
-          
           {/* Animated Quantum Particles */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>
@@ -166,7 +172,6 @@ and micro SAAS services designed to transform your business and drive innovation
             <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce opacity-50"></div>
             <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse opacity-30"></div>
           </div>
-
           {/* Main Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
             {/* Enhanced Header */}
@@ -187,17 +192,14 @@ and micro SAAS services designed to transform your business and drive innovation
                   {allServices.length}+ Revolutionary Services Available
                 </div>
               </motion.div>
-              
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Our Services
                 </span>
               </h1>
-              
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology, and micro SAAS services designed to transform your business and drive innovation.
               </p>
-              
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -222,7 +224,10 @@ and micro SAAS services designed to transform your business and drive innovation
                 </div>
               </motion.div>
             </motion.div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Enhanced Search and Filters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -246,7 +251,6 @@ and micro SAAS services designed to transform your business and drive innovation
                       />
                     </div>
                   </div>
-
                   {/* Enhanced Category Filter */}
                   <div className="flex items-center space-x-4">
                     <div className="relative">
@@ -266,7 +270,6 @@ and micro SAAS services designed to transform your business and drive innovation
                         <ChevronDown className="w-5 h-5" />
                       </div>
                     </div>
-
                     {/* Enhanced Sort */}
                     <div className="relative">
                       <select
@@ -284,7 +287,6 @@ and micro SAAS services designed to transform your business and drive innovation
                         <ChevronDown className="w-5 h-5" />
                       </div>
                     </div>
-
                     {/* Enhanced View Mode */}
                     <div className="flex items-center space-x-2 bg-gray-800/50 rounded-2xl p-1.5 border border-gray-700/50">
                       <button
@@ -309,7 +311,6 @@ and micro SAAS services designed to transform your business and drive innovation
                     </div>
                   </div>
                 </div>
-
                 {/* Enhanced Results Count */}
                 <div className="mt-6 text-center">
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
@@ -319,7 +320,6 @@ and micro SAAS services designed to transform your business and drive innovation
                   </div>
                 </div>
               </div>
-              
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -329,7 +329,10 @@ and micro SAAS services designed to transform your business and drive innovation
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
+<<<<<<< HEAD
+=======
               
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -341,7 +344,10 @@ and micro SAAS services designed to transform your business and drive innovation
                 <option value="rating">Sort by Rating</option>
               </select>
             </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Enhanced Category Overview */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -359,7 +365,6 @@ and micro SAAS services designed to transform your business and drive innovation
                   Explore our comprehensive range of cutting-edge services across multiple domains
                 </p>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {categories.map((category, index) => {
                   const stats = getCategoryStats(category.id);
@@ -375,10 +380,8 @@ and micro SAAS services designed to transform your business and drive innovation
                       <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                         {category.icon}
                       </div>
-                      
                       <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">{category.name}</h3>
                       <p className="text-gray-300 text-base mb-6 leading-relaxed">{category.description}</p>
-                      
                       <div className="grid grid-cols-3 gap-6 text-center">
                         <div className="group-hover:scale-105 transition-transform duration-300">
                           <div className="text-3xl font-bold text-cyan-400">{stats.count}</div>
@@ -393,13 +396,15 @@ and micro SAAS services designed to transform your business and drive innovation
                           <div className="text-sm text-gray-400">Rating</div>
                         </div>
                       </div>
-                      
                       <div className="mt-6 pt-6 border-t border-gray-700/50">
                         <div className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300">
                           Click to explore →
                         </div>
                       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Services Grid/List */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -411,7 +416,6 @@ and micro SAAS services designed to transform your business and drive innovation
                   {selectedCategory === 'all' ? 'All Services' : categories.find(c => c.id === selectedCategory)?.name}
                 </span>
               </h2>
-
               {viewMode === 'grid' ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {sortedServices.map((service, index) => (
@@ -440,7 +444,10 @@ and micro SAAS services designed to transform your business and drive innovation
                             </span>
                           )}
                         </div>
+<<<<<<< HEAD
+=======
                         
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {/* Service Icon */}
                         <div className="text-4xl mb-4">{service.icon}</div>
                       </div>
@@ -470,7 +477,10 @@ and micro SAAS services designed to transform your business and drive innovation
             )}
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Enhanced Price */}
                       <div className="mb-6 relative z-10">
                         <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-2xl p-4">
@@ -479,7 +489,6 @@ and micro SAAS services designed to transform your business and drive innovation
                           <div className="text-xs text-cyan-400 font-medium mt-1">{service.price.trialDays}-day free trial</div>
                         </div>
                       </div>
-
                       {/* Enhanced Features */}
                       <div className="mb-6 relative z-10">
                         <div className="text-sm text-cyan-400 font-medium mb-3">✨ Key Features</div>
@@ -492,7 +501,10 @@ and micro SAAS services designed to transform your business and drive innovation
                           ))}
                         </ul>
                       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* Enhanced Stats */}
                       <div className="grid grid-cols-3 gap-3 mb-6 text-center relative z-10">
                         <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-cyan-500/30 transition-colors duration-300">
@@ -508,7 +520,6 @@ and micro SAAS services designed to transform your business and drive innovation
                           <div className="text-gray-300 text-xs">Setup</div>
                         </div>
                       </div>
-
                       {/* Enhanced CTA */}
                       <div className="relative z-10">
                         <a
@@ -543,9 +554,7 @@ and micro SAAS services designed to transform your business and drive innovation
                               </span>
                             )}
                           </div>
-                          
                           <p className="text-gray-300 mb-3">{service.description}</p>
-                          
                           <div className="flex flex-wrap gap-2 mb-4">
                             {service.features.slice(0, 4).map((feature, idx) => (
                               <span key={idx} className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-lg">
@@ -554,7 +563,10 @@ and micro SAAS services designed to transform your business and drive innovation
                             ))}
                           </div>
                         </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {/* Pricing & Stats */}
                         <div className="lg:w-48 space-y-4">
                           <div className="text-center">
@@ -562,7 +574,6 @@ and micro SAAS services designed to transform your business and drive innovation
                             <div className="text-sm text-gray-400">/month</div>
                             <div className="text-xs text-green-400">{service.price.trialDays}-day trial</div>
                           </div>
-                          
                           <div className="grid grid-cols-2 gap-2 text-center text-xs">
                             <div className="bg-gray-800/30 rounded-lg p-2">
                               <div className="text-cyan-400 font-semibold">{service.rating}/5</div>
@@ -573,7 +584,6 @@ and micro SAAS services designed to transform your business and drive innovation
                               <div className="text-gray-400">Customers</div>
                             </div>
                           </div>
-                          
                           <a
                             href={service.link}
                             className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg text-center text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200"
@@ -588,7 +598,10 @@ and micro SAAS services designed to transform your business and drive innovation
                 </div>
               )}
             </motion.div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Enhanced CTA Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -600,7 +613,6 @@ and micro SAAS services designed to transform your business and drive innovation
                 {/* Animated Background Elements */}
                 <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
-                
                 <div className="relative z-10">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -613,17 +625,14 @@ and micro SAAS services designed to transform your business and drive innovation
                       Transform Your Business Today
                     </div>
                   </motion.div>
-                  
                   <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
                     <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                       Ready to Get Started?
                     </span>
                   </h2>
-                  
                   <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
                     Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies.
                   </p>
-                  
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">
                     <motion.a
                       href="/contact"
@@ -642,7 +651,6 @@ and micro SAAS services designed to transform your business and drive innovation
                       💰 View Pricing
                     </motion.a>
                   </div>
-                  
                   <div className="mt-10 text-sm text-gray-400">
                     <p>Need help choosing? <a href="/contact" className="text-cyan-400 hover:text-cyan-300 underline">Contact our experts</a> for personalized guidance.</p>
                   </div>
@@ -652,7 +660,6 @@ and micro SAAS services designed to transform your business and drive innovation
           </div>
         </section>
       </main>
-
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
   ),

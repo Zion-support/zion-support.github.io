@@ -110,7 +110,7 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
-    // Only run on client side
+// Only run on client side
 
     if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
@@ -118,7 +118,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       const navigationEntries = window.performance.getEntriesByType('navigation');
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType('paint');
-
       const performanceData = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -128,11 +127,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
         firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
 
         // Resource timing
         resourceCount: window.performance.getEntriesByType('resource').length,
-        // Memory usage (if available)
+// Memory usage (if available)
 
         memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
           used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
@@ -253,3 +251,9 @@ if (value <= thresholds.good) return 'text-green-600;
   );
 };
 export default PerformanceMonitor;
+<<<<<<< HEAD
+
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

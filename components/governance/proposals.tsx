@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 export async function getStaticProps() {
-  try {
+  try {;
     const p = path.join(process.cwd(), 'data', 'governance', 'proposals.json');
     const raw = fs.readFileSync(p, 'utf8');
     return { props: { data: JSON.parse(raw) } };
@@ -12,7 +12,7 @@ export async function getStaticProps() {
 
 export default function Proposals({
   data,
-}: {
+}: {;
   data: { updatedAt: string | null; proposals: any[] };
 }) {
   return (
@@ -69,6 +69,15 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
         ))}
         {(!data.proposals || data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
       </ul>
+<<<<<<< HEAD
+    </div>;
+);
+}
+
+}
+}
+=======
     </div>
   );
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

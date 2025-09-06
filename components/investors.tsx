@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function InvestorsPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -41,7 +44,7 @@ export default function InvestorsPage() {
           </a>
         </div>
       </div>
-    </div>
+    </div>;
   );	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>

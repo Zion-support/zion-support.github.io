@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
 import {Textarea} from '@/components/ui/textarea';
@@ -6,7 +7,6 @@ import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-
 interface AIEnhancementPanelProps {
   title: string,
   defaultOptions: AIEnhancementOptions,
@@ -16,7 +16,7 @@ interface AIEnhancementPanelProps {
   initialContent?: string
 }
 
-export function AIEnhancementPanel({
+export function AIEnhancementPanel({;
   title;
   defaultOptions;
   onApply;
@@ -37,6 +37,44 @@ export function AIEnhancementPanel({
       setGeneratedContent(result)
     }
   };
+=======
+import React, { useState } from 'react',;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Sparkles, Loader2, Copy, Check } from '@/components/icons',;
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementPanelProps {;
+  title: string,;
+  defaultOptions: AIEnhancementOptions,;
+  onApply: (content: string) => void,;
+  onClose?: () => void,;
+  showInstructions?: boolean,;
+  initialContent?: string;
+}
+;
+export function AIEnhancementPanel({;
+  title,;
+  defaultOptions,;
+  onApply,;
+  onClose,;
+  showInstructions = true,;
+  initialContent = '';
+}: AIEnhancementPanelProps) {;
+  const [options, setOptions] = useState<AIEnhancementOptions>({;
+    ...defaultOptions,;
+    content: initialContent || defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>(''),;
+  const [copied, setCopied] = useState(false),;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const handleGenerate = async () => {;
+    const result = await enhanceContent(options),;
+    if (result) {;
+      setGeneratedContent(result);
+    }
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -45,18 +83,18 @@ export function AIEnhancementPanel({
     setOptions({
       ...options,
       [field]: e.target.value})
-  };
+  },
 
   const handleApply = () => {
-    onApply(generatedContent);
+    onApply(generatedContent),
     if (onClose) onClose()
-  };
+  },
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent);
-    setCopied(true);
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
     setTimeout(() => setCopied(false), 2000)
-  };
+  },
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -77,7 +115,6 @@ export function AIEnhancementPanel({
             onChange={(e) => handleInputChange(e, 'content')}
           />
         </div>
-
         {/* Context input */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Context (optional)</label>
@@ -88,7 +125,6 @@ export function AIEnhancementPanel({
             onChange={(e) => handleInputChange(e, 'context')}
           />
         </div>
-
         {/* Instructions input (optional) */}
         {showInstructions && (
           <div className="space-y-2">
@@ -119,7 +155,6 @@ export function AIEnhancementPanel({
             </>
           )}
         </Button>
-
         {/* Output area */}
         {generatedContent && (
           <div className="space-y-2 mt-4">
@@ -148,7 +183,6 @@ export function AIEnhancementPanel({
           </div>
         )}
       </CardContent>
-      
       {generatedContent && (
         <CardFooter className="flex justify-between">
           {onClose && (
@@ -164,3 +198,4 @@ export function AIEnhancementPanel({
     </Card>
   )
 }
+;

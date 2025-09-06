@@ -1,15 +1,25 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
+=======
+import React, { useState, useEffect, useRef, ReactNode } from 'react',
+import { ChatMessage } from './ChatMessage',
+import { ChatInput } from './ChatInput',
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
   read?: boolean
+<<<<<<< HEAD
 }
 
 export interface ChatAssistantProps {
@@ -17,7 +27,7 @@ export interface ChatAssistantProps {
   onClose: () => void,
   recipient: {
     id: string,
-    name: string,
+    name: string,;
     avatarUrl?: string;
     role?: string
   };
@@ -27,7 +37,7 @@ export interface ChatAssistantProps {
   contextHeader?: ReactNode
 }
 
-export function ChatAssistant({
+export function ChatAssistant({;
   isOpen;
   onClose;
   recipient;
@@ -44,14 +54,61 @@ export function ChatAssistant({
       setMessages(initialMessages)
     }
   }, [initialMessages]);
+=======
+import React, { useState, useEffect, useRef, ReactNode } from 'react',;
+import { ChatMessage } from './ChatMessage',;
+import { ChatInput } from './ChatInput',;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { X } from "lucide-react",;
+export interface Message {;
+  id: string,;
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
+  read?: boolean;
+}
+;
+export interface ChatAssistantProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  recipient: {;
+    id: string,;
+    name: string,;
+    avatarUrl?: string,;
+    role?: string;
+  },;
+  conversationId?: string,;
+  initialMessages?: Message[],;
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
+  contextHeader?: ReactNode;
+}
+;
+export function ChatAssistant({;
+  isOpen,;
+  onClose,;
+  recipient,;
+  conversationId,;
+  initialMessages = [],;
+  onSendMessage,;
+  contextHeader;
+}: ChatAssistantProps) {;
+  const [messages, setMessages] = useState<Message[]>(initialMessages),;
+  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
+  useEffect(() => {;
+    if (initialMessages.length > 0) {;
+      setMessages(initialMessages);
+    }
+  }, [initialMessages]),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     scrollToBottom()
-  }, [messages]);
+  }, [messages]),
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  };
+  },
   
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return,
@@ -60,17 +117,17 @@ export function ChatAssistant({
     const newMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
-      message;
+      message,
       timestamp: new Date()
-    };
+    },
     
-    setMessages((prev: Message[]) => [...prev, newMessage]);
+    setMessages((prev: Message[]) => [...prev, newMessage]),
     
     // Send message to recipient via the provided handler
     await onSendMessage(message, conversationId)
-  };
+  },
 
-  if (!isOpen) return null;
+  if (!isOpen) return null,
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
@@ -100,7 +157,6 @@ export function ChatAssistant({
             <X className="h-5 w-5" />
           </Button>
         </div>
-        
         {/* Context Header (Optional) */}
         {contextHeader && (
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
@@ -125,7 +181,6 @@ export function ChatAssistant({
           )}
           <div ref={messagesEndRef} />
         </div>
-        
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
@@ -133,4 +188,8 @@ export function ChatAssistant({
       </div>
     </div>
   )
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
