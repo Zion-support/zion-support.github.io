@@ -1,111 +1,51 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-import React from 'react',;
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',;
-import { Header } from './components/Header',;
-import { Footer } from './components/layout/Footer',;
-import { Sidebar } from './components/layout/Sidebar',;
-import { ErrorBoundary } from './components/ErrorBoundary',;
-,;
-// Import pages,;
-import HomePage from '../pages/index',;
-import AboutPage from '../pages/about',;
-import ContactPage from '../pages/contact',;
-import ServicesPage from '../pages/services',;
-import PricingPage from '../pages/pricing',;,;
-export default function App() {,;
-  return (,;
-    <ErrorBoundary>,;
-      <Router>,;
-        <div className="min-h-screen bg-gray-50">,;
-          <Header />,;
-          <Sidebar />,;
-          <main className="flex-1:lg:ml-80">,;
-            <Routes>,;
-              <Route path="/" element={<HomePage />} />,;
-              <Route path="/about" element={<AboutPage />} />,;
-              <Route path="/contact" element={<ContactPage />} />,;
-              <Route path="/services" element={<ServicesPage />} />,;              <Route path="/pricing" element={<PricingPage />} />,;
-            </Routes>,;
-          </main>,;
-          <Footer />,;
-        </div>,;
-      </Router>,;
-    </ErrorBoundary>,;
-  ),;
-;
-};
-;import React from 'react';
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
-import React from 'react';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/layout/Footer';
-import { Sidebar } from './components/layout/Sidebar';
-import { ErrorBoundary } from './components/ErrorBoundary';
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import React from 'react';
-import {BrowserRouter, as, Router, Routes, Route} from 'react-router-dom';
-import {Header} from './components/Header';
-import {Footer} from './components/layout/Footer';
-import {Sidebar} from './components/layout/Sidebar';
-import {ErrorBoundary} from './components/ErrorBoundary';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-;
-// Import pages;
-import HomePage from '../pages/index';
-import AboutPage from '../pages/about';
-import ContactPage from '../pages/contact';
-import ServicesPage from '../pages/services';
-import PricingPage from '../pages/pricing';
-;
-export default function App() {; return (; <ErrorBoundary>; <Router>; <div className = "min-h-screen bg-gray-50">; <Header />; <Sidebar />; <main className = "flex-1 lg: ml-80">, <Routes>, <Route path = "/" element = {<HomePage />} />; <Route path = "/about" element = {<AboutPage />} />; <Route path = "/contact" element = {<ContactPage />} />; <Route path = "/services" element = {<ServicesPage />} />; <Route path = "/pricing" element = {<PricingPage />} />; </Routes>; </main>; <Footer />; </div>; </Router>; </ErrorBoundary>; )};};
-};
-<<<<<<< HEAD
-    </ErrorBoundary>);'";
-};'"'"
-=======
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Button from './components/Button';
+import Card from './components/Card';
+import ServiceCard from './components/ServiceCard';
 
-// Simple Home component
 const Home = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
     <div className="container mx-auto px-4 py-16">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="text-center mb-12">
+        <h1 className="text-6xl font-extrabold mb-4 animate-fade-in">
           Zion Tech Group
         </h1>
-        <p className="text-xl text-gray-300 mb-8">
-          Leading AI & Technology Solutions
+        <p className="text-2xl text-gray-300 mb-8 animate-slide-up">
+          Leading AI & Technology Solutions for a Smarter Future
         </p>
-        <div className="space-y-4">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h2 className="text-2xl font-semibold text-white mb-4">AI Services</h2>
-            <p className="text-gray-300">
-              Transform your business with cutting-edge AI solutions
-            </p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h2 className="text-2xl font-semibold text-white mb-4">IT Services</h2>
-            <p className="text-gray-300">
-              Comprehensive IT infrastructure and support
-            </p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h2 className="text-2xl font-semibold text-white mb-4">Micro SaaS</h2>
-            <p className="text-gray-300">
-              Innovative software solutions for modern businesses
-            </p>
-          </div>
+        <Button variant="primary" size="large" onClick={() => alert('Learn More!')}>
+          Explore Our Services
+        </Button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard
+          title="AI Services"
+          description="Transform your business with cutting-edge AI solutions."
+          icon="✨"
+        />
+        <ServiceCard
+          title="Cybersecurity"
+          description="Protect your digital assets with advanced security solutions."
+          icon="🔒"
+        />
+        <ServiceCard
+          title="Cloud Infrastructure"
+          description="Scale your operations with robust cloud solutions."
+          icon="☁️"
+        />
+      </div>
+
+      <div className="mt-16 text-center">
+        <h2 className="text-4xl font-bold mb-8">Why Choose Us?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card title="Innovation" description="Pioneering the next generation of technology." />
+          <Card title="Expertise" description="Team of industry-leading professionals." />
+          <Card title="Reliability" description="Trusted solutions for critical operations." />
+          <Card title="Scalability" description="Solutions designed to grow with you." />
+          <Card title="Security" description="Robust protection for all your data." />
+          <Card title="Support" description="24/7 dedicated customer assistance." />
         </div>
       </div>
     </div>
@@ -117,18 +57,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<Home />} />
+        {/* Add more routes here as needed */}
       </Routes>
     </Router>
   );
 }
 
 export default App;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
