@@ -14,7 +14,6 @@ const Contact: React.FC = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-<<<<<<< HEAD
     });
   };
 
@@ -23,16 +22,6 @@ const Contact: React.FC = () => {
     alert('Message Sent! We will get back to you shortly.');
     console.log('Form submitted:', formData);
     // Here you would typically send the data to a backend service
-=======
-    })
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
->>>>>>> 13bbc01c9fef234f18b06fc90f0f5a9b33dfa35e
   };
 
   return (
@@ -40,38 +29,21 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-<<<<<<< HEAD
             Contact Our Team
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up">
             We're here to help! Reach out to us for any inquiries, support, or partnership opportunities.
-=======
-            Contact Us
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Ready to transform your business with cutting-edge technology? 
-            Get in touch with our experts today.
->>>>>>> 13bbc01c9fef234f18b06fc90f0f5a9b33dfa35e
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-<<<<<<< HEAD
           <div className="bg-slate-800 p-8 rounded-lg shadow-lg animate-fade-in">
             <h2 className="text-3xl font-bold mb-6 text-white">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-gray-300 text-sm font-bold mb-2">
                   Name
-=======
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Send us a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Full Name
->>>>>>> 13bbc01c9fef234f18b06fc90f0f5a9b33dfa35e
                 </label>
                 <input
                   type="text"
@@ -128,18 +100,13 @@ const Contact: React.FC = () => {
                   required
                 ></textarea>
               </div>
-<<<<<<< HEAD
               <Button type="submit" variant="primary" size="large">
-=======
-              <Button type="submit" variant="primary" size="large" className="w-full">
->>>>>>> 13bbc01c9fef234f18b06fc90f0f5a9b33dfa35e
                 Send Message
               </Button>
             </form>
           </div>
 
           {/* Contact Information */}
-<<<<<<< HEAD
           <div className="space-y-8 animate-slide-up">
             <Card
               title="General Inquiries"
@@ -171,22 +138,6 @@ const Contact: React.FC = () => {
               icon="📍"
               className="bg-slate-800"
             />
-=======
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-            <div className="space-y-8">
-              <Card
-                title="Office Address"
-                description="364 E Main St STE 1008\nMiddletown, DE 19709\nUnited States"
-              />
-              <Card
-                title="Phone"
-                description="+1-302-464-0950"
-              />
-              <Card
-                title="Email"
-                description="kleber@ziontechgroup.com"
-              />
               <Card
                 title="Business Hours"
                 description="Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\nSunday: Closed"
@@ -218,14 +169,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
 
 export default Contact;
-=======
-  )
-}
-
-export default Contact
->>>>>>> 13bbc01c9fef234f18b06fc90f0f5a9b33dfa35e
