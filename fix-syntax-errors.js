@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-        }
-        return match;
-      },
-    );
-
-          modified = true;
-          return match + ";";
-        }
-        return match;
-      },
-    );
-
-});
-
-console.log(`\nTotal files fixed: ${totalFixed}`);
-  }
-}},
-,
-// Run all fixes,
-fixFooter();
-fixAccessibility();
-fixAiServices();
-fixApiDocs();
-fixCareers();
-,
-console.log('🎉 Syntax error fixes completed');
-// Run all fixes,
-fixFooter(),
-fixAccessibility(),
-fixAiServices(),
-fixApiDocs(),
-fixCareers(),
-// // // console.log('🎉 Syntax error fixes completed'),
-}},;
-// Run all fixes,;
-fixFooter(),;
-fixAccessibility(),;
-fixAiServices(),;
-fixApiDocs(),;
-fixCareers(),;
-// // // console.log('🎉 Syntax error fixes completed'),;
-}},
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -107,4 +63,3 @@ const main = () => {
 };
 
 main();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

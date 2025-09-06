@@ -104,7 +104,6 @@ if ( {) {
   $2
 }
         // Take the content after the conflict resolution;
-        backup_content = parts[1].split ('>>>>>>>')[0];
       }
     }
     // Clean up the content;
