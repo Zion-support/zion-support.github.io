@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,14 +21,4 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src && src.pages.disabled/ClientDashboard && ClientDashboard.jsx
-<<<<<<< \"HEAD\": src && src.pages.disabled/ClientDashboard && ClientDashboard.jsx import React from \'react\'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState (\"all\") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (\") ; const isMobile = useIsMobile () ; import React from \'react\'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState (\"all\") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (\") ; const isMobile = useIsMobile () ;\"";
-<<<<<<< HEAD
-<<<<<<< "HEAD": src && src.pages.disabled/ClientDashboard && ClientDashboard.jsx import _React from 'react'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState ("all") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (") ; const isMobile = useIsMobile () ; import _React from 'react'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState ("all") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (") ; const isMobile = useIsMobile () ;"";
-=======
-<<<<<<< "HEAD": src && src.pages.disabled/ClientDashboard && ClientDashboard.jsx import _React from 'react'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState ("all") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (") ; const isMobile = useIsMobile () ; import _React from 'react'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState ("all") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (") ; const isMobile = useIsMobile () ;"";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

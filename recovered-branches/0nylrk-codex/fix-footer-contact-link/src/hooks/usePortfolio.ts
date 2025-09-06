@@ -1,134 +1,13 @@
-<<<<<<< HEAD
-
-import { useState, useCallback  } from 'react';
-import { PortfolioProject  } from '@/types/resume';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth  } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-export function usePortfolio() {
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [error, setError] = useState<string | null>(null);
-  const [projects, setProjects] = useState<PortfolioProject[]>([]);
-  const fetchProjects = useCallback(async () => {
-    if (!user) {
-      setError('You must be logged in to access portfolio projects');
-      return []
-    }
-    setIsLoading(true);
-    setError(null);
-    try {
-      const { data, error } = await supabase
-        .from('portfolio_projects')
-        .select('*')
-        .eq('user_id', user && user.id)
-        .order('created_at', { ascending: false });
-      if (error) throw error;
-      setProjects(data |[]);
-      return data |[]
-    } catch (e: any) {
-      console && console.error('Error fetching portfolio projects:', e);
-      setError(e && e.message);
-      return []
-=======
-import {useState, useCallback} from 'react';
-import {PortfolioProject} from '@/types / resume';
-import {supabase} from '@/integrations / supabase / client';
-import {use_auth} from '@/hooks / use_auth';
-import {toast} from '@/hooks / use - toast';
-export /**
- * use_portfolio - Function description
- */
-function use_portfolio() {
-  const { user } = use_auth ();
-  const [is_loading, setIsLoading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const [projects, set_projects] = useState < PortfolioProject[]>([]);
-;
-  const fetch_projects = useCallback (async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to access portfolio projects');
-      return [];
-    }
-    setIsLoading (true);
-    set_error (null);
-;
-    try {
-      const { data, error } = await supabase;
-        .from ('portfolio_projects');
-        .select ('*');
-        .eq ('user_id', user.id);
-        .order ('created_at', { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_projects (data || []);
-      return data || [];
-    } catch (e: any) {
-      console.error ('Error fetching portfolio projects:', e);
-      set_error (e.message);
-      return [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }, [user]);
-<<<<<<< HEAD
-  const addProject = async (project: PortfolioProject): Promise<string | null> => {
-    if (!user) {
-      setError('You must be logged in to add a portfolio project')
-      return null
-    }
-    setIsLoading(true);
-    setError(null);
-    try {
-      const { data, error } = await supabase
-        .from('portfolio_projects')
-        .insert({
-<<<<<<< HEAD
-=======
-;
-  const add_project = async (project: PortfolioProject): Promise < string | null> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to add a portfolio project'),
-      return null;
-    }
-    setIsLoading (true);
-    set_error (null);
-;
-    try {
-      const { data, error } = await supabase;
-        .from ('portfolio_projects');
-        .insert ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           user_id: user.id;
           title: project.title;
           description: project.description;
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
-<<<<<<< HEAD
-          demo_url: project.demo_url
-          pdf_url: project.pdf_url
-=======
-          user_id: user && user.id;
-          title: project && project.title;
-          description: project && project.description;
-          technologies: project && project.technologies;
-          image_url: project && project.image_url;
-          github_url: project && project.github_url;
-          demo_url: project && project.demo_url,
-          pdf_url: project && project.pdf_url
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         })
         .select('id')
         .single();
@@ -143,13 +22,6 @@ if ( {) {
       console && console.error('Error adding portfolio project:', e);
       setError(e && e.message);
       toast({
-<<<<<<< HEAD
-        title: "Error"
-        description: `Could not add project: ${e.message}`;
-=======
-        title: "Error",
-        description: `Could not add project: ${e && e.message}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
 =======
           demo_url: project.demo_url,
@@ -183,61 +55,11 @@ if (throw error) {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-  const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update a portfolio project')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-    try {
-      const { error } = await supabase
-        .from('portfolio_projects')
-        .update({
-<<<<<<< HEAD
-=======
-;
-  const update_project = async (project_id: string, project: PortfolioProject): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to update a portfolio project'),
-      return false;
-    }
-    setIsLoading (true);
-    set_error (null);
-;
-    try {
-      const { error } = await supabase;
-        .from ('portfolio_projects');
-        .update ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           title: project.title;
           description: project.description;
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
-<<<<<<< HEAD
-          demo_url: project.demo_url
-          pdf_url: project.pdf_url
-        })
-        .eq('id', projectId)
-        .eq('user_id', user.id);
-=======
-          title: project && project.title;
-          description: project && project.description;
-          technologies: project && project.technologies;
-          image_url: project && project.image_url;
-          github_url: project && project.github_url;
-          demo_url: project && project.demo_url,
-          pdf_url: project && project.pdf_url
-        })
-        .eq('id', projectId)
-        .eq('user_id', user && user.id);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (error) throw error;
       toast({
         title: "Project updated"
@@ -249,13 +71,6 @@ if ( {) {
       console && console.error('Error updating portfolio project:', e);
       setError(e && e.message);
       toast({
-<<<<<<< HEAD
-        title: "Error"
-        description: `Could not update project: ${e.message}`;
-=======
-        title: "Error",
-        description: `Could not update project: ${e && e.message}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
 =======
           demo_url: project.demo_url,
@@ -289,48 +104,16 @@ if (throw error) {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-  const deleteProject = async (projectId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete a portfolio project')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-    try {
-      const { error } = await supabase
-        .from('portfolio_projects')
-        .delete()
-        .eq('id', projectId)
-<<<<<<< HEAD
-        .eq('user_id', user.id);
-=======
-        .eq('user_id', user && user.id);
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (error) throw error;
       toast({
         title: "Project deleted"
         description: "Your portfolio project has been deleted"
       });
-<<<<<<< HEAD
-      setProjects(projects.filter(p => p.id !== projectId));
-=======
-      
-      setProjects(projects && projects.filter(p => p && p.id !== projectId));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return true
     } catch (e: any) {
       console && console.error('Error deleting portfolio project:', e);
       setError(e && e.message);
       toast({
-<<<<<<< HEAD
-        title: "Error"
-        description: `Could not delete project: ${e.message}`;
-=======
-        title: "Error",
-        description: `Could not delete project: ${e && e.message}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"
 =======
 ;
@@ -377,25 +160,9 @@ if (throw error) {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     is_loading;
     error;
     projects;
-<<<<<<< HEAD
-    fetchProjects;
-    addProject;
-    updateProject;
-
-    deleteProject
-=======
-    fetch_projects;
-    add_project;
-    update_project;
-    delete_project;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

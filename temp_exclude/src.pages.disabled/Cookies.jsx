@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,14 +21,4 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src && src.pages.disabled/Cookies && Cookies.jsx
-<<<<<<< \"HEAD\": src && src.pages.disabled/Cookies && Cookies.jsx import React from \'react\'; export default function Cookies () { return (<div className=\"min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20\"> <SEOtitle=\"Cookie Policy | Zion Tech Group\" description=\"Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.\" keywords=\"cookie policy,privacy,data collection,website cookies\" canonical=\""https\": import React from \'react\' export default function Cookies () { return (<div className=\"min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20\"> <SEOtitle=\"Cookie Policy | Zion Tech Group\" description=\"Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.\" keywords=\"cookie policy,privacy,data collection,website cookies\" canonical=\""https\": \""
-<<<<<<< HEAD
-<<<<<<< "HEAD": src && src.pages.disabled/Cookies && Cookies.jsx import _React from 'react' export default function Cookies () { return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20"> <SEOtitle="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy,privacy,data collection,website cookies" canonical=""https": import _React from 'react' export default function Cookies () { return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy,privacy,data collection,website cookies" canonical=""https": "";
-=======
-<<<<<<< "HEAD": src && src.pages.disabled/Cookies && Cookies.jsx import _React from 'react' export default function Cookies () { return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20"> <SEOtitle="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy,privacy,data collection,website cookies" canonical=""https": import _React from 'react' export default function Cookies () { return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy,privacy,data collection,website cookies" canonical=""https": "";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

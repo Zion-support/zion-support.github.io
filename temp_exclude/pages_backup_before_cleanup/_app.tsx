@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,12 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import type { AppProps } from \'next/app\' import \'../styles/globals && globals.css\' export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
 const type { AppProps } from "next/app" import "./styles/globals ;
-<<<<<<< HEAD
-=======
-=======
-import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
-const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} /> }''"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 interface _appProps {;
@@ -45,12 +35,4 @@ export default function _app(): any ({ }: _appProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

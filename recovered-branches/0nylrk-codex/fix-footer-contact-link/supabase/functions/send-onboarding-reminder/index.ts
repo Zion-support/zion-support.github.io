@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
-import {Resend} from "npm: resend@1.0.0";
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.7.1",
-import {Resend} from "npm: resend@1 ;
-const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
@@ -38,12 +19,6 @@ serve(async (req: Request) => {
       supabaseUrl;
       supabaseServiceKey
     );
-<<<<<<< HEAD
-    const payload = await req.json() as ReminderPayload;
-=======
-    
-    const payload = await req && req.json() as ReminderPayload;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const { user_id, missing_milestone, role } = payload;
     if (!user_id |!missing_milestone |!role) {
       return new Response(
@@ -75,31 +50,10 @@ serve(async (req: Request) => {
         availability_set: "set your availability to help clients know when you can work"}
       client: {
         job_posted: "post your first job to start finding talent";
-<<<<<<< HEAD
-        match_viewed: "check out your AI-matched talent suggestions"
-        talent_invited: "invite talent to speed up your hiring process"}}
-    const name = userData.display_name |"there";
-=======
-        match_viewed: "check out your AI-matched talent suggestions",
-        talent_invited: "invite talent to speed up your hiring process"}};
-    
-    const name = userData && userData.display_name || "there";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
     ] |"complete your next step";
     // Send email
-<<<<<<< HEAD
-    const { data: emailData, error: emailError } = await resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion.ai>";
-      to: userData.email;
-      subject: "Complete your next step on Zion AI Marketplace"
-=======
-    const { data: emailData, error: emailError } = await resend && resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion && zion.ai>";
-      to: userData && userData.email;
-      subject: "Complete your next step on Zion AI Marketplace",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -246,59 +200,7 @@ if ( {) {
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`;
         _type: "onboarding"}
     );
-<<<<<<< HEAD
-    if (notificationError) {
-      console && console.error("Failed to create notification:", notificationError)
-    }
-    return new Response(
-<<<<<<< HEAD
-      JSON.stringify({
-        message: "Reminder sent successfully"
-=======
-      JSON && JSON.stringify({
-=======
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ("Failed to create notification:", notification_error);
-    }
-    return new Response (
-      JSON.stringify ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         message: "Reminder sent successfully",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         notification_id: notification});
       {
-<<<<<<< HEAD
-        status: 200
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
-  } catch (error) {
-    console && console.error(error);
-    return new Response(
-      JSON && JSON.stringify({ error: "Internal server error", details: error && error.message });
-      {
-        status: 500
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
-  }
-});
-
-=======
-        status: 200,
-        headers: { "Content - Type": "application / json", ...cors_headers }}
-    );
-  } catch (error) {
-    console.error (error);
-    return new Response (
-      JSON.stringify ({ error: "Internal server error", details: error.message });
-      {
-        status: 500,
-        headers: { "Content - Type": "application / json", ...cors_headers }}
-    );
-  }
-});
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

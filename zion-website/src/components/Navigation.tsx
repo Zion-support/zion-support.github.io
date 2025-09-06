@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-const navigation = [
-  { name: 'Home', href: '/' }
-  { name: 'About', href: '/about' }
-  { name: 'Services', href: '/services' }
-  { name: 'Solutions', href: '/solutions' }
-  { name: 'Research', href: '/research' }
-  { name: 'Contact', href: '/contact' }]
-export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-=======
-'use client';
-import { useState } from 'react';
-import { Dialog } from '@headlessui / react';
-import { Bars3Icon, XMarkIcon } from '@heroicons / react / 24 / outline';
-const navigation = [;
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research' },
-  { name: 'Contact', href: '/contact' }];
-export default /**
- * Navigation - Function description
- */
-function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <header className=&quot;fixed inset - x-0 top - 0 z - 50 bg - black / 80 backdrop - blur - md border - b border - white / 10 & quot;>;
       <nav className=&quot;flex items - center justify - between p - 6 lg:px - 8&quot; aria - label=&quot;Global & quot;>;

@@ -1,31 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import { AddMilestoneForm } from '../AddMilestoneForm';
-interface MilestoneCreatorProps {
-<<<<<<< HEAD
-
-  onSubmit: (data: any) => Promise<void>
-  isSubmitting: boolean
-  onCancel: () => void
-
-=======
-import {AddMilestoneForm} from '../AddMilestoneForm';
-interface MilestoneCreatorProps {;
-  onSubmit: (data: any) => Promise<void>,;
-  isSubmitting: boolean,;
-  onCancel: () => void,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
   projectType?: string;
 }
-<<<<<<< HEAD
-export function MilestoneCreator({
-=======
-
-export function MilestoneCreator(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   onSubmit;
   isSubmitting;
   onCancel;
@@ -43,15 +21,6 @@ export function MilestoneCreator(): any ({;
       projectStartDate={projectStartDate}
       projectEndDate={projectEndDate}
       projectType={projectType}
-<<<<<<< HEAD
-    />
-  )
-}
-=======
-    />;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,

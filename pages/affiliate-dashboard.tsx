@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useEffect, useMemo, useState } from 'react';
 function getRefCode(): string {
 
@@ -16,12 +12,6 @@ export default function AffiliateDashboard() {
   useEffect(() => {
     const c = getRefCode()
     setCode(c)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }, [])
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -29,17 +19,6 @@ export default function AffiliateDashboard() {
     if (!code) return
     (async () => {
       try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`)
-        const json = await res.json()
-        setMetrics(json)
-      } catch {}
-    })()
-  }, [code])
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`);
         const json = await res.json();
         setMetrics(json)
@@ -52,19 +31,6 @@ export default function AffiliateDashboard() {
     setMsg('')
     try {
       const res = await fetch('/api/partners/request-payout', {
-<<<<<<< HEAD
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })})
-      const json = await res.json()
-      if (!res.ok) throw new Error(json.error |'Failed')
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || 'Failed');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setMsg('Payout requested')
     } catch (e: any) {
       setMsg(e?.message |'Error')
@@ -113,13 +79,6 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import { useEffect, useMemo, useState } from 'react',
 ;

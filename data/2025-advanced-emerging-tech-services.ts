@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-export const advancedEmergingTechServices2025 = [
-  {
-<<<<<<< HEAD
-    id: 'space-mining-operations-platform',
-    name: 'SpaceMining Operations',
-=======
-<<<<<<< HEAD
-    id: 'space-mining-operations-platform'
-    name: 'SpaceMining Operations'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     description:
       'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.'
       'Asteroid mining operations'
@@ -54,86 +42,15 @@ export const advancedEmergingTechServices2025 = [
     }
     category: 'Space Technology'
     tags: [
-<<<<<<< HEAD
-      'Space Mining'
-      'Asteroid Mining'
-      'Lunar Resources'
-      'Space Operations'
-    ]
-    website: 'https://ziontechgroup.com/space-mining-operations'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$3.8B'
-=======
-=======
-export const advancedEmergingTechServices2025 = [;
-  {
-    id: 'space - mining - operations - platform',
-    name: 'SpaceMining Operations',
-    description:;
-      'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.',
-      'Asteroid mining operations',
-      'Lunar resource extraction',
-      'Space resource mapping',
-      'Automated mining systems',
-      'Integration with space agencies',
-      'Advanced analytics and reporting',
-      'Custom mining strategies',
-      '24 / 7 space operations monitoring',
-    ],
-    pricing: {
-      starter: {
-        price: 999,
-        period: 'month',
-        features: [;
-          'Basic space operations',
-          'Resource mapping',
-          'Standard support',
-        ],
-      },
-      professional: {
-        price: 2999,
-        period: 'month',
-        features: [;
-          'Advanced mining operations',
-          'Custom strategies',
-          'Priority support',
-          'Dedicated operations team',
-        ],
-      },
-      enterprise: {
-        price: 7999,
-        period: 'month',
-        features: [;
-          'Full mining operations',
-          'Custom space solutions',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Space Technology',
-    tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Space Mining',
       'Asteroid Mining',
       'Lunar Resources',
       'Space Operations',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/space-mining-operations',
-=======
-    website: 'https://ziontechgroup.com / space - mining - operations',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$3 && 3.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Space agencies, mining companies, aerospace firms, government agencies'
     competitiveAdvantage:
@@ -187,92 +104,15 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Bio-Computing'
     tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'Biological Computing'
-      'DNA Computing'
-      'Hybrid Processing'
-    ]
-    website: 'https://ziontechgroup.com/quantum-bio-computing'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$2.1B'
-=======
-=======
-    market_size: '$3.8B',
-    target_audience:;
-      'Space agencies, mining companies, aerospace firms, government agencies',
-    competitive_advantage:;
-      'Industry - leading space mining operations, comprehensive resource mapping, and extensive space agency integration',
-  },
-  {
-    id: 'quantum - bio - computing - platform',
-    name: 'QuantumBio Computing',
-    description:;
-      'Revolutionary quantum - biological hybrid computing platform that combines quantum computing with biological processing for unprecedented computational power.',
-    features: [;
-      'Quantum - biological hybrid processing',
-      'DNA - based computing',
-      'Biological algorithm optimization',
-      'Real - time quantum bio analytics',
-      'Integration with research platforms',
-      'Advanced analytics and reporting',
-      'Custom quantum bio algorithms',
-      '24 / 7 platform monitoring',
-    ],
-    pricing: {
-      starter: {
-        price: 599,
-        period: 'month',
-        features: [;
-          'Basic quantum bio features',
-          'Standard processing',
-          'Email support',
-        ],
-      },
-      professional: {
-        price: 1499,
-        period: 'month',
-        features: [;
-          'Advanced quantum bio',
-          'Custom algorithms',
-          'Priority support',
-          'Dedicated research team',
-        ],
-      },
-      enterprise: {
-        price: 3999,
-        period: 'month',
-        features: [;
-          'Full quantum bio platform',
-          'Custom solutions',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Quantum Bio - Computing',
-    tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Biological Computing',
       'DNA Computing',
       'Hybrid Processing',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing',
-=======
-    website: 'https://ziontechgroup.com / quantum - bio - computing',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$2 && 2.1B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Research institutions, pharmaceutical companies, biotechnology firms, government agencies'
     competitiveAdvantage:
@@ -326,92 +166,15 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Brain-Computer Interface'
     tags: [
-<<<<<<< HEAD
-      'Neural Interface'
-      'Cognitive Enhancement'
-      'Neurological Research'
-      'Medical Technology'
-    ]
-    website: 'https://ziontechgroup.com/brain-interface-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$1.9B'
-=======
-=======
-    market_size: '$2.1B',
-    target_audience:;
-      'Research institutions, pharmaceutical companies, biotechnology firms, government agencies',
-    competitive_advantage:;
-      'Industry - first quantum - biological hybrid computing, advanced DNA - based algorithms, and comprehensive research platform integration',
-  },
-  {
-    id: 'brain - computer - interface - platform',
-    name: 'BrainInterface Pro',
-    description:;
-      'Advanced brain - computer interface platform that enables direct neural communication, cognitive enhancement, and neurological research applications.',
-    features: [;
-      'Neural signal processing',
-      'Cognitive enhancement tools',
-      'Brain - computer communication',
-      'Real - time neural analytics',
-      'Integration with medical devices',
-      'Advanced analytics and reporting',
-      'Custom neural algorithms',
-      '24 / 7 neural monitoring',
-    ],
-    pricing: {
-      starter: {
-        price: 799,
-        period: 'month',
-        features: [;
-          'Basic neural interface',
-          'Standard processing',
-          'Email support',
-        ],
-      },
-      professional: {
-        price: 1999,
-        period: 'month',
-        features: [;
-          'Advanced neural interface',
-          'Custom algorithms',
-          'Priority support',
-          'Dedicated research team',
-        ],
-      },
-      enterprise: {
-        price: 4999,
-        period: 'month',
-        features: [;
-          'Full neural platform',
-          'Custom solutions',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Brain - Computer Interface',
-    tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Neural Interface',
       'Cognitive Enhancement',
       'Neurological Research',
       'Medical Technology',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/brain-interface-pro',
-=======
-    website: 'https://ziontechgroup.com / brain - interface - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$1 && 1.9B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Medical research institutions, healthcare providers, neuroscience labs, government agencies'
     competitiveAdvantage:
@@ -465,92 +228,15 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Energy'
     tags: [
-<<<<<<< HEAD
-      'Fusion Power'
-      'Quantum Energy'
-      'Sustainable Energy'
-      'Energy Optimization'
-    ]
-    website: 'https://ziontechgroup.com/quantum-energy-fusion'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$4.7B'
-=======
-=======
-    market_size: '$1.9B',
-    target_audience:;
-      'Medical research institutions, healthcare providers, neuroscience labs, government agencies',
-    competitive_advantage:;
-      'Advanced neural signal processing, comprehensive cognitive enhancement tools, and extensive medical device integration',
-  },
-  {
-    id: 'quantum - energy - fusion - platform',
-    name: 'QuantumEnergy Fusion',
-    description:;
-      'Revolutionary quantum energy fusion platform that simulates and optimizes fusion power generation for sustainable energy solutions.',
-    features: [;
-      'Fusion power simulation',
-      'Quantum energy optimization',
-      'Real - time fusion monitoring',
-      'Energy efficiency analytics',
-      'Integration with power grids',
-      'Advanced analytics and reporting',
-      'Custom fusion algorithms',
-      '24 / 7 energy monitoring',
-    ],
-    pricing: {
-      starter: {
-        price: 1299,
-        period: 'month',
-        features: [;
-          'Basic fusion simulation',
-          'Standard optimization',
-          'Email support',
-        ],
-      },
-      professional: {
-        price: 3499,
-        period: 'month',
-        features: [;
-          'Advanced fusion platform',
-          'Custom algorithms',
-          'Priority support',
-          'Dedicated energy team',
-        ],
-      },
-      enterprise: {
-        price: 8999,
-        period: 'month',
-        features: [;
-          'Full fusion platform',
-          'Custom solutions',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Quantum Energy',
-    tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Fusion Power',
       'Quantum Energy',
       'Sustainable Energy',
       'Energy Optimization',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-fusion',
-=======
-    website: 'https://ziontechgroup.com / quantum - energy - fusion',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$4 && 4.7B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Energy companies, power utilities, research institutions, government agencies'
     competitiveAdvantage:
@@ -604,237 +290,30 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Autonomous Vehicles'
     tags: [
-<<<<<<< HEAD
-      'Autonomous Vehicles'
-      'AI Navigation'
-      'Fleet Management'
-      'Transportation'
-    ]
-    website: 'https://ziontechgroup.com/autonomous-vehicle-ai'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$54.2B'
-=======
-=======
-    market_size: '$4.7B',
-    target_audience:;
-      'Energy companies, power utilities, research institutions, government agencies',
-    competitive_advantage:;
-      'Industry - first quantum fusion simulation, advanced energy optimization, and comprehensive power grid integration',
-  },
-  {
-    id: 'autonomous - vehicle - ai - platform',
-    name: 'AutonomousVehicle AI',
-    description:;
-      'Advanced autonomous vehicle AI platform that provides intelligent navigation, safety systems, and fleet management for autonomous transportation.',
-    features: [;
-      'AI - powered navigation',
-      'Advanced safety systems',
-      'Fleet management',
-      'Real - time vehicle monitoring',
-      'Integration with vehicle systems',
-      'Advanced analytics and reporting',
-      'Custom AI algorithms',
-      '24 / 7 autonomous operations',
-    ],
-    pricing: {
-      starter: {
-        price: 399,
-        period: 'month',
-        features: [;
-          'Up to 10 vehicles',
-          'Basic AI navigation',
-          'Standard monitoring',
-        ],
-      },
-      professional: {
-        price: 999,
-        period: 'month',
-        features: [;
-          'Up to 100 vehicles',
-          'Advanced AI',
-          'Custom algorithms',
-          'Priority support',
-        ],
-      },
-      enterprise: {
-        price: 2499,
-        period: 'month',
-        features: [;
-          'Unlimited vehicles',
-          'Custom AI training',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Autonomous Vehicles',
-    tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Autonomous Vehicles',
       'AI Navigation',
       'Fleet Management',
       'Transportation',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai',
-=======
-    website: 'https://ziontechgroup.com / autonomous - vehicle - ai',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$54 && 54.2B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Automotive companies, transportation firms, logistics companies, government agencies'
     competitiveAdvantage:
-<<<<<<< HEAD
-      'Advanced AI navigation with 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration'
-  }
-=======
-      'Advanced AI navigation with 99 && 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration',
-=======
-    market_size: '$54.2B',
-    target_audience:;
-      'Automotive companies, transportation firms, logistics companies, government agencies',
-    competitive_advantage:;
-      'Advanced AI navigation with 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-    id: 'quantum-materials-discovery-platform'
-    name: 'QuantumMaterials Discovery'
-    description:
-      'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.'
-    features: [
-      'Quantum materials simulation'
-      'AI-powered discovery algorithms'
-      'Real-time material analysis'
-      'Advanced property prediction'
-      'Integration with research platforms'
-      'Advanced analytics and reporting'
-      'Custom discovery algorithms'
-      '24/7 discovery operations'
-    ]
-    pricing: {
-      starter: {
-        price: 699
-        period: 'month'
-        features: [
-          'Basic materials simulation'
-          'Standard discovery'
-          'Email support'
-        ]
-      }
-      professional: {
-        price: 1799
-        period: 'month'
-        features: [
-          'Advanced materials platform'
-          'Custom algorithms'
-          'Priority support'
-          'Dedicated research team'
-        ]
-      }
-      enterprise: {
-        price: 4499
-        period: 'month'
-        features: [
-          'Full materials platform'
-          'Custom solutions'
-          'White-label platform'
-          'Dedicated support team'
-        ]
-      }
-    }
-    category: 'Quantum Materials'
-    tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'Materials Science'
-      'AI Discovery'
-      'Research Platform'
-    ]
-    website: 'https://ziontechgroup.com/quantum-materials-discovery'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$2.8B'
-=======
-=======
-    id: 'quantum - materials - discovery - platform',
-    name: 'QuantumMaterials Discovery',
-    description:;
-      'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.',
-    features: [;
-      'Quantum materials simulation',
-      'AI - powered discovery algorithms',
-      'Real - time material analysis',
-      'Advanced property prediction',
-      'Integration with research platforms',
-      'Advanced analytics and reporting',
-      'Custom discovery algorithms',
-      '24 / 7 discovery operations',
-    ],
-    pricing: {
-      starter: {
-        price: 699,
-        period: 'month',
-        features: [;
-          'Basic materials simulation',
-          'Standard discovery',
-          'Email support',
-        ],
-      },
-      professional: {
-        price: 1799,
-        period: 'month',
-        features: [;
-          'Advanced materials platform',
-          'Custom algorithms',
-          'Priority support',
-          'Dedicated research team',
-        ],
-      },
-      enterprise: {
-        price: 4499,
-        period: 'month',
-        features: [;
-          'Full materials platform',
-          'Custom solutions',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Quantum Materials',
-    tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Materials Science',
       'AI Discovery',
       'Research Platform',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-materials-discovery',
-=======
-    website: 'https://ziontechgroup.com / quantum - materials - discovery',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$2 && 2.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Materials science companies, research institutions, manufacturing firms, government agencies'
     competitiveAdvantage:
@@ -888,92 +367,15 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Robotics'
     tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'Robotics'
-      'Automation'
-      'Intelligent Systems'
-    ]
-    website: 'https://ziontechgroup.com/quantum-robotics-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$3.2B'
-=======
-=======
-    market_size: '$2.8B',
-    target_audience:;
-      'Materials science companies, research institutions, manufacturing firms, government agencies',
-    competitive_advantage:;
-      'Industry - first quantum materials simulation, advanced AI discovery algorithms, and comprehensive research platform integration',
-  },
-  {
-    id: 'quantum - robotics - platform',
-    name: 'QuantumRobotics Pro',
-    description:;
-      'Advanced quantum robotics platform that combines quantum computing with robotics for intelligent automation and advanced robotic systems.',
-    features: [;
-      'Quantum - enhanced robotics',
-      'AI - powered automation',
-      'Real - time robotic control',
-      'Advanced motion planning',
-      'Integration with robotic systems',
-      'Advanced analytics and reporting',
-      'Custom robotic algorithms',
-      '24 / 7 robotic operations',
-    ],
-    pricing: {
-      starter: {
-        price: 499,
-        period: 'month',
-        features: [;
-          'Up to 5 robots',
-          'Basic quantum features',
-          'Standard control',
-        ],
-      },
-      professional: {
-        price: 1299,
-        period: 'month',
-        features: [;
-          'Up to 25 robots',
-          'Advanced quantum features',
-          'Custom algorithms',
-          'Priority support',
-        ],
-      },
-      enterprise: {
-        price: 3299,
-        period: 'month',
-        features: [;
-          'Unlimited robots',
-          'Custom quantum solutions',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Quantum Robotics',
-    tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Robotics',
       'Automation',
       'Intelligent Systems',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-robotics-pro',
-=======
-    website: 'https://ziontechgroup.com / quantum - robotics - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$3 && 3.2B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Robotics companies, manufacturing firms, automation specialists, research institutions'
     competitiveAdvantage:
@@ -1027,92 +429,15 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Internet Security'
     tags: [
-<<<<<<< HEAD
-      'Quantum Internet'
-      'Cybersecurity'
-      'Encryption'
-      'Secure Communication'
-    ]
-    website: 'https://ziontechgroup.com/quantum-internet-security'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$8.9B'
-=======
-=======
-    market_size: '$3.2B',
-    target_audience:;
-      'Robotics companies, manufacturing firms, automation specialists, research institutions',
-    competitive_advantage:;
-      'Industry - first quantum - enhanced robotics, advanced AI automation, and comprehensive robotic system integration',
-  },
-  {
-    id: 'quantum - internet - security - platform',
-    name: 'QuantumInternet Security',
-    description:;
-      'Next - generation quantum internet security platform that provides unbreakable encryption and secure communication for the quantum internet.',
-    features: [;
-      'Quantum internet encryption',
-      'Secure quantum communication',
-      'Real - time security monitoring',
-      'Advanced threat detection',
-      'Integration with internet infrastructure',
-      'Advanced analytics and reporting',
-      'Custom security protocols',
-      '24 / 7 quantum security operations',
-    ],
-    pricing: {
-      starter: {
-        price: 299,
-        period: 'month',
-        features: [;
-          'Basic quantum security',
-          'Standard encryption',
-          'Email support',
-        ],
-      },
-      professional: {
-        price: 799,
-        period: 'month',
-        features: [;
-          'Advanced quantum security',
-          'Custom protocols',
-          'Priority support',
-          'Dedicated security team',
-        ],
-      },
-      enterprise: {
-        price: 1999,
-        period: 'month',
-        features: [;
-          'Full quantum security',
-          'Custom solutions',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Quantum Internet Security',
-    tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Internet',
       'Cybersecurity',
       'Encryption',
       'Secure Communication',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security',
-=======
-    website: 'https://ziontechgroup.com / quantum - internet - security',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$8 && 8.9B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Internet service providers, telecommunications companies, government agencies, cybersecurity firms'
     competitiveAdvantage:
@@ -1166,92 +491,15 @@ export const advancedEmergingTechServices2025 = [;
     }
     category: 'Quantum Logistics'
     tags: [
-<<<<<<< HEAD
-      'Quantum Computing'
-      'Logistics'
-      'Supply Chain'
-      'Route Optimization'
-    ]
-    website: 'https://ziontechgroup.com/quantum-logistics-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$12.4B'
-=======
-=======
-    market_size: '$8.9B',
-    target_audience:;
-      'Internet service providers, telecommunications companies, government agencies, cybersecurity firms',
-    competitive_advantage:;
-      'Industry - first quantum internet security, unbreakable quantum encryption, and comprehensive internet infrastructure integration',
-  },
-  {
-    id: 'quantum - logistics - optimization - platform',
-    name: 'QuantumLogistics Pro',
-    description:;
-      'Advanced quantum logistics optimization platform that provides intelligent route planning, supply chain optimization, and logistics automation.',
-    features: [;
-      'Quantum route optimization',
-      'AI - powered logistics',
-      'Real - time supply chain monitoring',
-      'Advanced optimization algorithms',
-      'Integration with logistics systems',
-      'Advanced analytics and reporting',
-      'Custom optimization models',
-      '24 / 7 logistics operations',
-    ],
-    pricing: {
-      starter: {
-        price: 199,
-        period: 'month',
-        features: [;
-          'Up to 10 routes',
-          'Basic optimization',
-          'Standard monitoring',
-        ],
-      },
-      professional: {
-        price: 599,
-        period: 'month',
-        features: [;
-          'Up to 100 routes',
-          'Advanced quantum features',
-          'Custom models',
-          'Priority support',
-        ],
-      },
-      enterprise: {
-        price: 1499,
-        period: 'month',
-        features: [;
-          'Unlimited routes',
-          'Custom quantum solutions',
-          'White - label platform',
-          'Dedicated support team',
-        ],
-      },
-    },
-    category: 'Quantum Logistics',
-    tags: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Quantum Computing',
       'Logistics',
       'Supply Chain',
       'Route Optimization',
     ],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-logistics-pro',
-=======
-    website: 'https://ziontechgroup.com / quantum - logistics - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$12 && 12.4B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Logistics companies, supply chain managers, transportation firms, e-commerce businesses'
     competitiveAdvantage:
@@ -1296,70 +544,6 @@ export const advancedEmergingTechServices2025 = [;
         price: 2499
         period: 'month'
         features: [
-<<<<<<< HEAD
-          'Full metaverse platform'
-          'Custom solutions'
-          'White-label platform'
-          'Dedicated support team'
-        ]
-      }
-    }
-    category: 'Quantum Metaverse'
-    tags: ['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics']
-    website: 'https://ziontechgroup.com/quantum-metaverse-pro'
-    contact: {
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$6.8B'
-=======
-=======
-    market_size: '$12.4B',
-    target_audience:;
-      'Logistics companies, supply chain managers, transportation firms, e - commerce businesses',
-    competitive_advantage:;
-      'Advanced quantum route optimization, comprehensive logistics automation, and extensive logistics system integration',
-  },
-  {
-    id: 'quantum - metaverse - development - platform',
-    name: 'QuantumMetaverse Pro',
-    description:;
-      'Revolutionary quantum metaverse development platform that creates immersive virtual worlds with quantum - enhanced graphics and AI.',
-    features: [;
-      'Quantum - enhanced graphics',
-      'AI - powered world generation',
-      'Real - time virtual rendering',
-      'Advanced user interaction',
-      'Integration with VR / AR systems',
-      'Advanced analytics and reporting',
-      'Custom metaverse solutions',
-      '24 / 7 platform monitoring',
-    ],
-    pricing: {
-      starter: {
-        price: 399,
-        period: 'month',
-        features: [;
-          'Basic metaverse features',
-          'Standard graphics',
-          'Email support',
-        ],
-      },
-      professional: {
-        price: 999,
-        period: 'month',
-        features: [;
-          'Advanced metaverse platform',
-          'Custom solutions',
-          'Priority support',
-          'Dedicated development team',
-        ],
-      },
-      enterprise: {
-        price: 2499,
-        period: 'month',
-        features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           'Full metaverse platform',
           'Custom solutions',
           'White - label platform',
@@ -1369,45 +553,16 @@ export const advancedEmergingTechServices2025 = [;
     },
     category: 'Quantum Metaverse',
     tags: ['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics'],
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-metaverse-pro',
-=======
-    website: 'https://ziontechgroup.com / quantum - metaverse - pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$6 && 6.8B',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 ];      phone: '+1 302 464 0950';
-<<<<<<< HEAD
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$6.8B'
-=======
-      email: 'kleber@ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
-=======
-=======
-    id: 'space-mining-operations-platform', name: 'SpaceMining Operations',
-    description: 'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.',
-    features: [
-      'Asteroid mining operationsLunar resource extractionSpace resource mappingAutomated mining systemsIntegration with space agenciesAdvanced analytics and reportingCustom mining strategies24/7 space operations monitoring'
-    ];
-    pricing: {
-      
-      starter: { price: 999, period: 'month', features: ['Basic space operationsResource mappingStandard support'] 
-    },
-    professional: { price: 2999, period: 'month', features: ['Advanced mining operationsCustom strategiesPriority supportDedicated operations team'] };
-      enterprise: { price: 7999, period: 'month', features: ['Full mining operationsCustom space solutionsWhite-label platformDedicated support team'] }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
     marketSize: '$6 && 6.8B',
@@ -1416,10 +571,6 @@ export const advancedEmergingTechServices2025 = [;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     market_size: '$6.8B',
     target_audience:;

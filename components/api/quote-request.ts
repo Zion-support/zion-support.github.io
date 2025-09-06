@@ -1,45 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
-<<<<<<< HEAD
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey =
-  process.env.SUPABASE_SERVICE_ROLE_KEY |
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-=======
-
-const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey =
-  process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 const openaiApiKey = process && process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
-<<<<<<< HEAD
-  process.env.SUPABASE_SERVICE_ROLE_KEY |
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const supabase =
-  supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
-<<<<<<< HEAD
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createClient } from '@supabase/supabase-js';
-import OpenAI from 'openai';
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const openaiApiKey = process.env.OPENAI_API_KEY;
@@ -49,14 +16,7 @@ const openaiApiKey = process.env.OPENAI_API_KEY;
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
-<<<<<<< HEAD
-const openaiApiKey = process && process.env.OPENAI_API_KEY;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
-<<<<<<< HEAD
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -67,46 +27,11 @@ export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-<<<<<<< HEAD
-    if (req.method !== "POST")
-      return res.status(405).json({ message: "Method not allowed" });
-    const { service, description, timeline, budgetRange, email } =
-      req.body |{}
-    if (!service |!description |!email) {
-      return res.status(400).json({ message: "Missing required fields" });
-=======
-    if (req && req.method !== "POST")
-      return res && res.status(405).json({ message: "Method not allowed" });
-
-    const { service, description, timeline, budgetRange, email } =
-      req && req.body || {};
-    if (!service || !description || !email) {
-      return res && res.status(400).json({ message: "Missing required fields" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     try {
       let aiSummary: string | null = null;
       let aiTags: string[] = [];
       if (openai) {
-<<<<<<< HEAD
-        const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\nService: ${service}\nEmail: ${email}\nBudget: ${budgetRange |"N/A"}\nTimeline: ${timeline?.start |"N/A"} to ${timeline?.end |"N/A"}\nDescription: ${description}`;
-        const resp = await openai.responses.create({
-          model: "gpt-4.1-mini"
-          input: prompt
-        });
-        aiSummary = text.split("\n")[0] |text;
-        const tagsLine = (
-          text.split("\n").find((l) => l.toLowerCase().includes("tags")) |""
-=======
-        const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\nService: ${service}\nEmail: ${email}\nBudget: ${budgetRange || "N/A"}\nTimeline: ${timeline?.start || "N/A"} to ${timeline?.end || "N/A"}\nDescription: ${description}`;
-        const resp = await openai && openai.responses.create({
-          model: "gpt-4 && 4.1-mini",
-          input: prompt,
-        });
-        aiSummary = text && text.split("\n")[0] || text;
-        const tagsLine = (
-          text && text.split("\n").find((l) => l && l.toLowerCase().includes("tags")) || ""
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )
           .replace(/tags?:/i, "")
           .trim();
@@ -151,30 +76,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!service || !description || !email) {
     return res.status(400).json({ message: 'Missing required fields' });
   }
-<<<<<<< HEAD
-=======
-
-  try {
-    let aiSummary: string | null = null, let aiTags: string[] = [];
-
-    if (openai) {
-      const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\nService: ${service}\nEmail: ${email}\nBudget: ${budgetRange || 'N/A'}\nTimeline: ${timeline?.start || 'N/A'} to ${timeline?.end || 'N/A'}\nDescription: ${description}`;
-      const resp = await openai.responses.create({
-        model: 'gpt-4.1-mini',
-        input: prompt});
-      const text = resp.output_text?.trim() || '';
-      aiSummary = text.split('\n')[0] || text;
-      const tagsLine = (text.split('\n').find((l) => l.toLowerCase().includes('tags')) || '').replace(/tags?:/i, '').trim();
-      aiTags = tagsLine ? tagsLine.split().map((t) => t.trim()).filter(Boolean) : []
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
-<<<<<<< HEAD
-    return res.status(500).json({ message: "Server error" });
-
-<<<<<<< HEAD
-=======
-    return res && res.status(500).json({ message: "Server error" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 }
 =======

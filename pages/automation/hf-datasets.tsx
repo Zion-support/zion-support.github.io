@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/hf-datasets.json';
@@ -25,13 +21,6 @@ export default function HfDatasetsPage() {
       </div>
     </EnhancedLayout>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;

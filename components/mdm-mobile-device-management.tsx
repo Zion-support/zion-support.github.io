@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Smartphone;
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Phone,;
   Mail,;
@@ -52,16 +10,6 @@ import {;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
-export default function MDMPage() {
-  const service = extraServices.find(s =>
-    s.link.endsWith('/mdm-mobile-device-management')
-=======
-
-export default function MDMPage() {;
-  const service = extraServices && extraServices.find(s =>;
-    s && s.link.endsWith('/mdm-mobile-device-management');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
@@ -262,16 +210,6 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </UltraAdvancedFuturisticBackground>;
-  );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';

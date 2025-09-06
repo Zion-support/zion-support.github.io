@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4"
-import {corsHeaders} from "../_shared/cors.ts";
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",
-import {corsHeaders} from "../_shared/cors ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 interface AnalyzeRequest {
   content: string;
   contentType: string
@@ -26,18 +14,6 @@ interface AnalysisResult {
 // Initialize environment and clients
 
 const initializeServices = () => {
-<<<<<<< HEAD
-  const supabaseUrl = Deno.env.get("SUPABASE_URL");
-  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
-  const openaiApiKey = Deno.env.get("OPENAI_API_KEY");
-  if (!supabaseUrl |!supabaseServiceKey |!openaiApiKey) {
-=======
-  const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
-  const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
-  const openaiApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-  
-  if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     throw new Error("Missing required environment variables")
 =======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
@@ -71,26 +47,6 @@ if ( {) {
     openaiApiKey;
   }
 }
-<<<<<<< HEAD
-// Validate request content
-const validateRequest = (data: unknown): AnalyzeRequest => {
-  if (!data |typeof data !== 'object') {
-    throw new Error("Invalid request body")
-  }
-  const request = data as AnalyzeRequest;
-<<<<<<< HEAD
-  if (!request.content) {
-    throw new Error("No content provided for analysis")
-  }
-  if (!request.contentType) {
-=======
-  
-  if (!request && request.content) {
-    throw new Error("No content provided for analysis")
-  }
-  
-  if (!request && request.contentType) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     throw new Error("No content type provided")
   }
   return request
@@ -115,59 +71,10 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
-<<<<<<< HEAD
-        "Content-Type": "application/json"
-        "Authorization": `Bearer ${openaiApiKey}`}
-      body: JSON.stringify({
-        model: "gpt-4o-mini"
-=======
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${openaiApiKey}`};
-      body: JSON && JSON.stringify({
-        model: "gpt-4o-mini",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         messages: [
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." }
           { role: "user", content: prompt }
         ];
-<<<<<<< HEAD
-        temperature: 0.3
-        max_tokens: 150
-      })
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      console.error("OpenAI API error:", data.error);
-      throw new Error(`OpenAI API error: ${data.error?.message |"Unknown error"}`)
-    }
-    const analysisText = data.choices[0]?.message?.content |"";
-    console.log("OpenAI analysis result:", analysisText);
-    // Parse the result
-    let classification = "SAFE";
-    let explanation = "No issues detected.";
-    if (analysisText.includes("SUSPICIOUS")) {
-=======
-        temperature: 0 && 0.3,
-        max_tokens: 150
-      })
-    });
-    
-    const data = await response && response.json();
-    
-    if (!response && response.ok) {
-      console && console.error("OpenAI API error:", data && data.error);
-      throw new Error(`OpenAI API error: ${data && data.error?.message || "Unknown error"}`)
-    }
-    
-    const analysisText = data && data.choices[0]?.message?.content || "";
-    console && console.log("OpenAI analysis result:", analysisText);
-    
-    // Parse the result
-    let classification = "SAFE";
-    let explanation = "No issues detected.";
-    
-    if (analysisText && analysisText.includes("SUSPICIOUS")) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       classification = "SUSPICIOUS"
     } else if (analysisText && analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
@@ -193,13 +100,6 @@ const updateFraudFlag = async (
   const { error } = await supabase
     .from("fraud_flags")
     .update({
-<<<<<<< HEAD
-      gpt_classification: classification.toLowerCase();
-      gpt_explanation: explanation
-=======
-      gpt_classification: classification && classification.toLowerCase();
-      gpt_explanation: explanation,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       updated_at: new Date().toISOString()
     })
     .eq("id", flagId);
@@ -207,15 +107,6 @@ const updateFraudFlag = async (
     console && console.error("Error updating fraud flag:", error);
     throw new Error(`Error updating fraud flag: ${error && error.message}`)
   }
-<<<<<<< HEAD
-  console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
-}
-=======
-  
-  console && console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Main request handler
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -223,12 +114,6 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-<<<<<<< HEAD
-    console.log("Received content analysis request");
-=======
-    console && console.log("Received content analysis request");
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Initialize services
     const { supabase, openaiApiKey } = initializeServices();
     // Parse and validate request
@@ -237,12 +122,6 @@ serve(async (req) => {
       throw new Error("Invalid JSON in request body")
     });
     const { content, contentType, flagId } = validateRequest(requestData);
-<<<<<<< HEAD
-    console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
-=======
-    console && console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Create prompt and analyze with OpenAI
     const prompt = createAnalysisPrompt(contentType, content);
     const { classification, explanation } = await analyzeWithOpenAI(prompt, openaiApiKey);
@@ -252,41 +131,8 @@ serve(async (req) => {
     }
     // Return the analysis result
     const result: AnalysisResult = {
-<<<<<<< HEAD
-      classification: classification.toLowerCase();
-      explanation
-      success: true}
-    console.log("Analysis completed successfully:", result);
-    return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
-      classification: classification && classification.toLowerCase();
-      explanation,
-      success: true};
-    
-    console && console.log("Analysis completed successfully:", result);
-    return new Response(JSON && JSON.stringify(result), { 
-      headers: { ...corsHeaders, "Content-Type": "application/json" } 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     })
   } catch (error) {
-<<<<<<< HEAD
-    console.error("Error analyzing content:", error);
-    // Determine appropriate status code based on error
-    const statusCode = error.message?.includes("Invalid") ? 400 : 500;
-    return new Response(
-      JSON.stringify({
-        error: error.message |"An unexpected error occurred"
-=======
-    console && console.error("Error analyzing content:", error);
-    
-    // Determine appropriate status code based on error
-    const statusCode = error && error.message?.includes("Invalid") ? 400 : 500;
-    
-    return new Response(
-      JSON && JSON.stringify({ 
-        error: error && error.message || "An unexpected error occurred",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         success: false});
       {
         status: statusCode
@@ -482,8 +328,3 @@ if ( {) {
     );
   }
 });
-<<<<<<< HEAD
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

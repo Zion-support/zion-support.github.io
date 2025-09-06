@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-interface QuickReplyButtonProps {
-  text: string;
-  onClick: () => void
-}
-export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
-=======
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
-interface QuickReplyButtonProps {;
-  text: string,;
-  onClick: () => void;
-}
-
-export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Button
 
@@ -32,15 +10,6 @@ export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProp
       )}
       onClick={onClick}>;
       {text}
-<<<<<<< HEAD
-    </Button>
-  );
-}
-=======
-    </Button>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import React from './react';
 import { Button  } from '@/components / ui / button';

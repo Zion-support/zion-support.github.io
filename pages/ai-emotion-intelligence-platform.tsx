@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone
-  Zap, DollarSign, Shield, Mail, MapPin, Brain
-  Sparkles, Users, Clock, Award, Eye, Heart
-  MessageCircle, BarChart3, Globe, Smartphone
-} from 'lucide-react'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
   Zap, DollarSign, Shield, Mail, MapPin, Brain;
@@ -26,30 +9,6 @@ import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticN
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 const contactInfo = {
-<<<<<<< HEAD
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-const features = [
-  {
-    icon: Eye
-    title: 'Real-time Emotion Detection'
-=======
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-const features = [
-  {
-    icon: Eye,
-    title: 'Real-time Emotion Detection',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     description: 'Analyze 27 different emotions across voice, video, and text interactions in real-time'
   }
@@ -78,16 +37,6 @@ const features = [
     title: 'Real-time Alerts'
     description: 'Get instant notifications for negative emotions requiring immediate attention'
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-]
-const useCases = [
-  {
-    title: 'Customer Service Optimization'
-    description: 'Improve customer satisfaction by understanding emotional states and responding appropriately'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ];
 
 const useCases = [
@@ -112,12 +61,6 @@ const useCases = [
     description: 'Monitor employee emotional states to support mental health and productivity'
     icon: Heart
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ];
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -132,19 +75,6 @@ const pricing = [
     ]
     popular: false
     cta: 'Get Started'
-<<<<<<< HEAD
-  };
-  {
-    name: 'Professional',
-    price: '$1,299',
-    period: '/month',
-    description: 'Advanced emotion intelligence for growing businesses',
-=======
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   {
     name: 'Professional'
     price: '$1,299'
@@ -156,19 +86,6 @@ const pricing = [
     ]
     popular: true
     cta: 'Start Free Trial'
-<<<<<<< HEAD
-  };
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    period: '',
-    description: 'Custom solutions for large organizations',
-=======
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   {
     name: 'Enterprise'
     price: 'Custom'
@@ -181,12 +98,6 @@ const pricing = [
     popular: false
     cta: 'Contact Sales'
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -337,166 +248,7 @@ function AIEmotionIntelligencePlatform() {
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4 mr-2" />
-                AI & Customer Experience
-              </motion.div>
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  AI Emotion Intelligence Platform
-                </span>
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Real-time emotion analysis and response for customer interactions
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-                Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
-              </motion.p>
-            </motion.div>
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-              <Link
-                href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
-                <span className="relative z-10 flex items-center">
-                  Start Free Trial
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Link>
-              <Link
-                href="#pricing" className="group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
-                <span className="flex items-center">
-                  View Pricing
-                  <DollarSign className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-                </span>
-              </Link>
-            </motion.div>
-            {/* Key Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>
-                <div className="text-gray-400 text-sm">Emotions Detected</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                <div className="text-gray-400 text-sm">Accuracy Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">&lt,100ms</div>
-                <div className="text-gray-400 text-sm">Response Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">35%</div>
-                <div className="text-gray-400 text-sm">Satisfaction Increase</div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-=======
-                transition={{ duration: 0.8, delay: 0.2 }} className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - pink - 500 / 20 to - purple - 500 / 20 border border - pink - 500 / 30 text - pink - 300 text - sm font - medium mb - 6">;
-                <Sparkles className="w - 4 h - 4 mr - 2" />;
-                AI & Customer Experience;
-              </motion.div>;
-              <motion.h1;
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }} className="text - 5xl md:text - 7xl font - bold mb - 6">;
-                <span className="bg - gradient - to - r from - pink - 400 via - purple - 400 to - cyan - 400 bg - clip - text text - transparent">;
-                  AI Emotion Intelligence Platform;
-                </span>;
-              </motion.h1>;
-              <motion.p;
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }} className="text - 2xl md:text - 3xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
-                Real - time emotion analysis and response for customer interactions;
-              </motion.p>;
-              <motion.p;
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }} className="text - lg md:text - xl text - gray - 400 mb - 12 max - w-3xl mx - auto">;
-                Advanced AI platform that analyzes customer emotions in real - time across voice, video, and text interactions, providing intelligent responses and sentiment - driven insights for better customer experience.;
-              </motion.p>;
-            </motion.div>;
-            {/* CTA Buttons */}
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }} className="flex flex - col sm:flex - row items - center justify - center gap - 6 mb - 16">;
-              <Link;
-                href="/contact" className="group relative px - 8 py - 4 bg - gradient - to - r from - pink - 500 to - purple - 500 text - white font - semibold rounded - 2xl text - lg hover:from - pink - 600 hover:to - purple - 600 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl hover:shadow - pink - 500 / 25">;
-                <span className="relative z - 10 flex items - center">;
-                  Start Free Trial;
-                  <ArrowRight className="ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 200" />;
-                </span>;
-                <div className="absolute inset - 0 bg - gradient - to - r from - pink - 600 to - purple - 600 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300"></div>;
-              </Link>;
-              <Link;
-                href="#pricing" className="group px - 8 py - 4 border - 2 border - pink - 500 / 30 text - pink - 300 font - semibold rounded - 2xl text - lg hover:bg - pink - 500 / 10 hover:border - pink - 500 / 50 transition - all duration - 300 transform hover:scale - 105">;
-                <span className="flex items - center">;
-                  View Pricing;
-                  <DollarSign className="ml - 2 w - 5 h - 5 group - hover:scale - 110 transition - transform duration - 200" />;
-                </span>;
-              </Link>;
-            </motion.div>;
-            {/* Key Stats */}
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }} className="grid grid - cols - 2 md: grid - cols - 4 gap - 8 mb - 16">;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - pink - 400 mb - 2">27</div>;
-                <div className="text - gray - 400 text - sm">Emotions Detected</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - purple - 400 mb - 2">99.9%</div>;
-                <div className="text - gray - 400 text - sm">Accuracy Rate</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - cyan - 400 mb - 2">&lt, 100ms</div>;
-                <div className="text - gray - 400 text - sm">Response Time</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - emerald - 400 mb - 2">35%</div>;
-                <div className="text - gray - 400 text - sm">Satisfaction Increase</div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
-        <section className="py - 20">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Features for Emotion Intelligence
@@ -525,10 +277,6 @@ function AIEmotionIntelligencePlatform() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   viewport={{ once: true }} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -553,22 +301,6 @@ function AIEmotionIntelligencePlatform() {
         </section>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Use Cases Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
-        <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business with Emotion AI
@@ -597,10 +329,6 @@ function AIEmotionIntelligencePlatform() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   viewport={{ once: true }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-white" />
@@ -625,22 +353,6 @@ function AIEmotionIntelligencePlatform() {
         </section>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Pricing Section */}
-<<<<<<< HEAD
-        <section id="pricing" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
-        <section id="pricing" className="py - 20">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Plan
@@ -649,13 +361,6 @@ function AIEmotionIntelligencePlatform() {
                 Start with our professional plan and scale as you grow
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
@@ -685,23 +390,12 @@ function AIEmotionIntelligencePlatform() {
                   }`}
                 >;
                   {plan.popular && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm font-semibold rounded-full">
                         Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -751,31 +445,6 @@ function AIEmotionIntelligencePlatform() {
                     }`}
                   >;
                     {plan.cta}
-<<<<<<< HEAD
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-
-        {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
-                  </Link>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Contact Section */}
         <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -784,8 +453,6 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -810,13 +477,6 @@ function AIEmotionIntelligencePlatform() {
                   </span>
                 </Link>
               </div>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
@@ -848,13 +508,6 @@ function AIEmotionIntelligencePlatform() {
       </UltraFuturisticBackground2030>
     </>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;

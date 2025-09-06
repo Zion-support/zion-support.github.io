@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
@@ -19,24 +15,10 @@ const AdminReviewsPage: NextPage = () => {
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
   }
-<<<<<<< HEAD
-  useEffect(() => { refresh() }, [])
-=======
-
-  useEffect(() => { refresh() }, []);
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST'
       headers: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
-      body: JSON.stringify({ action, reviewId })})
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       
         'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'
     },
@@ -67,11 +49,6 @@ const AdminReviewsPage: NextPage = () => {
           {!pending.length && <div>No pending reviews.</div>}
         </div>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <section className="enhanced-card">
@@ -82,12 +59,6 @@ const AdminReviewsPage: NextPage = () => {
   )
 }
 export default AdminReviewsPage;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import React, { useEffect, useState } from 'react',
 import type { NextPage } from 'next',

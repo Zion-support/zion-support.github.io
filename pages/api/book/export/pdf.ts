@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
 
@@ -20,21 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return
   }
   const browser = await puppeteer.launch({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    headless: true
-    args: ['--no-sandbox--disable-setuid-sandbox']})
-  try {
-    const page = await browser.newPage()
-    await page.setContent(html, { waitUntil: 'networkidle0' })
-    const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true })
-    await browser.close()
-    res.setHeader('Content-Typeapplication/pdf')
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     headless: true,
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
@@ -52,11 +33,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message |'Failed to render PDF' })
   }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import puppeteer from 'puppeteer',
@@ -99,7 +75,4 @@ if ( {) {
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

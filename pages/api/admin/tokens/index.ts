@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getAllTransactions } from "../../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -11,13 +7,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
 
   res.status(200).json({ transactions: filtered })
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { getAllTransactions  } from '../../../../utils / token / service';,

@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import { readJson  } from '../../utils/fsDb';
-import type { HelpArticle } from '../../utils/support';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export async function getStaticProps() {
-
-=======
-export async function getStaticProps() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return { props: { articles } }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
-<<<<<<< HEAD
-  const categories = Array.from(new Set(articles.map(a => a.category)));
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
@@ -44,19 +26,6 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
                       Last updated {new Date(a && a.updatedAt).toLocaleDateString()}
                     </div>                  </a>;
                 </Link>;
-<<<<<<< HEAD
-=======
-              ))}
-          </div>;
-        </div>;
-      ))}
-<<<<<<< HEAD
-    </div>
-);
-=======
-    </div>;
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   const categories = Array.from(new Set(articles.map((a) => a.category)));
   return (
@@ -80,14 +49,6 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
           </div>
         </div>
       ))}
-<<<<<<< HEAD
-    </div>;
-  );
-=======
-    </div>
-  )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import Link from 'next / link';
 import {read_json} from '../../utils / fs_db';

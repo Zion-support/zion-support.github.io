@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { Card, CardContent } from "@/components/ui/card";
-interface ErrorStateProps {
-  error: string;
-}
-export function ErrorState({ error }: ErrorStateProps) {
-=======
-interface ErrorStateProps {;
-  error: string;
-}
-
-export function ErrorState(): any ({ error }: ErrorStateProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="border-red-200">;
       <CardContent className="p-6 text-center">;

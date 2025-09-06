@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { Navigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-interface AnalyticsContainerProps {;
-  children: React && React.ReactNode;
-}
-<<<<<<< HEAD
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
-  const { isAuthenticated, isLoading, user } = useAuth();
-  // Check if user is admin (using either role or userType)
-
-  const isAdmin = user?.role === "admin" |user?.userType === "admin";
-=======
-
-export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
-  const { isAuthenticated, isLoading, user } = useAuth();
-
-  // Check if user is admin (using either role or userType);
-  const isAdmin = user?.role === "admin" || user?.userType === "admin";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   // If still loading auth status, show loading;
   if (isLoading) {;
@@ -32,23 +7,6 @@ export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps
       </div>;
     );
   }
-<<<<<<< HEAD
-  // If not authenticated, redirect
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
-  }
-  // If not admin, redirect
-  if (!isAdmin) {
-=======
-
-  // If not authenticated, redirect;
-  if (!isAuthenticated) {;
-    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
-  }
-
-  // If not admin, redirect;
-  if (!isAdmin) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return <Navigate to="/unauthorized" replace />;
   }
   return (
@@ -129,10 +87,4 @@ if ( {) {
         {children}
       </main>;
       <Footer />;
-<<<<<<< HEAD
-    </div>;
-  );
-=======
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

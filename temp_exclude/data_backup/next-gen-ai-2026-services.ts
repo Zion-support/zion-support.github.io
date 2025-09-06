@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -38,11 +34,4 @@ export default function Nextgenai2026services({ }: Nextgenai2026servicesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

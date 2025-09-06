@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-<<<<<<< HEAD
-export default function ServicesPage() {return (;
-=======
-export default function ServicesPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
 =======
 import Link from 'next / link';

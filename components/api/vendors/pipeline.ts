@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { listPipelineForVendor } from "../../../utils/vendor-store";
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { listPipelineForVendor } from '../../../utils/vendor-store';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const vendorId = String(req.query.vendorId |"");
-  if (!vendorId) return res.status(400).json({ error: "vendorId required" });
-=======
-  const vendorId = String(req && req.query.vendorId || "");
-  if (!vendorId) return res && res.status(400).json({ error: "vendorId required" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const items = listPipelineForVendor(vendorId);
   res && res.status(200).json({ items });
   res && res.status(200).json({ items });

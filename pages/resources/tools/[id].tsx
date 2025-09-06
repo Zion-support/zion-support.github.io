@@ -1,51 +1,7 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-export default function ToolResourcePage() {
-  const router = useRouter()
-  const { id } = router.query
-  // Tools data - this should match the data in resources.tsx
-  const tools = [
-    {
-<<<<<<< HEAD
-      id: 'automation-assessment',
-      title: 'Automation Readiness Assessment',
-      description: 'Evaluate your organization\'s readiness for AI automation implementation.',
-=======
-<<<<<<< HEAD
-      id: 'automation-assessment'
-      title: 'Automation Readiness Assessment'
-      description: 'Evaluate your organization\'s readiness for AI automation implementation.'
-      type: 'Interactive Tool'
-      estimatedTime: '15 minutes'
-=======
-      id: 'automation-assessment',
-=======
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { use_router } from 'next / router',
-export default /**
- * ToolResourcePage - Function description
- */
-function ToolResourcePage() {
-  const router = use_router (),
-  const { id } = router.query,
-  // Tools data - this should match the data in resources.tsx;
-  const tools = [;
-    {
-      id: 'automation - assessment',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       title: 'Automation Readiness Assessment',
       description: 'Evaluate your organization's readiness for AI automation implementation.',
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       type: 'Interactive Tool',
-<<<<<<< HEAD
-      estimatedTime: '15 minutes',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Automation Readiness Assessment is designed to help organizations evaluate their current
@@ -78,9 +34,6 @@ function ToolResourcePage() {
         </ol>
         <h2>Next Steps After Assessment</h2>
         <p>Once you complete the assessment, you'll receive: </p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>A detailed readiness score and analysis</li>
@@ -88,12 +41,6 @@ function ToolResourcePage() {
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      `
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       `;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       features: [
@@ -101,19 +48,6 @@ function ToolResourcePage() {
       ]
     }
     {
-<<<<<<< HEAD
-      id: 'ai-maturity-model'
-      title: 'AI Maturity Model'
-      description: 'Assess your current AI capabilities and plan your transformation journey.'
-      type: 'Framework'
-      estimatedTime: '30 minutes'
-=======
-      id: 'ai-maturity-model',
-      title: 'AI Maturity Model',
-      description: 'Assess your current AI capabilities and plan your transformation journey.',
-      type: 'Framework',
-      estimatedTime: '30 minutes',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your
@@ -139,9 +73,6 @@ function ToolResourcePage() {
         </ul>
         <h2>Using the Framework</h2>
         <p>To effectively use this framework: </p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ol>
           <li>Assess your current state across all dimensions</li>
@@ -159,12 +90,6 @@ function ToolResourcePage() {
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      `
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       `;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       features: [
@@ -172,19 +97,6 @@ function ToolResourcePage() {
       ]
     }
     {
-<<<<<<< HEAD
-      id: 'performance-benchmark'
-      title: 'Performance Benchmarking Tool'
-      description: 'Compare your automation performance against industry standards.'
-      type: 'Analytics Tool'
-      estimatedTime: '20 minutes'
-=======
-      id: 'performance-benchmark',
-      title: 'Performance Benchmarking Tool',
-      description: 'Compare your automation performance against industry standards.',
-      type: 'Analytics Tool',
-      estimatedTime: '20 minutes',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
@@ -227,9 +139,6 @@ function ToolResourcePage() {
         </ul>
         <h2>Action Planning</h2>
         <p>Based on benchmark results, develop action plans that include: </p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>Specific performance improvement targets</li>
@@ -238,25 +147,12 @@ function ToolResourcePage() {
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      `
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       `;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  ]
-  const tool = tools.find(t => t.id === id)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
   const tool = tools.find(t => t.id === id);
@@ -324,11 +220,6 @@ function ToolResourcePage() {
                   />
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="space-y-6">
@@ -343,11 +234,6 @@ function ToolResourcePage() {
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -365,11 +251,6 @@ function ToolResourcePage() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="text-center">
@@ -385,13 +266,6 @@ function ToolResourcePage() {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
       estimated_time: '15 minutes',
       full_content: `;

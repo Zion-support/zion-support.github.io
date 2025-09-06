@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useRouter } from 'next/router';
 import CertificatePreview from '../../../components/learn/CertificatePreview';
@@ -19,13 +12,6 @@ export default function CertificatePage() {
       <CertificatePreview courseId={courseId} />
     </div>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import { use_router } from 'next / router',
 import CertificatePreview from '../../../components / learn / CertificatePreview',

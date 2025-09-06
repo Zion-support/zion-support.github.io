@@ -1,75 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-import React from "react";
-import Link from "next/link";
-=======
-import React from './react';
-import Link from './next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import EnhancedButton from "./EnhancedButton";
 export type EmptyStateProps = {
   title: string;
   description?: string;
   icon?: React.ReactNode;
-<<<<<<< HEAD
-  primaryAction?: { label: string; href: string }
-  secondaryAction?: { label: string; href: string }
-}
-export default function EmptyState({
-  title
-  description
-  icon
-  primaryAction
-  secondaryAction
-}: EmptyStateProps) {
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Link from "next/link";
-import EnhancedButton from "./EnhancedButton";
-
-export type EmptyStateProps = {;
-  title: string;
-  description?: string;
-  icon?: React && React.ReactNode;
-  primaryAction?: { label: string; href: string };
-  secondaryAction?: { label: string; href: string };
-};
-
-export default function EmptyState(): any ({;
-  title,;
-  description,;
-  icon,;
-  primaryAction,;
-  secondaryAction,;
-}: EmptyStateProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>;
       <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>;
@@ -77,59 +11,10 @@ export default function EmptyState(): any ({;
       {description && (;
         <p className='text-sm opacity-80 max-w-prose'>{description}</p>;
       )}
-<<<<<<< HEAD
-      {(primaryAction |secondaryAction) && (
-        <div className='flex gap-2 mt-2'>
-          {primaryAction && (
-            <Link href={primaryAction.href}>
-              <a>
-                <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>              </a>export type EmptyStateProps = {
-  title: string
-=======
-import React from 'react';
-import Link from 'next/link';
-import EnhancedButton from './EnhancedButton';
-export type EmptyStateProps = {
-=======
-  primary_action?: { label: string; href: string }
-  secondary_action?: { label: string; href: string }
-}
-;
-export default /**
- * EmptyState - Function description
- */
-function EmptyState() {
-  return (
-    <div className='w - full border border - dashed border - gray - 300 dark:border - gray - 700 rounded - lg p - 6 text - center flex flex - col items - center gap - 3'>;
-      <div className='text - 3xl opacity - 70'>{icon ?? '🧭'}</div>;
-      <h3 className='text - lg font - semibold'>{title}</h3>;
-      {description && (
-        <p className='text - sm opacity - 80 max - w-prose'>{description}</p>)}
-      {(primary_action || secondary_action) && (
-        <div className='flex gap - 2 mt - 2'>;
-          {primary_action && (
-            <Link href={primary_action.href}>;
-              <a>;
-                <EnhancedButton size='md'>{primary_action.label}</EnhancedButton>              </a > export type EmptyStateProps = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   title: string,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   description?: string;
   icon?: React.ReactNode;
-<<<<<<< HEAD
-  primaryAction?: { label: string, href: string }
-=======
-      {(primaryAction || secondaryAction) && (;
-        <div className='flex gap-2 mt-2'>;
-          {primaryAction && (;
-            <Link href={primaryAction && primaryAction.href}>;
-              <a>;
-                <EnhancedButton size='md'>{primaryAction && primaryAction.label}</EnhancedButton>              </a>export type EmptyStateProps = {;
-  title: string,;
-  description?: string;
-  icon?: React && React.ReactNode;
-  primaryAction?: { label: string, href: string },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   secondaryAction?: { label: string, href: string }
 }
 
@@ -139,20 +24,6 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
       <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;
       <h3 className="text-lg font-semibold">{title}</h3>;
       {description && <p className="text-sm opacity-80 max-w-prose">{description}</p>}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      {(primaryAction |secondaryAction) && (
-        <div className="flex gap-2 mt-2">
-          {primaryAction && (
-            <Link href={primaryAction.href}>
-              <a>
-                <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
-              </a>
-            </Link>
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {(primaryAction || secondaryAction) && (;
         <div className="flex gap-2 mt-2">;
           {primaryAction && (;
@@ -185,11 +56,6 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
       )}
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   primary_action?: { label: string, href: string },
   secondary_action?: { label: string, href: string }

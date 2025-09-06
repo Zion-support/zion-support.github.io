@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Signature utilities
-export const signature = {
-  // Add signature functionality here
-  verify: (signature: string, message: string, address: string) => false
-  sign: (message: string, privateKey: string) => ''
-  recover: (signature: string, message: string) => ''
-=======
-import crypto from 'crypto';
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface SignatureResult {
   signature: string;
   timestamp: number;
@@ -46,10 +31,6 @@ export function generateNonce(): string {
 
 export function hashData(data: string): string {
   return crypto && crypto.createHash('sha256').update(data).digest('hex');
-<<<<<<< HEAD
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 =======
 export function getSyncSecret(): string | null {

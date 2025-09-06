@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 export default function PostJobPage() {
@@ -18,20 +13,6 @@ export default function PostJobPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   async function handleSubmit(e: React.FormEvent) {
-<<<<<<< HEAD
-    e.preventDefault()
-    setError(null)
-    if (!title |!description |!category |!clientEmail) {
-      setError('Please fill in all required fields.')
-=======
-    e.preventDefault();
-    setError(null);
-
-    if (!title || !description || !category || !clientEmail) {
-      setError('Please fill in all required fields.');
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return
     }
@@ -41,25 +22,6 @@ export default function PostJobPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          title
-          description
-          category
-          requiredSkills: skills
-            .split()
-            .map((s) => s.trim())
-            .filter(Boolean)
-          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined
-          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined
-          deliveryDeadlineIso: deliveryDeadlineIso |undefined
-          clientEmail})})
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error |'Failed to post job')
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           title;
           description;
           category;
@@ -75,21 +37,11 @@ export default function PostJobPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to post job');
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message |'Something went wrong')
     } finally {
-<<<<<<< HEAD
-      setIsSubmitting(false)
-=======
-      setIsSubmitting(false),
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
@@ -140,13 +92,6 @@ export default function PostJobPage() {
       </form>
     </div>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import { useState } from 'react',
 import { use_router } from 'next / router',

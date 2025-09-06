@@ -1,51 +1,7 @@
-<<<<<<< HEAD
-
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { useState, useEffect } from "react";
-import { X } from "lucide-react";
-export function FloatingCTA() {;
-  const [isVisible, setIsVisible] = useState(false);
-  const [isClosed, setIsClosed] = useState(false);
-<<<<<<< HEAD
-  useEffect(() => {
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px
-      if (scrollPosition > threshold && !isClosed) {
-=======
-
-  useEffect(() => {;
-    const handleScroll = () => {;
-      const scrollPosition = window && window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px;
-
-      if (scrollPosition > threshold && !isClosed) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
-<<<<<<< HEAD
-    }
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    }
-  }, [isClosed]);
-  const handleClose = () => {
-=======
-    };
-
-    window && window.addEventListener("scroll", handleScroll);
-    return () => {;
-      window && window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isClosed]);
-
-  const handleClose = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsClosed(true);
     setIsVisible(false);
   }

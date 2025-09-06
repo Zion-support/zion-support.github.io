@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Page() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function Page() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -36,11 +27,6 @@ export default function Page() {;
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-<<<<<<< HEAD
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
-=======
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -49,11 +35,6 @@ export default function Page() {;
       </main>;
     </div>;
   );export default function Page() {;
-<<<<<<< HEAD
-=======
-=======
-export default function Page() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
@@ -71,11 +52,6 @@ export default function Page() {
       </main>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import Head from 'next / head';
 export default /**

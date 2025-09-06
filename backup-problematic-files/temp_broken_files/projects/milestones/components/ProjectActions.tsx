@@ -50,9 +50,3 @@ export function ProjectActions({;
   isTalent && !isUnderDispute && (<Button onClick={;
   onAddMilestone ;
 }> Add Milestone </Button>) ;
-<<<<<<< HEAD:temp_broken_files/projects/milestones/components/ProjectActions.tsx
-}</div>) ;"}"
-=======
-}</div>) ;
-}"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/components/ProjectActions.tsx

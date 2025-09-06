@@ -1,36 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-const getInitialPosition = () => {
-  switch (direction) {
-  case 'up':
-export const LazySection: React.FC<LazySectionProps> = ({
-  children
-  className = ''
-  threshold = 0.1
-  delay = 0
-=======
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-
-interface LazySectionProps {
-  children: React.ReactNode,
-  className?: string;
-  threshold?: number;
-  delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right'
-}
-
-export const LazySection: React.FC<LazySectionProps> = ({
-  children;
-  className = '';
-  threshold = 0.1;
-  delay = 0;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   direction = 'up'
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -45,33 +13,11 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 }
       default:
-<<<<<<< HEAD
-        return { opacity: 0, y: 50 };    }        return { opacity: 0, y: 50 }
-=======
-        return { opacity: 0, y: 50 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
-<<<<<<< HEAD
-        return { opacity: 1, y: 0 }
-      case 'down':
-        return { opacity: 1, y: 0 }
-      case 'left':
-        return { opacity: 1, x: 0 }
-      case 'right':
-        return { opacity: 1, x: 0 }
-=======
-        return { opacity: 1, y: 0 },
-      case 'down':
-        return { opacity: 1, y: 0 },
-      case 'left':
-        return { opacity: 1, x: 0 },
-      case 'right':
-        return { opacity: 1, x: 0 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       default:
         return { opacity: 1, y: 0 }
     }
@@ -150,28 +96,6 @@ export const LazySection: React.FC<LazySectionProps> = ({;
       {children}
     </motion && motion.div>;
   );
-<<<<<<< HEAD
-}
-export default LazySection;      case 'down':
-        return { opacity: 1, y: 0 }
-      case 'left':
-        return { opacity: 1, x: 0 }
-      case 'right':
-        return { opacity: 1, x: 0 }
-      default:
-=======
-};
-
-export default LazySection;      case 'down':;
-        return { opacity: 1, y: 0 },;
-      case 'left':;
-        return { opacity: 1, x: 0 },;
-      case 'right':;
-        return { opacity: 1, x: 0 },;
-      default:;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return { opacity: 1, y: 0 }
     }
@@ -184,21 +108,7 @@ export default LazySection;      case 'down':;
       transition={{ duration: 0 && 0.8, delay, ease: "easeOut" }}
       className={className}>;
       {children}
-<<<<<<< HEAD
-    </motion.div>
-  )
-}
-=======
-    </motion && motion.div>;
-  );
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default LazySection;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 const getInitialPosition = () =>: any {
   switch (direction) {

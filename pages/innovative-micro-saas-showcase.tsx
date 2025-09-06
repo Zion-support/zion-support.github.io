@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {
-  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target
-  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink
-  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
-} from 'lucide-react'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { 
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target;
@@ -26,17 +9,6 @@ import Layout from '../components/layout/Layout';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
 const contactInfo = {
-<<<<<<< HEAD
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   website: 'https://ziontechgroup.com'
 }
@@ -55,12 +27,6 @@ const categories = [
   { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' }
   { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' }
   { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 ];
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -71,24 +37,6 @@ export default function InnovativeMicroSaasShowcase() {
   const [sortBy, setSortBy] = useState('popularity')
   // Combine all services
   const allServices = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    ...innovativeRealMicroSaasServices2025
-    ...emergingTechServicesEnhanced2025
-  ]
-  // Filter services based on category and search
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' |
-      service.category.toLowerCase().includes(selectedCategory) |
-      service.name.toLowerCase().includes(selectedCategory)
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ...innovativeRealMicroSaasServices2025;
     ...emergingTechServicesEnhanced2025
   ];
@@ -113,18 +61,6 @@ export default function InnovativeMicroSaasShowcase() {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       case 'price-low':
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''))
-      case 'price-high':
-        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''))
-      case 'rating':
-        return b.rating - a.rating
-      case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
       case 'price-high':
         return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''));
@@ -145,111 +81,6 @@ export default function InnovativeMicroSaasShowcase() {
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, emerging technology, business solutions, innovation" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas-showcase" />
       </Head>
-<<<<<<< HEAD
-
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-              Innovative Micro SAAS Services
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive portfolio of cutting-edge micro SAAS solutions, AI platforms, quantum computing services, and emerging technology innovations designed to transform your business.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {stats.map((stat, index) => (
-                <motion.div
-=======
-=======
-import React, { useState } from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { motion } from 'framer-motion',
-import {
-  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,
-  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink,
-  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette;
-} from 'lucide-react',
-import Layout from '../components / layout / Layout',
-import { innovativeRealMicroSaasServices2025 } from '../data / 2025 - innovative - real - micro - saas - services',
-import { emergingTechServicesEnhanced2025 } from '../data / 2025 - emerging - tech - services - enhanced',
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-},
-const stats = [;
-  { number: '50+', label: 'Innovative Services', icon: Star, color: 'text - cyan - 400' },
-  { number: '1000+', label: 'Companies Served', icon: Users, color: 'text - purple - 400' },
-  { number: '99.9%', label: 'Uptime', icon: Award, color: 'text - green - 400' },
-  { number: '24 / 7', label: 'Support', icon: Zap, color: 'text - pink - 400' }
-],
-const categories = [;
-  { name: 'All Services', value: 'all', icon: Globe, color: 'from - blue - 500 to - cyan - 600' },
-  { name: 'AI & Consciousness', value: 'ai', icon: Brain, color: 'from - purple - 500 to - pink - 600' },
-  { name: 'Quantum & Emerging Tech', value: 'quantum', icon: Atom, color: 'from - indigo - 500 to - blue - 600' },
-  { name: 'Enterprise IT', value: 'enterprise', icon: Shield, color: 'from - green - 500 to - emerald - 600' },
-  { name: 'Micro SAAS', value: 'saas', icon: Rocket, color: 'from - orange - 500 to - red - 600' },
-  { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from - pink - 500 to - rose - 600' },
-  { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from - teal - 500 to - cyan - 600' },
-  { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from - yellow - 500 to - orange - 600' }
-],
-export default /**
- * InnovativeMicroSaasShowcase - Function description
- */
-function InnovativeMicroSaasShowcase() {
-  const [selected_category, setSelectedCategory] = useState ('all'),
-  const [search_term, setSearchTerm] = useState (''),
-  const [view_mode, setViewMode] = useState ('grid'),
-  const [sort_by, setSortBy] = useState ('popularity'),
-  // Combine all services;
-  const all_services = [;
-    ...innovativeRealMicroSaasServices2025,
-    ...emergingTechServicesEnhanced2025;
-  ],
-  // Filter services based on category and search;
-  const filtered_services = all_services.filter (service => {
-    const matches_category = selected_category === 'all' ||;
-      service.category.toLowerCase ().includes (selected_category) ||;
-      service.name.toLowerCase ().includes (selected_category),
-    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-      service.tagline.toLowerCase ().includes (search_term.toLowerCase ()),
-    return matches_category && matches_search;
-  }),
-  // Sort services;
-  const sorted_services = [...filtered_services].sort ((a, b) => {
-    switch (sort_by) {
-      case 'popularity':;
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
-      case 'price - low':;
-        return parse_float (a.price.replace ('$', '')) - parse_float (b.price.replace ('$', '')),
-      case 'price - high':;
-        return parse_float (b.price.replace ('$', '')) - parse_float (a.price.replace ('$', '')),
-      case 'rating':;
-        return b.rating - a.rating,
-      case 'newest':;
-        return new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time (),
-      default: return 0;
-    }
-  }),
-  return (
-    <Layout>;
-      <Head>;
-        <title > Innovative Micro SAAS Services Showcase 2025 | Zion Tech Group</title>;
-        <meta name="description" content="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, quantum computing platforms, and emerging technology solutions. Transform your business with cutting - edge technology." />;
-        <meta name="keywords" content="micro SAAS, AI services, quantum computing, emerging technology, business solutions, innovation" />;
-        <link rel="canonical" href="https://ziontechgroup.com / innovative - micro - saas - showcase" />;
-      </Head>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 lg:py - 32 overflow - hidden">;
         <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
@@ -273,10 +104,6 @@ function InnovativeMicroSaasShowcase() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
                   <stat.icon className={`w-5 h-5 ${stat.color}`} />
@@ -305,81 +132,13 @@ function InnovativeMicroSaasShowcase() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* Filters and Search */}
-      <section className="py-8 bg-black/50 backdrop-blur-sm border-b border-white/10">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-=======
-=======
-                  className="flex items - center space - x-2 bg - white / 10 backdrop - blur - sm rounded - full px - 6 py - 3 border border - white / 20";
-                >;
-                  <stat.icon className={`w - 5 h - 5 ${stat.color}`} />;
-                  <span className="text - white font - semibold">{stat.number}</span>;
-                  <span className="text - gray - 300 text - sm">{stat.label}</span>;
-                </motion.div>))}
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Contact Bar */}
-      <section className="bg - gradient - to - r from - purple - 600 via - pink - 600 to - red - 600 py - 4">;
-        <div className="container mx - auto px - 4">;
-          <div className="flex flex - col lg:flex - row items - center justify - between text - center lg:text - left">;
-            <div className="flex items - center space - x-4 mb - 4 lg:mb - 0">;
-              <Phone className="w - 5 h - 5 text - white" />;
-              <span className="text - white font - semibold">{contact_info.mobile}</span>;
-              <Mail className="w - 5 h - 5 text - white" />;
-              <span className="text - white font - semibold">{contact_info.email}</span>;
-            </div>;
-            <div className="flex items - center space - x-4">;
-              <MapPin className="w - 5 h - 5 text - white" />;
-              <span className="text - white text - sm">{contact_info.address}</span>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Filters and Search */}
       <section className="py - 8 bg - black / 50 backdrop - blur - sm border - b border - white / 10">;
         <div className="container mx - auto px - 4">;
           <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Search */}
-<<<<<<< HEAD
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              />
-            </div>
-=======
-            <div className="relative flex - 1 max - w-md">;
-              <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={search_term}
-                on_change={(e) => setSearchTerm (e.target.value)}
-                className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent";
-              />;
-            </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Category Filter */}
-<<<<<<< HEAD
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-=======
-            <div className="flex flex - wrap gap - 2">;
-              {categories.map ((category) => (
-                <button;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={category.value}
                   on_click={() => setSelectedCategory (category.value)}
                   className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg border transition - all duration - 300 ${
@@ -387,10 +146,6 @@ function InnovativeMicroSaasShowcase() {
                       ? `bg - gradient - to - r ${category.color} border - transparent text - white`;
                       : 'bg - white / 10 border - white / 20 text - gray - 300 hover:bg - white / 20';
                   }`}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 >
                   <category.icon className="w-4 h-4" />
                   <span className="text-sm font-medium">{category.name}</span>
@@ -443,67 +198,6 @@ function InnovativeMicroSaasShowcase() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {sortedServices.map((service, index) => (
                 <motion.div
-<<<<<<< HEAD
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
-                >
-=======
-=======
-                >;
-                  <category.icon className="w - 4 h - 4" />;
-                  <span className="text - sm font - medium">{category.name}</span>;
-                </button>))}
-            </div>;
-            {/* View Mode and Sort */}
-            <div className="flex items - center space - x-4">;
-              <div className="flex bg - white / 10 rounded - lg p - 1">;
-                <button;
-                  on_click={() => setViewMode ('grid')}
-                  className={`p - 2 rounded ${view_mode === 'grid' ? 'bg - purple - 600 text - white' : 'text - gray - 400 hover:text - white'}`}
-                >;
-                  <Grid className="w - 5 h - 5" />;
-                </button>;
-                <button;
-                  on_click={() => setViewMode ('list')}
-                  className={`p - 2 rounded ${view_mode === 'list' ? 'bg - purple - 600 text - white' : 'text - gray - 400 hover:text - white'}`}
-                >;
-                  <List className="w - 5 h - 5" />;
-                </button>;
-              </div>;
-              <select;
-                value={sort_by}
-                on_change={(e) => setSortBy (e.target.value)}
-                className="bg - white / 10 border border - white / 20 rounded - lg px - 4 py - 2 text - white focus:outline - none focus:ring - 2 focus:ring - purple - 500";
-              >;
-                <option value="popularity">Most Popular</option>;
-                <option value="rating">Highest Rated</option>;
-                <option value="price - low">Price: Low to High</option>;
-                <option value="price - high">Price: High to Low</option>;
-                <option value="newest">Newest First</option>;
-              </select>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Services Grid */}
-      <section className="py - 16">;
-        <div className="container mx - auto px - 4">;
-          <div className="mb - 8">;
-            <h2 className="text - 3xl font - bold text - white mb - 2">;
-              {selected_category === 'all' ? 'All Services' : `${categories.find (c => c.value === selected_category)?.name}`}
-            </h2>;
-            <p className="text - gray - 400">;
-              {filtered_services.length} services found;
-            </p>;
-          </div>;
-          {view_mode === 'grid' ? (
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">;
-              {sorted_services.map ((service, index) => (
-                <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
@@ -513,188 +207,27 @@ function InnovativeMicroSaasShowcase() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   {/* Popular Badge */}
                   {service.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      Popular
-                    </div>
-                  )}
-                  {/* Service Icon */}
-                  <div className="text-4xl mb-4">{service.icon}</div>
-<<<<<<< HEAD
-
-                  {/* Service Info */}
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                    {service.tagline}
-                  </p>
-
-                  {/* Price */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-2xl font-bold text-purple-400">
-=======
-=======
-                    <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - bold px - 3 py - 1 rounded - full">;
-                      Popular;
-                    </div>)}
-                  {/* Service Icon */}
-                  <div className="text - 4xl mb - 4">{service.icon}</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {/* Service Info */}
                   <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
                     {service.name}
                   </h3>;
                   <p className="text - gray - 400 text - sm mb - 4 line - clamp - 2">;
                     {service.tagline}
-<<<<<<< HEAD
-                  </p>
-=======
-                  </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {/* Price */}
                   <div className="flex items - center justify - between mb - 4">;
                     <div className="text - 2xl font - bold text - purple - 400">;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {service.price}
-<<<<<<< HEAD
-                      <span className="text-sm text-gray-400 font-normal">{service.period}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-sm text-gray-300">{service.rating}</span>
-                      <span className="text-xs text-gray-500">({service.reviews})</span>
-                    </div>
-                  </div>
-                  {/* Features */}
-                  <div className="mb-4">
-                    <div className="text-sm text-gray-400 mb-2">Key Features:</div>
-                    <div className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Category and Setup */}
-                  <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
-                    <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
-                    <span>Setup: {service.setupTime}</span>
-                  </div>
-<<<<<<< HEAD
-
-                  {/* Action Buttons */}
-                  <div className="flex space-x-2">
-                    <Link
-=======
-=======
-                      <span className="text - sm text - gray - 400 font - normal">{service.period}</span>;
-                    </div>;
-                    <div className="flex items - center space - x-1">;
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-                      <span className="text - sm text - gray - 300">{service.rating}</span>;
-                      <span className="text - xs text - gray - 500">({service.reviews})</span>;
-                    </div>;
-                  </div>;
-                  {/* Features */}
-                  <div className="mb - 4">;
-                    <div className="text - sm text - gray - 400 mb - 2">Key Features:</div>;
-                    <div className="space - y-1">;
-                      {service.features.slice (0, 3).map ((feature, idx) => (
-                        <div key={idx} className="flex items - center space - x-2 text - xs text - gray - 300">;
-                          <CheckCircle className="w - 3 h - 3 text - green - 400" />;
-                          <span>{feature}</span>;
-                        </div>))}
-                    </div>;
-                  </div>;
-                  {/* Category and Setup */}
-                  <div className="flex items - center justify - between text - xs text - gray - 500 mb - 4">;
-                    <span className="bg - white / 10 px - 2 py - 1 rounded">{service.category}</span>;
-                    <span > Setup: {service.setup_time}</span>;
-                  </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {/* Action Buttons */}
                   <div className="flex space - x-2">;
                     <Link;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       href={service.link}
-<<<<<<< HEAD
-                      className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
-                    >
-                      Learn More
-                    </Link>
-                    <button className="p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300">
-                      <Heart className="w-4 h-4" />
-                    </button>
-                  </div>
-=======
-                      className="flex - 1 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white text - center py - 2 px - 4 rounded - lg hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 font - medium";
-                    >;
-                      Learn More;
-                    </Link>;
-                    <button className="p - 2 bg - white / 10 border border - white / 20 rounded - lg text - gray - 400 hover:text - white hover:bg - white / 20 transition - all duration - 300">;
-                      <Heart className="w - 4 h - 4" />;
-                    </button>;
-                  </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {/* Hover Overlay */}
-<<<<<<< HEAD
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6">
-                    <div className="text-center w-full">
-                      <p className="text-white text-sm mb-3 line-clamp-3">{service.description}</p>
-                      <Link
-                        href={service.link}
-                        className="inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
-                      >
-                        <span>View Details</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            <div className="space-y-4">
-              {sortedServices.map((service, index) => (
-                <motion.div
-=======
-                  <div className="absolute inset - 0 bg - gradient - to - t from - black / 80 via - transparent to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - xl flex items - end p - 6">;
-                    <div className="text - center w - full">;
-                      <p className="text - white text - sm mb - 3 line - clamp - 3">{service.description}</p>;
-                      <Link;
-                        href={service.link}
-                        className="inline - flex items - center space - x-2 bg - purple - 600 text - white px - 4 py - 2 rounded - lg hover:bg - purple - 700 transition - colors";
-                      >;
-                        <span > View Details</span>;
-                        <ArrowRight className="w - 4 h - 4" />;
-                      </Link>;
-                    </div>;
-                  </div>;
-                </motion.div>))}
-            </div>) : (
-            <div className="space - y-4">;
-              {sorted_services.map ((service, index) => (
-                <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={service.id}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   animate={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <div className="flex items-start space-x-6">
-                    {/* Service Icon */}
-=======
-                  className="group bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 hover:border - purple - 500 / 50 transition - all duration - 300";
-                >;
-                  <div className="flex items - start space - x-6">;
-                    {/* Service Icon */}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <div className="text-4xl">{service.icon}</div>
 =======
                     <div className="text - 4xl">{service.icon}</div>;
@@ -711,23 +244,6 @@ function InnovativeMicroSaasShowcase() {
                         <div className="text - right">;
                           <div className="text - 2xl font - bold text - purple - 400">;
                             {service.price}
-<<<<<<< HEAD
-                            <span className="text-sm text-gray-400 font-normal">{service.period}</span>
-                          </div>
-                          <div className="flex items-center justify-end space-x-1 mt-1">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                            <span className="text-sm text-gray-300">{service.rating}</span>
-                            <span className="text-xs text-gray-500">({service.reviews})</span>
-                          </div>
-                        </div>
-                      </div>
-<<<<<<< HEAD
-
-                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
@@ -757,53 +273,6 @@ function InnovativeMicroSaasShowcase() {
           )}
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
-=======
-                            <span className="text - sm text - gray - 400 font - normal">{service.period}</span>;
-                          </div>;
-                          <div className="flex items - center justify - end space - x-1 mt - 1">;
-                            <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-                            <span className="text - sm text - gray - 300">{service.rating}</span>;
-                            <span className="text - xs text - gray - 500">({service.reviews})</span>;
-                          </div>;
-                        </div>;
-                      </div>;
-                      <p className="text - gray - 300 text - sm mb - 4 line - clamp - 2">{service.description}</p>;
-                      <div className="flex items - center justify - between">;
-                        <div className="flex items - center space - x-4 text - xs text - gray - 500">;
-                          <span className="bg - white / 10 px - 2 py - 1 rounded">{service.category}</span>;
-                          <span > Setup: {service.setup_time}</span>;
-                          <span > Trial: {service.trial_days} days</span>;
-                        </div>;
-                        <div className="flex space - x-2">;
-                          <Link;
-                            href={service.link}
-                            className="bg - gradient - to - r from - purple - 600 to - pink - 600 text - white px - 4 py - 2 rounded - lg hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 font - medium";
-                          >;
-                            Learn More;
-                          </Link>;
-                          <button className="p - 2 bg - white / 10 border border - white / 20 rounded - lg text - gray - 400 hover:text - white hover:bg - white / 20 transition - all duration - 300">;
-                            <Heart className="w - 4 h - 4" />;
-                          </button>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </motion.div>))}
-            </div>)}
-        </div>;
-      </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* CTA Section */}
       <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - pink - 900 / 20 to - red - 900 / 20">;
         <div className="container mx - auto px - 4 text - center">;
@@ -812,8 +281,6 @@ function InnovativeMicroSaasShowcase() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -840,13 +307,6 @@ function InnovativeMicroSaasShowcase() {
       </section>
     </Layout>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
           >;
             <h2 className="text - 4xl font - bold text - white mb - 6">;

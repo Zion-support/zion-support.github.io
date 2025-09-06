@@ -1,9 +1,3 @@
-<<<<<<< HEAD:pages-disabled/api.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 class ErrorBoundary extends React.Component {
@@ -180,7 +174,5 @@ export default function API() {;
       </div>;
     </>;
   )}
-<<<<<<< HEAD
->>>>>>> origin/chore/merge-open-prs
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

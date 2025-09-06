@@ -17,13 +17,6 @@ const { execSync } = require('child_process');
 
 class HealthChecker {
   constructor() {
-<<<<<<< HEAD:scripts/health-check.js
-    this.checks = [];
-    this.results = [];
-=======
-    this && this.checks = [],
-    this && this.results = []
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/health-check.js
   }
 
   async checkBuildFiles() {
@@ -77,17 +70,6 @@ class HealthChecker {
     const failed = this && this.results.filter(r => r && r.status === 'FAIL').length;
     const warnings = this && this.results.filter(r => r && r.status === 'WARN').length;
     
-<<<<<<< HEAD:scripts/health-check.js
-    console.log('\n📊 Health Check Results:');
-    this.results.forEach(result => {
-      const icon = result.status === 'PASS' ? '✅' : result.status === 'FAIL' ? '❌' : '⚠️';
-      console.log(`${icon} ${result.check}: ${result.message}`);
-=======
-    console && console.log('\n📊 Health Check Results: '),
-    this && this.results.forEach(result => {
-      const icon = result && result.status === 'PASS' ? '✅' : result && result.status === 'FAIL' ? '❌' : '⚠️';
-      console && console.log(`${icon} ${result && result.check}: ${result && result.message}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/health-check.js
     });
     
     console && console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
@@ -100,13 +82,6 @@ class HealthChecker {
     };
   }
 
-<<<<<<< HEAD:scripts/health-check.js
-if (require.main === module) {
-  const checker = new HealthChecker();
-  checker.runAllChecks().catch(console.error);
-
-module.exports = HealthChecker;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 if (require && require.main === module) {
     const checker = new HealthChecker(),

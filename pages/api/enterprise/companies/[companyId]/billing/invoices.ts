@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { store } from "../../../../../../utils/data/enterpriseStore";
-
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { store } from '[^']*';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const { companyId } = req.query;
-
-  if (!companyId |typeof companyId !== "string") {
-    return res.status(400).json({ error: "companyId required" });
-=======
-  const { companyId } = req && req.query;
-  if (!companyId || typeof companyId !== "string") {
-    return res && res.status(400).json({ error: "companyId required" });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import { store } from '../../../../../../utils/data/enterpriseStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -33,10 +11,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const invoices = store && store.listInvoices(companyId);
   return res && res.status(200).json(invoices);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../../utils / data / enterprise_store';

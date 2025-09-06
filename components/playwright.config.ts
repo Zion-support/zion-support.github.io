@@ -1,29 +1,8 @@
-<<<<<<< HEAD
- trace: on-first-retry' 
-};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
- trace: on-first-retry'
-}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 reporter: [ ['list'], ['json', {
-<<<<<<< HEAD
-  outputFile: playwright-logs/test-results.json'
-=======
-  outputFile: playwright-logs/test-results && results.json' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }], ['html', {
   outputFolder: playwright-logs/html-report', open: never'
 }]];
 // Configure the web server to be started by Playwright webServer: {
-<<<<<<< HEAD
-  command: npm run dev', url: http://localhost:3000', reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI timeout: 120 * 1000, // 2 minutes timeout for server to start stdout: pipe', // Pipe stdout to the console' stderr: pipe', // Pipe stderr to the console'
-}
-=======
-  command: npm run dev', url: http://localhost:3000', reuseExistingServer: !process && process.env.CI, // Reuse server locally, start fresh in CI timeout: 120 * 1000, // 2 minutes timeout for server to start stdout: pipe', // Pipe stdout to the console' stderr: pipe', // Pipe stderr to the console' 
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Optional: Define projects for different browsers // projects: [ // {
   // name: chromium', // use: {
   ...devices['Desktop Chrome']
@@ -36,19 +15,6 @@ reporter: [ ['list'], ['json', {
 }
 // {
   // name: webkit', // use: {
-<<<<<<< HEAD
-  ...devices['Desktop Safari']
-}, //
-}
-// ] });    ['list'],    ['json', { outputFile: playwright-logs/test-results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
-=======
-  ...devices['Desktop Safari'] 
-}, // 
-};
-// ] });    ['list'],    ['json', { outputFile: playwright-logs/test-results && results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import { defineConfig } from @playwright/test';
 default defineConfig({
@@ -108,17 +74,6 @@ reporter: [ ['list'], ['json', {
   //   {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
-<<<<<<< HEAD
-
-  //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
-  // ]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
   // ];

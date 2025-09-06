@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
@@ -14,12 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.status(200).json({ message: 'OK' })
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils / admin_auth',

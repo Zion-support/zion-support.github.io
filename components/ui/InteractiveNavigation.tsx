@@ -1,38 +1,6 @@
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -50,17 +18,6 @@ interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
-<<<<<<< HEAD
-
-interface InteractiveNavigationProps {;
-  items: NavigationItem[], className?: string,;
-}
-
-const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ ;
-  items, ;
-  className = '' ;
-}) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [activeItem, setActiveItem] = useState<string | null>(null);
   return (
     <nav className={`relative ${className}`}>;
@@ -88,18 +45,6 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ ;
                   />;
                 </svg>;
               )}
-<<<<<<< HEAD
-            </Link>
-{/* Submenu */}
-            {item.submenu && activeItem === item.name && (
-              <motion.div
-=======
-            </Link>;
-
-            {/* Submenu */}
-            {item && item.submenu && activeItem === item && item.name && (;
-              <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
@@ -135,11 +80,6 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
-<<<<<<< HEAD
-            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>","
-=======
-            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 =======

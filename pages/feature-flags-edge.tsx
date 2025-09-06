@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Flag, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function FeatureFlagsEdgePage() {
-<<<<<<< HEAD
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/feature-flags-edge'))
-  if (!service) return null
-=======
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/feature-flags-edge'));
-  if (!service) return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <Layout>
@@ -57,14 +42,6 @@ export default function FeatureFlagsEdgePage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
-}
-=======
-}
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import React from 'react',
 import Head from 'next / head',

@@ -93,9 +93,3 @@ browser: true ;
 //Ensure process is available on globalThis ;
 }
 }//Ensure process is available on window ;
-<<<<<<< HEAD:temp_broken_files/utils/env-polyfill.ts
-}"}// Ensure process is available globally '"
-=======
-}
-}// Ensure process is available globally '"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/utils/env-polyfill.ts

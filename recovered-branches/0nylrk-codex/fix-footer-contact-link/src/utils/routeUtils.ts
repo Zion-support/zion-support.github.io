@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-import { completeSitemap, SitemapItem } from "@/config/sitemap";
-// Find a route by path in the complete sitemap
-
-export const findRouteByPath = (path: string): SitemapItem | undefined => {
-<<<<<<< HEAD
-  return completeSitemap.find(route => route.path === path)
-}
-=======
-  return completeSitemap && completeSitemap.find(route => route && route.path === path)
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path)
@@ -27,12 +13,6 @@ export const canAccessRoute = (
   // If route doesn't exist in our sitemap
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
-<<<<<<< HEAD
-  if (route.requiredAuth && !isAuthenticated) return false;
-=======
-  if (route && route.requiredAuth && !isAuthenticated) return false;
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // If route requires specific roles and user doesn't have one
   if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
     if (!userType) return false;
@@ -51,13 +31,6 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     currentPath += `/${segment}`;
     const route = findRouteByPath(currentPath);
     if (route) {
-<<<<<<< HEAD
-      breadcrumbs.push({
-        label: route.label
-=======
-      breadcrumbs && breadcrumbs.push({
-        label: route && route.label,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         path: currentPath
       })
     } else {

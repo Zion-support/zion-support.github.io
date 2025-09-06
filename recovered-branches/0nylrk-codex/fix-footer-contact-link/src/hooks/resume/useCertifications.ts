@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Certification  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useCertifications() {
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [error, setError] = useState<string | null>(null);
-  const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to add certifications')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-    try {
-      const { error } = await supabase
-        .from('certifications')
-        .insert({
-          resume_id: resumeId;
-<<<<<<< HEAD
-          name: cert.name;
-          issuing_organization: cert.issuing_organization;
-          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
-          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
-          credential_id: cert.credential_id
-          credential_url: cert.credential_url
-=======
-          name: cert && cert.name;
-          issuing_organization: cert && cert.issuing_organization;
-          issue_date: cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
-          expiration_date: cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
-          credential_id: cert && cert.credential_id,
-          credential_url: cert && cert.credential_url
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });
       if (error) throw error;
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
@@ -57,21 +18,6 @@ export function useCertifications() {
       const { error } = await supabase
         .from('certifications')
         .update({
-<<<<<<< HEAD
-          name: cert.name;
-          issuing_organization: cert.issuing_organization;
-          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
-          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
-          credential_id: cert.credential_id
-          credential_url: cert.credential_url
-=======
-          name: cert && cert.name;
-          issuing_organization: cert && cert.issuing_organization;
-          issue_date: cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
-          expiration_date: cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
-          credential_id: cert && cert.credential_id,
-          credential_url: cert && cert.credential_url
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         })
         .eq('id', certId);
       if (error) throw error;

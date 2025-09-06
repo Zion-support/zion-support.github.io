@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -74,65 +70,11 @@ return results;
     return [];
   }
 }
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-const dir = path.join(process.cwd(), 'automation_logs')
-  try {
-    if (fs.existsSync(dir)) {
-      const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse()
-      if (files.length > 0) {
-        const logs = files.slice(0, 50).map((f) => {
-          try {
-            const raw = fs.readFileSync(path.join(dir, f), 'utf8')
-            const json = JSON.parse(raw)
-            return { id: json.id |f, file: f, generatedAt: json.generatedAt, insights: json.insights }
-          } catch {
-            return { id: f, file: f }
-          }
-        })
-        return res.status(200).json({ logs })
-=======
-export default async /**
- * handler - Function description
- */
-function handler() {
-const dir = path.join (process.cwd (), 'automation_logs'),
-  try {
-    if () {) {
-  $2
-}
-      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
-      // Check condition
-if ( {) {
-  $2
-}
-        const logs = files.slice (0, 50).map ((f) => {
-          try {
-            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
-            const json = JSON.parse (raw),
-            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
-          } catch {
-            return { id: f, file: f }
-          }
-        }),
-        return res.status (200).json ({ logs });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
   } catch {
     // fall through to GitHub;
   }
-<<<<<<< HEAD
-const remote = await fetchFromGitHub()
-
-  return res.status(200).json({ logs: remote })
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 const remote = await fetchFromGitHub (),
   return res.status (200).json ({ logs: remote });

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import { readState } from '../../../lib/integrations/fileStore';
-import { PROVIDERS } from '../../../lib/integrations/registry';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
-  const state = readState()
-  const connections: Record<string, any> = {}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
   const state = readState();
   const connections: Record<string, any> = {};
@@ -22,13 +8,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
   res.status(200).json({ connections })
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_state } from '../../../lib / integrations / file_store',

@@ -16,33 +16,6 @@ export interface TalentProfile {
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-<<<<<<< HEAD
-
-    title: string
-
-    description: string
-  }[]
-}
-export interface TalentProfileFilters {
-  search?: string;
-  skills?: string[],
-  availabilities?: string[],
-  regions?: string[],
-  priceRange?: [number, number],
-  experienceRange?: [number, number]
-=======
-    title: string,
-    description: string;
-  }[];
-}
-export interface TalentProfileFilters {
-  search?: string;
-  skills?: string[];
-  availabilities?: string[];
-  regions?: string[];
-  price_range?: [number, number];
-  experience_range?: [number, number];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface HireRequest {
   id: string;
@@ -52,31 +25,4 @@ export interface HireRequest {
   project_description: string;
   budget: {
     min: number;
-<<<<<<< HEAD
-
-    max: number
-
-    currency: string
-  }
-  timeline: {
-    startDate: string;
-
-    endDate?: string
-    estimatedDuration?: string
-  }
-  status: 'pending' | 'accepted' | 'rejected' | 'completed'
-
-  createdAt: string
-=======
-    max: number,
-    currency: string;
-  }
-  timeline: {
-    start_date: string;
-    end_date?: string,
-    estimated_duration?: string;
-  }
-  status: 'pending' | 'accepted' | 'rejected' | 'completed',
-  created_at: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

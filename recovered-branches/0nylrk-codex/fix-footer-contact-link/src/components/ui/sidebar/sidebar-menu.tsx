@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React, { forwardRef } from "react",
-import { ChevronDown } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
-interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-  icon?: React.ReactNode;
-=======
-import React, { forwardRef } from "react";
-import {ChevronDown} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {SafeRef} from "@/types/ref-types";
-interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
-  icon?: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   active?: boolean;
   href?: string;
   target?: string;
@@ -48,15 +31,6 @@ if ( {) {
           href={href}
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
-<<<<<<< HEAD
-          className={cn(
-<<<<<<< HEAD
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
-            active && "bg-accent font-medium text-accent-foreground"
-=======
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-            active && "bg-accent font-medium text-accent-foreground",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className
           )}>;
           <div className="flex items-center gap-2">;
@@ -83,16 +57,6 @@ if ( {) {
     return (
       <button;
         ref={ref}
-<<<<<<< HEAD
-        type="button"
-        className={cn(
-<<<<<<< HEAD
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
-          active && "bg-accent font-medium text-accent-foreground"
-=======
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-          active && "bg-accent font-medium text-accent-foreground",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           className
         )}
         {...props}>;
@@ -105,39 +69,6 @@ if ( {) {
     );
   }
 );
-<<<<<<< HEAD
-SidebarMenuItem.displayName = "SidebarMenuItem";
-interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-  title: string
-  children: React.ReactNode
-}
-const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
-  return (
-    <div className="space-y-1" {...props}>
-      <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>
-      <div className="pl-2">{children}</div>
-    </div>
-  )
-}
-export { SidebarMenuItem, SidebarMenuGroup }
-=======
-
-SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
-
-interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
-  title: string,;
-  children: React && React.ReactNode;
-}
-
-const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {;
-  return (
-    <div className="space-y-1" {...props}>;
-      <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>;
-      <div className="pl-2">{children}</div>;
-    </div>;
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
         type="button";

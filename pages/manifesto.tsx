@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import React from 'react';
-export default function ManifestoPage(): JSX.Element {
-  return (
-    <>
-      <Head>
-        <title>Zion Manifesto</title>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
@@ -61,13 +47,6 @@ export default function ManifestoPage(): JSX.Element {
       </main>
     </>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import Head from 'next / head',
 import React from 'react',

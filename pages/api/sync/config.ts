@@ -1,25 +1,7 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../utils/sync/storage";
-import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../utils/sync/storage";
-import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const state = readState()
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
@@ -45,13 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ config: state.config })
   }
   return res.status(405).json({ error: "Method not allowed" })
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state  } from '../../../utils / sync / storage';,

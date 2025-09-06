@@ -1,15 +1,6 @@
 import React from 'react';
 import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
-<<<<<<< HEAD
-import {cn} from '@/lib/utils';
-import {ButtonProps, buttonVariants} from '@/components/ui/button';
-<<<<<<< HEAD
-const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
-=======
-
-const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <nav
     role='navigation'
     aria-label='pagination'
@@ -17,20 +8,6 @@ const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'
     {...props}
   />;
 );
-<<<<<<< HEAD
-Pagination.displayName = 'Pagination';
-const PaginationContent = React.forwardRef<
-  HTMLUListElement
-  React.ComponentProps<'ul'>
->(({ className, ...props }, ref) => (
-=======
-Pagination && Pagination.displayName = 'Pagination';
-
-const PaginationContent = React && React.forwardRef<;
-  HTMLUListElement,;
-  React && React.ComponentProps<'ul'>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <ul
 =======
 ;
@@ -55,64 +32,10 @@ const PaginationContent = React.forward_ref<;
     ref={ref}
     className={cn ('flex flex - row items - center gap - 1', class_name)}
     {...props}
-<<<<<<< HEAD
-  />;
-));
-<<<<<<< HEAD
-PaginationContent.displayName = 'PaginationContent';
-const PaginationItem = React.forwardRef<
-  HTMLLIElement
-  React.ComponentProps<'li'>
->(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn('', className)} {...props} />
-));
-PaginationItem.displayName = 'PaginationItem';
-=======
-  />));
-PaginationContent.display_name = 'PaginationContent';
-;
-const PaginationItem = React.forward_ref<;
-  HTMLLIElement,
-  React.ComponentProps<'li'>;
->(({ class_name, ...props }, ref) => (
-  <li ref={ref} className={cn ('', class_name)} {...props} />));
-PaginationItem.display_name = 'PaginationItem';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 type PaginationLinkProps = {
   is_active?: boolean;
 } & Pick < ButtonProps, 'size'> &;
   React.ComponentProps<'a'>;
-<<<<<<< HEAD
-const PaginationLink = ({
-  className
-  isActive
-  size = 'icon'
-  ...props
-}: PaginationLinkProps) => (
-=======
-PaginationContent && PaginationContent.displayName = 'PaginationContent';
-
-const PaginationItem = React && React.forwardRef<;
-  HTMLLIElement,;
-  React && React.ComponentProps<'li'>;
->(({ className, ...props }, ref) => (;
-  <li ref={ref} className={cn('', className)} {...props} />;
-));
-PaginationItem && PaginationItem.displayName = 'PaginationItem';
-
-type PaginationLinkProps = {;
-  isActive?: boolean;
-} & Pick<ButtonProps, 'size'> &;
-  React && React.ComponentProps<'a'>;
-
-const PaginationLink = ({;
-  className,;
-  isActive,;
-  size = 'icon',;
-  ...props;
-}: PaginationLinkProps) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <a
     aria-current={isActive ? 'page' : undefined}
     className={cn(
@@ -125,20 +48,6 @@ const PaginationLink = ({;
     {...props}
   />;
 );
-<<<<<<< HEAD
-PaginationLink.displayName = 'PaginationLink';
-const PaginationPrevious = ({
-  className
-  ...props
-}: React.ComponentProps<typeof PaginationLink>) =></typeof> (
-=======
-PaginationLink && PaginationLink.displayName = 'PaginationLink';
-
-const PaginationPrevious = ({;
-  className,;
-  ...props;
-}: React && React.ComponentProps<typeof PaginationLink>) =></typeof> (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <PaginationLink
     aria-label='Go to previous page'
     size='default'
@@ -148,20 +57,6 @@ const PaginationPrevious = ({;
     <span>Previous</span>;
   </PaginationLink>;
 );
-<<<<<<< HEAD
-PaginationPrevious.displayName = 'PaginationPrevious';
-const PaginationNext = ({
-  className
-  ...props
-}: React.ComponentProps<typeof Pagination</typeof>Link>) => (
-=======
-PaginationPrevious && PaginationPrevious.displayName = 'PaginationPrevious';
-
-const PaginationNext = ({;
-  className,;
-  ...props;
-}: React && React.ComponentProps<typeof Pagination</typeof>Link>) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <PaginationLink
     aria-label='Go to next page'
     size='default'
@@ -171,20 +66,6 @@ const PaginationNext = ({;
     <ChevronRight className='h-4 w-4' />;
   </PaginationLink>;
 );
-<<<<<<< HEAD
-PaginationNext.displayName = 'PaginationNext';
-const PaginationEllipsis = ({
-  className
-  ...props
-}: React.ComponentProps<'span'>) => (
-=======
-PaginationNext && PaginationNext.displayName = 'PaginationNext';
-
-const PaginationEllipsis = ({;
-  className,;
-  ...props;
-}: React && React.ComponentProps<'span'>) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <span
     aria-hidden
     className={cn('flex h-9 w-9 items-center justify-center', className)}
@@ -193,30 +74,6 @@ const PaginationEllipsis = ({;
     <span className='sr-only'>More pages</span>;
   </span>;
 );
-<<<<<<< HEAD
-PaginationEllipsis.displayName = 'PaginationEllipsis';
-export {
-  Pagination
-  PaginationContent
-  PaginationEllipsis
-  PaginationItem
-  PaginationLink
-  PaginationNext
-  PaginationPrevious
-}
-=======
-PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
-
-export {;
-  Pagination,;
-  PaginationContent,;
-  PaginationEllipsis,;
-  PaginationItem,;
-  PaginationLink,;
-  PaginationNext,;
-  PaginationPrevious,;
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 ;
 const PaginationLink = ({

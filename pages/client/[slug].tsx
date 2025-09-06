@@ -1,36 +1,9 @@
-<<<<<<< HEAD
-
-import React, { useEffect, useState } from 'react';
-
-import type { NextPage, GetServerSideProps } from 'next';
-import ReviewSummary from '../../components/reviews/ReviewSummary';
-import ReviewCard from '../../components/reviews/ReviewCard';
-import type { PublicReview, ReviewsSummary } from '../../types/reviews';
-
-<<<<<<< HEAD
-type Props = { clientId: string },
-=======
-<<<<<<< HEAD
-type Props = { clientId: string }
-=======
-type Props = { clientId: string },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const ClientPage: NextPage<Props> = ({ clientId }) => {
   const [summary, setSummary] = useState<ReviewsSummary | null>(null)
   const [reviews, setReviews] = useState<PublicReview[]>([])
   useEffect(() => {
     (async () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const res = await fetch(`/api/reviews/list?targetType=client&targetId=${clientId}`)
-      const data = await res.json()
-      if (res.ok) { setSummary(data.summary), setReviews(data.reviews) }
-    })()
-  }, [clientId])
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const res = await fetch(`/api/reviews/list?targetType=client&targetId=${clientId}`);
       const data = await res.json();
       if (res.ok) { setSummary(data.summary), setReviews(data.reviews) }
@@ -75,23 +48,6 @@ function handle_report() {
         <h1 className="text - 3xl font - bold">Client: {client_id}</h1>;
       </header>;
       {summary && <ReviewSummary summary={summary} />}
-<<<<<<< HEAD
-      <section className="grid gap-4">
-        {reviews.map((r) => (<ReviewCard key={r.id} review={r} onReport={handleReport} />))}
-        {!reviews.length && (<div className="enhanced-card">No public reviews yet.</div>)}
-      </section>
-    </main>
-  )
-}
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { slug } = ctx.query as { slug: string }
-  return { props: { clientId: slug } }
-}
-export default ClientPage;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
       <section className="grid gap - 4">;
         {reviews.map ((r) => (<ReviewCard key={r.id} review={r} on_report={handle_report} />))}
@@ -101,14 +57,4 @@ export default ClientPage;
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },
-<<<<<<< HEAD
-  return { props: { clientId: slug } }
-};
-
-export default ClientPage;
-=======
-  return { props: { client_id: slug } }
-},
-export default ClientPage,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,13 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function BlockchainSolutionsPage() {
-=======
-
-export default function BlockchainSolutionsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 export default function BlockchainSolutionsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -50,11 +39,6 @@ export default function BlockchainSolutionsPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Content coming soon.</p>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import React from 'react';
 export default /**

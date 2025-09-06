@@ -1,23 +1,5 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { getFraudStore } from '../../../../utils/fraud/store';
 function ensureAdmin(req: NextApiRequest): boolean {
-<<<<<<< HEAD
-  const token = req.headers['x-admin-token']
-  if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
-  return token === process.env.ADMIN_TOKEN
-=======
-  const token = req.headers['x-admin-token'];
-  if (!process.env.ADMIN_TOKEN) return true; // allow if not configured
-  return token === process.env.ADMIN_TOKEN;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -38,13 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: label as any})
 
   res.status(200).json({ items })
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getFraudStore } from '../../../../utils / fraud / store',

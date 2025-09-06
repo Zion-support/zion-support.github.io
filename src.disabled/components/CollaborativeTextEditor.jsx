@@ -1,10 +1,3 @@
-<<<<<<< HEAD:src.disabled/components/CollaborativeTextEditor.jsx
-<<<<<<< HEAD
-' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
-" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
 " export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""

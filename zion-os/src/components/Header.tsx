@@ -1,79 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 20);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  const navigation = [;
-    { name: 'Home', href: '/' }
-    { name: 'About', href: '/about' }
-    { name: 'Services', href: '/services' }
-    { name: 'AI Solutions', href: '/ai-solutions' }
-    { name: 'Quantum Computing', href: '/quantum-computing' }
-    { name: 'Research & Development', href: '/research-development' }
-    { name: 'Case Studies', href: '/case-studies' }
-    { name: 'News', href: '/news' }
-    { name: 'Contact', href: '/contact' }];
-  const services = [;
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' }
-    { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' }
-    { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' }
-    { name: 'Business Intelligence', href: '/ai-business-intelligence' }
-    { name: 'Content Generation', href: '/ai-content-generator' }
-    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' }];
-  return (;
-    <header;
-      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled;
-          ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';
-          : 'bg-black/60 backdrop-blur-md border-b border-white/10';
-=======
-'use client',
-import { useState, useEffect } from 'react',
-import Link from 'next / link',
-export default /**
- * Header - Function description
- */
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState (false),
-  const [is_scrolled, setIsScrolled] = useState (false),
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 20);
-    },
-    window.addEventListener ('scroll', handle_scroll),
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  }, []),
-  const navigation = [;
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'AI Solutions', href: '/ai - solutions' },
-    { name: 'Quantum Computing', href: '/quantum - computing' },
-    { name: 'Research & Development', href: '/research - development' },
-    { name: 'Case Studies', href: '/case - studies' },
-    { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' }],
-  const services = [;
-    { name: 'AI Autonomous Systems', href: '/ai - autonomous - systems' },
-    { name: 'Quantum Neural Networks', href: '/quantum - neural - network - platform' },
-    { name: 'Enterprise Security', href: '/ai - powered - enterprise - security' },
-    { name: 'Business Intelligence', href: '/ai - business - intelligence' },
-    { name: 'Content Generation', href: '/ai - content - generator' }
-    { name: 'Research Automation', href: '/ai - autonomous - research - assistant' }];
-  return (
-    <header;
-      className={`sticky top - 0 z - 50 transition - all duration - 300 ${
-        is_scrolled;
-          ? 'bg - black / 90 backdrop - blur - xl border - b border - white / 20 shadow - 2xl';
-          : 'bg - black / 60 backdrop - blur - md border - b border - white / 10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }`}
 role=&quot;banner & quot;
       aria - label=&quot;Main navigation & quot;
@@ -81,29 +5,6 @@ role=&quot;banner & quot;
       <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;flex justify - between items - center py - 4&quot;>;
           {/* Logo */}
-<<<<<<< HEAD
-          <div className=&quot;flex items-center&quot;>
-            <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot; aria-label=&quot;Zion Tech Group Home&quot;>
-              <div className=&quot;w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg&quot;>
-                <span className=&quot;text-white font-bold text-xl&quot;>Z</span>
-              </div>
-              <span className=&quot;text-xl font-bold gradient-text text-shadow&quot;>
-                Zion Tech Group
-              </span>
-            </Link>
-          </div>
-=======
-          <div className=&quot;flex items - center & quot;>;
-            <Link href=&quot;/&quot; className=&quot;flex items - center space - x-3 group & quot; aria - label=&quot;Zion Tech Group Home & quot;>;
-              <div className=&quot;w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - blue - 500 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300 shadow - lg & quot;>;
-                <span className=&quot;text - white font - bold text - xl & quot;>Z</span>;
-              </div>;
-              <span className=&quot;text - xl font - bold gradient - text text - shadow & quot;>;
-                Zion Tech Group;
-              </span>;
-            </Link>;
-          </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Desktop Navigation */}
           <nav className=&quot;hidden lg:flex items - center space - x-8 & quot; role=&quot;navigation & quot; aria - label=&quot;Main menu & quot;>;
             {navigation.map ((item) => (
@@ -114,48 +15,6 @@ role=&quot;banner & quot;
                 aria - label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
-<<<<<<< HEAD
-<span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
-              </Link>
-            ))}
-            {/* Services Dropdown */}
-<div className=&quot;relative group&quot;>
-              <button
-                className=&quot;text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group&quot;
-                aria-expanded=&quot;false&quot;
-                aria-haspopup=&quot;true&quot;
-                aria-label=&quot;Services menu&quot;
-              >
-                Services
-                <svg className=&quot;ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;>
-                  <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M19 9l-7 7-7-7&quot; />
-                </svg>
-              </button>
-              <div className=&quot;absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0&quot;>
-                <div className=&quot;p-6 grid grid-cols-1 gap-3&quot;>
-                  {services.map((service) => (
-                    <Link
-=======
-<span className=&quot;absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - purple - 400 to - blue - 400 transition - all duration - 300 group - hover:w - full & quot;></span>;
-              </Link>))}
-            {/* Services Dropdown */}
-<div className=&quot;relative group & quot;>;
-              <button;
-                className=&quot;text - gray - 300 hover:text - white transition - all duration - 200 font - medium flex items - center group & quot;
-                aria - expanded=&quot;false & quot;
-                aria - haspopup=&quot;true & quot;
-                aria - label=&quot;Services menu & quot;
-              >;
-                Services;
-                <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
-                  <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
-                </svg>;
-              </button>;
-              <div className=&quot;absolute top - full left - 0 mt - 2 w - 80 bg - black / 95 backdrop - blur - xl border border - white / 20 rounded - xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0 & quot;>;
-                <div className=&quot;p - 6 grid grid - cols - 1 gap - 3&quot;>;
-                  {services.map ((service) => (
-                    <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       key={service.name}
                       href={service.href}
                       className=&quot;text - gray - 300 hover:text - white p - 3 rounded - lg hover:bg - white / 10 transition - all duration - 200 group / item & quot;
@@ -199,27 +58,6 @@ className=&quot;lg:hidden p - 2 rounded - lg text - gray - 400 hover:text - whit
         </div>;
         {/* Mobile Navigation */}
 {isMenuOpen && (
-<<<<<<< HEAD
-          <div
-            id=&quot;mobile-menu&quot;
-            className=&quot;lg:hidden border-t border-white/10 animate-fade-in&quot;
-            role=&quot;navigation&quot;
-            aria-label=&quot;Mobile menu&quot;
-          >
-            <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
-              {navigation.map((item) => (
-                <Link
-=======
-          <div;
-            id=&quot;mobile - menu & quot;
-            className=&quot;lg:hidden border - t border - white / 10 animate - fade - in & quot;
-            role=&quot;navigation & quot;
-            aria - label=&quot;Mobile menu & quot;
-          >;
-            <div className=&quot;px - 2 pt - 2 pb - 3 space - y-1 & quot;>;
-              {navigation.map ((item) => (
-                <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={item.name}
                   href={item.href}
                   className=&quot;block px - 3 py - 3 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;

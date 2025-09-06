@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,12 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 export default function AISEOAuditor() {; return ( <Article title=\"AI SEO Auditor\" subtitle=\"Automated technical SEO and content insights with prioritized fixes\" price=\"from $199/mo\" bullets={[
      \'Crawls site maps and pages flags Core Web Vitals and indexability issues\', \'NLP-driven content gap analysis vs. competitors with keyword clusters\', \'One-click Github PRs for meta,schema,and sitemap fixes\',,
-<<<<<<< HEAD
-=======
-=======
-export default function AISEOAuditor() {; return (; <Article; title=\"AI SEO Auditor\"; subtitle=\"Automated technical SEO and content insights with prioritized fixes\"; price=\"from $199/mo\"; bullets={[
-    ; \'Crawls site maps and pages; flags Core Web Vitals and indexability issues\',; \'NLP-driven content gap analysis vs. competitors with keyword clusters\',; \'One-click Github PRs for meta,schema,and sitemap fixes\',,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     \'Weekly executive report and anomaly alerts via Slack/Email\'
   ]} links={{ \"website\": \'https: contact: \'mailto:kleber@ziontechgroup && ziontechgroup.com\'
@@ -54,12 +44,4 @@ export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

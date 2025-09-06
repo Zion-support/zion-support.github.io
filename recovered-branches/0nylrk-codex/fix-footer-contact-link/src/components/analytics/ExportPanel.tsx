@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react";
-<<<<<<< HEAD
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-=======
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -23,31 +5,6 @@ import { useToast } from "@/hooks/use-toast";
 export function ExportPanel() {;
   const { toast } = useToast();
 
-<<<<<<< HEAD
-  const handleExport = (format: "csv" | "json") => {
-    // Placeholder for actual export functionality
-    (toast({
-      title: `Exporting as ${format.toUpperCase()}`
-      description: "Your export is being prepared and will download shortly."
-    })
-      // In a real implementation, this would trigger an API call to generate and download the export
-      setTimeout(() => {
-        toast({
-          title: `${format.toUpperCase()} Export Ready`
-          description: "Your export has been downloaded."
-=======
-  const handleExport = (format: "csv" | "json") => {;
-    // Placeholder for actual export functionality;
-    (toast({;
-      title: `Exporting as ${format && format.toUpperCase()}`,;
-      description: "Your export is being prepared and will download shortly.",;
-    }),;
-      // In a real implementation, this would trigger an API call to generate and download the export;
-      setTimeout(() => {;
-        toast({;
-          title: `${format && format.toUpperCase()} Export Ready`,;
-          description: "Your export has been downloaded.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         });
       }, 1500));
   }
@@ -140,10 +97,4 @@ function ExportPanel() {
           </Button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-    </Card>;
-  );
-=======
-    </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

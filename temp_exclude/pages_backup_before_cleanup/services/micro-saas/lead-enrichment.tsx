@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,12 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 export default function LeadEnrichment() {; return ( <Article title=\"Lead Enrichment API\" subtitle=\"Company,technographic,and intent signals from an email or domain\" price=\"from $149/mo\" bullets={[
      \'"Firmographics\": \'size\',industry,location,funding stage\', \'"Technographics\": \'CMS\',analytics,ads,cloud stack\', \'Buying \"signals\": \'hiring\',product launches,traffic spikes\',,
-<<<<<<< HEAD
-=======
-=======
-export default function LeadEnrichment() {; return (; <Article; title=\"Lead Enrichment API\"; subtitle=\"Company,technographic,and intent signals from an email or domain\"; price=\"from $149/mo\"; bullets={[
-    ; \'"Firmographics\": \'size\',industry,location,funding stage\',; \'"Technographics\": \'CMS\',analytics,ads,cloud stack\',; \'Buying \"signals\": \'hiring\',product launches,traffic spikes\',,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     \'REST API + Zapier + native HubSpot/Salesforce connectors\'
   ]} links={{ \"website\": \'https: /> );
@@ -54,12 +44,4 @@ export default function Leadenrichment(): any ({ }: LeadenrichmentProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
-<<<<<<< HEAD
-import {
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-=======
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 

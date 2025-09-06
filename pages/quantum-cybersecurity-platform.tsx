@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-<<<<<<< HEAD
-
-import React from 'react';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
 import Button from '../components/ui/Button';
 export default function QuantumCybersecurityPlatform() {
@@ -36,13 +28,6 @@ export default function QuantumCybersecurityPlatform() {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import React from 'react',
 import Head from 'next / head',

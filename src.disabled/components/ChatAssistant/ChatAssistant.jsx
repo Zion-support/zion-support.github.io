@@ -1,10 +1,3 @@
-<<<<<<< HEAD:src.disabled/components/ChatAssistant/ChatAssistant.jsx
-<<<<<<< HEAD
-' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
-" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 ' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
 " " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""

@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-export default function BrowserAutomationCloudPage() {
-<<<<<<< HEAD
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import SEO from '../components / SEO';
-import {Check, ExternalLink} from 'lucide-react';
-<<<<<<< HEAD
-
-export default function BrowserAutomationCloudPage() {;
-  const features = [;
-    'Parallel Playwright/Puppeteer execution',;
-    'Queued jobs with retries and rate limits',;
-    'Artifacts: HAR, traces, screenshots, videos',;
-    'Rotating proxies and geo targeting',;
-    'Webhook callbacks and REST API',;
-  ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   const features = [
     'Parallel Playwright/Puppeteer execution'
@@ -170,17 +126,6 @@ function BrowserAutomationCloudPage() {
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
-    </>;
-  );	return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-	const features = [
-		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
-	];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
@@ -211,9 +156,6 @@ function BrowserAutomationCloudPage() {
 		</>
 	)
 }
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 		<>;
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />;
 			<main id="main" className="container mx-auto px-4 py-24">;

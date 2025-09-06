@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,12 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 export default function SmartChurn() {; return ( <Article title=\"Smart Churn Predictor\" subtitle=\"ML-based churn scoring with prescriptive save plays\" price=\"from $299/mo\" bullets={[
      \'Real-time churn scoring using product usage + billing + support\', \'Sends save offers and playbooks to Intercom,Zendesk,or email\', \'Cohort analysis and revenue-at-risk dashboards\', \'Export to BigQuery/Snowflake,
-<<<<<<< HEAD
-=======
-=======
-export default function SmartChurn() {; return (; <Article; title=\"Smart Churn Predictor\"; subtitle=\"ML-based churn scoring with prescriptive save plays\"; price=\"from $299/mo\"; bullets={[
-    ; \'Real-time churn scoring using product usage + billing + support\',; \'Sends save offers and playbooks to Intercom,Zendesk,or email\',; \'Cohort analysis and revenue-at-risk dashboards\',; \'Export to BigQuery/Snowflake,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     webhooks and REST API\'
   ]} links={{ \"website\": \'https: /> );
@@ -54,12 +44,4 @@ export default function Smartchurn(): any ({ }: SmartchurnProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

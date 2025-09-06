@@ -1,14 +1,4 @@
 import { Pool, PoolClient } from 'pg';
-<<<<<<< HEAD
-let pool:Pool | null = null;
-export function getPool():Pool {
-  if (!pool) {
-<<<<<<< HEAD
-
-    pool = new Pool({ connectionString:process.env.DATABASE_URL });
-=======
-    pool = new Pool({ connectionString:process && process.env.DATABASE_URL });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return pool;
 }
@@ -49,12 +39,6 @@ export async function with_user < T>(user_id:string, fn:(client:PoolClient) => P
     throw err;
 
   } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
-client.release();  }
-=======
-    client && client.release();  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 client.release ();  }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

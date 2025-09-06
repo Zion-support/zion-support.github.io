@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
-=======
-import {
-  CompanyRecord,
-  CompanyMember,
-  EnterpriseRole,
-  InvoiceRecord,
-} from '../types/enterprise';
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';

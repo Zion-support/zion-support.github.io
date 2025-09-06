@@ -1,21 +1,4 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-const AutoUpdate20250808t160755171z: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>AutoUpdate20250808t160755171z - Zion Tech Solutions</title>
-        <meta name="description" content="AutoUpdate20250808t160755171z page" />
-      </Head>
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <main>
         <h1>AutoUpdate20250808t160755171z</h1>
         <p>This page is under construction.</p>
@@ -35,10 +18,6 @@ const AutoUpdate20250808t160755171z: NextPage = () => {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default AutoUpdate20250808t160755171z;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import Head from 'next / head';
       <main>;

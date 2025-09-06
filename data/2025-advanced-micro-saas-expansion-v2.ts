@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-
-export const advancedMicroSaasExpansion2025V2 = [
-  {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    name: 'AI Content Factory Pro'
-    description: 'Advanced AI-powered content creation and management platform'
-    category: 'AI & Data'
-    pricing: '$299/month'
-      'Multi-format content generation'
-      'Brand voice customization'
-      'Content calendar management'
-      'Performance analytics'
-=======
-    name: 'AI Content Factory Pro', description: 'Advanced AI-powered content creation and management platform',
-    category: 'AI & Data', pricing: '$299/month',
-    features: [
-      'Multi-format content generationBrand voice customizationContent calendar managementPerformance analytics'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ]
   }
   {
@@ -241,10 +220,6 @@ export const advancedMicroSaasExpansion2025V2 = [
     ]
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 export const advancedMicroSaasExpansion2025V2 = [;
   {
@@ -475,14 +450,6 @@ export const advancedMicroSaasExpansion2025V2 = [;
       'Incident management',
     ],
   },
-<<<<<<< HEAD
-];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
-    ]
-
-=======
-];      'Real - time monitoring_threat intelligence_automated response_incident management';
-    ];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 ];
 ;

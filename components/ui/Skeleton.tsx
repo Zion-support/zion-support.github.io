@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,31 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-export type SkeletonProps = {
-<<<<<<< HEAD
-  className?: string;
-}
-export default function Skeleton({ className = '' }: SkeletonProps) {
-    >
-      <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
-      <style jsx global>{`
-        @keyframes shimmer {
-          100% {
-=======
-
-export type SkeletonProps = {;
-  className?: string;
-};
-
-export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
-
-    >;
-      <div className='absolute inset-0 -translate-x-full animate-[shimmer_1 && shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />;
-      <style jsx global>{`;
-        @keyframes shimmer {;
-          100% {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             transform: translateX(100%);
           }        }
       `}</style>;
@@ -78,12 +49,6 @@ function Skeleton() {
 export type SkeletonProps = {;
   className?: string;
 }
-<<<<<<< HEAD
-export default function Skeleton({ className = '' }: SkeletonProps) {
-=======
-
-export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className={`relative overflow-hidden rounded-md bg-gray-200/60 dark:bg-white/10 ${className}`}>;
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_1 && shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark: via-white/10 to-transparent" />;
@@ -100,29 +65,6 @@ interface SkeletonProps {;
   width?: string | number;
   height?: string | number;
   rounded?: boolean}
-<<<<<<< HEAD
-export const Skeleton: React.FC<SkeletonProps> = ({ "
-  className = "
-  width
-  height
-  rounded = false}) => {
-  const style: React.CSSProperties = {}
-  ";
-  if (width) style.width = typeof width === "number" ? "${width}px" : width
-if (height) style.height = typeof height === "number" ? "${height}px" : height
-=======
-
-export const Skeleton: React.FC<SkeletonProps> = ({ ",;
-  className = ",;
-  width,;
-  height,;
-  rounded = false}) => {;
-  const style: React && React.CSSProperties = {}
-
-  ";
-  if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
-if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 return (";
     <divclassName="{"animate-pulse" bg-gray-200 ${rounded ? "rounded-full" : "rounded"} ${className}"}"
       style="{style}">;
@@ -130,11 +72,6 @@ return (";
   );
 }
 export const CardSkeleton: React.FC = () => (";
-<<<<<<< HEAD
-  <div className="bg-white rounded-lg shadow-md p-6">"
-=======
-  <div className="bg-white rounded-lg shadow-md p-6">",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <Skeleton height="{20}" className="mb-4"  />";
     <Skeleton height="{16}" className="mb-2"  />";
     <Skeleton height="{16}" width="60%"  />;
@@ -152,15 +89,6 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
   </div>"';
 );
 }
-<<<<<<< HEAD
-export default Component
-}
-=======
-export default Component;
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import React from 'react'
 
@@ -178,12 +106,6 @@ function Skeleton() {
         @keyframes shimmer {
           100% { transform: translate_x (100%) }
         }
-<<<<<<< HEAD
-      `}</style>
-    </div>
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
       `}</style>;
     </div>);

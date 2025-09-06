@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
-  DollarSign, Shield, Mail, MapPin, Rocket, Lock
-  Brain, Database, TrendingUp as TrendingUpIcon, Users
-  Target, BarChart, PieChart, Activity, Eye, Key
-} from 'lucide-react'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Lock;
@@ -27,17 +10,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 export default function QuantumSecureCommunication() {
   const contactInfo = {
-<<<<<<< HEAD
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     website: 'https://ziontechgroup.com'
   }
@@ -140,34 +112,6 @@ function QuantumSecureCommunication() {
         <UltraAdvancedNavigation />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <motion.div
-                initial={{ scale: 0.8, rotate: -5 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
-=======
-        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center mb - 16";
-            >;
-              <motion.div;
-                initial={{ scale: 0.8, rotate: -5 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
@@ -184,12 +128,6 @@ function QuantumSecureCommunication() {
               >
                 Quantum-Secure Communication
               </motion.h1>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <motion.p
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
               <motion.p 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -251,22 +189,6 @@ function QuantumSecureCommunication() {
                 animate={{ opacity: 1, coordinate_y: 0 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-                className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-=======
-                className="flex flex - col sm:flex - row gap - 6 justify - center mb - 16";
-              >;
-                <motion.div;
-                  while_hover={{ scale: 1.05, coordinate_y: -2 }}
-                  while_tap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2xl"
                 >
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -289,13 +211,6 @@ function QuantumSecureCommunication() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  <Button
-                    href="/contact"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <Button 
                     href="/contact" 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -350,10 +265,6 @@ function QuantumSecureCommunication() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
               >
                 <div className="text-center p-4">
@@ -372,37 +283,6 @@ function QuantumSecureCommunication() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-=======
-=======
-                className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 max - w-4xl mx - auto";
-              >;
-                <div className="text - center p - 4">;
-                  <div className="text - 3xl font - bold text - purple - 400 mb - 2">500% ROI</div>;
-                  <div className="text - gray - 300">Average customer sees 500% ROI through avoided security breaches</div>;
-                </div>;
-                <div className="text - center p - 4">;
-                  <div className="text - 3xl font - bold text - green - 400 mb - 2">4 Hours</div>;
-                  <div className="text - gray - 300">Setup time from installation to first secure communication</div>;
-                </div>;
-                <div className="text - center p - 4">;
-                  <div className="text - 3xl font - bold text - pink - 400 mb - 2">1200+</div>;
-                  <div className="text - gray - 300">Active customers worldwide</div>;
-                </div>;
-              </motion.div>;
-            </motion.div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
@@ -411,8 +291,6 @@ function QuantumSecureCommunication() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -448,53 +326,7 @@ function QuantumSecureCommunication() {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300"
-                >
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
-                      <CheckCircle className="w-5 h-5 text-white" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-purple-300 transition-colors">
-=======
-                  while_hover={{ scale: 1.02, coordinate_y: -5 }}
-                  className="group bg - gradient - to - br from - purple - 900 / 20 to - pink - 900 / 20 border border - purple - 500 / 30 rounded - 2xl p - 6 hover:border - purple - 400 / 60 hover:shadow - 2xl hover:shadow - purple - 500 / 20 transition - all duration - 300";
-                >;
-                  <div className="flex items - center space - x-3 mb - 4">;
-                    <div className="w - 10 h - 10 bg - gradient - to - r from - purple - 500 to - pink - 600 rounded - xl flex items - center justify - center">;
-                      <CheckCircle className="w - 5 h - 5 text - white" />;
-                    </div>;
-                    <h3 className="text - lg font - semibold text - white group - hover:text - purple - 300 transition - colors">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {feature}
-<<<<<<< HEAD
-                    </h3>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-=======
-=======
-                    </h3>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Use Cases Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -503,8 +335,6 @@ function QuantumSecureCommunication() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -540,10 +370,6 @@ function QuantumSecureCommunication() {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   whileHover={{ scale: 1.02, y: -5 }}
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
@@ -560,30 +386,6 @@ function QuantumSecureCommunication() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Technology & Integrations */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-=======
-=======
-                  while_hover={{ scale: 1.02, coordinate_y: -5 }}
-                  className="group bg - gradient - to - br from - green - 900 / 20 to - emerald - 900 / 20 border border - green - 500 / 30 rounded - 2xl p - 6 hover:border - green - 400 / 60 hover:shadow - 2xl hover:shadow - green - 500 / 20 transition - all duration - 300";
-                >;
-                  <div className="flex items - center space - x-3 mb - 4">;
-                    <div className="w - 10 h - 10 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - xl flex items - center justify - center">;
-                      <Shield className="w - 5 h - 5 text - white" />;
-                    </div>;
-                    <h3 className="text - lg font - semibold text - white group - hover:text - green - 300 transition - colors">;
-                      {use_case}
-                    </h3>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Technology & Integrations */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
@@ -595,36 +397,11 @@ function QuantumSecureCommunication() {
                 whileInView={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-              >
-                <h3 className="text-3xl font-bold text-white mb-8">
-                  <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                    Technology Stack
-                  </span>
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {technology.map((tech, index) => (
-                    <motion.div
-=======
-              >;
-                <h3 className="text - 3xl font - bold text - white mb - 8">;
-                  <span className="bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
-                    Technology Stack;
-                  </span>;
-                </h3>;
-                <div className="grid grid - cols - 2 gap - 4">;
-                  {technology.map ((tech, index) => (
-                    <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
@@ -648,36 +425,11 @@ function QuantumSecureCommunication() {
                 whileInView={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-              >
-                <h3 className="text-3xl font-bold text-white mb-8">
-                  <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Integrations
-                  </span>
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {integrations.map((integration, index) => (
-                    <motion.div
-=======
-              >;
-                <h3 className="text - 3xl font - bold text - white mb - 8">;
-                  <span className="bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                    Integrations;
-                  </span>;
-                </h3>;
-                <div className="grid grid - cols - 2 gap - 4">;
-                  {integrations.map ((integration, index) => (
-                    <motion.div;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
@@ -689,29 +441,6 @@ function QuantumSecureCommunication() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Market Position & ROI */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-=======
-=======
-                      className="flex items - center space - x-3 p - 3 bg - gray - 800 / 40 rounded - lg border border - gray - 700 / 50";
-                    >;
-                      <div className="w - 2 h - 2 bg - cyan - 400 rounded - full"></div>;
-                      <span className="text - gray - 200">{integration}</span>;
-                    </motion.div>))}
-                </div>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Market Position & ROI */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -720,8 +449,6 @@ function QuantumSecureCommunication() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -730,13 +457,6 @@ function QuantumSecureCommunication() {
                 </span>
               </h2>
             </motion.div>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
@@ -796,85 +516,6 @@ function QuantumSecureCommunication() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-=======
-=======
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-                <span className="bg - gradient - to - r from - yellow - 400 to - orange - 500 bg - clip - text text - transparent">;
-                  Market Position & ROI;
-                </span>;
-              </h2>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-              <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg - gradient - to - br from - yellow - 900 / 20 to - orange - 900 / 20 border border - yellow - 500 / 30 rounded - 2xl p - 8";
-              >;
-                <h3 className="text - 2xl font - bold text - white mb - 6">Competitive Advantage</h3>;
-                <p className="text - gray - 300 mb - 6">;
-                  Competitive with Signal (Free), Wickr ($4.99 / user / month), and Wire ($5.83 / user / month).;
-                  Our advantage: Quantum - resistant encryption, enterprise features, and compliance tools.;
-                </p>;
-                <div className="space - y-4">;
-                  <div className="flex items - center space - x-3">;
-                    <CheckCircle className="w - 5 h - 5 text - yellow - 400" />;
-                    <span className="text - gray - 200">Quantum - resistant encryption</span>;
-                  </div>;
-                  <div className="flex items - center space - x-3">;
-                    <CheckCircle className="w - 5 h - 5 text - yellow - 400" />;
-                    <span className="text - gray - 200">Enterprise features</span>;
-                  </div>;
-                  <div className="flex items - center space - x-3">;
-                    <CheckCircle className="w - 5 h - 5 text - yellow - 400" />;
-                    <span className="text - gray - 200">Compliance tools</span>;
-                  </div>;
-                </div>;
-              </motion.div>;
-              <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg - gradient - to - br from - green - 900 / 20 to - emerald - 900 / 20 border border - green - 500 / 30 rounded - 2xl p - 8";
-              >;
-                <h3 className="text - 2xl font - bold text - white mb - 6">Return on Investment</h3>;
-                <div className="text - 4xl font - bold text - green - 400 mb - 4">500% ROI</div>;
-                <p className="text - gray - 300 mb - 6">;
-                  Average customer sees 500% ROI through avoided security breaches and compliance cost savings.;
-                </p>;
-                <div className="space - y-4">;
-                  <div className="flex items - center space - x-3">;
-                    <TrendingUpIcon className="w - 5 h - 5 text - green - 400" />;
-                    <span className="text - gray - 200">Avoided security breaches</span>;
-                  </div>;
-                  <div className="flex items - center space - x-3">;
-                    <TrendingUpIcon className="w - 5 h - 5 text - green - 400" />;
-                    <span className="text - gray - 200">Compliance cost savings</span>;
-                  </div>;
-                  <div className="flex items - center space - x-3">;
-                    <TrendingUpIcon className="w - 5 h - 5 text - green - 400" />;
-                    <span className="text - gray - 200">Future - proof security</span>;
-                  </div>;
-                </div>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -883,8 +524,6 @@ function QuantumSecureCommunication() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready for Quantum-Secure Communication?
@@ -898,13 +537,6 @@ function QuantumSecureCommunication() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  <Button
-                    href="/contact"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <Button 
                     href="/contact" 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -923,13 +555,6 @@ function QuantumSecureCommunication() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  <Button
-                    href="/contact"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <Button 
                     href="/contact" 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -943,13 +568,6 @@ function QuantumSecureCommunication() {
                   </Button>
                 </motion.div>
               </div>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <div className="mt-8 text-gray-400">
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</a></p>
@@ -961,13 +579,6 @@ function QuantumSecureCommunication() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;

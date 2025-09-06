@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -18,13 +10,6 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);
   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -39,14 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const authHeader = req.headers.authorization |''
-  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
-  if (!token |token !== process.env.OPERATOR_API_TOKEN) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const authHeader = req.headers.authorization || '';
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {
@@ -81,11 +58,6 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     return res.status(500).json({ error: 'Internal Server Error' })
 
   }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
@@ -159,8 +131,4 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
     return res.status (500).json ({ error: 'Internal Server Error' });
   }
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

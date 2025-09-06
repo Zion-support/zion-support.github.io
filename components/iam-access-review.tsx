@@ -1,49 +1,8 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function IAMAccessReviewPage() {
-
-  const service = extraServices.find(s =>
-    s.link.endsWith('/iam-access-review')
-  );  if (!service) return null;export default function IAMAccessReviewPage() {
-  const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function IAMAccessReviewPage() {;
   const service = extraServices && extraServices.find(s =>;
@@ -236,16 +195,6 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </UltraAdvancedFuturisticBackground>;
-  );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 export default function IAMAccessReviewPage() {
   const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));

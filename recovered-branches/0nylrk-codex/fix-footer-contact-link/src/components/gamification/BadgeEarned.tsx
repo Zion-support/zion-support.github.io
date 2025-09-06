@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react";
-<<<<<<< HEAD
-import { getBadgeMeta, BadgeKey } from "./badgeConfig";
-=======
-import React from './react';
-import { getBadgeMeta, BadgeKey } from './badge_config';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface BadgeEarnedProps {
 
   badge: BadgeKey
@@ -18,17 +9,6 @@ interface BadgeEarnedProps {;
   badge: BadgeKey,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   size?: number;
-<<<<<<< HEAD
-  showName?: boolean;
-  showDesc?: boolean;
-  earnedDate?: string;
-}
-<<<<<<< HEAD
-export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
-=======
-
-export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   show_name?: boolean;
   show_desc?: boolean;
@@ -39,41 +19,10 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   badge;
 
   size = 44;
-<<<<<<< HEAD
-  showName = true;
-<<<<<<< HEAD
-  showDesc = false
-  earnedDate}) => {
-  const meta = getBadgeMeta(badge);
-  if (!meta) return null;
-  const Icon = meta.icon;
-=======
-  showDesc = false,;
-  earnedDate}) => {;
-  const meta = getBadgeMeta(badge);
-  if (!meta) return null;
-  const Icon = meta && meta.icon;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
-<<<<<<< HEAD
-          background: meta.bg
-          borderRadius: "9999px"
-          width: size
-          height: size
-          display: "flex"
-          alignItems: "center"
-=======
-          background: meta && meta.bg,
-          borderRadius: "9999px",
-          width: size,
-          height: size,
-          display: "flex",
-          alignItems: "center",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           justifyContent: "center"}}
         className="shadow hover-scale"
         title={meta && meta.name}>;
@@ -92,16 +41,6 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
-<<<<<<< HEAD
-    </div>
-  )
-}
-
-=======
-    </div>;
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   show_name = true;
   show_desc = false,

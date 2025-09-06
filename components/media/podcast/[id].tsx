@@ -22,14 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import { useRouter } from 'next/router';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function EpisodePage() {
 
   const router = useRouter();
@@ -48,30 +40,15 @@ export default function EpisodePage() {;
     if (!id) return;
     (async () => {;
       const res = await fetch('/api/podcast/get?id=' + id);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const data = await res && res.json();
       setEpisode(data && data.episode);
     })();      setEpisode(data && data.episode);
     })();
-<<<<<<< HEAD
-=======
-=======
-      const data = await res.json();
-      setEpisode(data.episode)
-    })()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, [id]);
   if (!episode) return <div>Loading…</div>;
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='space-y-4'>;
       <h1 className='text-2xl font-bold'>{episode && episode.title}</h1>;
       <p className='text-sm text-gray-600'>;
@@ -94,19 +71,6 @@ export default function EpisodePage() {;
         <audio controls className="w-full">;
           <source src={episode && episode.audio.mp3Url} type="audio/mpeg" />;
         </audio>;
-<<<<<<< HEAD
-=======
-      )}
-<<<<<<< HEAD
-=======
-    <div className="space-y-4">
-      <h1 className="text-2xl font-bold">{episode.title}</h1>
-      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
-      {episode.audio?.mp3Url && (
-        <audio controls className="w-full">
-          <source src={episode.audio.mp3Url} type="audio/mpeg" />
-        </audio>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       )}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div>
@@ -124,8 +88,6 @@ export default function EpisodePage() {;
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

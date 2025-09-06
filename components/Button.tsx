@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,12 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ButtonProps {
 
   children: React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';interface ButtonProps {
@@ -42,9 +32,6 @@ interface ButtonProps {
 interface ButtonProps {;
   children: React && React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';interface ButtonProps {;
   children: React && React.ReactNode,;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 interface ButtonProps {
   children: React.ReactNode,
@@ -52,44 +39,6 @@ interface ButtonProps {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-<<<<<<< HEAD
-  className?: string;
-  onClick?: () => void;
-
-  type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Button({
-  children
-  variant = 'primary'
-  size = 'md'
-  className = ''
-  onClick
-  type = 'button'
-  disabled = false
-}: ButtonProps) {
-  const baseClasses =
-    'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
-  const variantClasses = {
-    primary:
-      'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600 focus:ring-cyan-500'
-    secondary:
-      'bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30 focus:ring-white/50'
-    outline:
-      'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50'
-  }
-  const sizeClasses = {
-    sm: 'px-3 py-1.5 text-sm'
-    md: 'px-4 py-2 text-base'
-    lg: 'px-6 py-3 text-lg'
-  }
-  const disabledClasses = disabled
-    ? 'opacity-50 cursor-not-allowed'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function Button(): any ({;
   children,;
   variant = 'primary',;
@@ -125,21 +74,9 @@ export default function Button(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : 'hover:scale-105 transform';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
-<<<<<<< HEAD
-      >
-=======
-
-      >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {children}
     </button>;
   );
-<<<<<<< HEAD
-}  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform'
-=======
-}  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
 =======
@@ -188,21 +125,7 @@ function Button() {
       className={classes}
       on_click={on_click}
       disabled={disabled}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </button>
-);
-}
-=======
-    </button>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     >
       {children}

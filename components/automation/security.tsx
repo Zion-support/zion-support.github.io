@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-
-};
-</pre> </div>) ;
-export default function SecurityAudit(): any ({ report }: Props) {;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
-  raw?: string
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 </pre> </div>)
 
@@ -39,22 +18,6 @@ export default function SecurityAudit(): any ({ report }: Props) {;
       {report && report.generatedAt && (;
         <div className="text-sm text-gray-500">Generated at: {new Date(report && report.generatedAt).toLocaleString()}</div>;
       )}
-<<<<<<< HEAD
-      <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
-{JSON.stringify(report, null, 2)}
-      </pre>
-    </div>
-);
-}
-=======
-      <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
-{JSON && JSON.stringify(report, null, 2)}
-      </pre>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

@@ -22,17 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import Image from 'next/image';
-<<<<<<< HEAD
-interface OptimizedImageProps {
-  src: string, alt: string
-=======
-
-interface OptimizedImageProps {;
-
-  src: string, alt: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import Image from 'next / image';
 ;
@@ -48,38 +37,6 @@ interface OptimizedImageProps {
   fill?: boolean;
   style?: React && React.CSSProperties;
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src
-  alt
-  width
-  height
-  className = ''
-  priority = false
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-  quality = 85
-  fill = false
-  style
-
-}) => {
-  if (fill) {
-=======
-const OptimizedImage: React.FC<OptimizedImageProps> = ({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className = '',;
-  priority = false,;
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',;
-  quality = 85,;
-  fill = false,;
-  style;
-}) => {;
-  if (fill) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
   src,
@@ -108,16 +65,6 @@ if ( {) {
         sizes={sizes}
         quality={quality}
         style={style}
-<<<<<<< HEAD
-      />;
-    );
-  }
-<<<<<<< HEAD
-    <Image
-=======
-
-    <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       src={src}
       alt={alt}
       width={width |800}
@@ -139,10 +86,3 @@ quality={quality}
       style={style}
   );
 }
-<<<<<<< HEAD
-export default OptimizedImage;
-=======
-;
-export default OptimizedImage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

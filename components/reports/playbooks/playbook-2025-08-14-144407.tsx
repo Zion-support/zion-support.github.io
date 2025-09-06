@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Page() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function Page() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -33,11 +24,6 @@ export default function Page() {;
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-<<<<<<< HEAD
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>'
-=======
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Automation HubDiscover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required && required.Homepage UpdatesKeeps the homepage fresh and the sitemap up to date && date.Trigger / ViewSite HealthLink checks, image optimization, and sitemap re</p>',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -46,11 +32,6 @@ export default function Page() {;
       </main>;
     </div>;
   );export default function Page() {;
-<<<<<<< HEAD
-=======
-=======
-export default function Page() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
@@ -68,11 +49,6 @@ export default function Page() {
       </main>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import Head from 'next / head';
 export default /**

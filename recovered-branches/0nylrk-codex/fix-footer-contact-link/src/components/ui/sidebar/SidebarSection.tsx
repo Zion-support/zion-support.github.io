@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react";
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-=======
-import {cn} from "@/lib/utils";
-interface SidebarSectionProps extends React && React.HTMLAttributes<HTMLDivElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className?: string;
 =======
 import React from './react';
@@ -18,18 +8,6 @@ interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
   title?: string;
   children?: React && React.ReactNode;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function SidebarSection({
-  className
-  title
-  children
-  ...props
-}: SidebarSectionProps) {
-=======
-
-export function SidebarSection(): any ({ className, title, children, ...props }: SidebarSectionProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className={cn("py-2", className)} {...props}>;
       {title && (;
@@ -37,17 +15,6 @@ export function SidebarSection(): any ({ className, title, children, ...props }:
           {title}
         </h3>;
       )}
-<<<<<<< HEAD
-      <div className="space-y-1">{children}</div>
-    </div>
-  );
-}
-=======
-      <div className="space-y-1">{children}</div>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 export /**
  * SidebarSection - Function description

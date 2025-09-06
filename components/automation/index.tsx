@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 export default function AutomationPage() {
   return (
@@ -14,9 +7,6 @@ export default function AutomationPage() {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function AutomationPage() {;
   return (
     <div className="container mx-auto px-4 py-10">;

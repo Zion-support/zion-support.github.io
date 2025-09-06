@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-=======
-import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function BrowserAutomationCloudPage() {
@@ -53,9 +44,6 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 }
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

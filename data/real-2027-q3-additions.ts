@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-
-export const real2027Q3Additions = [
-  {
-<<<<<<< HEAD
-    id: 'it-asset-discovery-agent',
-=======
-<<<<<<< HEAD
-    id: 'it-asset-discovery-agent'
-    name: 'IT Asset Discovery Agent'
-    tagline: 'Agentless network-wide discovery and enrichment'
-    price: '$149'
-    period: '/month'
-    description:
-      'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.'
-      'Agentless subnet scanning and SaaS discovery'
-      'OS, version, and CVE enrichment'
-      'CMDB, ServiceNow, and Jira export'
-      'Change detection and drift alerts'
-    ]
-    category: 'Enterprise IT'
-    link: '/it-asset-discovery-agent'
-    realService: true
-=======
-    id: 'it-asset-discovery-agent', name: 'IT Asset Discovery Agent',
-    tagline: 'Agentless network-wide discovery and enrichment', price: '$149',
-    period: '/month',
-    description: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
-    features: [
-      'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichmentCMDB, ServiceNow, and Jira exportChange detection and drift alerts'
-    ];
-    category: 'Enterprise IT', link: '/it-asset-discovery-agent',
-    realService: true,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
   }
   {
@@ -346,10 +312,6 @@ export const real2027Q3Additions = [
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 export const real2027Q3Additions = [;
   {
@@ -675,11 +637,6 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.',
   },
-<<<<<<< HEAD
-];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
-=======
-];      'Discovery via traffic / specsOWASP API Top 10 checksPR annotations and CI gating_change detection and drift alerts';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     category: 'Security & Identity';
     link: '/api - security - scanner';

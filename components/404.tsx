@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,12 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from "react";
-<<<<<<< HEAD
-export default function NotFoundPage() {
-=======
-
-export default function NotFoundPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='container mx-auto px-4 py-20 text-center'>;
       <h1 className='text-3xl font-semibold'>404 - Page Not Found</h1>;

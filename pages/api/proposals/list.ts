@@ -1,30 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listProposals } from "../../../utils/data/proposals";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-  if (req.method !== "GET") {
-    res.setHeader("Allow", "GET");
-    return res.status(405).json({ error: "Method not allowed" });
-=======
-  if (req && req.method !== "GET") {
-    res && res.setHeader("Allow", "GET");
-    return res && res.status(405).json({ error: "Method not allowed" });
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-<<<<<<< HEAD
-=======
-  }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
     const proposals = await listProposals();
     return res && res.status(200).json({ proposals });

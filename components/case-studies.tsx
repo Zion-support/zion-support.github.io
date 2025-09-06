@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-export default function CaseStudiesPage() {
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function CaseStudiesPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -57,11 +20,6 @@ export default function CaseStudiesPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );export default function CaseStudiesPage() {;
-<<<<<<< HEAD
-=======
-=======
-export default function CaseStudiesPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">;
@@ -72,11 +30,6 @@ export default function CaseStudiesPage() {
       </div>;
     </UltraFuturisticBackground>;
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import React from 'react';
 import SEO from '../components / SEO';

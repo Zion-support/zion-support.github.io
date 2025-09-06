@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { FormEvent, useState } from 'react';
-export default function VendorRegisterPage() {
-=======
-import {FormEvent, useState} from 'react';
-
-export default function VendorRegisterPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [loading, setLoading] = useState(false);
 
   const [message, setMessage] = useState<string | null>(null);
@@ -15,61 +6,6 @@ export default function VendorRegisterPage() {;
     e && e.preventDefault();
     setLoading(true);
     setMessage(null);
-<<<<<<< HEAD
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries())
-    try {
-      const res = await fetch('/api/vendors/register', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-<<<<<<< HEAD
-          slug: String(payload.slug)
-          name: String(payload.name)
-          servicesOffered: String(payload.servicesOffered |'')
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-          teamSize: Number(payload.teamSize |0)
-          about: String(payload.about |'')
-          verificationDocs: String(payload.verificationDocs |'')
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-          caseStudies: []
-        })
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error |'Failed to submit');
-=======
-    const form = e && e.currentTarget;
-    const formData = new FormData(form);
-    const payload = Object && Object.fromEntries(formData && formData.entries()),;
-    try {;
-      const res = await fetch('/api/vendors/register', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          slug: String(payload && payload.slug),;
-          name: String(payload && payload.name),;
-          servicesOffered: String(payload && payload.servicesOffered || '');
-            .split(',');
-            .map(s => s && s.trim());
-            .filter(Boolean),;
-          teamSize: Number(payload && payload.teamSize || 0),;
-          about: String(payload && payload.about || ''),;
-          verificationDocs: String(payload && payload.verificationDocs || '');
-            .split(',');
-            .map(s => s && s.trim());
-            .filter(Boolean),;
-          caseStudies: [],;
-        }),;
-      });
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
           slug: String(payload.slug),
           name: String(payload.name),
@@ -94,125 +30,15 @@ export default function VendorRegisterPage() {;
     } finally {;
       setLoading(false);    }
   }
-<<<<<<< HEAD
-  return (            .map(s => s.trim())
-            .filter(Boolean);
-          teamSize: Number(payload.teamSize |0)
-          about: String(payload.about |'')
-          verificationDocs: String(payload.verificationDocs |'')
-            .split()
-            .map(s => s.trim())
-            .filter(Boolean);
-          caseStudies: []})})
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error |'Failed to submit');
-      setMessage('Application submitted. Await approval.');
-
-      form.reset()
-=======
-import {FormEvent, useState} from 'react';
-export default /**
- * VendorRegisterPage - Function description
- */
-function VendorRegisterPage() {
-  const [loading, set_loading] = useState (false);
-  const [message, set_message] = useState < string | null>(null);
-;
-  async /**
- * on_submit - Function description
- */
-function on_submit() {
-    e.prevent_default ();
-    set_loading (true);
-    set_message (null);
-    const form = e.current_target;
-    const form_data = new FormData (form);
-    const payload = Object.from_entries (form_data.entries ()),
-    try {
-      const res = await fetch ('/api / vendors / register', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({
-          slug: String (payload.slug),
-          name: String (payload.name),
-          services_offered: String (payload.services_offered || '');
-            .split (', ');
-            .map (string => s.trim ());
-            .filter (Boolean),
-          team_size: Number (payload.team_size || 0),
-          about: String (payload.about || ''),
-          verification_docs: String (payload.verification_docs || '');
-            .split (', ');
-            .map (string => s.trim ());
-            .filter (Boolean),
-          case_studies: [],
-        }),
-      });
-      const data = await res.json ();
-      if (throw new Error (data?.error || 'Failed to submit')) {
-  $2
-}
-      set_message ('Application submitted. Await approval.');
-      form.reset ();
     } catch (err: any) {
       set_message (err.message);
     } finally {
-      set_loading (false);    }
-  }
-  return (            .map (string => s.trim ());
-            .filter (Boolean);
-          team_size: Number (payload.team_size || 0),
-          about: String (payload.about || ''),
-          verification_docs: String (payload.verification_docs || '');
-            .split ();
-            .map (string => s.trim ());
-            .filter (Boolean);
-          case_studies: []})}),
-      const data = await res.json ();
-      if (throw new Error (data?.error || 'Failed to submit')) {
-  $2
-}
-      set_message ('Application submitted. Await approval.');
-      form.reset ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    } catch (err: any) {
-      set_message (err.message);
-    } finally {
-<<<<<<< HEAD
-      setLoading(false)
-<<<<<<< HEAD
-=======
-
-  return (            .map(s => s && s.trim());
-            .filter(Boolean);
-          teamSize: Number(payload && payload.teamSize || 0),;
-          about: String(payload && payload.about || ''),;
-          verificationDocs: String(payload && payload.verificationDocs || '');
-            .split();
-            .map(s => s && s.trim());
-            .filter(Boolean);
-          caseStudies: []})}),;
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
-      setMessage('Application submitted. Await approval.');
-      form && form.reset();
-    } catch (err: any) {;
-      setMessage(err && err.message);
-    } finally {;
-      setLoading(false);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className='max-w-2xl mx-auto space-y-6'>;
       <h1 className='text-2xl font-semibold'>;
         Apply to become a Vendor Partner;
@@ -276,19 +102,6 @@ function on_submit() {
         </button>;
       </form>;
       {message && <div className='text-sm'>{message}</div>}
-<<<<<<< HEAD
-      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
-    </div>
-);
-}
-=======
-      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>;
-    </div>;
-<<<<<<< HEAD
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     <div className="max-w-2xl mx-auto space-y-6">
       <h1 className="text-2xl font-semibold">Apply to become a Vendor Partner</h1>

@@ -1,56 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-</div> </div>) )
-=======
-</div> </div>) );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }</div> </div>) import fs from 'fs';
 =======
 import fs from 'fs';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 export type Trend = {
-<<<<<<< HEAD
-  id: string
-  date: string
-  title: string
-  highlights: string[]
-  summary: string
-  tags: string[]
-}
-export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'dataai-trends.json');
-=======
-  id: string,
-  date: string,
-  title: string,
-  highlights: string[],
-  summary: string,
-  tags: string[];
-}
-;
-export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {
-  const file = path.join (process.cwd (), 'dataai - trends.json');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync (file, 'utf - 8');
     items = JSON.parse (raw);
   } catch {}
-<<<<<<< HEAD
-  items.sort((a, b) => (a.date < b.date ? 1 : -1));
-
-  return { props: { items } }
-}
-export default function AiTrendsPage({ items }: { items: Trend[] }) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  </div> </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -95,18 +52,6 @@ export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
             </div>;
           </div>;
         ))}
-<<<<<<< HEAD
-      </div>
-    </div>
-);
-}
-=======
-      </div>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

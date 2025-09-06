@@ -1,46 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger } from '@/components/ui/accordion';
-import { Loader2, Sparkles, Plus, Calendar  } from 'lucide-react';
-import { format, parseISO  } from 'date-fns';
-import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
-import { Badge } from '@/components/ui/badge';
-interface AIMilestoneGeneratorProps {
-
-  scope: string
-  startDate: string
-  endDate: string | null
-  projectType: string
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void
-
-  onAddMilestone: (milestone: GeneratedMilestone) => void
-}
-export function AIMilestoneGenerator({
-=======
-import {Button} from '@/components/ui/button';
-import {Card, CardContent} from '@/components/ui/card';
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
-import {Loader2, Sparkles, Plus, Calendar} from 'lucide-react';
-import {format, parseISO} from 'date-fns';
-import {MilestoneInput, GeneratedMilestone, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
-import {Badge} from '@/components/ui/badge';
-interface AIMilestoneGeneratorProps {;
-  scope: string,;
-  startDate: string,;
-  endDate: string | null,;
-  projectType: string,;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
-  onAddMilestone: (milestone: GeneratedMilestone) => void;
-}
-
-export function AIMilestoneGenerator(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   scope;
   startDate;
   endDate;
@@ -50,97 +8,6 @@ export function AIMilestoneGenerator(): any ({;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
-<<<<<<< HEAD
-  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
-  const handleGenerateMilestones = async () => {
-    if (!scope |!startDate |!projectType) {
-      return
-    }
-    const input: MilestoneInput = {
-      scope;
-      startDate;
-      endDate
-      projectType
-    }
-    await generateMilestones(input);
-    // Initially select all milestones
-    const initialSelection = {}
-    generatedMilestones.forEach((_, index) => {
-      initialSelection[index] = true
-    });
-    setSelectedMilestones(initialSelection)
-  }
-  const handleAddToProject = () => {
-    const selectedMilestonesList = generatedMilestones.filter((_, index) =>
-      selectedMilestones[index]
-    );
-    onAddMilestones(selectedMilestonesList);
-    clearGeneratedMilestones();
-    setSelectedMilestones({})
-  }
-  const toggleMilestoneSelection = (index: number) => {
-    setSelectedMilestones(prev => ({
-      ...prev
-      [index]: !prev[index]
-    }))
-  }
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
-    onAddMilestone(milestone)
-  }
-  const formatDate = (dateString: string) => {
-    try {
-      return format(parseISO(dateString), 'MMM dd, yyyy')
-    } catch (error) {
-      return dateString
-=======
-  const handleGenerateMilestones = async () => {;
-    if (!scope || !startDate || !projectType) {;
-      return;
-    }
-
-    const input: MilestoneInput = {;
-      scope;
-      startDate;
-      endDate,;
-      projectType;
-    };
-
-    await generateMilestones(input);
-    // Initially select all milestones;
-    const initialSelection = {};
-    generatedMilestones && generatedMilestones.forEach((_, index) => {;
-      initialSelection[index] = true;
-    });
-    setSelectedMilestones(initialSelection);
-  };
-
-  const handleAddToProject = () => {;
-    const selectedMilestonesList = generatedMilestones && generatedMilestones.filter((_, index) => ;
-      selectedMilestones[index];
-    );
-
-    onAddMilestones(selectedMilestonesList);
-    clearGeneratedMilestones();
-    setSelectedMilestones({});
-  };
-
-  const toggleMilestoneSelection = (index: number) => {;
-    setSelectedMilestones(prev => ({;
-      ...prev,;
-      [index]: !prev[index];
-    }));
-  };
-
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {;
-    onAddMilestone(milestone);
-  };
-
-  const formatDate = (dateString: string) => {;
-    try {;
-      return format(parseISO(dateString), 'MMM dd, yyyy');
-    } catch (error) {;
-      return dateString;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
@@ -153,77 +20,6 @@ export function AIMilestoneGenerator(): any ({;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-<<<<<<< HEAD
-          disabled={isGenerating |!scope |!startDate |!projectType}
-        >
-          {isGenerating ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Generating...
-            </>
-          ) : (
-            <>
-              <Sparkles className="mr-2 h-4 w-4" />
-              Generate Milestones
-            </>
-          )}
-        </Button>
-      </div>
-      {generatedMilestones.length > 0 && (
-        <Card>
-          <CardContent className="pt-6">
-            <div className="flex justify-between items-center mb-4">
-              <p className="text-sm text-muted-foreground">
-                {generatedMilestones.length} milestones generated based on your project scope
-              </p>
-              <Button
-                onClick={handleAddToProject}
-                disabled={!Object.values(selectedMilestones).some(Boolean)}
-              >
-                Add Selected to Project
-              </Button>
-            </div>
-            <Accordion type="multiple" className="w-full">
-              {generatedMilestones.map((milestone, index) => (
-                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center flex-1">
-=======
-          disabled={isGenerating || !scope || !startDate || !projectType}>;
-          {isGenerating ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-              Generating...;
-            </>;
-          ) : (;
-            <>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-              Generate Milestones;
-            </>;
-          )}
-        </Button>;
-      </div>;
-
-      {generatedMilestones && generatedMilestones.length > 0 && (;
-        <Card>;
-          <CardContent className="pt-6">;
-            <div className="flex justify-between items-center mb-4">;
-              <p className="text-sm text-muted-foreground">;
-                {generatedMilestones && generatedMilestones.length} milestones generated based on your project scope;
-              </p>;
-              <Button
-                onClick={handleAddToProject}
-                disabled={!Object && Object.values(selectedMilestones).some(Boolean)}>;
-                Add Selected to Project;
-              </Button>;
-            </div>;
-
-            <Accordion type="multiple" className="w-full">;
-              {generatedMilestones && generatedMilestones.map((milestone, index) => (;
-                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">;
-                  <div className="flex items-center justify-between">;
-                    <div className="flex items-center flex-1">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <input
                         type="checkbox"
                         id={`milestone-${index}`}
@@ -370,20 +166,6 @@ if ( {) {
                         </div>;
                       </AccordionTrigger>;
                     </div>;
-<<<<<<< HEAD
-                    <Button
-                      variant="ghost"
-                      size="sm"
-<<<<<<< HEAD
-                      onClick={(e) => {
-                        e.stopPropagation();
-
-                        handleAddSingleMilestone(milestone)
-=======
-                      onClick={(e) => {;
-                        e && e.stopPropagation();
-                        handleAddSingleMilestone(milestone);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       }}
                       className="mr-2";
                     >;
@@ -408,15 +190,6 @@ if ( {) {
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
                     <Button;
                       variant="ghost";

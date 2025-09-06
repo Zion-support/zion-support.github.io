@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
 export type EmptyStateProps = {;
 =======
@@ -34,28 +7,6 @@ export type EmptyStateProps = {
   emoji?: string;
   title: string;
   message: string;
-<<<<<<< HEAD
-  action?: React.ReactNode;
-}
-<<<<<<< HEAD
-export default function EmptyState({
-  emoji = "✨"
-  title
-  message
-  action
-}: EmptyStateProps) {
-
-=======
-  action?: React && React.ReactNode;
-};
-
-export default function EmptyState(): any ({;
-  emoji = "✨",;
-  title,;
-  message,;
-  action,;
-}: EmptyStateProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="text-center py-12">;
       <div className="mx-auto h-24 w-24 rounded-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 flex items-center justify-center">;

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-export default function CertificatePreview({
-  courseId
-  userId = "demo-user"
-}: {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -62,12 +49,6 @@ export default function CertificatePreview(): any ({;
       </a>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-=======
-import React from 'react';
-export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
@@ -86,11 +67,6 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
       </a>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import React from './react';
 ;

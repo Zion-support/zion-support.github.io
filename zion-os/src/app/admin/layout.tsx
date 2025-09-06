@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { ReactNode } from "react";
-export default function AdminLayout({ children }: { children: ReactNode }) {return (;
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
-=======
-import { ReactNode  } from './react';
-export default /**
- * AdminLayout - Function description
- */
-function AdminLayout() {
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - gray - 800 to - black">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Admin Header */}
       <div className="glass border - b border - white / 10">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

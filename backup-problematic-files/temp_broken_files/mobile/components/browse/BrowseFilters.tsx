@@ -180,9 +180,3 @@ if (!activeFilters.includes (filter) ) {;
   activeFilters.map ( (filter) => (<Badge key= {;"  filter ";"}variant="secondary" className="flex items-center gap-1" > {;
   filter ;
 }<X /> </Badge>) ) ;
-<<<<<<< HEAD:temp_broken_files/mobile/components/browse/BrowseFilters.tsx
-}</div> </div> </div>) ;"}"
-=======
-}</div> </div> </div>) ;
-}"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/browse/BrowseFilters.tsx

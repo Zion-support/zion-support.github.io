@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
-function list(dir: string, baseDir: string) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const items = fs.readdirSync(dir)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const items = fs.readdirSync(dir);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return items.map((name) => {
@@ -19,15 +7,6 @@ function list(dir: string, baseDir: string) {
     return { name, rel, isDir: stat.isDirectory() }
   })
 }
-<<<<<<< HEAD
-
-export async function getStaticProps() {
-  const base = path.join(process.cwd(), 'docs/gitbook');
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export async function getStaticProps() {
   const base = path.join(process.cwd(), 'docs/gitbook')
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -74,49 +53,7 @@ export default /**
 function DocsIndex() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">Zion Docs (GitBook)</h1>
-      <p className="text-gray-600 dark:text-gray-300">Browse the documentation structure. Files link to the repository for now.</p>
-      <div className="space-y-4">
-        {sections.map((s) => (
-          <div key={s.title} className="border rounded p-4">
-            <h2 className="font-semibold mb-2">{s.title}</h2>
-            <ul className="list-disc pl-5 space-y-1">
-              {s.items.map((it) => (
-                <li key={it.rel}>
-                  <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
-=======
-    <div className="space - y-6">;
-      <h1 className="text - 3xl font - bold">Zion Docs (GitBook)</h1>;
-      <p className="text - gray - 600 dark:text - gray - 300">Browse the documentation structure. Files link to the repository for now.</p>;
-      <div className="space - y-4">;
-        {sections.map ((s) => (
-          <div key={s.title} className="border rounded p - 4">;
-            <h2 className="font - semibold mb - 2">{s.title}</h2>;
-            <ul className="list - disc pl - 5 space - y-1">;
-              {s.items.map ((it) => (
-                <li key={it.rel}>;
-                  <a className="underline" href={`https://github.com / Zion - Holdings / zion.app / blob / main / docs / gitbook/${it.rel}`} target="_blank" rel="noreferrer">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     {it.rel}
-<<<<<<< HEAD
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
                   </a>;
                 </li>))}

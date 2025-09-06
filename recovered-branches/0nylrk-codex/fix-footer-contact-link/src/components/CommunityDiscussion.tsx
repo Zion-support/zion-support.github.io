@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { MessageCircle } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Avatar, AvatarFallback } from "@/components/ui/avatar",
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-interface DiscussionPost {;
-=======
-import React, { useState } from './react';
-import { MessageCircle  } from './lucide-react';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { Textarea  } from '@/components / ui / textarea';
-import { Avatar, AvatarFallback  } from '@/components / ui / avatar';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Separator  } from '@/components / ui / separator';
-interface DiscussionPost {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: number;
   author: string;
   avatar?: string;
@@ -26,27 +5,6 @@ interface DiscussionPost {
   title: string;
   body: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-const initialPosts: DiscussionPost[] = [
-  {
-
-    id: 1
-    author: "Anna Zhou"
-    time: "2h ago"
-    title: "What AI trends are you most excited for in 2025?"
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
-  }
-=======
-const initial_posts: DiscussionPost[] = [;
-  {
-    id: 1,
-    author: "Anna Zhou",
-    time: "2h ago",
-    title: "What AI trends are you most excited for in 2025?",
-    body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 2
     author: "David Kim"
@@ -74,40 +32,10 @@ const initialPosts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
   },;
 ];
-<<<<<<< HEAD
-
-export const CommunityDiscussion: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
-<<<<<<< HEAD
-  const handleAddPost = () => {
-    if (!newTitle.trim() |!newBody.trim()) return;
-    setPosts([
-      {
-        id: Date.now()
-        author: "You"
-        time: "Now"
-        title: newTitle
-        body: newBody
-      }
-      ...posts
-=======
-
-  const handleAddPost = () => {;
-    if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
-    setPosts([;
-      {;
-        id: Date && Date.now(),;
-        author: "You",;
-        time: "Now",;
-        title: newTitle,;
-        body: newBody,;
-      },;
-      ...posts,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ]);
     setNewTitle("");
     setNewBody("");
@@ -223,54 +151,10 @@ export const CommunityDiscussion: React.FC = () => {
               max_length={400}
               rows={3}
             />;
-<<<<<<< HEAD
-            <div className="flex gap-3 justify-end">;
-              <Button
-                variant="secondary"
-                size="sm"
-                className="bg-zion-blue text-white hover:bg-zion-blue-dark"
-                onClick={() => setShowNew(false)}
-              >;
-                Cancel;
-              </Button>;
-              <Button
-                size="sm"
-                className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
-                onClick={handleAddPost}
-<<<<<<< HEAD
-                disabled={!newTitle.trim() |!newBody.trim()}
-              >
-                Post
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-=======
-                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
-=======
-            <div className="flex gap - 3 justify - end">;
-              <Button;
-                variant="secondary";
-                size="sm";
-                className="bg - zion - blue text - white hover:bg - zion - blue - dark";
-                on_click={() => setShowNew (false)}
-              >;
-                Cancel;
-              </Button>;
-              <Button;
-                size="sm";
-                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
-                on_click={handleAddPost}
-                disabled={!new_title.trim () || !new_body.trim ()}
-              >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Post;
               </Button>;
             </div>;
           </CardContent>;
-<<<<<<< HEAD
-        </Card>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       )}
       <div className="flex flex-col gap-6">;
         {posts && posts.map((post) => (;

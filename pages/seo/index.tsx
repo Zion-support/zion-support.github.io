@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 export default function SEOIndex() {
 
@@ -27,24 +23,6 @@ function SEOIndex() {
     <div>;
       <h1 className="text - 2xl font - semibold mb - 4">SEO Landing Pages</h1>;
       {slugs.length === 0 ? (
-<<<<<<< HEAD
-        <div className="text-sm text-gray-500">Generated pages will appear once deployed.</div>
-      ) : (
-        <ul className="list-disc ml-5">
-          {slugs.map((s) => (
-            <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</a></li>
-          ))}
-        </ul>
-      )}
-    </div>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
         <div className="text - sm text - gray - 500">Generated pages will appear once deployed.</div>) : (
         <ul className="list - disc ml - 5">;

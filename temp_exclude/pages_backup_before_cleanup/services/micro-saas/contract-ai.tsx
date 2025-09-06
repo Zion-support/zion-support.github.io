@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,12 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 export default function ContractAI() {; return ( <Article title=\"Contract AI Extractor\" subtitle=\"Extract clauses,obligations,renewal windows,and risks from PDFs\" price=\"from $349/mo\" bullets={[
      \'Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs\', \'Obligation tracking with renewal/termination reminders\', \'Pipedrive/HubSpot sync SOC2-ready audit logs\',,
-<<<<<<< HEAD
-=======
-=======
-export default function ContractAI() {; return (; <Article; title=\"Contract AI Extractor\"; subtitle=\"Extract clauses,obligations,renewal windows,and risks from PDFs\"; price=\"from $349/mo\"; bullets={[
-    ; \'Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs\',; \'Obligation tracking with renewal/termination reminders\',; \'Pipedrive/HubSpot sync; SOC2-ready audit logs\',,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     \'Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints\'
   ]} links={{ \"website\": \'https: /> );
@@ -54,12 +44,4 @@ export default function Contractai(): any ({ }: ContractaiProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

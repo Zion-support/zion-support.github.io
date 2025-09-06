@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 import { Peer } from "../../../utils/sync/types";
@@ -23,13 +19,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeState(state)
 
   return res.status(200).json({ peers: state.config.peers })
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state  } from '../../../utils / sync / storage';,

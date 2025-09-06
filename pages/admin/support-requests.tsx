@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
@@ -55,21 +48,6 @@ function resolve() {
               <div className="opacity - 80">Status: {r.status}</div>;
             </div>;
             {r.status !== 'resolved' && (
-<<<<<<< HEAD
-              <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
               <button on_click={() => resolve (r.id)} className="enhanced - button enhanced - button - primary">Mark Resolved</button>)}
           </div>))}

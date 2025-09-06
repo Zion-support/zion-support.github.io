@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import EmptyState from '../../components/ui/EmptyState'
-export default function RequestsPage() {
-=======
-import EmptyState from '../../components / ui / EmptyState';
-export default /**
- * RequestsPage - Function description
- */
-function RequestsPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div>;
       <h2 className=&quot;text - xl font - semibold mb - 2&quot;>Requests</h2>;

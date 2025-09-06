@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useEffect, useState } from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([])
-  const [userId, setUserId] = useState("")
-  const [amount, setAmount] = useState(100)
-  const [reason, setReason] = useState("admin_action")
-  const [config, setConfig] = useState<any>(null)
-  async function load() {
-    const [txRes, cfgRes] = await Promise.all([
-      fetch("/api/admin/tokens").then((r) => r.json())
-      fetch("/api/admin/tokens/config").then((r) => r.json())])
-    setTransactions(txRes.transactions |[])
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useEffect, useState } from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 export default function AdminTokens() {
@@ -82,13 +61,6 @@ export default function AdminTokens() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Conversion & Rules</h2>
@@ -103,13 +75,6 @@ export default function AdminTokens() {
             </div>
           )}
         </div>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Transactions</h2>
@@ -130,13 +95,6 @@ export default function AdminTokens() {
       </div>
     </EnhancedLayout>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import React, { useEffect, useState } from './react';,
 import EnhancedLayout from "../../components / layout / EnhancedLayout",

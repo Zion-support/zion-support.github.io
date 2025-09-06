@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services";
-  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.";
-  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"}
-export default function SpaceTechPage() {return (;
-    <div className="min-h-screen">;
-=======
-import Link from './next / link';,
-export const metadata = {
-  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",
-  description: "Explore Zion Tech Group's cutting - edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",
-  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},
-export default /**
- * SpaceTechPage - Function description
- */
-function SpaceTechPage() {
-  return (
-    <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -98,15 +78,6 @@ function SpaceTechPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m - 7.08 - 7.071c3.904 - 3.905 10.236 - 3.905 14.141 0M1.394 9.393c5.857 - 5.857 15.355 - 5.857 21.213 0" />;
                 </svg>;
               </div>;
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold mb-3">Satellite Communications</h3>;
-              <p className="text-gray-400 mb-4">;
-                High-speed satellite internet, global connectivity solutions;
-=======
-              <h3 className="text - xl font - semibold mb - 3">Satellite Communications</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                High - speed satellite internet, global connectivity solutions,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

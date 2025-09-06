@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-export const metadata = {
-  title: "About | Zion Tech Group",
-<<<<<<< HEAD
-  description:
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
-=======
-export const metadata = {;
-  title: "About | Zion Tech Group",;
-  description:;
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 };
 export default function AboutPage() {;
   return (
@@ -82,128 +70,15 @@ function AboutPage() {
             </div>{" "}
             <div>;
               {" "}
-<<<<<<< HEAD
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">;
-                Our Vision;
-              </h2>{" "}
-              <p className="text-gray-600 leading-relaxed">;
-                {" "}
-                A world where every business can leverage advanced technology to;
-                compete effectively and scale efficiently,regardless of their;
-=======
-              <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
-                Our Vision;
-              </h2>{" "}
-              <p className="text - gray - 600 leading - relaxed">;
-                {" "}
-                A world where every business can leverage advanced technology to;
-                compete effectively and scale efficiently, regardless of their;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 technical expertise.{" "}
               </p>{" "}
             </div>{" "}
           </div>{" "}
-<<<<<<< HEAD
-          <div className="bg-gray-50 rounded-lg p-8 mb-12">;
-            {" "}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">;
-              Our Values;
-            </h2>{" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-              {" "}
-              <div className="text-center">;
-                {" "}
-                <div className="text-4xl mb-3">🎯</div>{" "}
-                <h3 className="font-semibold text-gray-900 mb-2">;
-                  Results-Driven;
-                </h3>{" "}
-                <p className="text-sm text-gray-600">;
-                  We focus on delivering measurable business outcomes;
-                </p>{" "}
-              </div>{" "}
-              <div className="text-center">;
-                {" "}
-                <div className="text-4xl mb-3">🚀</div>{" "}
-                <h3 className="font-semibold text-gray-900 mb-2">Innovation</h3>{" "}
-                <p className="text-sm text-gray-600">;
-                  We stay ahead of technology trends and best practices;
-                </p>{" "}
-              </div>{" "}
-              <div className="text-center">;
-                {" "}
-                <div className="text-4xl mb-3">🤝</div>{" "}
-                <h3 className="font-semibold text-gray-900 mb-2">;
-                  Partnership;
-                </h3>{" "}
-                <p className="text-sm text-gray-600">;
-=======
-          <div className="bg - gray - 50 rounded - lg p - 8 mb - 12">;
-            {" "}
-            <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
-              Our Values;
-            </h2>{" "}
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-              {" "}
-              <div className="text - center">;
-                {" "}
-                <div className="text - 4xl mb - 3">🎯</div>{" "}
-                <h3 className="font - semibold text - gray - 900 mb - 2">;
-                  Results - Driven;
-                </h3>{" "}
-                <p className="text - sm text - gray - 600">;
-                  We focus on delivering measurable business outcomes;
-                </p>{" "}
-              </div>{" "}
-              <div className="text - center">;
-                {" "}
-                <div className="text - 4xl mb - 3">🚀</div>{" "}
-                <h3 className="font - semibold text - gray - 900 mb - 2">Innovation</h3>{" "}
-                <p className="text - sm text - gray - 600">;
-                  We stay ahead of technology trends and best practices;
-                </p>{" "}
-              </div>{" "}
-              <div className="text - center">;
-                {" "}
-                <div className="text - 4xl mb - 3">🤝</div>{" "}
-                <h3 className="font - semibold text - gray - 900 mb - 2">;
-                  Partnership;
-                </h3>{" "}
-                <p className="text - sm text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   We work as an extension of your team;
                 </p>{" "}
               </div>{" "}
             </div>{" "}
           </div>{" "}
-<<<<<<< HEAD
-          <div className="mb-12">;
-            {" "}
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">;
-              Our Expertise;
-            </h2>{" "}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-              {" "}
-              <div className="border border-gray-200 rounded-lg p-6">;
-                {" "}
-                <h3 className="font-semibold text-gray-900 mb-3">;
-                  AI & Machine Learning;
-                </h3>{" "}
-                <ul className="text-gray-600 space-y-2">;
-=======
-          <div className="mb - 12">;
-            {" "}
-            <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
-              Our Expertise;
-            </h2>{" "}
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              {" "}
-              <div className="border border - gray - 200 rounded - lg p - 6">;
-                {" "}
-                <h3 className="font - semibold text - gray - 900 mb - 3">;
-                  AI & Machine Learning;
-                </h3>{" "}
-                <ul className="text - gray - 600 space - y-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {" "}
                   <li>• Large Language Model (LLM) applications</li>{" "}
                   <li>• Retrieval - Augmented Generation (RAG)</li>{" "}
@@ -211,21 +86,6 @@ function AboutPage() {
                   <li>• MLOps and model deployment</li>{" "}
                 </ul>{" "}
               </div>{" "}
-<<<<<<< HEAD
-              <div className="border border-gray-200 rounded-lg p-6">;
-                {" "}
-                <h3 className="font-semibold text-gray-900 mb-3">;
-                  Cloud & Infrastructure;
-                </h3>{" "}
-                <ul className="text-gray-600 space-y-2">;
-=======
-              <div className="border border - gray - 200 rounded - lg p - 6">;
-                {" "}
-                <h3 className="font - semibold text - gray - 900 mb - 3">;
-                  Cloud & Infrastructure;
-                </h3>{" "}
-                <ul className="text - gray - 600 space - y-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {" "}
                   <li>• AWS, GCP, and Azure migration</li>{" "}
                   <li>• Kubernetes and containerization</li>{" "}
@@ -235,19 +95,6 @@ function AboutPage() {
               </div>{" "}
             </div>{" "}
           </div>{" "}
-<<<<<<< HEAD
-          <div className="text-center">;
-            {" "}
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">;
-              Ready to Get Started?;
-            </h2>{" "}
-            <p className="text-gray-600 mb-6">;
-              {" "}
-<<<<<<< HEAD
-              Let&apos;s discuss how we can help your business leverage technology
-=======
-              Let's discuss how we can help your business leverage technology;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               for growth.{" "}
             </p>{" "}
             <a
@@ -275,10 +122,4 @@ function AboutPage() {
           </div>{" "}
         </div>{" "}
       </div>{" "}
-<<<<<<< HEAD
-    </div>;
-  );
-=======
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

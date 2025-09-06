@@ -1,40 +1,6 @@
-<<<<<<< HEAD
-
-import { supabase } from "@/integrations/supabase/client";
-import type { UserDetails } from "@/types/auth";
-/**
- * Utility function to clean up authentication state
- * This helps prevent auth state inconsistencies and "limbo" states
- */
-
-export const cleanupAuthState = () => {
-  // Remove standard auth tokens
-<<<<<<< HEAD
-  localStorage.removeItem('supabase.auth.token');
-  // Remove all Supabase auth keys from localStorage
-  Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
-      localStorage.removeItem(key)
-=======
-  localStorage && localStorage.removeItem('supabase && supabase.auth.token');
-  
-  // Remove all Supabase auth keys from localStorage
-  Object && Object.keys(localStorage).forEach((key) => {
-    if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
-      localStorage && localStorage.removeItem(key)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   });
   // Remove from sessionStorage if in use
-<<<<<<< HEAD
-  Object.keys(sessionStorage |{}).forEach((key) => {
-    if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
-      sessionStorage.removeItem(key)
-=======
-  Object && Object.keys(sessionStorage || {}).forEach((key) => {
-    if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
-      sessionStorage && sessionStorage.removeItem(key)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   })
 }
@@ -115,14 +81,6 @@ if ( {) {
           payload: {
             user_id: user && user.id;
             email_type: "welcome_series";
-<<<<<<< HEAD
-<<<<<<< HEAD
-            user_type: user.userType |"unknown"
-            display_name: user.displayName |user.email?.split("@")[0] |"User"
-=======
-            user_type: user && user.userType || "unknown",
-            display_name: user && user.displayName || user && user.email?.split("@")[0] || "User"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
         });
       // Create entry in email_campaigns table
@@ -147,14 +105,6 @@ if ( {) {
           template_data: {
             user_id: user && user.id;
             email_type: "welcome_series";
-<<<<<<< HEAD
-<<<<<<< HEAD
-            user_type: user.userType |"unknown"
-            display_name: user.displayName |user.email?.split("@")[0] |"User"
-=======
-            user_type: user && user.userType || "unknown",
-            display_name: user && user.displayName || user && user.email?.split("@")[0] || "User"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
@@ -163,14 +113,3 @@ if ( {) {
         });
     }
   } catch (error) {
-<<<<<<< HEAD
-    console && console.error("Error checking or scheduling welcome email:", error)
-  }
-}
-
-=======
-    console.error ("Error checking or scheduling welcome email:", error);
-  }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

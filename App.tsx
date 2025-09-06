@@ -1,100 +1,41 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
-import Sidebar from './src/components/layout/Sidebar';
 import Footer from './src/components/Footer';
-import HomePage from './src/pages/Home';
-import AboutPage from './src/pages/About';
-import ContactPage from './src/pages/Contact';
-import ServicesPage from './src/pages/Services';
-import PricingPage from './src/pages/Pricing';
-<<<<<<< HEAD
-=======
-=======
-import React, { JSX } from 'react';
-<<<<<<< HEAD
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+import Loading from './src/components/Loading';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+import ErrorBoundary from './src/components/ErrorBoundary';
 
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+// Lazy load pages for better performance
+const Home = lazy(() => import('./src/pages/Home'));
+const About = lazy(() => import('./src/pages/About'));
+const Services = lazy(() => import('./src/pages/Services'));
+const Pricing = lazy(() => import('./src/pages/Pricing'));
+const Contact = lazy(() => import('./src/pages/Contact'));
+const NotFound = lazy(() => import('./src/pages/NotFound'));
 
-<<<<<<< HEAD
 export default function App() {
-=======
-export default function App(): React.JSX.Element {
-=======
-import React, { JSX } from 'react',
-
-export default function App(): JSX.Element {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
   return (
-<<<<<<< HEAD
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gray-50">
+        <PerformanceMonitor />
+        <div className="min-h-screen flex flex-col">
           <Header />
-          <Sidebar />
-          <main className="flex-1 lg:ml-80">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-            </Routes>
+          <main className="flex-grow">
+            <Suspense fallback={<Loading fullScreen text="Loading page..." />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
           </main>
           <Footer />
         </div>
       </Router>
     </ErrorBoundary>
-=======
-    <main>
-      <h1>Hello App</h1>
-    </main>
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
-export default function App() {;
-  return (
-    <ErrorBoundary>;
-      <Router>;
-        <div className="min-h-screen bg-gray-50">;
-          <Header />;
-          <Sidebar />;
-          <main className="flex-1 lg:ml-80">;
-            <Routes>;
-              <Route path="/" element={<HomePage />} />;
-              <Route path="/about" element={<AboutPage />} />;
-              <Route path="/contact" element={<ContactPage />} />;
-              <Route path="/services" element={<ServicesPage />} />;
-              <Route path="/pricing" element={<PricingPage />} />;
-            </Routes>;
-          </main>;
-          <Footer />;
-        </div>;
-      </Router>;
-    </ErrorBoundary>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
-=======
-;
-export default /**
- * App - Function description
- */
-function App() {
-  return (
-    <main>;
-      <h1 > Hello App</h1>;
-    </main>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import { createNotification  } from './createNotification';
-import { OnboardingNotificationParams } from './types';
-/**
- * Creates an onboarding notification for a user
- */
-export async function createOnboardingNotification({
-  userId;
-  missingMilestone;
-  userRole
-}: OnboardingNotificationParams) {
-<<<<<<< HEAD
-
-=======
-  try {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   let title = '';
   let message = '';
   let actionUrl = '';
@@ -84,26 +67,4 @@ if ( {) {
         break;
     }
   }
-<<<<<<< HEAD
-  return createNotification({
-    userId;
-    title;
-    message;
-    type: 'onboarding';
-    sendEmail: false;
-    actionUrl
-
-    actionText
-  })
-=======
-  return create_notification ({
-    user_id;
-    title;
-    message;
-    type: 'onboarding';
-    send_email: false;
-    action_url,
-    action_text;
-  });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

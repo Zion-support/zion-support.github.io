@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-interface FeatureCardProps {icon: string;
-  title: string;
-  description: string;
-  features: string[];
-  gradient: string;
-  className?: string;
-}
-export default function FeatureCard({
-  icon
-  title
-  description
-  features
-  gradient
-  className = ''
-}: FeatureCardProps) {
-=======
-interface FeatureCardProps {
-  icon: string,
-  title: string,
-  description: string,
-  features: string[],
-  gradient: string,
-  class_name?: string;
-}
-export default /**
- * FeatureCard - Function description
- */
-function FeatureCard() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className={`feature - card group ${class_name}`}>;
       <div className={`w - 12 h - 12 ${gradient} rounded - lg flex items - center justify - center mb - 4`}>;

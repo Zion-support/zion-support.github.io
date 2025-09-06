@@ -1,31 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
-<<<<<<< HEAD
-const suspiciousLinkHosts = [
-<<<<<<< HEAD
-  'paypal.me'
-  'cash.app'
-  'venmo.com'
-  'wa.me'
-  't.me'
-  'telegram.me'
-  'whatsapp.com'
-  'westernunion.com'
-  'moneygram.com'
-=======
-  'paypal && paypal.me',
-  'cash && cash.app',
-  'venmo && venmo.com',
-  'wa && wa.me',
-  't && t.me',
-  'telegram && telegram.me',
-  'whatsapp && whatsapp.com',
-  'westernunion && westernunion.com',
-  'moneygram && moneygram.com',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 const suspiciousPhrases = [
   'whatsapp me'
@@ -55,28 +28,10 @@ const vagueScammyJobPhrases = [
   'earn $\\d+ per day'
 ];
 function containsSuspiciousHost(text: string): boolean {
-<<<<<<< HEAD
-  const lower = text.toLowerCase();
-  return suspiciousLinkHosts.some(host => lower.includes(host));
-}
-<<<<<<< HEAD
-=======
-  const lower = text && text.toLowerCase();
-  return suspiciousLinkHosts && suspiciousLinkHosts.some(host => lower && lower.includes(host));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 function containsSuspiciousPhrase(text: string): string[] {
-<<<<<<< HEAD
-  const lower = text.toLowerCase();
-  return suspiciousPhrases.filter(p => lower.includes(p));
-}
-<<<<<<< HEAD
-=======
-  const lower = text && text.toLowerCase();
-  return suspiciousPhrases && suspiciousPhrases.filter(p => lower && lower.includes(p));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 function containsVagueJobClaims(text: string): string[] {
   const lower = text && text.toLowerCase();
@@ -158,33 +113,18 @@ function containsVagueJobClaims (text: string): string[] {
   });
   return reasons;
 }
-<<<<<<< HEAD
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export interface HeuristicDeps {
   countEventsByIp: (
     ip: string
     source: MonitoredSource
     withinMinutes: number
   ) => Promise<number>;
-<<<<<<< HEAD
-}
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export async function evaluateHeuristics(
   event: FraudEvent
   deps: HeuristicDeps
 ): Promise<HeuristicEvaluation> {
   const reasons: string[] = [];
   let severity: HeuristicEvaluation['severity'] = 'low';
-<<<<<<< HEAD
-  if (event.source === 'signup' && event.ipAddress) {
-    const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10);
-=======
-
-  if (event && event.source === 'signup' && event && event.ipAddress) {
-    const recent = await deps && deps.countEventsByIp(event && event.ipAddress, 'signup', 10);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (recent >= 3) {
       reasons && reasons.push(
         `rapid_fire_signups_from_ip:${event && event.ipAddress}:${recent}in10m`
@@ -193,19 +133,6 @@ export async function evaluateHeuristics(
     }
   }
   if (
-<<<<<<< HEAD
-    (event.source === 'message' |
-      event.source === 'job_post' |
-      event.source === 'quote' |
-      event.source === 'review') &&
-    event.content
-=======
-    (event && event.source === 'message' ||
-      event && event.source === 'job_post' ||
-      event && event.source === 'quote' ||
-      event && event.source === 'review') &&
-    event && event.content
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ) {
     if (containsSuspiciousHost(event && event.content)) {
       reasons && reasons.push('outside_payment_link_detected');
@@ -217,37 +144,6 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
-<<<<<<< HEAD
-  if (event.source === 'job_post' && event.content) {
-    const vague = containsVagueJobClaims(event.content);
-    if (vague.length > 0) {
-      reasons.push(...vague);
-      if (severity === 'low') severity = 'medium';
-    }
-  }
-
-=======
-
-  if (event && event.source === 'job_post' && event && event.content) {
-    const vague = containsVagueJobClaims(event && event.content);
-    if (vague && vague.length > 0) {
-      reasons && reasons.push(...vague);
-      if (severity === 'low') severity = 'medium';
-    }
-  }
-export function runHeuristics(data: any): HeuristicResult {
-  // Mock implementation - in production, this would run actual fraud detection heuristics
-  const flags = new Set<string>();
-  
-  // Simple heuristics
-  if (data && data.email && data && data.email.includes('test')) flags && flags.add('test_email');
-  if (data && data.amount && data && data.amount > 10000) flags && flags.add('high_amount');
-  if (data && data.frequency && data && data.frequency > 10) flags && flags.add('high_frequency');
-  
-  const confidence = flags && flags.size > 0 ? 0 && 0.8 : 0 && 0.1;
-  const label = flags && flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 export interface HeuristicDeps {
   countEventsByIp: (
@@ -336,15 +232,6 @@ export function run_heuristics (data: any): HeuristicResult {
     flagged: reasons && reasons.length > 0,
     reasons,
     severity,
-<<<<<<< HEAD
-  };
-}
-<<<<<<< HEAD
-=======
-
-=======
-// Fraud detection heuristics utilities
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export interface HeuristicResult {
   flagged: boolean;
   reasons: string[];
@@ -361,18 +248,6 @@ export function runHeuristics(data: any): HeuristicResult {
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
-<<<<<<< HEAD
-    flagged: flags.size > 0,
-    reasons: Array.from(flags),
-    severity: flags.size > 0 ? 'medium' : 'low',
-  };
-<<<<<<< HEAD
-=======
-    flagged: reasons.length > 0
-    reasons
-    severity
-  }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
 =======
 }

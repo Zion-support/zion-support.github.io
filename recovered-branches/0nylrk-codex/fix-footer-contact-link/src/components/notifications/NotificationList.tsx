@@ -1,39 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ScrollArea  } from '@/components/ui/scroll-area';
-import { Skeleton  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { NotificationItem  } from './NotificationItem';
-import { Notification } from '@/context/notifications';
-interface NotificationListProps {
-
-  loading: boolean
-  error: string | null
-  notifications: Notification[]
-  onMarkAsRead: (id: string) => Promise<void>
-  onDismiss: (id: string) => Promise<void>
-
-  onRetry: () => void
-}
-export const NotificationList: React.FC<NotificationListProps> = ({
-=======
-import {ScrollArea} from '@/components/ui/scroll-area';
-import {Skeleton} from '@/components/ui/skeleton';
-import {Button} from '@/components/ui/button';
-import {NotificationItem} from './NotificationItem';
-import {Notification} from '@/context/notifications';
-interface NotificationListProps {;
-  loading: boolean,;
-  error: string | null,;
-  notifications: Notification[],;
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>,;
-  onRetry: () => void;
-}
-
-export const NotificationList: React.FC<NotificationListProps> = ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import {ScrollArea} from '@/components / ui / scroll - area';
 import {Skeleton} from '@/components / ui / skeleton';
@@ -54,38 +19,10 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   error;
   notifications;
   onMarkAsRead;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  onDismiss
-  onRetry
-=======
-  on_dismiss,
-  on_retry;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
-<<<<<<< HEAD
-        <div className="p-8 text-center text-amber-500">
-          <p>{error}</p>
-          <Button
-            variant="outline"
-            size="sm"
-=======
-  onDismiss,;
-  onRetry;
-}) => {;
-  return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
-      {error ? (;
-        <div className="p-8 text-center text-amber-500">;
-          <p>{error}</p>;
-          <Button
-            variant="outline" 
-            size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="mt-2"
             onClick={onRetry}>;
             Try Again;
@@ -111,16 +48,6 @@ export const NotificationList: React.FC < NotificationListProps> = ({
           />;
         ));
       )}
-<<<<<<< HEAD
-    </ScrollArea>
-  )
-}
-
-=======
-    </ScrollArea>;
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;

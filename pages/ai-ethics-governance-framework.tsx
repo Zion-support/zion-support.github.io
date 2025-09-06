@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEthicsGovernanceFramework() {
@@ -28,13 +24,6 @@ export default function AIEthicsGovernanceFramework() {
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	)
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',

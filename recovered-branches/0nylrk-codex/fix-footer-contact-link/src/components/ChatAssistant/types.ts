@@ -8,14 +8,3 @@ export interface Message {
 export interface Recipient {
   id: string;
   name: string;
-<<<<<<< HEAD
-  avatarUrl?: string;
-
-  role?: string;
-}
-
-=======
-  avatar_url?: string;
-  role?: string;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

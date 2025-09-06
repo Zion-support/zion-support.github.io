@@ -25,12 +25,6 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import MainLayout from '../components/layout/MainLayout';
@@ -48,25 +42,6 @@ const jobOpenings = [{;
       "Proficiency in Python, TensorFlow, PyTorch";
       "Experience with cloud platforms (AWS, Azure, GCP)";
 import Layout from '../components/Layout';
-<<<<<<< HEAD:pages.broken/talent.tsx
-const jobOpenings = [
-  {
-    id: 1,
-    title: "Senior AI/ML Engineer",
-    department: "AI Services",
-    location: "Remote",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
-    requirements: [
-      "Master's degree in Computer Science or related field",
-      "5+ years experience in AI/ML development",
-      "Proficiency in Python, TensorFlow, PyTorch",
-      "Experience with cloud platforms (AWS, Azure, GCP)",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -75,12 +50,6 @@ const jobOpenings = [
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     "id": 2,
@@ -106,10 +75,6 @@ const jobOpenings = [
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -118,12 +83,6 @@ const jobOpenings = [
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     "id": 3,
@@ -149,10 +108,6 @@ const jobOpenings = [
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -161,12 +116,6 @@ const jobOpenings = [
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     "id": 4,
@@ -192,10 +141,6 @@ const jobOpenings = [
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -204,12 +149,6 @@ const jobOpenings = [
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     "id": 5,
@@ -235,10 +174,6 @@ const jobOpenings = [
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -247,12 +182,6 @@ const jobOpenings = [
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     "id": 6,
@@ -278,10 +207,6 @@ const jobOpenings = [
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -290,210 +215,6 @@ const jobOpenings = [
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-const benefits = [{
-    "title": "Competitive Compensation"
-    "description": "We offer competitive salaries and performance-based bonuses"
-    "icon": Star
-  },
-  {
-    "title": "Health & Wellness"
-    "description": "Comprehensive health insurance and wellness programs"
-    "icon": Users
-  },
-  {
-    "title": "Flexible Work"
-    "description": "Remote work options and flexible schedules"
-    "icon": Clock
-  },
-  {
-    "title": "Professional Growth"
-    "description": "Learning opportunities and career development support"
-    "icon": ArrowRight
-=======
-const jobOpenings = [;
-  {;
-    id: 1,;
-    title: "Senior AI/ML Engineer",;
-    department: "AI Services",;
-    location: "Remote",;
-    type: "Full-time",;
-    experience: "5+ years",;
-    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",;
-    requirements: [;
-      "Master's degree in Computer Science or related field",;
-      "5+ years experience in AI/ML development",;
-      "Proficiency in Python, TensorFlow, PyTorch",;
-      "Experience with cloud platforms (AWS, Azure, GCP)",;
-      "Strong problem-solving and communication skills";
-    ],;
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"];
-  },;
-  {;
-    "id": 2,;
-    "title": "Full-Stack Developer";
-    "department": "Micro SaaS";
-    "location": "New York, NY";
-    "type": "Full-time";
-    "experience": "3+ years";
-    "description": "Build scalable web applications and microservices for our SaaS solutions.";
-    "requirements": ["Bachelor's degree in Computer Science or related field";
-      "3+ years experience in full-stack development";
-      "Proficiency in React, Node && Node.js, TypeScript";
-      "Experience with databases (PostgreSQL, MongoDB)";
-    id: 2,;
-    title: "Full-Stack Developer",;
-    department: "Micro SaaS",;
-    location: "New York, NY",;
-    type: "Full-time",;
-    experience: "3+ years",;
-    description: "Build scalable web applications and microservices for our SaaS solutions.",;
-    requirements: [;
-      "Bachelor's degree in Computer Science or related field",;
-      "3+ years experience in full-stack development",;
-      "Proficiency in React, Node && Node.js, TypeScript",;
-      "Experience with databases (PostgreSQL, MongoDB)",;
-      "Knowledge of cloud deployment and DevOps";
-    ],;
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"];
-  },;
-  {;
-    "id": 3,;
-    "title": "Cloud Solutions Architect";
-    "department": "IT Services";
-    "location": "Remote";
-    "type": "Full-time";
-    "experience": "7+ years";
-    "description": "Design and implement cloud infrastructure solutions for enterprise clients.";
-    "requirements": ["Bachelor's degree in Computer Science or related field";
-      "7+ years experience in cloud architecture";
-      "AWS/Azure/GCP certifications preferred";
-      "Experience with containerization (Docker, Kubernetes)";
-    id: 3,;
-    title: "Cloud Solutions Architect",;
-    department: "IT Services",;
-    location: "Remote",;
-    type: "Full-time",;
-    experience: "7+ years",;
-    description: "Design and implement cloud infrastructure solutions for enterprise clients.",;
-    requirements: [;
-      "Bachelor's degree in Computer Science or related field",;
-      "7+ years experience in cloud architecture",;
-      "AWS/Azure/GCP certifications preferred",;
-      "Experience with containerization (Docker, Kubernetes)",;
-      "Strong understanding of security best practices";
-    ],;
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"];
-  },;
-  {;
-    "id": 4,;
-    "title": "Cybersecurity Specialist";
-    "department": "Security";
-    "location": "San Francisco, CA";
-    "type": "Full-time";
-    "experience": "4+ years";
-    "description": "Protect our clients' digital assets and implement security best practices.";
-    "requirements": ["Bachelor's degree in Cybersecurity or related field";
-      "4+ years experience in cybersecurity";
-      "Certifications (CISSP, CISM, CEH) preferred";
-      "Experience with security tools and frameworks";
-    id: 4,;
-    title: "Cybersecurity Specialist",;
-    department: "Security",;
-    location: "San Francisco, CA",;
-    type: "Full-time",;
-    experience: "4+ years",;
-    description: "Protect our clients' digital assets and implement security best practices.",;
-    requirements: [;
-      "Bachelor's degree in Cybersecurity or related field",;
-      "4+ years experience in cybersecurity",;
-      "Certifications (CISSP, CISM, CEH) preferred",;
-      "Experience with security tools and frameworks",;
-      "Knowledge of compliance standards (SOC 2, ISO 27001)";
-    ],;
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"];
-  },;
-  {;
-    "id": 5,;
-    "title": "DevOps Engineer";
-    "department": "Engineering";
-    "location": "Austin, TX";
-    "type": "Full-time";
-    "experience": "3+ years";
-    "description": "Streamline our development and deployment processes with modern DevOps practices.";
-    "requirements": ["Bachelor's degree in Computer Science or related field";
-      "3+ years experience in DevOps";
-      "Proficiency in CI/CD pipelines";
-      "Experience with infrastructure as code (Terraform, CloudFormation)";
-    id: 5,;
-    title: "DevOps Engineer",;
-    department: "Engineering",;
-    location: "Austin, TX",;
-    type: "Full-time",;
-    experience: "3+ years",;
-    description: "Streamline our development and deployment processes with modern DevOps practices.",;
-    requirements: [;
-      "Bachelor's degree in Computer Science or related field",;
-      "3+ years experience in DevOps",;
-      "Proficiency in CI/CD pipelines",;
-      "Experience with infrastructure as code (Terraform, CloudFormation)",;
-      "Knowledge of monitoring and logging tools";
-    ],;
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"];
-  },;
-  {;
-    "id": 6,;
-    "title": "UX/UI Designer";
-    "department": "Design";
-    "location": "Remote";
-    "type": "Full-time";
-    "experience": "2+ years";
-    "description": "Create intuitive and beautiful user experiences for our digital products.";
-    "requirements": ["Bachelor's degree in Design or related field";
-      "2+ years experience in UX/UI design";
-      "Proficiency in Figma, Sketch, Adobe Creative Suite";
-      "Experience with user research and testing";
-    id: 6,;
-    title: "UX/UI Designer",;
-    department: "Design",;
-    location: "Remote",;
-    type: "Full-time",;
-    experience: "2+ years",;
-    description: "Create intuitive and beautiful user experiences for our digital products.",;
-    requirements: [;
-      "Bachelor's degree in Design or related field",;
-      "2+ years experience in UX/UI design",;
-      "Proficiency in Figma, Sketch, Adobe Creative Suite",;
-      "Experience with user research and testing",;
-      "Strong portfolio demonstrating design skills";
-    ],;
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"];
-  }
-];
-const benefits = [{;
-    "title": "Competitive Compensation";
-    "description": "We offer competitive salaries and performance-based bonuses";
-    "icon": Star;
-  },;
-  {;
-    "title": "Health & Wellness";
-    "description": "Comprehensive health insurance and wellness programs";
-    "icon": Users;
-  },;
-  {;
-    "title": "Flexible Work";
-    "description": "Remote work options and flexible schedules";
-    "icon": Clock;
-  },;
-  {;
-    "title": "Professional Growth";
-    "description": "Learning opportunities and career development support";
-    "icon": ArrowRight;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
   }
 ];
 const values = ["Innovation and creativity";
@@ -530,8 +251,6 @@ const values = [;
   "Work-life balance",;
   "Diversity and inclusion",;
 
-<<<<<<< HEAD:pages.broken/talent.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -604,45 +323,13 @@ const benefits = [;
     icon: ArrowRight;
   }
 ];
-<<<<<<< HEAD:pages.broken/talent.tsx
-const values = [
-  "Innovation and creativity",
-  "Collaboration and teamwork",
-  "Continuous learning",
-  "Work-life balance",
-  "Diversity and inclusion",
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   "Client success focus"
 ];
 export default function TalentPage() {
-<<<<<<< HEAD
-=======
-const values = [;
-  "Innovation and creativity",;
-  "Collaboration and teamwork",;
-  "Continuous learning",;
-  "Work-life balance",;
-  "Diversity and inclusion",;
-
-  "Client success focus";
-];
-export default function TalentPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/talent.tsx
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     <MainLayout,
     title="Careers - Zion Tech Group"
-<<<<<<< HEAD:pages.broken/talent.tsx
-=======
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -682,10 +369,6 @@ export default function TalentPage() {;
                   key={job && job.id}
     <Layout 
       title="Careers - Zion Tech Group"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -693,15 +376,6 @@ export default function TalentPage() {;
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
-<<<<<<< HEAD:pages.broken/talent.tsx
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div,
@@ -716,12 +390,6 @@ export default function TalentPage() {;
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.broken/talent.tsx
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -747,12 +415,6 @@ export default function TalentPage() {;
         {/* Benefits Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div,
@@ -790,13 +452,6 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.broken/talent.tsx
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -861,15 +516,6 @@ export default function TalentPage() {;
           </div>;
         </section>;
         {/* Values Section */}
-<<<<<<< HEAD:pages.broken/talent.tsx
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div,
@@ -887,13 +533,6 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.broken/talent.tsx
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -980,15 +619,6 @@ export default function TalentPage() {;
                   key={index}
         </section>;
         {/* Job Openings Section */}
-<<<<<<< HEAD:pages.broken/talent.tsx
-        <section id="openings" className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div,
@@ -1006,13 +636,6 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.broken/talent.tsx
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1139,15 +762,6 @@ export default function TalentPage() {;
     </div>;
         </section>;
         {/* CTA Section */}
-<<<<<<< HEAD:pages.broken/talent.tsx
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div,
@@ -1163,13 +777,6 @@ export default function TalentPage() {;
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.broken/talent.tsx
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

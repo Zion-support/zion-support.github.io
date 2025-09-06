@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,14 +21,4 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src && src.pages.disabled/ForgotPassword && ForgotPassword.jsx
-<<<<<<< \"HEAD\": src && src.pages.disabled/ForgotPassword && ForgotPassword.jsx import React from \'react\'; export default function ForgotPassword () { import React from \'react\'; export default function ForgotPassword () {\'';
-<<<<<<< HEAD
-<<<<<<< "HEAD": src && src.pages.disabled/ForgotPassword && ForgotPassword.jsx import _React from 'react'; export default function ForgotPassword () { import _React from 'react'; export default function ForgotPassword () {'';
-=======
-<<<<<<< "HEAD": src && src.pages.disabled/ForgotPassword && ForgotPassword.jsx import _React from 'react'; export default function ForgotPassword () { import _React from 'react'; export default function ForgotPassword () {'';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

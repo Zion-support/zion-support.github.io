@@ -1,10 +1,4 @@
 export {};
-<<<<<<< HEAD
-module.exports = {};
-<<<<<<< HEAD
-=======
-module.exports = {};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
 module.exports = {};
 module.exports = {};

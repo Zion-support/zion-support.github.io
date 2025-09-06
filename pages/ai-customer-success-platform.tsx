@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AICustomerSuccessPlatform() {
 	return (
@@ -27,13 +23,6 @@ export default function AICustomerSuccessPlatform() {
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
 		/>
 	)
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;

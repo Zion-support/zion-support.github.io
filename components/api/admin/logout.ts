@@ -1,22 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { clearSessionCookie } from '../../../utils/adminAuth';
-<<<<<<< HEAD
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.status(200).json({ ok: true })
-}
-=======
-  res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  clearSessionCookie(res);
-  res && res.status(200).json({ ok: true })
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   res.status(200).json({ ok: true })
 }

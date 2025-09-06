@@ -1,29 +1,6 @@
-<<<<<<< HEAD
-
-import { Card } from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { Sparkles, RefreshCcw } from "lucide-react";
-<<<<<<< HEAD
-export interface EmptyMatchesCardProps {
-=======
-
-export interface EmptyMatchesCardProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   onRefresh: () => void;
   isProcessing: boolean
 }
-<<<<<<< HEAD
-export function EmptyMatchesCard({
-  onRefresh
-  isProcessing
-}: EmptyMatchesCardProps) {
-=======
-
-export function EmptyMatchesCard(): any ({;
-  onRefresh,;
-  isProcessing,;
-}: EmptyMatchesCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;

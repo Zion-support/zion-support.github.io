@@ -1,22 +1,6 @@
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-import CertificatePreview from '../../components/learn/CertificatePreview';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function Certifications() {
   const [leaderboard, setLeaderboard] = useState<any[]>([]);
   useEffect(() => {
-<<<<<<< HEAD
-    fetch('/api/learn/leaderboard').then(r;
-=======
-    fetch('/api/learn/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.leaderboard || []))
-  }, []);
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className="space-y-6">
       <div>
@@ -32,19 +16,6 @@ export default function Certifications() {
         </div>
       </div>
       <div>
-<<<<<<< HEAD
-        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>
-        <ol className='list-decimal pl-6 space-y-1 text-sm'>
-          {leaderboard.map(u => (
-            <li key={u.userId}>
-              {u.name} — {u.points} pts
-            </li>          ))}
-        </ol>
-      </div>
-    </div>
-);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         </div>;
       </div>;
 
@@ -59,9 +30,6 @@ export default function Certifications() {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">

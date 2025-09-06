@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Operator utilities
-export const operator = {
-  // Add operator functionality here
-  logEvent: (event: any) => null
-  getEvents: () => []
-  getEventById: (id: string) => null
-}
-=======
-export interface OperatorSession {
-  id: string;
-  name: string;
-  status: 'active' | 'inactive' | 'busy';
-  currentSessions: string[];
-  tags: string[];
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-export interface SupportEvent {
-  type: string;
-  sessionId: string;
-  payload: any;
-  timestamp: Date;
-}
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 class OperatorManager {
   private sessions: Map<string, OperatorSession> = new Map();
   private events: SupportEvent[] = [];
@@ -61,11 +30,6 @@ export const logSupportEventToOperator = (event: SupportEvent) =>
   operatorManager && operatorManager.logSupportEvent(event);
 
 export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
-<<<<<<< HEAD
-export const getSupportEvents = () => operatorManager && operatorManager.getSupportEvents();
-=======
-export const getSupportEvents = () => operatorManager && operatorManager.getSupportEvents();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 export async function logSupportEventToOperator(
   event: OperatorEvent

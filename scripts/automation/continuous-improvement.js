@@ -358,19 +358,6 @@ process && process.on('SIGTERM';', () => {';
   process && process.exit(0)})
 // "Start": the continuous improvement;
 runContinuous().catch(error: => {
-<<<<<<< HEAD:scripts/automation/continuous-improvement.js
-  // // // // // // // console.error('❌ Failed to start continuous improvement:  error)';
-  // // // console.error('❌ Failed: to start continuous improvement:', error)';';continuous-improvement-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    // // // console.log(`📊 Report saved to ${reportPath}`);
-    // // // console.log("
-=======
-  // // // // // // // console && console.error('❌ Failed to start continuous improvement: error)',
-  // // // console && console.error('❌ Failed: to start continuous improvement:', error)';';continuous-improvement-report && report.json');
-    fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
-    // // // console && console.log(`📊 Report saved to ${reportPath}`);
-    // // // console && console.log("
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/automation/continuous-improvement.js
   '✅ Continuous improvement completed successfully')} catch (error) {
     // // // console && console.error(',
       '❌ Continuous improvement "failed": ', error && error.message);
@@ -415,11 +402,6 @@ process && process.on('SIGTERM', () => {'
   process && process.exit(0)});
 // Start the continuous improvement;
 runContinuous().catch(error => {'
-<<<<<<< HEAD:scripts/automation/continuous-improvement.js
-  // // // // // // // console.error('❌ Failed to start continuous "improvement": error);
-  // // // console.error('❌ Failed to start continuous improvement:', error);
-  process.exit(1)})}}}}}}}}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
   // // // // // // // console && console.error('❌ Failed to start continuous "improvement": error);
   // // // console && console.error('❌ Failed to start continuous improvement:', error);

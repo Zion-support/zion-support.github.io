@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react",
-import { Skeleton } from "@/components/ui/skeleton";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-<<<<<<< HEAD
-export function LoadingContentSkeleton() {
-=======
-
-export function LoadingContentSkeleton() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
       <CardHeader>;

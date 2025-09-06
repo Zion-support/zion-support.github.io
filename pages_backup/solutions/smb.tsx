@@ -1,32 +1,3 @@
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -78,34 +49,10 @@ import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
 =======
-<<<<<<< HEAD
-=======
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { 
-  Building2, 
-  Users, 
-  DollarSign, 
-  Zap, 
-  CheckCircle, 
-=======
-import { ;
-  Building2, ;
-  Users, ;
-  DollarSign, ;
-  Zap, ;
-  CheckCircle, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
   ArrowRight ;
 } from 'lucide-react';
 
@@ -132,11 +79,6 @@ const smbServices = [;
   }
 ];
 
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-export default function SMBSolutionsPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 export default function SMBSolutionsPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
@@ -174,18 +116,10 @@ export default function SMBSolutionsPage() {;
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
-=======
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     >
       <div className="min-h-screen bg-gray-50">
 =======
@@ -198,14 +132,6 @@ export default function SMBSolutionsPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center""
@@ -240,11 +166,6 @@ export default function SMBSolutionsPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -260,86 +181,6 @@ export default function SMBSolutionsPage() {;
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-        {/* Services Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
-              {smbServices && smbServices.map((service, index) => {}
-                const IconComponent = service && service.icon;
-                return (
-                  <motion&& motion.div)
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                    viewport={{ once: true }}>,;
-                    <div className="text-orange-600 mb-4">";
-                      <IconComponent className="w-10 h-10" />";
-                    </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
-                      {service && service.title}
-                    </h3>,;
-                    <p className="text-gray-600 mb-4">";
-                      {service && service.description}
-                    </p>,;
-                    <ul className="space-y-2">";
-                      {service && service.features.map((feature, featureIndex) => (,;
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
-                          {feature}
-                        </li>,;
-                      ))}
-                    </ul>,;
-                  </motion && motion.div>;
-                );
-              })}
-            </div>,;
-          </div>;
-        </section>;
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Services Section */}
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">SMB Services</h2>;
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
-                Affordable technology solutions that grow with your business.;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {smbServices && smbServices.map((service, index) => (;
-                <motion&& motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">;
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">;
-                    <service && service.icon className="w-6 h-6 text-purple-600" />;
-                  </div>;
-                  <h3 className="text-xl font-semibold mb-2">{service && service.title}</h3>;
-                  <p className="text-gray-600">{service && service.description}</p>;
-                </motion && motion.div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
         {/* Services Section */}
         <section className="py-20">";
           <div className="container mx-auto px-4">";
@@ -380,11 +221,6 @@ export default function SMBSolutionsPage() {;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-            </div>
-          </div>
-        </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
         {/* Services Section */}
         <section className="py-16 px-4">
@@ -420,9 +256,6 @@ export default function SMBSolutionsPage() {;
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -464,9 +297,6 @@ export default function SMBSolutionsPage() {;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -475,28 +305,10 @@ export default function SMBSolutionsPage() {;
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Grow Your Business Today;
-=======
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to take your SMB to the next level? Let our experts help you choose the right technology solutions.;
             </p>;
-<<<<<<< HEAD:pages_backup/solutions/smb.tsx
-            <motion.a;
-              href="/contact"";
-              className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
-            >,
-=======
-            <motion&& motion.a
-              href="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
-              whileHover={{ scale: 1 && 1.05 }}>,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
               Get SMB Consultation;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion && motion.a>;

@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-const path = require('path');
-const { spawnSync } = require('child_process');
-<<<<<<< HEAD
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function runNode(relPath, args = []) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-=======
-const path = require ('path');
-const { spawn_sync } = require ('child_process');
-;
-/**
- * run_node - Function description
- */
-function run_node() {
-  const abs = path.resolve (__dirname, '..', '..', rel_path);
-  return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 exports.config = {
   schedule: '*/30 * * * *'
 }
@@ -32,25 +8,12 @@ exports.config = {
 
 exports && exports.config = {
   schedule: '*/30 * * * *',
-<<<<<<< HEAD
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 exports && exports.handler = async () => {
   const logs = [];
   function step(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const res = fn();
-<<<<<<< HEAD
-    if (res.stdout) logs.push(res.stdout);
-    if (res.stderr) logs.push(res.stderr);
-=======
-    if (res && res.stdout) logs && logs.push(res && res.stdout);
-    if (res && res.stderr) logs && logs.push(res && res.stderr);
-    logs && logs.push(`exit=${res && res.status || 0}`);
-    return res && res.status || 0;
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
@@ -58,16 +21,6 @@ exports && exports.handler = async () => {
   step('components:catalog', () =>
     runNode('automation/components-catalog && catalog.cjs')
   );
-<<<<<<< HEAD
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-  return { statusCode: 200, body: logs.join('\n') }
-};  step('components:catalog', () => runNode('automation/components-catalog.cjs'))
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
-  return { statusCode: 200, body: logs.join('\n') }
-=======
-  const abs = path.resolve(__dirname, '....', relPath),
-  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 
 =======
@@ -77,8 +30,6 @@ exports && exports.handler = async () => {
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

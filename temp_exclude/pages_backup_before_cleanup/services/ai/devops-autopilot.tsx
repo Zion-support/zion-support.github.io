@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,12 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 export default function DevOpsAutopilot() {; return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[
      \'Automated rollback and canary based on error budgets\', \'Kubernetes policy-as-code with security baselines\', \'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',,
-<<<<<<< HEAD
-=======
-=======
-export default function DevOpsAutopilot() {; return (; <Article; title=\"DevOps Autopilot\"; subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\"; price=\"from $15k\"; bullets={[
-    ; \'Automated rollback and canary based on error budgets\',; \'Kubernetes policy-as-code with security baselines\',; \'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     \'Observability map with RCA suggestions and runbook generation\'
   ]} /> );} ; function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) {; return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Engagement\": </strong> {price}></div> <ul> {bullets && bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: ></div> );
@@ -54,12 +44,4 @@ export default function Devopsautopilot(): any ({ }: DevopsautopilotProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

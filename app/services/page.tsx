@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import Link from "next/link";
-<<<<<<< HEAD
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-=======
-export const metadata = {;
-  title: "Services | Zion Tech Group",;
-  description:;
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 };
 export default function ServicesOverviewPage() {;
   return (
@@ -92,27 +79,6 @@ function ServicesOverviewPage() {
         />{" "}
       </div>{" "}
       <CTA />{" "}
-<<<<<<< HEAD
-    </div>;
-  );
-}
-<<<<<<< HEAD
-function ServiceCard({
-  href
-  title
-  description
-  bullets
-  icon
-}: {
-=======
-function ServiceCard(): any ({;
-  href,;
-  title,;
-  description,;
-  bullets,;
-  icon,;
-}: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   href: string;
   title: string;
   description: string;
@@ -130,40 +96,6 @@ function ServiceCard() {
   return (
     <Link;
       href={href}
-<<<<<<< HEAD
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">;
-      {" "}
-      <div className="text-4xl mb-4">{icon}</div>{" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
-        {title}
-      </h3>{" "}
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
-      <ul className="text-gray-600 space-y-2">;
-        {" "}
-        {bullets && bullets.map((bullet) => (;
-          <li key={bullet} className="flex items-center">;
-            {" "}
-            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
-          </li>;
-        ))}{" "}
-      </ul>{" "}
-    </Link>;
-  );
-}
-function CTA() {;
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">;
-      {" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">;
-        Ready to Get Started?;
-      </h3>{" "}
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">;
-        {" "}
-<<<<<<< HEAD
-        Talk to our experts about your project. We&apos;ll help you choose the right
-=======
-        Talk to our experts about your project. We'll help you choose the right;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         service and create a custom solution for your business needs.{" "}
       </p>{" "}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">;
@@ -229,10 +161,4 @@ function CTA() {
           Email Us{" "}
         </a>{" "}
       </div>{" "}
-<<<<<<< HEAD
-    </div>;
-  );
-=======
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

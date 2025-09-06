@@ -8,27 +8,4 @@ export interface TenantInfo {
   theme_preset: string;
   landing_page_copy: {
     headline: string;
-<<<<<<< HEAD
-
-    subtitle: string
-
-    cta: string
-  }
-  is_active: boolean
-}
-export interface TenantResponse {
-
-  tenant: TenantInfo | null
-
-  error?: string
-=======
-    subtitle: string,
-    cta: string;
-  }
-  is_active: boolean;
-}
-export interface TenantResponse {
-  tenant: TenantInfo | null,
-  error?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

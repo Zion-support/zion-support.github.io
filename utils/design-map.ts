@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type UIKitKind = 'ios' | 'android' | 'web';
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TokenSet {
   colors: Record < string, string>;
   typography: Record < string, any>;
@@ -16,31 +7,6 @@ export interface UIKit {
   components: Record < string, any>;
   tokens: TokenSet;
 }
-<<<<<<< HEAD
-export async function buildTokenSet(fileId: string): Promise<TokenSet> {
-  // Placeholder implementation
-  return {
-    colors: {
-      primary: '#007AFF'
-      secondary: '#5856D6'
-      success: '#34C759'
-      warning: '#FF9500'
-      error: '#FF3B30'
-    }
-    typography: {
-      heading1: { fontSize: 32, fontWeight: 'bold' }
-      heading2: { fontSize: 24, fontWeight: 'bold' }
-      body: { fontSize: 16, fontWeight: 'normal' }
-    }
-    spacing: {
-      xs: 4
-      sm: 8
-      md: 16
-      lg: 24
-      xl: 32
-    }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -143,10 +109,6 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
     return null;
-<<<<<<< HEAD
-  }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 // Design mapping utilities
 export interface DesignElement {
@@ -444,32 +406,6 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
-<<<<<<< HEAD
-    components: {
-      button: {
-        primary: {
-<<<<<<< HEAD
-          backgroundColor: tokens.colors.primary
-          padding: tokens.spacing.md
-        }
-      }
-    }
-    tokens
-  }
-}
-=======
-    id,
-    type,
-    name,
-    properties,
-    children: []
-  };
-}
-
-export function generateDesignId(): string {
-  return `design_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;

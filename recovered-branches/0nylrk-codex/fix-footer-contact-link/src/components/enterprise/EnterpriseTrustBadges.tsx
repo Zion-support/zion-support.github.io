@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-import React from "react";
-import { Shield, Lock, Award, CheckCircle } from "lucide-react";
-<<<<<<< HEAD
-export function EnterpriseTrustBadges() {
-=======
-
-export function EnterpriseTrustBadges() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">;
       <div className="container mx-auto max-w-6xl">;

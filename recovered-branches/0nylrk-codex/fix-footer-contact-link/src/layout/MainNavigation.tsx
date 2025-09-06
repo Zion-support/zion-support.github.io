@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { Link, useLocation } from "react-router-dom",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare } from "lucide-react";
-interface MainNavigationProps {
-=======
-import {Link, useLocation} from "react-router-dom";
-import {cn} from "@/lib/utils";
-import {useAuth} from "@/hooks/useAuth";
-import {MessageSquare} from "lucide-react";
-interface MainNavigationProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -22,109 +7,6 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
-<<<<<<< HEAD
-  const links = [
-    {
-      name: "Home"
-      href: "/"
-      matches: (path: string) => path === "/"
-    }
-    {
-      name: "Marketplace"
-      href: "/marketplace"
-      matches: (path: string) => path.startsWith("/marketplace")
-    }
-    {
-      name: "Categories"
-      href: "/categories"
-      matches: (path: string) => path.startsWith("/categories")
-    }
-    {
-      name: "Talent"
-      href: "/talent"
-      matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
-    }
-    {
-      name: "Equipment"
-      href: "/equipment"
-      matches: (path: string) => path.startsWith("/equipment")
-    }
-    {
-      name: "Community"
-      href: "/community"
-      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
-    }
-  ];
-  // Add authenticated-only links
-  if (isAuthenticated) {
-    links.push({
-      name: "Dashboard"
-      href: "/dashboard"
-      matches: (path: string) => path === "/dashboard" |path === "/client-dashboard" |path === "/talent-dashboard"
-    })
-  }
-  // Add admin-only links
-  if (isAdmin) {
-    links.push({
-      name: "Analytics"
-      href: "/analytics"
-      matches: (path: string) => path.startsWith("/analytics")
-    })
-  }
-=======
-
-  const links = [;
-    {;
-      name: "Home",;
-      href: "/",;
-      matches: (path: string) => path === "/";
-    };
-    {;
-      name: "Marketplace",;
-      href: "/marketplace",;
-      matches: (path: string) => path && path.startsWith("/marketplace");
-    };
-    {;
-      name: "Categories",;
-      href: "/categories",;
-      matches: (path: string) => path && path.startsWith("/categories");
-    };
-    {;
-      name: "Talent",;
-      href: "/talent",;
-      matches: (path: string) => path && path.startsWith("/talent") && !path && path.includes("/talent-dashboard");
-    };
-    {;
-      name: "Equipment",;
-      href: "/equipment",;
-      matches: (path: string) => path && path.startsWith("/equipment");
-    };
-    {;
-      name: "Community",;
-      href: "/community",;
-      matches: (path: string) => path && path.startsWith("/community") || path && path.startsWith("/forum");
-    }
-  ];
-
-  // Add authenticated-only links;
-  if (isAuthenticated) {;
-    links && links.push({;
-      name: "Dashboard",;
-      href: "/dashboard",;
-      matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard";
-    });
-  }
-
-  // Add admin-only links;
-  if (isAdmin) {;
-    links && links.push({;
-      name: "Analytics",;
-      href: "/analytics",;
-      matches: (path: string) => path && path.startsWith("/analytics");
-    });
-  }
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
@@ -142,24 +24,12 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
             </Link>;
           </li>;
         ))}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
             <Link
               to="/messages"
               className={cn(
-<<<<<<< HEAD
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
-                location.pathname === "/messages" |location.pathname === "/inbox"
-
-=======
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
-                location && location.pathname === "/messages" || location && location.pathname === "/inbox"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -173,17 +43,6 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
             </Link>;
           </li>;
         )}
-<<<<<<< HEAD
-      </ul>
-    </nav>
-  )
-}
-=======
-      </ul>;
-    </nav>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';

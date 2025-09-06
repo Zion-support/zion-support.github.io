@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const Dashboard: NextPage = () => {
   return (
@@ -15,13 +5,6 @@ const Dashboard: NextPage = () => {
       <Head>
         <title>Dashboard - Zion</title>
       </Head>
-<<<<<<< HEAD
-
-      <h1 className="text-2xl font-semibold">Dashboard</h1>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <h1 className="text-2xl font-semibold">Dashboard</h1>
@@ -48,12 +31,6 @@ const Dashboard: NextPage = () => {
   )
 }
 export default Dashboard;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextPage } from 'next',
 import Head from 'next / head',

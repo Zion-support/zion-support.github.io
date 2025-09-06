@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-import { updateProposalMeta } from '../../../utils/data/proposals';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  try {
-    const { id, status } = req.body |{}
-    if (!id |!status) return res.status(400).json({ error: 'id and status are required' })
-    const updated = updateProposalMeta(id, (m) => ({ ...m, status }))
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { updateProposalMeta } from '../../../utils/data/proposals';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -26,11 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error: any) {
     res.status(500).json({ error: error?.message |'Failed to update status' })
   }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { updateProposalMeta } from '../../../utils / data / proposals',
@@ -52,8 +31,4 @@ function handler() {
     res.status (500).json ({ error: error?.message || 'Failed to update status' });
   }
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

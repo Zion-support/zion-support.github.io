@@ -1,10 +1,3 @@
-<<<<<<< HEAD:src.disabled/components/MobileNavigation.jsx
-<<<<<<< HEAD
-import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
-const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""

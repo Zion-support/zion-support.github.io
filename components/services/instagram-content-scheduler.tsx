@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-// Using an explicit empty object type for props to satisfy lint rules
-type Props = Record<string, never>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 const ServicePage: NextPage<Props> = () => {
@@ -48,10 +37,6 @@ const ServicePage: NextPage<Props> = () => {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ServicePage;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record < string never>;
 const ServicePage: NextPage < Props> = () => {

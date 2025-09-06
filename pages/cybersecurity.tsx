@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
-export default function CybersecurityPage() {
-  const features = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR']
-  const solutions = [
-    { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' }
-    { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' }
-    { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' }
-    { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }]
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'];
 
   const solutions = [
@@ -25,9 +5,6 @@ export default function CybersecurityPage() {
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
@@ -84,13 +61,6 @@ export default function CybersecurityPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import React from 'react',
 import Head from 'next / head',
