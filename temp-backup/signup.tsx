@@ -15,4 +15,3 @@ export default function Signup({ }: SignupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

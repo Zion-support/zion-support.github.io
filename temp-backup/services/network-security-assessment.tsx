@@ -15,4 +15,3 @@ export default function Networksecurityassessment({ }: Networksecurityassessment
       <p>This component is currently under development.</p>
     </div>
   );
-

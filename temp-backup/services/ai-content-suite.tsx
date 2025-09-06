@@ -15,4 +15,3 @@ export default function Aicontentsuite({ }: AicontentsuiteProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

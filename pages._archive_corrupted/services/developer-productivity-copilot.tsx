@@ -14,4 +14,3 @@ export default function Developerproductivitycopilot({ }: Developerproductivityc
       <p>This component is currently under development.</p>
     </div>
   );
-

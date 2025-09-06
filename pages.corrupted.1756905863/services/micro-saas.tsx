@@ -14,4 +14,3 @@ export default function Microsaas({ }: MicrosaasProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

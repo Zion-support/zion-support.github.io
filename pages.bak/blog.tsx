@@ -19,4 +19,3 @@ export default function Blog({ }: BlogProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

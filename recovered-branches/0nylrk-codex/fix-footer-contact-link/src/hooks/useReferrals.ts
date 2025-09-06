@@ -310,4 +310,3 @@ toast ({
 
 };
 //Share on social media platforms return;
-

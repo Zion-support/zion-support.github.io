@@ -19,4 +19,3 @@ export default function Cloudservices({ }: CloudservicesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

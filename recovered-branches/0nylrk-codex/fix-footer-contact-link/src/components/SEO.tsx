@@ -50,4 +50,3 @@ export function SEO({
       {noindex && <meta name='robots' content='noindex' />}
     </Helmet>
   );
-

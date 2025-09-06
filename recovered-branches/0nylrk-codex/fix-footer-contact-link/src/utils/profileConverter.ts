@@ -34,4 +34,3 @@ export function convertProfileToTalentProfile(
     rating_count: profile.reviewCount || 0,
     average_rating: profile.rating || 0,
   };
-

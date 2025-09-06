@@ -19,4 +19,3 @@ export default function Talent({ }: TalentProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

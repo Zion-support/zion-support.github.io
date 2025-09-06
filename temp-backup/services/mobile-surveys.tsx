@@ -15,4 +15,3 @@ export default function Mobilesurveys({ }: MobilesurveysProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

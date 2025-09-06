@@ -1,6 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-}
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -8,9 +6,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.setHeader('Allow', ['GET']);
       return res.status(405).end('Method Not Allowed');
     }
-}
 
-const files: string[] = [];
+    const files: string[] = [];
     if (files.length > 0) {
       const logs = files.slice(0, 50).map((f) => {
         try {
@@ -27,3 +24,4 @@ const files: string[] = [];
     // fall through to GitHub
     res.status(200).json({ logs: [] });
   }
+}

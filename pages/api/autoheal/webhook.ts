@@ -2,7 +2,6 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -58,5 +57,5 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 } catch (e) {
     console.error(e);
     return res.status(500).json({ error: 'Failed to process webhook' });
- 
+  }
 }

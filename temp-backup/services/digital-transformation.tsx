@@ -15,4 +15,3 @@ export default function Digitaltransformation({ }: DigitaltransformationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

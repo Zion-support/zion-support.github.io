@@ -84,4 +84,3 @@ export function useHireRequest() {
   submitHireRequest;
 isSubmitting;
 error 
-

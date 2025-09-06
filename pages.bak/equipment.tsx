@@ -19,4 +19,3 @@ export default function Equipment({ }: EquipmentProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

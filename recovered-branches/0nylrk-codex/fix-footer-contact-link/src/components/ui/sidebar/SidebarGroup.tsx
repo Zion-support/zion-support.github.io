@@ -16,4 +16,3 @@ export function SidebarGroup({
       {children}
     </div>
   );
-

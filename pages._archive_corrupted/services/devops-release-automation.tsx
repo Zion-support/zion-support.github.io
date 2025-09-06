@@ -14,4 +14,3 @@ export default function Devopsreleaseautomation({ }: DevopsreleaseautomationProp
       <p>This component is currently under development.</p>
     </div>
   );
-

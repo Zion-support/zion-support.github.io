@@ -32,4 +32,3 @@ const contentType =
   );
   appendAuditLog({ type: 'file_download', section, name: file });
   fs.createReadStream(fullPath).pipe(res);
-

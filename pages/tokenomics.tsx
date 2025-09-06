@@ -492,4 +492,3 @@ function MarkdownPreview({
       {content || markdown}
     </pre>
   );
-

@@ -10,4 +10,3 @@ export default function Team({ }: TeamProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

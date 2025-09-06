@@ -14,4 +14,3 @@ export default function About({ }: AboutProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

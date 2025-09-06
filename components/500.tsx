@@ -4,3 +4,5 @@ export default function FiveHundred() {
       Something went wrong.
     </div>
   );
+
+}

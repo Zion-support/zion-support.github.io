@@ -14,4 +14,3 @@ export default function Aiservices({ }: AiservicesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

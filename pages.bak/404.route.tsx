@@ -13,4 +13,3 @@ export default function 404.route({ }: 404.routeProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

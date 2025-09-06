@@ -85,4 +85,3 @@ export function useTalentDirectory() {
     toggleSection,
     handleToggleSave,
   };
-

@@ -14,4 +14,3 @@ export default function Cloudcostoptimizer({ }: CloudcostoptimizerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

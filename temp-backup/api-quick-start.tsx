@@ -15,4 +15,3 @@ export default function Apiquickstart({ }: ApiquickstartProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

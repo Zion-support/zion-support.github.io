@@ -22,4 +22,3 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 }
 
 export default LazyComponent;
-

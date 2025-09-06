@@ -19,4 +19,3 @@ export default function Services({ }: ServicesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

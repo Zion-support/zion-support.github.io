@@ -140,4 +140,3 @@ status: 'deployed'
 deploySmartContract;
 isLoading;
 deploymentStatus 
-

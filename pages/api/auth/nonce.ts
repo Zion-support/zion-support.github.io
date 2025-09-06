@@ -17,3 +17,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     `siwe-nonce=${nonce}; HttpOnly; Path=/; SameSite=Lax`
   );
   res.status(200).json({ nonce });
+}

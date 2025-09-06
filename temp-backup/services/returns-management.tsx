@@ -15,4 +15,3 @@ export default function Returnsmanagement({ }: ReturnsmanagementProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

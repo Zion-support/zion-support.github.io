@@ -13,4 +13,3 @@ export default function RatingStars.test({ }: RatingStars.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

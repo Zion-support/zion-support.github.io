@@ -15,4 +15,3 @@ export default function Marketplace({ }: MarketplaceProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

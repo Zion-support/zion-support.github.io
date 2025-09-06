@@ -51,4 +51,3 @@ export default function A11y.spec({ }: A11y.specProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

@@ -13,4 +13,3 @@ export default function Revenueops({ }: RevenueopsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

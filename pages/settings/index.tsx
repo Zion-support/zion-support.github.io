@@ -5,3 +5,5 @@ export default function SettingsPage() {
       <p className='opacity-80'>Manage your account preferences.</p>
     </div>
   );
+
+}

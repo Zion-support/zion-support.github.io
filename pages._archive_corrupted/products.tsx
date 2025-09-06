@@ -14,4 +14,3 @@ export default function Products({ }: ProductsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

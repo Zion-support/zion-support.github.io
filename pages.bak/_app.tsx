@@ -11,4 +11,3 @@ export default function _app({ }: _appProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

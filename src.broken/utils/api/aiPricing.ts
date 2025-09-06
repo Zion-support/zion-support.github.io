@@ -317,4 +317,3 @@ export async function generateTalentRateSuggestion(
     modelUsed: llm.modelUsed,
     source: 'hybrid',
   };
-

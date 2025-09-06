@@ -133,4 +133,3 @@ export function useMarketplaceSearch() {
     clearAllFilters,
     filterOptions,
   };
-

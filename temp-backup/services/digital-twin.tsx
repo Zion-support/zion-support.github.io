@@ -15,4 +15,3 @@ export default function Digitaltwin({ }: DigitaltwinProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

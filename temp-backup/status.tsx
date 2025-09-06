@@ -15,4 +15,3 @@ export default function Status({ }: StatusProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

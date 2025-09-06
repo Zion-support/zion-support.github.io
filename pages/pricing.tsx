@@ -848,4 +848,3 @@ export default function PricingPage() {
       </div>
     </Layout>
   );
-

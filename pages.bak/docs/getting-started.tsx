@@ -19,4 +19,3 @@ export default function Gettingstarted({ }: GettingstartedProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

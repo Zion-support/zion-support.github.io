@@ -19,4 +19,3 @@ export default function Greenit({ }: GreenitProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

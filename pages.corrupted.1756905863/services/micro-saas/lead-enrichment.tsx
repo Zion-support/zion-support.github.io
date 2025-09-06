@@ -11,4 +11,3 @@ export default function Leadenrichment({ }: LeadenrichmentProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

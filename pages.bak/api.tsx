@@ -12,4 +12,3 @@ export default function Api({ }: ApiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

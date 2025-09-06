@@ -19,4 +19,3 @@ export default function Servicescomparison({ }: ServicescomparisonProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

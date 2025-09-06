@@ -172,4 +172,3 @@ error;
 addEducation;
 updateEducation;
 deleteEducation 
-

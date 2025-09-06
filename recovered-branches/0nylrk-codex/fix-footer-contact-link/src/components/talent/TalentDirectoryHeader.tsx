@@ -19,4 +19,3 @@ export function TalentDirectoryHeader({
       </div>
     </div>
   );
-

@@ -15,4 +15,3 @@ export default function Infrastructure({ }: InfrastructureProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

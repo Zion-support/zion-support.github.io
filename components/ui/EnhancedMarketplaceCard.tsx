@@ -158,4 +158,3 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 }
 
 export default EnhancedMarketplaceCard;
-

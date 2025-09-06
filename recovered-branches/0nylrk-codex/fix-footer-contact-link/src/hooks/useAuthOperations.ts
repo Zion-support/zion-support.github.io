@@ -521,4 +521,3 @@ loginWithGoogle;
 loginWithFacebook;
 loginWithTwitter;
 loginWithWeb3 
-

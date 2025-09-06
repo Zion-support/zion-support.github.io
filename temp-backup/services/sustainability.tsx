@@ -15,4 +15,3 @@ export default function Sustainability({ }: SustainabilityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

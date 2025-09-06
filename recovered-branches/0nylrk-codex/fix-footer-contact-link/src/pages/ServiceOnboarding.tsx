@@ -35,4 +35,3 @@ export default function ServiceOnboarding() {
       <Footer />
     </>
   );
-

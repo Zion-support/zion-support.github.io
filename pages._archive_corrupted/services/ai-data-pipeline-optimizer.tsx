@@ -14,4 +14,3 @@ export default function Aidatapipelineoptimizer({ }: AidatapipelineoptimizerProp
       <p>This component is currently under development.</p>
     </div>
   );
-

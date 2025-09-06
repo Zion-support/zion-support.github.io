@@ -14,4 +14,3 @@ export default function Securitypostureguardian({ }: SecuritypostureguardianProp
       <p>This component is currently under development.</p>
     </div>
   );
-

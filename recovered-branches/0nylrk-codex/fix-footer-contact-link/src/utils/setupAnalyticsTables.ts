@@ -96,4 +96,3 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
 }catch (error) {
   console.error ('Error creating analytics tables:', error);
 // Tables creation failed, but we can still continue 
-

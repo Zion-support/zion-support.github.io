@@ -15,4 +15,3 @@ export default function Aianalytics({ }: AianalyticsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

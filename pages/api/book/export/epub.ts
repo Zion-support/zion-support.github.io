@@ -1,5 +1,4 @@
- import { NextApiRequest, NextApiResponse } from 'next';
-}
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export const config = {
   api: {
@@ -8,7 +7,6 @@ export const config = {
     },
   },
 };
-}
 
 export default async function handler(
   req: NextApiRequest,

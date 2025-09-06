@@ -466,4 +466,3 @@ border-radius: 4px;
 html: ` <h2>We've missed you!</h2> <p>Hi $ {
   firstName 
 }, </p> <p>We noticed you haven't been active on Zion AI Marketplace recently.</p> 
-

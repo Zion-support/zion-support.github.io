@@ -15,4 +15,3 @@ export default function Managedit({ }: ManageditProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-

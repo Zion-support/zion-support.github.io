@@ -19,3 +19,5 @@ function fixTypeScriptFiles(dir) {,
         console.log(`Error processing ${fullPath}: ${error.message}`)};
     };
   })};
+
+}

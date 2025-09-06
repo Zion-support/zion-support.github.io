@@ -7,3 +7,5 @@ export default function CategoryIndexPage() {
       </p>
     </div>
   );
+
+}

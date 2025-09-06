@@ -98,4 +98,3 @@ if (error) throw error;
 error;
 addSkill;
 deleteSkill 
-

@@ -96,4 +96,3 @@ export function incrementMetric(
   posts[idx].metrics[metric] += 1;
   writePosts(posts);
   return posts[idx];
-
