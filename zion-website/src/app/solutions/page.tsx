@@ -4,9 +4,7 @@ import {
   RocketLaunchIcon,
   ShieldCheckIcon,
   ChartBarIcon,
-  GlobeAltIcon,
-  UserGroupIcon,
-  CogIcon
+  GlobeAltIcon
 } from '@heroicons/react/24/outline'
 
 const flagshipSolutions = [
