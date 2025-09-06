@@ -89,84 +89,85 @@ declare global {
   interface RequestInit {
     timeout?: number;
   }
-  class AbortController {
-    signal: AbortSignal;
-    abort(): void;
-  }
-  interface AbortSignal {
-    aborted: boolean;
-    addEventListener(type: string, listener: () => void): void;
-    removeEventListener(type: string, listener: () => void): void;
-  }
 }
 
 class ApiClient {
-  private baseUrl: string;
-  private defaultTimeout: number;
+  private baseURL: string;
+  private defaultHeaders: HeadersInit;
 
-  constructor(baseUrl: string = '', defaultTimeout: number = 10000) {
-    this.baseUrl = baseUrl;
-    this.defaultTimeout = defaultTimeout;
+  constructor(baseURL: string = '', defaultHeaders: HeadersInit = {}) {
+    this.baseURL = baseURL;
+    this.defaultHeaders = defaultHeaders;
   }
 
-  private async request<T>(
+  async request<T = unknown>(
     endpoint: string,
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
-    const { timeout = this.defaultTimeout, ...fetchOptions } = options;
+    const url = `${this.baseURL}${endpoint}`;
+    const controller = new AbortController();
     
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
+    // Set timeout if provided
+    if (options.timeout) {
+      setTimeout(() => controller.abort(), options.timeout);
+    }
 
-      const response = await fetch(`${this.baseUrl}${endpoint}`, {
-        ...fetchOptions,
+    try {
+      const response = await fetch(url, {
+        ...options,
         signal: controller.signal,
         headers: {
-          'Content-Type': 'application/json',
-          ...fetchOptions.headers,
+          ...this.defaultHeaders,
+          ...options.headers,
         },
       });
-
-      clearTimeout(timeoutId);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
-      return { data, success: true };
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error('API request failed:', error);
       return {
-        error: error instanceof Error ? error.message : 'Unknown error occurred',
+        success: true,
+        data,
+      };
+    } catch (error) {
+      return {
         success: false,
+        error: error instanceof Error ? error.message : 'Unknown error occurred',
       };
     }
   }
 
-  async get<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+  async get<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, { ...options, method: 'GET' });
   }
 
-  async post<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
+  async post<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
+      headers: {
+        'Content-Type': 'application/json',
+        ...options?.headers,
+      },
     });
   }
 
-  async put<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
+  async put<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
       method: 'PUT',
       body: data ? JSON.stringify(data) : undefined,
+      headers: {
+        'Content-Type': 'application/json',
+        ...options?.headers,
+      },
     });
   }
 
-  async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+  async delete<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
 }

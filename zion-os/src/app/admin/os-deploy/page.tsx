@@ -3,9 +3,16 @@
 import React, { useState } from 'react';
 
 export default function OSDeployPage() {
-  const onSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    setLoading(true);
+    
+    // Simulate deployment
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
   };
 
   const loading = false;
@@ -27,10 +34,10 @@ export default function OSDeployPage() {
 
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
-      ai: 'Advanced AI capabilities',
-      blockchain: 'Blockchain infrastructure',
-      governance: 'Decentralized governance',
-      treasury: 'Community treasury management'
+      ai: 'Advanced AI capabilities and automation',
+      blockchain: 'Secure blockchain infrastructure',
+      governance: 'Decentralized governance mechanisms',
+      treasury: 'Automated treasury management'
     };
     return descriptions[key] || 'Feature description';
   };
@@ -42,28 +49,30 @@ export default function OSDeployPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Configure and deploy your sovereign AI-powered digital economy with our unified deployment protocol.
+            Deploy your custom Zion OS instance with advanced features and configurations
           </p>
         </div>
 
-        {/* Form */}
-        <form onSubmit={onSubmit} className="space-y-8">
+        <form onSubmit={handleSubmit} className="space-y-8">
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>
               Basic Configuration
             </h2>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>
                 <input
                   name="instanceName"
+                  type="text"
                   required
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="My Digital Economy"
                 />
               </div>
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Vertical</label>
                 <select
@@ -79,34 +88,41 @@ export default function OSDeployPage() {
                   <option value="TECH">Technology</option>
                 </select>
               </div>
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Domain</label>
                 <input
                   name="domain"
+                  type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="zion.example.com"
                 />
               </div>
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Subdomain</label>
                 <input
                   name="subdomain"
+                  type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="latam"
                 />
               </div>
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Default Language</label>
                 <input
                   name="defaultLanguage"
-                  defaultValue="en"
+                  type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                 />
               </div>
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Region</label>
                 <input
                   name="region"
+                  type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
                 />
@@ -114,12 +130,13 @@ export default function OSDeployPage() {
             </div>
           </div>
 
-          {/* Economy Settings */}
+          {/* Economic Configuration */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
-              Economy Settings
+              Economic Configuration
             </h2>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Token System</label>
@@ -132,6 +149,7 @@ export default function OSDeployPage() {
                   <option value="HYBRID">Hybrid System</option>
                 </select>
               </div>
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Governance Type</label>
                 <select
@@ -144,14 +162,17 @@ export default function OSDeployPage() {
                   <option value="HYBRID">Hybrid Governance</option>
                 </select>
               </div>
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Country</label>
                 <input
                   name="country"
+                  type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="United States"
                 />
               </div>
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Payment Gateway</label>
                 <select
@@ -168,12 +189,13 @@ export default function OSDeployPage() {
             </div>
           </div>
 
-          {/* Feature Toggles */}
+          {/* Feature Selection */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>
-              Core Features
+              Feature Selection
             </h2>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {FeatureKeys.map((k) => (
                 <label
@@ -182,7 +204,8 @@ export default function OSDeployPage() {
                 >
                   <input
                     type="checkbox"
-                    name={k}
+                    name="features"
+                    value={k}
                     className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                   />
                   <div>
@@ -196,61 +219,65 @@ export default function OSDeployPage() {
             </div>
           </div>
 
-          {/* Add-ons */}
+          {/* Additional Features */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>
-              Premium Add-ons
+              Additional Features
             </h2>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
                   type="checkbox"
-                  name="sovereignTreasury"
+                  name="treasury"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    Sovereign DAO Treasury
+                    Treasury Management
                   </div>
                   <div className="text-sm text-white/60">Manage community funds with transparency</div>
                 </div>
               </label>
+
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
                   type="checkbox"
-                  name="dualGovernance"
+                  name="governance"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    Dual Governance
+                    Governance System
                   </div>
                   <div className="text-sm text-white/60">Local + global decision making</div>
                 </div>
               </label>
+
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
                   type="checkbox"
-                  name="aiModeration"
+                  name="moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    AI Moderation System
+                    Content Moderation
                   </div>
                   <div className="text-sm text-white/60">Automated content and behavior monitoring</div>
                 </div>
               </label>
+
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
                 <input
                   type="checkbox"
-                  name="affiliatePanel"
+                  name="partnerships"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    Government Affiliate Panel
+                    Partnership Management
                   </div>
                   <div className="text-sm text-white/60">Institutional partnership management</div>
                 </div>
@@ -258,14 +285,15 @@ export default function OSDeployPage() {
             </div>
           </div>
 
-          {/* Submit Section */}
+          {/* Submit Button */}
           <div className="text-center">
             <button
               disabled={loading}
               className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift"
             >
-              {loading ? '⏳ Deploying...' : '🚀 Deploy Instance'}
+              {loading ? 'Deploying...' : 'Deploy Digital Economy'}
             </button>
+
             {message && (
               <div
                 className={`mt-6 p-4 rounded-lg ${

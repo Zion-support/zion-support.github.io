@@ -15,16 +15,16 @@ function createAdvancedMonitoring() {
 export class HealthChecker {
   constructor() {
     this.checks = new Map();
-    this.results = new Map();
-  }
-
+    this.results = new Map();  }
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
   }
 
   async runAllChecks() {
     const results = {};
-    for (const [name, checkFunction] of this.checks) {
+    for (const [name, check] of this.checks) {
+      try {
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
       try {
         const result = await checkFunction();
         results[name] = { status: 'healthy', result };
@@ -32,7 +32,7 @@ export class HealthChecker {
         results[name] = { status: 'unhealthy', error: error.message };
       }
     }
-    return results;
+    this.results = results;
   }
 }
 
@@ -120,14 +120,30 @@ export const performanceMonitor = new PerformanceMonitor();`,
 export class ErrorTracker {
   constructor() {
     this.errors = [];
-    this.errorCounts = new Map();
-  }
-
+    this.errorCounts = new Map();  }
   trackError(error, context = {}) {
     const errorInfo = {
       message: error.message,
       stack: error.stack,
+      context,
       timestamp: new Date().toISOString(),
+      context,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+    };
+
+    this.errors.push(errorInfo);
+    
+    // Track error frequency
+    const errorKey = error.message;
+    this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) || 0) + 1);
+  }
+
+  getErrorStats() {
+    const recentErrors = this.errors.filter(
+      error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)
+    );
+        return {      timestamp: new Date().toISOString(),
       context,
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'unknown'
@@ -150,8 +166,7 @@ export class ErrorTracker {
       recent: recentErrors.length,
       topErrors: Array.from(this.errorCounts.entries())
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 10),
-    };
+        .slice(0, 10)
   }
 }
 
@@ -179,7 +194,6 @@ export class AnalyticsTracker {
   constructor() {
     this.events = [];
     this.sessionId = this.generateSessionId();
-
   }
 
   generateSessionId() {
@@ -213,307 +227,97 @@ export class AnalyticsTracker {
   getSessionEvents() {
     return this.events.filter(event => event.sessionId === this.sessionId);
   }
-}
 
-export const analyticsTracker = new AnalyticsTracker();`
-  };
+export const queryOptimizer = new QueryOptimizer();`,
+    
+    'database/connection-pool.js': `// Database connection pooling
+export class ConnectionPool {
+  constructor(options = {}) {
+    this.maxConnections = options.maxConnections || 10;
+    this.minConnections = options.minConnections || 2;
+    this.connections = [];
+    this.availableConnections = [];
+    this.usedConnections = new Set();
+  }
 
-  Object.entries(monitoringFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-    fs.writeFileSync(fullPath, content);
-    console.log(`OK Created ${filename}`);
-  });
-}
-
-// Create performance optimization utilities
-function createPerformanceOptimizations() {
-  console.log('\n⚡ Creating performance optimization utilities...');
-  
-  const optimizationFiles = {
-    'utils/lazy-loading.js': `// Lazy loading utility
-export function lazyLoadImages() {
-  if (typeof window === 'undefined') return;
-
-  const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.classList.remove('lazy');
-        imageObserver.unobserve(img);
-      }
-    });
-  });
-
-  images.forEach(img => imageObserver.observe(img));
-}
-
-export function lazyLoadComponents(componentLoader) {
-  return React.lazy(componentLoader);
-}`,
-
-    'utils/memoization.js': `// Memoization utilities
-export function memoize(fn) {
-  const cache = new Map();
-  return function(...args) {
-    const key = JSON.stringify(args);
-    if (cache.has(key)) {
-      return cache.get(key);
+  async getConnection() {
+    if (this.availableConnections.length > 0) {
+      const connection = this.availableConnections.pop();
+      this.usedConnections.add(connection);
+      return connection;
     }
-    const result = fn.apply(this, args);
-    cache.set(key, result);
-    return result;
-  };
-}
+    
+    if (this.connections.length < this.maxConnections) {
+      const connection = await this.createConnection();
+      this.connections.push(connection);
+      this.usedConnections.add(connection);
+      return connection;
+    }
+    
+    // Wait for a connection to become available
+    return new Promise((resolve) => {
+      const checkForConnection = () => {
+        if (this.availableConnections.length > 0) {
+          const connection = this.availableConnections.pop();
+          this.usedConnections.add(connection);
+          resolve(connection);
+        } else {
+          setTimeout(checkForConnection, 100);
+        }
+      };
+      checkForConnection();
+    }
+});
+  }
 
-export function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
+  releaseConnection(connection) {
+    this.usedConnections.delete(connection);
+    this.availableConnections.push(connection);
+  }
+
+  async createConnection() {
+    // This would create an actual database connection
+    return {
+      id: Math.random().toString(36).substr(2, 9),
+      createdAt: new Date(),
+      isHealthy: true
     };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
+  }
 
-export function throttle(func, limit) {
-  let inThrottle;
-  return function(...args) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  };
-}`,
+  getPoolStatus() {
+    return {
+      total: this.connections.length,
+      available: this.availableConnections.length,
+      used: this.usedConnections.size,
+      max: this.maxConnections
+    };
+  }
 
-    'utils/optimization.js': `// General optimization utilities
-export function optimizeImages() {
-  if (typeof window === 'undefined') return;
-
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    // Add loading="lazy" if not present
-    if (!img.hasAttribute('loading')) {
-      img.setAttribute('loading', 'lazy');
-    }
-    
-    // Add proper alt text if missing
-    if (!img.alt) {
-      img.alt = 'Image';
-    }
-  });
-}
-
-export function preloadCriticalResources() {
-  if (typeof window === 'undefined') return;
-
-  const criticalResources = [
-    '/fonts/main.woff2',
-    '/css/critical.css'
-  ];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-  });
-}`
-
+export const connectionPool = new ConnectionPool();
   };
 
-  Object.entries(optimizationFiles).forEach(([filename, content]) => {
+  Object.entries(dbFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
-    console.log(`OK Created ${filename}`);
+    console.log(`[OK] Created ${filename}`);
   });
-}
-
-// Create accessibility improvements
-function createAccessibilityImprovements() {
-  console.log('\n♿ Creating accessibility improvements...');
-
-  const accessibilityFiles = {
-    'utils/accessibility.js': `// Accessibility utilities
-export function improveAccessibility() {
-  if (typeof window === 'undefined') return;
-
-  // Add skip links
-  addSkipLinks();
-  
-  // Improve focus management
-  improveFocusManagement();
-  
-  // Add ARIA labels where needed
-  addAriaLabels();
-  
-  // Improve color contrast
-  improveColorContrast();
-}
-
-function addSkipLinks() {
-  const skipLink = document.createElement('a');
-  skipLink.href = '#main-content';
-  skipLink.textContent = 'Skip to main content';
-  skipLink.className = 'skip-link';
-  skipLink.style.cssText = \`
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 1000;
-  \`;
-  
-  skipLink.addEventListener('focus', () => {
-    skipLink.style.top = '6px';
-  });
-  
-  skipLink.addEventListener('blur', () => {
-    skipLink.style.top = '-40px';
-  });
-  
-  document.body.insertBefore(skipLink, document.body.firstChild);
-}
-
-function improveFocusManagement() {
-  // Add focus indicators
-  const style = document.createElement('style');
-  style.textContent = \`
-    *:focus {
-      outline: 2px solid #007acc;
-      outline-offset: 2px;
-    }
-  \`;
-  document.head.appendChild(style);
-}
-
-function addAriaLabels() {
-  // Add ARIA labels to interactive elements without labels
-  const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-  buttons.forEach(button => {
-    if (!button.textContent.trim()) {
-      button.setAttribute('aria-label', 'Button');
-    }
-  });
-}
-
-function improveColorContrast() {
-  // This would typically involve checking color combinations
-  // and suggesting improvements
-  console.log('Color contrast analysis would be implemented here');
-}`,
-
-    'utils/keyboard-navigation.js': `// Keyboard navigation utilities
-export function setupKeyboardNavigation() {
-  if (typeof window === 'undefined') return;
-
-  // Add keyboard event listeners
-  document.addEventListener('keydown', handleKeyboardNavigation);
-}
-
-function handleKeyboardNavigation(event) {
-  // Handle escape key
-  if (event.key === 'Escape') {
-    closeModals();
-  }
-  
-  // Handle tab navigation
-  if (event.key === 'Tab') {
-    handleTabNavigation(event);
-  }
-  
-  // Handle arrow keys for custom components
-  if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
-    handleArrowNavigation(event);
-  }
-}
-
-function closeModals() {
-  const modals = document.querySelectorAll('[role="dialog"]');
-  modals.forEach(modal => {
-    if (modal.style.display !== 'none') {
-      modal.style.display = 'none';
-
-    }
-  });
-}
-
-function handleTabNavigation(event) {
-  // Ensure tab order is logical
-  const focusableElements = document.querySelectorAll(
-    'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-  );
-  
-  const firstElement = focusableElements[0];
-  const lastElement = focusableElements[focusableElements.length - 1];
-  
-  if (event.shiftKey && document.activeElement === firstElement) {
-    event.preventDefault();
-    lastElement.focus();
-  } else if (!event.shiftKey && document.activeElement === lastElement) {
-    event.preventDefault();
-    firstElement.focus();
-  }
-}
-
-function handleArrowNavigation(event) {
-  // Implement arrow key navigation for custom components
-  const currentElement = document.activeElement;
-  const parent = currentElement.closest('[role="menu"], [role="listbox"], [role="grid"]');
-  
-  if (parent) {
-    const items = parent.querySelectorAll('[role="menuitem"], [role="option"], [role="gridcell"]');
-    const currentIndex = Array.from(items).indexOf(currentElement);
-    
-    let nextIndex = currentIndex;
-    switch (event.key) {
-      case 'ArrowUp':
-        nextIndex = Math.max(0, currentIndex - 1);
-        break;
-      case 'ArrowDown':
-        nextIndex = Math.min(items.length - 1, currentIndex + 1);
-        break;
-      case 'ArrowLeft':
-        nextIndex = Math.max(0, currentIndex - 1);
-        break;
-      case 'ArrowRight':
-        nextIndex = Math.min(items.length - 1, currentIndex + 1);
-        break;
-    }
-    
-    if (nextIndex !== currentIndex) {
-      event.preventDefault();
-      items[nextIndex].focus();
-    }
-  }
-}`
-
-  };
-
-  Object.entries(accessibilityFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-    fs.writeFileSync(fullPath, content);
-    console.log(`OK Created ${filename}`);
-  });
-}
-
+});
 // Main execution
 async function main() {
   try {
-    createAdvancedMonitoring();
-    createPerformanceOptimizations();
-    createAccessibilityImprovements();
+    console.log('🚀 Starting advanced app improvements...');
+    
+    // Create all improvement systems
+// Main execution
+async function main() {
+  try {
+    console.log('🚀 Starting advanced app improvements...');
+    
+    // Create all improvement systems
+    createAdvancedCaching();
+    createAPIOptimization();
+    createDatabaseOptimization();
     
     console.log('\n✅ Advanced app improvements completed successfully!');
     console.log('\n📋 Summary:');
@@ -528,7 +332,7 @@ async function main() {
   }
 }
 
-// Run if called directly
+main();// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
