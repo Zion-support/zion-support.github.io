@@ -13,28 +13,9 @@ const manifest = {
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
 console.log('[netlify:manifest] wrote', outFile);
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-build-nav-links
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-// Placeholder Netlify functions manifest generator to satisfy build pipeline.
-// If Netlify Functions are used, implement manifest generation here.
-const fs = require('fs');
-const path = require('path');
-const outDir = path.join(process.cwd(), '.netlify');
-fs.mkdirSync(outDir, { recursive: true });
-const manifestPath = path.join(outDir, 'functions-manifest.json');
-const manifest = { generatedAt: new Date().toISOString(), functions: [] };
-fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-console.log('[netlify] Functions manifest generated at', manifestPath);
->>>>>>> origin/chore/resolve-conflicts-1756215853
 =======
 >>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

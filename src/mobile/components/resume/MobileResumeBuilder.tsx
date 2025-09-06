@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-=======
-<<<<<<< HEAD
-=======
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
 
@@ -60,11 +44,6 @@ export function MobileResumeBuilder() {
       case "education":
         return <EducationStep />
       case "skills":
-<<<<<<< HEAD
-        return <SkillsStep />
-=======
-        return <SkillsStep />,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       default:
         return <BasicsStep />
     }
@@ -73,16 +52,6 @@ export function MobileResumeBuilder() {
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
-<<<<<<< HEAD
-          variant = {currentStep === "basics" ? "default" : "outline",}
-          className="flex-1 rounded-full"
-          onClick = {(,) => setCurrentStep("basics"),}
-=======
-          variant={currentStep === "basics" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("basics")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -90,16 +59,6 @@ export function MobileResumeBuilder() {
           Basics
         </Button>
         <Button
-<<<<<<< HEAD
-          variant = {currentStep === "experience" ? "default" : "outline",}
-          className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("experience"),}
-=======
-          variant={currentStep === "experience" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("experience")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -107,16 +66,6 @@ export function MobileResumeBuilder() {
           Experience
         </Button>
         <Button
-<<<<<<< HEAD
-          variant = {currentStep === "education" ? "default" : "outline",}
-          className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("education"),}
-=======
-          variant={currentStep === "education" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("education")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -124,16 +73,6 @@ export function MobileResumeBuilder() {
           Education
         </Button>
         <Button
-<<<<<<< HEAD
-          variant = {currentStep === "skills" ? "default" : "outline",}
-          className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("skills"),}
-=======
-          variant={currentStep === "skills" ? "default" : "outline"}
-          className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("skills")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -142,20 +81,6 @@ export function MobileResumeBuilder() {
         </Button>
       </div>
       {renderStepContent()}
-<<<<<<< HEAD
-      <Button className="w-full flex gap-2" size="lg">
-        <Zap className="h-5 w-5" /> Enhance with AI
-      </Button>
-=======
-      
-      <Button className="w-full flex gap-2" size="lg">
-        <Zap className="h-5 w-5" /> Enhance with AI
-      </Button>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -191,17 +116,6 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Textarea
-            id="summary"
-            placeholder="Write a brief summary about yourself"
-=======
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             rows = {4,}
           />
         </div>
@@ -210,12 +124,6 @@ function BasicsStep() {
   )
 }
 =======
-<<<<<<< HEAD
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -325,9 +233,6 @@ function BasicsStep() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -339,25 +244,6 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
-<<<<<<< HEAD
-  }
-  const removeEducation = (id: string,) => {
-    setEducations(educations.filter(edu => edu.id !== id))
-  }
-  const removeSkill = (id: string,) => {
-    setSkills(skills.filter(skill => skill.id !== id))
-<<<<<<< HEAD
-  }
-}
-  )
-}
-
-=======
-  };
-};
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },
   
@@ -707,8 +593,6 @@ function SkillsStep() {;
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

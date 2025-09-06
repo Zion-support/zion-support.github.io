@@ -1,25 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-=======
-import React from 'react'
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate'
-=======
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 export default function ITSupportPage() {
   const benefits = [
     {import React from "react"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react"
 export default function ITSupportPage() {
 
@@ -58,16 +42,6 @@ export default function ITSupportPage() {
     }
   ]
     return (
-<<<<<<< HEAD
-
-=======
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ITSupportPage() {
   const benefits = [
     {
@@ -96,8 +70,6 @@ export default function ITSupportPage() {
       avatar: "/placeholder.svg"}],
 
   return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -106,25 +78,6 @@ export default function ITSupportPage() {
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
-<<<<<<< HEAD
-      benefits = {benefits,}
-      testimonials = {testimonials,};
-      ctaText="Get IT Support";
-      ctaLink="/request-quote";
-    />;
-  );      benefits={benefits}
-      testimonials={testimonials}
-      ctaText="Get IT Support"
-      ctaLink="/request-quote"
-    />
-  )
-}
-<<<<<<< HEAD
-=======
-;
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       benefits={benefits}
       testimonials={testimonials}
@@ -174,8 +127,6 @@ export default function ITSupportPage() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

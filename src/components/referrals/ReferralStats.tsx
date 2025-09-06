@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReferralStats as ReferralStatsType } from "@/types/referrals";
-=======
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ReferralStats as ReferralStatsType } from '@/types/referrals'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 =======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -21,21 +11,6 @@ interface ReferralStatsProps {
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
     {
-<<<<<<< HEAD
-      title: 'Total Referrals'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ReferralStats as ReferralStatsType } from "@/types/referrals"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { Star } from 'lucide-react'
-<<<<<<< HEAD
-=======
-=======
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",
-import { Award, Share, Star, TrendingUp } from 'lucide-react'
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ReferralStatsProps {
 
@@ -45,18 +20,6 @@ interface ReferralStatsProps {
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
     {
-<<<<<<< HEAD
-      title: 'Total Referrals'
-      icon: <Share className='h-5 w-5 text-muted-foreground' />
-      description: "People you've invited"
-    }
-=======
-<<<<<<< HEAD
-      title: 'Total Referrals',
-      icon: <Share className='h-5 w-5 text-muted-foreground' />,
-      description: "People you've invited",
-    },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       title: 'Completed'
       value: stats.completedReferrals
@@ -109,8 +72,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: "Credits earned from referrals"}],
 
   return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -123,18 +84,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
           </CardHeader>
           <CardContent>
             {isLoading ? (
-<<<<<<< HEAD
-              <div className='h-6 w-20 bg-muted animate-pulse rounded' />
-            ) : (
-              <>
-                <div className='text-2xl font-bold'>{card.value}</div>
-                <p className='text-xs text-muted-foreground'>
-                  {card.description}
-                </p>              </>              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
-=======
-              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -142,22 +91,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
-<<<<<<< HEAD
-            )}
-          </CardContent>
-        </Card>
-      ))};
-    </div>;
-  );
-};
-}
-<<<<<<< HEAD
-=======
-}
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               </>
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -214,8 +147,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { ClickableBadge } from '@/components/ui/clickable-badge'
-import { Button } from '@/components/ui/button'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
-<<<<<<< HEAD
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { Button } from "@/components/ui/button";
-=======
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -46,51 +30,10 @@ interface ActiveFiltersProps {
 
   clearFilters: () => void
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-export function ActiveFilters({
-
-  selectedSkills
-  toggleSkill
-  selectedAvailability
-  toggleAvailability
-  selectedRegions
-  toggleRegion
-  priceRange
-  setPriceRange
-  experienceRange
-  setExperienceRange
-  clearFilters
-}: ActiveFiltersProps) {
-  // Check if any filters are active
-<<<<<<< HEAD
-  const hasActiveFilters =
-    selectedSkills.length > 0 |
-    selectedAvailability.length > 0 |
-    selectedRegions.length > 0 |
-    experienceRange[0] !== 0 |
-    experienceRange[1] !== 15 |
-    priceRange[0] !== 50 |
-    priceRange[1] !== 200
-  if (!hasActiveFilters) return null
-
-=======
-  const hasActiveFilters = null;
-    selectedSkills.length > 0 ||
-    selectedAvailability.length > 0 ||
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
-<<<<<<< HEAD
-    priceRange[1] !== 200
-  if (!hasActiveFilters) return null
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className='mb-6 flex flex-wrap gap-2 items-center'>
       <span className='text-zion-slate-light text-sm'>Active filters:</span>
@@ -123,22 +66,6 @@ export function ActiveFilters({
           onClick={() => toggleRegion(region)}        >
           {region}
           <X className='h-3 w-3' />
-<<<<<<< HEAD
-        </ClickableBadge>
-      ))}
-      {(priceRange[0] !== 50 |priceRange[1] !== 200) && (
-        <ClickableBadge
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => setPriceRange([50, 200])}        >
-=======
-
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
@@ -227,28 +154,15 @@ export function ActiveFilters({;
         >;
           {region}
           <X className="h-3 w-3" />
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </ClickableBadge>
       ))}
       
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <ClickableBadge
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => setPriceRange([50, 200])}        >
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setPriceRange([50, 200])}
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -256,29 +170,14 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {(experienceRange[0] !== 0 |experienceRange[1] !== 15) && (
-=======
-      
-      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setExperienceRange([0, 15])}        >
 =======
-<<<<<<< HEAD
-      
-      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setExperienceRange([0, 15])}
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -286,25 +185,11 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Button
         variant='ghost'
         size='sm'
         onClick={clearFilters}
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'      >
-<<<<<<< HEAD
-=======
-        Clear All
-      </Button>
-    </div>
-  );
-};
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       
       <Button 
@@ -313,20 +198,12 @@ export function ActiveFilters({;
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
       >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         Clear All
       </Button>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -363,8 +240,6 @@ export function ActiveFilters({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

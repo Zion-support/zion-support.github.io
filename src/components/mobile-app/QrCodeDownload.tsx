@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-}
-import React from "react"
-import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
-=======
-<<<<<<< HEAD
-import React from "react",
-import { QrCode } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
 import React from "react",
@@ -35,15 +21,6 @@ export const QrCodeDownload: React.FC = () => {
               <p className="text-lg text-gray-300 mb-8">
                 Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <AppStoreButtons
-                className="mb-8"
-                appStoreUrl = {appStoreUrl,}
-                googlePlayUrl = {googlePlayUrl,}
-              />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -52,11 +29,6 @@ export const QrCodeDownload: React.FC = () => {
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
-<<<<<<< HEAD
-=======
-              
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -65,11 +37,6 @@ export const QrCodeDownload: React.FC = () => {
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -88,20 +55,6 @@ export const QrCodeDownload: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};
-";
-=======
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-"
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 },
 import React from "react",;
 import { QrCode } from 'lucide-react';
@@ -149,8 +102,6 @@ export const QrCodeDownload: React.FC = () => {;
     </section>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

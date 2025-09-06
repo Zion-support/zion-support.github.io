@@ -57,26 +57,3 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, commits: commits.length })
     }
   } catch (e) {
-<<<<<<< HEAD
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-}
-    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token })
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-
-}
-
-=======
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
-  }
-};
-    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

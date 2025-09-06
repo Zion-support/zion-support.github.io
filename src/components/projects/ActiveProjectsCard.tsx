@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useState } from 'react'
-import Link from 'next/link'
-import { BriefcaseIcon, Clock } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { useProjects } from '@/hooks/useProjects'
-import { Project } from '@/types/projects'
-<<<<<<< HEAD
-
-=======
-export function ActiveProjectsCard() {
-  const { projects, isLoading } = useProjects()
-  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-  useEffect(() => {    if (projects && !isLoading) {;
-      const active = projects;
-        .filter(p => ['offer_accepted', 'in_progress'].includes(p.status));
-        .slice(0, 3); // Limit to 3 most recent projects
-      setActiveProjects(active)
-    }
-  }, [projects, isLoading])
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 import { useEffect, useState } from "react",
@@ -46,18 +15,6 @@ export function ActiveProjectsCard() {
   
   useEffect(() => {
     if (projects && !isLoading) {
-<<<<<<< HEAD
-      const active = null;
-=======
-      const active = projects.filter(p => 
-        ['offer_acceptedin_progress'].includes(p.status)
-      ).slice(0, 3), // Limit to 3 most recent projects
-      setActiveProjects(active)
-    }
-  }, [projects, isLoading]),
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -65,13 +22,6 @@ export function ActiveProjectsCard() {
     return (
       <Card>
         <CardHeader>
-<<<<<<< HEAD
-          <CardTitle className='flex items-center gap-2'>
-            <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>          <CardTitle className="flex items-center gap-2">
-=======
-          <CardTitle className="flex items-center gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -83,29 +33,6 @@ export function ActiveProjectsCard() {
         <CardContent>
           <div className="space-y-2">
             {[1, 2].map(idx => (
-<<<<<<< HEAD
-              <div
-                key={idx}
-                className='h-16 animate-pulse bg-muted rounded'
-              ></div>            ))}
-          </div>
-        </CardContent>
-      </Card>
-    )
-  }          <div className="space-y-2">
-            {[1, 2].map(idx => (
-              <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-    )
-  }
-    )
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
@@ -146,9 +73,6 @@ export function ActiveProjectsCard() {;
         </CardContent>;
       </Card>;
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
@@ -157,16 +81,6 @@ export function ActiveProjectsCard() {;
     return (
       <Card>
         <CardHeader>
-<<<<<<< HEAD
-          <CardTitle className='flex items-center gap-2'>
-            <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>
-          </CardTitle>
-          <CardDescription>Your ongoing work</CardDescription>
-        </CardHeader>          <CardTitle className="flex items-center gap-2">
-=======
-          <CardTitle className="flex items-center gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -175,24 +89,6 @@ export function ActiveProjectsCard() {;
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
-<<<<<<< HEAD
-        <CardContent className='text-center py-6'>
-          <p className='text-muted-foreground mb-2'>
-            You don't have any active projects at the moment.
-          </p>
-          <Button variant='outline' asChild>
-            <Link href='/jobs'>Find Opportunities</Link>          </Button>        <CardContent className="text-center py-6">
-          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
-          <Button variant="outline" asChild>
-            <Link href="/jobs">Find Opportunities</Link>
-=======
-        <CardContent className="text-center py-6">
-          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
-          <Button variant="outline" asChild>
-            <Link href="/jobs">Find Opportunities</Link>
-          </Button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -200,11 +96,6 @@ export function ActiveProjectsCard() {;
       </Card>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card>
       <CardHeader>
@@ -282,8 +173,6 @@ export function ActiveProjectsCard() {;
               <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
             </div>
             <Button size="sm" variant="outline" className="w-full mt-2" asChild>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -291,42 +180,6 @@ export function ActiveProjectsCard() {;
             </Button>
           </div>
         ))}
-<<<<<<< HEAD
-      </CardContent>
-      {activeProjects.length > 2 && (
-        <CardFooter>
-          <Button variant='ghost' className='w-full' asChild>
-            <Link href='/projects'>View All Projects</Link>          </Button>          <Button variant="ghost" className="w-full" asChild>
-            <Link href="/projects">View All Projects</Link>
-          </Button>
-        </CardFooter>
-      )}
-    </Card>
-  )
-}, [projects, isLoading])
-return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent>) )
-}</div> </CardContent> </Card>)
-}if (activeProjects.length === 0) {'"
-  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>) )
-}</CardContent> {"
-  activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>)
-}</Card>)
-}'"}
-=======
-      </CardContent>;
-      {activeProjects.length > 2 && (;
-        <CardFooter>;
-          <Button variant="ghost" className="w-full" asChild>;
-            <Link href="/projects">View All Projects</Link>;
-          </Button>;
-        </CardFooter>;
-      )}
-    </Card>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

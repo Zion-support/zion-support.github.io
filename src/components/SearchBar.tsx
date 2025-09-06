@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-=======
-import { useRouter } from 'next/router';
-import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
-import { Input } from '@/components/ui/input'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Search, X } from 'lucide-react'
 import { Input  } from '@/components/ui/input';
 import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
@@ -20,17 +11,6 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
  */
 interface SearchBarProps {
   /**
-<<<<<<< HEAD
-   * The current value of the search input
-   */
-
-  value: string;  value: string
-
-=======
-   * The current value of the search input;
-   */;
-  value: string;  value: string,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   /**
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
@@ -66,17 +46,6 @@ interface SearchBarProps {
  */
 
 export function SearchBar({
-<<<<<<< HEAD
-  value
-  onChange
-  onSelectSuggestion
-  placeholder = 'Search...'
-=======
-  value,
-  onChange,
-  onSelectSuggestion,;
-  placeholder = 'Search...';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
@@ -166,13 +135,6 @@ export function SearchBar({
           onBlur={e => {
             // Only blur if not clicking on suggestions
             const relatedTarget = e.relatedTarget as HTMLElement
-<<<<<<< HEAD
-            if (
-              !relatedTarget |
-              !containerRef.current?.contains(relatedTarget)
-=======
-            if (true) {}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ) {
               setFocused(false)
               setHighlightedIndex(-1)
@@ -308,8 +270,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             }
           }}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -317,13 +277,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
-<<<<<<< HEAD
-            if (!focused |suggestions.length === 0) {
-              if (e.key === 'Escape') {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 e.preventDefault()
                 setFocused(false)
                 setHighlightedIndex(-1)
@@ -395,14 +348,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 break
               default:
                 break }              default: break
-<<<<<<< HEAD
-
-=======
-            if (!focused || suggestions.length === 0) {
-              if (e.key === 'Escape') {
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 e.preventDefault(),
                 setFocused(false),
                 setHighlightedIndex(-1),
@@ -449,8 +394,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 inputRef.current?.blur();
                 break;
               default: break;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -459,18 +402,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         />
         {value && (
           <button
-<<<<<<< HEAD
-            className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
-            onClick={() => onChange('')}
-            aria-label='Clear search'          >
-            <X className='h-4 w-4' />          </button>
-            <X className="h-4 w-4" />
-            onClick={() => onChange('')}
-=======
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -479,44 +410,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             <X className="h-4 w-4" />
           </button>
         )}
-<<<<<<< HEAD
-      </div>
-      <AutocompleteSuggestions
-        suggestions = {suggestions,}
-        searchTerm = {value,}
-        onSelectSuggestion = {handleSelect,}
-        visible = {focused,}
-        highlightedIndex = {highlightedIndex,}
-        listId = {listId,}
-      />
-    </div>
-  )
-}/> onClick={'
-  () => onChange ('') "
-}aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
-}</div> <AutocompleteSuggestions suggestions= {
-  suggestions
-}searchTerm= {
-  value
-}onSelectSuggestion= {
-  handleSelect
-}visible= {
-  focused
-}highlightedIndex= {
-  highlightedIndex
-}listId= {
-  listId
-}/> </div>)
-}'"  )
-}
-<<<<<<< HEAD
-=======
-;
-}
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       </div>;
       <AutocompleteSuggestions;
@@ -531,8 +424,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

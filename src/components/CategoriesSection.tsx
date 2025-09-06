@@ -1,30 +1,10 @@
 
-<<<<<<< HEAD
-color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
-    : defaultCategories.map(cat => ({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ...cat
 import { GradientHeading } from "./GradientHeading"
 import Link from "next/link"
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils"
 import { useTranslation } from "react-i18next"
-<<<<<<< HEAD
-// This is the type definition copied from Categories.tsx for consistency.
-// Ideally, this would be in a shared types file.
-interface CategoryType {
-  id: string
-  name: string
-  description?: string
-=======
-=======
-        ...cat;
-import { GradientHeading } from "./GradientHeading";
-import Link from "next/link";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 =======
 import { GradientHeading } from "./GradientHeading",
@@ -33,79 +13,18 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
   id: string,
   name: string,
-<<<<<<< HEAD
-  description?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-<<<<<<< HEAD
-  description?: string
-=======
-  description?: string,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
   link?: string
-<<<<<<< HEAD
- * CategoriesSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-const categories = [{
-    title: "AI Services"
-    description: "Cutting - edge AI solutions, chatbots, and machine learning"
-    icon: "🤖"
-    link: "/ai - services"
-    color: "from - purple - 500 to - indigo - 600",
-}
-  {
-    title: "Micro SAAS"
-    description: "Cloud - based software solutions for modern businesses"
-    icon: "☁️"
-    link: "/micro - saas"
-    color: "from - cyan - 500 to - blue - 600",
-}
-  {
-    title: "IT Services"
-    description: "Infrastructure, security, and technical consulting"
-    icon: "⚡"
-    link: "/all - services"
-    color: "from - amber - 500 to - orange - 600",
-}
-  {
-    title: "Digital Transformation"
-    description: "Business modernization and digital strategy"
-    icon: "📈"
-    link: "/all - services"
-    color: "from - emerald - 500 to - green - 600",
-}
-]
-const specialServices = [{
-    title: "IT Onsite Services"
-    link: "/it - onsite - services"
-<<<<<<< HEAD
-=======
-},
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive - services"
-},
-  {
-    title: "Services Comparison",
-    link: "/services - comparison"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   {
@@ -119,12 +38,6 @@ const specialServices = [{
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 // Default static categories with translation keys
-<<<<<<< HEAD
-
-const getDefaultCategories = (t: any,) => [
-=======
-const getDefaultCategories = (t: any) => [
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
     id: "services"
     name: t('categories.services')
@@ -132,12 +45,6 @@ const getDefaultCategories = (t: any) => [
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services"
     color: "from-purple-500 to-indigo-600", // Keep color for styling
-<<<<<<< HEAD
-  }
-=======
-  },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -156,149 +63,9 @@ const getDefaultCategories = (t: any) => [
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
   {
-<<<<<<< HEAD
-    id: "innovation"
-    name: t('categories.innovation')
-    description: t('categories.innovation_desc')
-    iconName: "Lightbulb"
-    link: "/innovation"
-    color: "from-emerald-500 to-green-600"}]
-=======
-    id: "innovation",
-    name: t('categories.innovation'),
-    description: t('categories.innovation_desc'),
-    iconName: "Lightbulb",
-    link: "/innovation",
-    color: "from-emerald-500 to-green-600"}],
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
-<<<<<<< HEAD
-    case "Briefcase": return <Briefcase className="w-10 h-10" />
-    case "Users": return <Users className="w-10 h-10" />
-    case "HardDrive": return <HardDrive className="w-10 h-10" />
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon
-  }
-}
-const getSpecialServices = (t: any,) => [
-  {
-    title: t('categories.it_onsite_services')
-    link: "/it-onsite-services"
-  }
-]
-interface CategoriesSectionProps {
-  showTitle?: boolean
-  className?: string
-  style?: React.CSSProperties
-  categories?: CategoryType[], // Accept categories as a prop
-}
-export function CategoriesSection({
-  showTitle = true
-  className
-  style
-  categories: fetchedCategories, // Rename prop for clarity
-}: CategoriesSectionProps) {
-  const { t } = useTranslation()
-  const defaultCategories = getDefaultCategories(t)
-=======
-    case "Briefcase": return <Briefcase className="w-10 h-10" />,
-    case "Users": return <Users className="w-10 h-10" />,
-    case "HardDrive": return <HardDrive className="w-10 h-10" />,
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />,
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon
-  }
-},
-
-const getSpecialServices = (t: any) => [
-  {
-    title: t('categories.it_onsite_services'),
-    link: "/it-onsite-services"
-import { GradientHeading } from "./GradientHeading",;
-import Link from "next/link",;
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon;
-import { cn } from "@/lib/utils",;
-import { useTranslation } from "react-i18next",;
-// This is the type definition copied from Categories.tsx for consistency.;
-// Ideally, this would be in a shared types file.;
-interface CategoryType {;
-  id: string,;
-  name: string,;
-  description?: string,;
-  iconName?: string, // Example field if categories have icons;
-  itemCount?: number, // Example field for number of items in a category;
-  // Add a 'link' property if your API provides it, or construct it.;
-  link?: string;
-}
-;
-// Default static categories with translation keys;
-const getDefaultCategories = (t: any) => [;
-  {;
-    id: "services",;
-    name: t('categories.services'),;
-    description: t('categories.services_desc'),;
-    iconName: "Briefcase", // Corresponds to lucide icon name;
-    link: "/services",;
-    color: "from-purple-500 to-indigo-600", // Keep color for styling;
-  },;
-  {;
-    id: "talents",;
-    name: t('categories.talents'),;
-    description: t('categories.talents_desc'),;
-    iconName: "Users",;
-    link: "/talent",;
-    color: "from-cyan-500 to-blue-600"},;
-  {;
-    id: "equipment",;
-    name: t('categories.equipment'),;
-    description: t('categories.equipment_desc'),;
-    iconName: "HardDrive",;
-    link: "/equipment",;
-    color: "from-amber-500 to-orange-600"},;
-  {;
-    id: "innovation",;
-    name: t('categories.innovation'),;
-    description: t('categories.innovation_desc'),;
-    iconName: "Lightbulb",;
-    link: "/innovation",;
-    color: "from-emerald-500 to-green-600"}],;
-// Helper to get icon component from name;
-const getIcon = (iconName?: string) => {;
-  switch (iconName) {;
-    case "Briefcase": return <Briefcase className="w-10 h-10" />,;
-    case "Users": return <Users className="w-10 h-10" />,;
-    case "HardDrive": return <HardDrive className="w-10 h-10" />,;
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />,;
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon;
-  }
-},;
-const getSpecialServices = (t: any) => [;
-  {;
-    title: t('categories.it_onsite_services'),;
-    link: "/it-onsite-services";
-  }
-],;
-interface CategoriesSectionProps {;
-  showTitle?: boolean,;
-  className?: string,;
-  style?: React.CSSProperties,;
-  categories?: CategoryType[], // Accept categories as a prop;
-}
-
-export function CategoriesSection({
-  showTitle = true,
-  className,
-  style,
-  categories: fetchedCategories, // Rename prop for clarity
-}: CategoriesSectionProps) {
-  const { t } = useTranslation(),
-  const defaultCategories = getDefaultCategories(t),
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -313,17 +80,6 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
-<<<<<<< HEAD
-        ...cat
-<<<<<<< HEAD
-        title: cat.name
-        icon: getIcon(cat.iconName)}))
-=======
-        ...cat,
-=======
-=======
-        ...cat,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         title: cat.name,
         icon: getIcon(cat.iconName)})),
@@ -340,23 +96,11 @@ export function CategoriesSection({
           </p>
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
-<<<<<<< HEAD
-          </p>
-        </div>
-      </section>
-    )
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           </p>;
         </div>;
       </section>;
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
@@ -372,23 +116,6 @@ export function CategoriesSection({
             </p>
           </div>
         )}
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayCategories.map((category,) => (
-            <Link
-              key = {category.id,}
-              href = {category.link |'#',}
-=======
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-          {displayCategories.map((category) => (
-=======
-<<<<<<< HEAD
-          {displayCategories.map((category,) => (
-=======
-          {displayCategories.map((category) => (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Link
               key={category.id}
@@ -407,12 +134,6 @@ export function CategoriesSection({
               </div>
             </Link>
           ))}
-<<<<<<< HEAD
-        </div>
-=======
-        </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -420,32 +141,6 @@ export function CategoriesSection({
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD
-            {getSpecialServices(t).map((service,) => (
-              <Link
-                key = {service.title,}
-                href = {service.link,}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
-              >
-                {service.title}
-              </Link>            ))}
-          </div>
-        </div>
-=======
-            {getSpecialServices(t).map((service) => (
-              <Link 
-                key={service.title}
-                href={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
-              >
-                {service.title}
-              </Link>;
-            ))}
-          </div>
-        </div>
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -455,41 +150,6 @@ export function CategoriesSection({
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             {t('home.view_all_categories')}
-<<<<<<< HEAD
-          </Link>
-        </div>
-      </div>
-    </section>
-  )
-  switch (iconName) {
-}
-const getSpecialServices = (t: any) => [ {
-  title: t ('categories.it onsite services')
-link: "/it-onsite-services"
-}]
-interface CategoriesSectionProps {
-  showTitle?: boolean
-className?: string
-style?: React.CSSProperties
-categories?: CategoryType[], //Accept categories as a prop
-}export function CategoriesSection ({
-  showTitle = true
-className
-style
-categories: fetchedCategories, //Rename prop for clarity
-}: CategoriesSectionProps) {
-  const {
-<<<<<<< HEAD
-  t
-}= useTranslation ()
-const defaultCategories = getDefaultCategories (t)
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
-=======
-  t ;
-}= useTranslation ();
-const defaultCategories = getDefaultCategories (t);
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -524,8 +184,6 @@ icon: getIcon (cat.iconName)
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

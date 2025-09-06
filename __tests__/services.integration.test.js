@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-<<<<<<< HEAD
-const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import services from "./pages/services" describe("services Integration Tests",() => {" test("page renders correctly",() => {" render(<services / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<services / />) }) test("page content is accessible",() => {" render(<services / />) }) test("page loads with correct data",() => {" render(<services / />) }) })'"'"
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import services from '../pages/services" describe('services Integration Tests',() => {' test('page renders correctly',() => {' render(<services / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<services / />) }) test('page content is accessible',() => {' render(<services / />) }) test('page loads with correct data',() => {' render(<services / />) }) })
-=======
-<<<<<<< HEAD
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import services from '../pages/services" describe('services Integration Tests',() => {' test('page renders correctly',() => {' render(<services / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<services / />) }) test('page content is accessible',() => {' render(<services / />) }) test('page loads with correct data',() => {' render(<services / />) }) })
-=======
-const React from "react" import { render,screen } from "@testing-library/react" import "@testing-library/jest-dom import services from "./pages/services" describe("services Integration Tests",() => {" test("page renders correctly",() => {" render(<services / />) expect(screen.getByRole("main")).toBeInTheDocument();" }) test("navigation works",() => {" render(<services / />) }) test("page content is accessible",() => {" render(<services / />) }) test("page loads with correct data",() => {" render(<services / />) }) })'"'"
-import _React from 'react" import { render,screen } from '@testing-library/react" import '@testing-library/jest-dom import services from '../pages/services" describe('services Integration Tests',() => {' test('page renders correctly',() => {' render(<services / />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works',() => {' render(<services / />) }) test('page content is accessible',() => {' render(<services / />) }) test('page loads with correct data',() => {' render(<services / />) }) })
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { format  } from 'date-fns';
-=======
-<<<<<<< HEAD
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { format } from 'date-fns'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Loader2 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -52,31 +38,6 @@ export function EducationFormFields({
   const form = useForm<EducationFormValues>({
     resolver: zodResolver(educationSchema)
     defaultValues: {
-<<<<<<< HEAD
-      institution: ''
-      degree: ''
-      field_of_study: ''
-      start_date: format(new Date(), 'yyyy-MM-dd')
-      is_current: false
-      description: ''
-      location: ''
-    }
-  })
-  const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading(true)
-=======
-      institution: '',
-      degree: '',
-      field_of_study: '',
-      start_date: format(new Date(), 'yyyy-MM-dd'),
-      is_current: false,
-      description: '',
-      location: '',
-    },;
-  });
-  const handleSubmit = async (data: EducationFormValues) => {;
-    setIsLoading(true);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setError(null);    try {
       await onSubmit(data)
     } catch (err: any) {
@@ -86,10 +47,6 @@ export function EducationFormFields({
     }
   }
 =======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -151,9 +108,6 @@ export function EducationFormFields({;
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Form {...form}>
@@ -161,15 +115,6 @@ export function EducationFormFields({;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
-<<<<<<< HEAD
-            name='institution'
-            render={({ field }: { field: any }) => (              <FormItem>
-=======
-            name="institution"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -180,21 +125,6 @@ export function EducationFormFields({;
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
-          />
-          <FormField
-            control={form.control}
-            name='degree'
-            render={({ field }: { field: any }) => (              <FormItem>
-=======
-          />;
-          <FormField;
-            control={form.control}
-            name="degree"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -205,23 +135,6 @@ export function EducationFormFields({;
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
-          />
-        </div>
-        <FormField
-          control={form.control}
-          name='field_of_study'
-          render={({ field }: { field: any }) => (            <FormItem>
-=======
-          />;
-        </div>;
-        <FormField;
-          control={form.control}
-          name="field_of_study"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -233,48 +146,12 @@ export function EducationFormFields({;
             </FormItem>
           )}
         />
-<<<<<<< HEAD
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <FormField
-            control={form.control}
-            name='start_date'
 =======
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-<<<<<<< HEAD
-            name="start_date"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-            name='start_date'
-=======
-            name="start_date"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <Input type='date' {...field} value={field.value |''} />                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <div className='space-y-4'>
-            <FormField
-              control={form.control}
-              name='is_current'
-              render={({ field }: { field: any }) => (
-                <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
-=======
-                  <Input type='date' {...field} value={field.value || ''} />                </FormControl>
-                <FormMessage />
-              </FormItem>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                   <Input 
                     type="date" 
@@ -284,9 +161,6 @@ export function EducationFormFields({;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           />
@@ -294,20 +168,10 @@ export function EducationFormFields({;
           <div className="space-y-4">
             <FormField
               control={form.control}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              name='is_current'
-              render={({ field }: { field: any }) => (
-                <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               name="is_current"
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                   <FormControl>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -321,20 +185,6 @@ export function EducationFormFields({;
                   </div>
                 </FormItem>
               )}
-<<<<<<< HEAD
-            />
-            {!form.watch('is_current') && (
-              <FormField
-                control={form.control}
-                name='end_date'
-=======
-            />;
-            {!form.watch('is_current') && (;
-              <FormField;
-                control={form.control}
-                name="end_date"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -342,12 +192,6 @@ export function EducationFormFields({;
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <Input type='date' {...field} value={field.value |''} />                    </FormControl>
-=======
-                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                       <Input 
                         type="date" 
@@ -355,8 +199,6 @@ export function EducationFormFields({;
                         value={field.value || ''} 
                       />
                     </FormControl>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -365,23 +207,6 @@ export function EducationFormFields({;
                 )}
               />
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-        <FormField
-          control={form.control}
-          name='location'
-          render={({ field }: { field: any }) => (            <FormItem>
-=======
-          </div>;
-        </div>;
-        <FormField;
-          control={form.control}
-          name="location"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -392,31 +217,6 @@ export function EducationFormFields({;
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-        />
-        <FormField
-          control={form.control}
-          name='description'
-          render={({ field }: { field: any }) => (            <FormItem>
-              <FormLabel>Description (Optional)</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder='Notable achievements, courses, activities...'
-                  className='min-h-[100px]'
-=======
-        />;
-        <FormField;
-          control={form.control}
-          name="description"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Description (Optional)</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Notable achievements, courses, activities..."
-                  className="min-h-[100px]"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -427,26 +227,6 @@ export function EducationFormFields({;
             </FormItem>
           )}
         />
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-        {error && (
-          <Alert variant='destructive'>
-            <AlertDescription>{error}</AlertDescription>
-          </Alert>
-        )}
-        <div className='flex justify-between pt-2'>
-          <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
-          </Button>
-          <Button type='submit' disabled={isLoading}>
-            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
         <div className="flex justify-between pt-2">
@@ -460,8 +240,6 @@ export function EducationFormFields({;
 
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -471,17 +249,5 @@ export function EducationFormFields({;
       </form>
     </Form>
   )
-<<<<<<< HEAD
-}
 =======
-}
-<<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -2,10 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -20,99 +16,6 @@ function fixSyntaxErrors(filePath) {;
     // Fix shebang issues;
     if (content.includes('#!/usr/bin/env node') && !content.startsWith('#!/usr/bin/env node')) {;
       content = content.replace(/.*#!/usr\/bin\/env node.*\n/g, '#!/usr/bin/env node\n');
-<<<<<<< HEAD
-    }
-    ;
-    // Fix missing commas in object literals;
-    content = content.replace(/(\w+)\s*(\w+)\s*:/g, '$1:$2:');
-    content = content.replace(/(\w+):\s*(\w+)\s*:/g, '$1:$2:');
-    ;
-    // Fix missing semicolons;
-    content = content.replace(/(\w+)\s*(\w+)\s*}/g, '$1; $2}');
-    content = content.replace(/(\w+)\s*(\w+)\s*]/g, '$1; $2]');
-    ;
-    // Fix unterminated strings;
-    content = content.replace(/(['"`])([^'"`]*?)(\n)/g, '$1$2$1$3');
-    ;
-    // Fix missing quotes in object keys;
-    content = content.replace(/(\w+):/g, '"$1":');
-    ;
-    // Fix missing commas between array elements;
-    content = content.replace(/(\w+)\s*(\w+)\s*]/g, '$1, $2]');
-    ;
-    // Clean up extra whitespace;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
-    ;
-    if (content !== originalContent) {;
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors:in:${filePath}`);
-      return true;
-    }
-    ;
-    return false;
-  } catch (error) {;
-    console.error(`Error processing ${filePath} `, error.message);
-    return false;
-  }
-}
-;
-function findFilesWithErrors(dir) {;
-  const files = [];
-  const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs'];
-  ;
-  function traverse(currentDir) {;
-    const items = fs.readdirSync(currentDir);
-    ;
-    for (const item of items) {;
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      ;
-      if (stat.isDirectory()) {;
-        if (!['node_modules', '.git', '.next', 'dist', 'build', 'backup-merge-conflicts'].includes(item)) {;
-          traverse(fullPath);
-        }
-      } else if (stat.isFile()) {;
-        const ext = path.extname(fullPath);
-        if (extensions.includes(ext)) {;
-          files.push(fullPath);
-        }
-      }
-    }
-  }
-  ;
-  traverse(dir);
-  return files;
-}
-;
-// Main execution;
-console.log('🔍 Scanning for files with syntax errors...');
-const files = findFilesWithErrors(process.cwd());
-;
-console.log(`Found ${files.length} files to check`);
-;
-let fixedCount = 0;
-for (const file of files) {;
-  if (fixSyntaxErrors(file)) {;
-    fixedCount++;
-  }
-}
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-;
-console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-console.log('🎉 Syntax error fixing complete!');console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-console.log('🎉 Syntax error fixing complete!');
-=======
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 const { execSync } = require('child_process');
 // Files with critical syntax errors that need immediate fixing
 const criticalFiles = [
@@ -195,8 +98,6 @@ console.log(' Starting comprehensive syntax fixer...')
   fixed = fixed.replace(/className="([^"]*)"([^>]*?)>/g, 'className="$1"
   fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 =======
 
@@ -229,9 +130,6 @@ class ComprehensiveSyntaxFixer {
     } catch (error) {
       this.log(`❌ Error during syntax fixing: ${error.message}`);
       throw error;
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
   }
@@ -337,9 +235,6 @@ class ComprehensiveSyntaxFixer {
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -441,8 +336,6 @@ if (require.main === module) {;
 }
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
-<<<<<<< HEAD
->>>>>>> origin/main
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

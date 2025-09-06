@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-import React, { forwardRef } from 'react'
-import { ChevronDown } from 'lucide-react'
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
-=======
-import { cn } from '@/lib/utils'
-import { SafeRef } from '@/types/ref-types'
-=======
-
-import React, { forwardRef } from "react",
-import { ChevronDown } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
     {
@@ -49,19 +28,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
             onClick={() => setExpanded(!expanded)}          >
             <div className='flex items-center gap-2'>
 =======
-<<<<<<< HEAD
-
-import React, { forwardRef } from "react",
-import { ChevronDown } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
-interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-  title?: string,
-  icon?: React.ReactNode,
-  defaultExpanded?: boolean,
-  showChevron?: boolean
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -89,8 +55,6 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
             onClick={() => setExpanded(!expanded)}
           >
             <div className="flex items-center gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -99,37 +63,12 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
             </div>
             {showChevron && (
               <ChevronDown
-<<<<<<< HEAD
-                className={cn(
-                  'h-4 w-4 transition-transform'
-                  expanded ? 'rotate-0' : '-rotate-90'
-                )}              />
-=======
-                className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
-              />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </button>
         )}
-<<<<<<< HEAD
-        <div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>
-      </div>
-    )
-  }
-)
-<<<<<<< HEAD
-SidebarGroup.displayName = 'SidebarGroup'
-export { SidebarGroup }
-
-=======
-SidebarGroup.displayName = 'SidebarGroup';
-export { SidebarGroup };
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
       </div>
@@ -146,8 +85,6 @@ export { SidebarGroup },
 ),;
 SidebarGroup.displayName = "SidebarGroup",;
 export { SidebarGroup };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

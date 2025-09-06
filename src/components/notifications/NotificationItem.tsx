@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Tooltip
   TooltipContent
@@ -22,11 +17,6 @@ import { Notification, NotificationType } from '@/context/notifications'
 }) => {;
       className={cn(;
                   onMarkAsRead(notification.id); import React from 'react'
-<<<<<<< HEAD
-=======
-=======
-import React from 'react',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -98,11 +88,6 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-orange-500">📦</span>,
     default:
       return <span className="text-gray-500">📣</span>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
@@ -139,8 +124,6 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-orange-500">📦</span>,;
     default:;
       return <span className="text-gray-500">📣</span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -164,13 +147,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  },
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
@@ -182,8 +158,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       className={cn(;
         'p-3 border-b border-zion-blue-light relative group',;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -193,22 +167,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         <div className="flex-1">
           <div className="flex justify-between items-center mb-1">
             <h4 className="font-medium text-white">
-<<<<<<< HEAD
-              {notification.title |'Notification'}
-=======
-              {notification.title || 'Notification'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </h4>
             {!notification.read && (
               <Badge className="bg-zion-cyan text-xs">New</Badge>
             )}
           </div>
           <p className="text-sm text-zion-slate-light">
-<<<<<<< HEAD
-            {notification.message |'You have a new notification'}
-=======
-            {notification.message || 'You have a new notification'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </p>
           <div className="flex justify-between items-center mt-1">
             <p className="text-xs text-zion-slate">
@@ -222,14 +186,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
-<<<<<<< HEAD
-                onClick = {handleClick,}
-              >
-=======
-                onClick={handleClick}
-              >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -249,16 +205,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-<<<<<<< HEAD
-                onClick={(e,) => {
-<<<<<<< HEAD
-                  e.stopPropagation()
-=======
-                onClick={(e) => {
-=======
-=======
-                onClick={(e) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   e.stopPropagation(),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -281,16 +227,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-<<<<<<< HEAD
-                onClick={(e,) => {
-<<<<<<< HEAD
-                  e.stopPropagation()
-=======
-                onClick={(e) => {
-=======
-=======
-                onClick={(e) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   e.stopPropagation(),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -306,69 +242,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-<<<<<<< HEAD
-      </div>;
-    </div>;
-  );
-};
-=======
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-}
-
-=======
-},
-      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
-              <Button;
-                variant="ghost";
-                size="icon";
-                className="h-6 w-6";
-                onClick={(e) => {;
-                  e.stopPropagation(),;
-                  onMarkAsRead(notification.id);
-                }}
-                aria-label="Mark as read";
-              >;
-                <Check className="h-3.5 w-3.5 text-green-400" />;
-              </Button>;
-            </TooltipTrigger>;
-            <TooltipContent>;
-              <p>Mark as read</p>;
-            </TooltipContent>;
-          </Tooltip>;
-        </TooltipProvider>;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
-              <Button;
-                variant="ghost";
-                size="icon";
-                className="h-6 w-6";
-                onClick={(e) => {;
-                  e.stopPropagation();
-                  onDismiss(notification.id);
-                }}
-                aria-label="Dismiss notification";
-              >;
-                <Trash2 className="h-3.5 w-3.5 text-red-400" />;
-              </Button>;
-            </TooltipTrigger>;
-            <TooltipContent>;
-              <p>Dismiss</p>;
-            </TooltipContent>;
-          </Tooltip>;
-        </TooltipProvider>;
-      </div>;
-    </div>;
-  );
-};
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

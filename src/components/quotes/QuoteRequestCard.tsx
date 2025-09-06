@@ -1,32 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
-=======
-import React from "react",
-import { format } from "date-fns",
-import { 
-  Card,
-  CardContent, 
-  CardHeader, 
-  CardTitle, 
-  CardDescription
-} from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes",
-type QuoteRequestCardProps = {
-  quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: string, isArchived: boolean) => void
-},
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -45,19 +17,6 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
-<<<<<<< HEAD
-  quote
-  onViewDetails
-<<<<<<< HEAD
-  onMarkAsResponded
-=======
-  quote,
-  onViewDetails,
-=======
-=======
-  quote,
-  onViewDetails,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onMarkAsResponded,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -70,13 +29,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
-<<<<<<< HEAD
-  }
-=======
-  },
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -98,14 +50,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <span className="text-white font-medium">From: </span>
           {quote.requester_name}
         </div>
-<<<<<<< HEAD
-        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
-=======
-        
-        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -113,11 +57,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -131,11 +70,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             <Eye className="h-4 w-4" />
             View Details
           </Button>
-<<<<<<< HEAD
-=======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -151,10 +85,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 Mark Responded
               </Button>
             )}
-<<<<<<< HEAD
-=======
-            
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <Button
               variant="ghost"
               size="sm"
@@ -165,25 +95,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
-<<<<<<< HEAD
-              )}
-            </Button>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-<<<<<<< HEAD
-  )
-}
-"}
-}
-
-=======
-  );
-};
-"};
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { format } from "date-fns",;
@@ -282,8 +193,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,19 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Function to fix common syntax errors in test files
 function fixTestFile(filePath) {
   try {
@@ -60,14 +46,10 @@ files.forEach(file => {
   }
 });
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
 >>>>>>> origin/main
@@ -110,127 +92,9 @@ describe('${componentName}', () => {}
     // Add styling tests here;
   }
 });
-<<<<<<< HEAD
-}
-});
-`;`
-      fs.writeFileSync(filePath, fixedContent);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error fixing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Function to remove unused fireEvent imports;
-function removeUnusedFireEvent(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Check if fireEvent is imported but not used;
-    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
-      console.log(`Removing unused fireEvent from: ${filePath}`);
-      // Remove fireEvent from import statement;
-      content = content.replace(/, fireEvent/g, '');
-      content = content.replace(/fireEvent, /g, '');
-      content = content.replace(/fireEvent/g, '');
-      fs.writeFileSync(filePath, content);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error processing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Get all test files;
-const testDir = path.join(__dirname, '__tests__');
-const files = fs.readdirSync(testDir);
-let fixedCount = 0;
-let fireEventCount = 0;
-files.forEach(file => {})
-  if (file.endsWith('.test.js')) {}
-    const filePath = path.join(testDir, file);
-    // Fix malformed files;
-    if (fixTestFile(filePath)) {}
-      fixedCount++;
-    };
-    // Remove unused fireEvent;
-    if (removeUnusedFireEvent(filePath)) {}
-      fireEventCount++;
-    };
-  };
-}
-});
-console.log(`Fixed ${fixedCount} malformed test files`);
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-=======
-}
-});
-`;`
-      fs.writeFileSync(filePath, fixedContent);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error fixing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Function to remove unused fireEvent imports;
-function removeUnusedFireEvent(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Check if fireEvent is imported but not used;
-    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
-      console.log(`Removing unused fireEvent from: ${filePath}`);
-      // Remove fireEvent from import statement;
-      content = content.replace(/, fireEvent/g, '');
-      content = content.replace(/fireEvent, /g, '');
-      content = content.replace(/fireEvent/g, '');
-      fs.writeFileSync(filePath, content);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error processing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Get all test files;
-const testDir = path.join(__dirname, '__tests__');
-const files = fs.readdirSync(testDir);
-let fixedCount = 0;
-let fireEventCount = 0;
-files.forEach(file => {})
-  if (file.endsWith('.test.js')) {}
-    const filePath = path.join(testDir, file);
-    // Fix malformed files;
-    if (fixTestFile(filePath)) {}
-      fixedCount++;
-    };
-    // Remove unused fireEvent;
-    if (removeUnusedFireEvent(filePath)) {}
-      fireEventCount++;
-    };
-  };
-}
-});
-console.log(`Fixed ${fixedCount} malformed test files`);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-<<<<<<< HEAD
-=======
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
 =======

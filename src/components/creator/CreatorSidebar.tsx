@@ -1,24 +1,4 @@
 
-<<<<<<< HEAD
-import {
-<<<<<<< HEAD
-
-  Bell
-  FileText
-  Home
-  Mail
-  Search
-  Settings
-  Users
-=======
-  Bell,
-  FileText,
-  Home,
-  Mail,
-  Search,
-  Settings,;
-  Users;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react'; import {
   Sidebar
   SidebarContent
@@ -94,13 +74,6 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
-    </Sidebar>
-  )
-}
-=======
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
     </Sidebar>;
   );

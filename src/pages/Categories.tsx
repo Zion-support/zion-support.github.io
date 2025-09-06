@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import useSWR from 'swr',
-import { CategoryCard } from "@/components/CategoryCard",
-<<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading";
-import { SkeletonCard  } from '@/components/ui';
-import ErrorBoundary from "@/components/GlobalErrorBoundary";
-=======
-import { GradientHeading } from "@/components/GradientHeading",
-import { SkeletonCard } from '@/components/ui',
-import ErrorBoundary from "@/components/GlobalErrorBoundary",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
@@ -19,11 +7,6 @@ interface CategoryType {
   name: string;
   slug: string;
   icon: string
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
       logErrorToProduction('Categories API error:', { data: response.statusText })
@@ -153,29 +136,6 @@ export default Categories""
   )}
 export: default Categories
 export default Categories," ]
-<<<<<<< HEAD
-export default Categories"")))))))))
-}
-=======
-=======
-export default Categories"")))))))));
-};
-=======
-import useSWR from 'swr',
-import { CategoryCard } from "@/components/CategoryCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SkeletonCard } from '@/components/ui',
-import ErrorBoundary from "@/components/GlobalErrorBoundary",
-import { Folder } from 'lucide-react'
-import { CATEGORIES } from '@/data/categories',
-import { NextSeo } from '@/components/NextSeo',
-import {logErrorToProduction} from '@/utils/productionLogger',
-interface CategoryType {
-  id: string,
-  name: string,
-  slug: string,
-  icon: string
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -275,8 +235,6 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

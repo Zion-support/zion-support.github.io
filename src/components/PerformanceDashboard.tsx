@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react'
 import {
   Card
@@ -254,8 +249,6 @@ const PerformanceDashboard: React.FC = () => {;
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -278,11 +271,6 @@ const PerformanceDashboard: React.FC = () => {;
             <p className="text-xs text-gray-500">Total build output</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -295,11 +283,6 @@ const PerformanceDashboard: React.FC = () => {;
             <p className="text-xs text-gray-500">Generated pages</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -312,11 +295,6 @@ const PerformanceDashboard: React.FC = () => {;
             <p className="text-xs text-gray-500">Average page load</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -344,22 +322,6 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-          <div className='space-y-4'>
-            {completedImprovements.map(improvement => (
-              <div
-                key={improvement.id}
-                className='flex items-start space-x-3 p-3 border rounded-lg'
-              >
-                <div className='flex-shrink-0 mt-1'>                  {getCategoryIcon(improvement.category)}
-=======
-          <div className="space-y-4">
-            {completedImprovements.map((improvement) => (
-              <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
-                <div className="flex-shrink-0 mt-1">
-                  {getCategoryIcon(improvement.category)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -376,99 +338,6 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
-                  <p className="text-sm text-gray-600 mt-1">
-  },;
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
-      case 'performance': return <Zap className="h-4 w-4" />,;
-      case 'security': return <Shield className="h-4 w-4" />,;
-      case 'ux': return <Search className="h-4 w-4" />,;
-      case 'build': return <TrendingUp className="h-4 w-4" />,;
-      default: return <CheckCircle className="h-4 w-4" />;
-    }
-  },;
-  const completedImprovements = improvements.filter(imp => imp.status === 'completed'),;
-  return (;
-    <div className="space-y-6 p-6">;
-      <div className="flex items-center justify-between">;
-        <h1 className="text-3xl font-bold text-gray-900">Performance Dashboard</h1>;
-        <Badge className="bg-green-100 text-green-800">;
-          {completedImprovements.length} Improvements Completed;
-        </Badge>;
-      </div>;
-      {/* Metrics Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
-        <Card>;
-          <CardHeader className="pb-2">;
-            <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="text-2xl font-bold">{metrics.buildSize}</div>;
-            <p className="text-xs text-gray-500">Total build output</p>;
-          </CardContent>;
-        </Card>;
-        <Card>;
-          <CardHeader className="pb-2">;
-            <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="text-2xl font-bold">{metrics.pageCount}</div>;
-            <p className="text-xs text-gray-500">Generated pages</p>;
-          </CardContent>;
-        </Card>;
-        <Card>;
-          <CardHeader className="pb-2">;
-            <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="text-2xl font-bold">{metrics.loadTime}s</div>;
-            <p className="text-xs text-gray-500">Average page load</p>;
-          </CardContent>;
-        </Card>;
-        <Card>;
-          <CardHeader className="pb-2">;
-            <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="flex items-center space-x-2">;
-              <CheckCircle className="h-5 w-5 text-green-500" />;
-              <span className="text-sm font-semibold text-green-600">Healthy</span>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-      {/* Completed Improvements */}
-      <Card>
-        <CardHeader>
-          <CardTitle className='flex items-center space-x-2'>
-            <CheckCircle className='h-5 w-5 text-green-500' />
-            <span>Completed Improvements</span>
-          </CardTitle>
-          <CardDescription>
-            Recent performance and functionality improvements that have been
-            implemented
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-
-                  {getCategoryIcon(improvement.category)}
-                </div>
-                <div className='flex-1 min-w-0'>
-                  <div className='flex items-center justify-between'>
-                    <h3 className='text-sm font-medium text-gray-900'>
-                      {improvement.title}
-                    </h3>
-                    <div className='flex items-center space-x-2'>
-                      <Badge className={getImpactColor(improvement.impact)}>
-                        {improvement.impact} impact
-                      </Badge>
-                      {getStatusIcon(improvement.status)}
-                    </div>
-                  </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -482,19 +351,6 @@ const PerformanceDashboard: React.FC = () => {;
         </CardContent>
       </Card>
       {/* Action Buttons */}
-<<<<<<< HEAD
-      <div className='flex space-x-4'>
-        <Button
-          onClick={() => window.open('/api/health/environment', '_blank')}
-          variant='outline'
-        >
-          <Shield className='h-4 w-4 mr-2' />
-=======
-      <div className="flex space-x-4">
-        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
-          <Shield className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -507,19 +363,6 @@ const PerformanceDashboard: React.FC = () => {;
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-export default PerformanceDashboard
-export default PerformanceDashboard
-export default PerformanceDashboard
-
-=======
-export default PerformanceDashboard;
-export default PerformanceDashboard, ;
-export default PerformanceDashboard;
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 },
 
@@ -538,8 +381,6 @@ export default PerformanceDashboard,
   );
 },;
 export default PerformanceDashboard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

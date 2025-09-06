@@ -15,95 +15,39 @@ const Services: React.FC = () => {
             and drive innovation across all sectors.
           </p>
         </div>
-<<<<<<< HEAD
 
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
+          <Card
             title="AI & Machine Learning"
-            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
-            icon="🤖"
+            description="Cutting-edge AI solutions to automate processes, gain insights, and drive intelligent decision-making."
           />
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
-            icon="🔒"
-          />
-          <ServiceCard
+          <Card
             title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
-            icon="☁️"
+            description="Scalable cloud solutions that grow with your business and ensure maximum uptime and security."
           />
-          <ServiceCard
+          <Card
+            title="Cybersecurity"
+            description="Comprehensive security solutions to protect your data, systems, and digital assets from threats."
+          />
+          <Card
             title="Digital Transformation"
-            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
-            icon="🚀"
+            description="End-to-end digital transformation services to modernize your business processes and operations."
           />
-          <ServiceCard
+          <Card
+            title="Custom Development"
+            description="Bespoke software development solutions designed specifically for your unique requirements."
+          />
+          <Card
             title="Data Analytics"
-            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
-            icon="📊"
-          />
-          <ServiceCard
-            title="IoT Solutions"
-            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
-            icon="🌐"
+            description="Advanced analytics and business intelligence solutions to unlock insights from your data."
           />
         </div>
 
-        {/* Service Categories */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
-=======
-      </div>
-      {/* Services Grid */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card
-              title="Consulting Services"
-              description="Strategic technology consulting to help you make informed decisions about your digital future."
-            />
-            <Card
-              title="Implementation"
-              description="End-to-end implementation of technology solutions tailored to your specific business needs."
-            />
-            <Card
-              title="Support & Maintenance"
-              description="Ongoing support and maintenance to ensure your systems run smoothly and efficiently."
-            />
-            <Card
-              title="Training & Education"
-              description="Comprehensive training programs to help your team master new technologies and processes."
-            />
-            <Card
-              title="Custom Development"
-              description="Bespoke software development solutions designed specifically for your unique requirements."
-            />
-            <Card
-              title="Integration Services"
-              description="Seamless integration of new technologies with your existing systems and workflows."
-            />
-          </div>
-        </div>
-<<<<<<< HEAD
-
-        {/* Industry Solutions */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-=======
-      </div>
-      {/* Process Section */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
-            <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Industry Focus */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold mb-8">Industries We Serve</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏥</span>
@@ -140,30 +84,34 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold">Government</h3>
             </div>
-<<<<<<< HEAD
-=======
           </div>
         </div>
-      </div>
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
-            >
-              Get Free Consultation
-            </Link>
-            <Link 
-              to="/pricing" 
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
-            >
-              View Pricing
-            </Link>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+        {/* Why Choose Us */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-8">Why Choose Zion Tech Group?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
+              <p className="text-gray-300">Rapid development and deployment of solutions to meet your timeline.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Secure & Reliable</h3>
+              <p className="text-gray-300">Enterprise-grade security and reliability in all our solutions.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
+              <p className="text-gray-300">Experienced professionals with deep expertise in cutting-edge technologies.</p>
+            </div>
           </div>
         </div>
       </div>

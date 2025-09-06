@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { type Company } from "./CompanyDashboard";
-=======
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { type Company } from './CompanyDashboard'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Bell, Users, Settings } from 'lucide-react'
 interface WorkspaceHeaderProps {
   company: Company
@@ -25,8 +14,6 @@ interface WorkspaceHeaderProps {
   company: Company
 }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -37,12 +24,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
             <img
-<<<<<<< HEAD
-<<<<<<< HEAD
-              src={company.logoUrl |'/placeholder.svg'}
-=======
-              src={company.logoUrl || '/placeholder.svg'}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               alt={company.name}
               className='max-h-10 max-w-10'
               loading='lazy'            />
@@ -82,8 +63,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             />
           </div>
           <div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 =======
               src={company.logoUrl || "/placeholder.svg"}
@@ -101,52 +80,12 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className='flex items-center gap-2'>
-          <Button variant='outline' size='icon' aria-label='Notifications'>
-            <Bell className='h-4 w-4' />
-          </Button>
-          <Button variant='outline' size='icon' aria-label='Team members'>
-            <Users className='h-4 w-4' />
-          </Button>
-          <Button variant='outline' size='icon' aria-label='Workspace settings'>
-            <Settings className='h-4 w-4' />
-          </Button>
-<<<<<<< HEAD
-        </div>
-      </div>
-      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
-        <div className='bg-card rounded-lg p-4 border border-border'>
-          <div className='text-sm text-muted-foreground'>
-            Active Job Listings
-          </div>
-          <div className='text-2xl font-medium'>8</div>
-        </div>
-        <div className='bg-card rounded-lg p-4 border border-border'>
-          <div className='text-sm text-muted-foreground'>
-            Candidate Applications
-          </div>
-          <div className='text-2xl font-medium'>47</div>
-        </div>
-        <div className='bg-card rounded-lg p-4 border border-border'>
-          <div className='text-sm text-muted-foreground'>
-            Interviews Scheduled
-          </div>
-          <div className='text-2xl font-medium'>12</div>        </div>
-      </div>
-    </div>
-  )
-}          </Button>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
             <Bell className="h-4 w-4" />
           </Button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button variant="outline" size="icon" aria-label="Team members">
@@ -157,10 +96,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
@@ -197,36 +132,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}          </Button>
-          <Button variant="outline" size="icon" aria-label="Team members">
-            <Users className="h-4 w-4" />
-          </Button>
-          <Button variant="outline" size="icon" aria-label="Workspace settings">
-            <Settings className="h-4 w-4" />
-          </Button>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
-        <div className="bg-card rounded-lg p-4 border border-border">
-          <div className="text-sm text-muted-foreground">Active Job Listings</div>
-          <div className="text-2xl font-medium">8</div>
-        </div>
-        <div className="bg-card rounded-lg p-4 border border-border">
-          <div className="text-sm text-muted-foreground">Candidate Applications</div>
-          <div className="text-2xl font-medium">47</div>
-        </div>
-        <div className="bg-card rounded-lg p-4 border border-border">
-          <div className="text-sm text-muted-foreground">Interviews Scheduled</div>
-          <div className="text-2xl font-medium">12</div>
-        </div>
-      </div>
-    </div>;
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
 import React from "react",;
@@ -287,8 +192,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

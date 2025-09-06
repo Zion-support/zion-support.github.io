@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
-=======
-import { useRouter } from 'next/router';
-import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import ProductCard from '@/components/ProductCard';
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
@@ -13,21 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AuthModal } from '@/components/auth/AuthModal';
 import {
-<<<<<<< HEAD
-  ArrowUp
-  Filter
-  SortAsc
-  Sparkles
-  TrendingUp
-  Star
-=======
-  ArrowUp,
-  Filter,
-  SortAsc,
-  Sparkles,
-  TrendingUp,;
-  Star;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
@@ -105,8 +82,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <div className="text-center">
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -124,18 +99,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           <div className="text-sm text-muted-foreground">Categories</div>
         </div>
       </div>
-<<<<<<< HEAD
-    </CardContent>
-  </Card>
-<<<<<<< HEAD
-);
-=======
-<<<<<<< HEAD
-    </CardContent>;
-  </Card>;
-);
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Filter and sort controls
 const FilterControls: React.FC<{
   sortBy: string;
@@ -158,115 +121,6 @@ const FilterControls: React.FC<{
   showRecommended: boolean;
   setShowRecommended: (show: boolean) => void;
   loading: boolean;}> = ({
-<<<<<<< HEAD
-  sortBy
-  setSortBy
-  filterCategory
-  setFilterCategory
-  categories
-  priceRange
-  setPriceRange
-  minAiScore
-  setMinAiScore
-  minRating
-  setMinRating
-  filterAvailability
-  setFilterAvailability
-  availabilityOptions
-  filterLocation
-  setFilterLocation
-  locations
-  showRecommended
-  setShowRecommended
-  loading
-}) => (
-  <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
-    {loading && (
-      <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />
-    )}
-    <div className='flex items-center gap-2'>
-      <Filter className='h-4 w-4 text-muted-foreground' />
-      <select
-        value={filterCategory}
-        onChange={e => setFilterCategory(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value=''>All Categories</option>
-        {categories.map(category => (
-          <option key={category} value={category}>
-            {category}
-          </option>
-        ))}
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <SortAsc className='h-4 w-4 text-muted-foreground' />
-      <select
-        value={sortBy}
-        onChange={e => setSortBy(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value='newest'>Newest First</option>
-        <option value='price-low'>Price: Low to High</option>
-        <option value='price-high'>Price: High to Low</option>
-        <option value='rating'>Highest Rated</option>
-        <option value='popular'>Most Popular</option>
-        <option value='ai-score'>AI Score</option>
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>$</span>
-      <input
-        type='number'
-        value={priceRange[0]}
-        min={MIN_PRICE}
-        max={priceRange[1]}
-        onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'
-      />
-      <span>-</span>
-      <input
-        type='number'
-        value={priceRange[1]}
-        min={priceRange[0]}
-        max={MAX_PRICE}
-        onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>AI ≥</span>
-      <input
-        type='number'
-        value={minAiScore}
-        min={0}
-        max={100}
-        onChange={e => setMinAiScore(Number(e.target.value))}
-        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>Rating ≥</span>
-      <select
-        value={minRating}
-        onChange={e => setMinRating(Number(e.target.value))}
-        className='bg-background border border-border px-2 py-1 rounded'      >
-        <option value={0}>Any</option>
-        <option value={5}>5</option>
-        <option value={4}>4</option>
-        <option value={3}>3</option>
-        <option value={2}>2</option>
-        <option value={1}>1</option>
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <select
-        value={filterAvailability}
-        onChange={e => setFilterAvailability(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value=''>Any Availability</option>
-=======
-=======
-=======
-    </CardContent>
-  </Card>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ),
 
 // Filter and sort controls
@@ -292,9 +146,6 @@ const FilterControls: React.FC<{
   setShowRecommended: (show: boolean) => void,
   loading: boolean
 }> = ({
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   sortBy,
   setSortBy,
@@ -315,94 +166,6 @@ const FilterControls: React.FC<{
   locations,
   showRecommended,
   setShowRecommended,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  loading,
-}) => (
-  <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
-    {loading && (
-      <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />
-    )}
-    <div className='flex items-center gap-2'>
-      <Filter className='h-4 w-4 text-muted-foreground' />
-      <select
-        value={filterCategory}
-        onChange={e => setFilterCategory(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value=''>All Categories</option>
-        {categories.map(category => (
-          <option key={category} value={category}>
-            {category}
-          </option>
-        ))}
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <SortAsc className='h-4 w-4 text-muted-foreground' />
-      <select
-        value={sortBy}
-        onChange={e => setSortBy(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value='newest'>Newest First</option>
-        <option value='price-low'>Price: Low to High</option>
-        <option value='price-high'>Price: High to Low</option>
-        <option value='rating'>Highest Rated</option>
-        <option value='popular'>Most Popular</option>
-        <option value='ai-score'>AI Score</option>
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>$</span>
-      <input
-        type='number'
-        value={priceRange[0]}
-        min={MIN_PRICE}
-        max={priceRange[1]}
-        onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'
-      />
-      <span>-</span>
-      <input
-        type='number'
-        value={priceRange[1]}
-        min={priceRange[0]}
-        max={MAX_PRICE}
-        onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>AI ≥</span>
-      <input
-        type='number'
-        value={minAiScore}
-        min={0}
-        max={100}
-        onChange={e => setMinAiScore(Number(e.target.value))}
-        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>Rating ≥</span>
-      <select
-        value={minRating}
-        onChange={e => setMinRating(Number(e.target.value))}
-        className='bg-background border border-border px-2 py-1 rounded'      >
-        <option value={0}>Any</option>
-        <option value={5}>5</option>
-        <option value={4}>4</option>
-        <option value={3}>3</option>
-        <option value={2}>2</option>
-        <option value={1}>1</option>
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <select
-        value={filterAvailability}
-        onChange={e => setFilterAvailability(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value=''>Any Availability</option>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -490,8 +253,6 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">Any Availability</option>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -500,24 +261,6 @@ const FilterControls: React.FC<{
         ))}
       </select>
     </div>
-<<<<<<< HEAD
-    <div className='flex items-center gap-2'>
-      <select
-        value={filterLocation}
-        onChange={e => setFilterLocation(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value=''>All Locations</option>
-=======
-
-    <div className="flex items-center gap-2">
-      <select
-        value={filterLocation}
-        onChange={(e) => setFilterLocation(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">All Locations</option>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -527,19 +270,6 @@ const FilterControls: React.FC<{
       </select>
     </div>
     <Button
-<<<<<<< HEAD
-      variant={showRecommended ? 'default' : 'outline'}
-      size='sm'
-      onClick={() => setShowRecommended(!showRecommended)}
-      className='flex items-center gap-2'    >
-      <Sparkles className='h-4 w-4' />
-      {showRecommended ? 'All Products' : 'Recommended'}
-<<<<<<< HEAD
-    </Button>
-  </div>
-);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       variant={showRecommended ? "default" : "outline"}
       size="sm"
@@ -548,9 +278,6 @@ const FilterControls: React.FC<{
     >
       <Sparkles className="h-4 w-4" />
       {showRecommended ? "All Products" : "Recommended"}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </Button>
   </div>
@@ -562,46 +289,6 @@ const FilterControls: React.FC<{
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
-<<<<<<< HEAD
-export default function Marketplace() {;
-  const router = useRouter();
-  const { t } = useTranslation();
-  const { toast } = useToast();
-  const { isAuthenticated, user } = useAuth();
-  const firstRenderRef = useRef(true);
-  const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-=======
-export default function Marketplace() {
-<<<<<<< HEAD
-  const router = useRouter();
-  const { t } = useTranslation();
-  const { toast } = useToast();
-  const { isAuthenticated, user } = useAuth();
-  const firstRenderRef = useRef(true);
-  const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
-  const [priceRange, setPriceRange] = useState<[number, number]>([
-    MIN_PRICE
-    MAX_PRICE
-  ]);
-  const [minAiScore, setMinAiScore] = useState(0);
-  const [minRating, setMinRating] = useState(0);
-  const [filterAvailability, setFilterAvailability] = useState('');
-  const [filterLocation, setFilterLocation] = useState('');
-  const { handleApiError, retryQuery } = useApiErrorHandling();
-=======
-  const router = useRouter(),
-  const { t } = useTranslation(),
-  const { toast } = useToast(),
-  const { isAuthenticated, user } = useAuth(),
-  const firstRenderRef = useRef(true),
-  const isRefreshingAfterFilterChange = useRef(false), // New ref to track refresh state
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const [sortBy, setSortBy] = useState('newest'),
   const [filterCategory, setFilterCategory] = useState(''),
@@ -623,12 +310,6 @@ export default function Marketplace() {
     // Check if user has permission to add products (simplified to admin check)
     if (user && user.userType !== 'admin') {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title: 'Admin Access Required'
-=======
-        title: 'Admin Access Required',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         description:
           'Only administrators can add products to the marketplace. Please contact an administrator.'
         variant: 'destructive'
@@ -1112,9 +793,6 @@ export default function Marketplace() {;
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1125,146 +803,6 @@ export default function Marketplace() {;
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          className='text-center mb-8'
-        >
-          <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-            {t('marketplace.hero_title')}
-          </h1>
-          <p className='text-muted-foreground text-lg'>
-            {t('marketplace.hero_subtitle')}
-          </p>
-        </motion.div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-          {Array.from({ length: 12 }).map((_, i) => (            <SkeletonCard key={i} />
-          ))}
-        </div>
-      </div>
-    );
-  }
-  // Error state with retry
-  if (error && products.length === 0) {
-    return (
-      <div className='container py-8'>
-        <div className='text-center space-y-4'>
-          <ErrorState error={error} />
-          <Button onClick={refresh}>Try Again</Button>
-        </div>
-      </div>
-    );
-  }
-  // Empty state (only show when not loading and no products)
-  if (!loading && products.length === 0 && !error) {
-    return (
-      <div className='container py-8'>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className='text-center mb-8'
-        >
-          <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-            {t('marketplace.hero_title')}
-          </h1>
-          <p className='text-muted-foreground text-lg'>
-            {t('marketplace.hero_subtitle')}
-          </p>
-        </motion.div>
-        <ProductsEmptyState />
-      </div>
-    );
-  }
-  // Main marketplace render
-  return (
-    <div className='container py-8'>
-      <AuthModal
-        isOpen = {isAuthModalOpen,}
-        onClose = {(,) => setIsAuthModalOpen(false),}
-        returnUrl={router.asPath} // Pass current path for better UX on return;
-      />
-      {/* Header */}
-      <motion.div
-        className='text-center mb-8'
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-          {t('marketplace.hero_title')}
-        </h1>
-        <p className='text-muted-foreground text-lg'>
-=======
-          className="text-center mb-8";
-        >;
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
-            {t('marketplace.hero_title')}
-          </h1>;
-          <p className="text-muted-foreground text-lg">;
-            {t('marketplace.hero_subtitle')}
-          </p>;
-        </motion.div>;
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
-          {Array.from({ length: 12 }).map((_, i) => (;
-            <SkeletonCard key={i} />;
-          ))}
-        </div>;
-      </div>;
-    );
-  }
-;
-  // Error state with retry;
-  if (error && products.length === 0) {;
-    return (;
-      <div className="container py-8">;
-        <div className="text-center space-y-4">;
-          <ErrorState error={error} />;
-          <Button onClick={refresh}>;
-            Try Again;
-          </Button>;
-        </div>;
-      </div>;
-    );
-  }
-;
-  // Empty state (only show when not loading and no products);
-  if (!loading && products.length === 0 && !error) {;
-    return (;
-      <div className="container py-8">;
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8";
-        >;
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
-            {t('marketplace.hero_title')}
-          </h1>;
-          <p className="text-muted-foreground text-lg">;
-            {t('marketplace.hero_subtitle')}
-          </p>;
-        </motion.div>;
-        <ProductsEmptyState />;
-      </div>;
-    );
-  }
-;
-  // Main marketplace render;
-  return (;
-    <div className="container py-8">;
-      <AuthModal;
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-        returnUrl={router.asPath} // Pass current path for better UX on return;
-      />;
-      {/* Header */}
-      <motion.div;
-        className="text-center mb-8";
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >;
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
-          {t('marketplace.hero_title')}
-        </h1>;
-        <p className="text-muted-foreground text-lg">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1286,58 +824,6 @@ export default function Marketplace() {;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-<<<<<<< HEAD
-      >
-        <FilterControls
-          sortBy = {sortBy,}
-          setSortBy = {setSortBy,}
-          filterCategory = {filterCategory,}
-          setFilterCategory = {setFilterCategory,}
-          categories = {categories,}
-          priceRange = {priceRange,}
-          setPriceRange = {setPriceRange,}
-          minAiScore = {minAiScore,}
-          setMinAiScore = {setMinAiScore,}
-          minRating = {minRating,}
-          setMinRating = {setMinRating,}
-          filterAvailability = {filterAvailability,}
-          setFilterAvailability = {setFilterAvailability,}
-          availabilityOptions = {availabilityOptions.filter(Boolean) as string[],}
-          filterLocation = {filterLocation,}
-          setFilterLocation = {setFilterLocation,}
-          locations = {locations,}
-          showRecommended = {showRecommended,}
-          setShowRecommended = {setShowRecommended,}
-          loading = {isFetching,}
-        />
-      </motion.div>
-=======
-      >;
-        <FilterControls;
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          categories={categories}
-          priceRange={priceRange}
-          setPriceRange={setPriceRange}
-          minAiScore={minAiScore}
-          setMinAiScore={setMinAiScore}
-          minRating={minRating}
-          setMinRating={setMinRating}
-          filterAvailability={filterAvailability}
-          setFilterAvailability={setFilterAvailability}
-          availabilityOptions={availabilityOptions.filter(Boolean) as string[]}
-          filterLocation={filterLocation}
-          setFilterLocation={setFilterLocation}
-          locations={locations}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
-        />;
-      </motion.div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1348,19 +834,6 @@ export default function Marketplace() {;
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-<<<<<<< HEAD
-        <AnimatePresence mode='popLayout'>
-          {products.map((product, index) => (            <motion.div
-              key = {product.id,}
-              ref = {index === products.length - 1 ? lastElementRef : null,}
-=======
-        <AnimatePresence mode="popLayout">
-          {products.map((product, index) => (
-            <motion.div
-              key={product.id}
-              ref={index === products.length - 1 ? lastElementRef : null}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1369,12 +842,6 @@ export default function Marketplace() {;
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
-<<<<<<< HEAD
-              className='relative group'
-=======
-              className="relative group"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1394,15 +861,6 @@ export default function Marketplace() {;
                   reviewCount: product.reviewCount |0
                   created_at: product.createdAt
                   updated_at: product.createdAt, // Use createdAt for both
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  stock: product.stock
-                  in_stock: (product.stock |0) > 0
-=======
-                  stock: product.stock,
-<<<<<<< HEAD
-                  in_stock: (product.stock || 0) > 0,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }}
                 onBuy = {async () => {
                   if (!isAuthenticated) {
@@ -1410,34 +868,6 @@ export default function Marketplace() {;
                     return; // Stop further execution
                   }                  try {
                     await router.push(`/checkout/${product.id}`);
-<<<<<<< HEAD
-                  } catch (error) {
-                    logErrorToProduction('Failed to navigate to checkout:', {
-                      data: error
-                    });
-                    toast({
-                      title: 'Navigation Error'
-                      description:
-                        'Could not navigate to checkout. Please try again.'
-                      variant: 'destructive'
-                    });
-                    // Re-throw to allow ProductCard's catch to also run if needed
-
-                    // though ProductCard will reset its state in .finally() regardless.
-                    throw error;
-                  }
-                }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
-              />
-              {/* AI Score Badge */}
-              {product.aiScore && product.aiScore > 90 && (
-                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
-                  <Sparkles className='h-3 w-3 mr-1' />
-=======
-                  stock: product.stock,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   in_stock: (product.stock || 0) > 0
                 }}
                 onBuy={async () => {;
@@ -1447,9 +877,6 @@ export default function Marketplace() {;
                   }
                   try {
                     await router.push(`/checkout/${product.id}`)
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
@@ -1459,21 +886,6 @@ export default function Marketplace() {;
                       variant: "destructive"}),
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                    throw error;
-                  }
-                }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
-              />
-
-              {/* AI Score Badge */}
-              {product.aiScore && product.aiScore > 90 && (
-                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
-                  <Sparkles className='h-3 w-3 mr-1' />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     throw error
                   try {;
                     await router.push(`/checkout/${product.id}`);
@@ -1494,19 +906,12 @@ export default function Marketplace() {;
               {product.aiScore && product.aiScore > 90 && (;
                 <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">;
                   <Sparkles className="h-3 w-3 mr-1" />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   AI {product.aiScore}
                 </Badge>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Featured Badge */}
               {product.featured && (
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>
@@ -1521,8 +926,6 @@ export default function Marketplace() {;
                   <Star className="h-3 w-3 mr-1" />;
                   Featured;
                 </Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1532,12 +935,6 @@ export default function Marketplace() {;
         </AnimatePresence>
       </motion.div>
       {/* Loading More Indicator */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {(isFetching |loading) && (
-=======
-      {(isFetching || loading) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='mt-8'
           initial={{ opacity: 0 }}
@@ -1555,8 +952,6 @@ export default function Marketplace() {;
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
             {Array.from({ length: 4 }).map((_, i) => (;
               <SkeletonCard key={`loading-${i}`} />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1565,56 +960,11 @@ export default function Marketplace() {;
         </motion.div>
       )}
       {/* End of Results */}
-<<<<<<< HEAD
-      {!hasMore && products.length > 0 && (
-        <motion.div
-          className='text-center mt-12 py-8 border-t'
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <div className='text-muted-foreground text-lg mb-2'>
-            🎉 You've explored all available products!
-          </div>
-          <div className='text-sm text-muted-foreground'>
-            Showing {products.length} AI-powered solutions
-          </div>
-        </motion.div>
-=======
-      {!hasMore && products.length > 0 && (;
-        <motion.div;
-          className="text-center mt-12 py-8 border-t";
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >;
-          <div className="text-muted-foreground text-lg mb-2">;
-            🎉 You've explored all available products!;
-          </div>;
-          <div className="text-sm text-muted-foreground">;
-            Showing {products.length} AI-powered solutions;
-          </div>;
-        </motion.div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
       {/* Scroll to Top Button */}
-<<<<<<< HEAD
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-            onClick={scrollToTop}
-            className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={{ opacity: 0, scale: 0 }}
-=======
-      <AnimatePresence>;
-        {showScrollTop && (;
-          <motion.button;
-            onClick={scrollToTop}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
-            initial={{ opacity: 0, scale: 0 }}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1622,236 +972,6 @@ export default function Marketplace() {;
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-<<<<<<< HEAD
-          >
-            <ArrowUp className='h-5 w-5 text-primary-foreground' />
-          </motion.button>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}//Navigate to admin products page router.push ('/admin/products') ;
-}, [isAuthenticated, user, router, toast]);
-//Fetch function for infinite scroll with AI product generation try {//Use static marketplace listings data for now (compatible with ProductListing type) const params = {;
-  page,  limit, ... (filterCategory && {;
-  category: filterCategory ;
-});
-sort: sortBy ;
-};';
-//Use static data that's already of type ProductListing[] let items: ProductListing[] = [...MARKETPLACE LISTINGS];
-//Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation |location.includes (filterLocation.toLowerCase () ) ) && (!filterAvailability |availability === filterAvailability.toLowerCase () ) items.sort ( (a, b) => {switch (sortBy) {';
-  case 'price-low': return (a.price |0) - (b.price |0);';
-case 'price-high': return (b.price |0) - (a.price |0);';
-case 'rating': return (b.rating |0) - (a.rating |0);';
-case 'popular': return (b.reviewCount |0) - (a.reviewCount |0);';
-case 'ai-score': return (b.aiScore |0) - (a.aiScore |0);';
-case 'newest': ;
-}else {handleApiError (err), //This might show a toast or log to Sentry ;
-}, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
-//useInfiniteScrollPagination hook ;
-}, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial= {{;
-  opacity: 0, y: 20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}";
-}className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
-  t ('marketplace.hero title') ";
-}</h1> <p className="text-muted-foreground text-lg"> {';
-  t ('marketplace.hero subtitle') ";
-}</p> </motion.div> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
-  length: 12 ;
-}) .map ( (, i) => (<SkeletonCard key= {i ;
-}/>) ) ;
-}</div> </div>) ;
-}//Error state with retry if (error && products.length === 0) {";
-  return (<div className="container py-8"> <div className="text-center space-y-4"> <ErrorState error= {error ;
-}/> <Button onClick={refresh ;
-}> Try Again </Button> </div> </div>) ;
-}//Empty state (only show when not loading and no products) if (!loading && products.length === 0 && !error) {";
-  return (<div className="container py-8"> <motion.div initial= {{;
-  opacity: 0, y: 20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}";
-}className="text-center mb-8"> <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
-  t ('marketplace.hero title') ";
-}</h1> <p className="text-muted-foreground text-lg"> {';
-  t ('marketplace.hero subtitle') ;
-}</p> </motion.div> <ProductsEmptyState /> </div>) ";
-}//Main marketplace render return (<div className="container py-8"> <AuthModal isOpen= {isAuthModalOpen ;
-}onClose= {() => setIsAuthModalOpen (false) ;
-}returnUrl= {router.asPath ;
-}//Pass current path for better UX on return /> {/* Header */ ";
-}<motion.div className="text-center mb-8"initial= {{;
-  opacity: 0, y: -20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}";
-}> <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {';
-  t ('marketplace.hero title') ";
-}</h1> <p className="text-muted-foreground text-lg"> {';
-  t ('marketplace.hero subtitle') ;
-}</p> </motion.div> {/* Market Insights */ ;
-}{marketStats && (<motion.div initial= {;
-  {;
-  opacity: 0, y: 20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}transition= {{;
-  delay: 0.2 ;
-}> <MarketInsights stats= {marketStats ;
-}/> </motion.div>) ;
-}{/* Filter Controls */ ;
-}<motion.div initial= {{;
-  opacity: 0, y: 20 ;
-}animate= {{;
-  opacity: 1, y: 0 ;
-}transition= {{;
-  delay: 0.3 ;
-}> <FilterControls sortBy= {sortBy ;
-}setSortBy= {setSortBy ;
-}filterCategory= {filterCategory ;
-}setFilterCategory= {setFilterCategory ;
-}categories= {categories ;
-}priceRange= {priceRange ;
-}setPriceRange= {setPriceRange ;
-}minAiScore= {minAiScore ;
-}setMinAiScore= {setMinAiScore ;
-}minRating= {minRating ;
-}setMinRating= {setMinRating ;
-}filterAvailability= {filterAvailability ;
-}setFilterAvailability= {setFilterAvailability ;
-}availabilityOptions= {availabilityOptions.filter (Boolean) as string[] ;
-}filterLocation= {filterLocation ;
-}setFilterLocation= {setFilterLocation ;
-}locations= {locations ;
-}showRecommended= {showRecommended ;
-}setShowRecommended= {setShowRecommended ;
-}loading= {isFetching ;
-}/> </motion.div> {/* Product Grid */ ;
-}<motion.div > <ProductCard product= {{';
-  id: product.id, name: product.title, title: product.title, description: product.description |'', price: product.price |0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating |0, reviewCount: product.reviewCount |0, created at: product.createdAt, updated at: product.createdAt,  //Use createdAt for both stock: product.stock, in stock: (product.stock |0) > 0 ;
-}onBuy= {async () => {;
-  if (!isAuthenticated) {;
-  //though ProductCard will reset its state in .finally () regardless. throw error ;
-}buyDisabled= {false ;
-}//Still false, ProductCard handles its own disabled state based on auth /> {/* AI Score Badge */ ;
-}{";
-  product.aiScore && product.aiScore > 90 && (<Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black"> <Sparkles className="h-3 w-3 mr-1"/> AI {product.aiScore ;
-}</Badge>) ;
-}{/* Featured Badge */ ;
-}{";
-  product.featured && (<Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10"> <Star className="h-3 w-3 mr-1"/> Featured </Badge>) ;
-}</motion.div>) ) ;
-}</AnimatePresence> </motion.div> {/* Loading More Indicator */ ;
-}{";
-  (isFetching |loading) && (<motion.div className="mt-8"initial= {{;
-  opacity: 0 ;
-}animate= {{;
-  opacity: 1 ;
-}";
-}> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
-  length: 4 ;
-}) .map ( (, i) => (<SkeletonCard key= {`loading-$ {;
-  i ;
-}` ;
-}/>) ) ;
-}</div> </motion.div>) ;
-}{/* End of Results */ ;
-}{";
-  !hasMore && products.length > 0 && (<motion.div className="text-center mt-12 py-8 border-t"initial= {{;
-  opacity: 0 ;
-}animate= {{;
-  opacity: 1 ;
-}'";
-}> <div className="text-muted-foreground text-lg mb-2"> 🎉 You've explored all available products! </div> <div className="text-sm text-muted-foreground"> Showing {products.length ;
-}AI-powered solutions </div> </motion.div>) ;
-}{/* Scroll to Top Button */ ;
-}<AnimatePresence> {showScrollTop && (<motion.button onClick={;
-  scrollToTop ";
-}className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"initial= {{;
-  opacity: 0, scale: 0 ;
-}animate= {{;
-  opacity: 1, scale: 1 ;
-}exit= {{;
-  opacity: 0, scale: 0 ;
-}whileHover= {{;
-  scale: 1.1 ;
-}whileTap= {{;
-  scale: 0.9 ;
-}";
-}> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
-}</AnimatePresence> </div>) ;
-}'"
-  )
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-const Marketplace = () => {return (;
-    <>;
-      <Head>;
-        <title>Marketplace - Zion Tech Group</title>;
-        <meta name="description" content="Professional Marketplace services"  />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-              Marketplace;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-12">;
-              Professional Marketplace services and solutions;
-            </p>;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Professional Solutions</li>;
-                  <li>• Expert Implementation</li>;
-                  <li>• 24/7 Support</li>;
-                  <li>• Custom Development</li>;
-                </ul>;
-              </div>;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Industry Expertise</li>;
-                  <li>• Proven Results</li>;
-                  <li>• Scalable Solutions</li>;
-                  <li>• Competitive Pricing</li>;
-                </ul>;
-              </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-                View Pricing;
-              </Link>;
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
-                Contact Us;
-              </Link>;
-            </div>;
-    </>;
-  );
-}
-<<<<<<< HEAD
-=======
-;
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
@@ -1862,8 +982,6 @@ const Marketplace = () => {return (;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

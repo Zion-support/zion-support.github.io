@@ -1,58 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import {
-  Accordion
-  AccordionContent
-  AccordionItem
-  AccordionTrigger
-} from '@/components/ui/accordion'
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
-import { format, parseISO } from 'date-fns'
-  MilestoneInput
-  GeneratedMilestone
-  useMilestoneGenerator
-} from '@/hooks/useMilestoneGenerator'
-import { Badge } from '@/components/ui/badge'
-
-interface AIMilestoneGeneratorProps {
-  scope: string;
-  startDate: string;
-  endDate: string | null;
-  projectType: string;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void;
-  onAddMilestone: (milestone: GeneratedMilestone) => void
-export function AIMilestoneGenerator({
-
-  scope
-  startDate
-  endDate
-  projectType
-  onAddMilestones
-  onAddMilestone
-}: AIMilestoneGeneratorProps) {
-  const {
-    generateMilestones
-    generatedMilestones
-    isGenerating
-    clearGeneratedMilestones
-  } = useMilestoneGenerator()
-  const [selectedMilestones, setSelectedMilestones] = useState<
-    Record<string, boolean>
-  >({})
-  const handleGenerateMilestones = async () => {
-<<<<<<< HEAD
-    if (!scope |!startDate |!projectType) {
-      return
-=======
-    if (!scope || !startDate || !projectType) {
-      return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     const input: MilestoneInput = {
       scope
@@ -93,10 +38,6 @@ export function AIMilestoneGenerator({
     }
   }
 =======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -172,8 +113,6 @@ export function AIMilestoneGenerator({;
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -185,21 +124,11 @@ export function AIMilestoneGenerator({;
           AI Milestone Generator
         </h3>
         <Button
-<<<<<<< HEAD
-          variant='outline'
-          onClick={handleGenerateMilestones}
-<<<<<<< HEAD
-          disabled={isGenerating |!scope |!startDate |!projectType}        >
-=======
-          disabled={isGenerating || !scope || !startDate || !projectType}        >
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -223,63 +152,6 @@ export function AIMilestoneGenerator({;
               <p className="text-sm text-muted-foreground">
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
-<<<<<<< HEAD
-              <Button
-                onClick={handleAddToProject}
-                disabled={!Object.values(selectedMilestones).some(Boolean)}              >
-                Add Selected to Project
-              </Button>
-            </div>
-            <Accordion type='multiple' className='w-full'>
-              {generatedMilestones.map((milestone, index) => (
-                <AccordionItem
-                  value={`item-${index}`}
-                  key={index}
-                  className='border p-2 rounded-md mb-2'
-                >
-                  <div className='flex items-center justify-between'>
-                    <div className='flex items-center flex-1'>                      <input
-                        type='checkbox'
-                        id={`milestone-${index}`}
-                        checked={selectedMilestones[index] |false}
-                        onChange={() => toggleMilestoneSelection(index)}
-                        className='mr-2 w-4 h-4 rounded text-primary'                      />
-                      <AccordionTrigger className='hover:no-underline flex-1 text-left'>
-                        <div className='flex items-center'>
-                          <span className='font-medium'>{milestone.title}</span>
-                          <Badge
-                            variant='secondary'
-                            className='ml-2 flex items-center'
-                          >
-                            <Sparkles className='w-3 h-3 mr-1' />
-=======
-              <Button 
-                onClick={handleAddToProject}
-                disabled={!Object.values(selectedMilestones).some(Boolean)}
-              >
-                Add Selected to Project
-              </Button>
-            </div>
-
-            <Accordion type="multiple" className="w-full">
-              {generatedMilestones.map((milestone, index) => (
-                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center flex-1">
-                      <input
-                        type="checkbox"
-                        id={`milestone-${index}`}
-                        checked={selectedMilestones[index] || false}
-                        onChange={() => toggleMilestoneSelection(index)}
-                        className="mr-2 w-4 h-4 rounded text-primary"
-                      />
-                      <AccordionTrigger className="hover:no-underline flex-1 text-left">
-                        <div className="flex items-center">
-                          <span className="font-medium">{milestone.title}</span>
-                          <Badge variant="secondary" className="ml-2 flex items-center">
-                            <Sparkles className="w-3 h-3 mr-1" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -289,17 +161,6 @@ export function AIMilestoneGenerator({;
                       </AccordionTrigger>
                     </div>
                     <Button
-<<<<<<< HEAD
-                      variant='ghost'
-                      size='sm'
-                      onClick={e => {
-                        e.stopPropagation()
-                        handleAddSingleMilestone(milestone) }}
-                      className='mr-2'
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                       variant="ghost"
                       size="sm"
@@ -308,8 +169,6 @@ export function AIMilestoneGenerator({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -331,33 +190,10 @@ export function AIMilestoneGenerator({;
                   </AccordionContent>
                 </AccordionItem>
               ))}
-<<<<<<< HEAD
-            </Accordion>
-          </CardContent>
-        </Card>
-      )};
-    </div>;
-  );
-};
-=======
-            </Accordion>;
-          </CardContent>;
-        </Card>;
-      )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
