@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
@@ -38,3 +40,4 @@ import _React from 'react';'''; import { cn } from '../../lib/utils'; const Prog
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

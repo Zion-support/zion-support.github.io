@@ -9,6 +9,8 @@ import {useWebhooks, WebhookEventType} from "@/hooks/useWebhooks";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {toast} from "sonner";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function WebhookManager() {;
   const { ;
@@ -20,6 +22,7 @@ export function WebhookManager() {
     webhooks;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -36,9 +39,12 @@ export function WebhookManager() {
 
     loading
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     error;
     testResult;
@@ -46,6 +52,8 @@ export function WebhookManager() {
     createWebhook;
     toggleWebhook;
     deleteWebhook;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     testWebhook;
@@ -75,6 +83,7 @@ export function WebhookManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [newWebhook, setNewWebhook] = useState({
 
     name: ""
@@ -83,6 +92,8 @@ export function WebhookManager() {
     eventTypes: [] as WebhookEventType[]
 
     secret: ""
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -101,11 +112,14 @@ export function WebhookManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" }
     { value: "quote_received", label: "Quote Request Received" }
     { value: "milestone_approved", label: "Milestone Approved" }
     { value: "talent_hired", label: "Talent Hired" }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -114,11 +128,14 @@ export function WebhookManager() {
   ];
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     fetchWebhooks()
   }, []);
 
   const handleAddEvent = () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     if (!newWebhook.selectedEvent) return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -155,6 +172,7 @@ export function WebhookManager() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added"),
       return
@@ -165,17 +183,22 @@ export function WebhookManager() {
       selectedEvent: "" as WebhookEventType
     })
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -220,6 +243,7 @@ export function WebhookManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Reset form
     setNewWebhook({
       name: ""
@@ -229,6 +253,11 @@ export function WebhookManager() {
       secret: ""
     })
 <<<<<<< HEAD
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+    await testWebhook(webhookId, eventType)
+  }
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -237,6 +266,7 @@ export function WebhookManager() {
     await testWebhook(webhookId, eventType)
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   },
   
@@ -278,6 +308,8 @@ export function WebhookManager() {
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -289,6 +321,7 @@ export function WebhookManager() {
                 placeholder="https://example.com/webhook"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -380,6 +413,8 @@ export function WebhookManager() {;
           </CardDescription>;
         </CardHeader>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <CardContent className="space-y-4">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <div className="space-y-2">;
@@ -405,6 +440,7 @@ export function WebhookManager() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
@@ -420,6 +456,8 @@ export function WebhookManager() {;
                 >
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -749,6 +787,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
@@ -766,6 +805,8 @@ if ( {) {
       </Card>
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -936,6 +977,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {loading ? (
           <p > Loading webhooks...</p>) : error ? (
           <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
@@ -949,6 +991,8 @@ if ( {) {
                       <CardTitle className="text - lg">{webhook.name}</CardTitle>;
                       <CardDescription className="truncate max - w-md">;
                         {webhook.url}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -964,6 +1008,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -981,6 +1026,8 @@ if ( {) {
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -996,6 +1043,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           </ClickableBadge>
                         ))}
                       </div>
@@ -1003,6 +1051,8 @@ if ( {) {
                     <div className="text-xs text-muted-foreground">
                       {webhook.last_triggered_at
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1174,6 +1224,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         : 'Never triggered'}
                     </div>;
                   </div>;
@@ -1244,6 +1295,8 @@ if ( {) {
                     <SelectContent>;
                       <SelectItem value="test_event">Test (generic)</SelectItem>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1251,6 +1304,7 @@ if ( {) {
                         </SelectItem>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       ))}
 =======
                       {webhook.event_types.map(event => (;
@@ -1268,6 +1322,8 @@ if ( {) {
             ))}
           </div>;
         )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1312,6 +1368,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </pre>
                 </div>
               </div>
@@ -1321,6 +1378,8 @@ if ( {) {
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -1386,10 +1445,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </pre>;
                 </div>;
               </div>;
             </CardContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1497,3 +1559,4 @@ newWebhook.secret || undefined);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

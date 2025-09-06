@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -28,6 +30,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; 
 // SEO Improvements
 const seoEnhancements = ['Added structured data (JSON-LD)',
@@ -40,6 +43,10 @@ const seoEnhancements = ['Added structured data (JSON-LD)',
   'Optimized page titles'
 ];
 console.log('SEO improvements "applied": ', seoEnhancements.length);
+<<<<<<< HEAD
+const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; console.log('SEO improvements applied:',seoEnhancements.length);
+const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descriptions','Added Open Graph tags','Enhanced sitemap generation','Added robots.txt','Improved internal linking','Added alt text for images','Optimized page titles' ]; console.log('SEO improvements applied:',seoEnhancements.length);
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -89,3 +96,4 @@ const seoEnhancements = [ 'Added structured data (JSON-LD)','Improved meta descr
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

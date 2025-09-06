@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -13,6 +16,8 @@
   popular?: boolean;
   icon: string;
   color: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -27,10 +32,13 @@ export interface Q3Service {
   textColor: string, link: string,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   marketPosition?: string;
   targetAudience?: string;
   trialDays?: number;
   setupTime?: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -44,6 +52,7 @@ export interface Q3Service {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -102,6 +111,8 @@ export const realServicesQ32025: Q3Service[] = [
     description:
       'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.'
     features: [
+<<<<<<< HEAD
+=======
 =======
 
 const contact = {
@@ -135,6 +146,7 @@ export const realServicesQ32025: Q3Service[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
       'Price testing and packaging experiments',
@@ -143,9 +155,12 @@ export const realServicesQ32025: Q3Service[] = [
       'Weekly executive summaries',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
     price: '$599',
     period: '/month',
@@ -155,6 +170,9 @@ export const realServicesQ32025: Q3Service[] = [
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     marketPosition:
       'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    features: [
       'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries';
@@ -165,6 +183,8 @@ export const realServicesQ32025: Q3Service[] = [
     textColor: 'text-emerald-300';
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization';
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.'
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -176,6 +196,7 @@ export const realServicesQ32025: Q3Service[] = [
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams';
     trialDays: 14;
     setupTime: '1–2 weeks';
@@ -208,6 +229,8 @@ export const realServicesQ32025: Q3Service[] = [
     customers: 24;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.9;
     reviews: 31,
@@ -223,16 +246,20 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     id: 'wordpress - internal - linking - automation';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     name: 'WordPress Internal Linking Automation';
     tagline: 'AI - guided internal links that improve SEO structure and topical authority';
     price: '$299';
@@ -241,6 +268,8 @@ export const realServicesQ32025: Q3Service[] = [
     features: [;
       'Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements';
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔗';
@@ -252,6 +281,7 @@ export const realServicesQ32025: Q3Service[] = [
     trialDays: 7;
     setupTime: '2–4 days';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - purple - 600 to - pink - 600';
     text_color: 'text - purple - 200';
     link: 'https://ziontechgroup.com / services / wordpress - internal - linking - automation';
@@ -269,6 +299,8 @@ export const realServicesQ32025: Q3Service[] = [
     customers: 30;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7;
     reviews: 22,
@@ -277,6 +309,7 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
@@ -285,6 +318,9 @@ export const realServicesQ32025: Q3Service[] = [
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion';
     price: '$999';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   }
@@ -314,6 +350,8 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/project'
     description:
       'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'
+<<<<<<< HEAD
+=======
 =======
 
     period: '/project',
@@ -342,6 +380,7 @@ export const realServicesQ32025: Q3Service[] = [
     reviews: 12,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Reviews widget integration',
       'Email / SMS post - purchase triggers',
       'Photo / video UGC capture',
@@ -351,12 +390,15 @@ export const realServicesQ32025: Q3Service[] = [
     icon: '⭐',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     id: 'subscription-analytics-revenue-optimization', name: 'Subscription Analytics & Revenue Optimization',
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
     price: '$599', period: '/month',
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     features: [
 
     // @ts-expect-error augment common shape for UI components that expect contactInfo
@@ -477,6 +519,8 @@ export const realServicesQ32025: Q3Service[] = [
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
@@ -486,6 +530,7 @@ export const realServicesQ32025: Q3Service[] = [
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 };
 
@@ -850,6 +895,8 @@ export const realServicesQ32025: Q3Service[] = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     contactInfo: contact
 =======
 <<<<<<< HEAD
@@ -860,6 +907,7 @@ export const realServicesQ32025: Q3Service[] = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

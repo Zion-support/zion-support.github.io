@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,14 +18,18 @@ type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' |
 export function useResumeEnhancer() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
 export function useResumeEnhancer() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function useResumeEnhancer() {;
 
@@ -39,6 +45,8 @@ export function useResumeEnhancer() {;
     setIsEnhancing(true);
     setError(null)
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -59,10 +67,13 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           context
         }
       });
       if (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         throw new Error(error && error.message)
@@ -87,6 +98,7 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return null
     } finally {
       setIsEnhancing(false)
@@ -97,6 +109,8 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
     isEnhancing;
 
     error
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -144,6 +158,7 @@ function useResumeEnhancer() {
           enhancement_type: type,
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           context;
         }
       });
@@ -174,6 +189,8 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
@@ -181,6 +198,7 @@ if ( {) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 

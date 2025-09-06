@@ -1,5 +1,10 @@
 
 <<<<<<< HEAD
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -14,6 +19,7 @@ export function slugify(title: string, separator = "-"): string {;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function slugify(title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -56,9 +62,12 @@ export function unslugify(slug: string, separator = "-"): string {
   return slug
     .split(separator)
     .filter(Boolean)
+<<<<<<< HEAD
+=======
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -74,12 +83,15 @@ export function slugify (title: string, separator = "-"): string {
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -153,6 +165,9 @@ export function unslugify(slug: string, separator = "-"): string {;
 }
 ;
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -163,3 +178,4 @@ export function unslugify(slug: string, separator = "-"): string {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

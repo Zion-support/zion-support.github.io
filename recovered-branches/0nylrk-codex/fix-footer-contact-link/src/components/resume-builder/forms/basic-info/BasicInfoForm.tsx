@@ -10,6 +10,8 @@ import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -40,6 +42,7 @@ export function BasicInfoForm(): any ({;
   initialData?: Partial<BasicInfoFormData>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -102,6 +105,8 @@ export function BasicInfoForm(): any ({;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   resumeId,
@@ -112,11 +117,14 @@ export function BasicInfoForm(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
     resolver: zodResolver(basicInfoSchema)
     defaultValues: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -151,11 +159,14 @@ export function BasicInfoForm(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -165,6 +176,7 @@ export function BasicInfoForm(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -191,12 +203,15 @@ export function BasicInfoForm({;
   skills = [],;
   yearsExperience = 0,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onComplete;
 }: BasicInfoFormProps) {;
   const form = useForm<BasicInfoFormData>({;
@@ -211,6 +226,26 @@ export function BasicInfoForm({;
       linkedin: "",;
       github: "",;
       hourlyRate: 0,;
+<<<<<<< HEAD
+        }
+      });
+    }
+  }, [initialData, form]);
+  const handleSubmit = (data: BasicInfoFormData) => {
+    onSave(data)
+    if (onComplete) {
+      onComplete()
+    }
+  }
+  };
+
+
+        }
+      });
+    }
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       ...initialData}});
@@ -234,12 +269,15 @@ export function BasicInfoForm({;
   };
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
     onSave(data),;
     if (onComplete) {;
       onComplete();
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
@@ -373,6 +411,7 @@ export function BasicInfoForm({;
     onSave(data),;
     if (onComplete) {;
       onComplete();
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
   },
@@ -389,11 +428,14 @@ export function BasicInfoForm({;
               setValue={form && form.setValue}
               skills={skills}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               location={form.getValues("location")}
               rateType="hourly"
             />
@@ -405,6 +447,8 @@ export function BasicInfoForm({;
       </form>
     </Form>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -456,6 +500,7 @@ export function BasicInfoForm({;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
@@ -493,6 +538,8 @@ function BasicInfoForm() {
       hourly_rate: 0,
       ...initial_data}});
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -594,3 +641,4 @@ if (initialData) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

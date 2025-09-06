@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string; timestamp: number; metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req.body; if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} .toISOString(),metrics: dat a.metrics,}); res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing performance data: ',error); res.status(500).json({ error: 'Internal server error' })} }
 import { NextApiRequest, NextApiResponse } from 'next';
 =======
@@ -24,6 +26,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PerformanceData {
   "url": string;
   timestamp: number;
@@ -82,6 +85,11 @@ import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData
       "success": tru e,
       "message": 'Performance metrics recorded',
 <<<<<<< HEAD
+import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string; timestamp: number; metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req.body; if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} console.log('Performance Metrics: ',{ url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),metrics: dat a.metrics,}); res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing performance data: ',error); res.status(500).json({ error: 'Internal server error' })} }
+import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string; timestamp: number; metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req.body; if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} console.log('Performance Metrics: ',{ url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),metrics: dat a.metrics,}); res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing performance data: ',error); res.status(500).json({ error: 'Internal server error' })} }
+import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string; timestamp: number; metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req.body; if (!data.url || !data.timestamp || !data.metrics) { return res.status(400).json({ error: 'Invalid data format' })} console.log('Performance Metrics: ',{ url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),metrics: dat a.metrics,}); res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing performance data: ',error); res.status(500).json({ error: 'Internal server error' })} }
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -102,6 +110,7 @@ import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "timestamp": Dat e && e.now()})} catch (error) {
     console && console.error('Error processing performance "data": ', error);
     res && res.status(500).json({ "error": 'Internal server error' })}
@@ -121,6 +130,8 @@ import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string, timestamp: number, metrics: { fcp?: number, lcp?: number, fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req && req.method !== 'POST') { return res && res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req && req.body; if (!data && data.url || !data && data.timestamp || !data && data.metrics) { return res && res.status(400).json({ error: 'Invalid data format' })} console && console.log('Performance Metrics: ',{ url: dat a && a.url,timestamp: new Date(data && data.timestamp).toISOString(),metrics: dat a && a.metrics,}); res && res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e && e.now(),})} catch (error) { console && console.error('Error processing performance data: ',error); res && res.status(500).json({ error: 'Internal server error' })} }
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string, timestamp: number, metrics: { fcp?: number, lcp?: number, fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req && req.method !== 'POST') { return res && res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req && req.body; if (!data && data.url || !data && data.timestamp || !data && data.metrics) { return res && res.status(400).json({ error: 'Invalid data format' })} console && console.log('Performance Metrics: ',{ url: dat a && a.url,timestamp: new Date(data && data.timestamp).toISOString(),metrics: dat a && a.metrics,}); res && res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e && e.now(),})} catch (error) { console && console.error('Error processing performance data: ',error); res && res.status(500).json({ error: 'Internal server error' })} }
 import { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceData { url: string, timestamp: number, metrics: { fcp?: number, lcp?: number, fid?: number; cls?: number; ttfb?: number; fmp?: number}} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req && req.method !== 'POST') { return res && res.status(405).json({ error: 'Method not allowed' })} try { const data: PerformanceDat a = req && req.body; if (!data && data.url || !data && data.timestamp || !data && data.metrics) { return res && res.status(400).json({ error: 'Invalid data format' })} console && console.log('Performance Metrics: ',{ url: dat a && a.url,timestamp: new Date(data && data.timestamp).toISOString(),metrics: dat a && a.metrics,}); res && res.status(200).json({ success: tru e,message: 'Performance metrics recorded',timestamp: Dat e && e.now(),})} catch (error) { console && console.error('Error processing performance data: ',error); res && res.status(500).json({ error: 'Internal server error' })} }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,3 +166,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_api.disabled/analytics/performance.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

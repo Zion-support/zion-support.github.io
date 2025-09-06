@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 // Performance optimization utilities
 export const optimizeImages = () => {;
   const images = document.querySelectorAll('img');
@@ -21,6 +23,7 @@ export const preloadCriticalResources = () => {
     link.as = resource.endsWith('.css') ? 'style' : 'font';
     document.head.appendChild(link);
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
@@ -158,6 +161,11 @@ export const optimizeBundleSize = () => {
   return { loadComponent };
 };
 <<<<<<< HEAD
+
+    link.rel = 'preload';
+    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+=======
+<<<<<<< HEAD
 link.rel = "preload";
 ((link.href = resource),
   (link.as = resource.endsWith(".css") ? "style" : "font"));
@@ -167,3 +175,4 @@ link.rel = "preload";
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

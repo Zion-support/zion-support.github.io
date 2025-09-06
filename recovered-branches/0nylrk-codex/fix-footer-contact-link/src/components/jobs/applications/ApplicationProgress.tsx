@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +13,7 @@ import { cn } from "@/lib/utils";
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
@@ -26,13 +29,18 @@ export function ApplicationProgress({
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
@@ -43,10 +51,13 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Define the progress value based on status
 
   const getProgressValue = () => {
     switch (status) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -82,6 +93,7 @@ function ApplicationProgress() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return 20;
       case "viewed":;
         return 40;
@@ -95,6 +107,8 @@ function ApplicationProgress() {
         return 100;
       default:;
         return 0;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     }
   }
@@ -119,6 +133,7 @@ function ApplicationProgress() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
@@ -126,6 +141,8 @@ function ApplicationProgress() {
       case "hired": return 100,
       case "rejected": return 100,
       default: return 0
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -141,6 +158,7 @@ function ApplicationProgress() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },
 
   const progressValue = getProgressValue(),
@@ -148,6 +166,8 @@ function ApplicationProgress() {
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -159,6 +179,7 @@ function ApplicationProgress() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -183,6 +204,8 @@ function ApplicationProgress() {
       </div>
     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -192,11 +215,16 @@ function ApplicationProgress() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
   )
 }
+<<<<<<< HEAD
+    }
+  }
+=======
 <<<<<<< HEAD
 function StatusIcon({
   status
@@ -376,6 +404,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     }
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
@@ -390,12 +419,15 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   const progress_value = getProgressValue ();
 ;
@@ -463,6 +495,8 @@ if ( {) {
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
+=======
 =======
 }
 ;
@@ -533,3 +567,4 @@ return (<div className= {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

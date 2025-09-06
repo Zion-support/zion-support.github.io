@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -22,6 +24,7 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
 export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
   if (!code) return url,;
   const u = new URL(url),;
@@ -36,12 +39,15 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function affiliate (url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {
   // Check condition
@@ -57,6 +63,9 @@ if (return url, ) {
 }
 ;
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -78,3 +87,4 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

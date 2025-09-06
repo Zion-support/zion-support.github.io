@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,6 +8,7 @@
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ChatMessage  } from './ChatMessage';
 import { ChatInput  } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -13,9 +16,12 @@ import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 export interface Message {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -28,18 +34,23 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
   read?: boolean
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -53,6 +64,7 @@ export interface Message {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 
@@ -87,6 +99,9 @@ import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
 <<<<<<< HEAD
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+=======
+<<<<<<< HEAD
 =======
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
@@ -98,6 +113,7 @@ export function ChatAssistant({;
 =======
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   isOpen;
   onClose;
   recipient;
@@ -105,6 +121,8 @@ import React, { useState, useEffect, useRef, ReactNode } from 'react';
 
   initialMessages = [];
   onSendMessage;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   contextHeader;
@@ -122,6 +140,7 @@ import React, { useState, useEffect, useRef, ReactNode } from 'react';
   }, [initialMessages]);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
@@ -201,6 +220,8 @@ export function ChatAssistant({;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     scrollToBottom()
@@ -213,6 +234,7 @@ export function ChatAssistant({;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     scrollToBottom()
   }, [messages]),
@@ -220,15 +242,20 @@ export function ChatAssistant({;
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -295,6 +322,7 @@ export function ChatAssistant({;
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -330,6 +358,8 @@ export function ChatAssistant({;
           ) : (;
             messages && messages.map((msg) => (;
               <ChatMessage
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -389,6 +419,7 @@ export function ChatAssistant({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 role={msg.role}
                 message={msg.message}
               />
@@ -397,12 +428,15 @@ export function ChatAssistant({;
           <div ref={messagesEndRef} />
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 key={msg && msg.id} 
                 role={msg && msg.role}
                 message={msg && msg.message}
@@ -552,6 +586,8 @@ if (return null) {
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -754,9 +790,13 @@ return ()
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 }
 
 
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

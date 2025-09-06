@@ -8,14 +8,29 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import React, { Component, ReactNode } from 'react';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ReactNode } from 'react';
+<<<<<<< HEAD
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 
 interface Props {
   children: ReactNode;
@@ -43,8 +58,17 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
+<<<<<<< HEAD
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+=======
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     this.setState({
       error,
       errorInfo
@@ -65,6 +89,19 @@ class ErrorBoundary extends Component<Props, State> {
   }
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h2>
+            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Reload Page
+            </button>
+=======
       return (
 <<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -94,6 +131,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Try Again
               </button>
             </div>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-4 p-4 bg-gray-100 rounded-lg">
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">
@@ -169,7 +207,11 @@ export default ErrorBoundary;
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 export default ErrorBoundary
     return { hasError: true, error };
   };
@@ -242,4 +284,8 @@ export default ErrorBoundary;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
@@ -20,6 +22,7 @@ import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
@@ -32,6 +35,11 @@ import CommunityProfilePage from "../pages/CommunityProfilePage";
 
 const CommunityRoutes = () => {
 <<<<<<< HEAD
+const CommunityRoutes = () => {
+const CommunityRoutes = () => {;
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Routes>
       {/* Public routes */}
@@ -94,6 +102,9 @@ const CommunityRoutes = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+=======
 =======
 =======
         }
@@ -108,6 +119,7 @@ export default CommunityRoutes;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;
@@ -122,6 +134,11 @@ const CommunityRoutes = () => {;
   return (;
     <Routes>;
       {/* Public routes */}
+<<<<<<< HEAD
+  return (
+    <Routes>;
+      {/* Public routes */}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -141,6 +158,7 @@ const CommunityRoutes = () => {;
     <Routes>;
       {/* Public routes */}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
@@ -177,6 +195,9 @@ const CommunityRoutes = () =>: any {
             <CreatePostPage />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
       />;
 <<<<<<< HEAD
@@ -269,3 +290,4 @@ export default CommunityRoutes;
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -14,8 +17,11 @@ function fixImportSyntax(filePath) {
       const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -29,6 +35,8 @@ function fixImportSyntax(filePath) {
         .split(/\s+/)
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
         .filter((item) => item.trim());
         .join(", ");
       return match.replace(imports, fixedImports);
@@ -38,6 +46,7 @@ function fixImportSyntax(filePath) {
     content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Fix function parameter syntax errors
     content = content.replace(
       /function\s*\(([^)]+)\)\s*{/g
@@ -46,6 +55,8 @@ function fixImportSyntax(filePath) {
         return match.replace(params, fixedParams);
       }
     );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
@@ -101,15 +112,19 @@ function fixImportSyntax() {
 }
       fs.writeFileSync (file_path, content, "utf8");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       modified = true;
     }
     return modified;
   } catch (error) {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     const items = fs && fs.readdirSync(currentDir);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
       const stat = fs && fs.statSync(fullPath);
@@ -118,6 +133,8 @@ function fixImportSyntax() {
         // Skip certain directories
         if (
           [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
             "node_modules",
@@ -132,6 +149,7 @@ function fixImportSyntax() {
             "apps",
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           ].includes(item)
         ) {
           continue;
@@ -147,18 +165,23 @@ function fixImportSyntax() {
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console.log(`Fixed syntax in: ${file}`);
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -186,3 +209,4 @@ for (const file of files) {
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

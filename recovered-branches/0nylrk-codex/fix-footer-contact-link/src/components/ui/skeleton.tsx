@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,10 +9,13 @@ import { cn } from "@/lib/utils"
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function Skeleton({
   className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { cn } from &quot;@/lib / utils & quot;
@@ -21,6 +26,7 @@ import { cn } from &quot;@/lib / utils & quot;
 function Skeleton() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div;
       className={cn (&quot;animate - pulse rounded - md bg - muted & quot;, class_name)}
@@ -38,6 +44,8 @@ function Skeleton({;
     />);
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -67,3 +75,4 @@ export { Skeleton }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

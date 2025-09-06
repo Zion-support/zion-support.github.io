@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -28,6 +30,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -44,6 +47,8 @@ import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
 export default function Marketplace() {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -62,6 +67,7 @@ export default function Marketplace() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -86,6 +92,8 @@ export default function Marketplace() {
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
   const filterOptions = generateFilterOptions();
   const navigate = useNavigate(),
@@ -97,10 +105,13 @@ export default function Marketplace() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
   
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -109,6 +120,7 @@ export default function Marketplace() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -116,6 +128,8 @@ export default function Marketplace() {
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -161,6 +175,7 @@ export default function Marketplace() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -178,6 +193,11 @@ export default function Marketplace() {;
     if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
       return false
     }
+<<<<<<< HEAD
+    return true
+  });
+  const handleFilterChange = (filterType: string, value: string) => {
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -204,6 +224,7 @@ export default function Marketplace() {;
   });
   const handleFilterChange = (filterType: string, value: string) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
@@ -331,6 +352,8 @@ export default function Marketplace() {;
     setSelectedAvailability([]),
     setSelectedRating(null)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -347,6 +370,7 @@ export default function Marketplace() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
@@ -354,6 +378,8 @@ export default function Marketplace() {;
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -372,6 +398,7 @@ export default function Marketplace() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -381,6 +408,8 @@ export default function Marketplace() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -448,6 +477,7 @@ export default function Marketplace() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -562,6 +592,8 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -594,10 +626,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         }
       });
     }
+<<<<<<< HEAD
+  };
+  },
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -862,6 +899,7 @@ navigate("/request-quote", {state: {
   };
   },
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 
     <AppLayout>;
@@ -998,6 +1036,8 @@ navigate("/request-quote", {state: {
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
             
@@ -1037,6 +1077,7 @@ navigate("/request-quote", {state: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
@@ -1054,12 +1095,15 @@ navigate("/request-quote", {state: {
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </p>;
             </div>;
 
@@ -1084,6 +1128,8 @@ navigate("/request-quote", {state: {
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
                     Clear Filters;
                   </Button>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 </div>;
               )}
@@ -1193,10 +1239,13 @@ navigate("/request-quote", {state: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </div>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1299,3 +1348,4 @@ Discover professional services and products for your AI and tech projects. Brows
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

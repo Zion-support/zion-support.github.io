@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -9,6 +11,7 @@ import { useForm } from "react-hook-form";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -17,6 +20,10 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
+<<<<<<< HEAD
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -38,6 +45,7 @@ import { useForm } from "react-hook-form",
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { 
   Card;
   CardContent;
@@ -55,6 +63,8 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -74,6 +84,7 @@ interface PostFormValues {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PostFormValues {
   title: string,
   content: string,
@@ -95,9 +106,12 @@ interface PostFormValues {
 }
 interface PostFormProps {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -107,6 +121,8 @@ export const PostForm = ({;
   initialValues;
   onSubmit;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -114,6 +130,7 @@ export const PostForm = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -147,12 +164,15 @@ interface PostFormProps {;
   onSubmit: (values: PostFormValues) => void,;
   isEditing?: boolean;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -161,6 +181,8 @@ interface PostFormProps {;
   isEditing?: boolean
 }
 export const PostForm = ({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   initialValues;
   onSubmit;
@@ -171,10 +193,13 @@ export const PostForm = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -284,13 +309,17 @@ export const PostForm = ({
       setIsSubmitting(false)
     }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
     try {
       await on_submit (values);
     } finally {
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
       title: initialValues?.title || "",
       content: initialValues?.content || "",
@@ -301,8 +330,11 @@ export const PostForm = ({
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -313,8 +345,11 @@ export const PostForm = ({
     } finally {;
       setIsSubmitting(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 =======
@@ -666,6 +701,11 @@ export const PostForm = ({
 export default PostForm;
 ;
 <<<<<<< HEAD
+export default PostForm;
+export default PostForm,
+
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -870,3 +910,4 @@ export default PostForm;
 export default PostForm,
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

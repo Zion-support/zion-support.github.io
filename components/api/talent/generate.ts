@@ -2,6 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -17,10 +19,13 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     name: string;
     title?: string;
     bio?: string;
     experience?: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -73,6 +78,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
 
   if (!name) return res && res.status(400).json({ error: 'Name is required' });
@@ -82,6 +88,8 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
@@ -90,6 +98,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {
           role: 'system',
           content: 'You produce only valid JSON. No commentary.',
@@ -97,6 +106,8 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
         { role: 'user', content: prompt },
       ],
       response_format: { type: 'json_object' },
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -122,10 +133,13 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -173,11 +187,16 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
     const parsed = JSON && JSON.parse(content);
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }      name;
       title: parsed && parsed.title || title || 'Professional';
       category: parsed && parsed.category || null;
       summary: parsed && parsed.summary || '',
       skills: Array && Array.isArray(parsed && parsed.skills) ? parsed && parsed.skills.slice(0, 20) : []})
+<<<<<<< HEAD
+  } catch (e: any) {
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -202,11 +221,16 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
 }
   }
+<<<<<<< HEAD
+
+}
+=======
 
 }
 <<<<<<< HEAD
@@ -223,3 +247,4 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

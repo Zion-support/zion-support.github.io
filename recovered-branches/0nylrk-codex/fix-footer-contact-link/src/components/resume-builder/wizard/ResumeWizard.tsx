@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -28,6 +30,7 @@ import {Resume} from '@/types / resume';
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -55,12 +58,15 @@ import {Card, CardContent} from '@/components / ui / card';
 import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
 import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {Button} from '@/components/ui/button';
 import {Resume} from '@/types/resume';
 // Import components
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {ResumeProgress} from './ResumeProgress';
 import {EmptyResumeState} from './EmptyResumeState';
 import {CreateResumeForm} from './CreateResumeForm';
@@ -70,12 +76,15 @@ import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -88,6 +97,8 @@ import {RESUME_STEPS} from './constants';
 
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -111,6 +122,7 @@ export function ResumeWizard() {;
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Use the extracted hook for progress calculation
 
   }
@@ -120,9 +132,12 @@ export function ResumeWizard() {;
 
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -152,6 +167,8 @@ export function ResumeWizard() {;
   } = useResume(),;
   const [activeTab, setActiveTab] = useState('basic-info'),;
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -195,6 +212,7 @@ export function ResumeWizard() {;
     }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   },
 
@@ -237,6 +255,8 @@ export function ResumeWizard() {;
         <AlertTitle>Error</AlertTitle>;
         <AlertDescription>{error}</AlertDescription>;
       </Alert>;
+<<<<<<< HEAD
+=======
     );
   }
 <<<<<<< HEAD
@@ -294,6 +314,7 @@ export function ResumeWizard() {;
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   if (showNewResumeForm) {
 =======
@@ -405,7 +426,10 @@ export function ResumeWizard() {;
   }
 
   if (showNewResumeForm) {;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <CreateResumeForm
         onCreateResume={handleCreateNewResume}
@@ -426,6 +450,8 @@ export function ResumeWizard() {;
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button
             onClick={() => setShowNewResumeForm(true)}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
             variant="outline";
@@ -495,6 +521,7 @@ export function ResumeWizard() {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 activeTab={activeTab}
                 resume={resume as Resume}
           ;
@@ -512,6 +539,8 @@ export function ResumeWizard() {;
                 onPrevStep={prevStep}
               />;
             )}
+<<<<<<< HEAD
+=======
               <ResumeStepContent
               <ResumeStepContent 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -712,6 +741,7 @@ const [showNewResumeForm, setShowNewResumeForm] = useState (false);
               />;
             )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export /**
  * ResumeWizard - Function description
  */
@@ -726,6 +756,8 @@ function ResumeWizard() {
   } = use_resume ();
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -734,3 +766,4 @@ function ResumeWizard() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

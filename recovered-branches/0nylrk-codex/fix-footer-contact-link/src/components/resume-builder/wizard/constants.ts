@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -19,11 +21,14 @@ export const RESUME_STEPS = [;
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   { id: 'education', label: 'Education' }
   { id: 'skills', label: 'Skills' }
   { id: 'certifications', label: 'Certifications' }
   { id: 'preview', label: 'Preview' }];
 
+<<<<<<< HEAD
+=======
 export const RESUME_STEPS = [;
 <<<<<<< HEAD
 =======
@@ -33,6 +38,7 @@ export const RESUME_STEPS = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const RESUME_STEPS = [;
 export const RESUME_STEPS = [;
 { id: 'basic-info', label: 'Basic Info' };
@@ -51,6 +57,9 @@ export const RESUME_STEPS = [;
 
   { id: 'preview', label: 'Preview' }];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

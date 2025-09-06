@@ -14,6 +14,8 @@ type UserWithProfile = UserProfile | UserDetails | null;
 export function useMessagingRealtime (
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -26,6 +28,7 @@ import { toast } from '@/hooks/use-toast';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
@@ -108,6 +111,8 @@ export function useMessagingRealtime(;
           // Show toast notification for new message
           toast({
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             title: `New message from ${payload && payload.new.sender_name || 'Someone'}`;
@@ -121,12 +126,15 @@ export function useMessagingRealtime(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           })
         }
       )
       .subscribe();
 
     return () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -161,6 +169,7 @@ if (return, ) {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Subscribe to new messages;
     const subscription = supabase;
       .channel ('messages');
@@ -196,6 +205,9 @@ if ( {) {
       supabase.remove_channel (subscription);
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -258,3 +270,4 @@ export function useMessagingRealtime(;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

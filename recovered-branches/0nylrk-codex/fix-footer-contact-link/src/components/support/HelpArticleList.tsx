@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+
+
+
+interface HelpArticleListProps {
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
+  searchQuery: string
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
+  searchQuery: string;
+}
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  if (!category) {;
+    return <div>Category not found</div>;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import {
   Card,
@@ -28,6 +59,8 @@ export function HelpArticleList({
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
+<<<<<<< HEAD
+=======
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           article.content.toLowerCase().includes(searchQuery.toLowerCase()),
       )
@@ -47,6 +80,7 @@ export function HelpArticleList({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div>
       <div className="mb-6">
@@ -64,6 +98,8 @@ export function HelpArticleList({
       ) : (
         <div className="space-y-4">
           {filteredArticles.map((article) => (
+<<<<<<< HEAD
+=======
             <Card
               key={article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -189,6 +225,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Card
               key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -364,6 +401,8 @@ function format_date (date: string): string {
   })
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 function formatDate(date:string):string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -418,3 +457,4 @@ function formatDate(date: string): string {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

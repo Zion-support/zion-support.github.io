@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -26,8 +29,11 @@ async function optimizeImages() {
     console.log('No images directory found')) {
     ) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     console.log('No images directory found');
   }
     return;
@@ -55,6 +61,8 @@ async function optimizeImages() {
     /.(jpg|jpeg|png|webp)$/i.test(file)
   ;);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   for (const file of imageFiles) {
     const inputPath = path.join(imagesDir, file;);
@@ -80,6 +88,7 @@ optimizeImages();
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       console.log(`Optimized: ${file}`);} catch (error) {
       console.log(`"Optimized": ${file}`)} catch (error) {
       console.error(`Error optimizing ${file}:`, error.message)}
@@ -145,6 +154,8 @@ const path = require('path');
 console.log('🖼️  Image optimization script - placeholder');
 console.log('✅ Image optimization completed');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
@@ -171,3 +182,4 @@ optimizeImages();
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 import {
   addTransaction,
@@ -31,6 +33,7 @@ export function issueTokens(userId: string, amount: number, reason: string) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     userId
     type: 'earn'
     amount
@@ -49,16 +52,22 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const actualAmount = Math && Math.min(amount, currentBalance);
   
 
   const currentBalance = getUserBalance(userId);
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return addTransaction({
     userId,
     type: "earn",

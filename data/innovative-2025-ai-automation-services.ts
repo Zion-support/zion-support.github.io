@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;

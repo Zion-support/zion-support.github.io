@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -8,10 +10,15 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
+<<<<<<< HEAD
+  if (!fs.existsSync(dir)) return res.status(200).json([]);
+  const files = fs.readdirSync(dir).map((name) => ({ name }));
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -36,6 +43,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const section = String(req && req.query.section || "General");
   const dir = resolveDataPath(path && path.join("dataroom", section));
   if (!fs && fs.existsSync(dir)) return res && res.status(200).json([]);
@@ -47,6 +55,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res && res.status(200).json(files);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -56,6 +66,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -78,6 +89,8 @@ function handler() {
   res.status (200).json (files);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -89,3 +102,4 @@ function handler() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

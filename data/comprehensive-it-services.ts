@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ComprehensiveITService {
   id: string;
   name: string;
@@ -30,16 +33,22 @@ export interface ComprehensiveITService {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next - generation quantum - powered cloud infrastructure',
@@ -63,6 +72,8 @@ export interface ComprehensiveITService {
     popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '☁️',
 
 =======
@@ -80,6 +91,7 @@ export interface ComprehensiveITService {
     technology: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum computing',
       'Quantum networking',
       'React',
@@ -89,6 +101,8 @@ export interface ComprehensiveITService {
       'AWS',
       'Custom quantum hardware',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -121,6 +135,7 @@ export interface ComprehensiveITService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -137,6 +152,8 @@ export interface ComprehensiveITService {
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'AI-powered deployment optimization',
     id: 'ai - powered - devops - automation',
@@ -150,6 +167,7 @@ export interface ComprehensiveITService {
       'AI - powered deployment optimization',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Intelligent infrastructure scaling',
       'Predictive failure detection',
       'Automated performance tuning',
@@ -161,6 +179,8 @@ export interface ComprehensiveITService {
       '24 / 7 AI operations center',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🤖',
@@ -180,6 +200,7 @@ export interface ComprehensiveITService {
     technology: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI algorithms',
       'Machine learning',
       'React',
@@ -190,6 +211,8 @@ export interface ComprehensiveITService {
       'Docker',
       'Kubernetes',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -221,6 +244,7 @@ export interface ComprehensiveITService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -237,6 +261,8 @@ export interface ComprehensiveITService {
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'quantum - cybersecurity - suite',
@@ -249,6 +275,7 @@ export interface ComprehensiveITService {
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum encryption algorithms',
       'AI - powered threat detection',
       'Quantum key distribution',
@@ -261,6 +288,8 @@ export interface ComprehensiveITService {
       '24 / 7 quantum security operations',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔒',
@@ -280,6 +309,7 @@ export interface ComprehensiveITService {
     technology: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum encryption',
       'AI algorithms',
       'React',
@@ -289,6 +319,8 @@ export interface ComprehensiveITService {
       'AWS',
       'Custom quantum hardware',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -322,6 +354,7 @@ export interface ComprehensiveITService {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -511,6 +544,8 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     reviews: 156;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
   }
 
@@ -524,6 +559,7 @@ export interface ComprehensiveITService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
     realImplementation: true

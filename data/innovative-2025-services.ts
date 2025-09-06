@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -18,6 +20,7 @@ export interface Innovative2025Service {
 
       'Real-time emotion detection',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'ai - emotional - intelligence - platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Advanced emotion recognition and response generation',
@@ -29,8 +32,11 @@ export interface Innovative2025Service {
       'Real - time emotion detection',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Sentiment analysis & mood tracking',
       'Emotional response generation',
       'Cultural context awareness',
@@ -38,6 +44,8 @@ export interface Innovative2025Service {
       'Multi - language support',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '💝',
@@ -72,6 +80,7 @@ export interface Innovative2025Service {
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Mental health monitoring',
       'Customer sentiment analysis',
       'Educational engagement',
@@ -81,6 +90,8 @@ export interface Innovative2025Service {
     competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     market_size: '$3.8B emotional AI market',
     growth_rate: '180% annual growth',
@@ -88,6 +99,7 @@ export interface Innovative2025Service {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -102,6 +114,8 @@ export interface Innovative2025Service {
     reviews: 52,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -119,12 +133,15 @@ export interface Innovative2025Service {
       'Real - time quantum resource allocation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Advanced optimization solvers',
       'Quantum machine learning',
       'Secure quantum communications',
       'Scalable quantum infrastructure',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '⚛️',
@@ -158,12 +175,15 @@ export interface Innovative2025Service {
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Portfolio optimization',
       'Drug discovery',
       'Supply chain optimization',
       'Cryptography',
     ],
     roi: 'Delivers 1000%+ ROI through solving previously impossible problems in weeks instead of years.',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -174,6 +194,7 @@ export interface Innovative2025Service {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -187,6 +208,8 @@ export interface Innovative2025Service {
     rating: 4 && 4.9,
     reviews: 18,
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -206,12 +229,15 @@ export interface Innovative2025Service {
       'AI - powered fraud detection',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Market trend analysis',
       'Smart contract auditing',
       'DeFi risk assessment',
       'NFT market insights',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔗',
@@ -246,6 +272,7 @@ export interface Innovative2025Service {
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Fraud detection',
       'Market analysis',
       'Compliance monitoring',
@@ -255,11 +282,14 @@ export interface Innovative2025Service {
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'TRM Labs'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     market_size: '$2.1B blockchain analytics market',
     growth_rate: '220% annual growth',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     variant: 'cyberpunk',
     contact_info: {
       mobile: '+1 302 464 0950',
@@ -276,12 +306,17 @@ export interface Innovative2025Service {
     reviews: 89,
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Production financial AI platform with real-time trading and comprehensive risk management.'
     launchDate: '2025-01-15'
     customers: 45
     rating: 4.8
     reviews: 32
   }
+<<<<<<< HEAD
+=======
 =======
 
       'AI-generated 3D environments',
@@ -592,6 +627,7 @@ export interface Innovative2025Service {
   // Financial Technology Innovation Services;
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'ai - financial - trading - platform',
     name: 'AI Financial Trading Platform',
     tagline: 'Intelligent algorithmic trading and portfolio management',
@@ -611,10 +647,13 @@ export interface Innovative2025Service {
     popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '📈',
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Production financial AI platform with real-time trading and comprehensive risk management.',
     launchDate: '2025-01-15',
     customers: 45,
@@ -629,9 +668,12 @@ export interface Innovative2025Service {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - financial - trading - platform',
@@ -667,6 +709,8 @@ export interface Innovative2025Service {
     roi: 'Improves trading performance by 35% and reduces risk by 50% within 6 months.',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     competitors: ['Alpaca', 'Interactive Brokers', 'Robinhood', 'E * TRADE'],
     market_size: '$11.3B algorithmic trading market',
@@ -675,6 +719,7 @@ export interface Innovative2025Service {
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -693,14 +738,21 @@ export interface Innovative2025Service {
       address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Production financial AI platform with real - time trading and comprehensive risk management.';
     launch_date: '2025 - 01 - 15';
 
+<<<<<<< HEAD
+  }
+];
+=======
 <<<<<<< HEAD
   }
 ];
@@ -712,6 +764,7 @@ export interface Innovative2025Service {
     reviews: 32
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -943,6 +996,8 @@ export interface Innovative2025Service {
     contactInfo: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -957,6 +1012,7 @@ export interface Innovative2025Service {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2025Service {;
   id: string,;
@@ -1392,7 +1448,10 @@ export const innovative2025Services: Innovative2025Service[] = [;
 ];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -31,6 +31,8 @@
 <<<<<<< HEAD
       method: 'eth_requestAccounts',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -71,6 +73,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
     return accounts;
   } catch (error) {
@@ -125,6 +128,8 @@ if ( {) {
   try {
       method: 'eth_accounts',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -152,6 +157,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
     return accounts;
   } catch (error) {
@@ -205,6 +211,8 @@ export async function getBalance(address: string): Promise<string> {
       method: 'eth_getBalance',
       params: [address, 'latest'],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -240,6 +248,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
     return balance;
   } catch (error) {
@@ -326,14 +335,19 @@ if ( {) {
 
       method: 'personal_sign',
       params: [message, address],
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
     return signature;
   } catch (error) {
     throw new Error("Failed to sign message");
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -350,11 +364,15 @@ if ( {) {
 // Extend Window interface for TypeScript;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 declare global {
   interface Window {
     ethereum?: {
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
+<<<<<<< HEAD
+    }
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -410,5 +428,6 @@ declare global {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -60,6 +62,7 @@ export default function Privacy({ }: PrivacyProps) {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
 import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
 ursor/add-new-services-and-deploy-updates-0462
@@ -69,9 +72,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 interface PrivacyProps {
   // Add props here as needed
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function Privacy({ }: PrivacyProps) {
 
 class ErrorBoundary extends React.Component {
@@ -114,6 +120,8 @@ export default function Privacy(): any ({ }: PrivacyProps) {;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -134,3 +142,4 @@ export default function Privacy(): any ({ }: PrivacyProps) {;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

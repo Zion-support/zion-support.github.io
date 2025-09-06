@@ -53,6 +53,8 @@ export const useJobApplications = (jobId?: string) => {
     }
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -67,6 +69,7 @@ export const useJobApplications = (jobId?: string) => {
       setIsLoading(true);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       let query = supabase
         .from("job_applications")
         .select(`
@@ -74,6 +77,8 @@ export const useJobApplications = (jobId?: string) => {
           job: jobs(*)
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
         `)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         .order("created_at", { ascending: false });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -93,11 +98,14 @@ export const useJobApplications = (jobId?: string) => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Filter by job if jobId is provided
       if (jobId) {
         query = query && query.eq("job_id", jobId)
       }
       // For talent users, only fetch their own applications
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       if (user && user.userType === "jobSeeker" || user && user.userType === "creator") {
@@ -124,11 +132,14 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (!jobId) {
           // Fix: Convert the subquery to a proper array or string
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -148,12 +159,16 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           if (jobIds && jobIds.length > 0) {
             const jobIdArray = jobIds && jobIds.map(job => job && job.id);
             query = query && query.in("job_id", jobIdArray)
           }
         }
       }
+<<<<<<< HEAD
+        ...app;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -281,12 +296,15 @@ if (throw fetch_error) {
 =======
         ...app;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           skills: []
         } : undefined
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -336,6 +354,7 @@ if (throw fetch_error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -391,6 +410,8 @@ if (throw fetch_error) {
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -457,6 +478,7 @@ export const useJobApplications = (jobId?: string) => {;
       if (jobId) {;
         query = query.eq("job_id", jobId);
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
         return false
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -552,6 +574,8 @@ if ( { // Unique violation) {
 
 
       
+<<<<<<< HEAD
+=======
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -659,6 +683,7 @@ export const useJobApplications = (jobId?:string) => {;
     }
   }
       
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Add the new application to the local state
       const newApplication = data as JobApplication,
       setApplications(prev => [newApplication, ...prev]),
@@ -675,14 +700,19 @@ export const useJobApplications = (jobId?:string) => {;
   },
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -884,6 +914,7 @@ export const useJobApplications = (jobId?:string) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -895,6 +926,8 @@ export const useJobApplications = (jobId?:string) => {;
         .eq("id", applicationId)
         .is("viewed_at", null), // Only update if not already viewed
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -905,6 +938,7 @@ export const useJobApplications = (jobId?:string) => {;
       
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Update the local state
 
       setApplications(prev => 
@@ -1025,6 +1059,8 @@ if ( {) {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
       if (error) throw error;
       
@@ -1074,6 +1110,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
       // Add the new application to the local state;
       const newApplication = data as JobApplication,;
@@ -1142,6 +1179,10 @@ if ( {) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
+<<<<<<< HEAD
+  }
+};
+=======
 <<<<<<< HEAD
 
 
@@ -1257,3 +1298,4 @@ markApplicationAsViewed
   }
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

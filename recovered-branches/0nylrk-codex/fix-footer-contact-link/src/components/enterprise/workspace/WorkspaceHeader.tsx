@@ -1,6 +1,9 @@
 
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -18,6 +21,7 @@ import { Bell, Users, Settings } from "lucide-react",
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 interface WorkspaceHeaderProps {
   company: Company
@@ -78,8 +82,11 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
 =======
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -87,6 +94,8 @@ import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {;
   company: Company;
 }
+<<<<<<< HEAD
+=======
 ;
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   return (;
@@ -205,6 +214,7 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -267,6 +277,8 @@ function WorkspaceHeader() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -303,3 +315,4 @@ function WorkspaceHeader() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -60,12 +60,15 @@ export default function ForgotPassword({ }: ForgotPasswordProps) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 :src.disabled/src/pages.disabled/ForgotPassword.jsx
 }

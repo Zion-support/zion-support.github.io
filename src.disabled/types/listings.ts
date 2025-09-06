@@ -14,6 +14,8 @@
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
    reviews: numbe,r} "location": string ,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
 =======
@@ -40,3 +42,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

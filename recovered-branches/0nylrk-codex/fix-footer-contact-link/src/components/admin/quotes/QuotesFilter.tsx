@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -19,6 +21,7 @@ import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Calendar, RefreshCw } from "@/components/icons",
 import { Card, CardContent } from "@/components/ui/card",
@@ -34,13 +37,19 @@ import { format } from "date-fns",
 import type { DateRange } from "@/types/dateRange",
 import type { QuoteStatus } from "@/types/quotes",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -57,6 +66,26 @@ interface QuotesFilterProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface QuotesFilterProps {;
   searchQuery: string,;
   setSearchQuery: (value: string) => void,;
@@ -68,11 +97,16 @@ interface QuotesFilterProps {;
   setDateRange: (range: DateRange | undefined) => void,;
   onReset: () => void;
 }
+<<<<<<< HEAD
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+  searchQuery;
+=======
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 
   searchQuery;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { Calendar, RefreshCw } from '@/components / icons';
 import { Card, CardContent } from '@/components / ui / card';
@@ -97,13 +131,18 @@ interface QuotesFilterProps {
 }
 export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   search_query;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   setSearchQuery;
   status_filter;
   setStatusFilter;
   archive_filter;
   setArchiveFilter;
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -374,6 +413,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   archive_filter;
   setArchiveFilter;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   setDateRange
   searchQuery,
   setSearchQuery,
@@ -401,6 +441,8 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
       <CardContent className="p-6">;
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">;
           <div className="relative">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             <Input;
               placeholder="Search quotes...";
@@ -454,6 +496,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <SelectItem value="all">All Statuses</SelectItem>;
                 <SelectItem value="new">New</SelectItem>;
                 <SelectItem value="in_review">In Review</SelectItem>;
@@ -463,6 +506,8 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
               </SelectContent>;
             </Select>;
           </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -489,12 +534,15 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <SelectItem value="active">Active Only</SelectItem>;
                 <SelectItem value="archived">Archived Only</SelectItem>;
                 <SelectItem value="all">All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
           </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -521,6 +569,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
                       format(dateRange.from, "LLL dd, y");
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     );
                   ) : (;
                     <span>Date range</span>;
@@ -531,14 +580,19 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
                 <CalendarComponent
                   initialFocus
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -564,6 +618,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 },
@@ -649,6 +704,8 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
           </div>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="mt - 4 flex justify - end">;
@@ -715,3 +772,4 @@ onReset
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

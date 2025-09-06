@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,18 +11,25 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
 import {useState} from "react";
 import {TalentProfile} from "@/types/talent";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Button } from "@/components/ui/button",
 import { HireRequestModal } from "./hire-request",
 import { useState } from "react";
 import { TalentProfile } from "@/types/talent";
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface HireNowCTAProps {;
   talentProfile: {;
     id: string,;
@@ -46,6 +55,8 @@ interface HireNowCTAProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -86,12 +97,15 @@ import { TalentProfile } from "@/types/talent",
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
     full_name?: string,
     professional_title?: string,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     hourly_rate?: number
@@ -114,6 +128,7 @@ interface HireNowCTAProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
@@ -124,6 +139,11 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 
   const handleOpenModal = () => {
     setModalOpen(true)
+<<<<<<< HEAD
+
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
+
+=======
 <<<<<<< HEAD
   }
   const handleCloseModal = () => {
@@ -165,6 +185,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           <span>Profile Completeness</span>
@@ -190,6 +211,8 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
         </Button>
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
@@ -201,6 +224,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
       <HireRequestModal 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <HireRequestModal 
 import { Button } from "@/components/ui/button",;
 import { HireRequestModal } from "./hire-request",;
@@ -279,6 +303,8 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
         </div>;
         <div className="h-2 bg-zion-blue-light rounded-full overflow-hidden">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div
             className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
@@ -288,10 +314,13 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             style={{ width: `${profileCompleteness}%` }}
           />;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       <div className="flex flex-col space-y-4 mt-6">;
@@ -322,16 +351,20 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
           Schedule Interview;
         </Button>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <HireRequestModal;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
@@ -345,6 +378,11 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
           availability_type: 'full_time'
           timezone: ''
           hourly_rate: talentProfile.hourly_rate
+<<<<<<< HEAD
+
+
+      <HireRequestModal
+=======
 <<<<<<< HEAD
         } : null}
       />
@@ -440,11 +478,14 @@ function HireNowCTA() {
 
       <HireRequestModal
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           bio: '',
           years_experience: 0,
           skills: [],
           availability_type: 'full_time',
           timezone: '',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -456,10 +497,13 @@ function HireNowCTA() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -484,6 +528,7 @@ function calculateProfileCompleteness(): any (profile: any) {;
 <<<<<<< HEAD
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 // Helper function to calculate profile completeness;
@@ -529,6 +574,8 @@ if (return 0) {
     'availability_type';
   ];
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 }
@@ -664,3 +711,4 @@ return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

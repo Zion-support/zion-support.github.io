@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -192,6 +194,7 @@ const ContactForm: React.FC = () => {
 
 export default ContactForm;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -220,4 +223,7 @@ export default ContactForm;
       </form>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

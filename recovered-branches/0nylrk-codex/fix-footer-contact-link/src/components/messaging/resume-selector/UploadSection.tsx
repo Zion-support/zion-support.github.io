@@ -1,5 +1,10 @@
 
 <<<<<<< HEAD
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Upload, FileText } from 'lucide-react',
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface UploadSectionProps {;
@@ -10,6 +15,7 @@ interface UploadSectionProps {;
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from "lucide-react";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 interface UploadSectionProps {
   customFile: File | null,
@@ -17,6 +23,8 @@ interface UploadSectionProps {
 
 }
 
+<<<<<<< HEAD
+=======
 import React from 'react',
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from 'lucide-react';
@@ -53,6 +61,7 @@ interface UploadSectionProps {
 
 }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-3">
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
@@ -70,6 +79,9 @@ interface UploadSectionProps {
           />
         </Button>
       </div>
+<<<<<<< HEAD
+      
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function UploadSection(): any ({;
@@ -137,6 +149,7 @@ function UploadSection() {
 =======
       
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -153,6 +166,8 @@ function UploadSection() {
             </span>
           </div>
         </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -172,6 +187,7 @@ function UploadSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react',;
@@ -191,6 +207,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         </p>;
         <Button variant="outline" className="relative">;
           Browse Files;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <input;
             type="file";
@@ -238,6 +256,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           </div>;
         </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       )}
     </div>;
   );
@@ -281,6 +300,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
+=======
 =======
 }
 
@@ -317,3 +338,4 @@ onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

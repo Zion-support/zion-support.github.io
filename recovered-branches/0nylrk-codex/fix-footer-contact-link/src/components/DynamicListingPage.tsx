@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react';
@@ -6,6 +8,7 @@ import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -18,6 +21,8 @@ import {Slider} from "@/components/ui/slider";
 import {ProductListing, ListingView} from "@/types/listings";
 import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -47,6 +52,7 @@ export function DynamicListingPage({;
   categoryFilters;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { useNavigate } from "react-router-dom",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -90,6 +96,8 @@ export function DynamicListingPage({
   description;
   categorySlug;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   listings: allListings
   categoryFilters;
@@ -122,6 +130,7 @@ import { toast } from "@/hooks/use-toast",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PriceRange {;
   min: number,;
   max: number;
@@ -165,6 +174,8 @@ export function DynamicListingPage(): any ({;
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -179,6 +190,7 @@ export function DynamicListingPage({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -190,6 +202,8 @@ export function DynamicListingPage({;
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   useEffect(() => {
@@ -212,6 +226,7 @@ export function DynamicListingPage({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setPriceRange({ min, max })
     }
   }, [allListings]);
@@ -221,6 +236,8 @@ export function DynamicListingPage({;
   ]);
   const handleSliderChange = (values: number[]) => {
     setCurrentPriceFilter([values[0], values[1]])
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -255,6 +272,7 @@ export function DynamicListingPage({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       listing.price <= currentPriceFilter[1]
     );
     const matchesRating =
@@ -280,6 +298,8 @@ export function DynamicListingPage({;
               title: listing.title
               category: listing.category
               image: listing.images?.[0]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -401,6 +421,7 @@ export function DynamicListingPage({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from './react';
 import { use_navigate } from './react-router-dom';
 import { GradientHeading } from '@/components / GradientHeading';
@@ -502,6 +523,8 @@ if ( {) {
               category: listing.category,
               image: listing.images?.[0];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -515,10 +538,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               id: listing.id,;
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -528,10 +554,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             }
           }
         });
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -542,6 +571,7 @@ if ( {) {
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 =======
 
@@ -583,6 +613,8 @@ if ( {) {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
             {description}
           </p>
@@ -605,6 +637,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   }}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -615,6 +648,8 @@ if ( {) {
                     {categoryFilters.map((filter) => (
                       <SelectItem key={filter.value} value={filter.value} className="text-white">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -622,6 +657,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </p>;
         </div>;
 
@@ -639,6 +675,9 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <Select
+<<<<<<< HEAD
+            {description}
+=======
                   value={selectedCategory} 
                   onValueChange={(value: string) => {;
                     console && console.log("Category selected:", value);
@@ -654,6 +693,7 @@ if ( {) {
                 <Select
             {description}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   }}
                 >;
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
@@ -661,6 +701,8 @@ if ( {) {
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -670,6 +712,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         {filter.label}
                       </SelectItem>
                     {categoryFilters && categoryFilters.map((filter) => (;
@@ -677,6 +720,8 @@ if ( {) {
                         {filter && filter.label}
                       </SelectItem>;
                     ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
                   </SelectContent>;
@@ -698,6 +743,7 @@ if ( {) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Slider
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
@@ -849,13 +895,20 @@ value={selectedCategory}
                   </SelectContent>
                 </Select>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </div>
               
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
+<<<<<<< HEAD
+                  Price Range
+                </label>
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                   Minimum Rating
@@ -886,6 +939,7 @@ value={selectedCategory}
                   Price Range
                 </label>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </div>
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -894,6 +948,8 @@ value={selectedCategory}
                 <div className="flex flex-wrap gap-2">
                   {[null, 3, 4, 5].map((rating) => (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -901,10 +957,13 @@ value={selectedCategory}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
                       size="sm"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                       onClick={() => {
                         // // // console.log("Rating selected:", rating),
@@ -965,6 +1024,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
@@ -1049,6 +1109,9 @@ defaultValue={_[priceRange.min, priceRange.max]}
                       variant="outline";
                       size="sm";
 <<<<<<< HEAD
+                      }}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                       on_click={() => {
                         console.log ("Rating selected:", rating);
@@ -1086,6 +1149,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
 =======
                       }}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       }`}
                     >;
                       {rating === null ? (;
@@ -1104,6 +1168,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
                             <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
                           ))}
                           <span className="ml-1">& Up</span>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                         </div>;
@@ -1128,6 +1194,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       )}
                     </Button>;
                   ))}
@@ -1150,6 +1217,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
 
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
+<<<<<<< HEAD
+=======
 
 =======
                         </div>;
@@ -1167,19 +1236,25 @@ defaultValue={_[priceRange.min, priceRange.max]}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   console.log("Resetting filters");
                   setSearchQuery("");
                   setSelectedCategory("all")
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   // // // console.log("Resetting filters"),
                   setSearchQuery(""),
                   setSelectedCategory("all"),
                   setCurrentPriceFilter([priceRange.min, priceRange.max]),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1187,6 +1262,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   setSelectedRating(null)
                 }}
               >
@@ -1199,6 +1275,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1217,6 +1295,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                 <div className="flex items-center gap-2 ml-auto">
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   setSelectedCategory("all"),;
                   setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
                   setSelectedRating(null);
@@ -1251,6 +1330,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
                   <Button
                     variant="outline"
                     size="icon"
@@ -1360,11 +1441,14 @@ defaultValue={_[priceRange.min, priceRange.max]}
 
                 <div className="flex items-center gap-2 ml-auto">;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Button
                     variant="outline"
                     size="icon"
                     onClick={() => setView("grid")}
                     className={`${view === "grid" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
+<<<<<<< HEAD
+=======
                   >;
                     <LayoutGrid className="h-4 w-4" />;
                   </Button>;
@@ -1479,12 +1563,15 @@ defaultValue={_[priceRange.min, priceRange.max]}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   >;
                     <List className="h-4 w-4" />;
                   </Button>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1494,6 +1581,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
@@ -1502,13 +1590,21 @@ defaultValue={_[priceRange.min, priceRange.max]}
               <p className="text-zion-slate-light">;
                 Showing {filteredListings.length} results;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {selectedCategory !== "all" && ` in ${selectedCategory}`}
                 {searchQuery && ` for "${searchQuery}"`}
               </p>;
             </div>;
+<<<<<<< HEAD
+;
+            {isLoading ? (;
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1522,6 +1618,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
             {isLoading ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {isLoading ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {[1, 2, 3, 4].map((i) => (;
@@ -1540,6 +1637,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   </div>;
                 ))}
               </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             ) : filteredListings && filteredListings.length > 0 ? (;
@@ -1576,6 +1675,7 @@ defaultValue={_[priceRange.min, priceRange.max]}
                   <ProductListingCard;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     key={listing.id}
                     listing={listing}
                     view={view}
@@ -1596,9 +1696,12 @@ defaultValue={_[priceRange.min, priceRange.max]}
 
                     setSelectedRating(null)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     setSearchQuery(""),
                     setSelectedCategory("all"),
                     setCurrentPriceFilter([priceRange.min, priceRange.max]),
@@ -1668,6 +1771,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
               </div>;
             )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </div>;
         </div>;
       </div>;
@@ -1697,12 +1802,16 @@ defaultValue={_[priceRange.min, priceRange.max]}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   on_click={() => {
                     setSearchQuery ("");
                     setSelectedCategory ("all");
                     setCurrentPriceFilter ([price_range.min, price_range.max]);
                     setSelectedRating (null);
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                 >;
@@ -1713,6 +1822,8 @@ defaultValue={_[priceRange.min, priceRange.max]}
         </div>;
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1804,4 +1915,5 @@ return (<div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="c
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

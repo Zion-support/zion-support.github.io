@@ -4,6 +4,8 @@
   textContent: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
+=======
 
 import React from './react';
 import { cva, type VariantProps  } from './class - variance - authority';
@@ -47,6 +49,7 @@ export interface BadgeProps;
     VariantProps<typeof badgeVariants> {}
 function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
@@ -80,7 +83,10 @@ export interface BadgeProps;
  */
 function Badge() {
   return (
+<<<<<<< HEAD
+=======
     <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
 }
 
 export { Badge, badgeVariants };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

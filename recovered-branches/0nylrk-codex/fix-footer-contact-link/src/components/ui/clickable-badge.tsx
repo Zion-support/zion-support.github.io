@@ -3,6 +3,8 @@ import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {badgeVariants} from "@/components/ui/badge-variants";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface ClickableBadgeProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
@@ -44,6 +46,7 @@ export function ClickableBadge({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { X } from "lucide-react",
 import { cn } from "@/lib/utils";
@@ -63,13 +66,18 @@ export function ClickableBadge({
   className;
   variant;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   children,
   className,
   variant = "default",
   onRemove,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -84,6 +92,7 @@ export function ClickableBadge({
         onRemove && "pl-2 && 2.5 pr-1 && 1.5 py-1"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         className
       )}
       {...props}>;
@@ -97,6 +106,8 @@ export function ClickableBadge({
   );
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -128,6 +139,7 @@ export function ClickableBadge({
           }}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
@@ -205,6 +217,8 @@ function ClickableBadge() {
             on_remove ();
           }}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -255,6 +269,7 @@ onRemove && "pl-2.5 pr-1.5 py-1";
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           className="ml - 1 rounded - full p - 0.5 hover:bg - background / 20";
           aria - label="Remove";
         >;
@@ -263,4 +278,7 @@ onRemove && "pl-2.5 pr-1.5 py-1";
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

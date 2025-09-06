@@ -83,6 +83,8 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
             </div>
           </div>
         ))}
+<<<<<<< HEAD
+=======
 
 
 
@@ -130,3 +132,4 @@ function AchievementBadges() {
     </Card>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

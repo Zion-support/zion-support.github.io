@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -29,6 +31,7 @@ const next_config = {
 const fs = require('fs');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 console.log('🔧 Fixing site loading issues...');
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
@@ -58,8 +61,11 @@ console.log('🎉 Site fixes completed!');
 const fs = require('fs'),;
 const fs = require('fs');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
@@ -71,6 +77,8 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
   images: {
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
@@ -78,10 +86,13 @@ const next_config = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -93,6 +104,7 @@ const nextConfig = {;
   reactStrictMode: true;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   reactStrictMode: true,;
   reactStrictMode: true;
 
@@ -105,6 +117,8 @@ const nextConfig = {;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     domains: ["localhost", "ziontechgroup.com"];
@@ -144,6 +158,7 @@ const emptyFiles = [;
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ],;
 ];
 
@@ -155,6 +170,8 @@ emptyFiles.forEach(file => {;
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
     fs.unlinkSync(file),;
     console.log(`✅ Removed empty file: ${file}`);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,3 +233,4 @@ console.log('🎉 Site fixes completed!'),;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

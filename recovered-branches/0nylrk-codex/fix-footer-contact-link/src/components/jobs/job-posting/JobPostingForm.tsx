@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -14,6 +16,7 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate  } from 'react-router-dom';
 
@@ -48,6 +51,8 @@ import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -71,6 +76,7 @@ import { JobSchemaType } from './validation',
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface JobPostingFormProps {
 =======
 =======
@@ -95,6 +101,8 @@ import {DescriptionFields} from './DescriptionFields';
 import { use_jobs } from '@/hooks / use_jobs';
 import {JobSchemaType} from './validation';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -111,10 +119,13 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -122,6 +133,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface JobPostingFormProps {
   job_id?: string;
   on_success?: () => void;
@@ -159,6 +171,8 @@ function JobPostingForm() {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -183,6 +197,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const {
     form,
     isLoading,
@@ -194,6 +209,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     setIsRemote,
     submitJob
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -206,18 +223,22 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } = useJobForm({ jobId, onSuccess }),
 
   const { handleSubmit, setValue, formState } = form,
   const { isSubmitting } = formState,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     if (jobId) {
       setIsFormLoading(true),
@@ -243,6 +264,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
                   setValue(key, value as any)
                 } catch (e) {
                   // Skip fields that don't exist in our form
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -297,6 +320,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect, useCallback } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",;
@@ -353,6 +377,8 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
           if (job) {;
             // Set form values;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             Object && Object.entries(job).forEach(([key, value]) => {;
               if (key === 'published_date' && value) {;
@@ -363,6 +389,7 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Object.entries(job).forEach(([key, value]) => {;
               if (key === 'published_date' && value) {;
                 setStartDate(new Date(value as string)),;
@@ -370,13 +397,19 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
               } else if (key === 'expiry_date' && value) {;
                 setEndDate(new Date(value as string)),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 setValue('expiry_date', value as string);
               } else if (key === 'is_remote') {;
                 setIsRemote(value as boolean);
               } else if (key === 'description') {;
+<<<<<<< HEAD
+                setEditorContent(value as string),;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 setEditorContent(value as string);
@@ -386,6 +419,7 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
 =======
                 setEditorContent(value as string),;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 setValue('description', value as string);
               } else {;
                 try {;
@@ -393,12 +427,15 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
                   setValue(key, value as any);
                 } catch (e) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     submit_job;
   } = useJobForm ({ job_id, on_success });
 ;
@@ -448,17 +485,22 @@ if ( {) {
                   set_value (key, value as any);
                 } catch (e) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   // Skip fields that don't exist in our form;
                 }
               }
             });
           }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -527,6 +569,7 @@ if ( {) {
         setEditorContent("")
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         });
 
 
@@ -570,6 +613,8 @@ if ( {) {
       if (onSuccess) {;
         onSuccess();
       }
+<<<<<<< HEAD
+=======
     } catch (error: any) {;
       console && console.error("Error creating/updating job:", error);
       toast && toast.error(error && error.message || "Failed to post job");
@@ -618,6 +663,7 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error: any) {
       console.error("Error creating/updating job:", error);
       toast.error(error.message |"Failed to post job")
@@ -713,6 +759,8 @@ if ( {) {
               id="isRemote"
               checked={isRemote}
               className="mr-2"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     } catch (error: any) {;
       console.error("Error creating/updating job:", error);
@@ -837,10 +885,13 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Input
               type="checkbox"
               id="isRemote"
               checked={isRemote}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -858,6 +909,7 @@ if ( {) {
               checked={isRemote}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
             />
@@ -889,6 +941,8 @@ if ( {) {
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -896,10 +950,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
       </form>
     </Form>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -998,10 +1055,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             />;
             Remote;
           </Label>;
         </div>;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1098,3 +1159,4 @@ if (isLoading || isFormLoading) {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

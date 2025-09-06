@@ -6,6 +6,8 @@ interface ApplicationsTableProps {
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -13,6 +15,7 @@ interface ApplicationsTableProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {format} from "date-fns";
 import {JobApplication} from "@/types/jobs";
 import {Avatar} from "@/components/ui/avatar";
@@ -26,6 +29,8 @@ import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmatio
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ApplicationsTableProps {;
   applications: JobApplication[],;
@@ -37,6 +42,7 @@ interface ApplicationsTableProps {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar } from "@/components/ui/avatar",
@@ -67,6 +73,8 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -334,6 +342,7 @@ import { Briefcase, User } from "lucide-react",;
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",;
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ApplicationsTableProps {;
   applications: JobApplication[],;
   processingId: string | null,;
@@ -349,6 +358,9 @@ export function ApplicationsTable({;
   onStatusChange,;
   onViewScore;
 }: ApplicationsTableProps) {;
+<<<<<<< HEAD
+  const [hireModalOpen, setHireModalOpen] = useState(false);
+=======
   const [hireModalOpen, setHireModalOpen] = useState(false),;
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),;
 <<<<<<< HEAD
@@ -367,6 +379,7 @@ export function ApplicationsTable({;
       description: "Offer has been sent to the talent.";
     });
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <>;
@@ -382,6 +395,8 @@ export function ApplicationsTable({;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
+<<<<<<< HEAD
+=======
             {applications && applications.map((application) => (;
               <TableRow key={application && application.id}>;
                 <TableCell>;
@@ -417,6 +432,7 @@ export function ApplicationsTable({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <ClickableBadge
                       variant="outline"
                       className="cursor-pointer"
@@ -473,6 +489,8 @@ export function ApplicationsTable({;
                   </div>;
                 </TableCell>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <TableCell className="hidden md:table - cell">;
                   {format (new Date (application.created_at), "PP")}
                 </TableCell>;
@@ -509,6 +527,7 @@ export function ApplicationsTable({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}
@@ -517,18 +536,23 @@ export function ApplicationsTable({;
                   </div>;
                 </TableCell>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           </TableBody>;
         </Table>;
       </div>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication |undefined}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
+=======
 
       />;
     </>;
@@ -691,6 +715,7 @@ export function ApplicationsTable({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </TableRow>))}
           </TableBody>;
         </Table>;
@@ -704,6 +729,8 @@ export function ApplicationsTable({ ;
       />;
     </>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -764,3 +791,4 @@ export function ApplicationsTable({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

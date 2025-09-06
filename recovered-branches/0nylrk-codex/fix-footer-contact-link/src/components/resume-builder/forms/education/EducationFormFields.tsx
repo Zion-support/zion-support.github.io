@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -6,6 +8,7 @@
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -26,9 +29,12 @@ import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 import { Education } from '@/types/resume';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -44,6 +50,8 @@ import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -51,6 +59,7 @@ import {Education} from '@/types/resume';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Define schema for form validation
 
 const educationSchema = z.object({
@@ -63,11 +72,14 @@ const educationSchema = z.object({
   description: z.string().optional()
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function EducationFormFields({
   isEditing
@@ -84,6 +96,8 @@ export function EducationFormFields({
   onCancel 
 }: EducationFormFieldsProps) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -91,6 +105,7 @@ export function EducationFormFields({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -112,6 +127,10 @@ export function EducationFormFields({
       setError(err.message |'An error occurred')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+  };
+
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -146,6 +165,7 @@ import {EducationFormFieldsProps} from './types';
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -166,6 +186,8 @@ import {;
 import { useState } from 'react',;
 import { EducationFormFieldsProps } from './types',;
 import { Education } from '@/types/resume',;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 // Define schema for form validation;
@@ -408,6 +430,7 @@ import {;
 import { useState } from 'react',;
 import { EducationFormFieldsProps } from './types',;
 import { Education } from '@/types/resume',;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Define schema for form validation;
 const educationSchema = z.object({;
   institution:z.string().min(1, 'Institution is required'),;
@@ -565,6 +588,11 @@ import {EducationFormFieldsProps} from './types';
               </FormControl>;
               <FormMessage />;
 <<<<<<< HEAD
+          <FormField
+            control={form && form.control}
+            name="start_date"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -594,6 +622,7 @@ import {EducationFormFieldsProps} from './types';
             control={form && form.control}
             name="start_date"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     {...field}
                     value={field.value |''}
                   />
@@ -603,6 +632,8 @@ import {EducationFormFieldsProps} from './types';
             )}
           />
           <div className="space-y-4">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -638,6 +669,7 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
@@ -923,6 +955,8 @@ import {EducationFormFieldsProps} from './types';
             onClick={onCancel}>;
             {isEditing ? 'Cancel' : 'Back'}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1109,3 +1143,4 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

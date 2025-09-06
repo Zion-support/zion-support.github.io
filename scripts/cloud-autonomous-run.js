@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const ROOT = process && process.cwd(),
@@ -40,15 +42,19 @@ const IDEAS_DIR = REPORTS_DIR
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function ensureDirs() {
   fs.mkdirSync(REPORTS_DIR, { recursive: true })
 }
 function listAutomations() {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const autoDir = path.join(ROOT, 'automation')
   if (!fs.existsSync(autoDir)) return []
   const files = fs.readdirSync(autoDir)
@@ -72,6 +78,8 @@ function writeStatus(automations, extras = {}) {
   const status = {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     updatedAt: new Date().toISOString(),
     automations,
@@ -85,11 +93,14 @@ function writeStatus(automations, extras = {}) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return status
 }
 async function analyzeFeedbackIfPossible() {
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -153,6 +164,7 @@ function analyzeFeedbackIfPossible() {
       process.env.NODE_ENV = process.env.NODE_ENV || 'production',
       await import (pathToFileURL (script).href);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   } catch (_) {
     // ignore;
@@ -160,6 +172,8 @@ function analyzeFeedbackIfPossible() {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (!process && process.env.OPENAI_API_KEY) return null,
@@ -178,6 +192,7 @@ function analyzeFeedbackIfPossible() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return ideasPath
 }
 async function main() {
@@ -213,6 +228,11 @@ async function main() {
   // Feedback analysis
   try {
 <<<<<<< HEAD
+  // Generate automation ideas if key present
+  try {
+    await generateIdeasIfPossible()
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -232,6 +252,7 @@ async function main() {
   try {
     await generateIdeasIfPossible()
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch {}
 
 main().catch((e) => { console.error(e), process.exit(1) }),;
@@ -276,6 +297,8 @@ function main() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       // non - fatal;
     }
@@ -421,6 +444,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Generate automation ideas if key present;
   try {;
     await generateIdeasIfPossible();
@@ -442,4 +466,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -24,6 +26,7 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -84,10 +87,13 @@ serve(async (req) => {
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
   try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const { applicationId } = await req && req.json();
 
 <<<<<<< HEAD
@@ -106,6 +112,8 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -113,6 +121,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -121,6 +130,8 @@ serve(async (req) => {
     return new Response(;
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -129,6 +140,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -137,6 +149,9 @@ serve(async (req) => {
 
   try {
     const { applicationId } = await req.json(),
+<<<<<<< HEAD
+    
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -150,6 +165,7 @@ serve(async (req) => {
 =======
     
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -157,6 +173,8 @@ serve(async (req) => {
     const { data: application, error: appError } = await supabase
       .from("job_applications")
       .select(`
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -173,6 +191,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
@@ -222,6 +241,8 @@ if ( {) {
         cover_letter;
         resume_id;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -264,6 +285,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
         .select(`
@@ -304,6 +326,8 @@ if ( {) {
         resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
           ${resume && resume.resume_skills.map((skill: any) => skill && skill.name).join(", ")}
         `;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
     let resumeContent = "";
@@ -357,6 +381,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     // 3. If no resume content, use talent profile and cover letter
@@ -374,6 +399,11 @@ if ( {) {
         Cover Letter: ${application && application.cover_letter || ""}
         Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
       `;
+<<<<<<< HEAD
+      resumeSkills = application.talent_profile?.skills |[]
+    }
+    // 4. Prepare job details
+=======
 <<<<<<< HEAD
       resumeSkills = application && application.talent_profile?.skills || []
 <<<<<<< HEAD
@@ -399,11 +429,14 @@ if ( {) {
     }
     // 4. Prepare job details
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
       resumeSkills = application.talent_profile?.skills || []
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -412,6 +445,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     );
   }
 ;
@@ -494,6 +528,8 @@ if ( {) {
       `,;
       resumeSkills = application.talent_profile?.skills || [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -502,6 +538,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
     // 4. Prepare job details
@@ -510,6 +547,8 @@ if ( {) {
     const jobSkills = application.job?.skills || [],
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -517,10 +556,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -561,6 +603,7 @@ if ( {) {
         model: "gpt-4o-mini",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     // 4. Prepare job details
         model: "gpt-4o-mini";
@@ -571,6 +614,8 @@ if ( {) {
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -587,12 +632,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {
             role: "user"
             content: `
             # Job Details
             Title: ${jobTitle}
             Description: ${jobDescription}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -605,6 +653,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             # Resume Content
             ${resumeContent}
             Compare the resume to the job description and provide:
@@ -612,6 +661,8 @@ if ( {) {
             2. A brief summary of why this score was given (1-2 sentences)
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -733,6 +784,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Respond in JSON format with the following structure: {
               "score": 75;
               "summary": "Good match with relevant experience in required technologies.";
@@ -740,6 +792,8 @@ if ( {) {
                 "skills_match": {
                   "score": 80
                   "matching": ["skill1", "skill2"];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -834,6 +888,7 @@ if ( {) {
             }`
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         ];
         temperature: 0.5})});
@@ -930,6 +985,8 @@ if ( {) {
       matchResult = JSON.parse(content),
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -938,6 +995,7 @@ if ( {) {
 =======
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
       const content = aiResult && aiResult.choices[0].message && message.content;
@@ -971,10 +1029,13 @@ if ( {) {
     } catch (error) {
       console && console.error("Error parsing AI response:", error);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
@@ -982,16 +1043,21 @@ if ( {) {
       }
     } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       console.error("Error parsing AI response:", error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       throw new Error("Failed to parse AI analysis results")
     }
     // 6. Update the application with the match results
     const { error: updateError } = await supabase
       .from("job_applications")
       .update({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         match_score: matchResult && matchResult.score;
@@ -1027,11 +1093,14 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (updateError) {
       throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
     }
     // 7. Return the match results
     return new Response(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       JSON && JSON.stringify({ 
@@ -1050,10 +1119,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
       {
         status: 200
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1067,6 +1139,7 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     )
   } catch (error) {
@@ -1130,6 +1203,8 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       JSON && JSON.stringify({ 
         success: true, 
@@ -1229,12 +1304,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     console.error ("Error in resume - scorer function:", error);
     return new Response (
       JSON.stringify ({ error: error.message });
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
+<<<<<<< HEAD
+=======
       }
     );
   }
@@ -1345,6 +1423,7 @@ serve(async (req) => {;
         `,;
         ;
         resumeSkills = resume.resume_skills.map((skill:any) => skill.name);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     ;
@@ -1565,8 +1644,11 @@ headers: {
 });
   }
 });
+<<<<<<< HEAD
+=======
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

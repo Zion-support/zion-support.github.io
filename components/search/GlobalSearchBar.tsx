@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
@@ -72,6 +74,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -85,9 +88,12 @@ export default function GlobalSearchBar() {;
       setSuggestions([]);
       return;      return
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 class ErrorBoundary extends React.Component {
@@ -224,9 +230,12 @@ import { useEffect, useMemo, useRef, useState } from 'react';
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     
     return this.props.children;
@@ -302,6 +311,8 @@ export default function GlobalSearchBar() {
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           aria-label='Voice search'
         >
           🎤
@@ -352,6 +363,7 @@ export default function GlobalSearchBar() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <button
                   type="button"
                   onClick={() => {;
@@ -359,6 +371,11 @@ export default function GlobalSearchBar() {
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
+<<<<<<< HEAD
+
+                >
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
@@ -371,6 +388,7 @@ export default function GlobalSearchBar() {
                 >
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -381,6 +399,8 @@ export default function GlobalSearchBar() {
         </div>;
       )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
                   {s}
@@ -388,6 +408,7 @@ export default function GlobalSearchBar() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -405,12 +426,17 @@ export default function GlobalSearchBar() {
       )}
     </form>
 <<<<<<< HEAD
+  )
+}
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
   )
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { use_router } from 'next / router';
 export default /**
  * GlobalSearchBar - Function description
@@ -580,6 +606,8 @@ if (return) {
     </form>));
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 
@@ -596,3 +624,4 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

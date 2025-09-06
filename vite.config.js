@@ -39,6 +39,8 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
+<<<<<<< HEAD
+=======
 =======
         drop_debugger: true,
       },
@@ -49,3 +51,4 @@ export default defineConfig({
   },
 });
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

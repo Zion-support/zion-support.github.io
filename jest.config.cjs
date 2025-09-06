@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+module.exports = {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
@@ -46,6 +51,7 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -60,6 +66,9 @@ const customJestConfig = {
     }]
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   testMatch: [
     '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
     '<rootDir>/src/**/*.(test|spec).(js|jsx|ts|tsx)'
@@ -78,6 +87,10 @@ const customJestConfig = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   verbose: true,
   collectCoverage: false,
+<<<<<<< HEAD
+  testTimeout: 10000,
+};
+=======
 <<<<<<< HEAD
   testTimeout: 10000,
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -123,3 +136,4 @@ module.exports = createJestConfig(customJestConfig)
 };
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

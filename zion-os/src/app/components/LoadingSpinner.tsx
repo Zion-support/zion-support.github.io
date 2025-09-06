@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 interface LoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg',;
   text?: string,;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   className?: string;
 }
 export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
@@ -30,8 +33,11 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
@@ -61,6 +67,8 @@ function LoadingSpinner() {
     lg: 'w - 8 h - 8';
   },
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -139,3 +147,4 @@ function LoadingSpinner() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

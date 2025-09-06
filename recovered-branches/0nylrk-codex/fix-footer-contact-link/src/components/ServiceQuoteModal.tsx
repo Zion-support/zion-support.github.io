@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -7,6 +9,7 @@ import { useState  } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -24,6 +27,9 @@ import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
 <<<<<<< HEAD
+import { useState } from 'react',
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -39,6 +45,7 @@ import { useState } from 'react',
 =======
 import { useState } from 'react',
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -51,6 +58,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -74,6 +83,7 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -93,6 +103,8 @@ const TIMELINE_OPTIONS = [
   { label: "6+ months", value: "6+months" }]
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -146,10 +158,13 @@ export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: Servi
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -258,11 +273,14 @@ function ServiceQuoteModal() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       // Call Supabase function to process the quote;
       const { data, error } = await supabase.functions.invoke ('process - quote', {
         body: {
           service: service ? {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -324,11 +342,14 @@ function ServiceQuoteModal() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Show success message
       toast({
         title: "Quote Request Submitted!"
         description: "We've sent your request to the service provider. They will contact you soon."})
       // Close the modal and reset form
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       onOpenChange(false);
@@ -364,17 +385,23 @@ function ServiceQuoteModal() {
       console.error("Error submitting quote:", error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       onOpenChange(false),
       setFormData({
       setCurrentStep('details')
     } catch (error) {
       console.error("Error submitting quote:", error),
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Error"
         description: "There was an error submitting your quote request. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -386,6 +413,7 @@ function ServiceQuoteModal() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             id: service.id,
             title: service.title,
             category: service.category} : null,
@@ -395,6 +423,8 @@ function ServiceQuoteModal() {
             end_date: end_date?.toISOString ()}
         }
       });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
       // Check condition
@@ -472,6 +502,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -492,6 +523,8 @@ if (throw error) {
               <div className="space-y-2">
                 <Label htmlFor="description" className="text-white">Project Description</Label>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -500,6 +533,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Textarea
                   id="description"
                   name="description"
@@ -515,6 +549,8 @@ if (throw error) {
                 <Select
                   value={formData.budget}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
@@ -800,6 +836,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Textarea
                   id="description"
                   name="description"
@@ -808,6 +845,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   placeholder="Describe your project needs in detail..."
                   className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
                   required
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -821,6 +860,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   value={formData && formData.budget} 
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
 =======
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
@@ -852,6 +892,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     {BUDGET_RANGES.map((range) => (;
@@ -860,6 +902,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         {range.label}
                       </SelectItem>
                     {BUDGET_RANGES && BUDGET_RANGES.map((range) => (;
@@ -922,6 +965,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                       </SelectItem>;
                     ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
                   </SelectContent>;
                 </Select>;
@@ -951,6 +996,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                           "justify-start text-left font-normal w-full"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -1017,6 +1063,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                         onSelect={setStartDate}
                         initialFocus
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1085,6 +1133,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -1098,6 +1147,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 <<<<<<< HEAD
                         selected={endDate}
                         onSelect={setEndDate}
+<<<<<<< HEAD
+=======
 
 =======
                       <Button;
@@ -1128,6 +1179,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
             </div>;
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           )}
           {/* Step 3: Contact */}
 =======
@@ -1195,6 +1247,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   className="bg-zion-blue-dark border-zion-blue-light text-white"
                   required
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
                   value={formData.email}
@@ -1229,11 +1283,14 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   {endDate && (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <div className="flex justify-between">
                       <span className="text-zion-slate-light">End Date:</span>
                       <span className="text-white">{format(endDate, "PPP")}</span>
                     </div>
                   )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1242,6 +1299,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 =======
                 />;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           )}
                 </div>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1327,6 +1385,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 
           )}
 
+<<<<<<< HEAD
+=======
 
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;
             {currentStep !== 'details' && (;
@@ -1346,13 +1406,17 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
             {currentStep !== 'details' && (
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
           )}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Button
                 type="button"
                 variant="outline"
@@ -1365,6 +1429,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                 Previous;
               </Button>;
             )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1380,10 +1446,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => onOpenChange(false)}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1430,6 +1499,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -1437,6 +1507,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1716,10 +1788,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </div>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1838,3 +1913,4 @@ return (<Dialog open= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

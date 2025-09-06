@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -9,6 +11,7 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const user = {;
     scopeOfWork: input.scopeOfWork;
     startDateIso: input.startDateIso;
@@ -75,6 +78,8 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       estimatedEffortHours;
       tags: ["AI Suggested"];
     });
+<<<<<<< HEAD
+=======
     phaseStart = due;
   }
   return milestones;
@@ -164,16 +169,20 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       estimatedEffortHours,;
       tags: ["AI Suggested"];
     }),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     phaseStart = due;
   }
   return milestones;
 }
+<<<<<<< HEAD
+=======
 ;
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {;
   const ai = await callOpenAI(input);
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
 =======
 =======
@@ -247,6 +256,8 @@ if (return null, ) {
     return null;
   }
 }
+<<<<<<< HEAD
+=======
 function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilestoneItem[] {
   const start = new Date (input.startDateIso),
   const end = new Date (input.endDateIso),
@@ -427,5 +438,6 @@ body: JSON.stringify (body)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return { milestones }
 }

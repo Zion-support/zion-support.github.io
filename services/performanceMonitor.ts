@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface PerformanceMetrics {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface PerformanceMetrics {
 export interface PerformanceMetrics {;
   url: string;
@@ -17,11 +20,14 @@ export interface PerformanceMetrics {;
   timeToInteractive: number;
   totalBlockingTime: number;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   speed_index: number;
   performance_score: number;
@@ -29,9 +35,12 @@ export interface PerformanceMetrics {;
   bestPracticesScore: number,
   seo_score: number;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface PerformanceAlert {
 =======
@@ -65,6 +74,8 @@ export interface PerformanceAlert {
   metric: string;
   threshold: number;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,11 +97,14 @@ export interface PerformanceAlert {
 export interface MonitoringConfig {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
     load_time: number;
     firstContentfulPaint: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,6 +146,7 @@ export interface MonitoringConfig {;
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export class PerformanceMonitorService {
 
   private apiKey: string;
@@ -141,6 +156,8 @@ export class PerformanceMonitorService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
@@ -149,10 +166,13 @@ export class PerformanceMonitorService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,6 +187,7 @@ export class PerformanceMonitorService {
         throw new Error(`Performance monitoring failed: ${response.statusText}`)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface PerformanceMetrics {;
   url: string,;
   timestamp: Date,;
@@ -245,6 +266,8 @@ export interface PerformanceMetrics {;
       }
       return await response.json()
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -255,6 +278,7 @@ export interface PerformanceMetrics {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
         method: 'POST',
         headers: {
@@ -269,8 +293,11 @@ export interface PerformanceMetrics {;
       return await response && response.json()
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this && this.generateMockMetrics(url)
@@ -285,6 +312,8 @@ export interface PerformanceMetrics {;
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -312,6 +341,7 @@ export interface PerformanceMetrics {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -321,6 +351,8 @@ export interface PerformanceMetrics {;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -329,6 +361,7 @@ export interface PerformanceMetrics {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       return await response.json()
 =======
@@ -364,6 +397,8 @@ export interface PerformanceMetrics {;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -384,6 +419,7 @@ export interface PerformanceMetrics {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
@@ -431,6 +467,8 @@ export interface PerformanceMetrics {;
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
@@ -453,6 +491,7 @@ export interface PerformanceMetrics {;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -480,6 +519,8 @@ export interface PerformanceMetrics {;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -488,6 +529,7 @@ export interface PerformanceMetrics {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       return await response.json()
 =======
@@ -509,7 +551,10 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
@@ -552,6 +597,8 @@ export interface PerformanceMetrics {;
     recommendations: string[]
   }> {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -593,6 +640,7 @@ export interface PerformanceMetrics {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores
@@ -607,6 +655,8 @@ export interface PerformanceMetrics {;
     return {
       url;
       timestamp: new Date();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -650,6 +700,7 @@ export interface PerformanceMetrics {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
@@ -657,6 +708,8 @@ export interface PerformanceMetrics {;
     const now = new Date()
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -808,6 +861,7 @@ export interface PerformanceMetrics {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return data
   }
@@ -1239,12 +1293,17 @@ recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loadi
   }
 }
 // Pricing tiers for the Performance Monitor;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1272,10 +1331,13 @@ export const PERFORMANCE_MONITOR_PRICING = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   professional: {
     name: 'Professional';
     price: 49;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1303,11 +1365,14 @@ export const PERFORMANCE_MONITOR_PRICING = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   enterprise: {
     name: 'Enterprise';
     price: 149;
     period: '/month';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1334,6 +1399,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -1371,6 +1437,9 @@ export const PERFORMANCE_MONITOR_PRICING = {;
     price: 19,;
     period: '/month',;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     features: [;
       'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
     ];
@@ -1417,6 +1486,8 @@ export const PERFORMANCE_MONITOR_PRICING = {;
   }
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 // Pricing tiers for the Performance Monitor
 export const PERFORMANCE_MONITOR_PRICING = {
@@ -1466,3 +1537,4 @@ export const PERFORMANCE_MONITOR_PRICING = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

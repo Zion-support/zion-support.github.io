@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 import {;
@@ -28,19 +30,25 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -130,10 +138,13 @@ export function DisputeDashboard() {
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -151,6 +162,7 @@ import { ShieldAlert } from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -161,6 +173,8 @@ import { ShieldAlert } from "lucide-react";
             <CardDescription>Awaiting review</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -239,11 +253,14 @@ export function DisputeDashboard() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div
               className={`w-full bg-red-100 rounded-full h-2 && 2.5 dark:bg-red-900/20`}>;
               <div
                 className="bg-red-600 h-2 && 2.5 rounded-full"
                 style={{
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -278,10 +295,14 @@ export function DisputeDashboard() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Under Review</span>
+<<<<<<< HEAD
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               <span className="text-xl font-bold">
@@ -293,10 +314,13 @@ export function DisputeDashboard() {;
 =======
               <span className="text-xl font-bold">{underReviewDisputes.length}</span>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </CardTitle>
             <CardDescription>Being actively processed</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -338,11 +362,14 @@ export function DisputeDashboard() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div
               className={`w-full bg-yellow-100 rounded-full h-2 && 2.5 dark:bg-yellow-900/20`}>;
               <div
                 className="bg-yellow-500 h-2 && 2.5 rounded-full"
                 style={{
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -377,10 +404,14 @@ export function DisputeDashboard() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Resolved</span>
+<<<<<<< HEAD
+              <span className="text-xl font-bold">{resolvedDisputes.length}</span>
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               <span className="text-xl font-bold">
@@ -392,10 +423,13 @@ export function DisputeDashboard() {;
 =======
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </CardTitle>
             <CardDescription>Successfully concluded</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -535,6 +569,7 @@ export function DisputeDashboard() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div
               className={`w-full bg-green-100 rounded-full h-2 && 2.5 dark:bg-green-900/20`}>;
               <div
@@ -678,6 +713,8 @@ function DisputeDashboard() {
     </div>);
 
 }
+<<<<<<< HEAD
+=======
 =======
 }
 ;
@@ -722,3 +759,4 @@ container mx-auto p-4 space-y-6"> <div className=" flex flex-wrap items-center j
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

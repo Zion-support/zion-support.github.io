@@ -34,6 +34,9 @@ const { useEffect } from";react" import { useRouter } from";";next/router" impor
 import { useEffect } from\';react\' import { useRouter } from\';\';next/router\' import { useSelector } from\';\';react-redux\' \"function\": withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router && router.push(\'';/login?next=/community/new\')} },[isLoggedIn,router]) \"if\": (!isLoggedIn) { return null} return <Component {...props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth\'';
 const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router && router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
 <<<<<<< HEAD
+const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router && router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -59,3 +62,4 @@ const { useEffect } from";react" import { useRouter } from";";next/router" impor
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

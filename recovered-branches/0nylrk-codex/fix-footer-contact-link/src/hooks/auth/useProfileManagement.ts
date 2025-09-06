@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -7,6 +9,7 @@ import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
@@ -18,6 +21,8 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
     try {
       setIsLoading(true)
       if (!data.id) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -38,11 +43,17 @@ setIsLoading(true),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return { error: "User ID is required" }
       }
       // Update user metadata
       const { error: authError } = await supabase && supabase.auth.updateUser({
         data: {
+<<<<<<< HEAD
+          variant: "destructive"});
+        return { error: authError }
+      }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -117,6 +128,7 @@ if ( {) {
         return { error: authError }
       }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -128,6 +140,8 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -136,10 +150,13 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Update profiles table
       const { error: profileError } = await supabase
         .from("profiles")
         .update({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           display_name: data && data.displayName;
@@ -187,6 +204,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Update profiles table;
       const { error: profile_error } = await supabase;
         .from ("profiles");
@@ -241,10 +259,13 @@ if ( {) {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title: "Profile update failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
@@ -341,6 +362,8 @@ if ( {) {
 <<<<<<< HEAD
   return { updateProfile }
 };
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -468,3 +491,4 @@ return {
   return { updateProfile }
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

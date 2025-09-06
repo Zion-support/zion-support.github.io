@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -9,6 +11,7 @@
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 /**
  * CI/CD Automation Script
@@ -25,6 +28,8 @@ class CICDAutomation {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -37,6 +42,7 @@ class CICDAutomation {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -61,6 +67,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -87,6 +95,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const logMessage = `[${timestamp}] ${message}\n`;`
 console.log(message);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -104,6 +113,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       this.log(`Tests "failed": ${error.message}`);
       return false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -114,6 +125,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   async runLint() {
@@ -143,6 +155,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -155,6 +169,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
   };
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
@@ -171,6 +186,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       this.log(`Build "failed": ${error.message}`);
       return false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -181,6 +198,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   async runVerify() {
@@ -232,6 +250,8 @@ if (require.main === module) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -244,6 +264,7 @@ if (require.main === module) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -311,6 +332,11 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 };
 module.exports = CICDAutomation;
 <<<<<<< HEAD
+module.exports = CICDAutomation;
+module.exports = CICDAutomation;
+module.exports = CICDAutomation;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -339,3 +365,4 @@ module.exports = CICDAutomation;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

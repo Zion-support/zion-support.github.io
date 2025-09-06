@@ -1,6 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -25,8 +33,14 @@ const ContactSection: React.FC = () => {
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We\'ll get back to you soon.');
   };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 =======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -70,6 +84,7 @@ fetch("/api/contact", {
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <section className="py-16 px-4 bg-white">
@@ -160,6 +175,20 @@ fetch("/api/contact", {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
+<<<<<<< HEAD
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your.email@company.com"
+                  />
+                </div>
+              </div>
+=======
                   <Textarea
                     id="message"
                     name="message"
@@ -432,6 +461,7 @@ if ( {) {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -449,8 +479,16 @@ if ( {) {
               </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
@@ -482,11 +520,18 @@ if ( {) {
   );
 };
 
+<<<<<<< HEAD
+export default ContactSection;
+=======
 export default ContactSection;
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -531,4 +576,9 @@ description: err.message;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

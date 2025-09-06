@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {useState} from "react";
+export function NewsletterForm() {;
+=======
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 export function NewsletterForm() {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -10,6 +17,19 @@ export function NewsletterForm() {
     e && e.preventDefault();
     setIsSubmitting(true);
 <<<<<<< HEAD
+export function NewsletterForm() {
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
+
+    e.preventDefault(),
+    setIsSubmitting(true),
+    
+    // Simulate API call
+    setTimeout(() => {
+
+=======
+<<<<<<< HEAD
 
     // Simulate API call
     setTimeout(() => {
@@ -17,6 +37,7 @@ export function NewsletterForm() {
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -37,6 +58,8 @@ export function NewsletterForm() {
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setEmail(e.target.value)
@@ -112,6 +135,7 @@ export function NewsletterForm() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Input
             type="email"
             placeholder="Enter your email"
@@ -139,6 +163,8 @@ export function NewsletterForm() {;
           </Button>;
         </form>;
       )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     </div>;
@@ -232,11 +258,15 @@ function NewsletterForm() {
     </div>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       )}
     </div>
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -29,6 +31,7 @@ import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -37,6 +40,8 @@ import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
 export default function SearchPage() {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -61,6 +66,7 @@ export default function SearchPage() {;
   const { results, loading, search } = useAISearch();
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
@@ -92,13 +98,18 @@ export default function SearchPage() {
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     if (initial) {
       search(initial)
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   const initial = params && params.get("q") || "";
@@ -164,6 +175,7 @@ export default function SearchPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
@@ -186,6 +198,8 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects..."
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           />;
         </form>;
 
@@ -203,6 +217,7 @@ export default function SearchPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -239,6 +254,8 @@ export default function SearchPage() {;
           />;
         </form>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -249,6 +266,7 @@ export default function SearchPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -386,6 +404,8 @@ if ( {) {
     </AppLayout>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -439,3 +459,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

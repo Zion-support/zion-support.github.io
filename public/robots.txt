@@ -2,6 +2,10 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -11,6 +15,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <<<<<<< HEAD
 <<<<<<< HEAD
 # Sitemaps
@@ -26,10 +31,20 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
 # Disallow admin and private areas
 Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 Disallow: /private/
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,10 +100,20 @@ Crawl-delay: 1
 =======
 <<<<<<< HEAD
 # Disallow admin and private areas
+=======
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-347d
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+<<<<<<< HEAD
 Disallow: /test/
 Disallow: /temp/
 
@@ -111,6 +136,8 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> origin/main
+<<<<<<< HEAD
+=======
 =======
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -153,3 +180,36 @@ Allow: /guides/
 Crawl-delay: 1
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
+Disallow: /temp_backup/
+Disallow: /src.corrupted/
+Disallow: /components.corrupted/
+Disallow: /lib.corrupted/
+Disallow: /pages.disabled/
+Disallow: /pages.disabled_auto/
+Disallow: /solutions.disabled/
+Disallow: /src.disabled/
+Disallow: /data_backup/
+
+# Allow important pages
+Allow: /services
+Allow: /ai-services
+Allow: /micro-saas
+Allow: /it-services
+Allow: /about
+Allow: /contact
+Allow: /pricing
+Allow: /faq
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
+=======
+
+# Allow important pages
+Allow: /services/
+Allow: /micro-saas/
+Allow: /ai-services/
+Allow: /it-services/
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-347d
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

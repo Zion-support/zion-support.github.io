@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,6 +11,7 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -17,6 +20,8 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface PaymentButtonProps {;
@@ -27,6 +32,7 @@ interface PaymentButtonProps {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -48,6 +54,8 @@ interface PaymentButtonProps {
   redirectUrl?: string;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -58,6 +66,7 @@ export function PaymentButton(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   amount;
   serviceId;
   providerId;
@@ -112,7 +121,10 @@ import { useNavigate } from "react-router-dom",
       });
       return;
     }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -123,6 +135,8 @@ interface PaymentButtonProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
   redirectUrl?: string
 }
 
@@ -134,6 +148,7 @@ interface PaymentButtonProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function PaymentButton({;
   amount;
   serviceId;
@@ -223,11 +238,14 @@ export function PaymentButton({;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       
       // Call the create-checkout edge function
@@ -241,6 +259,8 @@ export function PaymentButton({;
           cancelUrl: window.location.href}}),
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -249,12 +269,15 @@ export function PaymentButton({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (error) {
         throw error
       }
       if (data?.url) {
         // Open Stripe checkout in a new tab
         window.open(data.url, '_blank')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -265,6 +288,7 @@ export function PaymentButton({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { cn } from '@/lib / utils';
@@ -338,6 +362,8 @@ if ( {) {
       }
     } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -384,6 +410,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
@@ -435,6 +462,8 @@ if ( {) {
         throw new Error("No checkout URL returned");
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     } catch (error) {;
@@ -477,12 +506,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({;
         title: "Payment error",;
         description: "There was a problem initiating your payment. Please try again.",;
         variant: "destructive"});
     } finally {;
       // Reset button state after a short delay;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       setTimeout(() => {;
         setIsProcessing(false);
@@ -502,6 +534,7 @@ if ( {) {
     <Button;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
@@ -573,11 +606,14 @@ if ( {) {
 }
     </Button>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
     </Button>;
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </Button>;
   );
 }
@@ -588,6 +624,11 @@ if ( {) {
 
     </Button>;
   );
+<<<<<<< HEAD
+    </Button>;
+  );
+
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </Button>;
   );
@@ -617,6 +658,7 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -637,6 +679,8 @@ interface PaymentButtonProps {;
   redirectUrl?:string;
 }
 ;
+<<<<<<< HEAD
+=======
 export function PaymentButton({;
   amount,;
   serviceId,;
@@ -794,3 +838,4 @@ return (<Button)
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

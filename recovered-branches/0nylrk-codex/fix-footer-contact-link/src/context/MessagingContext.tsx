@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -12,6 +14,7 @@ import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -27,6 +30,8 @@ const defaultContext: MessagingContextType = {
   loadMessages: async () => {}
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -34,6 +39,7 @@ const defaultContext: MessagingContextType = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -53,6 +59,8 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -61,6 +69,7 @@ const defaultContext: MessagingContextType = {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -83,6 +92,8 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -174,6 +185,7 @@ export function useMessaging(): MessagingContextType {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   return context;
 }
@@ -375,6 +387,8 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -388,6 +402,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -433,6 +448,11 @@ if ( {) {
     setActiveConversation;
 
 <<<<<<< HEAD
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+      {children}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     fetchConversations,;
     loadMessages;
@@ -465,10 +485,13 @@ if ( {) {
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     fetch_conversations,
     load_messages;
   }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   return (
     <MessagingContext.Provider value={context_value}>;
@@ -564,3 +587,4 @@ export function MessagingProvider({ children } { children:ReactNode }) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

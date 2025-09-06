@@ -44,6 +44,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
+<<<<<<< HEAD
+=======
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -114,6 +116,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
             <img
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
               className="max-h-10 max-w-10"
@@ -284,6 +287,8 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
 
   );
 }
@@ -369,3 +374,4 @@ function WorkspaceHeader() {
     </div>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

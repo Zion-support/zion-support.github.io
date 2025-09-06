@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+project_name: string, goals: string,
+  timeline: string, budget: string,
+  tech_stack?: string[];
+  talent_filters?: { verified_only?: boolean; regions?: string[] }
+
+=======
 export interface ProjectBrief {
   projectName: string;
   goals: string;
@@ -6,6 +13,7 @@ export interface ProjectBrief {
   techStack?: string[];
 <<<<<<< HEAD
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
   projectName: string, goals: string,
@@ -22,6 +30,9 @@ export interface ProjectBrief {;
   talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
 
 
+<<<<<<< HEAD
+}
+=======
 }
 =======
 <<<<<<< HEAD
@@ -93,3 +104,4 @@ export interface ProjectRequirements {
 }
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

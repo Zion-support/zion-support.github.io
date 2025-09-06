@@ -8,17 +8,37 @@ export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
 <<<<<<< HEAD
+  return (
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { ChatBotPanel } from "./ChatBotPanel",
+import { MessageSquare, Info, X } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
+    <>
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
+<<<<<<< HEAD
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -31,6 +51,7 @@ export function SupportWidget() {;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -39,6 +60,8 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+<<<<<<< HEAD
+=======
 
 
       {/* Support panel */}
@@ -118,6 +141,7 @@ import { useTheme } from "@/hooks/useTheme",;
         </Button>;
       )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
@@ -198,6 +222,8 @@ export function SupportWidget() {;
                 size="icon"
                 className="h-8 w-8 rounded-full"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onClick={() => window && window.location.href = "/help"}
 =======
@@ -209,6 +235,7 @@ export function SupportWidget() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
@@ -241,6 +268,8 @@ export function SupportWidget() {;
                 className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 aria-label="Close support";
               >;
@@ -266,6 +295,7 @@ export function SupportWidget() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { ChatBotPanel } from './ChatBotPanel';
@@ -334,6 +364,8 @@ function SupportWidget() {
     </>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -371,3 +403,4 @@ const {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
 =======
 
@@ -11,11 +13,14 @@ function runNode(relPath, args = []) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -33,11 +38,14 @@ exports && exports.config = { schedule: '30 */12 * * *' };
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 exports && exports.handler = async () => {
   const logs = [];
   const step = (name, fn) => {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -64,6 +72,7 @@ exports && exports.handler = async () => {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -90,11 +99,14 @@ exports && exports.handler = async () => {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;

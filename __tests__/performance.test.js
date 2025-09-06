@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -7,6 +9,7 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -127,6 +130,8 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 });'
 =======
 });
@@ -136,6 +141,7 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Performance"
   test('"page"
@@ -145,6 +151,8 @@ test && test.describe('"Performance"
   test('"bundle"
     "await"
     page && page.on('console', "msg"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -185,3 +193,4 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

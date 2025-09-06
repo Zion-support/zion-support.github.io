@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -14,6 +16,7 @@ interface NotificationListProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -28,6 +31,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   notifications;
   onMarkAsRead;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -35,6 +40,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -49,12 +55,15 @@ interface NotificationListProps {;
   onDismiss: (id: string) => Promise<void>,;
   onRetry: () => void;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -67,6 +76,8 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -109,10 +120,13 @@ export const NotificationList: React.FC < NotificationListProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   loading;
   error;
   notifications;
   onMarkAsRead;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -131,6 +145,7 @@ export const NotificationList: React.FC < NotificationListProps> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onRetry
   on_dismiss,
   on_retry;
@@ -146,6 +161,8 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -197,6 +214,7 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             className="mt-2"
             onClick={onRetry}>;
             Try Again;
@@ -301,6 +319,8 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     </ScrollArea>;
@@ -368,3 +388,4 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

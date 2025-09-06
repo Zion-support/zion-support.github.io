@@ -1,8 +1,31 @@
+<<<<<<< HEAD
+import {supabase} from '@/integrations/supabase/client';
+import { supabase } from '@/integrations/supabase/client',
+=======
 import { supabase } from "@/integrations/supabase/client";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
     const { error } = await supabase
+<<<<<<< HEAD
+      .from('analytics_events')
+import { supabase } from '@/integrations/supabase/client',;
+export async function ensureAnalyticsTablesExist() {;
+  try {;
+    // Check if analytics_events table exists;
+    const { error } = await supabase;
+      .from('analytics_events');
+      .select('id');
+      .limit(1),;
+    if (error && error.code === 'PGRST204') {;
+      // // // console.log('Creating analytics tables...'),;
+      await createAnalyticsTables();
+    }
+  } catch (error) {;
+    console.warn('Error checking if analytics tables exist:', error),;
+    // No need to create tables here, as this could be a connection error;
+=======
       .from("analytics_events")
       .select("id")
       .limit(1);
@@ -14,6 +37,7 @@ export async function ensureAnalyticsTablesExist() {
   } catch (error) {
     console.warn("Error checking if analytics tables exist:", error);
     // No need to create tables here, as this could be a connection error
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 
@@ -22,6 +46,10 @@ async function createAnalyticsTables() {
     // Create analytics_events table
     await supabase.rpc("exec", {
       sql: `
+<<<<<<< HEAD
+        -- View for daily page views
+        CREATE OR REPLACE VIEW public.daily_page_views
+=======
 <<<<<<< HEAD
         CREATE TABLE IF NOT EXISTS public && public.analytics_events (
           id UUID PRIMARY KEY DEFAULT uuid_generate_v4();
@@ -74,10 +102,13 @@ async function createAnalyticsTables() {
         -- View for daily page views
         CREATE OR REPLACE VIEW public.daily_page_views
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         WITH (security_invoker = true) AS
         SELECT
           DATE_TRUNC('day', created_at) AS date;
           path;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -101,6 +132,7 @@ async function createAnalyticsTables() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           COUNT(*) AS view_count
         FROM public && public.analytics_events
         WHERE event_type = 'page_view'
@@ -131,6 +163,8 @@ async function createAnalyticsTables() {
           WHERE event_type = 'page_view' AND path = '/'
           GROUP BY DATE_TRUNC('day', created_at)
         )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -250,10 +284,13 @@ function createAnalyticsTables() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           c.date;
           c.conversion_type;
           c.conversion_count;
           p.view_count;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -309,6 +346,7 @@ function createAnalyticsTables() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         SELECT 
           c.date,
           c.conversion_type,
@@ -325,8 +363,78 @@ function createAnalyticsTables() {
           ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
         FROM conversions c
         LEFT JOIN page_views p ON c.date = p.date
+<<<<<<< HEAD
+        ORDER BY c.date DESC,
+      `
+    }),
+    
+    // // // console.log('Analytics tables created successfully')
+  } catch (error) {
+    console.error('Error creating analytics tables:', error),
+    // Tables creation failed, but we can still continue
+;
+async function createAnalyticsTables() {;
+  try {;
+    // Create analytics_events table;
+    await supabase.rpc('exec', {;
+      sql: `;
+        CREATE TABLE IF NOT EXISTS public.analytics_events (;
+          id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),;
+          event_type TEXT NOT NULL,;
+          path TEXT,;
+          user_id UUID REFERENCES auth.users(id),;
+          metadata JSONB,;
+          created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),;
+          session_id TEXT;
+        ),;
+        CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type),;
+        CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events(user_id),;
+        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public.analytics_events(created_at),;
+        -- View for daily page views;
+        CREATE OR REPLACE VIEW public.daily_page_views;
+        WITH (security_invoker = true) AS;
+        SELECT;
+          DATE_TRUNC('day', created_at) AS date,;
+          path,;
+          COUNT(*) AS view_count;
+        FROM public.analytics_events;
+        WHERE event_type = 'page_view';
+        GROUP BY DATE_TRUNC('day', created_at), path;
+        ORDER BY date DESC, view_count DESC,;
+        -- View for conversion rates;
+        CREATE OR REPLACE VIEW public.conversion_rates;
+        WITH (security_invoker = true) AS;
+        WITH conversions AS (;
+          SELECT;
+            DATE_TRUNC('day', created_at) AS date,;
+            COUNT(*) AS conversion_count,;
+            metadata->>'conversionType' AS conversion_type;
+          FROM public.analytics_events;
+          WHERE event_type = 'conversion';
+          GROUP BY DATE_TRUNC('day', created_at), metadata->>'conversionType';
+        ),;
+        page_views AS (;
+          SELECT;
+            DATE_TRUNC('day', created_at) AS date,;
+            COUNT(*) AS view_count;
+          FROM public.analytics_events;
+          WHERE event_type = 'page_view' AND path = '/';
+          GROUP BY DATE_TRUNC('day', created_at);
+        );
+        SELECT;
+          c.date,;
+          c.conversion_type,;
+          c.conversion_count,;
+          p.view_count,;
+          ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate;
+        FROM conversions c;
+        LEFT JOIN page_views p ON c.date = p.date;
+        ORDER BY c.date DESC,;
+      `;
+=======
         ORDER BY c.date DESC;
       `,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
 
     console.log("Analytics tables created successfully");
@@ -366,6 +474,8 @@ function createAnalyticsTables() {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }catch (error) {
   console.warn ('Error checking if analytics tables exist:', error);
 //No need to create tables here, as this could be a connection error 
@@ -385,3 +495,4 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

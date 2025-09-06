@@ -10,6 +10,8 @@ import {ProjectDetailsField} from "./ProjectDetailsField";
 import {TimelineField} from "./TimelineField";
 import {BudgetFields} from "./BudgetFields";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface HireRequestFormProps {;
   talent: TalentProfile,;
@@ -33,6 +35,7 @@ export interface HireRequestFormProps {
   initialJobTitle?: string;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -51,6 +54,8 @@ export interface HireRequestFormProps {
 
   initialJobTitle?: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
 export interface HireRequestFormProps {
@@ -59,16 +64,22 @@ export interface HireRequestFormProps {
   initialJobTitle?: string,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   initialJobTitle?: string;
   userDetails?: {;
     name?: string;
     email?: string;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   userDetails?: {
     name?: string,
     email?: string,
     id?: string
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -78,11 +89,17 @@ export interface HireRequestFormProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
 
 
+<<<<<<< HEAD
+    initialJobTitle;
+    userDetails
+  });
+=======
 <<<<<<< HEAD
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
     talent, 
@@ -118,6 +135,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     userDetails
   });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -139,6 +157,8 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           >
             Cancel
           </Button>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -222,6 +242,7 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -408,6 +429,8 @@ function HireRequestForm() {
     </Form>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -458,3 +481,4 @@ return (<Form {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

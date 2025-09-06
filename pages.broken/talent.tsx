@@ -113,15 +113,20 @@ const jobOpenings = [{;
       "Proficiency in Python, TensorFlow, PyTorch";
       "Experience with cloud platforms (AWS, Azure, GCP)";
 import Layout from '../components/Layout';
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -144,6 +149,7 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "id": 2,
     "title": "Full-Stack Developer"
     "department": "Micro SaaS"
@@ -168,6 +174,8 @@ import Layout from '../components/Layout';
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -196,11 +204,14 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Knowledge of cloud deployment and DevOps"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -223,6 +234,7 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "id": 3,
     "title": "Cloud Solutions Architect"
     "department": "IT Services"
@@ -247,6 +259,8 @@ import Layout from '../components/Layout';
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -275,11 +289,14 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -302,6 +319,7 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "id": 4,
     "title": "Cybersecurity Specialist"
     "department": "Security"
@@ -326,6 +344,8 @@ import Layout from '../components/Layout';
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -354,11 +374,14 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -381,6 +404,7 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "id": 5,
     "title": "DevOps Engineer"
     "department": "Engineering"
@@ -405,6 +429,8 @@ import Layout from '../components/Layout';
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -433,11 +459,14 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Knowledge of monitoring and logging tools"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -460,6 +489,7 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "id": 6,
     "title": "UX/UI Designer"
     "department": "Design"
@@ -484,6 +514,8 @@ import Layout from '../components/Layout';
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -512,11 +544,14 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Strong portfolio demonstrating design skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -539,6 +574,7 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -558,6 +594,8 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -918,10 +956,13 @@ const values = [;
   "Diversity and inclusion",;
   "Client success focus";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];
 export default function TalentPage() {;
 
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -946,6 +987,7 @@ export default function TalentPage() {;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -1057,6 +1099,8 @@ export default function TalentPage() {;
       title="Careers - Zion Tech Group"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/main
 <<<<<<< HEAD
@@ -1078,10 +1122,13 @@ export default function TalentPage() {;
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1101,12 +1148,15 @@ export default function TalentPage() {;
             <motion.div,
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -1131,6 +1181,7 @@ export default function TalentPage() {;
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -1155,6 +1206,8 @@ export default function TalentPage() {;
         {/* Benefits Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1198,6 +1251,7 @@ export default function TalentPage() {;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <motion.div,
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
@@ -1231,6 +1285,8 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
             >
@@ -1319,6 +1375,7 @@ export default function TalentPage() {;
 =======
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
@@ -1382,6 +1439,8 @@ export default function TalentPage() {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1398,6 +1457,7 @@ export default function TalentPage() {;
             <motion.div,
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -1407,6 +1467,8 @@ export default function TalentPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
             >
@@ -1541,6 +1603,7 @@ export default function TalentPage() {;
 =======
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -1626,6 +1689,8 @@ export default function TalentPage() {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1642,6 +1707,7 @@ export default function TalentPage() {;
             <motion.div,
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -1652,7 +1718,10 @@ export default function TalentPage() {;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
@@ -1933,6 +2002,8 @@ export default function TalentPage() {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1949,6 +2020,7 @@ export default function TalentPage() {;
             <motion.div,
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -1956,6 +2028,8 @@ export default function TalentPage() {;
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -1981,6 +2055,7 @@ export default function TalentPage() {;
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?

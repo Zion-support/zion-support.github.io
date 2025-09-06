@@ -9,6 +9,8 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 interface EquipmentSpecification {
@@ -18,6 +20,7 @@ interface EquipmentSpecification {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface EquipmentDetails {
   id: string,
   name: string,
@@ -41,6 +44,8 @@ interface EquipmentSpecification {
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     id: "pro-camera-x1000"
@@ -67,6 +72,7 @@ import { toast } from "@/hooks/use-toast",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface EquipmentSpecification {;
   name: string,;
   value: string;
@@ -118,6 +124,8 @@ interface EquipmentDetails {
   currency: string,;
   rating?: number;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -137,6 +145,7 @@ interface EquipmentDetails {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 // Sample data - in a real app this would come from an API
@@ -149,6 +158,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     category: "Equipment",
     subcategory: "Cameras",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -158,6 +169,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
@@ -165,9 +177,12 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
     ]
     price: 6999
@@ -177,6 +192,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     inStock: true
     expectedShipping: "3-5 business days"
     specifications: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -222,12 +239,17 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     features: [;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Advanced 8K full-frame sensor";
       "16+ stops of dynamic range";
       "Internal RAW recording";
       "Dual native ISO technology";
       "5-axis in-body image stabilization";
       "AI-powered autofocus with subject tracking";
+<<<<<<< HEAD
+    images: [
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -329,6 +351,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
     ]
     price: 3499
@@ -346,6 +369,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Dynamics", value: "Compressor/Gate on all channels" }
       { name: "Effects", value: "8 stereo effects processors" }
       { name: "Recording", value: "64-channel USB interface" }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -610,6 +635,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Weight", value: "32 lbs" }
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Multiple assist tools: false color, waveform, vectorscope";
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support";
@@ -714,6 +740,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "Configurable user layers";
       "8 DCA groups and 6 mute groups";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -741,6 +769,7 @@ export default function EquipmentDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <>;
         <Header />;
@@ -785,6 +814,8 @@ if ( {) {
         </div>;
         <Footer />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -815,6 +846,7 @@ if ( {) {
   };
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
 =======
@@ -1004,6 +1036,8 @@ export default function EquipmentDetail() {;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Column - Images */}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
@@ -1027,12 +1061,15 @@ export default function EquipmentDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${;
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         }`}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1051,6 +1088,7 @@ export default function EquipmentDetail() {;
                       </div>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -1114,6 +1152,8 @@ export default function EquipmentDetail() {;
                             <span className="text-zion-slate-light">{feature}</span>;
                           </li>;
                         ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       </>);
@@ -1336,12 +1376,15 @@ export default function EquipmentDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       </ul>;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1350,6 +1393,7 @@ export default function EquipmentDetail() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -1396,6 +1440,8 @@ export default function EquipmentDetail() {;
                           key={i}
                           className={`h-5 w-5 ${
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                             i < Math && Math.floor(equipment && equipment.rating!) 
@@ -1413,6 +1459,7 @@ export default function EquipmentDetail() {;
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                               : "text-zion-slate-light"
                           }`}
 =======
@@ -1502,6 +1549,8 @@ export default function EquipmentDetail() {;
                     </div>;
                   )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             {/* Right Column - Purchase Info */}
@@ -1584,6 +1633,7 @@ export default function EquipmentDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
                       disabled={quantity <= 1 |!equipment.inStock}
@@ -1596,6 +1646,8 @@ export default function EquipmentDetail() {;
                       value={quantity}
                       readOnly
                     />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1612,6 +1664,7 @@ export default function EquipmentDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -1622,6 +1675,8 @@ export default function EquipmentDetail() {;
                 </div>
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1638,6 +1693,7 @@ export default function EquipmentDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     onClick={handleBuyNow}
                     disabled={isAdding |!equipment.inStock}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
@@ -1673,6 +1729,8 @@ export default function EquipmentDetail() {;
                   </Button>
                 </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 </div>;
@@ -1680,6 +1738,7 @@ export default function EquipmentDetail() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </div>;
                       {equipment.rating.toFixed(1)} ({equipment.reviewCount} reviews);
                     </span>;
@@ -1882,6 +1941,8 @@ export default function EquipmentDetail() {;
                       <div>;
                         <p className="text-white text-sm font-medium">Returns</p>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <p className="text-xs">{equipment && equipment.returnPolicy}</p>;
                       </div>;
@@ -2071,6 +2132,7 @@ export default function EquipmentDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </div>;
               </div>;
             </div>;
@@ -2078,6 +2140,8 @@ export default function EquipmentDetail() {;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2218,3 +2282,4 @@ if (!equipment) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

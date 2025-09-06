@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   description: string;
@@ -367,8 +370,11 @@
       'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ];
     benefits: [
       'Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs'
@@ -376,6 +382,8 @@
     useCases: [
       'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech'
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -389,6 +397,7 @@
     scalability: 'Biotech - grade, multi - institution support',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     roi: '500% within 20 months',
     deployment: 'Cloud - based, biotech infrastructure',
     maintenance: 'Continuous updates, biotech optimization',
@@ -406,6 +415,8 @@
     funding: 'Series B funding, $120M valuation',
     exit: 'IPO or biotech acquisition',
     contact: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -431,6 +442,7 @@ export interface ResearchDevelopmentService2029 {;
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     }
   }
@@ -677,6 +689,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 
 ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from 'react';'''; import { TalentOnboardingForm } from '@/components/profile/TalentOnboardingForm';'''; import { useAuth } from '@/hooks/useAuth';'''; import { Navigate } from 'react-router-dom'; export {}; return null} const { user,isLoading } = useAuth(); if (!isLoading && !user) {} return <Navigate to="/login" replace />;} return()"; <> <div className="bg-zion-blue min-h-screen py-8 "md": py-12"> <div className="container mx-auto px-4"> <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12"> <h1 className="text-3xl md:text-4xl font-bold text-white mb-4"> Join Our Talent Network"; </h1> <p className="text-zion-slate-light max-w-2xl mx-auto"> Showcase your skills to top clients and employers. Create a; professional profile to get discovered for AI and tech projects on; the Zion Marketplace.; ></div> ></div> <TalentOnboardingForm /> ></div> ></div> </>)} ; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding }; export { TalentOnboarding };
@@ -38,3 +40,4 @@ import _React from 'react';'''; import { TalentOnboardingForm } from '@/componen
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

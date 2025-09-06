@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -13,6 +15,7 @@ import {EmptyStateCard} from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
 import { EmptyStateCard } from "./EmptyStateCard";
@@ -20,9 +23,12 @@ import type { QuoteRequest } from "@/types/quotes";
 import { EmptyStateCard } from "./EmptyStateCard",
 import type { QuoteRequest } from "@/types/quotes",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
   isLoading: boolean,
@@ -32,6 +38,8 @@ type QuoteRequestsListProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -48,6 +56,7 @@ type QuoteRequestsListProps = {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
   quotes;
   isLoading;
@@ -65,8 +74,11 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   onViewDetails,
   onMarkAsResponded,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -75,6 +87,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 }) => {
   if (isLoading) {
     return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       <div className="text-center py-20">
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
@@ -94,6 +108,7 @@ import type { QuoteRequest } from "@/types/quotes",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 type QuoteRequestsListProps = {;
   quotes: QuoteRequest[],;
   isLoading: boolean,;
@@ -164,6 +179,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
       </div>;
     );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -171,6 +188,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
 
@@ -294,6 +312,8 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -342,3 +362,4 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

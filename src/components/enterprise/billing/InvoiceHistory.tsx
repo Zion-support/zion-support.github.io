@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 Table;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   TableBody;
   TableCell;
   TableHead;
@@ -25,17 +28,23 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from 'lucide-react'
 
 
+<<<<<<< HEAD
+=======
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function InvoiceHistory() {
   // Mock invoice data
 
@@ -310,6 +319,8 @@ export function InvoiceHistory() {;
         return <Badge variant="destructive">Overdue</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
+<<<<<<< HEAD
+=======
 }
   );
 
@@ -317,3 +328,4 @@ export function InvoiceHistory() {;
 
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

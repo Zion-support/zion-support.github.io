@@ -12,6 +12,9 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
 
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";

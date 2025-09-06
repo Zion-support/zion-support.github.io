@@ -1,8 +1,11 @@
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -11,7 +14,10 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   const statCards = [
     {
+<<<<<<< HEAD
+=======
       title: "Total Referrals"
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       value: stats.totalReferrals
       icon: <Share className="h-5 w-5 text-muted-foreground" />
       description: "People you've invited"
@@ -34,6 +40,8 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
+<<<<<<< HEAD
+=======
 =======
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { ReferralStats, as, ReferralStatsType  } from '@/types / referrals';
@@ -72,6 +80,7 @@ function ReferralStats() {
       description: "Credits earned from referrals",
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ];
 ;
   return (
@@ -160,6 +169,8 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     </div>
@@ -168,3 +179,4 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

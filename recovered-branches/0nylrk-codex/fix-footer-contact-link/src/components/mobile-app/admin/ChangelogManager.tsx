@@ -71,6 +71,8 @@ type ChangelogEntry = {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       id: "1"
       version: "1.0.0"
       date: "2025-05-15"
@@ -244,6 +246,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -541,6 +544,8 @@ onClick={handleAddEntry}
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
+=======
 
 
             {entries && entries.length === 0 && (;
@@ -589,6 +594,7 @@ onClick={handleAddEntry}
               </div>;
             ))}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <p className="text-center text-gray-400 py-4">
                 No changelog entries yet
               </p>
@@ -599,8 +605,11 @@ onClick={handleAddEntry}
     </Card>
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
             {entries && entries.length === 0 && (;
@@ -615,6 +624,8 @@ onClick={handleAddEntry}
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -747,6 +758,7 @@ if (return) {
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
   ),;
 },; interface ChangelogManagerProps {
@@ -785,6 +797,9 @@ date: new Date () .toISOString () .split ('T') [0];
 
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

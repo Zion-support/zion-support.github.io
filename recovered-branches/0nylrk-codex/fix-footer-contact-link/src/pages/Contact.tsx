@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -29,6 +31,7 @@ import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -43,6 +46,8 @@ import z from "zod";
 import {ChatAssistant} from "@/components/ChatAssistant";
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function Contact() {;
@@ -61,6 +66,7 @@ export default function Contact() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -105,6 +111,8 @@ export default function Contact() {
     email: "",
     subject: "",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -116,10 +124,13 @@ export default function Contact() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -139,11 +150,14 @@ export default function Contact() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
       // Basic validation with Zod
       const schema = z.object({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -154,10 +168,15 @@ export default function Contact() {
         subject: z.string().min(2, "Subject must be at least 2 characters");
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         message: z.string().min(10, "Message must be at least 10 characters")
       });
       schema.parse(formData);
       // Simulate form submission
+<<<<<<< HEAD
+      setTimeout(() => {
+        setIsSubmitting(false),
+=======
 <<<<<<< HEAD
       setIsSubmitting(true);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -185,6 +204,7 @@ export default function Contact() {
       setTimeout(() => {
         setIsSubmitting(false),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         toast({
           title: "Message Sent"
           description: "We've received your message and will get back to you soon."})
@@ -212,6 +232,8 @@ export default function Contact() {
       }
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
   },
@@ -226,12 +248,15 @@ export default function Contact() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -254,11 +279,15 @@ export default function Contact() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
       return Promise.resolve()
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Error in AI chat:", error),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Error in AI chat:", error);
@@ -268,10 +297,13 @@ export default function Contact() {
 =======
       console.error("Error in AI chat:", error),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
         variant: "destructive"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -360,6 +392,7 @@ export default function Contact() {
       return Promise && Promise.resolve();
     }
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -489,6 +522,8 @@ if ( {) {
       name: "Headquarters"
       address: "123 Tech Avenue, San Francisco, CA 94105";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
     {
@@ -537,6 +572,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },
 
   const offices = [
@@ -554,6 +590,9 @@ if ( {) {
     }
   ],
 
+<<<<<<< HEAD
+  return (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -736,6 +775,7 @@ export default function Contact() {;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Input
                       id="name"
                       name="name"
@@ -781,6 +821,8 @@ export default function Contact() {;
                       placeholder="John Doe"
                       required
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -807,19 +849,25 @@ export default function Contact() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Input
                       id="email"
                       name="email"
                       type="email"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                       value={formData && formData.email}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       onChange={handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="john@example && example.com"
                       required
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
                     />;
@@ -838,6 +886,7 @@ export default function Contact() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Input
                     id="subject"
                     name="subject"
@@ -867,6 +916,8 @@ export default function Contact() {;
                     placeholder="How can we help you?"
                     required
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   />;
@@ -883,6 +934,7 @@ export default function Contact() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Textarea
                     id="message"
                     name="message"
@@ -922,6 +974,8 @@ export default function Contact() {;
                 <Button 
                   type="submit" 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
@@ -942,6 +996,7 @@ export default function Contact() {;
                 <Button 
                   type="submit" 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -1463,6 +1518,11 @@ export default function Contact() {;
                     on_click={() => setIsChatOpen (true)}
                     className="w - full mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
 <<<<<<< HEAD
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                   <Button;
@@ -1477,6 +1537,7 @@ export default function Contact() {;
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   >;
                     Chat With Our AI Assistant;
                   </Button>;
@@ -1484,6 +1545,8 @@ export default function Contact() {;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1532,6 +1595,7 @@ export default function Contact() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   Email Support;
                 </a>;
               </Button>;
@@ -1540,6 +1604,8 @@ export default function Contact() {;
         </div>;
       </main>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1547,6 +1613,7 @@ export default function Contact() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant
@@ -1599,6 +1666,8 @@ export default function Contact() {;
           onSendMessage={handleSendMessage}
         />)}
     </AppLayout>);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -1683,3 +1752,4 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

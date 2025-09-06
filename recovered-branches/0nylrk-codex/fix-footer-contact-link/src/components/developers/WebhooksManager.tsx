@@ -19,9 +19,12 @@ import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, A
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function WebhooksManager() {
 
 =======
@@ -78,6 +81,8 @@ const [showCreateDialog, setShowCreateDialog] = useState(false);
     fetchWebhooks();
   }, []);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -87,6 +92,7 @@ const [showCreateDialog, setShowCreateDialog] = useState(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
@@ -116,6 +122,8 @@ export function WebhooksManager() {
     deleteWebhook,
     testWebhook,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     clearTestResult
 <<<<<<< HEAD
@@ -136,6 +144,7 @@ export function WebhooksManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } = useWebhooks(),
   
   const [showCreateDialog, setShowCreateDialog] = useState(false),
@@ -150,12 +159,15 @@ export function WebhooksManager() {
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   // Load webhooks on mount
   useEffect(() => {
@@ -163,6 +175,8 @@ export function WebhooksManager() {
   }, []),
 
   const handleCreateWebhook = async () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -180,11 +194,14 @@ export function WebhooksManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -194,10 +211,13 @@ export function WebhooksManager() {
     setShowCreateDialog(false);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     resetWebhookForm()
   }
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -234,11 +254,14 @@ export function WebhooksManager() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const resetWebhookForm = () => {
     setWebhookName("");
     setWebhookUrl("");
     setWebhookSecret("");
     setSelectedEvents([])
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -271,6 +294,7 @@ export function WebhooksManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Event type options
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' }
@@ -284,6 +308,8 @@ export function WebhooksManager() {
         ? prev.filter(e => e !== event)
         : [...prev, event]
     )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -299,6 +325,7 @@ export function WebhooksManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -354,6 +381,8 @@ export function WebhooksManager() {
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <Input
@@ -379,6 +408,7 @@ export function WebhooksManager() {
                           id={event.value} 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
@@ -422,9 +452,12 @@ export function WebhooksManager() {;
     fetchWebhooks();
   }, []),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const handleCreateWebhook = async () => {;
     if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
@@ -747,11 +780,14 @@ export function WebhooksManager() {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Input
                     id="webhook-secret"
                     type="password"
@@ -799,6 +835,8 @@ export function WebhooksManager() {;
                   </p>;
                 </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -812,6 +850,7 @@ export function WebhooksManager() {;
                           id={event.value} ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     {eventOptions && eventOptions.map((event) => (;
                       <div key={event && event.value} className="flex items-center space-x-2">;
                         <Checkbox
@@ -1185,6 +1224,8 @@ function WebhooksManager() {
                       <span className="ml - 2 text - sm">;
                         {webhook.is_active ? "Active" : "Inactive"}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         {/* Webhooks List */}
@@ -1418,6 +1459,7 @@ function WebhooksManager() {
                         >;
                           <X size={14} className="mr-2" /> Delete;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
                     </DropdownMenu>;
@@ -1665,6 +1707,8 @@ if ( {) {
                 </div>;
               </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1764,12 +1808,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   clearTestResult()
                 }}>
                   Test Another Event
                 </Button>
               </DialogFooter>
             </>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1801,12 +1848,16 @@ if ( {) {
                   <div className="flex items - center justify - between">;
                     <Label > Response Status</Label>;
                     <Badge;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       className={
                         test_result && test_result.status >= 200 && test_result.status < 300;
                           ? "bg - green - 700";
                           : "bg - red - 700";
                       }
                     >;
+<<<<<<< HEAD
+                      {testResult?.status} {testResult?.statusText}
+=======
                       {test_result?.status} {test_result?.status_text}
                     </Badge>;
                   </div>;
@@ -1857,11 +1908,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       </pre>;
                     </ScrollArea>;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1890,10 +1944,13 @@ if ( {) {
                 }}>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
             </>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1903,6 +1960,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           )}
         </DialogContent>
       </Dialog>
@@ -1925,6 +1983,8 @@ if ( {) {
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1993,6 +2053,7 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   Close;
                 </Button>;
                 <Button variant="outline" onClick={() => {;
@@ -2003,6 +2064,8 @@ if ( {) {
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2038,12 +2101,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >;
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2203,3 +2269,4 @@ clearTestResult ();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

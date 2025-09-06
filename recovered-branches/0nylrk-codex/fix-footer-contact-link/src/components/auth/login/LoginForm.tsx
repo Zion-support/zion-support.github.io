@@ -3,6 +3,8 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
 =======
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -19,6 +21,7 @@ import { LogIn, User, Eye, EyeOff } from "lucide-react",
 =======
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
@@ -72,14 +75,19 @@ export function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters")}),
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -97,12 +105,15 @@ export function LoginForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema)
     defaultValues: {
       email: ""
       password: ""}})
   const onSubmit = async (data: LoginFormValues) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -121,11 +132,14 @@ export function LoginForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -235,6 +249,7 @@ export function LoginForm() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
@@ -257,6 +272,8 @@ export function LoginForm() {;
         <FormField
           control={form && form.control}
           name="email"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           render={({ field }) => (;
@@ -357,11 +374,14 @@ export function LoginForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   />;
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                 </div>;
               </FormControl>;
               <FormMessage className="text-red-400" />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             </FormItem>;
@@ -371,6 +391,7 @@ export function LoginForm() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           )}
         <FormField
           control={form && form.control}
@@ -487,6 +508,8 @@ export function LoginForm() {;
               <FormMessage className="text-red-400" />;
             </FormItem>;
           )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -717,3 +740,4 @@ await login (data.email, data.password)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

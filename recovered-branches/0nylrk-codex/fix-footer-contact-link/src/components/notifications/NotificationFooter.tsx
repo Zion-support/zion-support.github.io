@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+  on_close: () => void;
+}
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+interface NotificationFooterProps {
+  onClose: () => void;
+}
+=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -19,6 +29,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
   const navigate = useNavigate(),
@@ -44,9 +55,12 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button
         variant="link"
         size="sm"
@@ -97,6 +111,8 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -149,3 +165,4 @@ export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

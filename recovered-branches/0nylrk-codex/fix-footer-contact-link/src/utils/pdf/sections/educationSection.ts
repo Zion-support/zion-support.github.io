@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { jsPDF  } from 'jspdf';
 import { Education  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -20,15 +23,23 @@ export function addEducationSection(;
   startY: number
 ): number {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (education && education.length === 0) return startY;
   
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
+<<<<<<< HEAD
+  yPos += 8;
+  // Sort education by date (newest first)
+  const sortedEducation = [...education].sort((a, b) => {
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -103,10 +114,13 @@ if (education && education.length === 0) return startY;
   // Sort education by date (newest first)
   const sortedEducation = [...education].sort((a, b) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   });
   for (const edu of sortedEducation) {
     // Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       doc && doc.addPage();
@@ -191,6 +205,7 @@ if (education && education.length === 0) return startY;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } else {
       yPos += 20
 import { jsPDF } from 'jspdf',;
@@ -257,6 +272,11 @@ export function addEducationSection(;
     } else {;
       yPos += 20;
 <<<<<<< HEAD
+    }
+  }
+  return yPos + 5
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -275,6 +295,7 @@ export function addEducationSection(;
   }
   return yPos + 5
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {jsPDF} from 'jspdf';
 import {Education} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -287,6 +308,8 @@ export function addEducationSection (
   // Check condition
 if (return start_y) {
   $2
+<<<<<<< HEAD
+=======
 }
   let y_pos = start_y;
 ;
@@ -372,6 +395,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 import { jsPDF } from 'jspdf',;
@@ -470,6 +494,8 @@ doc.setTextColor (colors.text);
 doc.text (dateText, 20, yPos + 10);
 }return yPos + 5 
 }
+<<<<<<< HEAD
+=======
     }
   }
   return yPos + 5
@@ -478,3 +504,4 @@ doc.text (dateText, 20, yPos + 10);
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

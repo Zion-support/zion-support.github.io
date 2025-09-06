@@ -3,6 +3,10 @@
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent'
@@ -339,8 +343,11 @@ export const real2027Q3Additions = [
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export const real2027Q3Additions = [
   {
@@ -348,8 +355,11 @@ export const real2027Q3Additions = [
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
@@ -698,6 +708,11 @@ export const real2027Q3Additions = [;
 ];
 ;
 =======
+<<<<<<< HEAD
+  }
+];
+;
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -974,3 +989,4 @@ export const real2027Q3Additions = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

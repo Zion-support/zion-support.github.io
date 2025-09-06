@@ -41,7 +41,7 @@ export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production'
 
 // Export the polyfilled process object
-export const processEnv = null;
+export const processEnv =
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process && process.env
 /**;

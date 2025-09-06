@@ -6,6 +6,9 @@ export const innovativeMicroSaasSolutions2025 = [
     pricing: {
       starter: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         price: 49
         period: 'month'
         features: [
@@ -15,6 +18,8 @@ export const innovativeMicroSaasSolutions2025 = [
           'Standard reports'
         ]
       }
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -28,6 +33,7 @@ export const innovativeMicroSaasSolutions2025 = [
         ],
       },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       professional: {
         price: 149
         period: 'month'
@@ -60,6 +66,8 @@ export const innovativeMicroSaasSolutions2025 = [
     ],
     pricing: {
       starter: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -417,6 +425,7 @@ export const innovativeMicroSaasSolutions2025 = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'CRM systems',
       'E - commerce platforms',
 =======
@@ -622,16 +631,21 @@ export const innovativeMicroSaasSolutions2025 = [
     ],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 ];      'Email campaign automation_customer segmentation and personalization_conversion rate optimization_subscriber engagement improvement_marketing ROI optimization';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ];
     integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
     compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
   }
 ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
@@ -642,6 +656,7 @@ export const innovativeMicroSaasSolutions2025 = [
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
 
@@ -652,10 +667,13 @@ export const innovativeMicroSaasSolutions2025 = [
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const innovativeMicroSaasSolutions2025 = [;
   {;
     id: 'ai-powered-customer-feedback-analyzer',;
@@ -865,6 +883,10 @@ export const innovativeMicroSaasSolutions2025 = [;
   }
 ];
 =======
+<<<<<<< HEAD
+  }
+];
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -873,3 +895,4 @@ export const innovativeMicroSaasSolutions2025 = [;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

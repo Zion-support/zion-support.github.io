@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -24,6 +26,7 @@ export interface Company {;
   teamSize: number;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from "react",
 import { WorkspaceHeader } from "./WorkspaceHeader",
@@ -35,14 +38,19 @@ import { TalentPool } from "./TalentPool";
 import { RecentActivity } from "./RecentActivity",
 import { TalentPool } from "./TalentPool",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Company {
   id: string,
   name: string,
   logoUrl?: string,
   theme?: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -70,6 +78,7 @@ interface CompanyDashboardProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     primaryColor: string,
     backgroundColor: string,
     textColor: string
@@ -96,6 +105,8 @@ export interface Company {;
 
     textColor: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   },;
   plan: string,;
   teamSize: number,;
@@ -107,17 +118,27 @@ export interface Company {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   teamLimit: number;
   billingCycle: string;
   workspaceUrl: string
 }
 
 <<<<<<< HEAD
+interface CompanyDashboardProps {
+;
+interface CompanyDashboardProps {;
+
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   company: Company;
 }
 
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -138,10 +159,13 @@ interface CompanyDashboardProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
       <WorkspaceHeader company={company} />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -159,6 +183,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <QuickActions />
@@ -166,6 +191,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
           <TalentPool />
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -182,11 +209,14 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="space-y-6">
           <TeamStats />
           <SharedInbox />
         </div>
       </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -195,6 +225,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
     </div>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
   )
@@ -268,6 +299,8 @@ function CompanyDashboard() {
           <TalentPool />;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="space - y-6">;
@@ -277,10 +310,16 @@ function CompanyDashboard() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <TeamStats />;
           <SharedInbox />;
         </div>;
       </div>;
+<<<<<<< HEAD
+  );
+}
+;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -357,3 +396,4 @@ export function CompanyDashboard({ company } CompanyDashboardProps) {;
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

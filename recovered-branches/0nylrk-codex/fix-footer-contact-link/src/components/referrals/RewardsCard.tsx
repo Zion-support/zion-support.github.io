@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8,6 +10,7 @@
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
@@ -17,6 +20,9 @@ import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from "lucide-react",
 
+<<<<<<< HEAD
+import {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -39,14 +45,18 @@ import {
 =======
 import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
@@ -62,7 +72,10 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   CardDescription,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from '@/components / ui / card';
 import { ReferralReward  } from '@/types / referrals';
 import { format_date  } from '@/utils / referral_utils';
@@ -99,6 +112,8 @@ if ( {) {
     );
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   if (rewards.length === 0) {
     return (
@@ -121,6 +136,7 @@ if ( {) {
           </div>
         </CardContent>
       </Card>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     );
   }
   return (
@@ -170,6 +186,14 @@ if ( {) {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
+  )
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReferralReward } from "@/types/referrals",;
+import { formatDate } from "@/utils/referralUtils",;
+import { BadgeDollarSign, Badge } from "lucide-react",;
+=======
   );
 }
 
@@ -179,6 +203,7 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface RewardsCardProps {;
   rewards: ReferralReward[];
   isLoading: boolean;
@@ -188,9 +213,12 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
     return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -226,9 +254,12 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
   if (rewards.length === 0) {;
     return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -247,6 +278,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
         </CardContent>;
       </Card>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
@@ -257,6 +290,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Check condition
 if ( {) {
   $2
@@ -324,6 +358,8 @@ if ( {) {
                   Earned on {format_date (reward.created_at)}
                 </p>;
                 {reward.expires_at && (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -414,10 +450,16 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
+
+}
+import {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -489,3 +531,4 @@ isLoading: boolean
 }
 import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

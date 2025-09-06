@@ -137,16 +137,21 @@ export function ContactSection() {
                       Name
                     </label>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <input
                       type="text"
                       id="name"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,10 +169,13 @@ export function ContactSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <input
                       type="email"
                       id="email"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -226,10 +234,13 @@ export function ContactSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     />;
                   </div>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -338,6 +349,7 @@ export function ContactSection() {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -424,6 +436,8 @@ export function ContactSection() {;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
     </section>;
   );
 }
@@ -445,6 +459,7 @@ export function ContactSection() {;
 }
     </section>);
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </section>;
   );}
  export function ContactSection () {
@@ -455,4 +470,7 @@ export function ContactSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

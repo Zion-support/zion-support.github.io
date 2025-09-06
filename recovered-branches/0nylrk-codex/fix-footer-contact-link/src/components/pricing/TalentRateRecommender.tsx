@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -9,11 +11,16 @@ import { Button } from "@/components/ui/button";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Button} from "@/components/ui/button";
 import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -35,6 +42,7 @@ import { Button } from "@/components/ui/button",
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { 
   getTalentRateSuggestion;
   PricingSuggestion;
@@ -42,6 +50,8 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -68,6 +78,7 @@ import { use_auth } from '@/hooks / use_auth';
 import { Sparkles } from './lucide-react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface TalentRateRecommenderProps {
 
   skills;
@@ -90,6 +101,8 @@ interface TalentRateRecommenderProps {
 
 
       const result = await getTalentRateSuggestion(params);
+<<<<<<< HEAD
+=======
       setSuggestion(result);
     } catch (error) {;
       console && console.error("Error generating rate suggestion:", error);
@@ -166,6 +179,7 @@ import { Sparkles } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
@@ -173,11 +187,14 @@ interface TalentRateRecommenderProps {
   onSuggestionApplied: (value: number) => void,
   rateType: "hourly" | "fixed"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -222,12 +239,15 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
       return
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
       return
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   skills,;
   yearsExperience,;
   location,;
@@ -240,12 +260,15 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     if (skills.length === 0 || yearsExperience <= 0) {;
       return;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
     setIsLoading(true),
@@ -257,17 +280,22 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
       const result = await getTalentRateSuggestion(params),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating rate suggestion:", error)
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -301,6 +329,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     setIsLoading(true),;
     try {;
@@ -317,6 +346,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     }
   },;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -324,6 +355,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       // We'll use the middle of the range as the suggested rate;
@@ -372,6 +404,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -380,6 +414,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setSuggestion(result);
     } catch (error) {;
       console && console.error("Error generating rate suggestion:", error);
@@ -389,7 +424,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       }
     }
   }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-4">;
       <div>;
@@ -411,11 +449,14 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             variant="outline"
             onClick={generateSuggestion}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
       </div>;
@@ -525,19 +566,25 @@ if ( {) {
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>;
     </div>;
   );
@@ -552,6 +599,8 @@ if ( {) {
     </div>);
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -697,3 +746,4 @@ return (<div className="space-y-4" > <div> {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

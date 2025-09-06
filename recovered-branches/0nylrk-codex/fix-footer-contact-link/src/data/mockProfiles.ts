@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -86,6 +88,7 @@
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   'service-provider-1': {
@@ -452,6 +455,9 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
       status: "available",
       message: "Open to new projects starting immediately. Prefer projects with 3+ month engagement.",
       availableHours: [
+<<<<<<< HEAD
+  }
+=======
   }
 <<<<<<< HEAD
 
@@ -633,3 +639,4 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

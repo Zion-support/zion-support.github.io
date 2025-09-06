@@ -1,6 +1,9 @@
 <<<<<<< HEAD
   contactInfo: {
 =======
+<<<<<<< HEAD
+  contactInfo: {
+=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -27,6 +30,7 @@ export interface AdvancedAIAutomationService {
     address: string,
     website: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -49,11 +53,15 @@ export interface AdvancedAIAutomationService {
 <<<<<<< HEAD
   }
 =======
+<<<<<<< HEAD
+  }
+=======
 
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
     realImplementation: true
@@ -547,6 +555,9 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   }
 ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

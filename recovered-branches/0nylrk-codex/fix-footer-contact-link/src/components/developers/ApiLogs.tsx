@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,6 +18,7 @@ import {Badge} from "@/components/ui/badge";
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
@@ -33,13 +36,18 @@ export function ApiLogs() {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -47,13 +55,17 @@ export function ApiLogs() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from "lucide-react",
@@ -68,8 +80,11 @@ export function ApiLogs() {
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   
 =======
   
@@ -90,6 +105,8 @@ export function ApiLogs() {
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   },
   
 <<<<<<< HEAD
@@ -100,6 +117,7 @@ export function ApiLogs() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -111,6 +129,8 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -217,6 +237,7 @@ export function ApiLogs() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
@@ -336,6 +357,11 @@ export function ApiLogs() {;
           <div className="flex items-center space-x-2">;
             <span className="text-sm text-zinc-400">Show</span>;
 <<<<<<< HEAD
+  const hasNextPage = currentPage < totalPages - 1;
+  const hasPrevPage = currentPage > 0;
+  return (
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -343,10 +369,13 @@ export function ApiLogs() {;
   const hasPrevPage = currentPage > 0;
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Select
               value={pageSize && pageSize.toString()}
               onValueChange={(value) => {;
                 setPageSize(Number(value));
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
                 setCurrentPage(0), // Reset to first page when changing page size;
@@ -362,6 +391,7 @@ export function ApiLogs() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -426,6 +456,8 @@ export function ApiLogs() {;
                             ? "border-green-500 text-green-400"
                             : log.method === 'POST'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -436,6 +468,7 @@ export function ApiLogs() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 setCurrentPage(0), // Reset to first page when changing page size;
               }}
             >;
@@ -533,6 +566,8 @@ export function ApiLogs() {;
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -600,6 +635,7 @@ export function ApiLogs() {;
             </div>;
             <div className="flex space-x-2">;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Button
                 variant="outline"
                 size="sm"
@@ -652,6 +688,8 @@ export function ApiLogs() {;
           </div>;
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </CardContent>;
@@ -662,11 +700,14 @@ export function ApiLogs() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from './react';
 import { format } from './date - fns';
 import { List, RefreshCw } from './lucide-react';
 import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -972,3 +1013,4 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

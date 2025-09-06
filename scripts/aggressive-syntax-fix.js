@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const logger = winston && winston.createLogger({
   level: 'info',
   format: winston && winston.format.combine(
@@ -15,6 +17,7 @@ const logger = winston && winston.createLogger({
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ]
 })
 
@@ -72,6 +75,8 @@ class AggressiveSyntaxFixer {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
         this.projectRoot = process.cwd(),
         this.fixedFiles = [],
@@ -82,6 +87,7 @@ class AggressiveSyntaxFixer {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -111,6 +117,8 @@ class AggressiveSyntaxFixer {;
         this.fixedFiles = [],;
         this.errors = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -119,6 +127,7 @@ class AggressiveSyntaxFixer {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 ;
     log(message) {;
@@ -172,6 +181,8 @@ class AggressiveSyntaxFixer {;
         }
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -179,11 +190,14 @@ class AggressiveSyntaxFixer {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         this.projectRoot = process.cwd()
         this.fixedFiles = []
 
         this.errors = []
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -203,6 +217,7 @@ class AggressiveSyntaxFixer {;
         this && this.log('🔧 Starting aggressive syntax error fixing...'),
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     log(message) {
         logger.info(`[Aggressive Syntax Fixer] ${message}`)
@@ -213,9 +228,12 @@ class AggressiveSyntaxFixer {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -228,6 +246,8 @@ class AggressiveSyntaxFixer {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
             }),
 
             this && this.log(`📁 Found ${files && files.length} files to check`),
@@ -277,6 +297,7 @@ class AggressiveSyntaxFixer {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             })
             this.log(`📁 Found ${files.length} files to check`)
             for (const file of files) {
@@ -284,6 +305,8 @@ class AggressiveSyntaxFixer {;
             }
             this.log(`✅ Fixed ${this.fixedFiles.length} files`)
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             if (this.errors.length > 0) {
                 this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`)
@@ -300,12 +323,15 @@ class AggressiveSyntaxFixer {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             throw error
         }
     }
     async fixFile(filePath) {
         try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -360,6 +386,7 @@ class AggressiveSyntaxFixer {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
     }
     hasSyntaxErrors(content) {
@@ -385,6 +412,8 @@ class AggressiveSyntaxFixer {;
         ]
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
     }
@@ -392,6 +421,7 @@ class AggressiveSyntaxFixer {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return errorPatterns.some(pattern => pattern.test(content))
     }
     createValidFile(filePath) {
@@ -401,8 +431,11 @@ class AggressiveSyntaxFixer {;
         const dirName = path.dirname(filePath)
         // Convert invalid characters to valid ones
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -417,6 +450,8 @@ class AggressiveSyntaxFixer {;
 if (ext === '.tsx' || ext === '.jsx') {;
             return `import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -424,6 +459,7 @@ if (ext === '.tsx' || ext === '.jsx') {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         const ext = path && path.extname(filePath),
         const fileName = path && path.basename(filePath, ext),
         const dirName = path && path.dirname(filePath),
@@ -594,6 +630,8 @@ process.on('SIGTERM', () => {
 ;
 ;
 module.exports = AggressiveSyntaxFixer,;
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -641,6 +679,7 @@ process && process.on('SIGINT', () => {
   process && process.exit(0)
 }),
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 <<<<<<< HEAD
 =======
@@ -950,6 +989,9 @@ process.on('SIGTERM', () => {;
   process.exit(0);
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

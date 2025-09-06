@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -28,6 +30,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -41,6 +44,8 @@ import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -50,6 +55,7 @@ export default function Analytics() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -68,14 +74,19 @@ export default function Analytics() {
   const [timeRange, setTimeRange] = useState('30d'),
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { data: pageViewTrends } = useQuery({
     queryKey: ['page-views-trend', timeRange],
     queryFn: async () => {
       // Get daily page views for trend chart
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       const days = parseInt(timeRange.replace('d', '')),
       const startDate = new Date(),
@@ -87,10 +98,13 @@ export default function Analytics() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, path')
         .eq('event_typepage_view')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -141,10 +155,13 @@ export default function Analytics() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (viewsByDate[dateStr]) {
           result.push(viewsByDate[dateStr])
         } else {
           result.push({ date: dateStr, views: 0 })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -152,6 +169,7 @@ export default function Analytics() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -165,12 +183,15 @@ import { ExportPanel } from "@/components/analytics/ExportPanel",;
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d'),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { data: pageViewTrends } = useQuery({;
     queryKey: ['page-views-trend', timeRange];
     queryFn: async () => {;
@@ -219,6 +240,8 @@ export default function Analytics() {;
         .select('created_at, path');
         .eq('event_typepage_view');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         .gte('created_at', startDate && startDate.toISOString());
 
@@ -234,6 +257,7 @@ export default function Analytics() {;
 
       // Fill in missing dates;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const result = [];
       for (let i = 0, i < days, i++) {;
 
@@ -264,6 +288,8 @@ export default function Analytics() {;
         } else {;
           result.push({ date: dateStr, views: 0 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -272,10 +298,13 @@ export default function Analytics() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -309,10 +338,13 @@ export default function Analytics() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     queryKey: ['conversion-data', timeRange];
     queryFn: async () => {;
       const days = parseInt(timeRange && timeRange.replace('d', ''));
       const startDate = new Date();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -340,6 +372,7 @@ export default function Analytics() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }),;
   const { data: conversionData } = useQuery({;
     queryKey: ['conversion-data', timeRange],;
@@ -360,6 +393,8 @@ export default function Analytics() {;
         const conversionType = item.metadata?.conversionType || 'unknown',;
         if (!conversionsByType[conversionType]) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -368,6 +403,7 @@ export default function Analytics() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
@@ -414,6 +450,26 @@ export default function Analytics() {;
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
+<<<<<<< HEAD
+      const dates = [];
+      for (let i = 0, i < days, i++) {
+        const date = new Date();
+        date.setDate(date.getDate() - i);
+        dates.push(date.toISOString().split('T')[0])
+      }
+      dates.sort();
+      // Format data for chart
+      return dates.map(date => {
+        const result = { date }
+        Object.keys(conversionsByType).forEach(type => {
+          result[type] = conversionsByType[type][date] |0
+        });
+        return result
+      })
+    }
+  });
+;
+=======
 <<<<<<< HEAD
 =======
       startDate && startDate.setDate(startDate && startDate.getDate() - days);
@@ -486,6 +542,7 @@ export default function Analytics() {;
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         conversionsByType[conversionType][date]++;
       });
 
@@ -496,6 +553,11 @@ export default function Analytics() {;
         date && date.setDate(date && date.getDate() - i);
         dates && dates.push(date && date.toISOString().split('T')[0]);
       }
+<<<<<<< HEAD
+  });
+
+  return (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -545,10 +607,13 @@ export default function Analytics() {;
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <PageViewsChart
           data={pageViewTrends |[]}
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
+<<<<<<< HEAD
+=======
 
         />;
         <PageViewsTable />;
@@ -577,6 +642,7 @@ export default function Analytics() {;
           data={pageViewTrends |[]}
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         />
         <ExportPanel />
       </div>
@@ -822,6 +888,8 @@ if ( {) {
         <ExportPanel />;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -884,9 +952,13 @@ return (<AnalyticsContainer> <AnalyticsSummary /> <div className="grid grid-cols
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </AnalyticsContainer>;
   );
         />;
         <ExportPanel />;
       </div>;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

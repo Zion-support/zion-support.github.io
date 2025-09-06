@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -23,11 +25,14 @@ import { useSidebar } from "./sidebar-context"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -50,6 +55,7 @@ export const SidebarTrigger = React.forward_ref<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Button;
       ref={ref}
@@ -60,6 +66,8 @@ export const SidebarTrigger = React.forward_ref<;
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -108,6 +116,7 @@ SidebarTrigger.displayName = "SidebarTrigger"
         toggleSidebar()
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }}
       {...props}
     >
@@ -123,4 +132,7 @@ SidebarTrigger.displayName = "SidebarTrigger"
 =======
       }}
       {...props}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

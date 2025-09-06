@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
 import {Textarea} from '@/components/ui/textarea';
 import {Button} from '@/components/ui/button';
@@ -39,6 +41,7 @@ export function AIEnhancementPanel({;
 =======
 export function AIEnhancementPanel(): any ({;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -53,9 +56,12 @@ import React, { useState } from 'react';
 
 export function AIEnhancementPanel({;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title;
   defaultOptions;
   onApply;
@@ -74,6 +80,8 @@ export function AIEnhancementPanel({;
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     content: initialContent || defaultOptions && defaultOptions.content}),;
@@ -101,6 +109,7 @@ export function AIEnhancementPanel({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
@@ -110,6 +119,8 @@ export function AIEnhancementPanel({;
 
   };
 
+<<<<<<< HEAD
+=======
 =======
 =======
   };
@@ -122,6 +133,7 @@ export function AIEnhancementPanel({;
   };
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -184,6 +196,8 @@ export function AIEnhancementPanel({;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const handleGenerate = async () => {;
     const result = await enhanceContent(options),;
     if (result) {;
@@ -194,6 +208,7 @@ export function AIEnhancementPanel({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -205,6 +220,8 @@ export function AIEnhancementPanel({;
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   };
@@ -237,6 +254,7 @@ export function AIEnhancementPanel({;
   },
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 <<<<<<< HEAD
 =======
@@ -399,6 +417,8 @@ export function AIEnhancementPanel({;
           </div>;
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -479,6 +499,7 @@ export function AIEnhancementPanel({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         >
           {isEnhancing ? (
             <>
@@ -501,6 +522,8 @@ export function AIEnhancementPanel({;
                 variant="ghost"
                 size="sm"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           onClick={handleGenerate} 
@@ -517,6 +540,7 @@ export function AIEnhancementPanel({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {isEnhancing ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
@@ -790,6 +814,8 @@ if ( {) {
     </Card>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -854,3 +880,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

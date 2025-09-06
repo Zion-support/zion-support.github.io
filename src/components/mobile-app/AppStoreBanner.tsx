@@ -1,4 +1,28 @@
+<<<<<<< HEAD
+    // Only show banner on mobile devices and if it hasn't been dismissed before
+    if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
+      // Delay showing the banner by 2 seconds
+      const timer = setTimeout(() => {
+        setIsVisible(true)
+      }, 2000),
+      
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [isMobile]),
+  
+  const dismissBanner = () => {
+    setIsVisible(false),
+    safeStorage.setItem("appBannerDismissed", "true")
+  },
+  
+  // Only render on mobile devices
+  if (!isMobile || !isVisible) return null,
+  
+  return (
+=======
 return (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0"></div>
@@ -23,6 +47,14 @@ return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+},
+import React, { useState, useEffect } from "react",;
+import { safeStorage } from "@/utils/safeStorage",;
+import { X } from 'lucide-react';
+import { useIsMobile } from "@/hooks/use-mobile",;
+export const AppStoreBanner: React.FC = () => {;
+=======
 
 
 };
@@ -50,6 +82,7 @@ export const AppStoreBanner: React.FC = () => {;
   // Only render on mobile devices;
   if (!isMobile || !isVisible) return null;
   return (;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;
       <div className="flex items-center">;
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0"></div>;
@@ -58,6 +91,8 @@ export const AppStoreBanner: React.FC = () => {;
           <p className="text-xs text-gray-300">Get the full experience on our app</p>;
         </div>;
         <div className="flex items-center gap-3">;
+<<<<<<< HEAD
+=======
           <a;
             href="/open-app";
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium";
@@ -69,6 +104,7 @@ export const AppStoreBanner: React.FC = () => {;
             className="text-gray-400 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded";
             aria-label="Dismiss banner";
           >;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <X className="h-5 w-5" />;
           </button>;
         </div>;
@@ -115,5 +151,8 @@ if (return null) {
 }
 '"},
 }
+<<<<<<< HEAD
+=======
 
   )
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

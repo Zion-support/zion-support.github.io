@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,10 +13,13 @@ const Breadcrumb = React.forwardRef<;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import {cn} from "@/lib/utils"
 const Breadcrumb = React.forwardRef<;
@@ -24,11 +29,14 @@ const Breadcrumb = React.forwardRef<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
  
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -53,6 +61,7 @@ const Breadcrumb = React && React.forwardRef<;
  
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
@@ -68,6 +77,8 @@ const Breadcrumb = React.forwardRef<
     ref={ref}
     aria-label="breadcrumb"
     className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "inline-flex items-center gap-1 text-sm text-zion-slate-light"
@@ -107,6 +118,7 @@ const Breadcrumb = React.forwardRef<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   HTMLOListElement;
   React && React.ComponentPropsWithoutRef<"ol">;
 >(({ className, ...props }, ref) => (;
@@ -443,6 +455,8 @@ BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 <<<<<<< HEAD
 
 export {;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 export {;
@@ -453,11 +467,14 @@ export {;
 =======
 export {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -468,20 +485,27 @@ export {;
 export {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
  
 
 
   BreadcrumbEllipsis}
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -520,3 +544,4 @@ return (<Comp ref= {
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

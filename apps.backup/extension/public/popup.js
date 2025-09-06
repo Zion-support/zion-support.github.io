@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 const API_BASE = 'http: //localhost:4000',;
@@ -9,6 +11,7 @@ function getUserId(cb) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
@@ -61,6 +64,8 @@ document.getElementById('postJob').addEventListener('click', async () => {
   const res = await fetch(`${API_BASE}/jobs/generate`, {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
@@ -70,10 +75,13 @@ document.getElementById('postJob').addEventListener('click', async () => {
   document && document.getElementById('result').textContent = data && data.description || 'Draft saved.';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 });
 
 document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -97,6 +105,7 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 });
 
 document.getElementById('signIn').addEventListener('click', async () => {
@@ -105,12 +114,17 @@ document.getElementById('signIn').addEventListener('click', async () => {
   setUserId(id);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 document.querySelectorAll('.example').forEach((btn) => {;
   btn.addEventListener('click', () => {;
     document.getElementById('prompt').value = btn.dataset.text || '';
 
 
+<<<<<<< HEAD
+=======
 =======
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
@@ -121,6 +135,7 @@ document.querySelectorAll('.example').forEach((btn) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * getUserId - Function description
  */
@@ -187,8 +202,11 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 }),;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

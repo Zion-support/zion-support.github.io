@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -44,6 +46,7 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
   if (score >= 80) className = "text-green-700 bg-green-100",
@@ -56,6 +59,8 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {
       {score ? `${score}%` : "Not scored"}
     </span>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -64,6 +69,7 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   )
 import { JobApplication } from "@/types/jobs",;
 interface ScoreBadgeProps {;
@@ -73,10 +79,13 @@ interface ScoreBadgeProps {;
 export function ScoreBadge({ application }: ScoreBadgeProps) {;
   const score = application.match_score || 0,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Determine color based on score;
   let className = "text-gray-700 bg-gray-100";
   if (score >= 80) className = "text-green-700 bg-green-100";
@@ -90,11 +99,14 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
     </span>;
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { JobApplication  } from '@/types / jobs';
 interface ScoreBadgeProps {
   application: JobApplication;
@@ -131,6 +143,8 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
+=======
 =======
 }
 ;
@@ -168,3 +182,4 @@ export function ScoreBadge({ application } ScoreBadgeProps) {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

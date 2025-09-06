@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
@@ -57,11 +59,15 @@ export function AIMilestoneGenerator({
 export function AIMilestoneGenerator({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export function AIMilestoneGenerator({;
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   scope;
   startDate;
   endDate;
@@ -72,6 +78,9 @@ import React, { useState } from 'react';
   onAddMilestone;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
+<<<<<<< HEAD
+
+=======
 =======
   onAddMilestone
 }: AIMilestoneGeneratorProps) {
@@ -137,6 +146,7 @@ import React, { useState } from 'react';
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -184,6 +194,8 @@ export function AIMilestoneGenerator({;
 <<<<<<< HEAD
 
     const input: MilestoneInput = {;
+<<<<<<< HEAD
+=======
       scope;
       startDate;
       endDate,;
@@ -258,6 +270,7 @@ export function AIMilestoneGenerator({;
     } catch (error) {;
       return dateString;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
 <<<<<<< HEAD
@@ -383,6 +396,8 @@ export function AIMilestoneGenerator({;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
+<<<<<<< HEAD
+=======
 
           disabled={isGenerating || !scope || !startDate || !projectType}>;
 =======
@@ -437,6 +452,7 @@ export function AIMilestoneGenerator({;
                   <div className="flex items-center justify-between">;
                     <div className="flex items-center flex-1">;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <input
                         type="checkbox"
 =======
@@ -463,6 +479,8 @@ export function AIMilestoneGenerator({;
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] |false}
                         onChange={() => toggleMilestoneSelection(index)}
+<<<<<<< HEAD
+=======
                         className="mr-2 w-4 h-4 rounded text-primary";
                       />;
                       <AccordionTrigger className="hover:no-underline flex-1 text-left">;
@@ -615,6 +633,7 @@ if ( {) {
                         checked={selectedMilestones[index] |false}
                         onChange={() => toggleMilestoneSelection(index)}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             AI Suggested;
                           </Badge>;
                         </div>;
@@ -737,6 +756,8 @@ if ( {) {
         </Card>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -865,3 +886,4 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

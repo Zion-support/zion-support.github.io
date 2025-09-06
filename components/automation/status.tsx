@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -17,6 +19,7 @@ export default function AutomationStatusPage() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
@@ -28,6 +31,10 @@ export default function AutomationStatusPage() {;
 
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
+<<<<<<< HEAD
+  }, []);
+  return (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -71,6 +78,7 @@ export default function AutomationStatusPage() {;
   }, []);
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
 export default /**
@@ -99,6 +107,8 @@ function AutomationStatusPage() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -114,3 +124,4 @@ function AutomationStatusPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

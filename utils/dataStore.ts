@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -9,11 +11,14 @@ export const dataStore = {
   // Add data store functionality here
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   getData: () => []
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -22,11 +27,14 @@ export const dataStore = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,11 +45,14 @@ export const dataStore = {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -52,6 +63,7 @@ export const dataStore = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface Project {
   id: string;
   title: string;
@@ -61,6 +73,8 @@ interface Project {
   updatedAt: Date;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 interface Review {
   id: string;
@@ -220,6 +234,7 @@ export const data_store = {
     return project;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
   // Review methods
@@ -310,12 +325,15 @@ export const data_store = {
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const findProjectById = (id: string) => store.findProjectById(id);
 export const createProject = (data: Partial<Project>) =>
   store.createProject(data);
@@ -338,6 +356,8 @@ export const counterpartRole = (role: "client" | "talent") =>
 =======
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,3 +375,4 @@ export const counterpartRole = (role: 'client' | 'talent') => store.counterpartR
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

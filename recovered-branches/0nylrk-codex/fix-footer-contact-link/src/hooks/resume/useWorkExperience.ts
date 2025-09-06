@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { WorkExperience  } from '@/types/resume';
@@ -12,9 +15,12 @@ import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useWorkExperience() {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {WorkExperience} from '@/types/resume';
@@ -22,6 +28,8 @@ import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useWorkExperience() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -29,6 +37,7 @@ export function useWorkExperience() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,6 +46,8 @@ export function useWorkExperience() {;
     if (!user) {
       setError('You must be logged in to update work experience')
       return false
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -50,6 +61,7 @@ export function useWorkExperience() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { WorkExperience } from '@/types/resume',;
@@ -64,6 +76,8 @@ export function useWorkExperience() {;
       setError('You must be logged in to update work experience'),;
       return false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -72,11 +86,14 @@ export function useWorkExperience() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -86,10 +103,13 @@ export function useWorkExperience() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const { error } = await supabase
         .from('work_history')
         .insert({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -127,12 +147,15 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           company_name: work.company_name;
           role_title: work.role_title;
           start_date: formatDateForDB (work.start_date);
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           company_name: work && work.company_name;
@@ -203,6 +226,7 @@ if (throw error) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add work experience')
@@ -216,7 +240,10 @@ if (throw error) {
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     setIsLoading(true),;
     setError(null),;
@@ -247,6 +274,8 @@ if (throw error) {
       setError('You must be logged in to update work experience'),;
       return false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -255,11 +284,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -269,10 +301,13 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const { error } = await supabase
         .from('work_history')
         .update({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -297,12 +332,15 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           company_name: work.company_name;
           role_title: work.role_title;
           start_date: formatDateForDB (work.start_date);
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           company_name: work && work.company_name;
@@ -376,6 +414,7 @@ if (throw error) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return showSuccessToast("Work experience updated", "Your work experience has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update work experience')
@@ -389,7 +428,10 @@ if (throw error) {
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     setIsLoading(true),;
     setError(null),;
@@ -420,6 +462,8 @@ if (throw error) {
       setError('You must be logged in to delete work experience'),;
       return false;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -428,11 +472,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -442,10 +489,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const { error } = await supabase
         .from('work_history')
         .delete()
+<<<<<<< HEAD
+      setIsLoading (false);
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -489,6 +540,7 @@ if ( {) {
 =======
       setIsLoading (false);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
     } catch (e: any) {
@@ -503,6 +555,8 @@ if ( {) {
     addWorkExperience;
     updateWorkExperience;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       setIsLoading(false)
 
@@ -516,6 +570,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     setIsLoading(true),;
     setError(null),;
@@ -539,6 +594,11 @@ if ( {) {
     updateWorkExperience;
     deleteWorkExperience;
 <<<<<<< HEAD
+  }
+}
+;
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -561,3 +621,4 @@ if ( {) {
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

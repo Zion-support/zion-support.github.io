@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import '@testing - library / jest - dom',
@@ -17,6 +19,7 @@ import { afterEach, vi } from 'vitest';
 import { cleanup } from '@testing-library/react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import '@testing-library/jest-dom',;
 import { afterEach, vi } from 'vitest',;
 import { cleanup } from '@testing-library/react',;
@@ -35,6 +38,8 @@ afterEach(() => {;
   cleanup(),;
   vi.restoreAllMocks();
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -56,6 +61,7 @@ afterEach(() => {;
 }),; 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import '@testing - library / jest - dom',
 import { after_each, vi } from 'vitest',
@@ -71,4 +77,7 @@ import '@testing-library/jest-dom',;
 import { afterEach, vi } from 'vitest',;
 import { cleanup } from '@testing-library/react',;
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

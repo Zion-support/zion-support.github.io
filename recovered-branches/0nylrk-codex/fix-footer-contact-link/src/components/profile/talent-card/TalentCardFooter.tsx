@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,6 +11,7 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -18,6 +21,8 @@ import {HireRequestModal} from "@/components/profile/hire-request";
 import {useAuthStatus} from "@/hooks/talent";
 import {UserProfile} from "@/types/auth";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface TalentCardFooterProps {;
@@ -165,6 +170,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -257,6 +263,8 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
+=======
 
           <Button 
             variant="default" 
@@ -272,6 +280,7 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
     }
   }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
@@ -289,6 +298,8 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
             </div>;
           )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         </div>
         {/* Action Buttons */}
         <div className="flex gap-2">
@@ -301,6 +312,7 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onClick={handleRequestHire}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
@@ -340,6 +352,8 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -417,12 +431,15 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -446,6 +463,7 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
       />;
     </>;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -510,6 +528,8 @@ if ( {) {
     </>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 };
 //Handle view profile const handleViewProfile = (e: React.MouseEvent) => {
   e.stopPropagation ();
@@ -543,3 +563,4 @@ profile.id || ''
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

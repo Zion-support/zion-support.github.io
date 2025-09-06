@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CommunityDiscussion} from "@/components/CommunityDiscussion";
+import {Badge} from "@/components/ui/badge";
+import {UserCheck, Bell, MessageSquare, LogOut, Send, Settings} from "lucide-react";
+import {createTestNotification, createOnboardingNotification, createSystemNotification} from "@/utils/notifications";
+import {NotificationCenter} from "@/components/NotificationCenter";
+import {useToast} from "@/hooks/use-toast";
+import {Link} from "react-router-dom";
+export default function Dashboard() {;
+=======
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
@@ -35,6 +49,7 @@ export default function Dashboard() {
   const { toast } = useToast();
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -203,9 +218,13 @@ export default function Dashboard() {;
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">ZION$ Balance</span>
                     <span className="text-zion-cyan font-medium">
+<<<<<<< HEAD
+                      <a href="/wallet" className="hover:underline">View Wallet</Link>
+=======
                       <a href="/wallet" className="hover:underline">
                         View Wallet
                       </a>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </span>
                   </div>
 
@@ -231,6 +250,8 @@ export default function Dashboard() {;
                       onClick={async () => {
                         await createOnboardingNotification({
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -248,6 +269,7 @@ export default function Dashboard() {;
                               ? "client"
                               : "talent",
                         });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         toast({
                           title: "Onboarding notification sent",
                           description: "Check your notification center",
@@ -263,6 +285,14 @@ export default function Dashboard() {;
                       variant="outline"
                       onClick={async () => {
                         await createSystemNotification({
+<<<<<<< HEAD
+                          userId: user.id
+                          title: "New Feature Available!"
+                          message: "We've added a new notification center to help you stay updated with important information."
+                          actionUrl: "/notifications"
+                          actionText: "Explore Now"
+                        }),
+=======
                           userId: user.id,
                           title: "New Feature Available!",
                           message:
@@ -276,6 +306,7 @@ export default function Dashboard() {;
 =======
                         }),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         toast({
                           title: "System notification sent",
                           description: "Check your notification center",
@@ -398,6 +429,9 @@ export default function Dashboard() {;
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
+  )
+=======
   );
 }
   const handleTestNotification = async () => {
@@ -610,6 +644,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <CommunityDiscussion />;
                 </div>;
               </div>;
@@ -618,6 +653,8 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -663,3 +700,4 @@ return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <Use
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

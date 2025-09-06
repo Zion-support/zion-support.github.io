@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   website: 'https://ziontechgroup.com'
@@ -8,7 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const allServices = [
   ...advancedEnterpriseServices2025
   ...innovativeMicroSaasExpansion2025
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup.com'
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
 }
 const allServices = [
   ...advancedEnterpriseServices2025;
@@ -51,6 +54,8 @@ const allServices = [
     color: 'from-violet-500 to-indigo-500'
     description: 'Quantum computing solutions'
   }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState, useEffect } from 'react';
@@ -184,22 +189,28 @@ const allServices = [
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup && ziontechgroup.com';
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   return 'Contact for pricing';
@@ -229,13 +240,17 @@ const allServices = [;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (;
@@ -244,6 +259,8 @@ const allServices = [;
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0 && 0.5 }}
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
+<<<<<<< HEAD
+=======
           </p>
         </div>
 =======
@@ -360,6 +377,7 @@ const allServices = [;
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.roi}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </p>
         </div>
         
@@ -733,8 +751,7 @@ import { motion, AnimatePresence  } from './framer-motion';
   Award,
   Phone,
   Mail,
-  MapPin,
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 ;
 // Mock service data;
 const advancedEnterpriseServices2025 = [;
@@ -747,9 +764,7 @@ const advancedEnterpriseServices2025 = [;
     rating: 4.9,
     tags: ["AI", "Machine Learning", "Enterprise"],
     color: "from - blue - 500 to - purple - 500",
-    icon: "🤖",
-  },
-];
+    icon: "🤖"}];
 ;
 const innovativeMicroSaasExpansion2025 = [;
   {
@@ -761,9 +776,7 @@ const innovativeMicroSaasExpansion2025 = [;
     rating: 4.7,
     tags: ["SaaS", "Micro Services", "Cloud"],
     color: "from - green - 500 to - teal - 500",
-    icon: "⚡",
-  },
-];
+    icon: "⚡"}];
 ;
 const cuttingEdgeITInfrastructureServices = [;
   {
@@ -775,22 +788,19 @@ const cuttingEdgeITInfrastructureServices = [;
     rating: 4.8,
     tags: ["Cloud", "Infrastructure", "DevOps"],
     color: "from - orange - 500 to - red - 500",
-    icon: "☁️",
-  },
-];// Import our new service data;
+    icon: "☁️"}];// Import our new service data;
 import { advancedEnterpriseServices2025 } from '../data / 2025 - advanced - enterprise - services - expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data / 2025 - innovative - micro - saas - expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data / 2025 - cutting - edge - it - infrastructure';
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}
 ;
 const all_services = [;
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
-  ...cuttingEdgeITInfrastructureServices, ];  website: 'https://ziontechgroup.com';
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
 }
 ;
 const all_services = [;
@@ -839,43 +849,37 @@ const categories = [;
     name: 'Quantum Computing',
     icon: <Atom className="w - 6 h - 6" />,
     color: 'from - violet - 500 to - indigo - 500',
-    description: 'Quantum computing solutions',
-  },
+    description: 'Quantum computing solutions'},
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
     icon: <Building className='w - 6 h - 6' />,
     color: 'from - blue - 500 to - purple - 500',
-    description: 'Enterprise - grade AI and IT solutions',
-  },
+    description: 'Enterprise - grade AI and IT solutions'},
   {
     id: 'micro - saas',
     name: 'Micro SAAS',
     icon: <Globe className='w - 6 h - 6' />,
     color: 'from - green - 500 to - emerald - 500',
-    description: 'Innovative micro SAAS solutions',
-  },
+    description: 'Innovative micro SAAS solutions'},
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
     icon: <Shield className='w - 6 h - 6' />,
     color: 'from - orange - 500 to - red - 500',
-    description: 'Cutting - edge infrastructure services',
-  },
+    description: 'Cutting - edge infrastructure services'},
   {
     id: 'ai - ml',
     name: 'AI & Machine Learning',
     icon: <Brain className='w - 6 h - 6' />,
     color: 'from - purple - 500 to - pink - 500',
-    description: 'Advanced AI and ML platforms',
-  },
+    description: 'Advanced AI and ML platforms'},
   {
     id: 'quantum',
     name: 'Quantum Computing',
     icon: <Atom className='w - 6 h - 6' />,
     color: 'from - violet - 500 to - indigo - 500',
-    description: 'Quantum computing solutions',
-  }, ];
+    description: 'Quantum computing solutions'}];
 ;
 const getServiceCategory = (service: any) =>: any {
   // Check condition
@@ -1238,6 +1242,8 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
               <a
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Services Inquiry`}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300">;
@@ -1478,6 +1484,7 @@ if ( {) {
               </div>
             </div>
             <div className="flex items-center gap-4">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <a
                 href={`mailto:${contactInfo.email}?subject=Services Inquiry`}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300"
@@ -1489,6 +1496,14 @@ if ( {) {
                 href={contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
+<<<<<<< HEAD
+                Visit Website;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+=======
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
               >
                 Visit Website
@@ -1518,6 +1533,7 @@ if ( {) {
             
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -1525,9 +1541,19 @@ if ( {) {
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
+<<<<<<< HEAD
+                >;
+                  <Grid className='w-5 h-5' />                </button>                <button
+                  onClick={() => setViewMode('list')}
+                  }`}
+                >;
+                  <Grid className="w-5 h-5" />;
+                </button>;
+=======
                 >
                   <LayoutGrid className="w-5 h-5" />
                 </button>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -1535,17 +1561,38 @@ if ( {) {
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
+<<<<<<< HEAD
+          {/* Category Filters */}
+          <div className="mt-6">;
+            <div className="flex flex-wrap gap-3">;
+              {categories && categories.map((category) => (;
+                  key={category && category.id}
+                  onClick={() => setSelectedCategory(category && category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
+                    selectedCategory === category && category.id;
+                      ? 'bg-gradient-to-r text-white shadow-lg';
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700';
+                  } ${category && category.color}`}
+                >;
+                  {category && category.icon}
+                  {category && category.name}
+                </button>;
+=======
                 >
                   <List className="w-5 h-5" />
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </button>
               </div>
             </div>
           </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -1800,6 +1847,8 @@ if ( {) {
                 <ArrowRight className='w-5 h-5' />;
               </a>;
               <a
+<<<<<<< HEAD
+=======
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions.
@@ -1844,6 +1893,7 @@ if ( {) {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Business?
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
@@ -1919,6 +1969,8 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 =======
@@ -1944,3 +1996,4 @@ if ( {) {
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

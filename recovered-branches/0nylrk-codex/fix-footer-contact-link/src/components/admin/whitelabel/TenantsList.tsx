@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -29,6 +31,7 @@ import { Button } from '@/components/ui/button',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -48,6 +51,8 @@ import {;
   TableHead,
   TableHeader,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -59,6 +64,7 @@ import {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import {
@@ -69,14 +75,19 @@ DropdownMenuTrigger,;
   DropdownMenuTrigger,
   DropdownMenuTrigger,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 import {;
@@ -101,6 +112,7 @@ export function TenantsList() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     loadTenants();
   }, []);
 
@@ -461,6 +473,8 @@ export function TenantsList() {;
     }
   },;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -468,6 +482,7 @@ export function TenantsList() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {;
     try {;
       const { error } = await supabase;
@@ -493,6 +508,8 @@ export function TenantsList() {;
       });
     }
   };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -522,11 +539,14 @@ export function TenantsList() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const verifyDns = async (tenant: WhitelabelTenant) => {;
     try {;
       // In a real implementation, this would verify DNS records;
       // For now, we'll just mark it as verified;
       const { error } = await supabase;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         .from("whitelabel_tenants");
@@ -555,6 +575,7 @@ export function TenantsList() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
     }
 
@@ -827,6 +848,8 @@ export function TenantsList() {;
                               <span className="sr-only">Verify DNS</span>;
                             </Button>;
                           )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                         </div>;
 <<<<<<< HEAD
@@ -1376,3 +1399,4 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

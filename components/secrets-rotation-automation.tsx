@@ -22,16 +22,21 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 import React from './react';
@@ -65,6 +70,7 @@ import { Check, ExternalLink } from "lucide-react";
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function SecretsRotationAutomationPage() {
 
   const features = [
@@ -79,9 +85,12 @@ export default function SecretsRotationAutomationPage() {
 export default function SecretsRotationAutomationPage() {
   const features = [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -143,6 +152,8 @@ export default function SecretsRotationAutomationPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             </a>;
@@ -151,6 +162,7 @@ export default function SecretsRotationAutomationPage() {
       </main>;
 
     </>);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       <SEO;
@@ -240,6 +252,8 @@ return (
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -424,8 +438,12 @@ return (
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

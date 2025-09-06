@@ -1,5 +1,7 @@
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   "timestamp": "2025-09-05T22:09:22.350Z",
   "bundleAnalysis": {
@@ -17315,6 +17317,7 @@
       "type": "code-splitting",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "recommendations": [
         "Implement route-based code splitting",
         "Use dynamic imports for large components",
@@ -17329,6 +17332,10 @@
         "Consider implementing cache invalidation strategy"
       ]
     }
+<<<<<<< HEAD
+  }
+}
+=======
 <<<<<<< HEAD
   ]
 <<<<<<< HEAD
@@ -17479,3 +17486,4 @@
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

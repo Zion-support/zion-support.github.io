@@ -24,8 +24,8 @@ import { Input } from '@/components/ui/input'
   FormMessage
 } from '@/components/ui/form'
 import { useForm, type Resolver } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient'
 import { toast } from '@/hooks/use-toast'
 import { useAuth } from '@/hooks/useAuth'
@@ -283,9 +283,10 @@ import { LoginModal } from '@/components/auth/LoginModal';
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       e.stopPropagation();
-      onClose();
+      onClose()
     }
-  },
+  };
+
 
   return (
     <>

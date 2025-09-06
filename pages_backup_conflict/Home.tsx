@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 import Head from 'next/head';
 export default function Home() {
   return (
+<<<<<<< HEAD
+=======
     <>
       <Head>
         <title>Home | Zion Tech Group</title>
@@ -31,3 +36,4 @@ import React from 'react'; import Head from 'next/head'; export default function
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

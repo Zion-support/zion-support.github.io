@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -36,6 +38,7 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
@@ -79,6 +82,8 @@ class IntelligentErrorFixer {
       mergeConflicts: {
         pattern: /||        fix: (content) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
@@ -87,11 +92,14 @@ class IntelligentErrorFixer {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           // Remove merge conflict markers
           return content
             .replace(/\n?/g, '')
             .replace(/\n?/g, '')
             .replace(/        }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -103,10 +111,13 @@ class IntelligentErrorFixer {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         fix: (content) => {
           // Remove merge conflict markers
           return content
         }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -151,6 +162,7 @@ class IntelligentErrorFixer {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         }
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       },
       invalidJSX: {
         pattern: /return\(\)\s*</gm,
@@ -159,6 +171,8 @@ class IntelligentErrorFixer {
       missingImports: {
         pattern: /React\./g,
         fix: (content) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           if (!content.includes("import React")) {
@@ -178,6 +192,7 @@ class IntelligentErrorFixer {
           if (!content.includes("import React")) {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             return `import React from 'react';\n${content}`;
           }
           return content;
@@ -186,6 +201,8 @@ class IntelligentErrorFixer {
     };
   }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
@@ -205,6 +222,7 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async runBuildCheck() {
     try {
       this.log('Running build check...');
@@ -222,6 +240,8 @@ class IntelligentErrorFixer {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -240,6 +260,7 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async runLintCheck() {
     try {
       this.log('Running lint check...');
@@ -257,6 +278,8 @@ class IntelligentErrorFixer {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -275,6 +298,7 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async runTypeCheck() {
     try {
       this.log('Running TypeScript check...');
@@ -290,6 +314,8 @@ class IntelligentErrorFixer {
       return { success: false, output: error.stdout || error.message };
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -324,10 +350,13 @@ class IntelligentErrorFixer {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     lines.forEach((line, index) => {
       // Extract file paths and error messages
       const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
       const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
@@ -350,6 +379,7 @@ class IntelligentErrorFixer {
 =======
       
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (fileMatch && errorMatch) {
         errors.push({
           file: fileMatch[1],
@@ -358,6 +388,8 @@ class IntelligentErrorFixer {
         });
       }
     });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -391,6 +423,7 @@ class IntelligentErrorFixer {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
       this.log(`File not found: ${filePath}`, 'ERROR');
@@ -398,6 +431,8 @@ class IntelligentErrorFixer {
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -416,12 +451,15 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       this.log(`Attempting to fix file: ${filePath}`);
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -440,6 +478,7 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Apply error pattern fixes
       for (const [patternName, pattern] of Object.entries(this.errorPatterns)) {
         const matches = content.match(pattern.pattern);
@@ -455,6 +494,8 @@ class IntelligentErrorFixer {
       }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -473,6 +514,7 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Specific fixes for common issues
       if (content.includes('return()')) {
         content = content.replace(/return\(\)/g, 'return (');
@@ -480,6 +522,8 @@ class IntelligentErrorFixer {
       }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -498,10 +542,13 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (content.includes('};')) {
         content = content.replace(/}\s*;\s*$/gm, '}');
         modified = true;
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
@@ -515,11 +562,14 @@ class IntelligentErrorFixer {
 =======
 
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Fix import statements
       if (content.includes('React.') && !content.includes("import React")) {
         content = `import React from 'react';\n${content}`;
         modified = true;
       }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -533,6 +583,7 @@ class IntelligentErrorFixer {
 =======
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -543,6 +594,8 @@ class IntelligentErrorFixer {
         modified = true;
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -560,10 +613,13 @@ class IntelligentErrorFixer {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (modified) {
         // Create backup
         const backupPath = `${filePath}.backup.${Date.now()}`;
         fs.copyFileSync(filePath, backupPath);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
@@ -586,6 +642,7 @@ class IntelligentErrorFixer {
 =======
         
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         // Write fixed content
         fs.writeFileSync(filePath, content);
         this.log(`Successfully fixed and saved: ${filePath}`);
@@ -593,6 +650,8 @@ class IntelligentErrorFixer {
       }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -611,6 +670,7 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return false;
     } catch (error) {
       this.log(`Error fixing file ${filePath}: ${error.message}`, 'ERROR');
@@ -618,10 +678,23 @@ class IntelligentErrorFixer {
     }
   }
 <<<<<<< HEAD
+  async cleanupDuplicateFiles() {
+    this.log('Checking for duplicate page files...');
+    const pagesDir = path.join(process.cwd(), 'pages');
+    if (!fs.existsSync(pagesDir)) {
+      return;
+    }
+    const duplicates = [];
+    const seen = new Set();
+    function scanDirectory(dir) {
+      const files = fs.readdirSync(dir, { withFileTypes: true });
+=======
+<<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ========
@@ -679,6 +752,8 @@ class IntelligentErrorFixer {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -690,12 +765,15 @@ class IntelligentErrorFixer {
 >>>>>>>> main:corrupted_backup/intelligent-error-fixer.js
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       files.forEach(file => {
         if (file.isDirectory()) {
           scanDirectory(path.join(dir, file.name));
         } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {
           const baseName = file.name.replace(/\.(js|tsx)$/, '');
           const relativePath = path.relative(pagesDir, path.join(dir, baseName));
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<<< HEAD:automation/intelligent-error-fixer.js
 <<<<<<< HEAD
@@ -718,6 +796,7 @@ class IntelligentErrorFixer {
 =======
           
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           if (seen.has(relativePath)) {
             duplicates.push(path.join(dir, file.name));
           } else {
@@ -767,6 +846,8 @@ class IntelligentErrorFixer {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -814,6 +895,7 @@ class IntelligentErrorFixer {
 =======
 ========
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     scanDirectory(pagesDir);
 
     // Remove duplicate .js files if .tsx exists
@@ -821,11 +903,14 @@ class IntelligentErrorFixer {
           fs.unlinkSync(duplicate);
         }
       }
+<<<<<<< HEAD
+=======
 >>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:automation/intelligent-error-fixer.js
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const fs = require('fs');
 const path = require('path');
 const {
@@ -870,6 +955,8 @@ const {
           }},
         "mergeConflicts": {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -929,6 +1016,7 @@ const {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -952,6 +1040,8 @@ const {
     }
     async runBuildCheck() {
       try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -986,10 +1076,13 @@ const {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1034,6 +1127,7 @@ const {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         this.log('Running build check...');
         const result = execSync('yarn build', {
           "encoding": 'utf8',
@@ -1060,6 +1154,8 @@ const {
         return { "success": false, "output": error.stdout || error.message };
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1093,6 +1189,7 @@ const {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
@@ -1116,6 +1213,8 @@ const {
         // Attempt to fix files
         const uniqueFiles = [...new Set(buildErrors.map(e => e.file))];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1123,6 +1222,7 @@ const {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         for (const file of uniqueFiles) {
           const filePath = path.join(process.cwd(), file);
           const fixed = await this.fixFile(filePath);
@@ -1132,6 +1232,9 @@ const {
               file: file,
               timestamp: new Date().toISOString()
             });
+<<<<<<< HEAD
+        );
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1155,6 +1258,7 @@ const {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         }
         // Run build again after fixes
@@ -1179,7 +1283,10 @@ const {
     }
   }
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1188,6 +1295,8 @@ const {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -1234,6 +1343,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     async runTypeCheck() {
       try {
@@ -1445,6 +1555,8 @@ if (require.main === module) {
   const fixer = new IntelligentErrorFixer();
   fixer.run().catch(console.error);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<<< HEAD:corrupted_backup/intelligent-error-fixer.js
@@ -1521,3 +1633,4 @@ module.exports = IntelligentErrorFixer;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

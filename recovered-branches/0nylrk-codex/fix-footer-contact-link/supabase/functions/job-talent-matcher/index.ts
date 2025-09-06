@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
@@ -19,10 +21,13 @@ import {processJobMatching, storeMatchResults} from "./job-matching.ts";
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 // Initialize the Supabase client
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -54,10 +59,13 @@ import {processJobMatching, storeMatchResults} from "./job-matching.ts";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -67,6 +75,7 @@ import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -77,6 +86,8 @@ const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -84,12 +95,15 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -118,6 +132,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!jobId) {
       throw new Error("Job ID is required")
     }
@@ -177,6 +192,8 @@ serve(async (req) => {
       )
     }
     // 3. Use AI to normalize skills and find matches
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     await storeMatchResults(jobId, matchedTalents, job && job.title);
@@ -251,6 +268,7 @@ serve(async (req) => {
     )
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
@@ -392,6 +410,8 @@ if ( {) {
   }
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
@@ -469,3 +489,4 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

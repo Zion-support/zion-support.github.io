@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import { ResumeWizard, as, WizardComponent  } from './wizard';
+export /**
+ * ResumeWizard - Function description
+ */
+function ResumeWizard() {
+=======
 import { ResumeWizard, as, WizardComponent } from "./wizard";
 export function ResumeWizard() {
   return <WizardComponent />;
@@ -10,6 +17,7 @@ export function ResumeWizard() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 =======
@@ -65,6 +73,8 @@ export function ResumeWizard() {;
 
 
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -72,3 +82,4 @@ export function ResumeWizard() {;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

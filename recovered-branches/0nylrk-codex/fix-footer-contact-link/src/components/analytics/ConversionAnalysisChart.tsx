@@ -42,6 +42,8 @@ export function ConversionAnalysisChart(): any ({;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 import React from './react';
 =======
 } from "@/components/ui/card";
@@ -102,6 +104,7 @@ export function ConversionAnalysisChart(): any ({;
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import {
   Card,
@@ -125,6 +128,8 @@ interface ConversionAnalysisProps {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
 
 =======
 import React from "react",
@@ -240,6 +245,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange } C
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -261,6 +267,8 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
       </CardHeader>;
       <CardContent>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         <AnalyticsChart;
           title="";
           data={data || []}
@@ -272,6 +280,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
@@ -312,6 +321,8 @@ function ConversionAnalysisChart() {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
         <AnalyticsChart;
           title="";
           data={data || []}
@@ -339,3 +350,4 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

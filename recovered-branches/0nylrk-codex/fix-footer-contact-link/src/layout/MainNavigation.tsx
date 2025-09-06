@@ -3,19 +3,25 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface MainNavigationProps {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -51,6 +57,8 @@ interface MainNavigationProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
 
@@ -72,12 +80,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const links = [
     {
       name: "Home"
       href: "/"
       matches: (path: string) => path === "/"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -93,11 +104,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Marketplace"
       href: "/marketplace"
       matches: (path: string) => path.startsWith("/marketplace")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -113,11 +127,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Categories"
       href: "/categories"
       matches: (path: string) => path.startsWith("/categories")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -133,11 +150,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Talent"
       href: "/talent"
       matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -153,11 +173,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Equipment"
       href: "/equipment"
       matches: (path: string) => path.startsWith("/equipment")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -174,11 +197,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Community"
       href: "/community"
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -197,6 +223,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -213,6 +240,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith("/analytics")
     })
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -342,6 +371,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
@@ -483,15 +513,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
           </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
             <Link
               to="/messages"
               className={cn(
+<<<<<<< HEAD
+=======
 
 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
@@ -502,6 +537,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                 location.pathname === "/messages" || location.pathname === "/inbox"
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -550,10 +586,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </span>;
               )}
 =======
@@ -692,6 +731,8 @@ if ( {) {
     </nav>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -793,3 +834,4 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -41,6 +41,9 @@ import React,{ createContext,useContext,useState } from\';react\' const Language
 const React,{ createContext,useContext,useState } from";react" const LanguageProvider({ children }) { const [language,setLanguage] = useState("";en") const t = (key) => { return translations[language]?.[key] | key} const isRTL = language ===";";ar" | language: ==="";he" return: (<LanguageContext && LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext && LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error("";useLanguage: must be used within a LanguageProvider")} return context}"";'"'"
 import _React,{ createContext,useContext,useState } from';react' const LanguageProvider({ children }) { const [language,setLanguage] = useState('';en') const t = (key) => { return translations[language]?.[key] || key} const isRTL = language ===';';ar' || "language": ==='';he' return: (<LanguageContext && LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext && LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error('';"useLanguage": must be used within a LanguageProvider')} return context}'';
 <<<<<<< HEAD
+import _React,{ createContext,useContext,useState } from';react' const LanguageProvider({ children }) { const [language,setLanguage] = useState('';en') const t = (key) => { return translations[language]?.[key] || key} const isRTL = language ===';';ar' || "language": ==='';he' return: (<LanguageContext && LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext && LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error('';"useLanguage": must be used within a LanguageProvider')} return context}'';
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,3 +65,4 @@ import _React,{ createContext,useContext,useState } from';react' const LanguageP
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

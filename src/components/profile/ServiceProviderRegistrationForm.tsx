@@ -274,13 +274,13 @@ if ( {) {
 
 
               html: `
-              <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
-                <h2 style="color: #6D28D9,">Service Profile Created!</h2>
+              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #6D28D9;">Service Profile Created!</h2>
                 <p>Your service provider profile has been successfully created and published.</p>
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
                 <p>You can now start receiving service requests and connecting with clients.</p>
-                <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">
-                  <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                  <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
               </div>
 
@@ -553,66 +553,70 @@ export function ServiceProviderRegistrationForm() {;
       }
 
       // Get user email for notification;
-      const { data: userData } = await supabase.auth.getUser(),;
-      const userEmail = (userData as any).user?.email,;
+      const { data: userData } = await supabase && supabase.auth.getUser();
+      const userEmail = (userData as any).user?.email;
+
       // Create the service profile;
       const { data: profileData, error } = await supabase;
         .from('profiles');
         .update({;
-          display_name: values.name,;
+          display_name: values && values.name,;
           bio: finalSummary,;
-          user_type: "creator", // Set as service provider;
+          user_type: 'creator', // Set as service provider;
           profile_complete: true,;
           updated_at: new Date().toISOString(),;
-          headline: values.title,;
+          headline: values && values.title,;
           // Additional fields that might be in profiles table;
         });
-        .eq('id', user.id);
-        .select(),;
-      if (error) throw error,;
+        .eq('id', user && user.id);
+        .select();
+
+      if (error) throw error;
+
       // Store service-specific data in service_profiles table;
       // (This assumes you have a service_profiles table in your database);
+
       /*;
       const { error: serviceError } = await supabase;
         .from('service_profiles');
         .insert({;
-          user_id: user.id,;
+          user_id: user && user.id,;
           services: finalServices,;
-          hourly_rate: Number(values.hourlyRate),;
-          availability_status: values.availability,;
-          location: values.location,;
-          website: values.website || null}),;
-      if (serviceError) throw serviceError,;
+          hourly_rate: Number(values && values.hourlyRate),;
+          availability_status: values && values.availability,;
+          location: values && values.location,;
+          website: values && values.website || null});
+
+      if (serviceError) throw serviceError;
       */;
+
       // Send notification email if available;
-      if (userEmail && values.enhancedProfile) {;
+      if (userEmail && values && values.enhancedProfile) {;
         try {;
-          await supabase.functions.invoke('send-email', {;
+          await supabase && supabase.functions.invoke('send-email', {;
             body: {;
               to: userEmail,;
-              subject: "Your Zion Service Profile Is Ready",;
+              subject: 'Your Zion Service Profile Is Ready',;
               html: `;
-              <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">;
-                <h2 style="color: #6D28D9,">Service Profile Created!</h2>;
+              <divstyle="font-family: Arial, sans-serif max-width: 600px margin: 0 auto">;
+                <h2style="color: #6D28D9">Service Profile Created!</h2>;
                 <p>Your service provider profile has been successfully created and published.</p>;
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>;
                 <p>You can now start receiving service requests and connecting with clients.</p>;
-                <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">;
-                  <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
+                <divstyle="margin-top: 30px padding-top: 20px border-top: 1px solid #eee">;
+                  <pstyle="color: #666 font-size: 12px">© ${new Date().getFullYear()} Zion Marketplace</p>;
                 </div>;
               </div>;
-              `;
-            }
+              `,;
+            },;
           });
         } catch (emailError) {;
-          logErrorToProduction('Failed to send notification email:', { data: emailError }),;
+          logErrorToProduction('Failed to send notification email:', {;
+            data: emailError,;
+          });
           // Continue with submission even if email fails;
         }
       }
-      
-      toast({
-        title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory."}),
 
       toast({;
         title: 'Profile Created Successfully',;
@@ -825,10 +829,19 @@ export function ServiceProviderRegistrationForm() {;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className='space-y-8'>;
               {/* Basic Information */}
+<<<<<<< HEAD
+              <div className='space-y-4'>;
+                <h3 className='text-lg font-medium text-white'>;
+                  Basic Information;
+                </h3>;
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
+                  <div className='col-span-1'>;
+=======
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="col-span-1">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <FormField
                       control={form.control}
                 />;
@@ -892,13 +905,13 @@ export function ServiceProviderRegistrationForm() {;
                   </div>
                 )}
                 {/* Generated Content Display */}
-                {generatedContent && (
-                  <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <h4 className="text-white font-medium flex items-center">
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                        AI-Generated Content
-                      </h4>
+                {generatedContent && (;
+                  <div className='bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4'>;
+                    <div className='flex items-center justify-between mb-3'>;
+                      <h4 className='text-white font-medium flex items-center'>;
+                        <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />;
+                        AI-Generated Content;
+                      </h4>;
                       <Button
 
 
@@ -915,8 +928,12 @@ export function ServiceProviderRegistrationForm() {;
 
 
                       <div>
-                        <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
-                        <p className="text-zion-slate italic">{generatedContent.summary}</p>
+                        <h5 className='text-zion-slate-light text-sm mb-1'>
+                          Professional Summary
+                        </h5>
+                        <p className='text-zion-slate italic'>
+                          {generatedContent.summary}
+                        </p>
                       </div>
 
                         onClick={applyGeneratedContent}>;
@@ -977,7 +994,7 @@ export function ServiceProviderRegistrationForm() {;
 
               </div>;
 
-              <Separator className="bg-zion-blue-light/50" />
+              <Separator className='bg-zion-blue-light/50' />;
 
 
 
@@ -985,10 +1002,12 @@ export function ServiceProviderRegistrationForm() {;
 
 
               {/* Services and Availability */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {/* Services Section */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Services Offered</h3>
+                <div className='space-y-4'>;
+                  <h3 className='text-lg font-medium text-white'>;
+                    Services Offered;
+                  </h3>;
                   <FormField
 
                     control={form.control}
@@ -1002,12 +1021,18 @@ export function ServiceProviderRegistrationForm() {;
 
                           <FormControl>
                             <Input
-                              className="flex-1 bg-zion-blue border-zion-blue-light text-white"
-                              placeholder="Add a service..."
+                              className='flex-1 bg-zion-blue border-zion-blue-light text-white'
+                              placeholder='Add a service...'
                               {...field}
+<<<<<<< HEAD
+                              onKeyDown = {handleServiceKeyPress,}
+                            />;
+                          </FormControl>;
+=======
                               onKeyDown={handleServiceKeyPress}
                             />
                           </FormControl>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           <Button
 
                   />;
@@ -1199,9 +1224,11 @@ export function ServiceProviderRegistrationForm() {;
                   </div>;
                 </div>;
                 {/* Pricing and Availability Section */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>
-                  <FormField
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - medium text - white'>;
+                    Pricing & Availability;
+                  </h3>;
+                  <FormField;
                     control={form.control}
 
                     name="hourlyRate"
@@ -1296,7 +1323,7 @@ export function ServiceProviderRegistrationForm() {;
                   />;
                   <FormField;
                     control={form.control}
-                    name="availability"
+                    name='availability';
                     render={({ field }: { field: any }) => (
 
                       <FormItem className="space-y-4">
@@ -1422,10 +1449,22 @@ export function ServiceProviderRegistrationForm() {;
   setServiceTags (service_tags.filter ( (s) => s !== service) );
 
 }
+<<<<<<< HEAD
+//Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
+}
+//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+  const file = e.target.files?.[0];
+// Check condition
+if ( {) {
+  $2
+}
+  const reader = new FileReader ();
+=======
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
   const file = e.target.files?.[0]
 if (file) {
   const reader = new FileReader ()
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 reader.onloadend = () => {
 
   setUploadedAvatar (reader.result as string);
@@ -1465,7 +1504,11 @@ if (newServices.length > 0) {
   if (serviceTags.length === 0) {
   toast ({
   return;
+<<<<<<< HEAD
+}setIsSubmitting (true);
+=======
 }setIsSubmitting (true)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 try {
   //For actual implementation with Supabase if (!user?.id) {
 }//Enhance profile if not already done let finalSummary = values.bio

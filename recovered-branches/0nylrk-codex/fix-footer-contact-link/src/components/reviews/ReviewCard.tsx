@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+interface ReviewCardProps {
+  review: Review;
+  onReport: (reviewId: string, reason: string) => Promise<boolean>
+}
+
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { Star, Flag, User } from "lucide-react",
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+import {
+=======
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { Star, Flag, User } from "lucide-react";
@@ -6,6 +34,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Dialog,
   DialogContent,
   DialogDescription,
@@ -42,6 +71,8 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
   const renderStars = (rating?: number) => {
     if (!rating) return null;
 
+<<<<<<< HEAD
+=======
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -61,11 +92,14 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
   const renderStars = (rating?: number) => {
     if (!rating) return null;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
@@ -83,15 +117,19 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
+<<<<<<< HEAD
+=======
       .substring(0, 2);
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -111,9 +149,12 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
                 />
               ) : (
                 <AvatarFallback>
+<<<<<<< HEAD
+=======
                   {review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : "??"}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </AvatarFallback>
               )}
             </Avatar>;
@@ -123,6 +164,10 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
             <div className="font-medium">
               {review.is_anonymous
                 ? "Anonymous"
+<<<<<<< HEAD
+          {renderStars(review.rating)}
+        </div>
+=======
                 : review.reviewer_profile?.display_name || "User"}
             </div>
             <div className="text-sm text-muted-foreground">
@@ -133,6 +178,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
           </div>
         </div>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="flex">{renderStars(review.rating)}</div>
       </div>
 
@@ -157,6 +203,8 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
               </Badge>
             )}
 
+<<<<<<< HEAD
+=======
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
@@ -189,6 +237,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 =======
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -478,4 +527,7 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 =======
 ;
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

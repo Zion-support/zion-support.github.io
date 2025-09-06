@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from 'react'; import { Link } from 'react-router-dom'; import { MainNavigation } from "header/MainNavigation.tsx"; export function Header() {; return (; <header className="bg-white shadow-sm border-b border-gray-200"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="flex justify-between items-center h-16"> <div className="flex items-center"> <Link to="/" className="flex-shrink-0"> <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group></div> ></div> ></div> <MainNavigation /> ></div> ></div> ></div> );} export default Header;
@@ -61,3 +63,4 @@ import _React from 'react'; import { Link } from 'react-router-dom'; import { Ma
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

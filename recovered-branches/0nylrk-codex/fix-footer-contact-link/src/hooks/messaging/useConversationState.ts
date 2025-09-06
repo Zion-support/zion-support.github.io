@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,6 +16,7 @@ export function useConversationState() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -23,6 +26,8 @@ export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -30,15 +35,19 @@ export function useConversationState() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {Conversation, Message} from '@/types / messaging';
 /**;
@@ -66,6 +75,8 @@ function useConversationState() {
     unread_count;
     setUnreadCount;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
   return {
@@ -81,6 +92,7 @@ function useConversationState() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     activeConversation;
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;

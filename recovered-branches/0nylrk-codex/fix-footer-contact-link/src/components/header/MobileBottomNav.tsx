@@ -4,6 +4,8 @@ import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "l
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface MobileBottomNavProps {;
   unreadCount?: number;
@@ -24,6 +26,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
@@ -32,18 +35,26 @@ import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MobileBottomNavProps {
   unreadCount?: number
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
@@ -57,6 +68,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const isAuthenticated = !!user;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
   const { user } = useAuth();
@@ -66,9 +78,12 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const isAuthenticated = !!user,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const navItems = [
     {
       name: "Home"
@@ -76,6 +91,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       icon: Home
       matches: (path: string) => path === "/"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -83,6 +100,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Browse"
       href: "/talent"
@@ -90,6 +108,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       name: "Community"
       href: "/community"
@@ -117,6 +137,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Messages"
       href: "/messages"
@@ -124,6 +145,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -140,6 +163,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -147,6 +171,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -285,6 +311,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
@@ -318,6 +345,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -335,6 +364,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -351,11 +381,14 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
@@ -540,6 +573,8 @@ function MobileBottomNav() {
     </nav>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -607,3 +642,4 @@ return ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

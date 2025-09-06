@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 // All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices = [ ...advancedAIMLServices;
@@ -165,6 +168,8 @@
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">;
                     <a
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState } from 'react';
@@ -584,6 +589,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
@@ -714,6 +720,8 @@ const ComprehensiveServicesShowcase2025 = () => {
                               {feature}
                             </li>;
                           ))}
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -827,6 +835,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -836,8 +845,11 @@ const ComprehensiveServicesShowcase2025 = () => {
                       </div>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
@@ -857,6 +869,8 @@ const ComprehensiveServicesShowcase2025 = () => {
                           <div className="text - right mb - 4">;
                             <span className="text - 3xl font - bold text - gray - 900">;
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
                       {/* Service Info */}
@@ -920,12 +934,15 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
                               {service.features.slice(0, 4).map((feature, idx) => (
                                 <li key={idx} className="flex items-center">
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                                   {feature}
@@ -937,6 +954,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         </div>;
                         <div>;
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;
@@ -978,6 +996,8 @@ const ComprehensiveServicesShowcase2025 = () => {
                                 </li>
                               ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 =======
@@ -989,6 +1009,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -1096,6 +1117,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             </div>;
           )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 =======
@@ -1134,6 +1157,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1268,12 +1292,15 @@ const ComprehensiveServicesShowcase2025 = () => {
             </div>
           </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
       {/* Why Choose Us */}
       <section className="py-20 bg-white">;
@@ -1363,6 +1390,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 =======
@@ -1370,6 +1399,7 @@ const ComprehensiveServicesShowcase2025 = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
@@ -1378,6 +1408,8 @@ const ComprehensiveServicesShowcase2025 = () => {
               Start Consultation
             </a>
             <a
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               href="https://ziontechgroup.com"
@@ -1397,6 +1429,7 @@ export default ComprehensiveServicesShowcase2025;
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Visit Website;
             </a>;
           </div>;
@@ -1428,6 +1461,8 @@ export default ComprehensiveServicesShowcase;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 =======
@@ -1447,3 +1482,4 @@ export default ComprehensiveServicesShowcase;
 export default ComprehensiveServicesShowcase2025;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

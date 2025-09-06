@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+"export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
@@ -32,5 +35,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

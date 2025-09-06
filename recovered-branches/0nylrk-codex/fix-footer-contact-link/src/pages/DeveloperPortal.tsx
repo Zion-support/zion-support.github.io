@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { 
+  BookOpen,
+  Code, 
+  Key, 
+  List, 
+  LucideIcon, 
+  Terminal, 
+  Webhook 
+} from "lucide-react",
+
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
+import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+import { ApiLogs } from "@/components/developers/ApiLogs",
+=======
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import {
@@ -15,12 +34,15 @@ import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
 import { WebhooksManager } from "@/components/developers/WebhooksManager";
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface TabDefinition {
   id: string;
   label: string;
   icon: LucideIcon;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface TabDefinition {;
@@ -42,6 +64,7 @@ export function DeveloperPortal() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
@@ -57,9 +80,12 @@ export function DeveloperPortal() {
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen },
@@ -80,6 +106,47 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
+<<<<<<< HEAD
+import { useState } from './react';
+import { use_auth } from '@/hooks / use_auth';
+import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from './lucide-react';
+;
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { ApiKeysManager } from '@/components / developers / ApiKeysManager';
+import { WebhooksManager } from '@/components / developers / WebhooksManager';
+import { ApiDocumentation } from '@/components / developers / ApiDocumentation';
+import { ApiLogs } from '@/components / developers / ApiLogs';
+interface TabDefinition {
+  id: string,
+  label: string,
+  icon: LucideIcon;
+}
+export /**
+ * DeveloperPortal - Function description
+ */
+function DeveloperPortal() {
+  const { user } = use_auth ();
+  const [active_tab, setActiveTab] = useState < string>("documentation");
+;
+  // Define the tabs;
+  const tabs: TabDefinition[] = [;
+    { id: "documentation", label: "Documentation", icon: BookOpen },
+    { id: "api - keys", label: "API Keys", icon: Key },
+    { id: "webhooks", label: "Webhooks", icon: Webhook },
+    { id: "logs", label: "Logs", icon: List }],
+  return (
+    <div className="w - full max - w-7xl mx - auto p - 4 md:p - 8">;
+      <div className="mb - 8">;
+        <h1 className="text - 3xl font - bold text - white flex items - center">;
+          <Terminal className="mr - 3" size={32} />;
+          Developer Portal;
+        </h1>;
+        <p className="text - zinc - 400 mt - 2">;
+          Access the Zion API, manage your API keys, and set up webhooks.;
+        </p>;
+      </div>;
+      {/* Tabs */}
+=======
 
       {/* Tabs */}
 <<<<<<< HEAD
@@ -149,13 +216,17 @@ export function DeveloperPortal() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="border - b border - zinc - 800 mb - 8">;
         <div className="flex flex - wrap -mb - px">;
           {tabs.map ((tab) => {
             const Icon = tab.icon;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Define the tabs;
@@ -163,6 +234,10 @@ export function DeveloperPortal() {;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
     { id: "api-keys", label: "API Keys", icon: Key },;
     { id: "webhooks", label: "Webhooks", icon: Webhook },;
+<<<<<<< HEAD
+    { id: "logs", label: "Logs", icon: List }];
+  return (;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     { id: "logs", label: "Logs", icon: List }],;
@@ -176,6 +251,7 @@ export function DeveloperPortal() {;
     { id: "logs", label: "Logs", icon: List }];
   return (;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
       <div className="mb-8">;
         <h1 className="text-3xl font-bold text-white flex items-center">;
@@ -189,6 +265,12 @@ export function DeveloperPortal() {;
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
+<<<<<<< HEAD
+                <Icon size={16} className="mr-2" />
+                {tab.label}
+              </button>
+            )
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -217,16 +299,24 @@ export function DeveloperPortal() {;
                 {tab.label}
               </button>
             );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           })}
         </div>
       </div>
 
+<<<<<<< HEAD
+        </div>;
+      </div>;
+
+
+=======
 <<<<<<< HEAD
       {/* Tab content */}
       <div>;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {tabs && tabs.map((tab) => {;
             const Icon = tab && tab.icon;
             return (
@@ -245,6 +335,8 @@ export function DeveloperPortal() {;
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
+<<<<<<< HEAD
+=======
       </div>
     </div>
   );
@@ -252,6 +344,7 @@ export function DeveloperPortal() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -314,6 +407,8 @@ function ProtectedDeveloperPortal() {
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -343,3 +438,4 @@ export default function ProtectedDeveloperPortal() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,5 +1,7 @@
 // Stub AI pricing utility - placeholder for missing functionality;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -20,10 +22,13 @@ export const getAIPricing = async (service: string) => {
 },
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const calculateAICost = async (usage: any) => {
   // Placeholder implementation;
   return { cost: 0, success: true }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,12 +52,18 @@ export const getAIPricing = async (service: string) => {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
   return { price: 99, currency: 'USD', success: true }
 },;
 export const calculateAICost = async (usage: any) => {;
   // Placeholder implementation;
+<<<<<<< HEAD
+export const getAIPricing = async (service: string) => {;
+  // Placeholder implementation;
+};
+=======
 <<<<<<< HEAD
   return { cost: 0, success: true }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -90,3 +101,4 @@ export const getAIPricing = async (service: string) => {;
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

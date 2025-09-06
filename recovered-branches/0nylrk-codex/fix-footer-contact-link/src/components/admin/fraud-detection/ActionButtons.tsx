@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -36,6 +38,7 @@ import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ActionButtonsProps {
   flag_id: string;
   status: string;
@@ -44,6 +47,8 @@ interface ActionButtonsProps {
   status: string,
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
@@ -58,6 +63,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 
     <div className="flex space-x-2">
@@ -88,6 +94,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
   return (
     <div className="flex space-x-2">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -97,6 +105,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button
         variant="ghost"
         size="icon"
@@ -133,6 +142,8 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         <Eye className="h-4 w-4" />;
       </Button>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         onClick={() => alert("View details (would open a detailed view)")}
@@ -141,15 +152,21 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
       </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         onClick={() => alert("View details (would open a detailed view)")}
       >;
         <Eye className="h-4 w-4" />;
       </Button>;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button
         variant="ghost"
         size="icon"
         title="Send Warning"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,6 +181,7 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         disabled={status === "actioned" |status === "ignored"}
         onClick={() => onAction(flagId, 'warning')}
         disabled={status === 'actioned' || status === 'ignored'}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       >
         <Info className="h-4 w-4" />
       </Button>
@@ -182,6 +200,8 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         <Info className="h-4 w-4" />;
       </Button>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -193,10 +213,13 @@ onClick={() => onAction(flagId, "warning")}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button
         variant="ghost"
         size="icon"
         title="Suspend User"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -211,6 +234,7 @@ onClick={() => onAction(flagId, "warning")}
         disabled={status === "actioned" |status === "ignored"}
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       >
         <AlertTriangle className="h-4 w-4" />
       </Button>
@@ -229,6 +253,8 @@ onClick={() => onAction(flagId, "warning")}
         <AlertTriangle className="h-4 w-4" />;
       </Button>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -240,10 +266,15 @@ onClick={() => onAction(flagId, "suspension")}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button
         variant="ghost"
         size="icon"
         title="Ban User"
+<<<<<<< HEAD
+    </div>;
+);
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -277,6 +308,7 @@ onClick={() => onAction(flagId, "ban")}
     </div>;
 );
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     </div>;
 );
@@ -506,6 +538,9 @@ onClick={() => onAction(flagId, "ignore")}
   );
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

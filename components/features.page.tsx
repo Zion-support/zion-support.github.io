@@ -13,10 +13,13 @@ import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 
 export default function FeaturesPage() {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold'>Features</h1>;
@@ -81,6 +84,8 @@ function FeaturesPage() {
       </div>;
     </EnhancedLayout>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -152,12 +157,15 @@ export default function FeaturesPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   );
@@ -172,3 +180,4 @@ export default function FeaturesPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

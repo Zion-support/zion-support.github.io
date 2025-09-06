@@ -9,6 +9,8 @@ import {useAuthState} from "./useAuthState";
 import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const AuthProvider = ({ children }: { children: React && React.ReactNode }) => {;
@@ -39,6 +41,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } = useAuthState();
 
   const navigate = useNavigate();
@@ -68,6 +71,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     loginWithFacebook;
     loginWithTwitter;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     loginWithWeb3;
   } = useAuthOperations(setUser, setIsLoading);
@@ -92,6 +97,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -102,6 +108,8 @@ import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 import { mapProfileToUser } from "./profileMapper",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -110,10 +118,15 @@ import { mapProfileToUser } from "./profileMapper",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
     isLoading, setIsLoading, 
+<<<<<<< HEAD
+    onboardingStep, setOnboardingStep 
+  } = useAuthState(),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -134,6 +147,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     onboardingStep, setOnboardingStep 
   } = useAuthState(),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   
   const navigate = useNavigate(),
   const location = useLocation(),
@@ -162,6 +176,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     // Clean up any potential stale auth state before setting up listeners
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     cleanupAuthState(),
     
 <<<<<<< HEAD
@@ -172,6 +188,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         if (session?.user) {
@@ -179,6 +196,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             const { data: profile, error } = await getFromProfiles()
               .select('*')
               .eq('id', session.user.id)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -204,10 +223,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               // Show welcome toast when user logs in
               if (event === 'SIGNED_IN') {
                 handleSignedIn(mappedUser)
               }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             } else if (error) {
               console.error("Error fetching user profile:", error),
@@ -313,6 +335,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
               if (event === 'SIGNED_IN') {;
                 handleSignedIn(mappedUser);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }
             } else if (error) {;
 <<<<<<< HEAD
@@ -431,10 +454,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     resetPassword;
     updateProfile;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useEffect } from './react';
 import { supabase, getFromProfiles } from '../../integrations / supabase / client';
 import { useAuthOperations } from '../../hooks / useAuthOperations';
@@ -462,11 +488,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     reset_password;
     update_profile;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
@@ -640,6 +669,8 @@ if ( {) {
     </AuthContext.Provider>);
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -874,3 +905,4 @@ data: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

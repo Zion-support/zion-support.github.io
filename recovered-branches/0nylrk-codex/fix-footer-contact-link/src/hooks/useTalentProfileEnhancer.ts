@@ -19,6 +19,8 @@ import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   name: string;
@@ -55,6 +57,7 @@ import { useState  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface TalentProfileData {
   name: string;
   title: string;
@@ -64,9 +67,12 @@ export interface CategorizedSkills {
 
 export interface CategorizedSkills {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   programming: string[];
   devops: string[];
   platforms: string[];
@@ -74,6 +80,8 @@ export interface CategorizedSkills {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
   softSkills: string[]
 
@@ -82,6 +90,7 @@ export interface CategorizedSkills {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
@@ -92,9 +101,12 @@ export interface EnhancedProfile {
     setIsGenerating(true);
     setError(null)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface EnhancedProfile {
   summary: string,
@@ -110,17 +122,22 @@ export function useTalentProfileEnhancer() {;
     setError(null),
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -139,6 +156,7 @@ export function useTalentProfileEnhancer() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (error) {
         throw new Error(error.message)
 import { useState } from 'react',;
@@ -184,6 +202,8 @@ export function useTalentProfileEnhancer() {;
       setError(err && err.message || 'Failed to enhance profile'),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       setError(err && err.message || 'Failed to enhance profile'),
@@ -193,11 +213,15 @@ export function useTalentProfileEnhancer() {;
       setError(err.message |'Failed to enhance profile')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
   platforms: string[];
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return null
     } finally {
       setIsGenerating(false)
@@ -216,6 +240,8 @@ export interface CategorizedSkills {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return {
     enhanceProfile;
     isGenerating;
@@ -227,12 +253,15 @@ export interface CategorizedSkills {
     error
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   return {
     enhanceProfile;
     isGenerating;
 
     error
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   },;
   return {;
@@ -285,12 +314,15 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
   }
@@ -358,3 +390,4 @@ export function useTalentProfileEnhancer() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

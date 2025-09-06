@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
     name: 'LLM Observability Suite',
@@ -8,10 +11,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     description:;
       'Production - grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI - compatible and open - source models.',
     features: [;
+<<<<<<< HEAD
+=======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Prompt and response tracing',
       'Cost and token analytics',
       'Automatic PII redaction',
@@ -24,6 +30,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     popular: true,
     icon: '📈',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     marketPosition:
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
@@ -32,12 +41,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     icon: '📈';
     color: 'from-cyan-600 to-blue-700';
     textColor: 'text-cyan-400';
+<<<<<<< HEAD
+=======
 =======
 
     link: 'https://ziontechgroup && ziontechgroup.com/llm-observability-suite';
     marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'AI product teams, platform engineers, data teams';
     trialDays: 21;
     setupTime: '1 day';
@@ -58,10 +70,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 32;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.8,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 22
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
@@ -104,11 +119,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     price: '$129';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-email-copilot';
     marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'B2B startups, agencies, SDR teams';
     trialDays: 14;
     setupTime: '2 hours';
@@ -129,10 +147,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 120;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 58
     period: '/month',
     description: 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.';
@@ -173,11 +194,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     price: '$399';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/security-posture-as-code';
     marketPosition: 'Brings policy-as-code and compliance automation into one product.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Platform teams, security engineers, compliance leads';
     trialDays: 21;
     setupTime: '1–3 days';
@@ -212,10 +236,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 18;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 14
     rating: 4.6,
     reviews: 14;
@@ -227,11 +254,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     price: '$99';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/etl-observability-starter';
     marketPosition: 'Simpler and faster to adopt vs. enterprise data observability tools.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Analytics engineers, data teams';
     trialDays: 14;
     setupTime: '1 day';
@@ -266,10 +296,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 25;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 12
   }
   {
@@ -288,11 +321,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-cyan-400';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/api-performance-shield';
     marketPosition: 'Unified performance and security at SMB-friendly pricing.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'API-first startups, SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
@@ -335,10 +371,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 14;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 9
   }
   {
@@ -357,11 +396,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-purple-400';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-product-analytics';
     marketPosition: 'Brings AI querying and anomaly detection without vendor lock-in.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Product teams, founders, analysts';
     trialDays: 14;
     setupTime: '1 day';
@@ -407,10 +449,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 41;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 20
   }
   {
@@ -429,11 +474,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-rose-400';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-support-deflection';
     marketPosition: 'Faster time-to-value vs. enterprise chatbot suites.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Support teams, SMB SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
@@ -479,10 +527,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 75;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 48
   }
   {
@@ -501,10 +552,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-amber-400';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-autopilot',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     marketPosition: 'Actionable savings, not just dashboards.';
     targetAudience: 'FinOps teams, platform and SRE';
     trialDays: 21;
@@ -548,10 +602,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 19;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 11
     rating: 4.5,
     reviews: 11;
@@ -563,11 +620,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     price: '$179';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/privacy-vault';
     marketPosition: 'Developer-first alternative to heavy enterprise privacy suites.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Developers, privacy and legal teams';
     trialDays: 14;
     setupTime: '1–3 days';
@@ -602,10 +662,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 9;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 7
     rating: 4.6,
     reviews: 7;
@@ -623,12 +686,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     popular: false;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🧠';
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection-lite';
     marketPosition: 'Accessible alternative to enterprise fraud stacks.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Marketplaces, fintech, e-commerce';
     trialDays: 14;
     setupTime: '2–5 days';
@@ -656,10 +722,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 11;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 8
   }
   {
@@ -678,11 +747,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-blue-400';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/managed-postgres-ha';
     marketPosition: 'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Startups, SMBs, data teams';
     trialDays: 14;
     setupTime: '1–2 days';
@@ -725,10 +797,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 8;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 5
   }
   {
@@ -747,10 +822,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-amber-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/browser-performance-monitor',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     marketPosition: 'Lightweight, privacy-friendly RUM for modern teams.';
     targetAudience: 'Frontend, growth, product';
     trialDays: 14;
@@ -794,10 +872,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 12;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 6
   }
   {
@@ -819,12 +900,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     popular: false;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🔎';
 
     link: 'https://ziontechgroup && ziontechgroup.com/seo-automation';
     marketPosition: 'Builder-focused alternative to heavy SEO suites.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Growth, content, agencies';
     trialDays: 14;
     setupTime: 'Same day';
@@ -850,10 +934,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     variant: 'neural';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.4,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 4
     contact_info: contact;
     real_implementation: true,
@@ -876,12 +963,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🔁';
 
     link: 'https://ziontechgroup && ziontechgroup.com/webhook-relay-replay';
     marketPosition: 'Production safety net for integrations.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Developers, platforms';
     trialDays: 14;
     setupTime: '1 hour';
@@ -912,10 +1002,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 7;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 3
     rating: 4.6,
     reviews: 3;
@@ -927,11 +1020,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     price: '$49';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/pdf-render-api';
     marketPosition: 'Secure alternative to self-hosting headless browsers.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'SaaS, finance, ops';
     trialDays: 14;
     setupTime: '30 minutes';
@@ -958,10 +1054,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     competitors: ['PDFShiftDocRaptor'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 10
   }
   {
@@ -980,11 +1079,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-purple-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/api-observability-starter';
     marketPosition: 'Developer-first observability starter kit.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Backend teams, SRE';
     trialDays: 14;
     setupTime: '1 day';
@@ -1027,10 +1129,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     competitors: ['HoneycombLightstep'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 4
   }
   {
@@ -1060,6 +1165,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🔐';
 
     color: 'from - emerald - 600 to - teal - 700';
@@ -1071,6 +1178,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '2–5 days';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Security & Compliance';
     real_service: true;
     technology: ['KeycloakAuth gateways'];
@@ -1088,10 +1196,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 6;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 3
     rating: 4.7,
     reviews: 3;
@@ -1109,6 +1220,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     popular: false;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🛰️';
 
     color: 'from - sky - 600 to - blue - 700';
@@ -1120,6 +1233,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '1–3 days';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'IT Operations';
     real_service: true;
     technology: ['nmapSNMPGo'];
@@ -1132,10 +1246,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     variant: 'holographic';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.4,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 2
   }
   {
@@ -1162,12 +1279,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '📋';
 
     link: 'https://ziontechgroup && ziontechgroup.com/vendor-risk-automation';
     marketPosition: 'Faster and lighter than legacy GRC.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Security, procurement';
     trialDays: 14;
     setupTime: '1–3 days';
@@ -1198,10 +1318,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     customers: 6;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.5,
     reviews: 3
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     rating: 4.5,
     reviews: 3;
 
@@ -1211,6 +1334,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     trial_days: 21,
     setup_time: '1 day',
     category: 'AI & Machine Learning',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1235,6 +1360,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
     launch_date: '2025 - 01 - 10',
     customers: 32,
@@ -1242,6 +1368,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 22,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1256,6 +1384,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Prospect enrichment via public sources',
       'Personalized email generation',
       'Sequence and follow - up scheduling',
@@ -1264,6 +1393,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
       'Inbox rotation support',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '✉️',
@@ -1287,6 +1418,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     growth_rate: 'Strong growth',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,
@@ -1313,7 +1445,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 <<<<<<< HEAD
   {
 =======
+<<<<<<< HEAD
+  {
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Kubernetes and cloud posture',
       'Auto - remediation PRs',
       'Evidence collection and reports',
@@ -1322,11 +1458,14 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🛡️',
 
       'Policy engine plus cloud/K8s scanners and fix generators.',
     launchDate: '2025-01-05',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / security - posture - as - code',
@@ -1358,6 +1497,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'etl - observability - starter',
@@ -1370,12 +1511,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
       'Incident routing to Slack / Teams',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🗄️',
@@ -1404,6 +1548,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Light agents and metadata collectors with warehouse connectors.',
     launch_date: '2025 - 01 - 12',
     customers: 25,
@@ -1411,6 +1556,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 12,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1425,12 +1572,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Global CDN edge caching',
       'Dynamic rate limiting',
       'Anomaly and abuse detection',
       'Zero - downtime deploys with shadow traffic',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🛰️',
@@ -1444,6 +1594,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: 'Same day',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'DevOps & Automation',
     real_service: true,
     technology: ['Workers', 'Rust', 'Redis'],
@@ -1480,12 +1631,18 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 <<<<<<< HEAD
   {
 =======
+<<<<<<< HEAD
+  {
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'LLM query interface',
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📊',
@@ -1503,6 +1660,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     technology: ['Next.js', 'PostHog', 'ClickHouse'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Segment', 'RudderStack', 'Snowplow'],
     use_cases: ['Growth analytics', 'Retention', 'Experimentation'],
     roi: 'Find growth levers 2x faster',
@@ -1534,12 +1692,18 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 <<<<<<< HEAD
   {
 =======
+<<<<<<< HEAD
+  {
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '💬',
@@ -1556,6 +1720,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     technology: ['RAG', 'Vector DB', 'Next.js'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Zendesk', 'Intercom', 'Freshdesk'],
     use_cases: ['Self - serve support', 'Ticket reduction', 'CSAT improvement'],
     roi: 'Reduce tickets 30–50%',
@@ -1574,6 +1739,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'cloud - cost - autopilot',
@@ -1586,12 +1753,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Rightsizing recommendations',
       'Anomaly detection',
       'Savings plan / RIs planning',
       'Tag hygiene and showback',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '💸',
@@ -1605,6 +1775,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '2–5 days',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Cloud & Infrastructure',
     real_service: true,
     technology: ['AWS Cost Explorer', 'Azure Cost', 'GCP Billing'],
@@ -1639,12 +1810,18 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 <<<<<<< HEAD
   {
 =======
+<<<<<<< HEAD
+  {
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔏',
@@ -1659,6 +1836,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '1–3 days',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Security & Compliance',
     real_service: true,
     technology: ['KMS', 'HSM', 'PostgreSQL'],
@@ -1693,12 +1871,18 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 <<<<<<< HEAD
   {
 =======
+<<<<<<< HEAD
+  {
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🧠',
@@ -1712,6 +1896,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '2–5 days',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Financial Technology',
     real_service: true,
     technology: ['Graph DB', 'Python', 'Kafka'],
@@ -1734,6 +1919,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'managed - postgres - ha - pro',
@@ -1746,12 +1933,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'HA with automatic failover',
       'Continuous backups and PITR',
       'Slow query insights and indexing',
       'Encryption and access controls',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🗃️',
@@ -1766,6 +1956,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '1–2 days',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Observability',
     real_service: true,
     technology: ['PostgreSQL', 'Patroni', 'Wal - G'],
@@ -1787,6 +1978,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'browser - performance - monitor - pro',
@@ -1799,12 +1992,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
       'Error tracking and sourcemaps',
       'A / B test impact analysis',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '⚡',
@@ -1818,6 +2014,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '30 minutes',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Quality & Monitoring',
     real_service: true,
     technology: ['JS SDK', 'ClickHouse'],
@@ -1839,6 +2036,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'seo - automation - studio',
@@ -1851,12 +2050,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Site audits and fixes',
       'Schema and sitemaps',
       'Programmatic pages',
       'Internal linking graph',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔎',
@@ -1873,6 +2075,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     technology: ['Node.js', 'Headless Chrome'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Search Console'],
     use_cases: ['Traffic growth', 'Tech SEO'],
     roi: 'Increase organic traffic 20–100%',
@@ -1891,6 +2094,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'webhook - relay - replay - pro',
@@ -1903,12 +2108,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'DLQ and retry policies',
       'Inspector and redaction',
       'Signature verification',
       'Fan - out and transformations',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔁',
@@ -1925,6 +2133,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     technology: ['Kafka', 'S3', 'Node.js'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Stripe', 'Shopify', 'GitHub'],
     use_cases: ['Webhook reliability', 'Debugging'],
     roi: 'Reduce integration incidents 50%+',
@@ -1943,6 +2152,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'pdf - render - api - pro',
@@ -1955,12 +2166,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Serverless scale',
       'Template gallery',
       'Brand - safe fonts',
       'Webhook on completion',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📄',
@@ -1974,6 +2188,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '30 minutes',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Developer Tools',
     real_service: true,
     technology: ['Workers', 'Headless Chrome'],
@@ -2008,12 +2223,18 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 <<<<<<< HEAD
   {
 =======
+<<<<<<< HEAD
+  {
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🛰️',
@@ -2027,6 +2248,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '1 day',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Observability',
     real_service: true,
     technology: ['OpenTelemetry', 'Grafana'],
@@ -2048,6 +2270,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'sso - in - a-box - pro',
@@ -2060,12 +2284,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'SAML and OIDC',
       'SCIM and JIT provisioning',
       'Branding and mapping',
       'Customer sandbox',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔐',
@@ -2079,6 +2306,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '2–5 days',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Security & Compliance',
     real_service: true,
     technology: ['Keycloak', 'Auth gateways'],
@@ -2100,6 +2328,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'it - asset - discovery - agent - pro',
@@ -2112,12 +2342,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Network scans and SNMP',
       'Software inventory',
       'Change tracking',
       'CMDB integrations',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🛰️',
@@ -2131,6 +2364,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     setup_time: '1–3 days',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'IT Operations',
     real_service: true,
     technology: ['nmap', 'SNMP', 'Go'],
@@ -2152,6 +2386,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'vendor - risk - automation - lite',
@@ -2164,12 +2400,15 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Questionnaire templates',
       'Evidence collection portal',
       'Continuous monitoring',
       'Risk scoring',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📋',
@@ -2186,6 +2425,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     technology: ['Node.js', 'React'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['SecurityScorecard'],
     use_cases: ['Vendor due diligence'],
     roi: 'Cut cycle time by 50%+',
@@ -2203,10 +2443,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'llm-observability-suite', name: 'LLM Observability Suite',
     tagline: 'Track latency, cost, quality and drift across all prompts',
     price: '$199', period: '/month',
@@ -2377,6 +2620,9 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 <<<<<<< HEAD
 ];
 =======
+<<<<<<< HEAD
+];
+=======
 ;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2385,6 +2631,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -3099,8 +3346,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
 ];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

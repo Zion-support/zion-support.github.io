@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 "use client",;
 export function StructuredData() {;
@@ -55,6 +57,7 @@ export function StructuredData() {;
   return (;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 export /**
  * StructuredData - Function description

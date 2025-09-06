@@ -1,17 +1,23 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { jobId } = useParams() as { jobId?: string }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -43,7 +49,10 @@ export default function JobDetails() {
 =======
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string };
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
@@ -53,11 +62,15 @@ import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 <<<<<<< HEAD
+export default function JobDetails() {;
+=======
+<<<<<<< HEAD
 export default function JobDetails() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export default function JobDetails() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string };
   const { job, isLoading, error } = useJobDetails(jobId);
@@ -66,6 +79,8 @@ export default function JobDetails() {;
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -74,6 +89,7 @@ export default function JobDetails() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -97,6 +113,11 @@ export default function JobDetails() {
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
 <<<<<<< HEAD
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   
@@ -117,6 +138,7 @@ export default function JobDetails() {
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
@@ -216,6 +238,8 @@ export default function JobDetails() {
     setIsApplyModalOpen(false)
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   },
 
   const formatBudget = (budget: any) => {
@@ -238,6 +262,7 @@ export default function JobDetails() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>
       <SEO
@@ -283,6 +308,8 @@ export default function JobDetails() {
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -292,6 +319,7 @@ export default function JobDetails() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -345,6 +373,8 @@ export default function JobDetails() {;
     }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -357,6 +387,7 @@ export default function JobDetails() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
       toast && toast.error("Only job seekers can apply for jobs");
       return;
@@ -441,6 +472,8 @@ export default function JobDetails() {;
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-6">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button
             variant="outline" 
@@ -455,11 +488,14 @@ export default function JobDetails() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onClick={() => navigate('/jobs')}
           >;
             ← Back to Jobs;
           </Button>;
         </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -468,12 +504,15 @@ export default function JobDetails() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
           <div className="lg:col-span-2">;
             <Card>;
               <CardHeader>;
                 <div className="flex justify-between items-start">;
                   <div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     <CardTitle className="text-2xl mb-2">{job && job.title}</CardTitle>;
@@ -501,12 +540,15 @@ export default function JobDetails() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </div>;
               </CardHeader>;
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
                   <div className="whitespace-pre-wrap">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     {job && job.description}
@@ -601,6 +643,7 @@ export default function JobDetails() {;
                     <p className="text-sm text-muted-foreground">Budget</p>;
 <<<<<<< HEAD
                     <p className="font-medium">{formatBudget(job && job.budget)}</p>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </div>;
                 </div>;
 
@@ -662,6 +705,8 @@ export default function JobDetails() {;
 
                   <Button 
                     className="w-full mt-4" 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -676,11 +721,14 @@ export default function JobDetails() {;
                   <Button 
                     className="w-full mt-4" 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     onClick={handleApply}
                     disabled={isOwnJob}>;
                     Apply Now;
                   </Button>;
                 )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -706,6 +754,7 @@ export default function JobDetails() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
@@ -717,6 +766,8 @@ export default function JobDetails() {;
         </div>
       </main>
       <Footer />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -918,6 +969,7 @@ if (return "Not specified", ) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </CardContent>;
             </Card>;
           </div>;
@@ -984,6 +1036,8 @@ if (return "Not specified", ) {
     </>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1047,3 +1101,4 @@ const isOwnJob = user?.id === job.client id;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

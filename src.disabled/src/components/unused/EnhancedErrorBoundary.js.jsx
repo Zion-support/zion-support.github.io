@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ Component } from 'react'; import { motion } from 'framer-motion'; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from '@heroicons/react/24/outline'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; "hasError": 'false',; "error": 'null',; "errorInfo": 'null',; "errorId": 'null',; "showStackTrace": 'false;' }}; static getDerivedStateFromError(error) {; return {; "hasError": 'true',; error,; "errorId": this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }); render() { return <div>Component></div> } } }}
@@ -38,3 +40,4 @@ import _React,{ Component } from 'react'; import { motion } from 'framer-motion'
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

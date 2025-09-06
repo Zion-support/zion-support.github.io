@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 require('@testing-library/jest-dom');
 =======
@@ -9,6 +11,7 @@ import "@testing-library/jest-dom";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -32,6 +35,8 @@ jest.mock("next/router", () => ({
   },
 }));
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -73,6 +78,7 @@ Object.defineProperty(window, "matchMedia", {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -95,6 +101,8 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -165,12 +173,17 @@ import '@testing-library/jest-dom'; global.IntersectionObserver = class Intersec
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 // Global test setup
 beforeEach(() => {
   jest.clearAllMocks();
+<<<<<<< HEAD
+});
+=======
 });
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

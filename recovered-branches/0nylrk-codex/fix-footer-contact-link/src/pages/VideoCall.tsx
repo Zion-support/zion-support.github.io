@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { useParams, useNavigate  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
+import { Button  } from '@/components/ui/button';
+import { toast } from 'sonner';
+import {useState, useEffect} from 'react';
+import {useParams, useNavigate} from 'react-router-dom';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {VideoCallRoom} from '@/components/video/VideoCallRoom';
+import {Button} from '@/components/ui/button';
+import {toast} from 'sonner';
+export default function VideoCall() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+import {useState, useEffect} from 'react';
+import {use_params, use_navigate} from 'react-router-dom';
+import {Header} from '@/components / Header';
+import {Footer} from '@/components / Footer';
+import {SEO} from '@/components / SEO';
+import {VideoCallRoom} from '@/components / video / VideoCallRoom';
+import {Button} from '@/components / ui / button';
+import {toast} from 'sonner';
+=======
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -38,10 +67,13 @@ export default function VideoCall() {
   const [participants, setParticipants] = useState<Array<{
     id: string
     name: string
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     avatar?: string;
     isMuted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
+<<<<<<< HEAD
+=======
     isHost?: boolean
   }>>([
     {
@@ -96,6 +128,7 @@ export default function VideoCall() {;
 =======
   ]),
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
@@ -159,6 +192,46 @@ export default function VideoCall() {;
   const handleLeaveCall = () => {
     setHasJoined(false),
     toast.info("Call ended", {
+<<<<<<< HEAD
+      description: "You have left the meeting"
+    // Navigate back after a short delay
+    setTimeout(() => {
+      navigate(-1)
+    }, 1500)
+      setParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser && randomUser.name} joined the call`);
+    }
+  }
+  ]),;
+  const handleJoinCall = () => {;
+    setIsJoining(true),;
+    // Simulate connection delay;
+    setTimeout(() => {;
+      setHasJoined(true),;
+      setIsJoining(false),;
+      toast.success("Call joined", {;
+        description: `You have joined meeting room ${roomId}`;
+      });
+    }, 1500);
+  },;
+  const handleLeaveCall = () => {;
+    setHasJoined(false),;
+    toast.info("Call ended", {;
+      description: "You have left the meeting";
+    }),;
+    // Navigate back after a short delay;
+    setTimeout(() => {;
+      navigate(-1);
+    }, 1500);
+  const simulateUserJoining = () => {;
+    // This is just for demo purposes - in a real app, this would be handled by the video call service;
+    const mockUsers = [;
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+
+  return (
+=======
       description: "You have left the meeting",
     });
 
@@ -211,10 +284,13 @@ export default function VideoCall() {;
             <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
             <Button
               onClick={handleJoinCall}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               disabled={isJoining}
               size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light">;
               {isJoining ? "Connecting..." : "Join Call"}
+<<<<<<< HEAD
+=======
             </Button>
           </div>
         ) : (
@@ -225,6 +301,7 @@ export default function VideoCall() {;
               onLeave={handleLeaveCall}
             />
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">
               <Button
@@ -237,9 +314,15 @@ export default function VideoCall() {;
             </div>
           </div>
         )}
+<<<<<<< HEAD
+      </main>;
+      <Footer />;
+    </>;
+=======
       </main>
       <Footer />
     </>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
 
@@ -252,6 +335,8 @@ export default function VideoCall() {;
   ]);
 ;
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const handleLeaveCall = () =>: any {
     setHasJoined (false);
@@ -399,3 +484,4 @@ return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom room
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

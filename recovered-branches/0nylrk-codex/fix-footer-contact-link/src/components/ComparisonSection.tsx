@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +11,7 @@ import { CheckCircle2 } from "lucide-react";
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   Table
   TableBody
@@ -17,6 +20,8 @@ import {
   TableHeader
   TableRow
 } from "./ui/table";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export function ComparisonSection() {
   return (
@@ -58,6 +63,7 @@ import { CheckCircle2 } from "lucide-react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -71,6 +77,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
               <TableHeader>
                 <TableRow className="border-b border-zion-purple/20">
                   <TableHead className="text-white">Service</TableHead>
+<<<<<<< HEAD
+                  <TableHead className="text-white text-center">Traditional Providers</TableHead>
+                  <TableHead className="text-white text-center">With Zion</TableHead>
+                  <TableHead className="text-white text-center">Savings</TableHead>
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <TableHead className="text-white text-center">
@@ -92,10 +103,13 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
                   <TableHead className="text-white text-center">With Zion</TableHead>
                   <TableHead className="text-white text-center">Savings</TableHead>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {[
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -160,6 +174,7 @@ function ComparisonSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {
                     service: "IT Equipment"
                     traditional: "Full Purchase"
@@ -167,6 +182,8 @@ function ComparisonSection() {
                     savings: "60%"
                   }
                   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -275,6 +292,7 @@ function ComparisonSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
@@ -282,12 +300,15 @@ function ComparisonSection() {
         </div>
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
     </section>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
   )
@@ -296,8 +317,11 @@ import { Button } from "./ui/button",;
 import { CheckCircle2 } from "lucide-react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "./GradientHeading";
@@ -336,6 +360,8 @@ export function ComparisonSection() {;
           <GradientHeading>Compare & Save</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             See how Zion can drastically reduce your IT costs compared to;
             traditional providers;
@@ -353,12 +379,15 @@ export function ComparisonSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="max-w-4xl mx-auto">;
           <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">;
             <Table>;
               <TableHeader>;
                 <TableRow className="border-b border-zion-purple/20">;
                   <TableHead className="text-white">Service</TableHead>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <TableHead className="text-white text-center">;
@@ -380,10 +409,13 @@ export function ComparisonSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </TableRow>;
               </TableHeader>;
               <TableBody>;
                 {[;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                   {;
@@ -449,11 +481,14 @@ export function ComparisonSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </TableRow>;
                 ))}
               </TableBody>;
             </Table>;
           </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -462,10 +497,13 @@ export function ComparisonSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">;
             <div className="flex items-start">;
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
               <p className="text-white">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <span className="font-bold">Total Annual Savings: </span>;
@@ -493,11 +531,14 @@ export function ComparisonSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   Results may vary based on specific requirements and service;
                   levels;
                 </span>;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -515,11 +556,17 @@ export function ComparisonSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Calculate Your Savings;
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+  );
+}
+;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -558,3 +605,4 @@ export function ComparisonSection() {;
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

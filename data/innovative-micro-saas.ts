@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -44,6 +47,8 @@
     reviews: 1600,
   },
   {
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -60,6 +65,7 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Visual smart contract builder',
       'Multi - blockchain support',
       'Template library',
@@ -73,6 +79,8 @@
     ],
     popular: true,
     icon: '⚡',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -91,6 +99,7 @@
     technology: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Blockchain',
       'Smart Contracts',
       'Solidity',
@@ -100,6 +109,8 @@
       'Ethereum',
       'Polygon',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -117,6 +128,7 @@
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Legal agreements',
       'Real estate transactions',
       'Insurance claims',
@@ -128,6 +140,8 @@
     competitors: ['OpenLaw', 'Clause', 'Agrello', 'Lexon', 'Monax'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     market_size: '$1.2B smart contract market',
     growth_rate: '200% annual growth',
@@ -135,6 +149,7 @@
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -149,6 +164,9 @@
     reviews: 900,
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -512,6 +530,9 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     growthRate: '140% annual growth', variant: 'ai-futuristic',
     contactInfo: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
     launchDate: '2024-01-30'
     customers: 3200
@@ -538,6 +559,8 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 1600
+<<<<<<< HEAD
+=======
 =======
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -546,6 +569,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -556,6 +580,10 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600;
 
   }
+<<<<<<< HEAD
+];
+export interface InnovativeMicroSaas {;
+=======
 <<<<<<< HEAD
 ];
 export interface InnovativeMicroSaas {;
@@ -573,6 +601,7 @@ export interface InnovativeMicroSaas {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string,;
   name: string,;
   tagline: string,;

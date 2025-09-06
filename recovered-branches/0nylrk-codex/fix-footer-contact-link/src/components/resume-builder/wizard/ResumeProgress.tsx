@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+
+import { Progress } from "@/components/ui/progress",
+import { ResumeProgressProps } from "./types",
+import {Progress} from "@/components/ui/progress";
+import {ResumeProgressProps} from "./types";
+import { Progress } from "@/components/ui/progress",
+import { ResumeProgressProps } from "./types",
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Progress } from "@/components/ui/progress";
 import { ResumeProgressProps } from "./types";
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
@@ -11,6 +21,8 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -22,6 +34,7 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   );
 }
@@ -69,6 +82,8 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) =>: an
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -112,3 +127,4 @@ export default ResumeProgress;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

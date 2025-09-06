@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -9,6 +11,7 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -75,14 +78,19 @@ export const useLoadMilestones = (projectId?: string) => {;
       setError(null)
     } catch (err: any) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -141,6 +149,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -156,9 +165,12 @@ export const useLoadMilestones = (projectId?: string) => {;
     if (!projectId) {;
       setIsLoading(false),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const useLoadMilestones = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
@@ -172,7 +184,10 @@ if ( {) {
   $2
 }
       setIsLoading (false);
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return;
     }
     try {
@@ -342,6 +357,8 @@ if ( {) {
 
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -463,3 +480,4 @@ refetch: fetchMilestones
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -21,6 +23,7 @@ interface AuthenticationProps {
 
 export default function Authentication({ }: AuthenticationProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -62,6 +65,8 @@ export default function Authentication(): any ({ }: AuthenticationProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
@@ -162,3 +167,4 @@ export default function Authentication(): any ({ }: AuthenticationProps) {;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

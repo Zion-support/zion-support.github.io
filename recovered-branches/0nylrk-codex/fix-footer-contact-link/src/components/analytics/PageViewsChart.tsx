@@ -78,6 +78,8 @@ interface PageViewsChartProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -97,6 +99,7 @@ export function PageViewsChart(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -108,6 +111,8 @@ export function PageViewsChart(): any ({;
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart
           title=""
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -127,6 +132,7 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
           title=""
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           data={data |[]}
           dataKeys={["views"]}
           timeRange={timeRange}
@@ -135,9 +141,12 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
       </CardContent>
     </Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -158,12 +167,15 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         <AnalyticsChart;
           title="";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           data={data || []}
           dataKeys={["views"]}
 <<<<<<< HEAD
@@ -250,6 +262,8 @@ function PageViewsChart() {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 }
   ),;}
  interface PageViewsChartProps {
@@ -285,3 +299,4 @@ onTimeRangeChange: (range: string) => void
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

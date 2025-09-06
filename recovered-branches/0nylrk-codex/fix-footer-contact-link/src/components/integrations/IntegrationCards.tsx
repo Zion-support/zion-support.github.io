@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,11 +11,14 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {ArrowRight, Check, ExternalLink} from "lucide-react";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -42,6 +47,7 @@ export function IntegrationCard(): any ({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -67,7 +73,10 @@ export function IntegrationCard(): any ({;
   title;
   description;
   icon;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface IntegrationCardProps {
   title: string,
   description: string,
@@ -75,6 +84,8 @@ interface IntegrationCardProps {
   status?: "connected" | "disconnected" | "pending",
   href?: string,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   onConnect?: () => void
@@ -90,6 +101,7 @@ interface IntegrationCardProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function IntegrationCard({;
   title;
   description;
@@ -112,7 +124,10 @@ export function IntegrationCard({
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -155,12 +170,15 @@ export function IntegrationCard({
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -179,6 +197,8 @@ export function IntegrationCard({;
   title,;
   description,;
   icon,;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -218,6 +238,7 @@ export function IntegrationCard({;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
@@ -235,6 +256,8 @@ export function IntegrationCard({;
               {icon}
             </div>;
             <div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
               <h3 className="font-semibold">{title}</h3>;
             </div>;
@@ -333,6 +356,7 @@ export function IntegrationCards() {;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         )}
       </CardFooter>;
     </Card>;
@@ -396,6 +420,8 @@ function IntegrationCards() {
     <div className="grid md:grid - cols - 3 gap - 6">;
       {/* Integration cards would go here */}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>);
 }
 <<<<<<< HEAD
@@ -453,3 +479,4 @@ export function IntegrationCards() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

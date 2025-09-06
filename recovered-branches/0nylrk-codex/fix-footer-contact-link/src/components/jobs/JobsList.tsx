@@ -9,6 +9,8 @@ import {Loader2, Edit, X, Eye} from "lucide-react";
 import {format} from "date-fns";
 import {Link} from "react-router-dom";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface JobsListProps {;
 
@@ -29,6 +31,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -48,14 +51,25 @@ interface JobsListProps {
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 <<<<<<< HEAD
+  const { user } = useAuth();
+  const [jobs, setJobs] = useState<Job[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   useEffect(() => {
 
     const fetchJobs = async () => {
+<<<<<<< HEAD
+      if (!user) return;
+      if (!user) return,
+
+=======
 
       if (!user) return,
 
@@ -88,6 +102,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {
         let query = supabase
           .from("jobs")
@@ -96,6 +111,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           .order("created_at", { ascending: false })
         if (filter) {
           query = query.eq("status", filter)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -166,6 +183,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center p-8">;
@@ -174,6 +192,9 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 <<<<<<< HEAD
     );
   }
+<<<<<<< HEAD
+          }
+=======
 
 
   if (jobs && jobs.length === 0) {;
@@ -454,6 +475,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
   }
           }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -511,6 +533,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
           <CardContent className="p-4 pt-0">;
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
               {job && job.description}
             </p>;
@@ -543,6 +567,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "closed":;
         return "bg-gray-100 text-gray-800";
       default:;
@@ -679,6 +704,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         </Card>;
       ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -688,6 +715,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -711,6 +739,8 @@ function JobsList() {
   const [is_loading, setIsLoading] = useState (true);
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -723,6 +753,7 @@ if (return) {
   $2
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
       try {
         let query = supabase;
@@ -883,6 +914,8 @@ setJobs (data as Job[])
   setIsLoading (false) 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 };
 }, [user, filter]);
 {
@@ -962,3 +995,4 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -15,6 +17,7 @@ interface MilestoneSuggestionsProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -31,6 +34,8 @@ import React, { useState } from 'react';
   endDate;
   projectType;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -38,6 +43,7 @@ import React, { useState } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -53,12 +59,15 @@ interface MilestoneSuggestionsProps {;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -71,6 +80,9 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,6 +141,7 @@ export function MilestoneSuggestions(): any ({;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -138,16 +151,21 @@ export function MilestoneSuggestions(): any ({;
     const milestones = await generateMilestones(input),
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -170,12 +188,16 @@ export function MilestoneSuggestions(): any ({;
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   };
 
   };
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -188,12 +210,15 @@ export function MilestoneSuggestions({;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;
       scope: `${projectName}: ${scopeSummary}`,;
@@ -227,6 +252,9 @@ export function MilestoneSuggestions({;
         onMilestonesGenerated(milestones);
       }
     }
+<<<<<<< HEAD
+  }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -305,6 +333,7 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 
@@ -323,6 +352,11 @@ if ( {) {
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
+<<<<<<< HEAD
+          )}
+        </Button>
+      )}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -451,6 +485,7 @@ export function MilestoneSuggestions({;
         </Button>
       )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -488,6 +523,8 @@ export function MilestoneSuggestions({;
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -668,3 +705,4 @@ endDate: endDate ? endDate.toISOString () : null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

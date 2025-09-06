@@ -1,6 +1,8 @@
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
@@ -19,6 +21,7 @@ import _React from 'react'; import Head from 'next/head'; import Link from 'next
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);

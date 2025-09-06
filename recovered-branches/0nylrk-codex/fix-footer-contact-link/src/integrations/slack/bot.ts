@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Mock implementation of Slack bot that doesn't require external dependencies;
@@ -6,6 +8,7 @@
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SlackCommand {
   text: string;
 }
@@ -69,6 +72,8 @@ class MockApp {
   command(commandName: string, handler: Function) {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     this && this.commandHandlers[commandName] = handler,
 =======
@@ -81,6 +86,7 @@ interface SafeConsole {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 interface SafeConsole {
   log: (message: string) => void;
@@ -93,6 +99,11 @@ interface SafeConsole {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
+
+=======
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined;
 
 =======
@@ -117,6 +128,7 @@ interface SafeConsole {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 // Declare available globals;
 declare const globalThis: {;
@@ -188,16 +200,21 @@ class MockApp {;
     if (safeConsole && safeConsole.log) {;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return Promise.resolve()
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -207,12 +224,15 @@ class MockApp {;
 
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     return Promise && Promise.resolve()
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -242,10 +262,16 @@ async function askZionGPT(prompt:string):Promise<string> {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
   // Safely log without direct console reference
+<<<<<<< HEAD
+  }
+  return `AI response to: ${prompt}`
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -318,6 +344,7 @@ case 'suggest-talent': {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -472,6 +499,8 @@ app.command ('/zion', async ({ command, ack, respond }: { command: SlackCommand,
           '`/zion help` - show this list');
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -518,6 +547,7 @@ export default app;
   await app.start(port)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 })();
 export default app;
 
@@ -525,6 +555,8 @@ export default app;
 // Mock startup with safer environment access;
 (async () => {;
   // Get PORT from environment or use default;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const env = typeof globalThis !== 'undefined' && globalThis.process ?;
@@ -536,6 +568,7 @@ export default app;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 })();
 export default app;
@@ -556,8 +589,11 @@ export default app;
 });
 // Mock startup with safer environment access export default app;
 export default app;
+<<<<<<< HEAD
+=======
 export default app;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export default app;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

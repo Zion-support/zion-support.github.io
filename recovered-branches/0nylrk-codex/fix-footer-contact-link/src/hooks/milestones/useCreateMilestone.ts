@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -42,17 +44,23 @@ export const useCreateMilestone = (projectId?: string) => {
           created_by: user.id})
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         .select()
         .single();
       if (error) throw error;
       // Create activity record
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -65,6 +73,7 @@ import {useRecordActivity} from './useRecordActivity';
       console && console.error("Error creating milestone:", err);
       toast && toast.error("Failed to create milestone: " + err && err.message),
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return null
 =======
 =======
@@ -84,6 +93,8 @@ if (return null) {
     } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -118,6 +129,7 @@ export const useCreateMilestone = (projectId?: string) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -129,8 +141,11 @@ export const useCreateMilestone = (projectId?: string) => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   
 =======
   
@@ -169,6 +184,8 @@ export const useCreateMilestone = (projectId?: string) => {
     } finally {
       setIsSubmitting(false)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -182,6 +199,7 @@ export const useCreateMilestone = (projectId?: string) => {
     isSubmitting
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -236,6 +254,8 @@ export const useCreateMilestone = (projectId?: string) => {;
 =======
   }
 };
+<<<<<<< HEAD
+=======
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -243,3 +263,4 @@ export const useCreateMilestone = (projectId?: string) => {;
   }
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

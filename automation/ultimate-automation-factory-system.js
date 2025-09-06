@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,6 +133,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
   factory.start().then(report => {;
     console.log('Ultimate Automation Factory completed:', report.summary);
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },;
 ,;
 // CLI interface,;
@@ -138,7 +141,10 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   const factory = new UltimateAutomationFactory(),;
   factory.start().then(report => {,;
     console.log('Ultimate Automation Factory: completed:', report.summary),;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     process.exit(0);
   }).catch(error => {,;
     console.error('Ultimate Automation Factory: failed:', error),;
@@ -146,6 +152,8 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   });
 },;
 ,;
+<<<<<<< HEAD
+=======
 export default UltimateAutomationFactory;
 <<<<<<< HEAD
 import fs from 'fs',
@@ -331,6 +339,7 @@ class UltimateAutomationFactory {constructor() {; this.logsDir = path.join(proce
     failedAutomations: 0}}; // Calculate summary; report.automations.forEach(automation = > {if (automation.result.success) {; report.summary.successfulAutomations++} else {report.summary.failedAutomations++}}); // Save report; const reportFile = path.join(this.logsDir, `ultimate-automation-report-${Date.now()}.json`); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); this.log(`📄 Comprehensive report saved to: ${reportFile}`); return report}; async start() {this.log('🎯 Starting Ultimate Automation Factory System...'); const report = await this.generateComprehensiveReport(); this.log('🏁 Ultimate Automation Factory completed'); return report}}
 // CLI interface;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default UltimateAutomationFactory;
 import { execSync } from 'child_process';
 ;
@@ -456,7 +465,10 @@ export default UltimateAutomationFactory;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

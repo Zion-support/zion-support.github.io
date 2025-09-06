@@ -3,6 +3,11 @@
   rating: number;
   reviews: number;
 =======
+<<<<<<< HEAD
+  customers: number;
+  rating: number;
+  reviews: number;
+=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -22,6 +27,7 @@ const contact = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -29,6 +35,9 @@ const contact = {
 
 export const realMarketServices: RealMarketService[] = [;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   mobile: '+1 302 464 0950',
@@ -37,8 +46,11 @@ export const realMarketServices: RealMarketService[] = [;
   website: 'https://ziontechgroup.com', }
 ;
 export const realMarketServices: RealMarketService[] = [;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -52,6 +64,9 @@ export const realMarketServices: RealMarketService[] = [;
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     tagline:
       'Centralize model access, control spend, add observability and guardrails'
     price: '$299'
@@ -174,6 +189,9 @@ export const realMarketServices: RealMarketService[] = [
 <<<<<<< HEAD
   {
 =======
+<<<<<<< HEAD
+  {
+=======
 
       'Multi-tenant gateway with policy engine, provider adapters, and per-project metering.',
     launchDate: '2024-12-01',
@@ -226,6 +244,7 @@ export const realMarketServices: RealMarketService[] = [
       'OpenTelemetry auto - instrumentation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Golden signals dashboards',
       'Error budgets and SLO templates',
       'Jaeger / Tempo tracing ready',
@@ -234,6 +253,8 @@ export const realMarketServices: RealMarketService[] = [
       'Service map and dependency view',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📈',
@@ -265,11 +286,14 @@ export const realMarketServices: RealMarketService[] = [
     launch_date: '2024 - 11 - 10',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     customers: 120,
     rating: 4 && 4.7,
     reviews: 73,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -287,12 +311,15 @@ export const realMarketServices: RealMarketService[] = [
       'Seed - list deliverability tests',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Automated sending warmup schedules',
       'Blocklist and reputation monitoring',
       'BIMI and TLS validation',
       'Alerts to Slack / Email with remediation steps',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📧',
@@ -321,6 +348,7 @@ export const realMarketServices: RealMarketService[] = [
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -337,6 +365,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'affiliate - attribution - hub',
@@ -349,6 +379,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'UTM, ref, and coupon tracking',
       'Attribution windows and LTV credit',
       'Fraud detection heuristics',
@@ -359,6 +390,8 @@ export const realMarketServices: RealMarketService[] = [
     popular: false,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🤝',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -367,11 +400,14 @@ export const realMarketServices: RealMarketService[] = [
     market_position:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Lightweight alternative to enterprise affiliate suites; integrates with modern stacks.',
     target_audience: 'SaaS and e_commerce teams',
     trial_days: 14,
     setup_time: '1 day',
     category: 'Growth & Monetization',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -387,6 +423,7 @@ export const realMarketServices: RealMarketService[] = [
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -403,6 +440,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'ai - customer - support - suite',
@@ -415,6 +454,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI chat and email drafting',
       'RAG over product docs and tickets',
       'Macros and action tools',
@@ -425,6 +465,8 @@ export const realMarketServices: RealMarketService[] = [
     popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🤖',
 
     color: 'from - purple - 600 to - indigo - 700',
@@ -433,6 +475,7 @@ export const realMarketServices: RealMarketService[] = [
     market_position:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Augments existing helpdesks with agent copilots and automation.',
     target_audience: 'Support and success teams',
     trial_days: 14,
@@ -440,11 +483,14 @@ export const realMarketServices: RealMarketService[] = [
     category: 'AI & Data',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     real_service: true,
     technology: ['Next.js, OpenAI, Vector DB'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Zendesk, Intercom, Freshdesk'],
     use_cases: ['Faster resolution, Deflection via chat, Higher CSAT'],
     roi: 'Reduce handle time 20–40% and raise CSAT 10–20%.',
@@ -469,6 +515,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'smb - analytics - starter',
@@ -481,6 +529,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Traffic and conversion funnels',
       'Source / medium and campaigns',
       'Goals and events tracking',
@@ -489,6 +538,8 @@ export const realMarketServices: RealMarketService[] = [
       'GDPR - friendly, IP anonymization',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📊',
@@ -505,6 +556,7 @@ export const realMarketServices: RealMarketService[] = [
     technology: ['Next.js, Edge analytics'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Google Ads, Meta Ads'],
     use_cases: ['Track campaigns, Monitor conversions, Detect anomalies'],
     roi: 'Save setup time and make faster decisions; reduce tooling complexity.',
@@ -529,6 +581,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'cloud - cost - optimizer',
@@ -542,6 +596,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Idle resource detection',
       'Rightsizing and reservations',
       'Anomaly detection and alerts',
@@ -551,6 +606,8 @@ export const realMarketServices: RealMarketService[] = [
       'RBAC and multi - account',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '💸',
@@ -582,11 +639,14 @@ export const realMarketServices: RealMarketService[] = [
     launch_date: '2024 - 10 - 05',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     customers: 65,
     rating: 4 && 4.6,
     reviews: 48,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -602,6 +662,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Automated evidence collectors',
       'Control mapping (AICPA)',
       'Auditor export packs',
@@ -611,6 +672,8 @@ export const realMarketServices: RealMarketService[] = [
       'Continuous monitoring',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔐',
@@ -644,12 +707,16 @@ export const realMarketServices: RealMarketService[] = [
     launch_date: '2024 - 09 - 01',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     customers: 42,
     rating: 4 && 4.7,
     reviews: 37,
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Provider selection guide'
       'Schema and index templates'
       'ETL/ingestion pipelines'
@@ -701,9 +768,12 @@ export const realMarketServices: RealMarketService[] = [
       'Provider selection guide',
       'Schema and index templates',
       'ETL / ingestion pipelines',
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Embeddings and chunking best practices',
       'Latency and cost tuning',
       'Sample RAG app integration',
@@ -732,6 +802,9 @@ export const realMarketServices: RealMarketService[] = [
     contactInfo: contact,
     realImplementation: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Terraform and IaC modules, ETL pipelines, sample notebooks.'
     launchDate: '2024-08-20'
@@ -739,6 +812,8 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6
     reviews: 41
   }
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -775,6 +850,7 @@ export const realMarketServices: RealMarketService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
       'Public status pages',
       'Weekly compliance reports',
@@ -806,6 +882,8 @@ export const realMarketServices: RealMarketService[] = [
     popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🛡️',
 
 =======
@@ -834,6 +912,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Schema crawler, auth probes, mutational fuzzing, reporters and CI gates.',
     launch_date: '2024 - 12 - 05',
     customers: 54,
@@ -863,6 +942,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'domain - dns - monitor',
@@ -875,6 +956,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'DNS record drift detection',
       'TLS and chain changes',
       'Audit log and diffs',
@@ -924,6 +1006,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'status - pages - slo',
@@ -936,6 +1020,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Custom components and groups',
       'Incident timelines',
       'SLO and uptime widgets',
@@ -961,6 +1046,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'serverless - cron - manager',
@@ -973,6 +1060,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Cron syntax and UI',
       'Retries with jitter',
       'Dead - letter queues',
@@ -1024,6 +1112,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'gdpr - dsar - automation',
@@ -1036,6 +1126,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Request intake portal',
       'Identity verification',
       'Connectors to data stores',
@@ -1083,6 +1174,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'browser - performance - monitor',
@@ -1095,12 +1188,15 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'RUM collection script',
       'Core Web Vitals (LCP / CLS / INP)',
       'Regression detection',
       'Dashboards and alerts',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '⚡',
@@ -1129,6 +1225,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Lightweight RUM SDK, vitals aggregation and alerting.',
     launch_date: '2024 - 09 - 08',
     customers: 52,
@@ -1136,6 +1233,8 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 29,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1150,6 +1249,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Slow query detection',
       'Lock contention analysis',
       'Connection pool saturation',
@@ -1177,6 +1277,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'cloud - platform - managed - kubernetes',
@@ -1189,12 +1291,15 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'IaC blueprints and GitOps',
       'SSO and RBAC policies',
       'Cost controls and quotas',
       'Backup and restore runbooks',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '☁️',
@@ -1223,6 +1328,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Blueprints, policies, GitOps pipelines and SRE runbooks.',
     launch_date: '2025 - 01 - 10',
     customers: 17,
@@ -1230,6 +1336,8 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 12,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1245,6 +1353,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Core Web Vitals (LCP, INP, CLS)',
       'Conversion impact analysis',
       'Geo / device breakdowns',
@@ -1285,6 +1394,8 @@ export const realMarketServices: RealMarketService[] = [
     popular: false,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '⏱️',
 
 =======
@@ -1311,6 +1422,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'SLO definitions, budget math, and actionable ownership routes.',
     launch_date: '2025 - 02 - 18',
     customers: 18,
@@ -1380,6 +1492,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'IAB TCF v2 && v2.2 compatible consent',
       'Geo-targeted policies (EEA/UK/US states)',
@@ -1395,12 +1509,15 @@ export const realMarketServices: RealMarketService[] = [
       'Geo - targeted policies (EEA / UK / US states)',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Consent receipts and log exports',
       'Cookie inventory and auto - blocking',
       'Policy pages and versioning',
       'CMP integrations and tag manager hooks',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🛡️',
@@ -1411,6 +1528,7 @@ export const realMarketServices: RealMarketService[] = [
     market_position:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Practical, affordable alternative to heavyweight CMPs for SMBs and startups.',
     target_audience: 'Marketing ops, legal / compliance, web teams',
     trial_days: 7,
@@ -1418,11 +1536,14 @@ export const realMarketServices: RealMarketService[] = [
     category: 'Privacy & Compliance',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     real_service: true,
     technology: ['Next.js, Tag Manager, IAB TCF v2'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Google Tag Manager, Segment, Cookiebot, OneTrust'],
     use_cases: ['GDPR / CPRA consent management, Audit exports, Region policies'],
     roi: 'Reduce compliance risk and legal exposure with verifiable consent logs.',
@@ -1441,6 +1562,9 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Bridges the gap between brittle webhook flows and reliable data pipelines.'
     targetAudience: 'Data engineers, platform teams, RevOps'
     trialDays: 14
@@ -1457,10 +1581,13 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'integration-futuristic'
     contactInfo: contact
     realImplementation: true
+<<<<<<< HEAD
+=======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',
     targetAudience: 'Data engineers, platform teams, RevOps',
     trialDays: 14,
@@ -1477,8 +1604,11 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'integration-futuristic',
     contactInfo: contact,
     realImplementation: true,
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
     launchDate: '2025-08-22'
@@ -1488,9 +1618,12 @@ export const realMarketServices: RealMarketService[] = [
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'api - backfill - reconciliation',
     name: 'API Backfill & Reconciliation',
     tagline:;
@@ -1534,6 +1667,8 @@ export const realMarketServices: RealMarketService[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
 =======
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',
@@ -1572,6 +1707,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Freshness and volume checks',
       'Null / outlier thresholds',
       'Schema drift detection',
@@ -1580,6 +1716,8 @@ export const realMarketServices: RealMarketService[] = [
       'Slack / Jira alerts and reports',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📊',
@@ -1600,6 +1738,7 @@ export const realMarketServices: RealMarketService[] = [
     use_cases: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Prevent stale dashboards, Catch pipeline regressions, Improve trust',
     ],
     roi: 'Reduce dashboard breaks; improve data - dependent feature velocity.',
@@ -1611,6 +1750,8 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 13,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1625,6 +1766,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'EXPLAIN plan analysis',
       'Missing / unused index detection',
       'Autovacuum and bloat tuning',
@@ -1654,6 +1796,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'gitops - drift - monitor',
@@ -1667,6 +1811,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Desired vs live diffing',
       'OPA / Conftest policy gates',
       'Auto - PR remediation',
@@ -1675,6 +1820,8 @@ export const realMarketServices: RealMarketService[] = [
       'Multi - cluster support',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🧭',
@@ -1703,6 +1850,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Cluster collectors, policy engine, reconciler workers, and PR bots.',
     launch_date: '2025 - 08 - 22',
     customers: 14,
@@ -1710,6 +1858,8 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 7,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1724,6 +1874,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Control mapping templates',
       'Evidence collectors and checks',
       'Policy and process coverage',
@@ -1762,6 +1913,8 @@ export const realMarketServices: RealMarketService[] = [
     integrations: ['Jira, ServiceNow, Slack'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     use_cases: [;
@@ -1777,6 +1930,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'API collectors, exposure heuristics, ticket routing, dashboards.',
     launch_date: '2025 - 08 - 22',
     customers: 19,
@@ -1784,6 +1938,8 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 9,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1799,6 +1955,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Prompt injection libraries',
       'PII / redaction checks',
       'Safety regression tests',
@@ -1806,6 +1963,8 @@ export const realMarketServices: RealMarketService[] = [
       'CI gates and reports',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🧪',
@@ -1834,6 +1993,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Scenario libraries, orchestrator, CI integration, dashboards.',
     launch_date: '2025 - 08 - 22',
     customers: 17,
@@ -1847,6 +2007,8 @@ export const realMarketServices: RealMarketService[] = [
       'Appeal and review portal',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🛑',
@@ -1875,6 +2037,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Data connectors, identity resolution, MMM fitting, and optimizer UI.',
     launch_date: '2025 - 01 - 21',
     customers: 48,
@@ -1920,6 +2083,8 @@ export const realMarketServices: RealMarketService[] = [
     popular: false,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🚚',
 
 =======
@@ -1946,6 +2111,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Device registry, stream processors, and feature store for ML.',
     launch_date: '2025 - 01 - 21',
     customers: 21,
@@ -1953,6 +2119,8 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 12,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1967,6 +2135,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'OWASP API Top 10 checks',
       'Secrets and token leakage detection',
       'CI / CD and PR annotations',
@@ -1974,6 +2143,8 @@ export const realMarketServices: RealMarketService[] = [
       'Reports and Jira tickets',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🛡️',
@@ -2006,6 +2177,7 @@ export const realMarketServices: RealMarketService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
     launch_date: '2025 - 08 - 22',
     customers: 13,
@@ -2013,6 +2185,8 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 7,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -2027,6 +2201,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Turnstile token verification',
       'Reputation and ASN heuristics',
       'IP / device fingerprinting',
@@ -2056,6 +2231,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'reverse - etl - lite',
@@ -2068,6 +2245,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Warehouse connectors',
       'Field mapping UI',
       'Schedules and retries',
@@ -2075,6 +2253,8 @@ export const realMarketServices: RealMarketService[] = [
       'Row - level filters',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔄',
@@ -2085,6 +2265,7 @@ export const realMarketServices: RealMarketService[] = [
     market_position:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Affordable, focused alternative to heavy Reverse ETL suites.',
     target_audience: 'Growth, data engineering, RevOps',
     trial_days: 14,
@@ -2092,11 +2273,14 @@ export const realMarketServices: RealMarketService[] = [
     category: 'Data & Analytics',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     real_service: true,
     technology: ['Node.js, Airflow / dbt optional, OAuth'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Snowflake, BigQuery, Postgres, HubSpot, Salesforce'],
     use_cases: ['Activation, Lead scoring, Audiences'],
     roi: 'Ship activation in days; lift campaign ROI 10–20%',
@@ -2121,6 +2305,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'ai - rfp - response - copilot',
@@ -2136,11 +2322,15 @@ export const realMarketServices: RealMarketService[] = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'RAG over proposals & policies',
       'Section templates and styles',
       'Evidence citations',
       'Gap coverage tracking',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2156,6 +2346,8 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 9
   }
   {
+<<<<<<< HEAD
+=======
 =======
 
       'Word/PDF export',
@@ -2232,6 +2424,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Golden sets and prompts',
       'Judge model scoring',
       'Multi - model matrix',
@@ -2239,6 +2432,8 @@ export const realMarketServices: RealMarketService[] = [
       'CI quality gates',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🧪',
@@ -2252,6 +2447,7 @@ export const realMarketServices: RealMarketService[] = [
     setup_time: '2 hours',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'AI & Data',
     real_service: true,
     technology: ['OpenAI / Anthropic APIs, Vector DB'],
@@ -2279,6 +2475,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Geo rules (EEA/UK/US states)',
     id: 'gdpr - cookie - consent - edge',
@@ -2293,12 +2491,15 @@ export const realMarketServices: RealMarketService[] = [
       'Geo rules (EEA / UK / US states)',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Consent receipts & exports',
       'Auto - blocking for tags',
       'Policy page generator',
       'A / B banner tests',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🍪',
@@ -2325,6 +2526,7 @@ export const realMarketServices: RealMarketService[] = [
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2341,6 +2543,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'smart - web - scraper - hub',
@@ -2353,6 +2557,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Headless rendering & queues',
       'IP rotation and backoff',
       'Robots / politeness guards',
@@ -2360,6 +2565,8 @@ export const realMarketServices: RealMarketService[] = [
       'Warehouse exports',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🕸️',
@@ -2373,6 +2580,7 @@ export const realMarketServices: RealMarketService[] = [
     setup_time: '2 hours',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Developer Tools',
     real_service: true,
     technology: ['Playwright, Queues, Proxies'],
@@ -2382,6 +2590,8 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['ScraperAPI, Bright Data'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     market_size: '$1.5B data collection',
     growth_rate: '20% YoY',
@@ -2389,6 +2599,7 @@ export const realMarketServices: RealMarketService[] = [
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2405,6 +2616,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'ecommerce - returns - manager',
@@ -2418,6 +2631,7 @@ export const realMarketServices: RealMarketService[] = [
 
       'Self‑serve returns portal',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Label generation and tracking',
       'Exchange / repair workflows',
       'Return reasons and defect analytics',
@@ -2425,6 +2639,8 @@ export const realMarketServices: RealMarketService[] = [
       'Warehouse and RMA integrations',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📦',
@@ -2451,6 +2667,7 @@ export const realMarketServices: RealMarketService[] = [
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2467,6 +2684,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'automated - email - followups',
@@ -2479,6 +2698,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Sequence builder and templates',
       'Reply / booking detection and stops',
       'Inbox rotation and throttling',
@@ -2489,6 +2709,8 @@ export const realMarketServices: RealMarketService[] = [
     popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '📨',
 
     color: 'from - sky - 600 to - indigo - 700',
@@ -2497,11 +2719,14 @@ export const realMarketServices: RealMarketService[] = [
     market_position:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Simpler and more compliant than heavy sales engagement suites for SMBs.',
     target_audience: 'SMB sales and success teams',
     trial_days: 7,
     setup_time: '1 day',
     category: 'Growth & Marketing',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -2512,6 +2737,7 @@ export const realMarketServices: RealMarketService[] = [
 
     roi: 'Lift reply rates by 15–35% and shorten sales cycles.',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     competitors: ['Mailshake', 'Lemlist', 'Apollo'],
     market_size: '$6B sales engagement',
     growth_rate: '20% YoY',
@@ -2533,6 +2759,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'podcast - transcribe - chapters',
@@ -2546,6 +2774,7 @@ export const realMarketServices: RealMarketService[] = [
 
       'High‑accuracy transcription',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Speaker diarization',
       'Summaries and chaptering',
       'Topic and keyword extraction',
@@ -2553,6 +2782,8 @@ export const realMarketServices: RealMarketService[] = [
       'Embeds and RSS sync',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🎙️',
@@ -2579,6 +2810,7 @@ export const realMarketServices: RealMarketService[] = [
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2595,6 +2827,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'freelancer - portfolio - studio',
@@ -2608,6 +2842,7 @@ export const realMarketServices: RealMarketService[] = [
 
       'Drag‑and‑drop templates',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Case study generator',
       'Contact and booking forms',
       'Testimonials and logos',
@@ -2615,6 +2850,8 @@ export const realMarketServices: RealMarketService[] = [
       'Custom domains',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🖼️',
@@ -2634,6 +2871,7 @@ export const realMarketServices: RealMarketService[] = [
     technology: ['Next.js', 'Forms', 'SEO'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Calendly', 'HubSpot', 'GA4'],
     use_cases: ['Showcase work', 'Capture leads', 'Book meetings'],
     roi: 'Increase inbound leads by 10–25% with polished case studies.',
@@ -2657,6 +2895,9 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Contacts and notes'
       'Reminders and tasks'
       'Simple pipeline stages'
@@ -2704,6 +2945,8 @@ export const realMarketServices: RealMarketService[] = [
     icon: '📇',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/local-micro-crm',
@@ -2725,6 +2968,7 @@ export const realMarketServices: RealMarketService[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2765,6 +3009,8 @@ export const realMarketServices: RealMarketService[] = [
     category: 'CRM',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     real_service: true,
     technology: ['Next.js', 'SQLite / Postgres'],
@@ -2773,6 +3019,7 @@ export const realMarketServices: RealMarketService[] = [
 
     roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
     market_size: '$20B SMB CRM',
     growth_rate: '10% YoY',
@@ -2794,9 +3041,12 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -2826,9 +3076,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'ai-futuristic' as any,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2845,6 +3098,8 @@ export const realMarketServices: RealMarketService[] = [
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
     id: 'subjectline - optimizer - ai',
@@ -2857,6 +3112,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -2893,6 +3149,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'dev - workflow - analytics',
@@ -2905,6 +3163,7 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Cycle time and WIP analysis',
       'Review depth and latency',
       'Flaky test detection',
@@ -2913,6 +3172,8 @@ export const realMarketServices: RealMarketService[] = [
       'Jira / Linear linkage',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🧩',
@@ -2939,6 +3200,7 @@ export const realMarketServices: RealMarketService[] = [
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2955,6 +3217,8 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Geo/rule‑based banners',
     id: 'privacy - consent - manager - smb',
@@ -2968,6 +3232,7 @@ export const realMarketServices: RealMarketService[] = [
       'Geo / rule‑based banners',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Preference center',
       'DSAR intake and workflows',
       'Cookie catalog and scans',
@@ -2975,6 +3240,8 @@ export const realMarketServices: RealMarketService[] = [
       'Multi‑site management',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '⚖️',
@@ -2991,6 +3258,7 @@ export const realMarketServices: RealMarketService[] = [
     technology: ['Next.js', 'Edge rules'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['GTM', 'Segment', 'Tag managers'],
     use_cases: ['Cookie compliance', 'Consent records', 'DSAR intake'],
     roi: 'Faster compliance and fewer legal risks.',
@@ -3015,6 +3283,9 @@ export const realMarketServices: RealMarketService[] = [
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -3176,6 +3447,8 @@ export const realMarketServices: RealMarketService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
   }
 ];
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -3271,12 +3544,15 @@ export const realMarketServices: RealMarketService[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
     implementation_details: 'Region rules, consent logging, banner / prefs widgets.';
     launch_date: '2025 - 02 - 01';
     customers: 88;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -4913,6 +5189,7 @@ export const realMarketServices: RealMarketService[] = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ];
 ;

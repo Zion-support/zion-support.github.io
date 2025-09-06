@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -57,6 +59,7 @@ export default function CareersPage() {const openPositions = [;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       requirements: [;
         'MS/PhD in Physics, Computer Science, or related field3+ years experience in quantum computingKnowledge of quantum algorithms and quantum programmingExperience with Qiskit, Cirq, or similar frameworks']}
     {title: 'Full-Stack Developer';
@@ -64,7 +67,10 @@ export default function CareersPage() {const openPositions = [;
       location: 'Remote / Global';
       type: 'Full-time';
       description: 'Build scalable web applications and APIs for our AI-powered platforms.';
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       requirements: [;
         '3+ years experience in full-stack developmentProficiency in React, Node.js, and TypeScriptExperience with cloud platforms (AWS, GCP, Azure)Knowledge of database design and optimization']}
     {title: 'Cybersecurity Specialist';
@@ -75,6 +81,8 @@ export default function CareersPage() {const openPositions = [;
       requirements: [;
         '5+ years experience in cybersecurityExpertise in threat detection and preventionKnowledge of AI security and adversarial attacksRelevant certifications (CISSP, CEH, etc.)']}];
   const benefits = [;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -175,6 +183,7 @@ export default function CareersPage() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       icon: '🏥'}];
   return (
     <div className="space - y-16">;

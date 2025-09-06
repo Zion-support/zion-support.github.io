@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 "use client",;
@@ -33,6 +35,7 @@ interface DeploymentUpdate {;
   domain?: string,;
   progress?: number,;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   actions?: {;
     label: string;
     action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss';
@@ -94,6 +97,8 @@ export default function DeploymentNotification({updates;
     }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   },;
   if (updates.length === 0) return null,;
 
@@ -139,6 +144,7 @@ import {Rocket;
   Users;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Zap;
 } from './lucide-react';,
 interface DeploymentUpdate {
@@ -378,6 +384,8 @@ export default function DeploymentNotification({;
           {/* Instance Details (if available) */}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
           {update.instance_name && (
             <div className="mb - 3 p - 3 bg - white / 10 rounded - lg border border - white / 20">;
@@ -391,6 +399,7 @@ export default function DeploymentNotification({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </div>;
                 <span className="font - medium text - white text - sm">;
                   {update.instance_name}
@@ -412,6 +421,8 @@ export default function DeploymentNotification({;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
             </div>)}
 
@@ -421,6 +432,7 @@ export default function DeploymentNotification({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (
             <div className="mb - 3 space - y-2">;
@@ -436,6 +448,8 @@ export default function DeploymentNotification({;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
             </div>)}
 
@@ -445,12 +459,16 @@ export default function DeploymentNotification({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (
             <div className="flex gap - 2 pt - 2 border - t border - white / 20">;
               {update.actions.map ((action, index) => (
                 <button;
                   key={index}
+<<<<<<< HEAD
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white';
+=======
 <<<<<<< HEAD
 =======
 
@@ -477,6 +495,7 @@ export default function DeploymentNotification({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       : action.action === 'view';
                       ? 'bg - green - 600 hover:bg - green - 700 text - white';
                       : 'bg - white / 20 hover:bg - white / 30 text - white / 80';
@@ -489,6 +508,8 @@ export default function DeploymentNotification({;
                   <span>{action.label}</span>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
                 </button>))}
             </div>)}
@@ -499,6 +520,7 @@ export default function DeploymentNotification({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
             {format_timestamp (update.timestamp)}
@@ -506,6 +528,8 @@ export default function DeploymentNotification({;
         </div>))}
     </div>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -576,6 +600,7 @@ export function DeploymentNotificationExample() {;
   return (;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <DeploymentNotification;
       updates={updates}
       on_dismiss={handle_dismiss}

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+      default:
+=======
 default:
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return <Badge variant="outline">{status}</Badge>
     }
 
@@ -70,6 +74,8 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus,) => {;
     switch (status) {;
       case "new": return <Badge variant="secondary">New</Badge>;
+<<<<<<< HEAD
+=======
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
@@ -78,6 +84,7 @@ export function MyApplications() {;
 
   if (isLoading) {;
     return (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
@@ -143,6 +150,12 @@ export function MyApplications() {;
                   variant="outline" 
                   size="sm" 
 
+<<<<<<< HEAD
+                  {application.cover_letter}
+                </p>
+              )}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="text-xs"
                   asChild
                 >
@@ -303,4 +316,7 @@ if ( {) {
   );
 
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

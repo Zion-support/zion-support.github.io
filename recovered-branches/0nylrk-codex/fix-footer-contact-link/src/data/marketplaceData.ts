@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -7,10 +9,13 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -127,6 +132,7 @@ import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -135,6 +141,8 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -331,6 +339,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     location: 'North America',
     availability: '4 - 6 Weeks',
     ai_score: 92,
@@ -686,6 +695,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   },
   {
 <<<<<<< HEAD
+    reviewCount: 18;
+    featured: true;
+=======
+<<<<<<< HEAD
     id: "equipment-2", title: "Enterprise GPU Server Rack",
     description: "Scalable server rack solution with multiple NVIDIA A100 GPUs ideal for large-scale AI model training and deployment.", category: "Servers",
     price: 24999, currency: "$",
@@ -707,12 +720,15 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     reviewCount: 18;
     featured: true;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     availability: "2-4 Weeks"
   }
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -740,6 +756,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'AI models',
     'GPT integration',
     'Machine learning',
@@ -757,6 +774,11 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Server rack',
     'GPU cluster',
     'Edge computing',
+<<<<<<< HEAD
+  ];
+  // Convert strings to SearchSuggestion objects
+    type: 'product', // Use a valid type from the updated SearchSuggestion interface
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -798,6 +820,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }));};  ];
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
@@ -805,12 +828,15 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
@@ -818,9 +844,12 @@ export const generateFilterOptions = (): FilterOptions => {
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ].sort();
   const locations = [
     ...new Set(
@@ -883,6 +912,9 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
 <<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -890,10 +922,13 @@ export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE
 =======
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -912,12 +947,16 @@ export const generateFilterOptions = (): FilterOptions => {
   ].sort();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -939,11 +978,14 @@ export const generateFilterOptions = (): FilterOptions => {
       label: item,
       value: item
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ratingOptions: [1, 2, 3, 4, 5], // Add rating options
   };
 };
@@ -1257,7 +1299,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 =======
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -1377,6 +1422,9 @@ rating_options: [1, 2, 3, 4, 5] // Add rating options;
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
 <<<<<<< HEAD
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1396,3 +1444,4 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 =======
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

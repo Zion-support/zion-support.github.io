@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -237,6 +239,7 @@ module.exports = {;
       log_file:'./logs/performance-combined.log',;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 module.exports = {;
   apps:[;
 module.exports = {apps:[;
@@ -314,16 +317,21 @@ module.exports = {apps:[;
       out_file:'./logs/performance-out.log';
       log_file:'./logs/performance-combined.log';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       time:true;
     }
   ];
 };      env: {
         NODE_ENV: 'production'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -344,6 +352,7 @@ module.exports = {apps:[;
 =======
 =======
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 module.exports = {
 <<<<<<< HEAD
   apps: [
@@ -393,7 +402,10 @@ module.exports = {
     env: {
       NODE_ENV: "production"
       PORT: 3000
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     env_production: {
       NODE_ENV: "production"
@@ -527,6 +539,8 @@ export default {
     {
 
       name: 'bolt-zion-app',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       name: 'bolt - zion - app',
@@ -962,6 +976,7 @@ origin/automation-improvements-final
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default {
   apps: [
     {
@@ -1257,6 +1272,8 @@ module.exports = {;
   ];
 },;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -1548,3 +1565,4 @@ module && module.exports = {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

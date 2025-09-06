@@ -47,6 +47,8 @@ import {  Table,  Table,;
   TableCell,;
   TableHead,;
   TableHeader,;
+<<<<<<< HEAD
+=======
   TableRow,;
 } from '@/components/ui/table';
 import Skeleton from '@/components/ui/skeleton';
@@ -71,10 +73,42 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
   const getStatusBadgeVariant = (status: DisputeStatus,) => {;
     switch (status) {;
       case 'open':;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
+<<<<<<< HEAD
+        return 'outline'; // Changed from "success" to "outline"
+      case 'closed':
+        return 'outline'
+      default:
+        return 'default'
+import React, { useState } from "react"
+import { Dispute, DisputeStatus } from "@/types/disputes"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow} from "@/components/ui/table"
+import Skeleton from "@/components/ui/skeleton"
+import { formatDistanceToNow } from "date-fns"
+import Link from "next/link"
+TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+
+import React, { useState } from "react",
+import { Dispute, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import {
+=======
         return 'outline'; // Changed from "success" to "outline";
       case 'closed':;
         return 'outline';
@@ -88,13 +122,17 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
@@ -142,6 +180,15 @@ function DisputesList() {
       case "under_review":;
         return "secondary";
       case "resolved":;
+<<<<<<< HEAD
+import Skeleton from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+import { ShieldAlert } from 'lucide-react'
+import Link from "next/link",
+type DisputesListProps = {
+  disputes: Dispute[]
+  isLoading: boolean
+=======
 
         return "outline", // Changed from './success'; to "outline";
 
@@ -151,6 +198,7 @@ function DisputesList() {
         return "default";
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="border rounded-md">
           <Table>
             <TableHeader>
@@ -162,9 +210,12 @@ function DisputesList() {
                 <TableHead>Status</TableHead>
 
 
+<<<<<<< HEAD
+=======
                 <TableHead className="text-right">Actions</TableHead>
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -249,10 +300,16 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
               ))}
+<<<<<<< HEAD
+              ))}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </TableBody>;
           </Table>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 
     );
 
@@ -261,6 +318,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   }
 
   if (disputes && disputes.length === 0) {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
@@ -271,12 +329,23 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
   if (disputes && disputes.length === 0) {;
     return (
+<<<<<<< HEAD
+  }
+
+  if (disputes.length === 0) {
+    return (
+  }
+
+  if (disputes.length === 0) {
+    return (
+=======
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
         <h3 className='text-xl font-medium'>No disputes found</h3>;
         <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
   }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
@@ -288,6 +357,41 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         </p>
       </div>
     )
+<<<<<<< HEAD
+  }
+    <div className='space-y-4'>
+      <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>
+        <Button
+          variant={statusFilter === 'all' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('all')}
+          size='sm'        >
+          All
+        </Button>
+        <Button
+          variant={statusFilter === 'open' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('open')}
+          size='sm'        >
+          Open
+        </Button>
+        <Button
+          variant={statusFilter === 'under_review' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('under_review')}
+          size='sm'        >
+          Under Review
+        </Button>
+        <Button
+          variant={statusFilter === 'resolved' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('resolved')}
+          size='sm'        >
+          Resolved
+        </Button>
+        <Button
+          variant={statusFilter === 'closed' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('closed')}
+          size='sm'        >    <div className="space-y-4">
+    <div className="space-y-4">
+    <div className="space-y-4">
+=======
 
   if (disputes && disputes.length === 0) {;
     return (
@@ -343,6 +447,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
@@ -396,9 +501,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           Closed
         </Button>
       </div>
+<<<<<<< HEAD
+=======
 
 
       <div className="border rounded-md overflow-hidden">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -412,23 +520,29 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
               <TableHead>Status</TableHead>
 
 
+<<<<<<< HEAD
+=======
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs'>
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
+=======
 
 
                   {dispute.project?.title || 'Unknown Project'}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </TableCell>
                 <TableCell>
                   <div className='flex flex-col text-sm'>
@@ -476,6 +590,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
+=======
 
           size="sm";
           size="sm";
@@ -516,6 +632,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                     <span>;
                       Client:{' '}
                       {dispute && dispute.client_profile?.display_name || 'Unknown Client'}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </span>;
                     <span>;
                       Talent:{' '}
@@ -586,7 +703,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                     {dispute.status.replace('_ ')}
                   </Badge>
                 </TableCell>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <TableCell className="text-right">
                   <Button asChild size="sm">
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
@@ -594,6 +714,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
               </TableRow>
             ))}
+<<<<<<< HEAD
+=======
 
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true,
@@ -625,6 +747,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
       </div>;
     </div>);
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 // Check condition
 if ( {") {
@@ -636,15 +759,21 @@ if ( {") {
 }className="h - 10 w - 24" /> ";
 }</div> <div className="border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   [...Array (5) ].map ( (, i) => (<TableRow key= {
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   addSuffix: true 
 }) 
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
+<<<<<<< HEAD
+=======
 }"};
 }
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
           </TableBody>;
@@ -652,6 +781,8 @@ if ( {") {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 
 
   i ";
@@ -669,3 +800,4 @@ if ( {") {
 }"}
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

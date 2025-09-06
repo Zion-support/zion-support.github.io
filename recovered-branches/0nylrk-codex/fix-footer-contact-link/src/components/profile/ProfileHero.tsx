@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,11 +11,14 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import {Star} from "lucide-react";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface ProfileHeroProps {;
@@ -22,6 +27,7 @@ interface ProfileHeroProps {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
@@ -32,9 +38,12 @@ interface ProfileHeroProps {
   name: string
   title: string
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   avatarUrl?: string;
   coverImageUrl?: string;
@@ -68,6 +77,8 @@ export function ProfileHero(): any ({;
   profileType;
 }: ProfileHeroProps) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -78,6 +89,7 @@ import { cn } from "@/lib/utils",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -92,6 +104,8 @@ interface ProfileHeroProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 
   profileType
@@ -104,6 +118,7 @@ interface ProfileHeroProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ProfileHero({;
   name;
   title;
@@ -147,10 +162,13 @@ export function ProfileHero({
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Badge } from "@/components/ui/badge",;
@@ -201,6 +219,8 @@ export function ProfileHero({;
               ) : (;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -209,6 +229,7 @@ export function ProfileHero({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -219,6 +240,8 @@ export function ProfileHero({;
                 <Badge
                   variant="outline"
                   className={cn(
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -317,6 +340,7 @@ export function ProfileHero({;
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 
@@ -395,6 +419,8 @@ export function ProfileHero({;
                     )}
                 )}
                   </div>;
+<<<<<<< HEAD
+=======
                   </div>;
                 )}
                 
@@ -497,17 +523,23 @@ function ProfileHero() {
                 {aiScore && (;
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
                     AI Match:{aiScore}%;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </div>;
                 )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
                 )}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -571,3 +603,4 @@ profileType
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

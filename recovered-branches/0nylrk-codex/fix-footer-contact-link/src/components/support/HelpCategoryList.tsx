@@ -23,6 +23,8 @@ export function HelpCategoryList({
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
+<<<<<<< HEAD
+=======
           category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           category.description
             .toLowerCase()
@@ -136,6 +138,7 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     : categories;
 
   if (filteredCategories && filteredCategories.length === 0) {;
@@ -145,6 +148,36 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
       {filteredCategories.map((category) => (
         <Card
 <<<<<<< HEAD
+    );
+  }
+  return (
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      {filteredCategories && filteredCategories.map(category => (;
+
+    : categories;
+
+        <Card
+          key={category && category.id}
+          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+          onClick={() => onCategorySelect(category && category.id)}
+        >;
+          <CardHeader className="pb-2">;
+            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">;
+              {category && category.icon}
+            </div>;
+            <CardTitle>{category && category.name}</CardTitle>;
+            <CardDescription>{category && category.description}</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text-sm text-zion-slate-light">;
+              {category && category.articles.length} articles;
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {filteredCategories.map(category => (
+        <Card
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           key={category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
@@ -162,6 +195,8 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
 =======
 ;
 export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
@@ -169,6 +204,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       ))}
     </div>
   );

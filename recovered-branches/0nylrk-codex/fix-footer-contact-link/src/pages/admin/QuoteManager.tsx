@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -28,6 +30,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -37,18 +40,23 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Navigate} from "react-router-dom";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { QuoteRequest } from "@/types/quotes";
 
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,6 +77,7 @@ export default function QuoteManager() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -84,6 +93,8 @@ import type { QuoteRequest } from "@/types/quotes";
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from './react';
@@ -127,6 +138,7 @@ function QuoteManager() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",
@@ -171,6 +183,8 @@ export default function QuoteManager() {
     toggleArchive,
     deleteQuote
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   } = useAdminQuotes(),
 
@@ -184,6 +198,7 @@ export default function QuoteManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -224,6 +239,8 @@ export default function QuoteManager() {
     return <Navigate to="/unauthorized" replace />;
   }
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -267,6 +284,7 @@ export default function QuoteManager() {
 <<<<<<< HEAD
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -386,6 +404,8 @@ export default function QuoteManager() {;
 ;
   return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -400,6 +420,7 @@ export default function QuoteManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -412,6 +433,8 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -434,6 +457,7 @@ export default function QuoteManager() {;
             <QuoteStatusCards statusCounts={statusCounts} />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -475,7 +499,10 @@ function QuoteManager() {
     setDateRange;
   }
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -487,6 +514,8 @@ function QuoteManager() {
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -547,11 +576,14 @@ function QuoteManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -566,12 +598,16 @@ function QuoteManager() {
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                   />;
                 </Card>;
@@ -581,6 +617,8 @@ function QuoteManager() {
         </div>;
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -629,10 +667,13 @@ function QuoteManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           onClose={() => {
             setShowDetails(false);
@@ -653,6 +694,7 @@ function QuoteManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }}
         />
         <Footer />
@@ -774,6 +816,8 @@ if ( {) {
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             setShowDetails(false),;
@@ -852,3 +896,4 @@ const [showDetails, setShowDetails] = useState (false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

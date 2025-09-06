@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface BiotechAIService {
   id: string;
   name: string;
@@ -52,6 +55,8 @@ export interface BiotechAIService {
     reviews: 60,
   },
   {
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -68,6 +73,7 @@ export interface BiotechAIService {
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI gene editing algorithms',
       'Synthetic biology design',
       'CRISPR optimization',
@@ -81,6 +87,8 @@ export interface BiotechAIService {
     ],
     popular: true,
     icon: '🔬',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -815,6 +823,7 @@ export interface BiotechAIService {;
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     realImplementation: true
     implementationDetails:
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'

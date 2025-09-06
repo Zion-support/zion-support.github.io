@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 var __rest = (this && this.__rest) || function (s,e) {} var t = {}; for (var p in, s) if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Badge = ({ children,className = '',variant = 'default' }) => {} '; ''; '''; const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors'; const variantClasses = {} '; ''; '''; "default": 'border-transparent bg-primary text-primary-foreground','''; "secondary": 'border-transparent bg-secondary text-secondary-foreground','''; "destructive": 'border-transparent bg-destructive text-destructive-foreground','''; "outline": 'text-foreground';};'; ''; import _React from 'react'; '; const Badge = ({ children,className = ',variant = 'default' }) => {} '; ''; '''; const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors'; const variantClasses = {} '; ''; '''; "default": 'border-transparent bg-primary text-primary-foreground','''; "secondary": 'border-transparent bg-secondary text-secondary-foreground','''; "destructive": 'border-transparent bg-destructive text-destructive-foreground','''; "outline": 'text-foreground';}; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge,Badge }; export { Badge,Badge }; export { Badge,Badge }; export { Badge,Badge }; export { Badge,Badge };
@@ -38,3 +40,4 @@ var __rest = (this && this.__rest) || function (s,e) {} var t = {}; for (var p i
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

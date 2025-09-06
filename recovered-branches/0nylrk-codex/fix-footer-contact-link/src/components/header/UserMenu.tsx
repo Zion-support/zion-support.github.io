@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
@@ -24,6 +26,7 @@ export function UserMenu() {
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
@@ -31,6 +34,8 @@ import { Button } from "@/components/ui/button";
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {
+<<<<<<< HEAD
+=======
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -57,6 +62,7 @@ function UserMenu() {
 =======
 import {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSignOut = async () => {
     try {
       await logout ();
@@ -74,6 +80,8 @@ import {;
   DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 
+<<<<<<< HEAD
+=======
 export function UserMenu() {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
@@ -91,10 +99,13 @@ export function UserMenu() {;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
     }
   }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
   DropdownMenuTrigger,;
@@ -148,6 +159,7 @@ export function UserMenu() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (!user) {;
     return (
       <div className="hidden md: flex items-center space-x-4">;
@@ -206,6 +218,8 @@ export function UserMenu() {;
     );
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 
@@ -252,12 +266,15 @@ export function UserMenu() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="grid gap-2 px-2 py-2">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -281,6 +298,7 @@ export function UserMenu() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
@@ -299,6 +317,8 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -365,10 +385,14 @@ export function UserMenu() {;
   }
 ;
   return (;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
         <Button variant="ghost" className="h-8 w-8 rounded-full">;
           <Avatar className="h-8 w-8">;
+<<<<<<< HEAD
+            <AvatarImage
+=======
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />;
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>;
 <<<<<<< HEAD
@@ -416,6 +440,7 @@ export function UserMenu() {;
     </DropdownMenu>;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 
 =======
@@ -493,6 +518,8 @@ if ( {) {
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
+=======
 =======
 }
 ;
@@ -534,3 +561,4 @@ const handleSignOut = async () => {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

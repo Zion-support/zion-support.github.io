@@ -1,9 +1,21 @@
+<<<<<<< HEAD
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",
+import { GradientHeading } from "@/components/GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { GradientHeading } from "@/components/GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+
+=======
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TransactionHistory} from "@/components/transactions/TransactionHistory";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function Payments() {
   return (
     <>
@@ -85,6 +97,8 @@ export default function Payments() {
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
                         <Checkbox id="notify-email" defaultChecked />
+<<<<<<< HEAD
+=======
                         <label
                           htmlFor="notify-email"
                           className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white"
@@ -115,11 +129,14 @@ export default function Payments() {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 // Import UI components for Payment Settings tab;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
                         <label
@@ -263,6 +280,7 @@ export default function Payments() {;
                           className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white";
                         >;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         <label
                           htmlFor="notify-email"
                           className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white">;
@@ -291,8 +309,11 @@ export default function Payments() {;
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
@@ -309,7 +330,10 @@ import { GradientHeading } from "@/components/GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 export default function Payments() {;
   return (;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -411,6 +435,8 @@ import { Label } from '@/components / ui / label';
 import { Checkbox } from '@/components / ui / checkbox';
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -430,3 +456,4 @@ import { Checkbox } from "@/components/ui/checkbox",; return (<> <Header /> <div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

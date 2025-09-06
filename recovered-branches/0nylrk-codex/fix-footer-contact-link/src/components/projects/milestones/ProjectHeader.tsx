@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+=======
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ProjectHeaderProps {
   title: string;
 }
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
+<<<<<<< HEAD
+import {useNavigate} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {ArrowLeft} from 'lucide-react';
+interface ProjectHeaderProps {;
+  title: string;
+}
+
+  
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
@@ -18,6 +32,8 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
           className="mr-2"
           onClick={() => navigate(-1)}
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -109,3 +125,4 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

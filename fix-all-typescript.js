@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -125,6 +127,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' |!content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ;
 #!/usr/bin/env node;
 const fs = require('fs');
@@ -164,16 +167,21 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
 function fixTypeScriptFiles(dir) {,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,6 +225,7 @@ function fixTypeScriptFiles(dir) {,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}
       } catch (error) {
         console.log(`Error processing ${fullPath}: ${error.message}`)}
@@ -387,9 +396,12 @@ origin/automation-improvements-final
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' |!content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
 origin/main
   })};
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 #!/usr / bin / env node const fs = require ('fs'), const path = require ('path'), /**
  * fixTypeScriptFiles - Function description
@@ -417,7 +429,10 @@ function fixTypeScriptFiles() {,
       fixTypeScriptFiles (full_path)} else if (|| item.ends_with ('.tsx')) {, ) {
   $2
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {,
         const content = fs.readFileSync(fullPath, 'utf8'),
         if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {,
@@ -425,10 +440,13 @@ function fixTypeScriptFiles() {,
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
       } catch (error) {,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {
         const content = fs.readFileSync(fullPath, 'utf8');
         if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {
@@ -439,6 +457,11 @@ function fixTypeScriptFiles() {,
           fs.writeFileSync(fullPath, _'// Auto-generated module\nexport {};')}
       } catch (error) {_;}
 }
+<<<<<<< HEAD
+          fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}
+      } catch (error) {
+        console.log(`Error processing ${fullPath}: ${error.message}`)}
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}
       } catch (error) {
@@ -558,6 +581,7 @@ function fixTypeScriptFiles() {,
           fs.writeFileSync (full_path, '// Auto - generated module\nexport {}')}
       } catch (error) {,
         console.log (`Error processing ${full_path}: ${error.message}`)}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -580,6 +604,11 @@ function fixTypeScriptFiles() { if () return) {
   $2
 } if (=== '' || !content.includes ('export') && !content.includes ('import')) { console.log (`Fixing file: ${full_path}`)) {
   $2
+<<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' |!content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' |!content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
+  })};
+=======
 <<<<<<< HEAD
 } fs.writeFileSync (full_path, ' } catch (error) { console.log (`Error processing ${full_path}: ${error.message}`)} } })} console.log ('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles (__dirname); console.log ('✅ All TypeScript files fixed!');
 ;
@@ -627,3 +656,4 @@ origin/automation-improvements-final
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

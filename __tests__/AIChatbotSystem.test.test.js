@@ -91,6 +91,8 @@ describe('AIChatbotSystemtest', () => {
     expect(screen.getByTestId('aichatbotsystem.test')).toBeInTheDocument();
   });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -99,6 +101,7 @@ describe('AIChatbotSystemtest', () => {
 =======
   
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   test('displays correct content', () => {
     render(<AIChatbotSystemtest />);
   });
@@ -141,6 +144,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   test('handles user interactions', () => {
     render(<AIChatbotSystemtest />);
   });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -207,11 +212,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AIChatbotSystemtest from "./components/AIChatbotSystem.test"; describe('AIChatbotSystemtest', () => { test("renders without crashing",() => { render(<AIChatbotSystemtest />); expect(screen.getByTestId("aichatbotsystem.test")).toBeInTheDocument()}); test("displays correct content",() => { render(<AIChatbotSystemtest />)}); test("handles user interactions",() => { render(<AIChatbotSystemtest />)}); test("applies correct styling"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,3 +242,4 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

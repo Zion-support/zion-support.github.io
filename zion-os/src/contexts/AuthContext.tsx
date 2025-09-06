@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
@@ -24,6 +26,7 @@ interface User {id: string;
   onboardingCompleted: boolean;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 interface AuthContextType {
   user: User | null,
@@ -154,11 +157,14 @@ if ( {) {
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;

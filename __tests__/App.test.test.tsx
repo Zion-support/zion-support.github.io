@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -33,10 +35,13 @@ import App from '../App';
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { render, screen, describe, it, expect } from 'lucide-react'; import App from '../App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<App />)}
 }); it('handles user interactions',() => { render(<App />)})}
 });'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -46,6 +51,7 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import App 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import App from '../App'
@@ -53,6 +59,8 @@ describe('App'
   it('renders without crashing'
     expect(screen.getByRole('main'
   it('displays correct content'
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
@@ -86,3 +94,4 @@ describe('App'
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

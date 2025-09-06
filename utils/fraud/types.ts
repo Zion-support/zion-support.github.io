@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // Fraud detection types
 export type AdminActionType =
   | "ban_user"
@@ -8,6 +10,7 @@ export type AdminActionType =
   | "dismiss"
   | "escalate";
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface AdminAction {
 =======
 
@@ -62,6 +65,11 @@ export interface FraudDetectionResult {;
   isFraud: boolean;
   confidence: number;
   reasons: string[];
+=======
+<<<<<<< HEAD
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
 <<<<<<< HEAD
   suggestedActions: AdminActionType[];
   metadata: Record<string, any>;
@@ -99,10 +107,15 @@ export interface FraudDetectionConfig {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   enabled: boolean;
   rules: {
     suspiciousActivity: {
       enabled: boolean;
+<<<<<<< HEAD
+
+
+=======
 
 <<<<<<< HEAD
 =======
@@ -168,10 +181,14 @@ export interface FraudDetectionConfig {;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     confidenceThreshold: number,
   };
 =======
 
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
@@ -182,3 +199,4 @@ export interface FraudDetectionConfig {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

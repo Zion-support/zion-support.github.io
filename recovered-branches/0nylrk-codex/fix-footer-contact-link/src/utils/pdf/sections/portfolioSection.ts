@@ -1,23 +1,31 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { jsPDF  } from 'jspdf';
 import { PortfolioProject  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addPortfolioSection(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -25,6 +33,7 @@ export function addPortfolioSection(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
@@ -33,6 +42,8 @@ export function addPortfolioSection(;
   maxProjects: number = 2
 ): number {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (projects && projects.length === 0) return startY;
@@ -40,6 +51,7 @@ export function addPortfolioSection(;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
@@ -51,6 +63,8 @@ export function addPortfolioSection(;
       doc && doc.addPage();
       yPos = 20
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     
@@ -244,6 +258,7 @@ export function addPortfolioSection(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     yPos += 10, // Add space between projects
@@ -312,6 +327,8 @@ if ( {) {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -329,6 +346,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -366,6 +384,8 @@ if ( {) {
     doc.text (project.title, 20, y_pos);
     y_pos += 6;
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     // Check condition
 if ( {) {
@@ -545,3 +565,4 @@ yPos += 4
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

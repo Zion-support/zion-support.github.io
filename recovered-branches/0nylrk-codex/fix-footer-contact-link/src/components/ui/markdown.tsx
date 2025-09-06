@@ -1,6 +1,14 @@
+<<<<<<< HEAD
+import React from "react",
+import ReactMarkdown from "react-markdown";
+import { cn } from "@/lib/utils";
+import ReactMarkdown from "react-markdown",
+import { cn } from "@/lib/utils",
+=======
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MarkdownProps {
   content: string;
   className?: string;
@@ -10,7 +18,17 @@ export function Markdown({ content, className }: MarkdownProps) {
     <div className={cn("prose dark:prose-invert max-w-none", className)}>
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
+<<<<<<< HEAD
+  )
+import React from "react",;
+import ReactMarkdown from "react-markdown",;
+import { cn } from "@/lib/utils",;
+interface MarkdownProps {;
+  content: string,;
+  className?: string;
+=======
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export function Markdown(): any ({ content, className }: MarkdownProps) {;
@@ -67,6 +85,8 @@ function Markdown() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -108,3 +128,4 @@ export function Markdown({ content, className }: MarkdownProps) {;
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

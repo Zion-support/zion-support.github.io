@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -46,8 +49,11 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -56,8 +62,11 @@
     realImplementation: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -859,7 +868,10 @@
       website: 'https://ziontechgroup.com'
     }
     realImplementation: true
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails: 'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.';
     launchDate: '2024-01-01';
     customers: 8;
@@ -871,6 +883,9 @@
 export const newInnovativeServices = [
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Complete space mission control platform with AI integration and real-time operations'
     launchDate: '2024-08-01'
     customers: 12
@@ -948,6 +963,8 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     period: '/month',;
     description: 'Revolutionary brain-computer interface powered by quantum AI, enabling direct neural communication, cognitive enhancement, and unprecedented human-AI symbiosis.',;
 
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -955,6 +972,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'quantum - internet - security - platform',
     name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum - secured internet infrastructure',
@@ -980,8 +998,11 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - internet - security - platform',
@@ -1038,12 +1059,18 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
 
       'AI-powered production planning',
 =======
+<<<<<<< HEAD
+  {
+
+      'AI-powered production planning',
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered production planning',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'ai - powered - autonomous - manufacturing',
     name: 'AI - Powered Autonomous Manufacturing',
     tagline: 'Fully autonomous manufacturing with AI optimization',
@@ -1069,8 +1096,11 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - green - 600 to - blue - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - autonomous - manufacturing',
@@ -1130,8 +1160,11 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'quantum - financial - trading - platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI - powered financial trading with predictive analytics',
@@ -1153,6 +1186,8 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       '24 / 7 trading operations',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '💰',
@@ -1201,6 +1236,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1217,6 +1253,8 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'space - technology - mission - control',
@@ -1229,6 +1267,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Satellite mission control',
       'Orbital mechanics calculation',
       'Mission planning and optimization',
@@ -2942,6 +2981,8 @@ export const newInnovativeServices = [
 ;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -2949,3 +2990,4 @@ export interface InnovativeMicroSaasService {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

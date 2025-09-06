@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -11,15 +13,19 @@ import {Drawer} from "@/components/ui/drawer";
 import {FilterSidebar} from "@/components/talent/FilterSidebar";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Drawer } from "@/components/ui/drawer";
 import { FilterSidebar } from "@/components/talent/FilterSidebar";
 import { Drawer } from "@/components/ui/drawer",
 import { FilterSidebar } from "@/components/talent/FilterSidebar",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MobileFilterDrawerProps {
 
   isMobileFilterOpen: boolean
@@ -27,6 +33,8 @@ interface MobileFilterDrawerProps {
 
   filterProps: any, // We'll pass all filter-related props through this object
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -51,11 +59,14 @@ export function MobileFilterDrawer({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   filterProps
 }: MobileFilterDrawerProps) {
   return (
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -64,6 +75,7 @@ export function MobileFilterDrawer({
         <FilterSidebar 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Drawer } from "@/components/ui/drawer",;
 import { FilterSidebar } from "@/components/talent/FilterSidebar",;
@@ -83,6 +95,8 @@ export function MobileFilterDrawer({;
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;
         <FilterSidebar;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         <FilterSidebar 
@@ -90,6 +104,7 @@ export function MobileFilterDrawer({;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {...filterProps}
           isMobileFilterOpen={isMobileFilterOpen}
         />
@@ -176,6 +191,8 @@ function MobileFilterDrawer() {
     </Drawer>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -201,3 +218,4 @@ filterProps
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

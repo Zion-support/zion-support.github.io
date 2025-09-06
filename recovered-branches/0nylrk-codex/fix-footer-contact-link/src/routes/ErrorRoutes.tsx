@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "@/pages/NotFound";
@@ -24,6 +26,7 @@ import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import NotFound from "@/pages/NotFound";
@@ -61,6 +64,8 @@ const ErrorRoutes = () => {;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -75,10 +80,13 @@ import Unauthorized from "@/pages / Unauthorized";
 const ErrorRoutes = () =>: any {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Routes>;
       {/* Error Routes */}
 export default ErrorRoutes;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -110,3 +118,4 @@ export default ErrorRoutes;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,10 +11,13 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {StarIcon} from "lucide-react";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface ListingScoreCardProps {;
@@ -24,17 +29,23 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { StarIcon } from './lucide-react';
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react";
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ListingScoreCardProps {
   title: string,
   description: string,
 
   image?: string;
   category: string,;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -43,11 +54,14 @@ interface ListingScoreCardProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   tags?: string[];
   author?: string;
   author_image?: string;
   ai_score?: number;
   rating?: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -94,10 +108,13 @@ export function ListingScoreCard({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   authorImage;
   aiScore = 0;
   rating = 0;
   reviewCount = 0;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -112,6 +129,7 @@ import { StarIcon } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -127,6 +145,8 @@ interface ListingScoreCardProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 export function ListingScoreCard({ 
   title,
@@ -140,6 +160,7 @@ export function ListingScoreCard({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   description, 
   image, 
   category, 
@@ -154,6 +175,8 @@ export function ListingScoreCard({
   return (
     <div className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
 <<<<<<< HEAD
 
@@ -162,6 +185,7 @@ export function ListingScoreCard({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}>
       {image && (
@@ -169,6 +193,8 @@ export function ListingScoreCard({
           <img
             src={image}
             alt={title}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -188,6 +214,7 @@ export function ListingScoreCard({
             alt={title} 
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
 =======
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -254,6 +281,8 @@ export function ListingScoreCard({ ;
             </div>;
           )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -279,6 +308,7 @@ export function ListingScoreCard({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
@@ -290,6 +320,8 @@ export function ListingScoreCard({ ;
                 <StarIcon
                   key={star}
                   className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -309,6 +341,7 @@ export function ListingScoreCard({ ;
                       : "text-zion-slate-light"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -446,6 +479,8 @@ export function ListingScoreCard({;
           </div>;
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -488,6 +523,7 @@ export function ListingScoreCard({;
           </div>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         )}
               </Badge>;
             ))}
@@ -660,6 +696,8 @@ function ListingScoreCard() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -722,3 +760,4 @@ className)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

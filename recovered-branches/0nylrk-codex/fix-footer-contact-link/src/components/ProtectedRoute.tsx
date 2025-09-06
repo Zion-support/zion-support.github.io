@@ -10,6 +10,8 @@ import React from 'react';
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
@@ -43,10 +45,13 @@ export interface ProtectedRouteProps {
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   children;
 
   adminOnly = false;
   tenantAdminAllowed = false
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   requiredUserType
 }) => {
@@ -57,10 +62,13 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
   adminOnly = false;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -68,6 +76,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
@@ -82,7 +91,10 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
   adminOnly = false;
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
@@ -98,6 +110,11 @@ export interface ProtectedRouteProps {
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
   children,
   adminOnly = false,
+<<<<<<< HEAD
+  tenantAdminAllowed = false,
+  requiredUserType
+}) => {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -122,6 +139,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   requiredUserType
 }) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -142,6 +160,8 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
     return <Navigate to="/unauthorized" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -167,6 +187,7 @@ export interface ProtectedRouteProps {;
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   children,;
@@ -182,6 +203,8 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
 
 
 export default ProtectedRoute;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -309,3 +332,4 @@ export default ProtectedRoute;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

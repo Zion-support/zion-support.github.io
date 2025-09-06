@@ -46,7 +46,10 @@ type Props = {
   category: string
   level: string
   isFree: string
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
@@ -66,6 +69,8 @@ type Props = {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
@@ -75,6 +80,7 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
@@ -143,6 +149,10 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
 <<<<<<< HEAD
+  );
+}
+=======
+<<<<<<< HEAD
         onChange={(e) => onChange({ category: e.target.value, level, isFree })}
       >
         <option value="">All Categories</option>
@@ -194,6 +204,7 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
   );
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string }) => void;
 }
@@ -316,4 +327,7 @@ function FilterBar() {
   );
 }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

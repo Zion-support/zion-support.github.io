@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 <<<<<<< HEAD
@@ -25,6 +28,8 @@ checks.forEach(check => {
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -1022,3 +1027,4 @@ checks.forEach(check => {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

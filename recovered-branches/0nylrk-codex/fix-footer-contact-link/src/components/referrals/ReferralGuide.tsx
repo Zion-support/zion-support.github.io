@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -32,6 +34,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
@@ -59,11 +62,16 @@ export /**
  */
 function ReferralGuide() {
   const steps = [;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -100,6 +108,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       title: "They sign up"
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
@@ -172,6 +181,8 @@ export function ReferralGuide() {;
     {;
       title: "They sign up",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
     {;
@@ -181,6 +192,7 @@ export function ReferralGuide() {;
       title: "You earn rewards",;
       description: "Rewards are issued based on the type of user who completes onboarding"}],;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
 =======
@@ -224,16 +236,21 @@ export function ReferralGuide() {;
       <CardContent>;
         <div className="space-y-4">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
           {steps && steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -244,6 +261,7 @@ export function ReferralGuide() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
                 {index + 1}
@@ -255,6 +273,8 @@ export function ReferralGuide() {;
             </div>;
           ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>;
       </CardContent>;
@@ -265,6 +285,7 @@ export function ReferralGuide() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
@@ -296,6 +317,8 @@ export function ReferralGuide() {;
     </Card>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -326,3 +349,4 @@ export function ReferralGuide() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

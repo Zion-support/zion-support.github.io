@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
@@ -54,6 +56,7 @@ serve(async (req) => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
 import {Resend} from "npm: resend@2.0.0";
@@ -100,6 +103,8 @@ serve(async (req) => {
   try {
     // Use service role key for admin privileges
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const thirtyMinutesFromNow = new Date(now && now.getTime() + 30 * 60000);
@@ -120,11 +125,14 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const { data: interviews, error } = await supabase
       .from('interviews')
       .select(`
         *;
         clients: client_id(*)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         talents:talent_id(*)
@@ -144,10 +152,13 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const results = [];
     if (interviews && interviews.length > 0) {
       for (const interview of interviews) {
         // Send email to client
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -269,6 +280,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           try {
             await resend.emails.send ({
               from: "Zion Marketplace <onboarding@resend.dev>";
@@ -409,6 +421,8 @@ if ( {) {
             results && results.push(`Reminder sent to talent: ${talentEmail}`)
 
           } catch (emailError) {
+<<<<<<< HEAD
+=======
             console && console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
 =======
             
@@ -478,12 +492,15 @@ if ( {) {
 =======
           } catch (emailError) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         }
         // Mark the interview as reminder sent
         await supabase
           .from('interviews')
           .update({ reminder_sent: new Date().toISOString() })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           .eq('id', interview && interview.id)
@@ -496,6 +513,7 @@ if ( {) {
           .eq('id', interview.id)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     return new Response(JSON.stringify({ success: true, results }), {
@@ -598,9 +616,12 @@ serve(async (req) => {;
       }
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     
@@ -623,6 +644,8 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     
     return new Response(JSON && JSON.stringify({ success: true, results }), {
@@ -643,6 +666,7 @@ serve(async (req) => {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               to: [talent_email],
               subject: `Your interview with ${client_name} is starting soon!`;
               html: `;
@@ -676,6 +700,8 @@ serve(async (req) => {;
       status: 500});
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -830,3 +856,4 @@ try {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

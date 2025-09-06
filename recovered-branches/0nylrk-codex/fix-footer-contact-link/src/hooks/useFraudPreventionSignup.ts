@@ -1,25 +1,33 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services/fraud/signupCheck';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -27,11 +35,14 @@ export function useFraudPreventionSignup() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
 
   const getIP = async (): Promise<string | undefined> => {
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -41,6 +52,7 @@ export function useFraudPreventionSignup() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       console && console.error('Error getting IP:', error);
       return undefined
@@ -49,6 +61,8 @@ export function useFraudPreventionSignup() {;
 
   };
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -66,6 +80,7 @@ export function useFraudPreventionSignup() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useCallback } from 'react',;
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -84,6 +99,8 @@ export function useFraudPreventionSignup() {;
     }
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -92,6 +109,7 @@ export function useFraudPreventionSignup() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   
   }
   // Check if the signup attempt might be fraudulent
@@ -155,6 +173,8 @@ export function useFraudPreventionSignup() {;
           status: 'pending'
         });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -183,6 +203,7 @@ export function useFraudPreventionSignup() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (error) {
           console && console.error('Error creating fraud flag:', error)
         }
@@ -348,6 +369,8 @@ if (||) {
           return false;
         }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -368,6 +391,7 @@ if (||) {
           return false;
         }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } finally {
       setIsCheckingFraud (false);
     }
@@ -375,6 +399,10 @@ if (||) {
 
 ;
 
+<<<<<<< HEAD
+  return {
+  return {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -511,6 +539,7 @@ status: 'pending'
   return {
   return {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     isCheckingFraud;
 
     checkFraudBeforeSignup}

@@ -192,37 +192,37 @@ export default function AIProjectManagerPage() {
             icon="💻"
             title="Software Development"
             description="Agile project management with AI-powered sprint planning and code review automation."
-            benefits={["Sprint optimization", "Bug prediction", "Code quality analysis", "Release planning"]
+            benefits={["Sprint optimization", "Bug prediction", "Code quality analysis", "Release planning"]}
           />
           <UseCaseCard
             icon="🏗️"
             title="Construction"
             description="Complex construction project management with resource optimization and safety monitoring."
-            benefits={["Resource scheduling", "Safety compliance", "Timeline tracking", "Cost optimization"]
+            benefits={["Resource scheduling", "Safety compliance", "Timeline tracking", "Cost optimization"]}
           />
           <UseCaseCard
             icon="🎨"
             title="Creative Agencies"
             description="Creative project management with client collaboration and creative workflow optimization."
-            benefits={["Client management", "Creative briefs", "Asset tracking", "Approval workflows"]
+            benefits={["Client management", "Creative briefs", "Asset tracking", "Approval workflows"]}
           />
           <UseCaseCard
             icon="🏥"
             title="Healthcare"
             description="Healthcare project management with compliance tracking and patient care optimization."
-            benefits={["Compliance monitoring", "Patient tracking", "Resource allocation", "Quality assurance"]
+            benefits={["Compliance monitoring", "Patient tracking", "Resource allocation", "Quality assurance"]}
           />
           <UseCaseCard
             icon="🎓"
             title="Education"
             description="Educational project management with curriculum planning and student progress tracking."
-            benefits={["Curriculum planning", "Student tracking", "Resource management", "Assessment planning"]
+            benefits={["Curriculum planning", "Student tracking", "Resource management", "Assessment planning"]}
           />
           <UseCaseCard
             icon="🏪"
             title="Retail"
             description="Retail project management with inventory optimization and customer experience enhancement."
-            benefits={["Inventory management", "Customer analytics", "Store operations", "Marketing campaigns"]
+            benefits={["Inventory management", "Customer analytics", "Store operations", "Marketing campaigns"]}
           />
         </div>
       </section>

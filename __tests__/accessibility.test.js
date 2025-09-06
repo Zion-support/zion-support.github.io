@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -15,6 +17,7 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Accessibility"
   test('"page"
@@ -24,6 +27,8 @@ test && test.describe('"Accessibility"
   test('"buttons"
     "await"
     "await"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,6 +47,7 @@ test && test.describe('"Accessibility"
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { test, expect } = require('@playwright/test')';
 test.describe('"Accessibility": Tests', () => {';
   test('"page": has proper heading structure', async ({ page }) => {';
@@ -155,6 +161,9 @@ test.describe('Accessibility Tests', () => {
     const focusedElement = page.locator(':focus');
     await expect(focusedElement).toBeVisible()})})';
 <<<<<<< HEAD
+    "await"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -205,3 +214,4 @@ const { test,expect } = require('@playwright/test')';; test.describe('Accessibil
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

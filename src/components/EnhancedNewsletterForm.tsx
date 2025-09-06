@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+    setIsSubmitting(true),
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -69,6 +73,7 @@ export function EnhancedNewsletterForm() {
     }
 
     setIsSubmitting(true);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
 <<<<<<< HEAD
 =======
@@ -513,5 +518,8 @@ export function EnhancedNewsletterForm() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

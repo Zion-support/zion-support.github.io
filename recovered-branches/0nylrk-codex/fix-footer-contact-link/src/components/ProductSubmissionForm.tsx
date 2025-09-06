@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -21,6 +24,8 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Define the form schema with zod;
@@ -53,6 +58,7 @@ export function ProductSubmissionForm() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -88,8 +94,11 @@ import { Sparkles } from "lucide-react";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Define the form schema with zod;
 const productSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
@@ -120,6 +129,8 @@ const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -167,6 +178,7 @@ export function ProductSubmissionForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
@@ -187,6 +199,8 @@ export function ProductSubmissionForm() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
       }
       reader.readAsDataURL(file)
@@ -213,6 +227,7 @@ export function ProductSubmissionForm() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
     form.setValue("description", content.description),
@@ -297,6 +312,8 @@ export function ProductSubmissionForm() {;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       },
       reader.readAsDataURL(file)
@@ -306,6 +323,7 @@ export function ProductSubmissionForm() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -479,6 +497,8 @@ export function ProductSubmissionForm() {;
     } finally {
       setIsSubmitting(false)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -594,6 +614,7 @@ export function ProductSubmissionForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <FormField
               control={form.control}
               name="title"
@@ -1027,6 +1048,8 @@ if ( {) {
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             />;
@@ -1046,6 +1069,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <FormControl>;
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
@@ -1053,6 +1077,8 @@ if ( {) {
                     Create a compelling title that describes your product;
                   </FormDescription>;
                   <FormMessage />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1062,6 +1088,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               )}
 
             />;
@@ -1331,6 +1358,8 @@ if ( {) {
                 </FormItem>;
               )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -1545,6 +1574,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }}
         />;
       </TabsContent>;
@@ -1611,6 +1641,8 @@ if ( {) {
         />;
       </TabsContent>;
     </Tabs>);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1686,4 +1718,5 @@ return (<Tabs value= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

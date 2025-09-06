@@ -7,6 +7,8 @@ import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ReplyCardProps {;
   reply: ForumReply,;
@@ -25,6 +27,7 @@ interface ReplyCardProps {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -43,6 +46,8 @@ interface ReplyCardProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export const ReplyCard = ({
   reply;
   onMarkAnswer
@@ -52,6 +57,7 @@ import { cn } from "@/lib/utils",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -59,6 +65,8 @@ interface ReplyCardProps {
   className?: string
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export const ReplyCard = ({ 
@@ -79,11 +87,14 @@ export const ReplyCard = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -152,6 +163,7 @@ export const ReplyCard = ({;
       "transition-shadow"
       reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
 =======
   className;
@@ -186,6 +198,8 @@ export const ReplyCard = ({;
                 Answer
               </Badge>
             )}
+<<<<<<< HEAD
+=======
           </div>
           <div className="text-xs text-muted-foreground">
             {timeAgo}
@@ -250,6 +264,7 @@ export const ReplyCard = ({;
 }
 export default ReplyCard;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </CardFooter>;
     </Card>;
   );
@@ -261,6 +276,8 @@ export default ReplyCard;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default ReplyCard;
+<<<<<<< HEAD
+=======
 
 =======
 import { formatDistanceToNow } from './date - fns';
@@ -410,3 +427,4 @@ export default ReplyCard;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

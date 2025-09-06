@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
@@ -8,12 +10,15 @@ export function ThemeToggle() {;
   const { theme, setTheme } = useTheme();
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (;
     <div className="flex items-center gap-2">;
       <span className="sr-only">Theme</span>;
       <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
         <button;
           onClick={() => setTheme("light")}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -24,6 +29,7 @@ export function ThemeToggle() {;
               : "text-zinc-400 hover:text-zinc-100";
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 import { use_theme  } from '@/components / theme - provider';,
 import { Moon, Sun, Monitor  } from './lucide-react';,
@@ -82,6 +88,8 @@ export function ThemeToggle() {;
         <button;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
           on_click={() => set_theme ("system")}
           className={`rounded px - 2 py - 1 text - sm transition - colors ${
@@ -90,6 +98,7 @@ export function ThemeToggle() {;
               : "text - zinc - 400 hover:text - zinc - 100";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }`}
           aria - label="Switch to system theme";
           aria - pressed={theme === "system"}
@@ -97,6 +106,8 @@ export function ThemeToggle() {;
           <Monitor className="h - 4 w - 4" />;
         </button>;
         <button;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -107,6 +118,7 @@ export function ThemeToggle() {;
               : "text - zinc - 400 hover:text - zinc - 100";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }`}
           aria - label="Switch to dark theme";
           aria - pressed={theme === "dark"}

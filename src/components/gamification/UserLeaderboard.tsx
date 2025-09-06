@@ -1,4 +1,6 @@
 import { Trophy } from 'lucide-react'
+<<<<<<< HEAD
+=======
   Card,
   CardContent,
   CardDescription,
@@ -6,6 +8,7 @@ import { Trophy } from 'lucide-react'
   CardTitle,
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface LeaderboardEntry {
 
   name: string,
@@ -49,6 +52,11 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
 
 
+<<<<<<< HEAD
+    <Card>
+      <CardHeader>
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Trophy className="h-5 w-5" /> Leaderboard
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
@@ -69,6 +77,8 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               <span className="font-medium">
                 {idx + 1}. {e.name}
               </span>
+<<<<<<< HEAD
+=======
 
 
 
@@ -118,3 +128,4 @@ function UserLeaderboard() {
     </Card>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

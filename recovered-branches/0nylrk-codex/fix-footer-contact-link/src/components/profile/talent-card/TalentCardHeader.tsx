@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,19 +11,34 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
 <<<<<<< HEAD
+import React from "react",
+import { BadgeCheck } from "lucide-react",
+import { TalentCardAvatar } from "./TalentCardAvatar";
+import { TalentCardAvailability } from "./TalentCardAvailability";
+interface TalentCardHeaderProps {
+
+  fullName: string
+  professionalTitle: string
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface TalentCardHeaderProps {;
   fullName: string,;
   professionalTitle: string,;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   profilePicture?: string;
   availabilityType: string,;
   yearsExperience: number;
 }
+<<<<<<< HEAD
+  availabilityType;
+=======
 
 export function TalentCardHeader(): any ({ ;
   fullName;
@@ -54,6 +71,7 @@ import { TalentCardAvailability } from "./TalentCardAvailability",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface TalentCardHeaderProps {
   fullName: string,
   professionalTitle: string,
@@ -67,6 +85,9 @@ interface TalentCardHeaderProps {
   availabilityType,
   yearsExperience
 }: TalentCardHeaderProps) {
+<<<<<<< HEAD
+  return (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -120,11 +141,14 @@ export function TalentCardHeader({ ;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -214,6 +238,7 @@ export function TalentCardHeader({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { BadgeCheck } from './lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -246,6 +271,8 @@ function TalentCardHeader() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -296,3 +323,4 @@ yearsExperience
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

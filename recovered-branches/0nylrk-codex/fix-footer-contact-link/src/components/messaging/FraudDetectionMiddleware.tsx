@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {check_message, monitor_content} from '@/services / fraud';
@@ -20,6 +22,7 @@ import { checkMessage, monitorContent  } from '@/services/fraud';
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface FraudDetectionMiddlewareProps {
   children: React.ReactNode
 =======
@@ -34,7 +37,10 @@ interface FraudDetectionContextType {
 =======
   children: React.ReactNode;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -42,6 +48,8 @@ import { supabase } from '@/integrations/supabase/client',;
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -51,6 +59,7 @@ interface FraudDetectionMiddlewareProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 // Interface for the context;
@@ -66,6 +75,8 @@ interface FraudDetectionContextType {;
   }>;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -73,6 +84,7 @@ interface FraudDetectionContextType {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     userId: string
     messageId: string
@@ -89,6 +101,8 @@ interface FraudDetectionContextType {;
 // TS2347, so we cast the default value instead of using a type parameter.
 
 export const FraudDetectionContext = React.createContext(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -109,6 +123,7 @@ export const FraudDetectionContext = React.createContext(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
@@ -118,6 +133,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -138,10 +155,13 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // If the quick check finds suspicious content, flag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
         await monitorContent(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -200,12 +220,15 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           userId;
           userEmail;
           'message';
           messageId;
           content;
         );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -232,6 +255,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
@@ -239,6 +263,12 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             description: "Your message contains content that may violate our terms of service."
             variant: "destructive"
             duration: 5000
+<<<<<<< HEAD
+            explanation: "Message contains prohibited content. Please review our communication guidelines."
+          }
+            explanation: "Message contains prohibited content. Please review our communication guidelines."
+          };
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -258,6 +288,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
         }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
 
 
@@ -299,6 +330,9 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return { isSafe: true }, // Default to safe on error
       }
 <<<<<<< HEAD
+      
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -318,11 +352,14 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 =======
       
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
           description: data.explanation |"This message contains prohibited content."
           variant: "destructive"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -341,6 +378,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
       if (data.classification === 'dangerous') {;
         toast({;
@@ -352,6 +390,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           isSafe: false,;
           explanation: data.explanation;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         }),
         return { 
@@ -362,10 +402,15 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       }
       */
       // Message is considered safe
+<<<<<<< HEAD
+}
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -375,6 +420,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         // If it's dangerous, show a warning to the user;
         if (quickCheck && quickCheck.severity === 'dangerous') {;
@@ -434,6 +480,11 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 
     </FraudDetectionContext && FraudDetectionContext.Provider>;
 <<<<<<< HEAD
+
+
+      return { isSafe: true }
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -488,6 +539,7 @@ export const useFraudDetection = () => {;
 
       return { isSafe: true }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -497,6 +549,8 @@ export const useFraudDetection = () => {;
   return (
     <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
       {children}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     </FraudDetectionContext && FraudDetectionContext.Provider>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -526,6 +580,7 @@ export const useFraudDetection = () => {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Interface for the context;
 interface FraudDetectionContextType {
   scanMessageContent: (
@@ -652,6 +707,8 @@ if ( {) {
   return context;
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -808,3 +865,4 @@ explanation: data.explanation
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

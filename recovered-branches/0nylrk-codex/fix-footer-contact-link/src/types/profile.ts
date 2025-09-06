@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 export interface ProfileSkill {
   name: string;
   level: number; // 1-5
@@ -6,12 +8,15 @@ export interface ProfileSkill {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   id: string;
   title: string;
   description: string;
   image_url?: string;
   tags?: string[];
+<<<<<<< HEAD
+=======
   url?: string;
   date: string;
 }
@@ -49,10 +54,17 @@ export interface ProfileExperience {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   role: string;
   company: string;
   description: string;
+<<<<<<< HEAD
+  status: 'available' | 'limited' | 'unavailable';
+  next_available?: string;
+  message?: string,
+  available_hours?: { day: string, hours: string }[];
+=======
   startDate: string;
   endDate?: string;
   current?: boolean;
@@ -68,6 +80,7 @@ export interface Availability {
   message?: string;
   availableHours?: { day: string; hours: string }[];
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 }
 export interface ProfileData {
@@ -112,6 +125,8 @@ export interface ProfileData {;
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
+<<<<<<< HEAD
+=======
   hourlyRate?: number;
   contactEmail?: string;
 }
@@ -129,6 +144,7 @@ export interface ProfileSkill {;
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export interface ProfileProject {;
   id: string,;
@@ -181,4 +197,7 @@ export interface ProfileData {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

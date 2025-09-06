@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -19,10 +21,13 @@ import { cn } from "@/lib/utils"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const Table = React.forwardRef<
   HTMLTableElement
   React.HTMLAttributes<HTMLTableElement>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   <div className=&quot;relative w-full overflow-auto&quot;>
@@ -31,11 +36,14 @@ const Table = React.forwardRef<
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   <div className="relative w-full overflow-auto">
     <table
       ref={ref}
       className={cn("w-full caption-bottom text-sm", className)}
       {...props}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 />
   </div>
@@ -69,10 +77,13 @@ Table.displayName = "Table"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const TableHeader = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   <thead ref={ref} className={cn(&quot;[&_tr]:border-b&quot;, className)} {...props} />
@@ -95,11 +106,17 @@ TableHeader.displayName = "TableHeader"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const TableBody = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <tbody
+<<<<<<< HEAD
+    ref={ref}
+    className={cn("[&_tr:last-child]:border-0", className)}
+    {...props}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -147,6 +164,7 @@ TableBody.displayName = "TableBody"
     className={cn("[&_tr:last-child]:border-0", className)}
     {...props}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const TableFooter = React.forwardRef<
   HTMLTableSectionElement
   React.HTMLAttributes<HTMLTableSectionElement>
@@ -154,6 +172,8 @@ const TableFooter = React.forwardRef<
   <tfoot
     ref={ref}
     className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -170,11 +190,14 @@ const TableFooter = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
   />
 ))
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -190,6 +213,7 @@ TableFooter.displayName = "TableFooter"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const TableRow = React.forwardRef<
   HTMLTableRowElement
   React.HTMLAttributes<HTMLTableRowElement>
@@ -197,6 +221,8 @@ const TableRow = React.forwardRef<
   <tr
     ref={ref}
     className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -213,11 +239,14 @@ const TableRow = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
   />
 ))
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -233,6 +262,7 @@ TableRow.displayName = "TableRow"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const TableHead = React.forwardRef<
   HTMLTableCellElement
   React.HTMLAttributes<HTMLTableCellElement>
@@ -240,6 +270,8 @@ const TableHead = React.forwardRef<
   <th
     ref={ref}
     className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -256,11 +288,14 @@ const TableHead = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
   />
 ))
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -276,11 +311,15 @@ TableHead.displayName = "TableHead"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const TableCell = React.forwardRef<
   HTMLTableCellElement
   React.HTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
   <td
+<<<<<<< HEAD
+    ref={ref}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -357,11 +396,14 @@ TableCell.displayName = "TableCell"
 =======
     ref={ref}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const TableCaption = React.forwardRef<
   HTMLTableCaptionElement
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
   <caption
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -384,9 +426,12 @@ const TableCaption = React.forward_ref<;
 >(({ class_name, ...props }, ref) => (
   <caption;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref={ref}
     className={cn (&quot;mt - 4 text - sm text - muted - foreground & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -414,6 +459,7 @@ TableCaption.displayName = "TableCaption"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref={ref}
     className={cn (&quot;mt - 4 text - sm text - muted - foreground & quot;, class_name)}
     {...props}
@@ -437,6 +483,9 @@ export {
 
 ;
 
+<<<<<<< HEAD
+  TableCaption}
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -596,3 +645,4 @@ React.HTMLAttributes<HTMLTableCaptionElement> > ( ({
 =======
   TableCaption}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

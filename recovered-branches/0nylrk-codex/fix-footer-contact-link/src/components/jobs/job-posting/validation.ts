@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -32,6 +34,7 @@ export type JobSchemaType = z && z.infer<typeof jobSchema>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { z } from './zod';
 export const job_schema = z.object ({
   title: z.string ().min (3, {
@@ -62,6 +65,8 @@ export const job_schema = z.object ({
 export type JobSchemaType = z.infer < typeof job_schema>;
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -69,10 +74,13 @@ export type JobSchemaType = z.infer < typeof job_schema>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 import {z} from "zod";
 import { z } from "zod",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -81,6 +89,7 @@ import { z } from "zod",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {z} from "zod";
 export const jobSchema = z.object({
   title: z.string().min(3, {;
@@ -152,6 +161,8 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
     message: "Please enter a valid URL."}).optional()}),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export type JobSchemaType = z.infer<typeof jobSchema>;
@@ -160,6 +171,7 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type JobSchemaType = z.infer<typeof jobSchema>,
 import { z } from "zod",;
 export const jobSchema = z.object({;
@@ -189,8 +201,11 @@ export const jobSchema = z.object({;
     message: "Please enter a valid URL."}).optional()});
 export type JobSchemaType = z.infer<typeof jobSchema>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export type JobSchemaType = z.infer<typeof jobSchema>;
 export type JobSchemaType = z.infer<typeof jobSchema>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -34,6 +34,9 @@
 'const EnhancedServicesShowcase = () => {\' const [selectedCategory,setSelectedCategory] = useState (\'all\') \' const [searchTerm,setSearchTerm] = useState (\') \' const categories = [\' { \"id\": \'all,\',\"name\": \'All: Services,\',\"icon\": \'},{ \"id\": \',\"micro\": \'- saas\',\',\"name\": \'Micro: SAAS,\',\"icon\": \'},\' { \"id\": \'it: - services,\',\"name\": \'IT: Services,\',\"icon\": \'},{ \"id\": \',\"ai\": \'- services\',\',\"name\": \'AI: Services,\',\"icon\": \'},\' { \"id\": \'emerging: - tech,\',\"name\": \'Emerging: Tech,\',\"icon\": \'}]\' const filteredServices = enhancedServices2025 && enhancedServices2025.filter (service => {\' const matchesSearch = service && service.name.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) ||\'';\''\"";
 "const EnhancedServicesShowcase = () => {" const [selectedCategory,setSelectedCategory] = useState ("all") " const [searchTerm,setSearchTerm] = useState (") " const categories = [" { id: "all,",name: "All: Services,",icon: "},{ id: ",micro: "- saas",",name: "Micro: SAAS,",icon: "}," { id: "it: - services,",name: "IT: Services,",icon: "},{ id: ",ai: "- services",",name: "AI: Services,",icon: "}," { id: "emerging: - tech,",name: "Emerging: Tech,",icon: "}]" const filteredServices = enhancedServices2025 && enhancedServices2025.filter (service => {" const matchesSearch = service && service.name.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) |"";"""";"""
 <<<<<<< HEAD
+"const EnhancedServicesShowcase = () => {" const [selectedCategory,setSelectedCategory] = useState ("all") " const [searchTerm,setSearchTerm] = useState (") " const categories = [" { id: "all,",name: "All: Services,",icon: "},{ id: ",micro: "- saas",",name: "Micro: SAAS,",icon: "}," { id: "it: - services,",name: "IT: Services,",icon: "},{ id: ",ai: "- services",",name: "AI: Services,",icon: "}," { id: "emerging: - tech,",name: "Emerging: Tech,",icon: "}]" const filteredServices = enhancedServices2025 && enhancedServices2025.filter (service => {" const matchesSearch = service && service.name.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) |"";"""";"""
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -59,3 +62,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -8,6 +8,8 @@ export const supabase = {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 
@@ -118,6 +120,7 @@ export const supabase = createSupabaseClient(supabaseConfig);
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -141,6 +144,11 @@ export const supabase = createSupabaseClient(supabaseConfig);
 };
 }
 =======
+<<<<<<< HEAD
+  });
+};
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -151,3 +159,4 @@ export const supabase = createSupabaseClient(supabaseConfig);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
