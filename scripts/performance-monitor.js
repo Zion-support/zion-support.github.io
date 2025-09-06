@@ -47,6 +47,7 @@ const performanceChecks = {
   bundleAnalysis: false,
   lighthouseScore: false,
   loadTime: false,
+<<<<<<< HEAD
   memoryUsage: false;
 };
 <<<<<<< HEAD
@@ -70,6 +71,10 @@ const performanceChecks = {
   "lighthouseScore": false,
   "loadTime": false,
   "memoryUsage": false};
+=======
+  memoryUsage: false
+}
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 try {
   // Check build size
   if (fs.existsSync('.next')) {
@@ -421,8 +426,13 @@ const report = {
   timestamp: new Date().toISOString(),
   score: performanceScore,
   checks: performanceChecks,
+<<<<<<< HEAD
   recommendations: [];
 };
+=======
+  recommendations: []
+}
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 if (performanceScore < 80) {
 
 module.exports = PerformanceMonitor;

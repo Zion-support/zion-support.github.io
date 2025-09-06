@@ -22,7 +22,17 @@ import {
 } from 'lucide-react';
 
 export default function Documentation() {
+<<<<<<< HEAD
   const docCategories = [
+=======
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }
+  const documentationSections = [
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
     {
       title: 'Getting Started',
       description: 'Quick start guides and setup instructions',

@@ -133,12 +133,19 @@ class ErrorBoundary extends Component<Props, State> {
 =======
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
+<<<<<<< HEAD
     hasError: false,
   };
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
+=======
+    hasError: false
+  }
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   }
 
 <<<<<<< HEAD

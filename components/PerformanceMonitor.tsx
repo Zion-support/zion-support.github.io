@@ -748,6 +748,7 @@ if (return 'Needs Improvement) {
   }, []);
 >>>>>>> main
 
+<<<<<<< HEAD
   if (!metrics) return null;
 
   return (
@@ -761,3 +762,9 @@ if (return 'Needs Improvement) {
 
 export default PerformanceMonitor;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return null; // This component doesn't render anything
+};
+
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7

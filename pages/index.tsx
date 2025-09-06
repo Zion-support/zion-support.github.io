@@ -313,7 +313,7 @@ export default function Home() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+  }
   return (
     <>
       <Head>
@@ -495,6 +495,7 @@ function HomePage() {
             <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
+<<<<<<< HEAD
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 <<<<<<< HEAD
               We deliver cutting-edge technology solutions with 150+ micro SaaS products,
@@ -641,6 +642,10 @@ function HomePage() {
               to AI automation, quantum computing to blockchain solutions, we help businesses scale 
               efficiently and securely in the digital age.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-d34d
+=======
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
+ (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -707,6 +712,7 @@ function HomePage() {
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3>
 <<<<<<< HEAD
@@ -716,6 +722,10 @@ function HomePage() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-347d
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-d34d
+=======
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+ (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
