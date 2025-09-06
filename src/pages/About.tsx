@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Card from '../components/Card';
 
 const About: React.FC = () => {
@@ -35,22 +36,49 @@ const About: React.FC = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+    <motion.div 
+      className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+        <motion.div className="text-center mb-16" variants={itemVariants}>
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             About Zion Tech Group
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a leading technology company specializing in AI solutions, cybersecurity, 
             and cloud infrastructure. Our mission is to transform businesses through 
             innovative technology solutions.
           </p>
-        </div>
+        </motion.div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center mb-12">
+        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
           {[
             { id: 'mission', label: 'Our Mission' },
             { id: 'team', label: 'Our Team' },
@@ -68,12 +96,12 @@ const About: React.FC = () => {
               {tab.label}
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Tab Content */}
-        <div className="max-w-6xl mx-auto">
+        <motion.div className="max-w-6xl mx-auto" variants={itemVariants}>
           {activeTab === 'mission' && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" variants={itemVariants}>
               <Card
                 title="Our Mission"
                 description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
@@ -84,11 +112,11 @@ const About: React.FC = () => {
                 description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
                 icon="🚀"
               />
-            </div>
+            </motion.div>
           )}
 
           {activeTab === 'team' && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={itemVariants}>
               {teamMembers.map((member, index) => (
                 <Card
                   key={index}
@@ -103,11 +131,11 @@ const About: React.FC = () => {
                   </div>
                 </Card>
               ))}
-            </div>
+            </motion.div>
           )}
 
           {activeTab === 'values' && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={itemVariants}>
               <Card
                 title="Innovation"
                 description="We constantly push the boundaries of what's possible with technology, always seeking new and better ways to solve complex problems."
@@ -123,11 +151,11 @@ const About: React.FC = () => {
                 description="We conduct business with honesty, transparency, and ethical practices, building trust with our clients and partners."
                 icon="🤝"
               />
-            </div>
+            </motion.div>
           )}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
