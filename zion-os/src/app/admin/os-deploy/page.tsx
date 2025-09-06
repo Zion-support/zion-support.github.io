@@ -1,3 +1,8 @@
+'use client';
+
+import React, { useState } from 'react';
+
+export default function OSDeployPage() {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission

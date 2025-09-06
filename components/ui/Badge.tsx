@@ -2,9 +2,17 @@ import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
-// Define HTMLDivElement if not available
-declare global {
-  interface HTMLDivElement extends HTMLElement {}
+// Define HTML element types
+interface HTMLElement {
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string };
+}
+
+interface HTMLDivElement extends HTMLElement {
+  tagName: 'DIV';
 }
 
 const badgeVariants = cva(

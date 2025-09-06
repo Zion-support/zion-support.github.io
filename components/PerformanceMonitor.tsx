@@ -25,6 +25,46 @@ declare global {
   }
 }
 
+// Define Performance types if not available
+interface Performance {
+  getEntriesByType(type: string): PerformanceEntry[];
+  now(): number;
+}
+
+interface PerformanceEntry {
+  name: string;
+  entryType: string;
+  startTime: number;
+  duration: number;
+}
+
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  readonly connectEnd: number;
+  readonly connectStart: number;
+  readonly domComplete: number;
+  readonly domContentLoadedEventEnd: number;
+  readonly domContentLoadedEventStart: number;
+  readonly domInteractive: number;
+  readonly domLoading: number;
+  readonly domainLookupEnd: number;
+  readonly domainLookupStart: number;
+  readonly fetchStart: number;
+  readonly loadEventEnd: number;
+  readonly loadEventStart: number;
+  readonly navigationStart: number;
+  readonly redirectCount: number;
+  readonly redirectEnd: number;
+  readonly redirectStart: number;
+  readonly requestStart: number;
+  readonly responseEnd: number;
+  readonly responseStart: number;
+  readonly secureConnectionStart: number;
+  readonly transferSize: number;
+  readonly type: string;
+  readonly unloadEventEnd: number;
+  readonly unloadEventStart: number;
+}
+
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     // Only run on client side
