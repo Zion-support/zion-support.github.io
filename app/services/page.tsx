@@ -25,8 +25,8 @@ export default function ServicesOverviewPage() {
           title="Micro SaaS"
           description="End-to-end product development with billing, auth, and analytics"
           bullets={[
-            "Foundational architecture"
-            "Billing + subscriptions"
+            "Foundational architecture",
+            "Billing + subscriptions",
             "Growth analytics"
           ]}
           icon="🚀"
@@ -61,14 +61,14 @@ export default function ServicesOverviewPage() {
         />
       </div>
       <CTA />{" "}
-    </div>;
+    </div>
   );
 }
 function ServiceCard({
-  href
-  title
-  description
-  bullets
+  href,
+  title,
+  description,
+  bullets,
   icon
 }: {
   href: string;
