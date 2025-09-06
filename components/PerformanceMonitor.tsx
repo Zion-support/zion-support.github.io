@@ -1,7 +1,21 @@
 import React, { useEffect } from 'react';
 
+interface PerformanceData {
+  domContentLoaded: number;
+  loadComplete: number;
+  totalLoadTime: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  resourceCount: number;
+  memory: {
+    used: number;
+    total: number;
+    limit: number;
+  } | null;
+}
+
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: Record<string, unknown>) => void;
+  onPerformanceData?: (data: PerformanceData) => void;
 }
 
 // Extend the Window interface to include performance

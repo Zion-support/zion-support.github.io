@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-09-06T04:26:54.119Z",
+  "issues": [],
+  "optimizations": [
+    {
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "type": "memo_optimization",
+      "message": "Consider using React.memo for performance"
+    },
+    {
+      "file": "/workspace/pages_minimal/about.tsx",
+      "type": "memo_optimization",
+      "message": "Consider using React.memo for performance"
+    },
+    {
+      "file": "/workspace/pages_minimal/contact.tsx",
+      "type": "memo_optimization",
+      "message": "Consider using React.memo for performance"
+    },
+    {
+      "file": "/workspace/pages_minimal/index.tsx",
+      "type": "memo_optimization",
+      "message": "Consider using React.memo for performance"
+    }
+  ],
+  "recommendations": [
+    "Implement code splitting with dynamic imports",
+    "Use React.memo for expensive components",
+    "Optimize images with next/image",
+    "Implement lazy loading",
+    "Use CDN for static assets",
+    "Minimize bundle size",
+    "Implement caching strategies",
+    "Use performance monitoring tools"
+  ],
+  "performanceScore": 100
+}
