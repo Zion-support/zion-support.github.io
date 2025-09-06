@@ -1,30 +1,34 @@
 module.exports = {
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  testMatch: [
-    "**/__tests__/**/*.test.{js,jsx,ts,tsx}",
-    "**/*.test.{js,jsx,ts,tsx}",
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": [
+    "<rootDir>/jest.setup.js"
   ],
-  testPathIgnorePatterns: [
+  "testMatch": [
+    "**/__tests__/**/*.test.{js,jsx,ts,tsx}",
+    "**/*.test.{js,jsx,ts,tsx}"
+  ],
+  "testPathIgnorePatterns": [
     "<rootDir>/node_modules/",
     "<rootDir>/.next/",
     "<rootDir>/dist/",
     "<rootDir>/recovered-branches/",
-    "<rootDir>/src_backup/",
+    "<rootDir>/src_backup/"
   ],
-  moduleNameMapping: {
-    "^@/(.*)$": "<rootDir>/$1",
+  "moduleNameMapping": {
+    "^@/(.*)$": "<rootDir>/$1"
   },
-  transform: {
+  "transform": {
     "^.+\\.(js|jsx|ts|tsx)$": [
       "babel-jest",
       {
-        presets: ["next/babel"],
-      },
-    ],
+        "presets": [
+          "next/babel"
+        ]
+      }
+    ]
   },
-  transformIgnorePatterns: [
+  "transformIgnorePatterns": [
     "/node_modules/",
-    "^.+\\.module\\.(css|sass|scss)$",
-  ],
+    "^.+\\.module\\.(css|sass|scss)$"
+  ]
 };

@@ -1,0 +1,59 @@
+#!/usr/bin/env node
+
+const https = require('https');
+
+console.log('🔍 Checking for open pull requests...');
+
+const options = {
+  hostname: 'api.github.com',
+  path: '/repos/Zion-Holdings/zion.app/pulls?state=open',
+  headers: {
+    'Authorization': 'token ghs_g7Ribzcy3sJGR7qj8KILEG5nEY0aYC1Jg1cH',
+    'User-Agent': 'Node.js',
+    'Accept': 'application/vnd.github.v3+json'
+  }
+};
+
+const req = https.get(options, (res) => {
+  let data = '';
+  
+  res.on('data', (chunk) => {
+    data += chunk;
+  });
+  
+  res.on('end', () => {
+    try {
+      const prs = JSON.parse(data);
+      console.log(`Found ${prs.length} open pull requests:`);
+      
+      if (prs.length === 0) {
+        console.log('✅ No open pull requests found');
+        return;
+      }
+      
+      prs.forEach((pr, index) => {
+        console.log(`\n${index + 1}. PR #${pr.number}: ${pr.title}`);
+        console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
+        console.log(`   State: ${pr.state}`);
+        console.log(`   Mergeable: ${pr.mergeable}`);
+        console.log(`   URL: ${pr.html_url}`);
+        console.log(`   Created: ${pr.created_at}`);
+        console.log(`   Updated: ${pr.updated_at}`);
+      });
+    } catch (error) {
+      console.error('❌ Error parsing PR data:', error.message);
+      console.log('Raw response:', data.substring(0, 500));
+    }
+  });
+});
+
+req.on('error', (error) => {
+  console.error('❌ Error checking PRs:', error.message);
+});
+
+req.setTimeout(10000, () => {
+  console.error('❌ Request timeout');
+  req.destroy();
+});
+
+req.end();
