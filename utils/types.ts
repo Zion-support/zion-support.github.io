@@ -1,46 +1,34 @@
-export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed',;
-export type Job = {;
-  id: string,;
-  title: string,;
-  description: string,;
-  category: string,;
-  requiredSkills: string[],;
-  budgetMinUsd?: number,;
-  budgetMaxUsd?: number,;
-  deliveryDeadlineIso?: string, // ISO string;
-  clientEmail: string,;
-  status: JobStatus,;
-  createdAtIso: string,;
-  updatedAtIso: string;
-},;
-export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn',;
-export type Application = {;
-  id: string,;
-  jobId: string,;
-  talentSlug: string,;
-  status: ApplicationStatus,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+export interface Application {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface Application {;
+  id: string;
+  name: string;
+  email: string;
+  position: string;
+  experience: number;
+  skills: string[];
+  createdAt: string;
+  updatedAt?: string;
+}
+=======
+
+
+export interface Application {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+  id: string;
+  jobId: string;
+  talentSlug: string;
+  status: "applied" | "skipped" | "pending";
   createdAtIso: string;
-},;
-export type Participant = { type: 'email' | 'talent', id: string },;
-export type Attachment = {;
-  name: string,;
-  url: string,;
-  sizeBytes?: number;
-},;
-export type Message = {;
-  id: string,;
-  conversationId: string,;
-  sender: Participant,;
-  text?: string,;
-  attachments?: Attachment[],;
-  createdAtIso: string,;
-  readBy?: { participantId: string, readAtIso: string }[];
-},;
-export type Conversation = {;
-  id: string,;
-  jobId?: string,;
-  participants: Participant[],;
-  createdAtIso: string,;
-  updatedAtIso: string,;
-  messages: Message[];
-};
+}
+export type UserRole = 'admin' | 'user' | 'guest';
+
+export type UserRole = "admin" | "user" | "guest";

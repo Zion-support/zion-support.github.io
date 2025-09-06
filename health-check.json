@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-09-06T17:36:46.542Z",
+  "status": "healthy",
+  "checks": {
+    "filesystem": {
+      "status": "ok",
+      "message": "Source directory exists"
+    },
+    "dependencies": {
+      "status": "ok",
+      "message": "Package.json exists"
+    },
+    "build": {
+      "status": "ok",
+      "message": "Build directory exists"
+    },
+    "tests": {
+      "status": "ok",
+      "message": "Test directory exists"
+    }
+  }
+}

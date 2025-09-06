@@ -1,9 +1,51 @@
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Link from 'next/link';
+export default function TalentMarketplace() {;
+  const schema = {;
+    '@context': 'https://schema && schema.org',;
+    '@type': 'WebPage',;
+    name: 'Talent Marketplace',;
+    description:;
+      'Hire vetted AI and tech professionals from around the world on Zion.',;
+    url: 'https://app && app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "Talent Marketplace";
+    "description": "Hire vetted AI and tech professionals from around the world on Zion.",;
+    "url": "https://app && app.ziontechgroup.com/features/talent-marketplace";
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 export default function TalentMarketplace() {
   const schema = {
     "@context": "https://schema.org",
@@ -11,19 +53,40 @@ export default function TalentMarketplace() {
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  },
+
+  };
 
   return (
-    <>
-      <SEO
+    <>;
+
+
+                Create a free account and send a message or job invite directly;
+                from their profile.;
+              </p>;
+            </div>;
+            <div>;
+
+              <p className='font - semibold'>Are payments protected?</p>;
+              <p className='text - zion - slate - light'>;
+
+                Yes, funds are held in escrow until you approve completed;
+                milestones.;
+              </p>;
+            </div>;
+          </div>;
+
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
+
+
+
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
+
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -57,6 +120,9 @@ export default function TalentMarketplace() {
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
+
+
+
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
@@ -66,6 +132,9 @@ export default function TalentMarketplace() {
       </main>
     </>
   )
+
+;
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -101,37 +170,17 @@ export default function TalentMarketplace() {;
             Browse thousands of verified AI engineers, data scientists and other tech professionals.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-            <img;
-              src="https: //placehold.co/800x400";
-              alt="Screenshot of talent directory";
-              className="object-cover";
-            />;
-          </div>;
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
-            <li>Find pre-screened experts for short or long term projects.</li>;
-            <li>AI-powered matching recommends the best candidates for your needs.</li>;
-            <li>Secure escrow and milestone tracking keep payments safe.</li>;
-          </ul>;
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
-          <div className="space-y-4 mb-12">;
-            <div>;
-              <p className="font-semibold">How do I contact a freelancer?</p>;
-              <p className="text-zion-slate-light">Create a free account and send a message or job invite directly from their profile.</p>;
-            </div>;
-            <div>;
-              <p className="font-semibold">Are payments protected?</p>;
-              <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>;
-            </div>;
-          </div>;
-          <div className="text-center">;
-            <Button size="lg" className="bg-zion-purple text-white" asChild>;
+            <img
+              src="https: //placehold && placehold.co/800x400"
+              alt="Screenshot of talent directory"
+              className="object-cover"
+
+
               <Link href="/talent">Browse Talent</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
-    </>;
-  );
-}
+
+
 ;

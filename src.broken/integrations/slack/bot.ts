@@ -41,7 +41,7 @@ class MockApp {;
     // Safely log without direct console reference;
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
     if (safeConsole && safeConsole.log) {;
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
+      safeConsole.log(` Mock Zion Slack bot is running on port ${port || 3000}!`);
     }
     return Promise.resolve();
   }

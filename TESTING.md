@@ -9,7 +9,6 @@ undefined
 - [Integration Tests](#integration-tests)
 - [E2E Tests](#e2e-tests)
 - [Test Coverage](#test-coverage)
- 
 
 ## Overview
 
@@ -37,7 +36,6 @@ End-to-end tests simulate real user workflows and interactions.
 ## Test Coverage
 
 We aim for at least 80% test coverage across the codebase.
- 
 
 ## Getting Started
 
@@ -77,7 +75,6 @@ We aim for at least 80% test coverage across the codebase.
 2. Explore the application features
 3. Check the documentation for more details
 4. Start contributing to the project
- 
 
 ## Examples
 
@@ -116,7 +113,6 @@ const app = new Application();
 app.configure(TESTING);
 app.start();
 ```
- 
 
 ## API Reference
 
@@ -150,7 +146,6 @@ Description of this property.
 ```typescript
 console.log(instance.propertyName);
 ```
- 
 
 ## Contributing
 
@@ -178,7 +173,6 @@ If you need help or have questions:
 - Search through existing issues
 - Create a new issue with a clear description
 - Join our community discussions
- 
 
 ## License
 

@@ -1,22 +1,16 @@
-export type ContentType = 'listing' | 'message' | 'cv' | 'job',;
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned',;
-export type AiScores = {;
-  toxicity: number, // 0-1;
-  nsfw: number, // 0-1;
-  scam: number, // 0-1;
-},;
-export type FlaggedContent = {;
-  id: string,;
-  contentType: ContentType,;
-  contentId: string,;
-  userId: string,;
-  userEmail: string,;
-  reason: string,;
-  status: ModerationStatus,;
-  snippet: string, // small preview of content;
-  metadata?: Record<string any>,;
-  aiScores: AiScores,;
-  createdAt: string,;
-  updatedAt: string,;
-  adminNotes?: string;
-};
+export interface ModerationResult {
+  id: string;
+  content: string;
+  status: 'approved' | 'rejected' | 'pending';
+  reason?: string;
+  moderatedBy?: string;
+  moderatedAt: Date;
+}
+
+export interface ModerationRule {
+  id: string;
+  name: string;
+  pattern: string;
+  action: 'approve' | 'reject' | 'flag';
+  severity: 'low' | 'medium' | 'high';
+}

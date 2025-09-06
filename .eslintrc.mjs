@@ -7,7 +7,7 @@ export default {
     '@typescript-eslint/no-explicit-any': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
     'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off',
+    'no-undef': 'off'
   },
   ignorePatterns: [
     'node_modules/',
@@ -18,6 +18,6 @@ export default {
     'coverage/',
     '*.config.js',
     '*.config.cjs',
-    '*.config.mjs',
-  ],
+    '*.config.mjs'
+  ]
 };
