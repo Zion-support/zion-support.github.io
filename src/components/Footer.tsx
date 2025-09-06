@@ -1,43 +1,75 @@
-import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
-import Link from "next/link", // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
-function resolveUrl(envVar: string | undefined, fallback: string) {
-  if (!envVar || envVar.trim() === "" || envVar;
-                behavior: 'smooth' 
-              })
-            }}
-            className="flex items-center space-x-1 text-foreground/80 hover: text-primary text-sm transition-colors cursor-pointer"
-            aria-label="Back to top"
-          >
-            <ChevronUp className="h-4 w-4" aria-hidden="true" />
-            <span>Back to Top</span>
-          </button>
+import React from 'react';
+import Link from 'next/link';
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
+
+export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="bg-slate-900 border-t border-slate-700/50">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400 mb-4">
+              Leading provider of AI-powered technology solutions and enterprise services.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-white font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link href="/ai-solutions" className="text-gray-400 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link href="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
+              <li><Link href="/cybersecurity" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li><Link href="/consulting" className="text-gray-400 hover:text-white transition-colors">Consulting</Link></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-white font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
+              <li><Link href="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+            </ul>
+          </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-primary/20">
+        <div className="mt-12 pt-8 border-t border-slate-700/50">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-foreground/80 text-sm">
-              &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+            <p className="text-gray-400 text-sm">
+              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md: mt-0">
-              <Link
-                href="/privacy"
-                className="text-foreground/80 hover:text-primary text-sm transition-colors"
-              >
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link
-                href="/terms"
-                className="text-foreground/80 hover:text-primary text-sm transition-colors"
-              >
+              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
-              </Link>
-              <Link
-                href="/status"
-                className="text-foreground/80 hover:text-primary text-sm transition-colors"
-              >
-                API Status
               </Link>
             </div>
           </div>
@@ -46,13 +78,11 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
         {/* Back to Top Button */}
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+          className="fixed bottom-8 right-8 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
         >
           <ChevronUp className="w-5 h-5" />
         </button>
       </div>
     </footer>
-  )
+  );
 }
-
-export default Footer

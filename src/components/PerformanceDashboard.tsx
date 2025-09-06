@@ -1,21 +1,10 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+import React from 'react';
 
-interface PerformanceMetrics {
-  buildSize: string;
-  pageCount: number;
-  loadTime: number;
-  healthStatus: 'healthy' | 'warning' | 'error'
-interface Improvement {
-  id: string;
-  title: string;
-  description: string;
-  status: 'completed' | 'in-progress' | 'planned';
-  impact: 'high' | 'medium' | 'low';
-  category: 'performance' | 'security' | 'ux' | 'build'
+export function PerformanceDashboard() {
+  return (
+    <div className="bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-lg p-4 w-80">
+      <h3 className="text-white font-semibold mb-2">Performance Dashboard</h3>
+      <p className="text-slate-400 text-sm">Performance metrics will be displayed here</p>
+    </div>
+  );
 }
-
-const PerformanceDashboard: React.FC;
