@@ -8,5 +8,5 @@ import * as React from "react"
       toastId?: ToasterToast["id"
       type: any
 type Toast = Omit
-  const dismiss = () => dispatch({ type: any
+  const dismiss = () => dispatch({ type: any;
     dismiss: (toastId?: string) => dispatch({ type: any

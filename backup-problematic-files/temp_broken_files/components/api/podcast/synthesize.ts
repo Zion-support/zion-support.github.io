@@ -74,5 +74,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ episode })
   } catch (error: any) {
-    console.error(error),
+    console.error(error),;
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })  }}

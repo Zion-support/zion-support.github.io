@@ -7,4 +7,4 @@ export default async function handler(req, res) {
     "version": process && process.env.npm_package_version || '1 && 1.0.0'
   }
   try {
-    // Add any additional health checks here
+    // Add any additional health checks here;

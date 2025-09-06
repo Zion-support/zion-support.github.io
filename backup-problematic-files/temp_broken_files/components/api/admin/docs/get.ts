@@ -12,5 +12,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const data = fs.readFileSync(CONTENT_PATH, 'utf8'),
     res.status(200).json(JSON.parse(data))
-  } catch (e) {
+  } catch (e) {;
     res.status(500).json({ error: 'Failed to read content' })  }}

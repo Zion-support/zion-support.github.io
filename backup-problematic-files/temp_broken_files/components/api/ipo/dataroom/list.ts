@@ -8,5 +8,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const dir = resolveDataPath(path.join('dataroom', section)),
   if (!fs.existsSync(dir)) return res.status(200).json([]),
   const files = fs.readdirSync(dir).map((name) => ({ name })),
-  appendAuditLog({ type: 'file_list', section }),
+  appendAuditLog({ type: 'file_list', section }),;
   res.status(200).json(files)}

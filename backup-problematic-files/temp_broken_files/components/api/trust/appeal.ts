@@ -19,5 +19,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     await supabase.from('trust_appeals').insert(appeal)
   } catch {}
-
+;
   return res.status(200).json({ ok: true, appeal })}

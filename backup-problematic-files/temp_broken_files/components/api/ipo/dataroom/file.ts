@@ -13,5 +13,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!fs.existsSync(fullPath)) return res.status(404).json({ error: 'Not found' }),
   const contentType = (mime.lookup(fullPath) as string) || 'application/octet-stream',
   res.setHeader('Content-Type', contentType),
-  appendAuditLog({ type: 'file_open', section, name: file }),
+  appendAuditLog({ type: 'file_open', section, name: file }),;
   fs.createReadStream(fullPath).pipe(res)}

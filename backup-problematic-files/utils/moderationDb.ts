@@ -77,4 +77,4 @@ export async function updateFlagStatus(id: string, status: ModerationStatus, adm
   flag.updatedAt = new Date().toISOString(),
   await upsertFlag(flag),
   return flag
-}
+};

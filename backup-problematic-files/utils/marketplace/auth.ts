@@ -28,4 +28,4 @@ export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clien
   // @ts-ignore
   err.statusCode = 403,
   throw err
-}
+};

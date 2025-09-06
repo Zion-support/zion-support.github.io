@@ -18,4 +18,4 @@ const UiUxDesignChat: NextPage = () => {
   )
 },
 
-export default UiUxDesignChat,
+export default UiUxDesignChat,;

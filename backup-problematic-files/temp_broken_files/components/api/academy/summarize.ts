@@ -24,5 +24,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const text = completion.choices?.[0]?.message?.content ?? '',
     return res.status(200).json({ summary: text.trim() })
   } catch (err) {
-    return fallback()
+    return fallback();
   }}

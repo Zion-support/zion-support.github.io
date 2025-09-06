@@ -16,5 +16,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const chat = await client.chat.completions.create({ model: 'gpt-4o-mini', messages: [{ role: 'user', content: prompt }], temperature: 0.3 }),
     const content = chat.choices?.[0]?.message?.content || baseSummary,
     return res.status(200).json({ summary: content, provider: 'openai' })
-  } catch (e: any) {
+  } catch (e: any) {;
     return res.status(500).json({ error: e.message || 'Failed to generate highlights' })  }}

@@ -10,5 +10,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
     return res.status(201).json({ ok: true })  }
-
+;
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')}

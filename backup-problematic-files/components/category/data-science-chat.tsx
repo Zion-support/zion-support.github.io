@@ -18,4 +18,4 @@ const DataScienceChat: NextPage = () => {
   )
 },
 
-export default DataScienceChat,
+export default DataScienceChat,;
