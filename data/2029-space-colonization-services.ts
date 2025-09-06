@@ -38,7 +38,6 @@ export interface SpaceColonization2029Service {
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - blue - 600 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / interplanetary - communication - network',
@@ -100,7 +99,6 @@ export interface SpaceColonization2029Service {
   },
   {
 
-=======
     id: 'space - mining - automation - platform',
     name: 'Space Mining Automation Platform',
     tagline: 'Automate asteroid and lunar mining operations',
@@ -124,7 +122,6 @@ export interface SpaceColonization2029Service {
     popular: false,
     icon: '⛏️',
 
-=======
     color: 'from - yellow - 600 to - orange - 600',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / space - mining - automation - platform',
@@ -211,7 +208,6 @@ export interface SpaceColonization2029Service {
     popular: false,
     icon: '🏠',
 
-=======
     color: 'from - green - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / space - habitat - design - platform',
@@ -319,12 +315,10 @@ export interface SpaceColonization2029Service {
     rating: 4.8
 
 
-=======
     reviews: 52
 
 
 
-=======
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / space - energy - harvesting - platform',
@@ -407,7 +401,6 @@ export interface SpaceColonization2029Service {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
@@ -435,12 +428,10 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
     launch_date: '2029 - 03 - 01';
@@ -449,10 +440,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     reviews: 52;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Advanced interplanetary communication network with quantum protocols, AI routing, satellite management, and real-time monitoring. Includes security protocols and emergency communication systems.'
@@ -696,21 +684,18 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.'
     launchDate: '2029-03-01'
     customers: 18
     rating: 4.8
     reviews: 52
   }
-=======
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01',
     customers: 18,
     rating: 4.8,
     reviews: 52,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -723,12 +708,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     rating: 4.8
 
     reviews: 52
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpaceColonization2029Service {;
   id: string,;
@@ -988,11 +969,5 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     customers: 18,;
     rating: 4.8;
     reviews: 52;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

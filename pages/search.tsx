@@ -23,13 +23,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState } from 'react';
 
 import React, { useState, useEffect } from 'react',
@@ -147,13 +142,10 @@ const filters = [
 export default function SearchPage() {
 
 
-=======
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 
 import { 
   Search, Filter, Grid, List, ArrowRight, ExternalLink, 
@@ -172,11 +164,7 @@ export default function SearchPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default function SearchPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -192,14 +180,11 @@ export default function SearchPage() {;
 
     return matchesQuery && matchesCategory && matchesFilter;
   });
-=======
     return matchesQuery && matchesCategory && matchesFilter;
   });
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Layout>;
@@ -227,12 +212,10 @@ export default function SearchPage() {;
 
 
               {/* Search Bar */}
-<<<<<<< HEAD
               <div className="max-w-2xl mx-auto">;
                 <div className="relative">;
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
-=======
 
 
                 <div className="relative">
@@ -247,7 +230,6 @@ export default function SearchPage() {;
 
 
 
-=======
                     onChange={(e) => setSearchQuery(e && e.target.value)}
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300";
                   />;
@@ -445,7 +427,6 @@ function SearchPage() {
                         : 'bg - gray - 100 text - gray - 700 hover:bg - gray - 200';
                     }`}
 
-=======
               {/* View Mode Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -505,7 +486,6 @@ function SearchPage() {
             </div>
             {showFilters && (
               <motion.div
-=======
                 </button>;
                 {categories && categories.map((category) => (;
                   <button
@@ -520,7 +500,6 @@ function SearchPage() {
                     {category && category.name} ({category && category.count});
                   </button>;
                 ))}
-<<<<<<< HEAD
               </div>;
               <div className="text-sm text-gray-600">;
                 {filteredResults && filteredResults.length} results found;
@@ -534,7 +513,6 @@ function SearchPage() {
 
                 transition={{ duration: 0.3 }}
 
-=======
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   )  } catch (error) {
@@ -609,7 +587,6 @@ function SearchPage() {
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <button
                       key={filter && filter.name}
                       onClick={() => setSelectedFilter(filter && filter.name)}
@@ -621,15 +598,10 @@ function SearchPage() {
 
                   ))}                </div>
 
-=======
                   ))}
                 </div>
->>>>>>> origin/automation-improvements-final
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ))}
                 </div>
               </motion.div>
@@ -659,7 +631,6 @@ function SearchPage() {
 
                     transition={{ duration: 0.5, delay: index * 0.1 }}
 
-=======
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                           {category.icon} {category.name  } catch (error) {
@@ -913,7 +884,6 @@ function SearchPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -968,7 +938,6 @@ function SearchPage() {
                     initial={{ opacity: 0, coordinate_y: 20 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
                   >;
                     <div className="flex items - start justify - between">;
                       <div className="flex - 1">;
@@ -987,10 +956,6 @@ function SearchPage() {
                             {result.title}
 
                       </Link>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -999,7 +964,6 @@ function SearchPage() {
     category: 'all',
     status: 'all',
     priceRange: 'all',
-<<<<<<< HEAD
     technology: 'all'
 });
   const [sortBy, setSortBy] = useState('relevance');
@@ -1523,11 +1487,7 @@ className="mt-6 pt-6 border-t border-white/20"
             <p className="text-white/60">
               {isSearching ? 'Searching...' : `${searchResults.length} services found`}
               {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
-=======
-<<<<<<< HEAD
     technology: 'all',
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
         </div>
       </section>
 
@@ -1545,29 +1505,24 @@ className="mt-6 pt-6 border-t border-white/20"
               {isSearching
                 ? 'Searching...'
                 : `${searchResults.length} services found`}              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </p>
           </div>
 {/* Loading State */}
           {isSearching && (
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
                 <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
               </div>
               <p className="text-white/60">Searching our services...</p>
             </div>
-=======
             <div className='text-center py-20'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center'>
                 <div className='w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>
               </div>
               <p className='text-white/60'>Searching our services...</p>            </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           )}
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -1580,7 +1535,6 @@ className="mt-6 pt-6 border-t border-white/20"
                 onClick={clearFilters}
 className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
               >
-=======
             <div className='text-center py-20'>
               <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
                 <Search className='w-12 h-12 text-white/40' />
@@ -1593,18 +1547,15 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               <button
                 onClick={clearFilters}
                 className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Clear All Filters
               </button>
             </div>
           )}
 {/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
-<<<<<<< HEAD
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
                 {searchResults.map((service, index) => (
-=======
             <AnimatePresence mode='wait'>
               <div
                 className={
@@ -1613,14 +1564,12 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                     : 'space-y-6'
                 }
               >                {searchResults.map((service, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`group relative ${
-<<<<<<< HEAD
                       viewMode === 'grid' 
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
@@ -1657,7 +1606,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span>{feature}</span>
-=======
                       viewMode === 'grid'                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
                     }`}
@@ -1714,12 +1662,10 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                               className='flex items-center gap-2 text-sm text-white/70'
                             >
                               <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             </div>
                           ))}
                         </div>
                       </div>
-<<<<<<< HEAD
 <div className="flex items-center justify-between">
                         <a
                           href={service.link}
@@ -1736,19 +1682,11 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                         </a>
                       </div>
 
->>>>>>> origin/automation-improvements-final
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 </Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                     </div>
-=======
                       </Link>                    </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </motion.div>
                 ))}
               </div>
@@ -1756,8 +1694,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 
             ) : (
               <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
                     <div className="flex items-start justify-between">;
                       <div className="flex-1">;
@@ -1797,17 +1733,8 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               </div>;
             ) : (;
               <motion&& motion.div
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             ) : (
               <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className="text-center py-16"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1843,7 +1770,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Popular Searches;
@@ -1970,20 +1896,14 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 
   );
 
-=======
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </AnimatePresence>
           )}
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -2007,7 +1927,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                   >
                     {_term}
 
-=======
             <div className='text-center py-20'>
               <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
                 <Search className='w-12 h-12 text-white/40' />
@@ -2034,7 +1953,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                     }}
                     className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'                  >
                     {term}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </button>
                 ))}
               </div>
@@ -2048,14 +1966,12 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
   );
 
   )
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
@@ -2063,27 +1979,14 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 }
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 )
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 )
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Layout>);
 }  );
 }
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

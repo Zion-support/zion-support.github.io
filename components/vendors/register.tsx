@@ -2,11 +2,9 @@
 import {FormEvent, useState} from 'react';
 export default function VendorRegisterPage() {;
 
-=======
 
 import {FormEvent, useState} from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {;
@@ -40,7 +38,6 @@ import {FormEvent, useState} from 'react';
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
 
-=======
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
@@ -56,7 +53,6 @@ import {FormEvent, useState} from 'react';
           caseStudies: []
         })
       });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed to submit');
       setMessage('Application submitted. Await approval.');
@@ -68,13 +64,11 @@ import {FormEvent, useState} from 'react';
   }
 
 
-=======
 
   return (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -89,7 +83,6 @@ import {FormEvent, useState} from 'react';
       setMessage('Application submitted. Await approval.');
 
       form.reset()
-=======
 import {FormEvent, useState} from 'react';
 export default /**
  * VendorRegisterPage - Function description
@@ -134,16 +127,9 @@ function on_submit() {
 }
       set_message ('Application submitted. Await approval.');
       form.reset ();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
   return (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -156,11 +142,8 @@ function on_submit() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
       form.reset()
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (err: any) {
       set_message (err.message);
     } finally {
@@ -186,10 +169,8 @@ function on_submit() {
     } finally {;
       setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
-<<<<<<< HEAD
   return (
 
 
@@ -300,10 +281,6 @@ function on_submit() {
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

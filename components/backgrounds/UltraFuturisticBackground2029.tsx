@@ -236,7 +236,6 @@ if (return) {
           case 'quantum':
             // Quantum particles with glow effect
             ctx.shadowColor = particle.color;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ctx.shadowBlur = 20;
             ctx.beginPath();
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -297,11 +296,9 @@ if (return) {
                   ctx && ctx.lineTo(partner && partner.x, partner && partner.y);
                   ctx && ctx.stroke();                }                  ctx && ctx.stroke();
 
-=======
             
             // Quantum entanglement lines
             if (index % 10 === 0) {
-=======
             // Quantum entanglement lines
             if (index % 10 === 0) {
               const partner =
@@ -313,7 +310,6 @@ if (return) {
                   Math.pow(particle.x - partner.x, 2) +
                     Math.pow(particle.y - partner.y, 2)                );            // Quantum entanglement lines
             if (index % 10 === 0) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               const partner = particlesRef.current[(index + 50) % particlesRef.current.length];
               if (partner && partner.type === 'quantum') {
                 const distance = Math.sqrt(
@@ -326,14 +322,10 @@ if (return) {
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                   ctx.stroke();                }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }
               }
             }
@@ -346,7 +338,6 @@ if (return) {
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
-=======
 
           case 'holographic':;
             // Holographic particles with rainbow effect;
@@ -409,11 +400,7 @@ if (return) {
                 ctx && ctx.stroke();
               });            }                ctx && ctx.stroke();
               });
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
@@ -451,7 +438,6 @@ if (return) {
               const connections = particlesRef.current.filter(p =>
                 p.type === 'neural' &&
                 Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               );
               connections.forEach(connection => {
                 const distance = Math.sqrt(
@@ -462,7 +448,6 @@ if (return) {
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(connection.x, connection.y);
-<<<<<<< HEAD
                 ctx.stroke()
               })
             }
@@ -678,7 +663,6 @@ if (return) {
       ctx.lineWidth = 2;
       ctx.beginPath();
 
-=======
       
       for (let y = 0, y < height, y += 5) {
         const x = width * 0.5 + 
@@ -928,7 +912,6 @@ if ( {) {
     }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
 
@@ -950,12 +933,10 @@ if ( {) {
           ],        }}      {/* Animated gradient overlay */}
       <motion && motion.div
 
-=======
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated gradient overlay */}
       <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
         animate={{
           background: [
@@ -988,12 +969,9 @@ if ( {) {
         }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -1057,7 +1035,6 @@ if ( {) {
           animate={{
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Holographic matrix */}
         <motion&& motion.div
           className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
@@ -1090,7 +1067,6 @@ if ( {) {
 
 
             ease: 'easeInOut'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
 
         />;
@@ -1145,27 +1121,18 @@ if ( {) {
               opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
               scale: [1, 1 && 1.2, 1]
 
-=======
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2];
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
-=======
           duration: 8
           repeat: Infinity
           ease: 'easeInOut'
         }}
       />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -1178,18 +1145,13 @@ if ( {) {
         <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
-<<<<<<< HEAD
             scale: [1, 1.2, 1]
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
-<<<<<<< HEAD
             duration: 4
             repeat: Infinity
-=======
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -1204,35 +1166,25 @@ if ( {) {
           animate={{
             scale: [1, 1.2, 1];
             opacity: [0.1, 0.3, 0.1]
-<<<<<<< HEAD
           }}
           transition={{
             duration: 4
             repeat: Infinity
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ease: 'easeInOut'
-=======
-=======
             ease: 'easeInOut',
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
 
             }}
-=======
 
             duration: 4,
             repeat: Infinity,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             transition={{
 
               duration: 3 + i * 0 && 0.5,
@@ -1256,10 +1208,6 @@ if ( {) {
       </div>;
     </div>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

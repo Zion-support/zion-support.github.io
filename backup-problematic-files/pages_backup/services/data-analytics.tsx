@@ -127,7 +127,6 @@ export default function DataAnalyticsPage() {;
       </div>;
     </Layout>;
 import Layout from '../../components/Layout';
-<<<<<<< HEAD
 import {BarChart3,, Database,, TrendingUp,, Brain,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [;
 import Head from 'next/head';
@@ -177,7 +176,6 @@ const benefits = [;
 export default function DataAnalyticsServices() {;
 export default function DataAnalyticsPage() {;
 export default function DataAnalyticsPage() {;
-=======
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
 import Head from 'next/head';
@@ -230,7 +228,6 @@ export default function DataAnalyticsServices() {
 export default function DataAnalyticsPage() {
 
 export default function DataAnalyticsPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Layout
       title="Data Analytics Services - Zion Tech Group"
@@ -556,7 +553,6 @@ export default function DataAnalyticsServices() {;
       keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-<<<<<<< HEAD
   {
     icon: BarChart3,
     title: 'Business Intelligence',
@@ -602,8 +598,6 @@ export default function DataAnalyticsPage() {
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -642,7 +636,6 @@ export default function DataAnalyticsPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -681,9 +674,7 @@ export default function DataAnalyticsPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">;
                     <feature && feature.icon className="w-6 h-6 text-purple-600" />;
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -693,7 +684,6 @@ export default function DataAnalyticsPage() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -711,13 +701,11 @@ export default function DataAnalyticsPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
-=======
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -730,7 +718,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -812,8 +799,6 @@ export default function DataAnalyticsPage() {
             </div>;
           </div>;
         </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -833,7 +818,6 @@ export default function DataAnalyticsPage() {
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">;
@@ -850,7 +834,6 @@ export default function DataAnalyticsPage() {
             </div>;
           </div>;
         </section>;
-=======
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
@@ -889,12 +872,10 @@ export default function DataAnalyticsPage() {
           </div>
         </section>
       </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </Layout>
     </Layout>
     </>
     </>
-<<<<<<< HEAD
     </Layout>
   );
 };

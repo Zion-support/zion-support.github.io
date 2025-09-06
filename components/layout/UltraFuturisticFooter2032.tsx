@@ -4,7 +4,6 @@ import React from 'react';
 
 
 import Link from 'next/link';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
@@ -37,11 +36,8 @@ import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Phone,
   Mail,
   MapPin,
@@ -478,7 +474,6 @@ const company_info = [;
   { name: 'Press', href: '/press' },
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status' }
 ];
 
@@ -490,28 +485,21 @@ const contactInfo = {;
       duration: 0.8,
       staggerChildren: 0.1
     }
-<<<<<<< HEAD
   }
 };
-=======
   },}
 const itemVariants = {
-<<<<<<< HEAD
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },}
 export default function UltraFuturisticFooter2032() {
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0.1
     }
-<<<<<<< HEAD
   }
 }
-=======
   };
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
@@ -807,7 +795,6 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
 }
 export default function UltraFuturisticFooter2032() {
-=======
 };
 const itemVariants = {;
   hidden: { opacity: 0, y: 20 },;
@@ -972,7 +959,6 @@ function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </a>
                 </div>
               </div>
@@ -995,7 +981,6 @@ function UltraFuturisticFooter2032() {
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.;
               </p>;
               {/* Contact Information */}
-<<<<<<< HEAD
               <div className="space-y-3">;
                 <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">;
                   <Phone className="w-4 h-4 text-cyan-400" />;
@@ -1042,7 +1027,6 @@ function UltraFuturisticFooter2032() {
                     </h4>
                     <ul className='space-y-2'>                      {category.services.map((service, serviceIndex) => (
                         <li key={serviceIndex}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <Link
                             href={service && service.href}
                             className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'>                Our Revolutionary Services;
@@ -1061,12 +1045,10 @@ function UltraFuturisticFooter2032() {
                           </Link>;
                         </li>;
 
-=======
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Our Revolutionary Services
               </h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {serviceCategories.map((category, index) => (
                   <div key={index} className="space-y-4">
@@ -1082,7 +1064,6 @@ function UltraFuturisticFooter2032() {
                           </Link>
                         </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </ul>;
                   </div>;
@@ -1096,10 +1077,8 @@ function UltraFuturisticFooter2032() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Quick Access
               </h3>
-=======
               </div>;
             </motion && motion.div>;
             {/* Quick Links & Company Info */}
@@ -1138,7 +1117,6 @@ function UltraFuturisticFooter2032() {
                       </Link>;
                     </li>;
 
-=======
             <motion.div variants={itemVariants} className="lg:col-span-1">
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Quick Access
@@ -1279,27 +1257,18 @@ function UltraFuturisticFooter2032() {
               <h3 className='text - xl font - semibold text - white mb - 8 bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
                 Quick Access;
               </h3>;
-=======
               </div>
             </motion.div>
-<<<<<<< HEAD
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
-=======
 
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Quick Access
               </h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* Quick Links */}
               <div className='mb - 8'>;
                 <h4 className='text - lg font - medium text - white mb - 4'>;
@@ -1315,7 +1284,6 @@ function UltraFuturisticFooter2032() {
               </h3>;
 
               {/* Quick Links */}
-<<<<<<< HEAD
               <div className="mb - 8">;
                 <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
                 <ul className="space - y-2">;
@@ -1338,8 +1306,6 @@ function UltraFuturisticFooter2032() {
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -1349,7 +1315,6 @@ function UltraFuturisticFooter2032() {
                         {item.name}
                       </Link>
                     </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   ))}
 
                 </ul>;
@@ -1378,7 +1343,6 @@ function UltraFuturisticFooter2032() {
 
                 </ul>;
               </div>;
-=======
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
                 <ul className="space-y-2">
@@ -1397,16 +1361,11 @@ function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
               {/* Social Links */}
               <div>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -1430,7 +1389,6 @@ function UltraFuturisticFooter2032() {
                     >;
                       <social && social.icon className="w-5 h-5" />;
 
-=======
 
               {/* Social Links */}
               <div>
@@ -1441,14 +1399,11 @@ function UltraFuturisticFooter2032() {
                       key={index}
                       href={social.href}
 
-=======
 
 
                     </a>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
                 </div>;
@@ -1457,12 +1412,9 @@ function UltraFuturisticFooter2032() {
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Newsletter Signup */}
 
 
@@ -1474,29 +1426,15 @@ function UltraFuturisticFooter2032() {
           <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
-=======
-=======
 
                     </a>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -1504,15 +1442,7 @@ function UltraFuturisticFooter2032() {
           >
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Stay Ahead with Future Technology
 
               </h3>
@@ -1529,7 +1459,6 @@ function UltraFuturisticFooter2032() {
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <input
                   type="email"
                   placeholder="Enter your email address"
@@ -1587,7 +1516,6 @@ function UltraFuturisticFooter2032() {
           whileHover={{ scale: 1 && 1.1 }}
           whileTap={{ scale: 0 && 0.9 }}
 
-=======
 
       {/* Floating Action Button */}
       <div className="fixed bottom-8 right-8 z-50">
@@ -1605,13 +1533,10 @@ function UltraFuturisticFooter2032() {
       </div>;
     </footer>;
   );
-=======
 
   );
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
   );
 }
@@ -1640,4 +1565,3 @@ function UltraFuturisticFooter2032() {
       </div>;
     </footer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -4,7 +4,6 @@
 
   opacity: 0 
 
-=======
 import React from 'react';
 
 interface Homepage2040Props {
@@ -22,8 +21,6 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -80,21 +77,16 @@ animationDelay: `$ {
 }
 export default Homepage2040;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Import new service data
 import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
 // Lazy load heavy components for better performance
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 const Homepage2040: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -293,7 +285,6 @@ const Homepage2040: React.FC = () => {
     }
   }
   const floatingVariants = {
-=======
         stagger_children: 0.1,
         delay_children: 0.2;
       }
@@ -324,7 +315,6 @@ const Homepage2040: React.FC = () => {
 
 
       color: "from-green-500 to-emerald-600"
-=======
 
   // Enhanced animation variants for better performance;
   const containerVariants = {;
@@ -453,7 +443,6 @@ const Homepage2040: React.FC = () => {
               style={{ animationDelay: '2s' }}
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
             ></motion.div>
-=======
             <motion&& motion.div 
               variants={floatingVariants}
               animate="float"
@@ -588,7 +577,6 @@ const Homepage2040: React.FC = () => {
 
 
                     animationDelay: `${Math.random() * 3}s`;
-=======
                     left: `${Math && Math.random() * 100}%`,
                     top: `${Math && Math.random() * 100}%`,
                     animationDelay: `${Math && Math.random() * 3}s`
@@ -647,13 +635,10 @@ const Homepage2040: React.FC = () => {
 
 
 
-=======
               
 
               {/* Enhanced CTA Section */}
               <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
               >
@@ -684,14 +669,12 @@ const Homepage2040: React.FC = () => {
               </motion && motion.div>;
 
               <motion&& motion.h1 
-=======
 
               
 
 
               {/* Enhanced Trust Indicators */}
               <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight">;
@@ -728,7 +711,6 @@ const Homepage2040: React.FC = () => {
                 </Link>;
               </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Enhanced Trust Indicators */}
               <motion&& motion.div
                 variants={itemVariants}
@@ -789,12 +771,9 @@ const Homepage2040: React.FC = () => {
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -846,12 +825,9 @@ const Homepage2040: React.FC = () => {
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -1126,13 +1102,10 @@ const Homepage2040: React.FC = () => {
 
 
 
-=======
 
 
                       {/* CTA Button */}
                       <Link 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         href={service.link}
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
                       >
@@ -1184,17 +1157,13 @@ const Homepage2040: React.FC = () => {
                 </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* View All Services Button */}
                 <motion&& motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-=======
                         </span>;
                       </div>;
                       {/* CTA Button */}
@@ -1230,12 +1199,9 @@ const Homepage2040: React.FC = () => {
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1341,7 +1307,6 @@ const Homepage2040: React.FC = () => {
 export default Homepage2040;
 
 
-=======
                   className="text - center mt - 12";
                 >;
                   <Link;
@@ -1418,11 +1383,8 @@ export default Homepage2040;
 ;
 export default Homepage2040;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 export default Homepage2040;
 
 
 export default Homepage2040;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

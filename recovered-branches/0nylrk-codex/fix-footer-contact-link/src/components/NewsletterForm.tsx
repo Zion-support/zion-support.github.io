@@ -5,6 +5,10 @@ import {Input} from "@/components/ui/input";
 import {useState} from "react";
 export function NewsletterForm() {;
 
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+export function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -22,7 +26,6 @@ export function NewsletterForm() {
 
 
   const handleSubmit = (e: React.FormEvent) => {
-
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -33,8 +36,16 @@ export function NewsletterForm() {
       setEmail("")
     }, 1000)
   },
+    e.preventDefault();
+    setIsSubmitting(true);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      (setIsSubmitted(true), setEmail(""));
+    }, 1000);
+  };
+
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -52,7 +63,6 @@ export function NewsletterForm() {
         >
 
 
-=======
           <Input
             type="email"
             placeholder="Enter your email"
@@ -100,7 +110,6 @@ export function NewsletterForm() {;
         </div>;
       ) : (;
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Input
             type="email"
             placeholder="Enter your email"
@@ -123,7 +132,6 @@ export function NewsletterForm() {;
     </div>;
 
   );
-=======
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { useState  } from './react';
@@ -183,5 +191,5 @@ function NewsletterForm() {
       )}
     </div>
   );
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
 }

@@ -2,8 +2,6 @@
 
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const innovativeITInfrastructureServices2025 = [
   {
 
@@ -11,7 +9,6 @@ export const innovativeITInfrastructureServices2025 = [
     pricing: {
       starter: {
 
-=======
         price: 299,
         period: 'month',
         features: [;
@@ -146,7 +143,6 @@ export const innovativeITInfrastructureServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$35.8B',
     target_audience:;
       'Software development companies, IT departments, DevOps teams, technology startups',
@@ -234,7 +230,6 @@ export const innovativeITInfrastructureServices2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$65.4B',
     target_audience:;
       'Enterprise businesses, technology companies, research institutions, government agencies',
@@ -348,14 +343,12 @@ export const innovativeITInfrastructureServices2025 = [
     ]
     compliance: [
 
-=======
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
       'Industry-specific regulations',
     ],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },];
     id: 'quantum-edge-computing-orchestrator', name: 'Quantum Edge Computing Orchestrator',
     description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
@@ -363,7 +356,6 @@ export const innovativeITInfrastructureServices2025 = [
       'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryptionAutonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols';
       'Scalable edge infrastructureEnergy-efficient quantum processing'
     ];
-<<<<<<< HEAD
     pricing: {
       starter: { 
         price: 199, 
@@ -545,7 +537,6 @@ export const innovativeITInfrastructureServices2025 = [
     },
 
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
-=======
     market_size: '$31.2B',
     target_audience:;
       'Data center operators, cloud providers, enterprise businesses, colocation facilities',
@@ -566,19 +557,14 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools',
     ],
     compliance: [;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
 
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       'Industry-specific regulations',
     ],;
 
@@ -589,7 +575,6 @@ export const innovativeITInfrastructureServices2025 = [
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
 
 
-=======
 export const innovativeITInfrastructureServices2025 = [;
   {;
     id: 'quantum-edge-computing-orchestrator',;
@@ -797,8 +782,5 @@ export const innovativeITInfrastructureServices2025 = [;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

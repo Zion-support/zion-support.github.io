@@ -1,7 +1,6 @@
 
 
 
-=======
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -26,9 +25,7 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -50,13 +47,7 @@ const RegisterPage = () =>: any {
   const router = use_router (),
   useEffect (() => {
     fire_event ('signup_page_view');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -70,11 +61,9 @@ const RegisterPage = () => {
 
   useEffect(() => {
     fireEvent('signup_page_view')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }, []),
   const handle_success = ({ email, emailVerificationRequired }: {
     email: string,
-=======
 
 const RegisterPage = () => {;
   const router = useRouter();
@@ -98,7 +87,6 @@ if ( {) {
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
@@ -174,8 +162,6 @@ if ( {) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -194,7 +180,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -259,7 +244,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
@@ -285,9 +269,6 @@ export default RegisterPage;
 },
 export default RegisterPage,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

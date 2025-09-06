@@ -29,16 +29,13 @@ export default async function handler(
       return res && res.status(500).json({ error: e && e.message });
     }  }
 
-=======
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
     try {
-<<<<<<< HEAD
       if (hasSupabase) {
         const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false });
         if (error) throw error;
@@ -190,7 +187,6 @@ request_quote: item.request_quote ?? null,
           created_at: item.created_at,
           original_language: item.original_language,
           translations: item.translations as any,
-=======
   if (req.method === 'POST') {
     try {
       const payload = req.body as Partial<TalentProfile>;
@@ -278,7 +274,6 @@ request_quote: item.request_quote ?? null,
           created_at: item.createdAt
           original_language: item.originalLanguage
           translations: item.translations as any
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         } as any);
         // Check condition
 if (throw error) {
@@ -292,16 +287,12 @@ if (throw error) {
       return res.status (500).json ({ error: e.message });
     }
   }
-<<<<<<< HEAD
 return res;
     .set_header ('Allow', 'GET, POST');
     .status (405);
     .end ('Method Not Allowed');  return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

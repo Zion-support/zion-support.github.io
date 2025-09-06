@@ -12,9 +12,7 @@ import { motion  } from './framer-motion';
 import {
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   BookOpen,
   Brain,
   Building,
@@ -94,7 +92,6 @@ import {;
   Zap,;
 
 } from "lucide-react";
-=======
 
   Clock,
   DollarSign,
@@ -135,19 +132,15 @@ import {;
   DollarSign as Money;
 
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
 
 
-=======
 
 
 } from 'lucide-react';
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight
   Award
   BarChart3
@@ -194,7 +187,6 @@ import {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const navigationItems = [
   {
     title: "Services"
@@ -641,7 +633,6 @@ const navigationItems = [;
     ],;
   },;
 ];
-<<<<<<< HEAD
 const quickLinks = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },;
   { title: "Contact", href: "/contact", icon: Phone },;
@@ -651,16 +642,12 @@ const quickLinks = [;
   { title: "API Docs", href: "/api-docs", icon: Code },;
 ];
 export default function Navigation() {;
-=======
-<<<<<<< HEAD
 export default function Navigation() {
-=======
 
 export default function Navigation() {;
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
 
 
 export default function Navigation() {;
@@ -671,7 +658,6 @@ export default function Navigation() {;
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}

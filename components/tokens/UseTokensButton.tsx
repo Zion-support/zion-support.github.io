@@ -24,16 +24,12 @@ serviceId
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-
-=======
-export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       />
     </>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+);
+  );
+  );
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -56,7 +52,6 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
 
 }
 
-=======
 import React, { useState } from './react';
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 ;
@@ -100,7 +95,4 @@ function UseTokensButton() {
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

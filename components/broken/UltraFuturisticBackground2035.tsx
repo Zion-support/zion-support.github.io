@@ -1,7 +1,6 @@
 
 
 }
-<<<<<<< HEAD
  canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
 canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
 if (ctx) {;
@@ -17,7 +16,6 @@ interface UltraFuturisticBackground2035Props {;
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
@@ -125,7 +123,6 @@ if ( {) {
           maxLife
         })
     }
-=======
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
     }
     let animationFrameId: number,
@@ -169,7 +166,6 @@ if ( {) {
           life: maxLife,;
           maxLife;
         });
-=======
           return ['#8b5cf6#06b6d4#ec4899'][Math.floor(Math.random() * 3)];
         case 'hologram':
           return ['#10b981#f59e0b#ef4444'][Math.floor(Math.random() * 3)];
@@ -180,7 +176,6 @@ if ( {) {
         default: return '#8b5cf6'
       }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
 
     // Get color based on particle type;
@@ -191,7 +186,6 @@ if ( {) {
             Math && Math.floor(Math && Math.random() * 3);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ];
         case 'hologram':;
           return ['#10b981', '#f59e0b', '#ef4444'][;
@@ -249,7 +243,6 @@ if ( {) {
 
       switch (particle && particle.type) {;
         case 'quantum':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           drawQuantumParticle(ctx, particle);
           break;
         case 'hologram':;
@@ -307,10 +300,8 @@ if ( {) {
     <>;
       <div className='fixed inset-0 z-0 overflow-hidden'>        cancelAnimationFrame(animationFrameId);
 
-=======
         cancelAnimationFrame(animationFrameId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }, []);
@@ -324,7 +315,6 @@ if ( {) {
             background: [
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)'
             ]
-<<<<<<< HEAD
       max_life: number;
     // Initialize particles with enhanced types;
     const init_particles = () =>: any {
@@ -748,8 +738,6 @@ if ( {) {
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (6, 182, 212, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (236, 72, 153, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)';
             ];
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }}
           transition={{
             duration: 8
@@ -772,33 +760,25 @@ if ( {) {
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
-=======
               linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
             `,
               backgroundSize: '50px 50px',
-=======
-<<<<<<< HEAD
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-=======
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }}
           />        </div>        {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">;
           <divclassName="h-full w-full" style={{
 
-=======
         />
         {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">
           <div className="h-full w-full" style={{
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             backgroundImage: `
               linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
@@ -813,8 +793,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
 
           style={{ filter: 'blur(0.5px)' }}
@@ -822,8 +800,6 @@ if ( {) {
         />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Floating neon orbs */}
 
         />;
@@ -863,12 +839,10 @@ if ( {) {
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
 
-=======
 
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             rotate: [0, 180, 360],          }}
           transition={{
 
@@ -940,14 +914,12 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
-=======
               y: [-100, 100, -100],
               opacity: [0, 0 && 0.3, 0],            }}
             transition={{
               duration: 4,
               repeat: Infinity,
 
-=======
 
             duration: 8,
             repeat: Infinity,
@@ -957,18 +929,14 @@ if ( {) {
             transition={{
               duration: 4
               repeat: Infinity
-=======
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
-=======
               ease: 'easeInOut',          <motion.div;
             className="absolute top - 1/2 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             animate={{
               coordinate_y: [-100, 100, -100];
               opacity: [0, 0.3, 0];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
             transition={{
               duration: 4,
@@ -977,7 +945,6 @@ if ( {) {
               ease: 'easeInOut'
             }}
 
-=======
               ease: 'easeInOut',              ease: 'easeInOut';
             }}
           />;
@@ -990,10 +957,6 @@ if ( {) {
       {children}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

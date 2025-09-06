@@ -28,17 +28,12 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
 
 
-=======
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 export default function TokenomicsWhitepaperBuilder() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
@@ -85,7 +80,6 @@ export default function TokenomicsWhitepaperBuilder() {;
           'X-Admin': isAdmin ? 'true' : 'false',;
         },;
         body: JSON && JSON.stringify({;
-=======
     { label: 'Advisors & Partnerships', percent: 5 }]),;
   const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),;
   const [jurisdiction, setJurisdiction] = useState<string>('US');
@@ -112,7 +106,6 @@ export default function TokenomicsWhitepaperBuilder() {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },;
         body: JSON.stringify({;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           tokenName,;
           tokenSupply,;
           useCases,;
@@ -121,7 +114,6 @@ export default function TokenomicsWhitepaperBuilder() {;
           governance,;
           jurisdiction,;
           operatorPrompt,;
-<<<<<<< HEAD
           legalReview,;
         }),;
       });
@@ -140,7 +132,6 @@ export default function TokenomicsWhitepaperBuilder() {;
 
       const a = document.createElement('a');
       a.href = url;
-<<<<<<< HEAD
       a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
       document.body.appendChild(a);
       a.click();
@@ -175,7 +166,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   }
 
       const item = { ...copy[index] }
-=======
       URL.revokeObjectURL(url)
     } else {
       const res = await fetch('/api/whitepaper/export', {
@@ -193,7 +183,6 @@ body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
     setDistribution((prev) => {
       const copy = [...prev];
-=======
 }
       const { url } = await res.json();
       window.open(url, '_blank');
@@ -214,7 +203,6 @@ body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const item = { ...copy[index] };
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
@@ -224,7 +212,6 @@ body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
     value: string;
   ) {;
     setDistribution(prev => {      const copy = [...prev];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const item = { ...copy[index] };
       if (key === 'percent') item && item.percent = Number(value);
       if (key === 'label') item && item.label = value;
@@ -374,7 +361,6 @@ if (item.label = value) {
     'Distribution'
     'Governance Model'
     'Risks + Disclaimers'
-=======
 
   const sections = [;
     'Executive Summary',;
@@ -600,7 +586,6 @@ if ( {) {
             </div>;
 
                   className='px-3 py-2 rounded-md border';
-=======
             <div className='rounded - lg border p - 4 space - y-2'>;
               <h3 className='font - medium'>Output</h3>;
               <div className='flex gap - 3'>;
@@ -654,7 +639,6 @@ function jurisdictionalNote(): any (j: string) {;
   }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -664,15 +648,8 @@ function jurisdictionalNote(): any (j: string) {;
     'Governance Model'
     'Risks + Disclaimers'
   ];
-=======
 }
   const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>
       <Head>
@@ -693,16 +670,11 @@ function jurisdictionalNote(): any (j: string) {;
             <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <div className='space-y-6'>
             <div className='rounded-lg border p-4 space-y-4'>
               <h2 className='font-medium'>Builder Inputs</h2>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="rounded-lg border p-4 space-y-4">
@@ -711,7 +683,6 @@ function jurisdictionalNote(): any (j: string) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -748,7 +719,6 @@ function jurisdictionalNote(): any (j: string) {;
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
             </div>
@@ -761,15 +731,12 @@ function jurisdictionalNote(): any (j: string) {;
                     <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
                     <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
                   </div>
-<<<<<<< HEAD
                 ))}
-=======
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="flex items-center justify-between text-xs opacity-70">
                   <span>Total: {totalPercent}%</span>
                   <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
@@ -793,7 +760,6 @@ function jurisdictionalNote(): any (j: string) {;
                   className='px-4 py-2 rounded-md border'
                 >
                   Clear AI Draft
-=======
 
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Operator Prompt</h3>
@@ -809,14 +775,10 @@ function jurisdictionalNote(): any (j: string) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
@@ -846,8 +808,6 @@ function jurisdictionalNote(): any (j: string) {;
                     {s}
                   </button>
                 ))}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="rounded-lg border p-4 space-y-2">
               <h3 className="font-medium">Output</h3>
               <div className="flex gap-3">
@@ -869,23 +829,15 @@ function jurisdictionalNote(): any (j: string) {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
 <span className="text-xs opacity-60">Auto-updating preview</span>
-=======
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
           </div>
@@ -911,7 +863,6 @@ function buildLocalMarkdown(input: {;
   jurisdiction: string;
   legalReview: boolean;
 }) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
@@ -962,10 +913,8 @@ function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   // Simple textual donut placeholder until a chart lib is added;
   const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
 
-=======
 
 
-=======
 }
 ;
 function jurisdictionalNote(j: string) {;
@@ -992,12 +941,9 @@ function jurisdictionalNote(j: string) {;
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -1016,9 +962,7 @@ function MarkdownPreview(): any ({;
       if (i === 0) return; // first is H1;
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
-=======
         </div>
-<<<<<<< HEAD
       ))}
     </div>
   );
@@ -1029,7 +973,6 @@ function MarkdownPreview({
   markdown: string;
   activeSection: string;
 }) {  // Very lightweight section filter: split by headings
-<<<<<<< HEAD
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g)
     const map: Record<string, string> = {}
@@ -1037,14 +980,12 @@ function MarkdownPreview({
       if (i === 0) return; // first is H1
       const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
   return (
 
 
-=======
     case 'EU':;
       return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
     case 'SG':;
@@ -1100,12 +1041,8 @@ if (return) {
       {content || markdown}
     </pre>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1122,7 +1059,6 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   // Very lightweight section filter: split by headings
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -1137,4 +1073,3 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

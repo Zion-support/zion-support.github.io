@@ -58,7 +58,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       { id: 43, converted: true, source: 'partner' }
     ]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       { id: 43, converted: true, source: 'partner' }]);
 
 
@@ -96,7 +95,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     });
   } catch (e: any) {
 
-=======
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
     const geoCounts: Record<string, number> = {};
@@ -110,24 +108,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
   } catch (e: any) {
     res.status(200).json({
-<<<<<<< HEAD
       totals: {
        totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 
     },
     topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2,
-=======
       totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 }
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 }
 
-=======
     res.status (200).json ({
       totals: {
         total_users: 4,
@@ -151,11 +144,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       ],
     });
   }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -50,7 +50,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
-=======
 import { ;
   X, ;
   Building2, ;
@@ -356,7 +355,6 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
           </motion.div>;
         </>)}
     </AnimatePresence>);
-=======
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
                 <div className="space-y-3">
@@ -385,18 +383,13 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
       )}
     </AnimatePresence>
   );
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 export default Sidebar;
-<<<<<<< HEAD
 ;
 
-=======
 
 };
 
 export default Sidebar;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

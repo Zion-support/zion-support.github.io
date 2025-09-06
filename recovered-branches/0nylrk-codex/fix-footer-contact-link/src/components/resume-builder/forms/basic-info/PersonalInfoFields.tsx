@@ -14,7 +14,6 @@ interface PersonalInfoFieldsProps {
   control: Control < BasicInfoFormData>;
 }
 
-=======
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -23,11 +22,23 @@ import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
 
 
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+interface PersonalInfoFieldsProps {
+  control: Control<BasicInfoFormData>;
+}
 
 
 
@@ -53,13 +64,11 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
 import { BasicInfoFormData } from "./schema";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PersonalInfoFieldsProps {;
   control: Control<BasicInfoFormData>;
 }
 
 export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
@@ -94,7 +103,6 @@ function PersonalInfoFields() {
           </FormItem>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
       />;
@@ -106,7 +114,6 @@ function PersonalInfoFields() {
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -115,7 +122,6 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Professional Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="Senior Software Engineer" {...field} />;
             </FormControl>;
@@ -146,7 +152,6 @@ function PersonalInfoFields() {
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Phone</FormLabel>;
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -167,7 +172,6 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Phone</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="+1 234 567 8900" {...field} />;
             </FormControl>;
@@ -178,16 +182,23 @@ function PersonalInfoFields() {
   );
 }
 
-=======
           </FormItem>)}
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
+          <FormItem>
+            <FormLabel>Phone</FormLabel>
+            <FormControl>
+              <Input placeholder="+1 234 567 8900" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>
+  );
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

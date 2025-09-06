@@ -4,55 +4,42 @@ import Head from 'next / head';
 import Link from 'next / link';
 ;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const ComprehensiveRedundancyBlueprint: React.FC = () => {
   const architecture_components = [;
     {
 
-=======
 
 
       name: 'Load Balancer Layer',
       description: 'Distributes traffic across multiple instances',
       status: 'active',
       instances: 3,
-<<<<<<< HEAD
       health: 'excellent';
-=======
       health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Application Layer',
       description: 'Multiple application instances with health checks',
       status: 'active',
       instances: 6,
-<<<<<<< HEAD
       health: 'excellent';
-=======
       health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Database Layer',
       description: 'Primary and replica databases with failover',
       status: 'active',
       instances: 4,
-<<<<<<< HEAD
       health: 'excellent';
-=======
       health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Cache Layer',
       description: 'Distributed caching with redundancy',
       status: 'active',
       instances: 4,
-<<<<<<< HEAD
       health: 'excellent';
     },
     {
@@ -69,7 +56,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       feature: 'Geographic Distribution',
       description: 'Instances distributed across multiple regions',
       benefit: 'Disaster recovery and low latency',
-<<<<<<< HEAD
       status: 'implemented';
     },
     {
@@ -77,7 +63,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       description: 'Automatic scaling based on load',
       benefit: 'Cost optimization and performance',
       status: 'implemented';
-=======
       status: 'implemented'
     },
     {
@@ -85,27 +70,20 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       description: 'Automatic scaling based on load',
       benefit: 'Cost optimization and performance',
       status: 'implemented'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Health Monitoring',
       description: 'Continuous health checks and alerting',
       benefit: 'Proactive issue detection',
-<<<<<<< HEAD
       status: 'implemented';
-=======
       status: 'implemented'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Automated Failover',
       description: 'Automatic failover on component failure',
       benefit: 'Zero downtime during failures',
-<<<<<<< HEAD
       status: 'implemented';
-=======
       status: 'implemented'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Backup & Recovery',
@@ -139,7 +117,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   };
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -148,10 +125,7 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getHealthColor = (health: string) => {
-=======
 ;
   const getHealthColor = (health: string) =>: any {
     switch (health) {
@@ -165,7 +139,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   };
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -175,7 +148,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
       <Head>
@@ -193,7 +165,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -214,7 +185,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-indigo-400">Status</h3>
@@ -341,7 +311,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{component.description}</p>
@@ -370,7 +339,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Redundancy Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -386,8 +354,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
@@ -477,8 +443,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </tbody>
               </table>
             </div>
@@ -493,7 +457,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Architecture Overview</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -541,7 +504,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Implementation Details</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -574,7 +536,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -585,8 +546,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
           <Link
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
@@ -714,9 +673,7 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
 }
 ;
 
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ComprehensiveRedundancyBlueprint;

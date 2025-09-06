@@ -6,15 +6,9 @@ import Head from 'next / head';
 ;
 
 interface Partner {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface Partner {
 interface Partner {;
   id: string;
@@ -74,12 +68,9 @@ const AdminPartnersPage: React.FC = () => {;
 
     const json = await res.json();
     setFlags(json.flags |[]);
-=======
-=======
 
 
 
-=======
 import { useEffect, useState } from 'react';
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
@@ -145,9 +136,7 @@ useEffect(() => {
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-<<<<<<< HEAD
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
       <div className='overflow-auto'>;
@@ -181,7 +170,6 @@ useEffect(() => {
                     onClick={() =>;
                       updatePartner(p && p.code, { status: 'approved' });
 
-=======
                     on_blur={e =>;
                       update_partner (p.code, {
                         commission_rate: Number (e.target.value),
@@ -196,7 +184,6 @@ useEffect(() => {
                     on_click={() =>;
                       update_partner (p.code, { status: 'approved' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }
                   >;
                     Approve;
@@ -217,8 +204,6 @@ useEffect(() => {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </tbody>;
@@ -569,7 +554,6 @@ useEffect(() => {
     </>;
   );
 
-=======
                     </tr>))}
                 </tbody>;
               </table>;
@@ -578,16 +562,12 @@ useEffect(() => {
       </main>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 }
 }
 }
 
-=======
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -602,5 +582,3 @@ useEffect(() => {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

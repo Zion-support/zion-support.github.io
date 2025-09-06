@@ -1,6 +1,5 @@
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -21,15 +20,12 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
-export default /**
- * handler - Function description
- */
-function handler() {
-  res.set_header ("Content - Type", "text / plain");
-  res.status (200).send (toSDL ());
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+res.setHeader("Content-Type", "text/plain");
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader("Content-Type", "text/plain");
+  res.status(200).send(toSDL());
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,10 +1,8 @@
 
 
-=======
 
  setErrors (newErrors);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
  setErrors (newErrors);
 }
@@ -43,7 +41,6 @@ export default EnhancedContactForm;
   const services = [;
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther';
 
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
@@ -63,7 +60,6 @@ const EnhancedContactForm: React.FC = () => {
   const services = [
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
 
@@ -109,12 +105,10 @@ const EnhancedContactForm: React.FC = () => {
       newErrors && newErrors.message = 'Message must be less than 1000 characters';
 
     }
-=======
     }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setErrors(newErrors);
 
     return Object && Object.keys(newErrors).length === 0;
@@ -351,7 +345,6 @@ if (.length > 1000) {) {
         company: '',
         service: '',
 message: '';
-=======
   opacity: 1, y: 0
 }className="mt-2 text-sm text-red-400 flex items-center gap-2" > </motion.p>)
 }</div> <button isSubmitting ? 'bg-gray-600 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
@@ -371,19 +364,13 @@ export default EnhancedContactForm;
     } else if (formData.name.trim().length < 2) {
       newErrors.name = 'Name must be at least 2 characters long'
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address'
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     } else if (formData.message.trim().length < 10) {
@@ -391,10 +378,7 @@ export default EnhancedContactForm;
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters'
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0
   }
@@ -416,7 +400,6 @@ export default EnhancedContactForm;
         company: ''
         service: ''
         message: ''
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
       set_errors ({});
     } catch (error) {
@@ -442,7 +425,6 @@ if ( {) {
       set_errors (new_errors);
     }
   }
-<<<<<<< HEAD
 ;
   // Check condition
 if ( {) {
@@ -519,7 +501,6 @@ if ( {) {
 
 
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.name ;
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
@@ -560,7 +541,6 @@ if ( {) {
 
 
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.email ;
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
@@ -644,7 +624,6 @@ if ( {) {
 
 
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${;
                   errors && errors.message ;
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
@@ -689,7 +668,6 @@ if ( {) {
                 </>;
               )}
 
-=======
         {/* Contact Form */}
         <div className="bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 8">;
           <form on_submit={handle_submit} className="space - y-6">;
@@ -848,13 +826,9 @@ if ( {) {
       </div>;
 
 
-=======
     </section>);
 }
 ;
 export default EnhancedContactForm;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

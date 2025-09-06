@@ -13,13 +13,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   ensureStorage();
   const { id } = req.query as { id?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const episode = episodes.find((e) => e.id === id);
 
   if (!episode) return res.status(404).json({ error: 'Not found' });
-<<<<<<< HEAD
   return res.status(200).json({ episode })
 }
 
@@ -32,9 +29,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!episode) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ episode })
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -48,7 +42,6 @@ function ensure_storage() {
   const dir = path.dirname (EPISODES_PATH);
   if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
   if ()) {
   $2
@@ -88,4 +81,3 @@ function handler() {
   return res.status (200).json ({ episode });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -50,7 +50,6 @@ exports && exports.handler = async function () {
 
 },
 
-=======
       path: 'data / reports / changelog / weekly - changelog.json',
       content: JSON.stringify (summary, null, 2),
       message: 'chore (automation): weekly changelog summary',
@@ -60,19 +59,16 @@ exports && exports.handler = async function () {
       status_code: 200,
       body: JSON.stringify ({ ok: true, commits: commits.length }),
     }
-=======
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };
     await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
     return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
-<<<<<<< HEAD
     await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
     return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
   } catch (e) {

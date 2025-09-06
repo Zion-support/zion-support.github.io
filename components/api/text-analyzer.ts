@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     bigrams: Array<{ phrase: string, count: number }>;
     trigrams: Array<{ phrase: string, count: number }>;
   }
@@ -38,7 +37,6 @@ export default async function handler(
 
     // Basic statistics
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
 
@@ -184,7 +182,6 @@ export default async function handler(
     let sentimentLabel: TextAnalysisResult['sentiment']['label'];
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
 
-=======
     const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
     const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
@@ -203,7 +200,6 @@ export default async function handler(
     else if (sentimentScore <= -1) sentimentLabel = 'negative';
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
     // Keyword analysis
@@ -220,7 +216,6 @@ export default async function handler(
         count;
         frequency: Math && Math.round((count / words) * 1000) / 10
 
-=======
 
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -230,7 +225,6 @@ export default async function handler(
         count;
         frequency: Math.round((count / words) * 1000) / 10
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
@@ -298,7 +292,6 @@ export default async function handler(
 
       language: {
 
-=======
       text;
       statistics: {
         characters;
@@ -322,7 +315,6 @@ export default async function handler(
     },
     language: {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         detectedLanguage;
         confidence;
         isEnglish}
@@ -363,7 +355,6 @@ export default async function handler(
 
 }
 
-=======
         trigrams}}
 ;
     res.status (200).json (result);
@@ -371,18 +362,11 @@ export default async function handler(
     console.error ('Text analysis error:', error);
     res.status (500).json ({ error: 'Internal server error' });
 
-<<<<<<< HEAD
-=======
     res.status(500).json({ error: 'Internal server error' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

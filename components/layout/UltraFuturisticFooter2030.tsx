@@ -2,12 +2,10 @@
 import React from 'react';
 import Link from 'next / link';
 
-=======
 
 import React from 'react';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
 
@@ -173,7 +171,6 @@ const serviceCategories = [
     ]
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -365,7 +362,6 @@ const serviceCategories = [;
     ];
   }
 
-=======
   Phone,
   Mail,
   MapPin,
@@ -536,7 +532,6 @@ const quick_links = [;
   { name: 'Case Studies', href: '/case - studies' },
   { name: 'Blog', href: '/blog' },
 
-=======
   { name: 'Contact', href: '/contact' }, ];  { name: 'Contact', href: '/contact' }
 ];
 ;
@@ -547,7 +542,6 @@ const company_info = [;
   { name: 'Press', href: '/press' },
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status' }
 ];
 
@@ -598,7 +592,6 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github },;
 ];
-<<<<<<< HEAD
 const certifications = [;
   'ISO 27001 Certified',;
   'SOC 2 Type II Compliant',;
@@ -726,13 +719,8 @@ function UltraFuturisticFooter2030() {
 ];
 export default function UltraFuturisticFooter2030() {
   return (
-<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">
-=======
-<<<<<<< HEAD
     <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated Background */}
 
       <div className="absolute inset-0">
@@ -766,7 +754,6 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </a>
                 </div>
               </div>
@@ -789,7 +776,6 @@ export default function UltraFuturisticFooter2030() {
                 Transforming businesses through innovative solutions and intelligent automation.;
               </p>;
               {/* Contact Info */}
-<<<<<<< HEAD
               <div className="space-y-3">;
                 <div className="flex items-center space-x-3 text-sm text-gray-300">;
                   <Phone className="w-4 h-4 text-purple-400" />;
@@ -921,7 +907,6 @@ export default function UltraFuturisticFooter2030() {
                       {category.title}
                     </h5>
                     <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           key={serviceIndex}
                           href={service && service.href}
@@ -940,7 +925,6 @@ export default function UltraFuturisticFooter2030() {
                           {service && service.name}
                         </Link>;
 
-=======
 
             {/* Service Categories */}
             <div className="space-y-6">
@@ -948,7 +932,6 @@ export default function UltraFuturisticFooter2030() {
                 <Rocket className="w-5 h-5 text-purple-400" />
                 <span>Our Services</span>
               </h4>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="grid grid-cols-1 gap-4">
                 {serviceCategories.slice(0, 3).map((category, index) => (
                   <div key={index} className="space-y-2">
@@ -963,7 +946,6 @@ export default function UltraFuturisticFooter2030() {
                           {service.name}
                         </Link>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </div>;
                   </div>;
@@ -973,12 +955,9 @@ export default function UltraFuturisticFooter2030() {
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Quick Links */}
 
 
@@ -1001,7 +980,6 @@ export default function UltraFuturisticFooter2030() {
                     {link && link.name}
                   </Link>;
 
-=======
 
               <div className="space-y-2">
                 <h5 className="text-sm font-medium text-cyan-300">Company</h5>
@@ -1014,24 +992,20 @@ export default function UltraFuturisticFooter2030() {
                     {link.name}
                   </Link>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Social & Certifications */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <span>Connect & Trust</span>
               </h4>
-=======
               </div>;
             </div>;
             {/* Social & Certifications */}
@@ -1040,32 +1014,16 @@ export default function UltraFuturisticFooter2030() {
                 <Users className='w-5 h-5 text-green-400' />;
                 <span>Connect & Trust</span>;
               </h4>;
-=======
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>Connect & Trust</span>
               </h4>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* Social Links */}
               <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300'>;
@@ -1096,7 +1054,6 @@ export default function UltraFuturisticFooter2030() {
                     >;
                       <social && social.icon className="w-5 h-5" />;
 
-=======
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
                 <Users className="w-5 h-5 text-green-400" />
@@ -1196,7 +1153,6 @@ export default function UltraFuturisticFooter2030() {
                 </h5>;
                 <div className='flex flex - wrap gap - 2'>                  {social_links.map ((social, index) => (
                     <a;
-=======
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300">Follow Us</h5>
                 <div className="flex flex-wrap gap-2">
@@ -1204,7 +1160,6 @@ export default function UltraFuturisticFooter2030() {
                     <a
                       key={index}
                       href={social.href}
-<<<<<<< HEAD
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
@@ -1217,7 +1172,6 @@ export default function UltraFuturisticFooter2030() {
                   ))}
                 </div>
               </div>
-=======
 
                     </a>
 
@@ -1225,29 +1179,16 @@ export default function UltraFuturisticFooter2030() {
                 </div>
               </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
                   <Award className='w-4 h-4' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
                   {certifications.map((cert, index) => (
                     <div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       key={index}
                       href={social.href}                <span > Connect & Trust</span>;
               </h4>;
@@ -1265,8 +1206,6 @@ export default function UltraFuturisticFooter2030() {
 
 
                     </a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -1283,12 +1222,10 @@ export default function UltraFuturisticFooter2030() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
                   {certifications.map((cert, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div
                       key={index}
                       className='flex items-center space-x-2 text-xs text-gray-400'>;
@@ -1301,7 +1238,6 @@ export default function UltraFuturisticFooter2030() {
                       <span>{cert}</span>;
                     </div>;
 
-=======
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
                   <Award className="w-4 h-4" />
@@ -1314,10 +1250,8 @@ export default function UltraFuturisticFooter2030() {
                       <span>{cert}</span>
                     </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
-=======
                       target='_blank';
                       rel='noopener noreferrer';
                       className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
@@ -1365,7 +1299,6 @@ export default function UltraFuturisticFooter2030() {
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
 
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/privacy'
                   className='hover:text-purple-400 transition-colors'>;
@@ -1465,18 +1398,13 @@ export default function UltraFuturisticFooter2030() {
       </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
   );
 }
 
-=======
     </footer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

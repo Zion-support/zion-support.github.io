@@ -326,7 +326,6 @@ const companyLinks = [
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen }
   { name: 'Careers', href: '/careers', icon: Users }
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-=======
 ];
 
 const companyLinks = [
@@ -342,7 +341,6 @@ const companyLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -555,7 +553,6 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },;
 
 
-=======
 
           name: 'DevOps',
           href: '/services?category=devops',
@@ -565,7 +562,6 @@ const UltraAdvancedNavigation2026 = () => {;
     },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },
         { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },
         { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
@@ -573,21 +569,17 @@ const UltraAdvancedNavigation2026 = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
 
-=======
         { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
         { name: 'AI Consciousness', href: '/services?category=ai-consciousness', description: 'Consciousness simulation and interfaces' },
         { name: 'AI Healthcare', href: '/services?category=ai-healthcare', description: 'Medical AI and diagnostics' },
@@ -595,7 +587,6 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'AI Legal', href: '/services?category=ai-legal', description: 'Legal AI and compliance' },
         { name: 'AI Creative', href: '/services?category=ai-creative', description: 'Creative AI and content generation' }
       ]
-<<<<<<< HEAD
     };
     {
     services: [;
@@ -629,7 +620,6 @@ const UltraAdvancedNavigation2026 = () => {;
       { name: 'AI Cybersecurity', href: '/ai - cybersecurity - platform', description: 'Next - gen security', price: '$2, 999 / month' }
       { name: 'AI Business Intelligence', href: '/autonomous - business - intelligence - network', description: 'Self - evolving BI', price: '$1, 299 / month' }
     ];
-=======
     }
       name: 'Quantum Tech'
       href: '/services?category=quantum'
@@ -719,7 +709,6 @@ const UltraAdvancedNavigation2026 = () => {;
           description: 'Business intelligence and analytics'
         }
         {
-<<<<<<< HEAD
           name: 'DevOps'
           href: '/services?category=devops'
           description: 'Development and operations'
@@ -731,7 +720,6 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
     }
-=======
           name: 'DevOps',
           href: '/services?category=devops',
           description: 'Development and operations',
@@ -743,23 +731,15 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
     }
-<<<<<<< HEAD
 
   ];
-=======
-<<<<<<< HEAD
-=======
 
   ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 const company_links = [;
   { name: 'Home', href: '/', icon: Home },
@@ -974,23 +954,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
             ? 'bg - black / 90 backdrop - blur - xl border - b border - purple - 500 / 20 shadow - 2xl';
             : 'bg - transparent';
         }`}
-<<<<<<< HEAD
       >;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
           <div className='flex items - center justify - between h - 20'>;
-=======
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Logo */}
             <Link href='/' className='flex items - center space - x-3 group'>;
               <div className='relative'>;
@@ -1055,7 +1025,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
@@ -1097,7 +1066,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                             className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          ;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           <Link
                             href={item && item.href}
                             className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200">;
@@ -1109,11 +1077,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   </AnimatePresence>;
                 </div>;
               ))}
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Quick Links */}
 
 
@@ -1226,7 +1192,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
               </div>;
             </div>;
 
-=======
             <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
                 <Phone className="w-4 h-4" />
@@ -1237,24 +1202,17 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Get Started
 
               </Link>;
             </div>;
-=======
               </Link>
             </div>
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1266,22 +1224,17 @@ const UltraAdvancedNavigation2026 = () =>: any {
       </nav>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-=======
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {is_open && (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -1290,23 +1243,19 @@ const UltraAdvancedNavigation2026 = () =>: any {
             onClick={() => setIsOpen(false)}
           >;
             <motion&& motion.div
-=======
 
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
 
             onClick={() => setIsOpen(false)}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-3">;
@@ -1349,7 +1298,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                    href="/pricing";
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium";
 
-=======
                 <div className="space-y-3 pt-4">
                   <Link
                     href="/services"
@@ -1362,7 +1310,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     href="/pricing"
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     onClick={() => setIsOpen(false)}
                   >;
                     Pricing;
@@ -1576,13 +1523,11 @@ const UltraAdvancedNavigation2026 = () =>: any {
       <div className="h-20"></div>
     </>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
 export default UltraAdvancedNavigation2026;
 
 
-=======
             </motion.div>;
           </motion.div>)}
       </AnimatePresence>;
@@ -1595,11 +1540,8 @@ export default UltraAdvancedNavigation2026;    </>);
 }
 export default UltraAdvancedNavigation2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
@@ -1608,5 +1550,3 @@ export default UltraAdvancedNavigation2026;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

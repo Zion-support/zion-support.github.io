@@ -33,7 +33,6 @@ import {
   BarChart3,
 
 
-=======
   ArrowRight,
   Brain,
   Shield,
@@ -56,29 +55,21 @@ import {
   ExternalLink,
   TrendingUp,
   BarChart3,
-<<<<<<< HEAD
   Cloud,
   Network,;} from 'lucide-react';import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   Cloud,;
   Network,;} from 'lucide-react';import {
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, ;
-=======
   Cloud,
   Network,;} from 'lucide-react';import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 import EnhancedContactForm from '../components/EnhancedContactForm',
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -110,7 +101,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
 
@@ -287,7 +277,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
         <div className='relative z-10 text-center max-w-6xl mx-auto'>          <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
@@ -317,7 +306,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
                 href="#services"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2">;
@@ -329,13 +317,10 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
 
         {/* Floating Elements */}
 
-=======
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             animate={{ y: [0, -20, 0] }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
           />;
@@ -356,9 +341,7 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
 
-=======
           />
-=======
 
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'          />
 
@@ -376,7 +359,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -393,7 +375,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {services.map((service, index) => (          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Revolutionary Technology Solutions
             </h2>
@@ -405,8 +386,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Revolutionary Technology Solutions;
@@ -430,7 +409,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                 key={service && service.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -457,7 +435,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                 </div>;
               </motion && motion.div>;
 
-=======
                 className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -466,17 +443,9 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
-=======
                 className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-<<<<<<< HEAD
-=======
 
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
                 <div className='relative z-10'>
                   <div
@@ -493,17 +462,14 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                   <div className='mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'>
                     <span className='text-sm font-medium'>Learn More</span>
                     <ChevronRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300' />                  </div>                  <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <p className="text-white/70 leading-relaxed">{service.description}</p>
                   <div className="mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
                     <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-<<<<<<< HEAD
                   </div>
                 </div>
               </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -840,26 +806,15 @@ function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 
-=======
                 className="text-center"
-=======
                 className='text-center'
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
-=======
                 className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center'>
                   <stat.icon className='w-8 h-8 text-white' />
@@ -868,7 +823,6 @@ function HomePage() {
                   {stat.number}
                 </div>
                 <div className='text-white/70'>{stat.label}</div>              </motion.div>              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
@@ -880,14 +834,12 @@ function HomePage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
       <div id="services">
 
         <EnhancedServicesShowcase />
       </div>
-<<<<<<< HEAD
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />
 
@@ -898,7 +850,6 @@ function HomePage() {
       <div id='services'>        <EnhancedServicesShowcase />      <div id="services">;
         <EnhancedServicesShowcase />;
       </div>;
-=======
 
 
       {/* Enhanced Services Showcase */}
@@ -909,36 +860,28 @@ function HomePage() {
         <EnhancedServicesShowcase />
       </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />;
-=======
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Latest Updates Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
 
-=======
 
       {/* Latest Updates Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -954,7 +897,6 @@ function HomePage() {
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-=======
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Latest Autonomous Updates;
             </h2>;
@@ -1009,26 +951,21 @@ function HomePage() {
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
 
-=======
 
       {/* Contact Form Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-=======
       {/* Contact Form Section */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="max-w-7xl mx-auto">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Ready to Get Started?
@@ -1036,7 +973,6 @@ function HomePage() {
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>
               Let's discuss your project and explore how our cutting-edge
               technology solutions can transform your business            </p>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>
@@ -1065,15 +1001,10 @@ function HomePage() {
               Let's discuss your project and explore how our cutting-edge technology solutions can transform your business;
             </p>;
           </motion && motion.div>;
-=======
 
   );
-=======
-=======
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
           <EnhancedContactForm />;
         </div>;
@@ -1088,7 +1019,6 @@ and digital transformation solutions that drive innovation and growth. </p> <div
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion && motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion && motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
 
 
-=======
   );
 }
       {/* Contact Form Section */}

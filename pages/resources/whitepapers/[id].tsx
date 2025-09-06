@@ -1,7 +1,6 @@
 
 
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -55,9 +54,7 @@ const whitepapers = {
       ],
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -142,14 +139,12 @@ export default function WhitepaperPage() {
   const whitepaper = whitepapers[id as keyof typeof whitepapers];
   if (!whitepaper) {
 
-=======
       executive_summary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
       key_topics: [;
         'ROI Calculation MethodsCost - Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies';
       ],
       target_audience: 'Business analysts, project managers, and executives evaluating automation investments.';
     }
-<<<<<<< HEAD
   }
 },
 export default /**
@@ -176,9 +171,7 @@ if ( {) {
           </div>;
         </main>;
       </div>);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-=======
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -186,7 +179,6 @@ if ( {) {
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -197,14 +189,12 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <nav className="mb-8">
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               ← Back to Resources
             </Link>
           </nav>
 
-=======
     <>;
       <Head>;
         <title>{whitepaper.title} | Zion Tech Group</title>;
@@ -225,7 +215,6 @@ if ( {) {
           <header className="text - center mb - 16">;
             <div className="mb - 6">;
               <span className="px - 4 py - 2 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full border border - fuchsia - 400 / 30">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {whitepaper.category}
               </span>;
             </div>;
@@ -266,7 +255,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
               <span>By {whitepaper.author}</span>
@@ -285,7 +273,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
@@ -375,8 +362,6 @@ if ( {) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </button>
                 <p className="text-white/60 text-sm mt-4">
                   PDF format • {whitepaper.pages} pages • Free download
@@ -392,7 +377,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -425,10 +409,8 @@ if ( {) {
       </div>
     </>
 
-=======
 }
 
-=======
                 </button>;
                 <p className="text - white / 60 text - sm mt - 4">;
                   PDF format • {whitepaper.pages} pages • Free download;
@@ -486,14 +468,10 @@ export default function WhitepaperPage() {
   const router = useRouter()
   const { id } = router.query
   
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 // Mock whitepaper data - in a real app, this would come from an API or database
 const whitepapers = {
   'autonomous-systems-guide': {
@@ -545,9 +523,5 @@ const whitepapers = {
     }
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

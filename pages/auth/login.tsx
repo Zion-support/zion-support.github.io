@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
@@ -12,7 +10,6 @@ import { supabase } from '@/utils/supabase/client';
 import type {;
   AuthError,;
   User,;
-=======
 
   AuthError,
   User,
@@ -39,7 +36,6 @@ import {;
   CardHeader,;
   CardTitle,;
 
-=======
 import {
 
   Card,
@@ -48,11 +44,9 @@ import {
   CardHeader,;
   CardTitle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from '@/components/ui/card';
 const LoginPage = () => {;
 
-=======
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
@@ -60,25 +54,19 @@ import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
 import Head from 'next/head';
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
-=======
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle;
-=======
   Card,
   CardContent,
   CardDescription,
   CardHeader,;
   CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/card';
 const LoginPage = () => {
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
@@ -86,12 +74,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-=======
 const LoginPage = () => {;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -224,11 +209,9 @@ const LoginPage = () => {;
       return;
     }
 
-=======
       
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
-<<<<<<< HEAD
         returnTo = '/dashboard'
       }
 logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
@@ -265,12 +248,10 @@ return () => clearTimeout(redirectTimer)
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email }),;
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       });
       if (response && response.ok) {;
         setVerificationEmailSent(true);
@@ -294,7 +275,6 @@ return () => clearTimeout(redirectTimer)
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: proactiveResendEmail })
@@ -312,7 +292,6 @@ return () => clearTimeout(redirectTimer)
     }
   };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       const data = await response && response.json();
       if (response && response.ok) {;
@@ -411,7 +390,6 @@ return () => clearTimeout(redirectTimer)
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
         email;
         password});
-=======
         returnTo = '/dashboard';
       }
 
@@ -507,8 +485,6 @@ return () => clearTimeout(redirectTimer)
       setIsProactivelyResending(false);    }
   };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
     console.error("Error:", error);
@@ -719,10 +695,6 @@ return () => clearTimeout(redirectTimer)
   }
 }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
@@ -734,14 +706,12 @@ return () => clearTimeout(redirectTimer)
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
         email,
         password}),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       if (signInError) {
         logErrorToProduction('Supabase sign-in error:', { data: signInError }),
         // Check if error is related to email verification
         const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
                                                  signInError.message?.toLowerCase().includes('verify') ||
-<<<<<<< HEAD
                                                  signInError.message?.toLowerCase().includes('confirm');
         // As per issue description, check for a specific error code "email_not_verified"
         // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
@@ -758,7 +728,6 @@ return () => clearTimeout(redirectTimer)
         data: catchedError,;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       });
       // Check if the caught error is a network error;
       let exceptionMessage = 'An unexpected error occurred. Please try again.';
@@ -786,18 +755,14 @@ return () => clearTimeout(redirectTimer)
 
 
 
-=======
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
                   displayMessage = 'Network error. Please check your internet connection and try again.'
               } else if (signInError.message.toLowerCase().includes('user disabled')) {
                   displayMessage = 'Your account has been disabled. Please contact support.'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -899,14 +864,12 @@ return () => clearTimeout(redirectTimer)
   }
 }
   },;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // Auto-redirect to verification status page for unverified users after showing message;
   useEffect(() => {;
     if (isEmailUnverified && verificationEmailSent && email) {;
       const timer = setTimeout(() => {;
 
 
-=======
         log_info ('LoginPage: Calling supabase.auth.get_session ()'),
         const {
           data: { session },
@@ -1280,7 +1243,6 @@ if ( {) {
   }, [isEmailUnverified, verificationEmailSent, email, router]);
 
 
-=======
         router.push(`/verify-status?email=${encodeURIComponent(email)}`);
       }, 3000),;
       return () => clearTimeout(timer);
@@ -1293,8 +1255,6 @@ if ( {) {
   }, [isEmailUnverified, verificationEmailSent, email, router]),
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -1304,7 +1264,6 @@ if ( {) {
   // --- Rendering Logic ---;
   // 1. Primary Loading State: During initial session check;
   if (isCheckingSession) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     logInfo('LoginPage: Rendering "Checking authentication..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -1339,14 +1298,9 @@ if ( {) {
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
     logWarn(
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     logInfo('LoginPage: Rendering "Checking authentication..."'),
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -1354,7 +1308,6 @@ if ( {) {
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Checking authentication...</p>
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
-<<<<<<< HEAD
     }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
@@ -1389,16 +1342,12 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
     return null; // Or a minimal loader/empty div  }
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
@@ -1429,15 +1378,12 @@ if ( {) {
                 </label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Input
                   id='email'
                   type='email'
                   value={email}
                   onChange={e => setEmail(e && e.target.value)}                  required;
 
-=======
-=======
 
             <form onSubmit={handleLogin} className="space-y-4">
               {error && (
@@ -1467,14 +1413,12 @@ if ( {) {
                 </label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Input
                   id='password'
                   type='password'
                   value={password}
                   onChange={e => setPassword(e && e.target.value)}                  required;
 
-=======
               
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
@@ -1508,9 +1452,7 @@ if ( {) {
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Link>
               </p>
             </div>
@@ -1520,14 +1462,11 @@ if ( {) {
     </>
 
 
-=======
 
 
-=======
   )
 },
 export default LoginPage,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 />;
               </div>;
               <Button
@@ -1548,7 +1487,6 @@ export default LoginPage,
                   href='/auth/register'
                   className='text-blue-600 hover:underline'>                  Sign up;
 
-=======
 ;
   // --- Rendering Logic ---;
   // 1. Primary Loading State: During initial session check;
@@ -1662,7 +1600,6 @@ if ( {) {
                   className='text - blue - 600 hover:underline';
                 >                  Sign up;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 </Link>;
               </p>;
             </div>;
@@ -1671,16 +1608,10 @@ if ( {) {
       </div>;
 
 
-=======
     </>);
 }export default LoginPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 },;
 export default LoginPage;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

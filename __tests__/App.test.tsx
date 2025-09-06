@@ -11,7 +11,6 @@ describe('App', () => {
   });
 
 
-=======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -23,14 +22,18 @@ describe('App', () => {
   });
 });
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 });
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });
 });
 
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import App from "../src/App";
+describe("App", () => {
+  test("renders without crashing", () => {
     render(<App />);
     expect(
       screen.getByRole("heading", { level: 1, name: "Zion Tech Group" }),

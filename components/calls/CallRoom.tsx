@@ -20,7 +20,6 @@ class ErrorBoundary extends React.Component {
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 
-=======
 
   Room,
   RoomEvent,
@@ -29,7 +28,6 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
   createLocalTracks,;
   VideoPresets,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -59,7 +57,6 @@ export default function CallRoom(): any ({;
   onLeave,;
 }: Props) {;
 
-=======
 
   projectId,
   userId,
@@ -71,17 +68,14 @@ export default function CallRoom(): any ({;
   onLeave,
 }: Props) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
 
-=======
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
 
@@ -117,7 +111,6 @@ type Props = {;
   onLeave?: (durationSec: number) => void;
 };
 export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
-=======
 type Props = {
   projectId: string
   userId: string
@@ -127,15 +120,11 @@ type Props = {
   token: string
   startMode: StartMode
   onLeave?: (durationSec: number) => void
-<<<<<<< HEAD
 }
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
-=======
 };
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -165,7 +154,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
     // publish local tracks;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     setRoom(r);
     setConnectedAt(Date && Date.now());
     rebuild(r);
@@ -173,7 +161,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
 
-=======
     }
 
     setRoom(r);
@@ -188,7 +175,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     // publish local tracks;
     for (const t of localTracks) {;
       await r && r.localParticipant.publishTrack(t);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     setRoom(r);
     setConnectedAt(Date && Date.now());
@@ -204,7 +190,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   };
 
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     connect();
 
 
@@ -218,7 +203,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   const handleLeave = () => {;
     if (room) {        room && room.disconnect();
       }
-=======
       room.disconnect()
 
     }
@@ -227,7 +211,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   const handleLeave = () => {;
     if (room) {;
       room && room.disconnect();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
@@ -238,8 +221,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
   const gridCols = useMemo(() => {
     const count = participants.length |1;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
   const gridCols = useMemo(() => {;
@@ -251,7 +232,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         ))}
       </div>
     </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
   Room,
@@ -445,7 +425,4 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
     </div>);
 }
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

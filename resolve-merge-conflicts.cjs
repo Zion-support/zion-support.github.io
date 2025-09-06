@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 #!/usr/bin/env node
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-=======
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
 console.log('🔧 Resolving merge conflicts...');
 function resolveMergeConflicts(filePath) {
   try {
@@ -97,14 +83,11 @@ for (const file of files) {
     console.error(`❌ Error processing ${file}:`, error.message);
     errorCount++;
   }
-<<<<<<< HEAD
 }
 console.log(`\n🎉 Merge conflict resolution complete!`);
 console.log(`✅ Resolved: ${resolvedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
-=======
 });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -145,10 +128,8 @@ function resolveConflicts(filePath) {
   }
 }
 
-<<<<<<< HEAD
 // Resolve conflicts for each file
 conflictFiles.forEach(resolveConflicts);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -189,19 +170,15 @@ function resolveConflicts(filePath) {
   }
 }
 
-<<<<<<< HEAD
 // Resolve conflicts for each file
 conflictFiles.forEach(resolveConflicts);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run linter to check if issues are resolved
 console.log('\n🔍 Running linter to check if issues are resolved...');
 try {
   execSync('npm run lint', { stdio: 'inherit' });
 } catch (error) {
   console.log('⚠️  Linter still has issues (this may be expected)');
-=======
 function resolveMergeConflicts() {
     console.log('Resolving merge conflicts...');
     
@@ -262,16 +239,9 @@ function resolveMergeConflicts() {
 if (resolveMergeConflicts()) {
     console.log('Ready to commit merge resolution');
 } else {
-<<<<<<< HEAD
     console.log('Failed to resolve merge conflicts');
     process.exit(1);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
   console.log(`⚠️  ${remainingConflicts.length} files still have conflicts`);
 }
-=======
 console.log('\n🎉 Merge conflict resolution completed!');
->>>>>>> main
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

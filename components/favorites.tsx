@@ -152,8 +152,6 @@ function FavoritesPage() {
                 </button>;
               </div>;
 
-=======
-=======
 
 
 
@@ -166,9 +164,7 @@ function FavoritesPage() {
   );
 }
 
-=======
     </div>
-<<<<<<< HEAD
   );
 }
               <div className='mt - 3 text - xs text - gray - 500'>{t.location}</div>;
@@ -203,7 +199,3 @@ function FavoritesPage() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -22,11 +22,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next / link';
 ;
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -163,7 +161,6 @@ const SearchBar: React.FC = () => {
     setIsOpen(false),;
     inputRef && inputRef.current?.blur();
   }
-<<<<<<< HEAD
   };
   useEffect(() => {;
     const handleClickOutside = (event: MouseEvent) => {;
@@ -381,10 +378,8 @@ if ( {) {
 }
 ;
 
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SearchBar;

@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -110,7 +109,6 @@ function log(message, level = 'INFO')
           <div key={message.id} className={\"}
             <div className={\"}
     log(` App improvements "failed"`)
-=======
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -259,4 +257,3 @@ class ComprehensiveAppImprover {
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
 improver.run().catch(console.error);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

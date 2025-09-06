@@ -1,7 +1,6 @@
 
 
 
-=======
 
   isOpen,
   onClose,
@@ -9,7 +8,6 @@
   defaultType,
 }: {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -17,7 +15,6 @@
 }) {;
   const [account, setAccount] = useState<string | null>(null);
 
-=======
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
 
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
@@ -44,7 +41,6 @@ defaultType
   const [type, setType] = useState<RedemptionType>(;
     defaultType ?? "boost_profile",;
   );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
@@ -55,11 +51,9 @@ defaultType
 
     })();
 
-=======
       if (accs && accs.length > 0) setAccount(accs[0])
     })()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
     if (accs && accs.length > 0) setAccount(accs[0])
@@ -87,7 +81,6 @@ defaultType
       if (data?.ok) {;
         onClose();
 
-=======
       const res = await fetch('/api/tokens/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -96,7 +89,6 @@ defaultType
       if (data?.ok) {
         onClose()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } finally {;
       setIsSubmitting(false);
@@ -139,10 +131,8 @@ defaultType
                 Connect MetaMask;
               </button>;
 
-=======
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -199,7 +189,6 @@ defaultType
 
   );
 }
-=======
 
         <div className="mt-4 flex items-center justify-between">
           <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
@@ -208,9 +197,10 @@ defaultType
       </div>
     </div>
 
+);
+  );
+  );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
         </div>
       </div>
@@ -218,4 +208,3 @@ defaultType
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

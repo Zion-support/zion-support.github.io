@@ -43,7 +43,6 @@ import {;
   Factory,;
   Car,;
 
-=======
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -71,7 +70,6 @@ import {
   Factory,
   Car,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
@@ -207,7 +205,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     address: "364 E Main St STE 1008 Middletown DE 19709"
     website: "https://ziontechgroup.com"
   }
-=======
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
   className = "",;
@@ -229,7 +226,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
 ;
@@ -408,12 +404,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             </motion && motion.button>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -433,12 +426,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             </motion && motion.button>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -466,12 +456,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -523,7 +510,6 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   )}
                 </div>;
               ))}
-=======
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
@@ -540,7 +526,6 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Contact Info */}
 
               <div className="pt-4 border-t border-cyan-500/20">;
@@ -669,20 +654,17 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
 export default EnhancedNavigation;
 ;
 
-=======
       </AnimatePresence>
     </nav>
 
+  );
 };
 
 export default EnhancedNavigation;
 
-=======
 );
 };
 
 
 export default EnhancedNavigation;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

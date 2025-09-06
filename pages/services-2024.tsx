@@ -23,17 +23,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
@@ -139,12 +135,110 @@ import Link from 'next/link';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
 
-=======
-=======
 
 
 
-=======
+const Services2024Page: React.FC = () => {;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  // Combine all services;
+  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
+  // Filter and sort services;
+  const filteredServices = useMemo(() => {;
+    const filtered = allServices.filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                           service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                           service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' ||;
+                             (selectedCategory === 'ai' && service.variant.includes('ai')) ||;
+                             (selectedCategory === 'quantum' && service.variant.includes('security')) ||;
+                             (selectedCategory === 'it' && service.variant.includes('it')) ||;
+                             (selectedCategory === 'api' && service.variant.includes('api')) ||;
+                             (selectedCategory === 'cloud' && service.variant.includes('cloud')) ||;
+                             (selectedCategory === 'marketing' && service.variant.includes('marketing')) ||;
+                             (selectedCategory === 'project' && service.variant.includes('project')) ||;
+                             (selectedCategory === 'customer' && service.variant.includes('customer'));
+      return matchesSearch && matchesCategory;
+    });
+    // Sort services;
+    filtered.sort((a, b) => {;
+      let aValue: any, bValue: any,;
+      switch (sortBy) {;
+        case 'price':;
+          aValue = parseFloat(a.price.replace(/[^0-9.]/g, '')),;
+          bValue = parseFloat(b.price.replace(/[^0-9.]/g, '')),;
+          break,;
+        case 'rating':;
+          aValue = a.rating;
+          bValue = b.rating;
+          break,;
+        case 'customers':;
+          aValue = parseInt(a.customers.replace(/[^0-9]/g, '')),;
+          bValue = parseInt(b.customers.replace(/[^0-9]/g, '')),;
+          break,;
+        default: aValue = a.name.toLowerCase();
+          bValue = b.name.toLowerCase();
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      if (sortOrder === 'asc') {;
+        return aValue > bValue ? 1 : -1;
+      } else {;
+        return aValue < bValue ? 1 : -1;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    });
+    return filtered;
+  }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]),;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },;
+    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },;
+    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },;
+    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it')).length },;
+    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api')).length },;
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud')).length },;
+    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },;
+    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },;
+    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+
+
+
+  const getVariantIcon = (variant: string) => {
+    if (variant.includes('ai')) return Brain,
+    if (variant.includes('security')) return Shield,
+    if (variant.includes('it')) return Cpu,
+    if (variant.includes('api')) return Database,
+    if (variant.includes('cloud')) return Cloud,
+    if (variant.includes('marketing')) return TrendingUp,
+    if (variant.includes('project')) return Users,
+    if (variant.includes('customer')) return CheckCircle,
+    return Sparkles
+  },
+  const getVariantColor = (variant: string) => {
+    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500',
+    if (variant.includes('security')) return 'from-red-500 to-pink-500',
+    if (variant.includes('it')) return 'from-green-500 to-emerald-500',
+    if (variant.includes('api')) return 'from-purple-500 to-violet-500',
+    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500',
+    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
+    if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
+    if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
+    return 'from-gray-500 to-slate-500'
+  };
+
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -220,115 +314,6 @@ const Services2024Page: React.FC = () => {;
   }
 }
   ],
-
-
-
-  const getVariantIcon = (variant: string) => {
-    if (variant.includes('ai')) return Brain,
-    if (variant.includes('security')) return Shield,
-    if (variant.includes('it')) return Cpu,
-    if (variant.includes('api')) return Database,
-    if (variant.includes('cloud')) return Cloud,
-    if (variant.includes('marketing')) return TrendingUp,
-    if (variant.includes('project')) return Users,
-    if (variant.includes('customer')) return CheckCircle,
-    return Sparkles
-  },
-  const getVariantColor = (variant: string) => {
-    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500',
-    if (variant.includes('security')) return 'from-red-500 to-pink-500',
-    if (variant.includes('it')) return 'from-green-500 to-emerald-500',
-    if (variant.includes('api')) return 'from-purple-500 to-violet-500',
-    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500',
-    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
-    if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
-    if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    return 'from-gray-500 to-slate-500'
-  };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-const Services2024Page: React.FC = () => {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
-  // Combine all services;
-  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
-  // Filter and sort services;
-  const filteredServices = useMemo(() => {;
-    const filtered = allServices.filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                           service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                           service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' ||;
-                             (selectedCategory === 'ai' && service.variant.includes('ai')) ||;
-                             (selectedCategory === 'quantum' && service.variant.includes('security')) ||;
-                             (selectedCategory === 'it' && service.variant.includes('it')) ||;
-                             (selectedCategory === 'api' && service.variant.includes('api')) ||;
-                             (selectedCategory === 'cloud' && service.variant.includes('cloud')) ||;
-                             (selectedCategory === 'marketing' && service.variant.includes('marketing')) ||;
-                             (selectedCategory === 'project' && service.variant.includes('project')) ||;
-                             (selectedCategory === 'customer' && service.variant.includes('customer'));
-      return matchesSearch && matchesCategory;
-    });
-    // Sort services;
-    filtered.sort((a, b) => {;
-      let aValue: any, bValue: any,;
-      switch (sortBy) {;
-        case 'price':;
-          aValue = parseFloat(a.price.replace(/[^0-9.]/g, '')),;
-          bValue = parseFloat(b.price.replace(/[^0-9.]/g, '')),;
-          break,;
-        case 'rating':;
-          aValue = a.rating;
-          bValue = b.rating;
-          break,;
-        case 'customers':;
-          aValue = parseInt(a.customers.replace(/[^0-9]/g, '')),;
-          bValue = parseInt(b.customers.replace(/[^0-9]/g, '')),;
-          break,;
-        default: aValue = a.name.toLowerCase();
-          bValue = b.name.toLowerCase();
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      if (sortOrder === 'asc') {;
-        return aValue > bValue ? 1 : -1;
-      } else {;
-        return aValue < bValue ? 1 : -1;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    });
-    return filtered;
-  }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]),;
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },;
-    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },;
-    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },;
-    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it')).length },;
-    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api')).length },;
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud')).length },;
-    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },;
-    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },;
-    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -351,13 +336,11 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
     return 'from-gray-500 to-slate-500'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services-2024' />;
       </Head>;
-=======
     <>
       <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>
@@ -412,8 +395,6 @@ const Services2024Page: React.FC = () => {;
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Future-Ready
                 </span>
                 <br />
@@ -433,7 +414,6 @@ const Services2024Page: React.FC = () => {;
                 <span className="text-white">Solutions</span>
               </h1>
               
-=======
 
 
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -452,7 +432,6 @@ const Services2024Page: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
@@ -466,7 +445,6 @@ const Services2024Page: React.FC = () => {;
                   <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
                   <div className="text-gray-400">Happy Customers</div>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </motion.div>
           </div>
@@ -529,7 +507,6 @@ const Services2024Page: React.FC = () => {;
                       type="text"
                       placeholder="Search services by name, features, or description..."
                       value={searchQuery}
-=======
                 {/* Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -538,11 +515,6 @@ const Services2024Page: React.FC = () => {;
                 <div className="lg:col-span-2">
                   <div className="relative">
                     <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
@@ -551,7 +523,6 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
                     />
                   </div>
@@ -568,13 +539,11 @@ const Services2024Page: React.FC = () => {;
                     value={selectedCategory}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </select>;
                 </div>;
 
-=======
                 {/* Sort */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -582,8 +551,6 @@ const Services2024Page: React.FC = () => {;
 }
                 <div className="flex space-x-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e && e.target.value as any)}
@@ -837,7 +804,6 @@ if ( {) {
           </div>
         </section>
 
-=======
                   <button;
                     on_click={() =>;
                       setSortOrder (sort_order === 'asc' ? 'desc' : 'asc');
@@ -845,7 +811,6 @@ if ( {) {
                     className='px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200';
                   >                    {sort_order === 'asc' ? '↑' : '↓'}
 
-=======
 
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
                     {sortOrder === 'asc' ? '↑' : '↓'  } catch (error) {
@@ -853,7 +818,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </button>;
                 </div>;
               </div>;
@@ -945,7 +909,6 @@ if ( {) {
                         </div>
                       </div>
 
-=======
 
                       {/* Service Info */  } catch (error) {
     console.error("Error:", error);
@@ -968,7 +931,6 @@ if ( {) {
                             }
                           )}
                         </div>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <div className='text-right'>;
                           <div className='text-2xl font-bold text-cyan-400'>;
                             {service && service.price}
@@ -986,7 +948,6 @@ if ( {) {
 
                       {/* Features */}
 
-=======
                       {/* Service Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1011,7 +972,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
                         <div className="space-y-2">
@@ -1024,8 +984,6 @@ if ( {) {
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             </div>
 
                           </div>;
@@ -1058,7 +1016,6 @@ if ( {) {
                           {service.features.length > 3 && (
                             <div className='text - sm text - cyan - 400'>                              +{service.features.length - 3} more features;
                             </div>)}
-=======
 
                           )  } catch (error) {
     console.error("Error:", error);
@@ -1131,9 +1088,7 @@ if ( {) {
 
                       {/* CTA */}
 
-=======
                       <div className="flex items-center justify-between">
-=======
 
                       {/* CTA */  } catch (error) {
     console.error("Error:", error);
@@ -1143,29 +1098,24 @@ if ( {) {
                       <div className="flex items-center justify-between">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
                           <span className="font-medium">Learn More</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
-<<<<<<< HEAD
                           {service.variant.replace('-futuristic', '').replace('- ')}
 
-=======
                           {service.variant.replace('-futuristic', '').replace('- ')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         </div>
                       </div>
                     </div>
                   </motion.div>
 
-=======
 
                       <div className="grid grid-cols-3 gap-4 mb-6">;
                         <div className="text-center">;
@@ -1286,7 +1236,6 @@ if ( {) {
               </p>
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
 <Link
-=======
           </div>
         </section>
         {/* CTA Section */}
@@ -1299,7 +1248,6 @@ if ( {) {
               className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
-=======
                       <div className="grid grid-cols-3 gap-4 mb-6">;
                         <div className="text-center">;
                           <div className="flex items-center justify-center space-x-1 mb-1">;
@@ -1376,11 +1324,6 @@ if ( {) {
 }
               viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -1389,7 +1332,6 @@ if ( {) {
               </p>
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
                   <Zap className="w-5 h-5" />
                   <span>Get Started Today</span>
@@ -1398,7 +1340,6 @@ if ( {) {
                   href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
                   <span>View Pricing Plans</span>
                   <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD
                 <Link
                   href=&quot;/contact&quot; className=&quot;flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold&quot;>
                   <Zap className=&quot;w-5 h-5&quot; />
@@ -1409,10 +1350,7 @@ if ( {) {
                   <span>View Pricing Plans</span>
                   <ArrowRight className=&quot;w-4 h-4&quot; />
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </motion.div>
           </div>
@@ -1435,7 +1373,6 @@ if ( {) {
 export default Services2024Page;
 
 
-=======
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
                 <Link;
                   href='/contact';
@@ -1450,9 +1387,7 @@ export default Services2024Page;
                 >;
                   <span > View Pricing Plans</span>;
                   <ArrowRight className='w - 4 h - 4' />                </Link>;
-=======
 
-=======
 },
 export default Services2024Page,
         <section className="px-4 sm:px-6 lg:px-8 mb-20">;
@@ -1492,20 +1427,15 @@ export default Services2024Page,
                   <span>View Pricing Plans</span>;
                   <ArrowRight className="w-4 h-4" />;
                 </Link>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>;
             </motion.div>;
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
     </>),
 }
 ;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Services2024Page;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

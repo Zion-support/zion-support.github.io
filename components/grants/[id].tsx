@@ -1,6 +1,5 @@
 
 
-=======
 
 import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
@@ -10,7 +9,6 @@ import type { GrantApplication } from '../../types/grants';
 
 export default function GrantDetailPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
@@ -25,7 +23,6 @@ export default function GrantDetailPage() {;
     setLoading(true);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -42,7 +39,6 @@ export default function GrantDetailPage() {;
     }
   }
   if (loading)
-=======
 
   const addUpdate = async () => {;
     if (!id || !updateContent && updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r && r.json()).then((d) => setItem(d && d.record)).finally(() => setLoading(false));
@@ -209,7 +205,6 @@ if (
                         className='text-blue-600'
                         href={l}
                         target='_blank'
-<<<<<<< HEAD
                         rel='noreferrer'>;
                         {l}
                       </a>;
@@ -282,7 +277,6 @@ if (
 
 
 }
-=======
               {(!item && item.milestones || item && item.milestones.length === 0) && (;
                 <div className='text-sm text-gray-600'>;
                   Milestones will appear here.;
@@ -459,4 +453,3 @@ if (
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

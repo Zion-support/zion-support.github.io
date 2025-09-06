@@ -68,7 +68,6 @@ const features = [
     color: 'from-indigo-500 to-blue-500'
   };
   {
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -179,7 +178,6 @@ const useCases = [
     description:
       'Optimize your content strategy based on real-time performance data and AI insights'
     icon: Target
-<<<<<<< HEAD
       'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month'
     ];
     popular: false,
@@ -335,8 +333,6 @@ const useCases = [;
     icon: ShoppingCart,;
     color: 'from-orange-500 to-red-500',;
   },;
-=======
-=======
 
 import React from 'react';
 import Head from 'next/head';
@@ -345,7 +341,6 @@ import Link from 'next/link';
 const integrations = [
 
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
 const integrations = [;
@@ -363,7 +358,6 @@ const integrations = [;
   'TikTok',;
   'Slack',;
   'Zapier',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   'API Access',];
 
 export default function AIContentIntelligencePlatform() {;
@@ -379,7 +373,6 @@ export default function AIContentIntelligencePlatform() {;
             Create, optimize, and manage content intelligently with our AI-powered content platform.;
           </p>;
         </div>;
-=======
     <Layout>
       <Head>
         <title>AI Content Intelligence Platform | Zion Tech Group</title>
@@ -423,12 +416,10 @@ export default function AIContentIntelligencePlatform() {;
               </div>
             </motion.div>
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 className="relative"
-=======
               initial={{ opacity: 0, x: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -445,7 +436,6 @@ className="relative"
   }
 }
               className="relative"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
                 <div className="text-6xl mb-4">🧠</div>
@@ -462,7 +452,6 @@ className="relative"
                   <div className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3" />
                     <span>Real-time performance insights</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 </div>
               </div>
@@ -496,14 +485,10 @@ className="relative"
           </div>;
         </div>;
 
-=======
-=======
 
 
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
 
       <section className="py-20">
@@ -539,7 +524,6 @@ className="relative"
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -554,7 +538,6 @@ className="relative"
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
@@ -590,7 +573,6 @@ className="relative"
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -605,7 +587,6 @@ className="relative"
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
       {/* Pricing Section */}
       <section className="py-20">
@@ -638,11 +619,9 @@ className="relative"
                       MOST POPULAR
                     </span>
                   </div>
-<<<<<<< HEAD
                 )}
                 <div className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}>
 <div className="text-center mb-8">
-=======
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -650,7 +629,6 @@ className="relative"
 }
                 <div className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}>
                   <div className="text-center mb-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
                     <div className="text-gray-400 mb-4">{plan.period}</div>
@@ -676,12 +654,8 @@ className="relative"
 
 
                   </ul>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </ul>
                   <Link
                     href="/contact"
@@ -690,7 +664,6 @@ className="relative"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -700,7 +673,6 @@ className="relative"
 
             ))}
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1065,7 +1037,6 @@ function AIContentIntelligencePlatform() {
           <div className='grid grid - cols - 2 md:grid - cols - 5 gap - 6'>            {integrations.map ((integration, index) => (
               <motion.div;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -1073,7 +1044,6 @@ function AIContentIntelligencePlatform() {
                 viewport={{ once: true }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1138,9 +1108,7 @@ function AIContentIntelligencePlatform() {
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-=======
             className='text-center mb-16'
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1178,11 +1146,6 @@ function AIContentIntelligencePlatform() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Seamless Integrations
@@ -1194,7 +1157,6 @@ function AIContentIntelligencePlatform() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
-<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -1214,7 +1176,6 @@ function AIContentIntelligencePlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1280,14 +1241,8 @@ function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Ready to Transform Your Content Strategy?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1323,11 +1278,8 @@ function AIContentIntelligencePlatform() {
               </div>
             </div>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-<<<<<<< HEAD
 <Link
-=======
               <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
@@ -1337,7 +1289,6 @@ function AIContentIntelligencePlatform() {
               <Link
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
-<<<<<<< HEAD
               <Link
                 href=&quot;/contact&quot;
                 className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105&quot;
@@ -1349,10 +1300,7 @@ function AIContentIntelligencePlatform() {
                 href=&quot;/2025-innovative-new-services-showcase&quot;
                 className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200&quot;
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 View All Services
               </Link>
             </div>
@@ -1372,7 +1320,6 @@ function AIContentIntelligencePlatform() {
   );
 
 
-=======
   )
 }
                 className='bg - white / 10 backdrop - blur - sm border border - gray - 600 rounded - lg p - 4 text - center hover:bg - white / 20 transition - colors duration - 300';
@@ -1437,19 +1384,12 @@ function AIContentIntelligencePlatform() {
               <Link;
                 href='/2025 - innovative - new - services - showcase';
                 className='inline - flex items - center px - 8 py - 4 bg - white / 10 backdrop - blur - sm border border - gray - 600 text - white font - semibold rounded - lg hover:bg - white / 20 transition - all duration - 200'              >;
-=======
-<<<<<<< HEAD
 );
-=======
-=======
-<<<<<<< HEAD
     </Layout>;
 );
 
 }
-=======
     </Layout>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
           >;
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
@@ -1499,20 +1439,13 @@ function AIContentIntelligencePlatform() {
                 href="/2025-innovative-new-services-showcase";
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200";
               >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 View All Services;
               </Link>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
     </Layout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

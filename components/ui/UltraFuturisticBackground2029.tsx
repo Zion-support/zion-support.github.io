@@ -25,13 +25,11 @@ import { motion } from 'framer-motion';
   y: number;
   coordinate_x: number;
   coordinate_y: number;
-=======
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface Particle {
   x: number;
   y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   vx: number;
   vy: number;
   size: number;
@@ -46,12 +44,9 @@ interface Particle {
 
 
   children: React.ReactNode;
-=======
   children,
 }: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   children: React.ReactNode;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -81,12 +76,10 @@ interface EnergyField {;
 
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
-=======
 
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -215,7 +208,6 @@ interface EnergyField {
 
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
         // Create radial gradient for energy field
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         const gradient = ctx.createRadialGradient(field.x, field.y, 0, field.x, field.y, field.radius);
         gradient.addColorStop(0, `${field.color}${Math.floor((field.intensity * pulseIntensity) * 255).toString(16).padStart(2, '0')}`);
         gradient.addColorStop(0.5, `${field.color}${Math.floor((field.intensity * pulseIntensity * 0.5) * 255).toString(16).padStart(2, '0')}`);
@@ -262,7 +254,6 @@ interface EnergyField {
 
         
 
-=======
 export default /**
  * UltraFuturisticBackground2029 - Function description
  */
@@ -802,7 +793,6 @@ if ( {) {
         });            ctx && ctx.stroke();
           }
         });
-=======
             ctx.stroke()
           }
         })
@@ -825,7 +815,6 @@ if ( {) {
           const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
           if (x === 0) {
             ctx.moveTo(x, y)
-<<<<<<< HEAD
 ;
       // Draw quantum wave interference patterns;
       const time = Date.now () * 0.001;
@@ -990,11 +979,8 @@ if ( {) {
     }
   }, [mousePosition]);
   return (
-<<<<<<< HEAD
     <div className='relative w-full h-full overflow-hidden'>;
-=======
     <div className='relative w-full h-full overflow-hidden'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
@@ -1076,11 +1062,9 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',      }
 
-=======
         cancelAnimationFrame(animationRef.current)
       }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
   }, [mousePosition])
@@ -1088,12 +1072,10 @@ if ( {) {
 
   return (
     <div className="relative w-full h-full overflow-hidden">;
-=======
     }
   }, [mousePosition]);
   return (
     <div className="relative w-full h-full overflow-hidden">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
@@ -1141,7 +1123,6 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',          }}
 
-=======
             opacity: [0.2, 0.4, 0.2];
 
           }}
@@ -1214,7 +1195,6 @@ if ( {) {
           transition={{
             duration: 12,
             repeat: Infinity,
-=======
         />
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
@@ -1224,7 +1204,6 @@ if ( {) {
           transition={{
             duration: 6
             repeat: Infinity
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ease: 'easeInOut',          }}
         />;
         <motion.div;
@@ -1276,7 +1255,6 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
 
-=======
             rotate: [-45, 315];
             opacity: [0.2, 0.6, 0.2];
 
@@ -1305,7 +1283,6 @@ if ( {) {
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
 
 
-=======
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       {/* Content */}
@@ -1315,9 +1292,6 @@ if ( {) {
   );
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
@@ -1333,12 +1307,8 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       <div className='relative z-10'>{children}</div>
     </div>
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

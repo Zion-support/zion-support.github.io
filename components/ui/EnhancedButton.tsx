@@ -35,7 +35,6 @@ export default function EnhancedButton(): any ({;
   ...props;
 }: EnhancedButtonProps) {;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <button
       className={clsx(
@@ -49,7 +48,6 @@ export default function EnhancedButton(): any ({;
 
 }
 
-=======
 import React from './react';
 import clsx from './clsx';
 export type EnhancedButtonProps =;
@@ -92,13 +90,13 @@ function EnhancedButton() {
       {...props}
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
-=======
     />;
 );
+    />;
+);
+    />
+  );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -25,7 +25,6 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 
-=======
 
   Rocket,
   Brain,
@@ -39,18 +38,14 @@ import { motion } from 'framer-motion';
   Eye,;
   Timer,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 
-=======
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 import { cuttingEdge2029Services  } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
@@ -61,8 +56,6 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
     ...spaceColonization2029Services
   ];    website: 'https://ziontechgroup.com'
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function UltraFuturistic2029InnovationsPage() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -75,7 +68,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
   return (
 
@@ -111,9 +103,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
       {/* Background */}
       <UltraFuturisticBackground2029 />;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />;
@@ -121,7 +111,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero Section */}
 
 
@@ -138,7 +127,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
 
-=======
                   all2029Services.reduce ((sum, s) => sum + s.rating, 0) /;
                   all2029Services.length).to_fixed (1),
                 icon: TrendingUp,
@@ -179,7 +167,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
             </h2>;
             <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Join the future of technology with our revolutionary 2029;
               innovations. Contact us today to discover how we can transform;
               your business.;
@@ -204,7 +191,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
           </motion.div>;
         </div>;
       </section>;
-=======
 
         </div>
       </section>
@@ -242,7 +228,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
           </motion.div>
         </div>
       </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Footer */}
       <UltraFuturisticFooter2029 />;
     </>);
@@ -403,23 +388,17 @@ export default function UltraFuturistic2029InnovationsPage() {;
   duration: 0.8;
 }className="bg - gradient - to - r from - purple - 900 / 30 to - pink - 900 / 30 border border - purple - 500 / 30 rounded - 3xl p - 12 backdrop - blur - sm" > <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6"> Ready to Experience 2029? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto"> Join the future of technology with our revolutionary 2029 innovations. Contact us today to discover how we can transform your business. </p> <div className="flex flex - col sm:flex - row items - center justify - center gap - 4"> <a href="/contact" className="px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 text - lg font - semibold shadow - lg hover:shadow - purple - 500 / 25" > Get Started Today </a> <a href= {
   `tel:$ {
-<<<<<<< HEAD
   contact_info.mobile;
 }`;
 }className="px - 8 py - 4 bg - gray - 900 / 50 text - white rounded - xl hover:bg - purple - 900 / 30 border border - gray - 700 hover:border - purple - 500 / 50 transition - all duration - 200 text - lg font - semibold" > Call Now </a> </div> </motion.div> </div> </section> {
   /* Footer */;
 }<UltraFuturisticFooter2029 /> </>)   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   /* Footer */ 
 }<UltraFuturisticFooter2029 /> </>)
 
-=======
   /* Footer */ 
 
 }<UltraFuturisticFooter2029 /> </>)
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

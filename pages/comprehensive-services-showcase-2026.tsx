@@ -23,15 +23,10 @@ import React, { useState, useEffect } from 'react';
 } from 'lucide-react';
 
 interface Service {
-=======
 import { motion } from 'framer-motion';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
   Search,
   Filter,
@@ -46,21 +41,17 @@ import {
   Database,
   Globe,
   Robot,
-<<<<<<< HEAD
   Cube,
   Sparkles,
 } from 'lucide-react';
 ;
 interface Service {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import { motion } from 'framer-motion';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   tagline: string;
@@ -71,7 +62,6 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -102,7 +92,6 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -111,7 +100,6 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
   reviews: number;
 const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
-=======
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   Clock, Zap, Shield, Cloud, Brain, 
@@ -184,7 +172,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     'IT Service ManagementBackup & Disaster RecoveryQuantum Computing & AIBlockchain & Web3Internet of Things (IoT)Edge Computing & 5GAR/VR & Immersive TechnologyRobotics & Automation';
     'Digital Twin & Simulation';
   ];
-=======
 
   const priceRanges = [
     { value: 'all', label: 'All Prices' },
@@ -224,7 +211,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     { value: '100-200', label: '$100 - $200' },;
     { value: '200-400', label: '$200 - $400' },;
     { value: '400-600', label: '$400 - $600' },;
-<<<<<<< HEAD
     { value: '600+', label: '$600+' },;
   ];
   const filteredServices = allServices && allServices.filter(service => {;
@@ -323,7 +309,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         }
       })();
 
-=======
         return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
       case 'price-high':
         return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
@@ -921,7 +906,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
               <motion.div
-<<<<<<< HEAD
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -936,7 +920,6 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     </div>
                     <div>
 <h3 className="text-xl font-bold text-white">{service.name}</h3>
-=======
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -975,7 +958,6 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <p className="text-sm text-gray-300">{service.category}</p>
                     </div>
                   </div>
@@ -983,13 +965,11 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       Popular
                     </div>
-<<<<<<< HEAD
                   )}
                 </div>
 {/* Service Details */}
                 <p className="text-gray-300 mb-4">{service.tagline}</p>
                 {/* Price and Trial */}
-=======
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1007,7 +987,6 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-white">
                     {service.price}<span className="text-sm text-gray-400">{service.period}</span>
@@ -1016,29 +995,24 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     {service.trialDays} days free trial
                   </div>
                 </div>
-<<<<<<< HEAD
                 {/* Features */}
-=======
                 {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="text-xs text-gray-300 flex items-center">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-<<<<<<< HEAD
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 {/* Stats */}
-=======
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1057,7 +1031,6 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="grid grid-cols-3 gap-4 mb-4 text-center">
                   <div>
                     <div className="text-lg font-bold text-white">{service.rating}</div>
@@ -1072,24 +1045,19 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     <div className="text-xs text-gray-400">Setup</div>
                   </div>
                 </div>
-<<<<<<< HEAD
                 {/* Market Info */}
-=======
                 {/* Market Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="mb-4 p-3 bg-white/5 rounded-lg">
                   <div className="text-xs text-gray-300 mb-1">Market Size: {service.marketSize}</div>
                   <div className="text-xs text-gray-300">Growth Rate: {service.growthRate}</div>
                 </div>
-<<<<<<< HEAD
                 {/* CTA Button */}
                 <a
                   href={service.link}
-=======
                 {/* CTA Button */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1101,13 +1069,11 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Learn More & Get Started
-<<<<<<< HEAD
                 </a>
                 {/* Contact Info */}
                 <div className="mt-4 text-center">
@@ -1123,7 +1089,6 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
           </div>
         </div>
 {/* Contact Section */}
-=======
                 </Link>
                 {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
@@ -1159,7 +1124,6 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
             <div className="text-center">
@@ -1198,17 +1162,13 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                 >
                   Email Us
-<<<<<<< HEAD
                 </a>
-=======
                 </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <a
                   href="tel:+13024640950"
                   className="bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
                 >
                   Call Us
-<<<<<<< HEAD
                 </a>
                 Ready to Transform Your Business?
               </h2>
@@ -1241,14 +1201,12 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </div>
       </div>
 
                 className='bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'>;
-=======
 
   /* CTA Button */ 
 }<a > Learn More & Get Started </Link> </div> </div> </motion.div>) ) 
@@ -1256,7 +1214,6 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
 };
 
 
-=======
                   </div>;
                   <div className='text - xs text - gray - 400'>Customers</div>;
                 </div>;
@@ -1354,8 +1311,6 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                 href='tel:+13024640950';
                 className='bg - white / 10 text - white px - 8 py - 3 rounded - lg font - semibold border border - white / 30 hover:bg - white / 20 transition - all duration - 300';
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Call Us;
               </a>            </div>;
           </div>;
@@ -1363,17 +1318,13 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
       </div>;
 
 
-=======
   );
 },;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ComprehensiveServicesShowcase2026;
 
 
-=======
     </div>),
 }
 ;
@@ -1392,6 +1343,4 @@ export default ComprehensiveServicesShowcase2026;
 }</div> </div> <div className="bg - gradient - to - r from - cyan - 600 / 20 to - blue - 600 / 20 rounded - 2xl p - 8 border border - cyan - 400 / 30"> <div className="text - center"> <h2 className="text - 3xl font - bold text - white mb - 4"> text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8"> <div className=" text - center"> <div className=" w - 16 h - 16 bg - cyan - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4"> <Users className=" w - 8 h - 8 text - cyan - 400"/> </div> <h3 className=" text - lg font - semibold text - white mb - 2">Expert Team</h3> <p className=" text - gray - 300 text - sm">Dedicated professionals ready to help</p> </div> <div className=" text - center"> <div className=" w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4"> <Zap className=" w - 8 h - 8 text - blue - 400"/> </div> <h3 className=" text - lg font - semibold text - white mb - 2">Fast Implementation</h3> <p className=" text - gray - 300 text - sm">Quick setup and deployment</p> </div> <div className=" text - center"> <div className=" w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4"> <Shield className=" w - 8 h - 8 text - purple - 400"/> </div> <h3 className=" text - lg font - semibold text - white mb - 2">24 / 7 Support</h3> <p className=" text - gray - 300 text - sm">Round - the - clock assistance</p> </div> </div> <div className=" flex flex - col sm:flex - row gap - 4 justify - center items - center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 8 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg - white / 10 text - white px - 8 py - 3 rounded - lg font - semibold border border - white / 30 hover:bg - white / 20 transition - all duration - 300" > Call Us </Link> </div> </div> </div> </div> </div>);
 }
 export default ComprehensiveServicesShowcase2026;
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

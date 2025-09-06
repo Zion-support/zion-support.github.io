@@ -146,7 +146,6 @@ export default function SpaceTechnologyAIPlatform() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-blue-400" />
@@ -158,7 +157,6 @@ export default function SpaceTechnologyAIPlatform() {;
                 <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Space Technology
                 </span>
                 <br />
@@ -171,7 +169,6 @@ export default function SpaceTechnologyAIPlatform() {;
                 satellite operations, and space data analysis.
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
-=======
 
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Revolutionary AI platform that combines space technology with artificial intelligence to enable 
@@ -183,7 +180,6 @@ export default function SpaceTechnologyAIPlatform() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -209,7 +205,6 @@ export default function SpaceTechnologyAIPlatform() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <span>1-month setup</span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -219,7 +214,6 @@ export default function SpaceTechnologyAIPlatform() {;
                 <div className="flex items-center space-x-2">
                   <Users className="w-5 h-5 text-blue-400" />
                   <span>120+ customers</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
             </motion.div>
@@ -290,21 +284,17 @@ export default function SpaceTechnologyAIPlatform() {;
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
-=======
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -372,10 +362,6 @@ function SpaceTechnologyAIPlatform() {
     'Maxar ($5000 - 50000 / month)',
     'Planet Labs ($1000 - 10000 / month)',
     'Airbus Defence ($10000 - 100000 / month)',
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -383,11 +369,8 @@ import {motion} from 'framer-motion';
 import {Satellite, ArrowRight, CheckCircle, Star, TrendingUp, Globe, Zap, Shield, Users, Rocket, Phone, Mail, MapPin, Brain, Sparkles,} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import Head from 'next/head',
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
@@ -396,7 +379,6 @@ import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-=======
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
@@ -406,15 +388,9 @@ import {
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function SpaceTechnologyAIPlatform() {
 
   const contactInfo = {
-<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -458,18 +434,14 @@ export default function SpaceTechnologyAIPlatform() {
     'Northrop Grumman'
   ];
 
-=======
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',;
   };
 
-=======
     website: 'https://ziontechgroup.com'
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const features = [
     'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
     'API accessExpert consultation'
@@ -481,18 +453,13 @@ export default function SpaceTechnologyAIPlatform() {
     'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
   ],
   const competitors = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     'Maxar ($5000-50000/month)',
     'Planet Labs ($1000-10000/month)',
     'Airbus Defence ($10000-100000/month)',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     'Lockheed Martin',
     'Boeing',
     'Northrop Grumman',
   ];
-<<<<<<< HEAD
 ;
     >;
       <div className='min - h-screen'>;
@@ -607,7 +574,6 @@ export default function SpaceTechnologyAIPlatform() {
             <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>              {features.map ((feature, index) => (
                 <motion.div;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={feature}
                   initial={{ opacity: 0, scale: 0.8, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, scale: 1, coordinate_y: 0 }}
@@ -628,7 +594,6 @@ export default function SpaceTechnologyAIPlatform() {
                   </div>
                 </motion.div>
 
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -643,7 +608,6 @@ export default function SpaceTechnologyAIPlatform() {
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
 
-=======
 
         {/* Market Position Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
@@ -656,7 +620,6 @@ export default function SpaceTechnologyAIPlatform() {
               viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -689,7 +652,6 @@ export default function SpaceTechnologyAIPlatform() {
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     <span className="text-green-300 font-semibold">Our Advantage: AI integration, comprehensive platform, affordable pricing</span>
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </motion.div>
               <motion.div
@@ -756,21 +718,18 @@ export default function SpaceTechnologyAIPlatform() {
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
 
-=======
 
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -781,17 +740,12 @@ export default function SpaceTechnologyAIPlatform() {
                 Transform every aspect of space operations with AI-powered intelligence
               </p>
             </motion.div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-=======
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
 
                   className="group relative"
-=======
                   key={useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -820,7 +774,6 @@ export default function SpaceTechnologyAIPlatform() {
                   className="group relative"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
@@ -834,7 +787,6 @@ export default function SpaceTechnologyAIPlatform() {
                   </div>
                 </motion.div>
 
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -875,7 +827,6 @@ export default function SpaceTechnologyAIPlatform() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -892,21 +843,17 @@ export default function SpaceTechnologyAIPlatform() {
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
                 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.a
-<<<<<<< HEAD
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
                   <Mail className="w-5 h-5" />
                   <span>Email Us</span>
                 </motion.a>
               </div>
-<<<<<<< HEAD
               <div className="p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
 
@@ -922,7 +869,6 @@ export default function SpaceTechnologyAIPlatform() {
                     <MapPin className="w-6 h-6 text-purple-400 mx-auto mb-2" />
                     <p className="text-white font-medium">{contactInfo.address}</p>
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
             </motion.div>
@@ -1109,13 +1055,10 @@ export default function SpaceTechnologyAIPlatform() {
               </p>;
 
 
-=======
 
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   )
 }
 
@@ -1165,10 +1108,6 @@ export default function SpaceTechnologyAIPlatform() {
     </UltraAdvancedFuturisticBackground>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -25,12 +25,31 @@ if ( {) {
   if (return res.status (400).json ({ error: "Missing prompt" })) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+import type { NextApiRequest, NextApiResponse } from "next";
+import OpenAI from "openai";
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || "" });
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "POST") {
+    res.setHeader("AllowPOST");
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+  const { prompt, region, service } = req.body || {};
+  if (!prompt) return res.status(400).json({ error: "Missing prompt" });
   try {
     const system = `You generate conversion - focused, SEO - optimized landing pages in HTML. Include:;
 - A compelling H1;
@@ -46,12 +65,12 @@ Do not include <html>, <body>, or scripts.`;
       temperature: 0.7
     });
     const content = response.choices?.[0]?.message?.content |"";
-=======
-=======
     const user = `Topic: ${prompt}
 
 Region: ${region || 'global'}
 Service focus: ${service || 'general'}
+Region: ${region || "global"}
+Service focus: ${service || "general"}
 Audience: buyers looking to hire talent or rent equipment
 Tone: professional, modern, trustworthy`;
 
@@ -81,7 +100,6 @@ Tone: professional, modern, trustworthy`;
 
     return res && res.status(200).json({
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       slug,
       payload: {
         title,
@@ -92,8 +110,17 @@ body_html: content,
 
         faq}})
   } catch (e) {
+        { role: 'system', content: system },
+        { role: 'user', content: user }
+        { role: "system", content: system },
+        { role: "user", content: user },
+      ],
+      temperature: 0.7,
+    });
 
-=======
+    const content = response.choices?.[0]?.message?.content || "";
+    const title = `Zion Marketplace — ${prompt}`;
+
     console.error (e);
     return res.status (500).json ({ error: "Failed to generate landing page" });
 
@@ -154,8 +181,6 @@ body_html: content,
 
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
     // FAQ generation
@@ -170,19 +195,105 @@ body_html: content,
 
 
     let faq: Array<{ q: string, a: string }> = [];
-=======
+        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
+        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }
+        {
+          role: "system",
+          content:
+            'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.',
+        },
+        {
+          role: "user",
+          content: `Topic: ${prompt} in ${region || "global"} for ${service || "general"}`,
+        },
+      ],
+      temperature: 0.5,
+    });
+
+    let faq: Array<{ q: string, a: string }> = [];
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
       temperature: 0.5}),
     let faq: Array<{ q: string, a: string }> = [],
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    let faq: Array<{ q: string; a: string }> = [];
     try {
-
-      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
+      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || "[]");
     } catch {
       faq = []
+      faq = [];
+    }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const h1 = prompt;
+    const slug = String(prompt)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+    return res.status(200).json({
+      slug,
+      payload: {
+        title,
+        h1,
+        bodyHtml: content,
+        region: region || undefined,
+        service: service || undefined,
+        faq,
+      },
+    });
+  } catch (e) {
+    console.error(e);
+    return res.status(500).json({ error: 'Failed to generate landing page' })
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const h1 = prompt;
+    const slug = String(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    return res.status(200).json({;
+      slug,;
+      payload: {;
+        title,;
+        h1,;
+        bodyHtml: content,;
+        region: region || undefined,;
+        service: service || undefined;
+        faq}});
+  } catch (error) {
+    console.error(e);
+    return res.status(500).json({ error: 'Failed to generate landing page' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: "Failed to generate landing page" });
+  }
+}

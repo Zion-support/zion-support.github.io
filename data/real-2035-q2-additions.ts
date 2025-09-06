@@ -4,7 +4,6 @@
       'On-brand response drafting',
       'Automatic polite follow-ups',
       'Lead/contact enrichment',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Analytics and response SLAs',
     ],
     popular: true,
@@ -37,7 +36,6 @@
     rating: 4 && 4.7,
     reviews: 12,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Branching logic + A/B prompts',
@@ -92,7 +90,6 @@
   },
   {
 
-=======
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
     tagline:;
@@ -188,7 +185,6 @@
   },
   {
 
-=======
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commission rules, and payouts',
@@ -235,7 +231,6 @@
   },
   {
 
-=======
     id: 'smb - analytics - lite',
     name: 'SMB Analytics Lite',
     tagline: 'Traffic, funnels, and conversions without complexity',
@@ -376,7 +371,6 @@
   },
   {
 
-=======
     id: 'automated - email - followups',
     name: 'Automated Email Follow‑ups',
     tagline: 'No - lead - left - behind sequences across inboxes',
@@ -423,7 +417,6 @@
   },
   {
 
-=======
     id: 'podcast - transcription - service',
     name: 'Podcast Transcription Service',
     tagline: 'Accurate transcripts, chapters, and SEO blog exports',
@@ -517,7 +510,6 @@
   },
   {
 
-=======
     id: 'social - scheduler - ai',
     name: 'Social Scheduler AI',
     tagline: 'Auto - generate, schedule, and repurpose posts cross - platform',
@@ -564,7 +556,6 @@
   },
   {
 
-=======
     id: 'lead - enrichment - api',
     name: 'Lead Enrichment API',
     tagline: 'Company, role, and social signals from an email / domain',
@@ -611,7 +602,6 @@
   },
   {
 
-=======
     id: 'consent - management - cmp',
     name: 'Consent Management CMP',
     tagline: 'GDPR / CCPA consent banners, preferences, and audit logs',
@@ -658,7 +648,6 @@
   },
   {
 
-=======
     id: 'cookie - scanner - pro',
     name: 'Cookie Scanner Pro',
     tagline: 'Auto - detects cookies + trackers and updates your policy',
@@ -705,7 +694,6 @@
   },
   {
 
-=======
     id: 'statuspage - sla - tracker',
     name: 'StatusPage SLA Tracker',
     tagline: 'Track uptime / incidents and publish SLA reports',
@@ -752,7 +740,6 @@
   },
   {
 
-=======
     id: 'agentic - lead - qualifier',
     name: 'Agentic Lead Qualifier',
     tagline: 'Website chat agent that pre - qualifies and routes leads',
@@ -799,7 +786,6 @@
   },
   {
 
-=======
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -846,7 +832,6 @@
   },
   {
 
-=======
     id: 'feature - flag - auditor',
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end - of - life automation',
@@ -856,9 +841,7 @@
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.',
     features: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -899,7 +882,6 @@
 
   {
 
-=======
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -946,7 +928,6 @@
   },
   {
 
-=======
     id: 's3 - lifecycle - optimizer',
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
@@ -993,7 +974,6 @@
   },
   {
 
-=======
     id: 'pii - discovery - scanner',
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -1052,7 +1032,6 @@
 
     features: [
 
-=======
     id: 'api - breaking - change - watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -1097,10 +1076,8 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'synthetic - journey - monitor',
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
@@ -1147,7 +1124,6 @@
   },
   {
 
-=======
     id: 'iam - permission - analyzer',
     name: 'IAM Permission Analyzer',
     tagline:;
@@ -1195,7 +1171,6 @@
   },
   {
 
-=======
     id: 'warehouse - cost - optimizer',
     name: 'Data Warehouse Cost Optimizer',
     tagline: 'Right - size warehouses and schedule off - peak workloads',
@@ -1242,7 +1217,6 @@
   },
   {
 
-=======
     id: 'email - warmup - monitor',
     name: 'Email Warmup & Reputation Monitor',
     tagline: 'Track sender reputation and run inbox placement tests',
@@ -1289,7 +1263,6 @@
   },
   {
 
-=======
     id: 'ai - meeting - to - ticket',
     name: 'AI Meeting‑to‑Ticket Copilot',
     tagline: 'Turn meeting action items into Jira / GitHub tickets',
@@ -1336,7 +1309,6 @@
   },
 ];	{
 
-=======
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1350,7 +1322,6 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		];
 		popular: true;
@@ -2422,12 +2393,10 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4 && 4.6,
 
 		reviews: 6
-<<<<<<< HEAD
 	}
 ];
 
 
-=======
   id: 'ai - email - responder';
   name: 'AI Email Responder',
   tagline: 'Autonomous email triage, drafting, and follow - ups for sales and support';
@@ -3415,12 +3384,10 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.6,
   reviews: 6;
 }
-=======
 		rating: 4.6
 		reviews: 6
 
 
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -4418,16 +4385,10 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		reviews: 6;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -5423,11 +5384,5 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 24,;
 		rating: 4.6;
 		reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

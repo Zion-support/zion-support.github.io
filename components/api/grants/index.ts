@@ -18,7 +18,6 @@ function readAllGrants(): GrantApplication[] {
   })
 }
 
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -60,7 +59,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         res && res.status(400).json({ error: 'Missing required fields' });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return
   CreateGrantPayload,
   GrantApplication,
@@ -161,7 +159,6 @@ if ( {) {
     }
     return;
   }
-<<<<<<< HEAD
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' });
@@ -170,12 +167,8 @@ if ( {) {
   }
 
 
-=======
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   res.setHeader('Allow', 'GET, POST');
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

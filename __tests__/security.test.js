@@ -10,7 +10,6 @@ test && test.describe('"Security"'"
       /api[_-]?keys*[:=]s*['"][^'"'"
       /secrets*[:=]s*['"][^'"'"
       /tokens*[:=]s*['"][^'"
-<<<<<<< HEAD
     "await"'"
       const csrfToken = form && form.locator('input[name="_token"], input[name="csrf_token"
     "await"'"
@@ -20,7 +19,6 @@ test && test.describe('"Security"'"
       /api[_-]?keys*[:=]s*['"][^'"'"
       /secrets*[:=]s*['"][^'"'"
       /tokens*[:=]s*['"][^'"'"
-=======
     "await"
       const csrfToken = form.locator('input[name="_token"], input[name="csrf_token"
     "await"
@@ -125,7 +123,4 @@ test.describe('"Security": Tests', () => {';
       expect(rel).toContain('noopener')}
   })})';
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
       /tokens*[:=]s*['"][^'"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

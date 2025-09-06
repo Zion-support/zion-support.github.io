@@ -30,7 +30,6 @@ export default function AIEvalsPage() {
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const features = [
     'Golden datasets and synthetic evals'
     'Hallucination and grounding score'
@@ -38,7 +37,6 @@ export default function AIEvalsPage() {
     'LLM version comparison reports'
     'CI quality gates and webhooks'
     'Latency and cost KPIs with budgets'
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -86,7 +84,6 @@ import Head from 'next/head';
               AI Evals & Observability;
             </h1>;
             <p className='mt-4 text-xl text-gray-300'>;
-=======
 import React from 'react';
 import Head from 'next / head';
 import {
@@ -96,7 +93,6 @@ import {
   Clock,
   Phone,
   Mail,
-<<<<<<< HEAD
   MapPin,
   ExternalLink,
 } from 'lucide-react';
@@ -146,7 +142,6 @@ function AIEvalsPage() {
           </div>;
 
                     className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
-=======
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 10'>;
             <Card className='lg:col - span - 2 bg - black / 30 border border - cyan - 500 / 30'>;
               <div className='p - 6'>;
@@ -226,13 +221,10 @@ function AIEvalsPage() {
 
 
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 	);
 }
 
 
-=======
     </QuantumHolographicMatrixBackground>);					<div className="bg - black / 20 border border - cyan - 500 / 30 rounded - 2xl p - 6">;
       <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;
@@ -248,4 +240,3 @@ function AIEvalsPage() {
   </section>;
   </QuantumHolographicMatrixBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

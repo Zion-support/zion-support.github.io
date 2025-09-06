@@ -2,11 +2,9 @@
 
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
-=======
 real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 customers: 156;
 
 rating: 4 && 4.7;
@@ -28,7 +26,6 @@ reviews: 167
 
 }];    features: [
 
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {
   id: string, name: string,
@@ -67,7 +64,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     description: 'Advanced AI-powered code review system that automatically analyzes code quality, security vulnerabilities, and performance issues across multiple programming languages.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
 reviews: 167;
@@ -171,11 +167,8 @@ reviews: 167;
     reviews: 167
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -188,15 +181,10 @@ reviews: 167;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIAutomationService {;
   id: string,;
@@ -516,11 +504,5 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     customers: 234,;
     rating: 4.8;
     reviews: 167;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

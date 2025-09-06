@@ -2,7 +2,6 @@
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
@@ -18,21 +17,16 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
     const price = parseInt(solution && solution.price.replace('$', ''));
-=======
   return specializedITSolutions2026.filter(solution => {;
     const price = parseInt(solution.price.replace('$', ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -282,11 +276,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface SpecializedITSolution2026 {;
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

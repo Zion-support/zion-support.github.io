@@ -1,22 +1,13 @@
 
 /* eslint - env node */;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /* eslint-env node */
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = {
 
-=======
 
 
 /* eslint-env node */
 module.exports = {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   env: {
     node: true,
     es2021: true
@@ -24,7 +15,6 @@ module.exports = {
 
 
 
-=======
 
 
   parser: '@typescript-eslint/parser',
@@ -50,7 +40,6 @@ module.exports = {
     es2021: true
   },
 
-=======
 
 
 
@@ -252,10 +241,8 @@ module.exports = {
     "@next/next/no-img-element": "off"
   },
   ignore_patterns: [;
-=======
 
   ignorePatterns: [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     "node_modules/",
     ".next/",
     "out/",
@@ -383,20 +370,15 @@ module.exports = {
 
 
 
-=======
-
-
-=======
-};
-
 
 
 };
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
+
+};
+
+
     "commit-and-push.js"
   ]
 };
@@ -445,7 +427,6 @@ module.exports = {
     "automation - runner.js",
     "basic - test.js",
     "broken_files_backup/",
-<<<<<<< HEAD
     "build - verification.js",
     "check - syntax.js",
     "clean - conflicts.js",
@@ -489,4 +470,3 @@ module.exports = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

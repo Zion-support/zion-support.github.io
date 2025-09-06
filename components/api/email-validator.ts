@@ -1,31 +1,19 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 
  import type { NextApiRequest, NextApiResponse } from 'next';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface EmailValidationResult {
   email: string;
   is_valid: boolean;
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
  import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface EmailValidationResult {
   email: string;
   isValid: boolean;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   score: number;
   suggestions: string[];
   details: {
@@ -80,10 +68,8 @@ export default async function handler(
     // Check for free email providers
     const freeProviders = [
 
-=======
       'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
     const isFreeProvider = freeProviders && freeProviders.some(provider => domain === provider);
@@ -122,7 +108,6 @@ export default async function handler(
       isValid: score >= 70;
       score: Math && Math.max(0, score);
 
-=======
       suggestions.push('Check email format (should be user@domain.com)')
     }
     if (isDisposable) {
@@ -139,7 +124,6 @@ const result: EmailValidationResult = {
       isValid: score >= 70,
       score: Math.max(0, score);
 
-=======
         hasValidFormat,
         hasValidDomain,
         hasValidMX: true, // Simplified for demo;
@@ -153,7 +137,6 @@ const result: EmailValidationResult = {
   } catch (error) {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
-=======
       suggestions.push('Check email format (should be user@domain.com)');
     if (isDisposable) {
       suggestions.push('Consider using a permanent email address');
@@ -182,12 +165,9 @@ const result: EmailValidationResult = {
   } catch (error) {
     console.error('Email validation error:', error);
     res.status(500).json({ error: 'Internal server error' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }      email;
       is_valid: score >= 70;
       score: Math.max (0, score);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       suggestions;
       details: {
         hasValidFormat;
@@ -207,7 +187,6 @@ const result: EmailValidationResult = {
 
 }
 
-=======
     }
 ;
     res.status (200).json (result);
@@ -215,10 +194,6 @@ const result: EmailValidationResult = {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
 
-<<<<<<< HEAD
-=======
     res.status(500).json({ error: 'Internal server error' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

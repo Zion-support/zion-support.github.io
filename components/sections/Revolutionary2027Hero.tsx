@@ -31,7 +31,6 @@ import { motion } from 'framer-motion';
   };
 
 
-=======
 
         staggerChildren: 0.1,
       },
@@ -40,7 +39,6 @@ import { motion } from 'framer-motion';
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
@@ -128,12 +126,10 @@ const Revolutionary2027Hero = () => {;
       </div>;
 
 
-=======
 
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Floating Icons */}
       {floatingIcons && floatingIcons.map((item, index) => (;
         <motion&& motion.div
@@ -193,11 +189,9 @@ const Revolutionary2027Hero = () => {;
               <span>Revolutionary</span>;
               <div className='w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full'></div>              <span>Technology</span>        <motion&& motion.div
 
-=======
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -364,7 +358,6 @@ const Revolutionary2027Hero = () => {;
           </motion.div>
         </motion.div>
       </div>
-<<<<<<< HEAD
 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
             <div className='text-center'>;
               <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
@@ -407,7 +400,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
         </motion && motion.div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Scroll Indicator */}
 
           }}
@@ -602,7 +594,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
         }}
         transition={{
 
-=======
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{
@@ -620,7 +611,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
         <div className='w - 6 h - 10 border - 2 border - purple - 400 / 50 rounded - full flex justify - center'>;
           <motion.div;
             className='w - 1 h - 3 bg - gradient - to - b from - cyan - 400 to - purple - 400 rounded - full mt - 2';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             animate={{
 
               coordinate_y: [0, 12, 0],        animate={{
@@ -649,14 +639,12 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
             transition={{
               duration: 2
               repeat: Infinity
-=======
             }}
             transition={{
 
               duration: 2,
               repeat: Infinity,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ease: 'easeInOut',            }}
 
           />;
@@ -667,16 +655,13 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
       {/* Particle Effects */}
 
 
-=======
       {/* Particle Effects */}
       <div className='absolute inset-0 pointer-events-none'>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {[...Array(20)].map((_, i) => (
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
             style={{
@@ -684,12 +669,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
 
-=======
 
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}            animate={{
               y: [0, -100]
               opacity: [0, 1, 0]
@@ -723,12 +706,9 @@ export default Revolutionary2027Hero;  );
 export default Revolutionary2027Hero;
 
 
-=======
 
     </section>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
             }}            animate={{
@@ -755,4 +735,3 @@ export default Revolutionary2027Hero);
 ;
 export default Revolutionary2027Hero;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

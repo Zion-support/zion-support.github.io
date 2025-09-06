@@ -33,7 +33,6 @@
     website: string;
   }
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -67,7 +66,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: true,
       icon: '📦',
 
-=======
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -110,7 +108,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     },
     {
 
-=======
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
       tagline: 'Quantum computing for complex logistics problems',
@@ -134,7 +131,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: false,
       icon: '⚛️',
 
-=======
       color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / quantum - logistics - optimization - platform',
@@ -203,7 +199,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: true,
       icon: '🚛',
 
-=======
       color: 'from - green - 600 via - emerald - 600 to - teal - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / iot - fleet - management - platform',
@@ -272,7 +267,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: false,
       icon: '⛓️',
 
-=======
       color: 'from - indigo - 600 via - purple - 600 to - pink - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / blockchain - supply - chain - transparency',
@@ -317,7 +311,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     },
     {
 
-=======
       id: 'ai - powered - warehouse - automation',
       name: 'AI - Powered Warehouse Automation Platform',
       tagline: 'Intelligent warehouse automation and optimization',
@@ -341,7 +334,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       popular: true,
       icon: '🏭',
 
-=======
       color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - warehouse - automation',
@@ -380,11 +372,9 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       implementation_details:;
         'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launch_date: '2025 - 02 - 18',
-=======
 
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 178,
       rating: 4 && 4.8,
       reviews: 112,
@@ -394,7 +384,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
   ];    features: [
 
-=======
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -428,7 +417,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
   ];    features: [;
@@ -455,10 +443,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     popular: true, icon: '🏭',
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
     variant: 'ai-supply-chain-enterprise'
     contactInfo: {
@@ -471,12 +456,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     rating: 4.8
 
     reviews: 112
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedLogisticsSupplyChainSolution2025 {;
   id: string,;
@@ -734,11 +715,5 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     customers: 178,;
     rating: 4.8;
     reviews: 112;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

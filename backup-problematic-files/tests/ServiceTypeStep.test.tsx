@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 
 describe('ServiceTypeStep', () => {
@@ -7,7 +6,6 @@ describe('ServiceTypeStep', () => {
     expect(true).toBe(true);
   });
 });
-=======
 
 interface ServiceTypeStep.testProps {
   className?: string;
@@ -23,4 +21,3 @@ const ServiceTypeStep.test: React.FC<ServiceTypeStep.testProps> = ({ className }
 }
 }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -298,7 +298,6 @@ export default function MicroSAASPage() {;
   return (;
 
     <div className="space-y-8">;
-=======
 "use client",
 import { useState  } from './react';,
 interface MicroSAASService {
@@ -313,8 +312,6 @@ interface MicroSAASService {
   icon: string,
   benefits: string[],
   integrations: string[],
-=======
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface MicroSAASService {id: string;
@@ -328,7 +325,6 @@ interface MicroSAASService {id: string;
   icon: string;
   benefits: string[];
   integrations: string[];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   deployment: string;
 }
 const microSAASServices: MicroSAASService[] = [;
@@ -608,7 +604,6 @@ const microSAASServices: MicroSAASService[] = [;
     ],
     deployment: "Enterprise cloud with compliance features";
   }
-<<<<<<< HEAD
 ],
 export default /**
  * MicroSAASPage - Function description
@@ -616,10 +611,8 @@ export default /**
 function MicroSAASPage() {
   return (
     <div className="space - y-8">;
-=======
 ];
 export default function MicroSAASPage() {return (;
-=======
 "use client",;
 import { useState } from "react",;
 interface MicroSAASService {;
@@ -917,9 +910,7 @@ const microSAASServices: MicroSAASService[] = [;
 ],;
 export default function MicroSAASPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="space-y-8">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">Micro SAAS Solutions</h1>;

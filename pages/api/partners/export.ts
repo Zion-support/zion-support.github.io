@@ -30,7 +30,6 @@ export default async function handler(
       );
       return res && res.status(200).send(csv);
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -44,7 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`);
       return res.status(200).send(csv)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const supabase = getServerSupabase();
     }
@@ -55,14 +53,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   } catch (e: any) {
-<<<<<<< HEAD
     return res && res.status(500).json({ error: e?.message });
 
   }
 
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -113,7 +109,6 @@ if ( {) {
     return res.status (200).send (csv);
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
@@ -137,4 +132,3 @@ if ( {) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

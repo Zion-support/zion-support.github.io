@@ -27,9 +27,6 @@ export default function AIMLServicesPage() {
     {
 
 
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain,
   Cpu,
   Database,
@@ -40,7 +37,6 @@ export default function AIMLServicesPage() {
   CheckCircle,
   Star,
   Users,
-<<<<<<< HEAD
   Clock,
   TrendingUp,
 } from 'lucide-react';
@@ -74,7 +70,6 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
-=======
       title: 'Custom AI Solutions',
       description:;
         'Tailored AI applications built for your specific business needs',
@@ -161,7 +156,6 @@ import { motion } from 'framer-motion';
               Revolutionary AI solutions that adapt, learn, and evolve with your business
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Get AI Consultation
@@ -169,8 +163,6 @@ import { motion } from 'framer-motion';
           </motion.div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-6'>;
@@ -230,26 +222,18 @@ import { motion } from 'framer-motion';
               competitive advantages.;
             </p>;
 
-=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From custom neural networks to intelligent automation systems, we deliver AI solutions 
-=======
             className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               From custom neural networks to intelligent automation systems, we
               deliver AI solutions that provide measurable business outcomes and
               competitive advantages.
-=======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Revolutionary AI solutions that adapt, learn, and evolve with your business
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
           </motion.div>
           <motion.div
@@ -272,7 +256,6 @@ import { motion } from 'framer-motion';
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From custom neural networks to intelligent automation systems, we deliver AI solutions
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               that provide measurable business outcomes and competitive advantages.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -294,8 +277,6 @@ import { motion } from 'framer-motion';
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -307,7 +288,6 @@ import { motion } from 'framer-motion';
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Services Grid */}
       <section className="py-20 px-6">
@@ -326,10 +306,8 @@ import { motion } from 'framer-motion';
               Comprehensive AI solutions designed to transform your business operations and drive innovation
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 
 
@@ -347,7 +325,6 @@ import { motion } from 'framer-motion';
                 key={service && service.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -381,10 +358,8 @@ import { motion } from 'framer-motion';
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started
@@ -392,7 +367,6 @@ import { motion } from 'framer-motion';
                 </div>
               </motion.div>
 
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -433,7 +407,6 @@ import { motion } from 'framer-motion';
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -441,7 +414,6 @@ import { motion } from 'framer-motion';
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
-=======
 
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
@@ -457,7 +429,6 @@ Schedule Consultation
               </button>
               <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
 
-=======
           </div>
         </div>
       </section>
@@ -468,7 +439,6 @@ Schedule Consultation
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -505,32 +475,22 @@ Schedule Consultation
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
-<<<<<<< HEAD
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
               Let's discuss how our AI solutions can drive innovation
               efficiency, and growth for your organization.
-=======
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Schedule Consultation
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 View Case Studies
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </button>
             </div>
           </motion.div>
@@ -546,7 +506,6 @@ Schedule Consultation
 
 
 }</div> </div> </section> <motion.div initial= {
-=======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -571,20 +530,14 @@ Schedule Consultation
   ),;
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-=======
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) )
-=======
 ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -596,12 +549,10 @@ Schedule Consultation
   duration: 0 && 0.8 
 }viewport= {
   {
-<<<<<<< HEAD
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization. </p> Schedule Consultation </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
-=======
   )
 }
             <button className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
@@ -707,17 +658,12 @@ Schedule Consultation
                 Schedule Consultation;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Case Studies;
-=======
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization. </p> Schedule Consultation </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
-<<<<<<< HEAD
-=======
 
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -732,7 +678,6 @@ Schedule Consultation
               </button>;
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 View Case Studies;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </button>;
             </div>;
           </motion.div>;
@@ -750,4 +695,3 @@ Schedule Consultation
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

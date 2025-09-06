@@ -30,7 +30,6 @@ import { motion } from 'framer-motion';
 
       x: number,
       y: number,
-=======
       max_life: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
 
@@ -60,11 +59,9 @@ import { motion } from 'framer-motion';
       alpha: number,;
       life: number,;
       maxLife: number;
-=======
           y = -10;
           vx = (Math.random() - 0.5) * 2;
           vy = Math.random() * 2 + 1;
-=======
       max_life: number;
     const colors = [;
       '#00ffff', // Cyan;
@@ -128,7 +125,6 @@ import { motion } from 'framer-motion';
     };
 
     const initParticles = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       particles = [];
       for (let i = 0; i < 100; i++) {;
         particles && particles.push(createParticle());      for (let i = 0, i < 100, i++) {;
@@ -155,7 +151,6 @@ import { motion } from 'framer-motion';
           particle && particle.x, particle && particle.y, particle && particle.size * 3;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         );
         gradient && gradient.addColorStop(0, particle && particle.color);
         gradient && gradient.addColorStop(1, 'transparent');
@@ -178,9 +173,7 @@ import { motion } from 'framer-motion';
           }
         });
 
-=======
             Math.pow(particle1.x - particle2.x, 2) + 
-=======
         ctx.restore();      });        ctx.restore()
       });
       // Draw connecting lines between nearby particles
@@ -191,22 +184,18 @@ import { motion } from 'framer-motion';
           const distance = Math.sqrt(
             Math.pow(particle1.x - particle2.x, 2) +
               Math.pow(particle1.y - particle2.y, 2)          );            Math.pow(particle1.x - particle2.x, 2) +
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             Math.pow(particle1.y - particle2.y, 2)
           );
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
             ctx.lineTo(particle2.x, particle2.y);
-<<<<<<< HEAD
             ctx.stroke()
           }
         })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       });
 
-=======
       const gridSize = 50;
       for (let x = 0, x < canvas.width, x += gridSize) {
         ctx.beginPath();
@@ -354,7 +343,6 @@ if ( {) {
         ctx.stroke ();
       }
 
-=======
       canvas.height = window.innerHeight
     };
 
@@ -368,7 +356,6 @@ if ( {) {
         ctx && ctx.stroke();
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
       for (let y = 0, y < canvas && canvas.height, y += gridSize) {;
         ctx && ctx.beginPath();
@@ -395,10 +382,8 @@ if ( {) {
       }
     };  }, []);        cancelAnimationFrame(animationRef && animationRef.current);
 
-=======
         cancelAnimationFrame(animationRef.current)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }, []);
@@ -503,12 +488,10 @@ if ( {) {
             duration: 10
             repeat: Infinity
             ease: 'linear',            ease: "linear"
-=======
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)' }}
       />
       
-=======
 
       {/* Floating Geometric Shapes */}
       <div className="fixed inset - 0 pointer - events - none z - 10">;
@@ -590,7 +573,6 @@ if ( {) {
           animate={{
             rotate: [0, -180, -360];
             opacity: [0.4, 0.7, 0.4];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
           transition={{
 
@@ -611,11 +593,8 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
-=======
             ease: 'linear',            ease: "linear";
           }}
         />;
@@ -624,7 +603,6 @@ if ( {) {
       <div className='fixed inset - 0 pointer - events - none z - 20'>;
         <motion.div;
           className='absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent';
-=======
             ctx.stroke();
           }
         });      });            ctx.stroke()
@@ -778,46 +756,29 @@ if ( {) {
             opacity: [0.4, 0.7, 0.4]
           }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
             duration: 10
             repeat: Infinity
             ease: 'linear',            ease: "linear"
           }}
-=======
             duration: 10,
             repeat: Infinity,
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'linear',            ease: "linear"
           }}
-=======
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Energy Field Effects */}
       <div className='fixed inset-0 pointer-events-none z-20'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           animate={{
             coordinate_x: ['-100%', '100%'],          }}
           transition={{
@@ -825,12 +786,9 @@ if ( {) {
             duration: 15,
             repeat: Infinity,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent"
-=======
             ease: 'linear',        <motion.div;
           className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 5 to - transparent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             coordinate_x: ['-100%100%'];
           }}
@@ -838,10 +796,8 @@ if ( {) {
 
 
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent"
-=======
         <motion.div;
           className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 500 / 5 to - transparent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             coordinate_y: ['-100%100%'];
           }}
@@ -859,7 +815,6 @@ if ( {) {
           }}
 
 
-=======
             duration: 20,
             repeat: Infinity,
 
@@ -868,7 +823,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />
       </div>
       {/* Content */}
@@ -887,7 +841,6 @@ if ( {) {
     </div>;
   );
 }
-=======
             ease: 'linear',            ease: "linear";
           }}
         />;
@@ -904,13 +857,11 @@ if ( {) {
 ;
 export default UltraFuturisticBackground2026;
 
-=======
       <div className="relative z-30">
         {children}
       </div>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Holographic Overlay */}
 
       <div className="fixed inset-0 pointer-events-none z-40">;
@@ -925,12 +876,9 @@ export default UltraFuturisticBackground2026;
 export default UltraFuturisticBackground2026;
 
 
-=======
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Content */}
@@ -942,14 +890,9 @@ export default UltraFuturisticBackground2026;
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default UltraFuturisticBackground2026;
       <div className="fixed inset - 0 pointer - events - none z - 40">;
         <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 400 / 2 to - transparent" />;
@@ -959,10 +902,7 @@ export default UltraFuturisticBackground2026;
 }
 ;
 export default UltraFuturisticBackground2026;
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       {/* Holographic Overlay */}
       <div className='fixed inset-0 pointer-events-none z-40'>
         <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />
@@ -974,5 +914,3 @@ export default UltraFuturisticBackground2026;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

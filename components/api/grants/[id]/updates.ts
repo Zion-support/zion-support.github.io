@@ -59,17 +59,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     existing.updates = [...(existing.updates |[]), update];
     existing.updatedAt = new Date().toISOString();
-=======
   const { id } = req && req.query as { id: string };
   if (!id) return res && res.status(400).json({ error: 'Missing id' });
-=======
   const { id } = req.query as { id: string }
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!id) return res.status(400).json({ error: 'Missing id' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const existing = readGrant(id);
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
   if (req && req.method === 'GET') {
@@ -89,12 +84,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     existing && existing.updatedAt = new Date().toISOString();
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     writeGrant(existing);
     return res && res.status(201).json({ update })
   }
 
-=======
 
 
   res && res.setHeader('AllowGET, POST');
@@ -102,7 +95,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 
-=======
 import type { GrantApplication } from '../../../../types / grants';
 ;
 const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants');
@@ -196,16 +188,10 @@ if ( {) {
   res.status (405).end ('Method Not Allowed');
   }
 
-<<<<<<< HEAD
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed')
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

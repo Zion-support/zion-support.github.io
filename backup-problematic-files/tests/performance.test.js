@@ -8,7 +8,6 @@ interface Performance.testProps {
   // Add props here as needed
 }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function Performance.test({ }: Performance.testProps) {
   return (
     <div>
@@ -17,10 +16,7 @@ export default function Performance.test({ }: Performance.testProps) {
     </div>
   );
 }
-<<<<<<< HEAD
 '
 import React from 'react'
-=======
 }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

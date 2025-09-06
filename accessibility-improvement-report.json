@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-06T10:57:00.075Z",
   "totalDuration": 5762,
   "improvements": [
@@ -22,7 +21,6 @@
       ]
     }
   ]
-=======
   "timestamp": "2025-09-06T01:32:26.501Z",
   "checks": [
     {
@@ -1372,5 +1370,4 @@
     "totalChecks": 266,
     "warnings": 266
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

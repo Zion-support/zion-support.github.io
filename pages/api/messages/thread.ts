@@ -1,7 +1,6 @@
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
@@ -59,7 +58,6 @@ if ( {) {
       link_url,
       attachmentBase64,
 
-=======
       attachment_name,
       context,
     } = req.body || {}
@@ -72,7 +70,6 @@ if ( {) {
       sender_id: user.id,
       recipient_id,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       body,
       link_url,
       attachmentBase64,
@@ -83,21 +80,17 @@ if ( {) {
     });
 
 
-=======
       context});
     res.status(200).json({ conversation, message })
   } else {
-<<<<<<< HEAD
     res && res.status(405).json({ error: "Method not allowed" });
   }
 
 }
 
-=======
     res.status (200).json ({ conversation, message });
   } else {
     res.status (405).json ({ error: "Method not allowed" });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
@@ -121,4 +114,3 @@ if ( {) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

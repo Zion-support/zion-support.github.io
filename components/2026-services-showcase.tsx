@@ -283,13 +283,11 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion&& motion.div
-=======
         </Head>
           <meta property="og:description" content="1500+ cutting - edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />;
           <meta property="og:url" content="https://ziontechgroup.com / 2026 - services - showcase" />;
@@ -351,7 +349,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </p>
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -375,7 +372,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
 </div>;
                   <div className='text-gray-400 text-sm'>Emerging Tech</div>                </div>                  2026 Revolutionary Services;
                 </span>;
@@ -407,7 +403,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Search and Filter Section */}
 
                     onChange={e => setSearchTerm(e && e.target.value)}
@@ -419,13 +414,11 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                 <div className="relative">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
-=======
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 {/* Search */}
-=======
         {/* Search and Filter Section */}
         <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -435,7 +428,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -459,7 +451,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                         {category && category.name} ({category && category.count});
                       </option>;
 
-=======
 
                 {/* Category Filter */}
                 <div className="relative">
@@ -474,19 +465,15 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                         {category.name} ({category.count})
                       </option>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </select>;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Sort By */}
 
 
@@ -499,7 +486,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-=======
 
         {/* Services Grid */}
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
@@ -591,8 +577,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
                       {service.description}
                     </p>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </div>;
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service && service.name}
@@ -639,7 +623,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                     </p>;
                     {/* Features */}
 
-=======
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
@@ -647,7 +630,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
-=======
 
 
                       {service.name}
@@ -669,17 +651,13 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {/* Category and Technology */}
 
                     <div className="flex items-center justify-between mb-4">
@@ -713,10 +691,8 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                     {/* CTA Button */}
                     <a
 
-=======
                       href={service.link}
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
-=======
 
 
                     {/* CTA Button */}
@@ -726,25 +702,19 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     >
                       Learn More
                     </a>
                   </div>
                 </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -752,7 +722,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                 animate={{ opacity: 1 }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -764,10 +733,8 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -776,8 +743,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                         </span>;
@@ -930,16 +895,11 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                   href="/contact"
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
               className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
             >;
               <h2 className='text - 3xl font - bold text - white mb - 6'>;
@@ -1012,13 +972,6 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

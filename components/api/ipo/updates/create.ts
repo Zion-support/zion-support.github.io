@@ -7,7 +7,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
-=======
 
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
@@ -37,9 +36,7 @@ function handler() {
     kpis: kpis || '',
     opens: 0,
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
@@ -52,7 +49,6 @@ function handler() {
 }
 
 
-=======
   }
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
@@ -76,11 +72,6 @@ function handler() {
   writeJsonFile ('updates.json', updates);
   res.status (200).json (update);
 
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

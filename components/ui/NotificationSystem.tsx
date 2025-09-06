@@ -1,10 +1,8 @@
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -26,7 +24,6 @@ const getNotificationStyles = (type: Notification["type"]): string => {;
     error: "bg-red-50 border-red-400 text-red-800",;
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800",;
     info: "bg-blue-50 border-blue-400 text-blue-800",;
-=======
 
     success: "bg-green-50 border-green-400 text-green-800",
     error: "bg-red-50 border-red-400 text-red-800",
@@ -38,7 +35,6 @@ const getNotificationStyles = (type: Notification["type"]): string => {;
 };
 
 
-=======
 import React from 'react';
 
 interface Notification {
@@ -71,7 +67,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     }
   };
 
-=======
 export default function NotificationSystem({
   notifications,
   onDismiss,
@@ -80,7 +75,6 @@ export default function NotificationSystem({
   if (notifications.length === 0) return null;
 
   return (
-<<<<<<< HEAD
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
       {notifications.map((notification) => (
         <div
@@ -98,7 +92,6 @@ export default function NotificationSystem({
               <button
                 onClick={() => onDismiss(notification.id)}
                 className="ml-2 text-gray-400 hover:text-gray-600"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 ×
               </button>
@@ -191,13 +184,8 @@ if (return null) {
     </div>);
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

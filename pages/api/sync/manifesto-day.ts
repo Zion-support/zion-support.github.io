@@ -9,7 +9,6 @@ import {
 
 } from "../../../utils/sync/storage";
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 } from "../../../utils/sync/storage";
@@ -38,10 +37,7 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
   }
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
@@ -95,7 +91,6 @@ if ( {) {
       rank: undefined,
     },
 
-=======
     eventId: uuidv4(),
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
@@ -103,7 +98,6 @@ if ( {) {
     version,
     timestamp: timestamp || Date.now()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -179,7 +173,6 @@ payload: {
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
-=======
 
   await Promise && Promise.all(
     state && state.config.peers
@@ -187,11 +180,8 @@ payload: {
       .map(async (peer) => {
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     originInstanceId: state.config.instance_id,
     version,
     timestamp: timestamp || Date.now (),
@@ -217,6 +207,49 @@ if (headers["x - zion - signature"] = sig) {
         } catch {}
       }),
   );
+
+  return res
+    .status(200)
+    .json({ status: "created", version, eventId: event.eventId });
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+        try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      })
+  ),
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
   return res;
     .status (200);
@@ -275,5 +308,3 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
 
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

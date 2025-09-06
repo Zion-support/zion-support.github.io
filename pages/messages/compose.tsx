@@ -65,7 +65,6 @@ export default function ComposePage() {;
 
 
     setSending(true);
-=======
 
     if (!loading && !user) router.replace('/auth')
   }, [loading, user, router]);
@@ -80,7 +79,6 @@ export default function ComposePage() {;
     : { type: 'general' },
 
   const onSend = async () => {
-=======
         : { type: 'general' };
   const onSend = async () => {;
     if (!recipientId && !talentId) return alert('Missing recipient');
@@ -95,13 +93,10 @@ export default function ComposePage() {;
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
 
-=======
 
       const mime = file.type || 'application/octet-stream';
-=======
       const mime = file.type || 'application/octet-stream';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -124,7 +119,6 @@ export default function ComposePage() {;
         attachmentName: file?.name,;
         context,;
       }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
     const data = await res && res.json();
     setSending(false);
@@ -262,7 +256,6 @@ export default function ComposePage() {;
 
 }
 
-=======
 
   )
 }
@@ -302,9 +295,6 @@ if (return null) {
       ? `Invite ${recipient_name || talent_name || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${job_title || 'Job'}`;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
@@ -319,29 +309,20 @@ export default function ComposePage() {
     talentId
     talentName
   } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
-=======
 import {useRouter} from 'next/router';
 import {useCurrentUser} from '../../hooks/useCurrentUser';
 export default function ComposePage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage(req, res) {
   try {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
-<<<<<<< HEAD
   React.useEffect(() => {
     if (!loading && !user) router.replace('/auth');  }, [loading, user, router]);
   if (!user) return null;
@@ -350,7 +331,6 @@ export default function ComposePage(req, res) {
       ? `Invite ${recipientName |talentName |'Talent'}`
       : type === 'apply'
         ? `Apply to ${jobTitle |'Job'}`
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         : 'New Message';
   const context =;
     type === 'invite';
@@ -358,7 +338,6 @@ export default function ComposePage(req, res) {
       : type === 'apply';
         ? { type: 'application', job_id, job_title }
         : { type: 'general' }
-<<<<<<< HEAD
   const on_send = async () => {
     if (return alert ('Missing recipient')) {
   $2
@@ -386,11 +365,9 @@ if ( {) {
         attachment_name: file?.name,
         context,
       }),
-=======
   const onSend = async () => {
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message.trim() && !file && !linkUrl) return;
-=======
   React.useEffect(() => {;
     if (!loading && !user) router.replace('/auth');
   }, [loading, user, router]),;
@@ -411,40 +388,26 @@ if ( {) {
     : { type: 'general' },;
   const onSend = async () => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     setSending(true);
     let attachmentBase64: string | undefined;
     if (file) {;
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
-<<<<<<< HEAD
-<<<<<<< HEAD
       const mime = file.type |'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
-=======
       const mime = file.type || 'application/octet-stream';
-=======
       const mime = file.type || 'application/octet-stream';
-<<<<<<< HEAD
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
-<<<<<<< HEAD
         recipientId: recipientId |talentId
         body: message
         linkUrl: linkUrl |undefined
@@ -452,7 +415,6 @@ if ( {) {
         attachmentName: file?.name
         context
       })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     });
     const data = await res.json ();
     set_sending (false);
@@ -472,15 +434,12 @@ if ( {) {
               {type === 'invite' && job_title;
                 ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                 : null}
-<<<<<<< HEAD
               {type === 'apply' && job_title ? `Applying to: ${job_title}` : null}
             </p>;
           </div>;
           <div className='p - 4 space - y-3'>;
             <textarea;
-=======
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
-=======
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
@@ -508,13 +467,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
           </div>
           <div className="p-4 space-y-3">
             <textarea
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               value={message}
               on_change={e => set_message (e.target.value)}
               rows={6}
@@ -524,7 +480,6 @@ if ( {) {
                   ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                   : 'Write your message...';
               }
-<<<<<<< HEAD
             />;
             <input;
               type='url';
@@ -552,9 +507,5 @@ if ( {) {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

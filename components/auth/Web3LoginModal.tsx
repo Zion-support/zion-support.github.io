@@ -50,11 +50,9 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
       setError(null);
       setLoading(false);    }      setLoading(false);
 
-=======
       setError(null);
       setLoading(false)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, [isOpen]);
 
@@ -246,16 +244,12 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })});
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
-=======
 
-=======
       setLoading(false);    }
 
 
 
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       onClose()
     } catch (e: any) {
       console.error(e);
@@ -289,7 +283,6 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
     } finally {;
       setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
@@ -302,7 +295,6 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
       </div>;
 
 
-=======
 export default /**
  * Web3LoginModal - Function description
  */
@@ -420,7 +412,6 @@ if (return null) {
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>
           <button onClick={handlePhantomConnect} disabled={loading} className=&quot;w-full rounded-lg bg-purple-600 text-white py-2.5&quot;>
-=======
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
       <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>
         <div className='mb-4'>
@@ -461,16 +452,11 @@ if (return null) {
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
-=======
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return <ModalInner {...props} />;        </div>
         {error && (
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
@@ -480,26 +466,19 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
             {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
           </button>
           <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
           </button>
         </div>
         <div className="mt-4 flex justify-end">
-<<<<<<< HEAD
 
-=======
           <button onClick={onClose} className="text-sm text-gray-600 dark: text-gray-300">Cancel</button>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>
       </div>
     </div>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

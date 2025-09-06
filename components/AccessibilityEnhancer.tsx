@@ -12,8 +12,6 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
-=======
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -27,7 +25,6 @@ const AccessibilityEnhancer: React.FC = () => {
       left: 6px, background: #000
       color: #fff, padding: 8px
       text-decoration: none, z-index: 1000
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
     // Focus management;
@@ -381,11 +378,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </div>;
         </div>;
       </div>;
-=======
 
 
 export default AccessibilityEnhancer;
-=======
 };
 
 
@@ -407,13 +402,9 @@ export default AccessibilityEnhancer;
       <div id="main-content">{children}</div>;
     </>;
   );
-<<<<<<< HEAD
 }
 export default AccessibilityEnhancer;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
 ;
   const toggleHighContrast = () =>: any {
     const new_value = !isHighContrast;
@@ -481,4 +472,3 @@ export default AccessibilityEnhancer;
 ;
 export default AccessibilityEnhancer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

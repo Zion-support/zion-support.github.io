@@ -16,9 +16,10 @@ export const config = {
   }
 
 
-  if (req && req.method !== "GET")
-    return res && res.status(405).json({ error: "method_not_allowed" });
-
+  res.setHeader("Content-Type", "application/pdf");
+  res.setHeader(
+    "Content-Disposition",
+    `attachment; filename="invoice-${invoiceId}.pdf"`,
   );
   res && res.status(200).send(pdfBuffer);
 }

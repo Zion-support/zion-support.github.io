@@ -16,7 +16,6 @@ export const real2036ITServices = [
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 
-=======
 export const real2036ITServices = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -230,16 +229,12 @@ export const real2036ITServices = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const real2036ITServices = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -450,11 +445,5 @@ export const real2036ITServices = [;
     useCases: [;
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

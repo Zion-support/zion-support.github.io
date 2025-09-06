@@ -108,10 +108,8 @@ export default function AILegalContractAnalyzerPage() {;
                 <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>;
                   <MapPin />;
                   <span>{service && service.contactInfo.address}</span>;
-=======
 import Head from 'next / head';
 import {
-=======
 
 import React from 'react';
 
@@ -239,7 +237,6 @@ if (return null) {
       </main>;
 
 
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -247,18 +244,14 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 export default function AILegalContractAnalyzerPage() {
-<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'));
   if (!service) return null;
-=======
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-legal-contract-analyzer');
   );  if (!service) return null;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 
-=======
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',
@@ -270,16 +263,12 @@ export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
   if (!service) return null,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
 <meta name="description" content={service.description} />
-=======
         <meta name="description" content={service.description} />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <link rel="canonical" href="https://ziontechgroup.com/ai-legal-contract-analyzer" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -295,7 +284,6 @@ export default function AILegalContractAnalyzerPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-amber-400 mt-0.5"><Check /><span>{feat}</span></li>
-<<<<<<< HEAD
                 ))}
               </ul>
             </div>
@@ -321,7 +309,6 @@ export default function AILegalContractAnalyzerPage() {
 
 }
 
-=======
 
       </div>
     </Layout>
@@ -331,9 +318,5 @@ export default function AILegalContractAnalyzerPage() {
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

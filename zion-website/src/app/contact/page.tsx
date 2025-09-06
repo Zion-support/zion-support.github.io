@@ -5,7 +5,6 @@ import React from 'react';
 
 
 const contactMethods = [
-=======
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon,
@@ -13,19 +12,15 @@ const contactMethods = [
   ChatBubbleLeftRightIcon;
 } from '@heroicons / react / 24 / outline';
 const contact_methods = [;
-=======
   EnvelopeIcon
   PhoneIcon
   MapPinIcon
   ClockIcon
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
-=======
 import React from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const contactMethods = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -88,11 +83,9 @@ function ContactPage() {
 
   return (
     <div className=&quot;bg - black & quot;>;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -110,7 +103,6 @@ function ContactPage() {
           </div>
         </div>
       </div>
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Touch;
               </span>;
@@ -155,7 +147,6 @@ function ContactPage() {
                 </dd>
               </div>
             ))}
-=======
                 </dt>;
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
                   <p className=&quot;flex - auto & quot;>{method.description}</p>;
@@ -169,22 +160,15 @@ function ContactPage() {
                   </p>;
                 </dd>;
               </div>))}
-=======
     question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export default function ContactPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ContactPage() {
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -195,13 +179,10 @@ export default function ContactPage() {
                 Touch
               </span>
             </h1>
-<<<<<<< HEAD
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
               Ready to transform your business with AI? Let's discuss how our cutting-edge
-=======
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Ready to transform your business with AI? Let's discuss how our cutting-edge 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               technology can accelerate your growth and innovation.
             </p>
           </div>
@@ -223,21 +204,18 @@ export default function ContactPage() {
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
                 </dt>
-<<<<<<< HEAD
                 <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
                   <p className=&quot;flex-auto&quot;>{method.description}</p>
                   <p className=&quot;mt-6&quot;>
                     <a
                       href={method.href}
                       className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
-=======
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{method.description}</p>
                   <p className="mt-6">
                     <a 
                       href={method.href} 
                       className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     >
                       {method.value} <span aria-hidden="true">→</span>
                     </Link>
@@ -245,7 +223,6 @@ export default function ContactPage() {
                 </dd>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </dl>;
         </div>;
       </div>;
@@ -328,7 +305,6 @@ export default function ContactPage() {
                   <textarea
                     name="message"
                     id="message"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     rows={4}
 
                     className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
@@ -380,22 +356,14 @@ export default function ContactPage() {
                   </p>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <ClockIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
-=======
-<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Let's start a conversation
           </p>
         </div>
@@ -515,7 +483,6 @@ export default function ContactPage() {
                   </p>
                   <p className="flex items-center gap-2">
                     <ClockIcon className="h-5 w-5 text-blue-400" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {office.hours}
                   </p>;
                 </div>;
@@ -540,26 +507,17 @@ export default function ContactPage() {
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {faq.question}
                 </dt>;
                 <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
-=======
-<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Common questions
           </p>
         </div>
@@ -571,7 +529,6 @@ export default function ContactPage() {
                   {faq.question}
                 </dt>
                 <dd className="text-base leading-7 text-gray-300">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {faq.answer}
                 </dd>;
               </div>))}
@@ -609,4 +566,3 @@ export default function ContactPage() {
 };
 
 export default Page;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

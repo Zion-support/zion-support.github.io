@@ -1,14 +1,6 @@
 {
 
 
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   "timestamp": "2025-09-06T00:33:39.754Z",
   "duration": "6853ms",
   "fixedFiles": 517,
@@ -572,23 +564,13 @@
   ],
   "summary": "Successfully fixed syntax errors in 31 files"
 
-=======
 
   "errorDetails": []}
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 }
 
 "errorDetails": []
 }
 
-=======
->>>>>>> origin/automation-improvements-final
-=======
 "errorDetails": []
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

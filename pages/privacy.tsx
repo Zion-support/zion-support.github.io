@@ -23,13 +23,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -52,7 +47,6 @@ import MainLayout from "../components/layout/MainLayout";
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-=======
 import {
 
   Shield,
@@ -68,13 +62,11 @@ import {
 import MainLayout from "../components/layout/MainLayout";
 
 
-=======
 
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
 
 
@@ -171,25 +163,14 @@ import {
   Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function PrivacyPage() {
-=======
 export default function PrivacyPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -217,13 +198,9 @@ export default function PrivacyPage() {;
         </section>;
 
 
-=======
 
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
@@ -232,7 +209,6 @@ export default function PrivacyPage() {;
               animate={{ opacity: 1, y: 0 }}
 
 
-=======
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEOOptimizer from '../components/SEOOptimizer',
@@ -769,7 +745,6 @@ const PrivacyPage: React.FC = () => {
                   Questions About Privacy?
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as
@@ -777,7 +752,6 @@ const PrivacyPage: React.FC = () => {
                   for support.
                 </p>
 
-=======
 
 
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
@@ -789,7 +763,6 @@ const PrivacyPage: React.FC = () => {
 
 
 
-=======
 
 
                 <h3 className="text-xl font-semibold mb-4">
@@ -805,12 +778,8 @@ const PrivacyPage: React.FC = () => {
                 </ul>
 
 
-=======
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
@@ -827,8 +796,6 @@ const PrivacyPage: React.FC = () => {
                 </p>
                 
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -839,12 +806,8 @@ const PrivacyPage: React.FC = () => {
                 </ul>
 
 
-=======
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -853,7 +816,6 @@ const PrivacyPage: React.FC = () => {
                   information to third parties without your consent, except as
                   described in this policy.
 
-=======
 
 
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
@@ -883,8 +845,6 @@ const PrivacyPage: React.FC = () => {
                 </p>
                 
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -905,11 +865,12 @@ const PrivacyPage: React.FC = () => {
                 </div>
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <p className="text-sm text-gray-600 mt-8">
+                <p className="text-sm text-gray-600 mt-8">
+<p className="text-sm text-gray-600 mt-8">
+
                 <p className="text-sm text-gray-600 mt-8">
                   Last updated: January 2024
                 </p>
@@ -918,6 +879,9 @@ const PrivacyPage: React.FC = () => {
           </div>
         </section>
       </div>
+    </MainLayout>;
+  );
+}
 
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
@@ -1092,24 +1056,8 @@ export default PrivacyPage;
  
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
@@ -1143,5 +1091,28 @@ export default PrivacyPage;
       </div>;
     </MainLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <a;
+                    href="mailto:kleber@ziontechgroup.com";
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                  >;
+                    <Mail className="w-5 h-5" />;
+                    Email Us;
+                  </a>;
+                  <a;
+                    href="/contact";
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                  >;
+                    <User className="w-5 h-5" />;
+                    Contact Form;
+                  </a>;
+                </div>;
+              </motion.div>;
+            </div>;
+          </section>;
+        </main>;
+      </Layout>;
+    </ErrorBoundary>;
+  );
+},;
+export default PrivacyPage;

@@ -63,7 +63,6 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 
-=======
 export interface AdvancedInnovativeService {
   id: string, name: string,
   tagline: string, price: string,
@@ -95,16 +94,13 @@ const contact = {
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
-=======
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -112,7 +108,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -626,13 +621,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1144,11 +1136,5 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development';
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

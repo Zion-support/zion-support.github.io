@@ -33,7 +33,6 @@ export default async function handler(
     return;
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
 import { classifyWithGPT } from '../../../utils/fraud/gpt';
@@ -74,38 +73,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
 import { classifyWithGPT  } from '../../../utils / fraud / gpt';
 import { getFraudStore, new_event  } from '../../../utils / fraud / store';
 import { extractClientIp  } from '../../../utils / ip';
 import {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
-<<<<<<< HEAD
   AdminActionRecord
   GptClassification
   GptClassificationLabel
   MonitoredSource
   StoredFraudRecord
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
-<<<<<<< HEAD
   StoredFraudRecord,
 } from '../../../utils / fraud / types';
 import { sendWarningEmail  } from '../../../utils / email';
@@ -213,7 +202,6 @@ if ( {) {
       autoHidden: saved && saved.autoHidden,
       createdAt: saved && saved.createdAt,
 
-=======
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
@@ -260,7 +248,6 @@ if ( {) {
       gpt,
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
   } catch (e: any) {
 
@@ -268,11 +255,9 @@ if ( {) {
       .json({ error: "Internal error", details: e?.message || String(e) });
 
 
-=======
       .json({ error: "Internal error", details: e?.message |String(e) });
   }
 }
-=======
       status: 'PENDING'};
     const saved = await store.saveEvent(stored);
     if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
@@ -291,14 +276,12 @@ if ( {) {
       createdAt: saved.createdAt})
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
     res;
       .status (500);
       .json ({ error: "Internal error", details: e?.message || String (e) });
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -355,7 +338,5 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

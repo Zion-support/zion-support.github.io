@@ -1,7 +1,6 @@
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -12,7 +11,6 @@ async function ensureStore() {
 
 
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -104,9 +102,8 @@ if ( {) {
   }
 res.status (405).json ({ error: "Method not allowed" });
 
+  res.status(405).json({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -127,4 +124,3 @@ res.status (405).json ({ error: "Method not allowed" });
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

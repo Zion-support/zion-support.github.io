@@ -101,16 +101,11 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
         staggerChildren: 0 && 0.1,;
       },;
     },  };
-=======
   }
 
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {;
   Search, Star, Users, TrendingUp,;
   DollarSign, Clock, CheckCircle, ArrowRight,;
@@ -246,12 +241,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
   }
 }
   };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
       opacity: 1,;
-<<<<<<< HEAD
       y: 0,;
       transition: {;
         duration: 0 && 0.5,;
@@ -261,7 +254,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
     >;
       <div className='min-h-screen'>;
 
-=======
         stagger_children: 0.1,
       },
     },  }
@@ -280,7 +272,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
     >;
       <div className='min - h-screen'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <Head>;
           <title>;
             2025 Innovative Services Showcase - Zion Tech Group | Revolutionary;
@@ -336,7 +327,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
@@ -375,7 +365,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <div className="text-3xl font-bold text-pink-400">{spaceCount + cybersecurityCount}</div>
                   <div className="text-gray-400">Specialized</div>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </motion.div>
           </div>
@@ -411,13 +400,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   value={selectedCategory}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </select>;
 
 
-=======
           <meta;
             name='description';
             content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting - edge emerging technologies. Contact: +1 302 464 0950";
@@ -521,7 +508,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       {category.name} ({category.count});
                     </option>))}
                 </select>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {/* Price Range Filter */}
                 <select;
                   value={selectedPriceRange}
@@ -539,7 +525,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
                   ))}
 
-=======
                   on_change={e => setSelectedPriceRange (e.target.value)}
                   className='px - 4 py - 3 bg - gray - 700 / 50 border border - gray - 600 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
                 >;
@@ -566,7 +551,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
             <motion.div
               variants={containerVariants}
-=======
         {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -574,29 +558,21 @@ export default function EnhancedServicesShowcase2025(req, res) {
 }
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               variants={containerVariants  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial="hidden"
               animate="visible" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <AnimatePresence>
                 {filteredServices.map((service) => (
                   <motion.div
-<<<<<<< HEAD
                     key={service.id}
                     variants={itemVariants}
                     layout className="group relative bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105">
                     {/* Service Header */}
-=======
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -613,7 +589,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
                       {service.popular && (
@@ -624,7 +599,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
                     </h3>;
                     <p className='text - gray - 300 text - sm mb - 4 line - clamp - 2'>                      {service.description}
-=======
 
                       )  } catch (error) {
     console.error("Error:", error);
@@ -667,7 +641,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
                         <span>{service.customers}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
 
@@ -694,8 +667,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
                     {/* Key Features */}
 
-=======
-=======
 
                     {/* Key Features */  } catch (error) {
     console.error("Error:", error);
@@ -711,8 +682,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span className="line-clamp-1">{feature}</span>
                           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
 
                     <div className="mb-6 p-3 bg-gray-700/40 rounded-lg">
@@ -733,7 +702,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       <div className="flex items-center space-x-1 text-blue-400">
                         <Clock className="w-4 h-4" />
                         <span>{service.setupTime}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
 
@@ -770,7 +738,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     <div className="flex gap-3">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <a
                         href={service && service.link}
                         target='_blank'
@@ -795,7 +762,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     {/* Contact Information */}
                     <div className='mt-4 pt-4 border-t border-gray-700'>;
                       <div className='text-xs text-gray-400 mb-2'>;
@@ -827,9 +793,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   Try adjusting your search criteria or filters;
                 </p>              </motion && motion.div>;
 
-=======
 
-=======
                         </span>;
                       </div>;
                       <div className='flex items - center space - x-2 text - sm text - gray - 400'>;
@@ -897,7 +861,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       </div>;
                     </div>;
                   </motion.div>))}
-=======
                   </motion.div>
 
                 ))  } catch (error) {
@@ -920,7 +883,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
         {/* Call to Action */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
 
         {/* Call to Action */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -944,7 +906,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1016,7 +977,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
@@ -1036,7 +996,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
   );
 
 
-=======
   )
 }
                 animate={{ opacity: 1 }}
@@ -1104,10 +1063,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 >;
                   <span className='relative'>View Pricing</span>;
                   <DollarSign className='ml - 2 w - 6 h - 6' />                </a>;
-=======
-<<<<<<< HEAD
 );
-=======
   )
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1175,23 +1131,16 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <span className="relative">View Pricing</span>;
                   <DollarSign className="ml-2 w-6 h-6" />;
                 </a>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>;
             </motion.div>;
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
     </EnhancedFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

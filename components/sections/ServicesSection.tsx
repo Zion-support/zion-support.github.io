@@ -35,7 +35,6 @@ import { motion } from 'framer-motion';
 
 } from 'lucide-react';
 
-=======
   Brain,
   Cloud,
   RefreshCw,
@@ -60,7 +59,6 @@ const ServicesSection: React.FC = () => {
       title: 'AI Development',
 
     };
-=======
       description:;
         'Custom AI solutions and machine learning models tailored to your business needs.',
       features: [;
@@ -128,7 +126,6 @@ const ServicesSection: React.FC = () => {
       description: 'Connected device solutions and IoT platform development.',
 
     };
-=======
       features: [;
         'Sensor Networks',
         'Real - time Monitoring',
@@ -362,12 +359,9 @@ const ServicesSection: React.FC = () => {;
 
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
     hidden: { opacity: 0, y: 20 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
       {/* Background Elements */}
@@ -378,7 +372,6 @@ const ServicesSection: React.FC = () => {;
       </div>;
       <div className="relative container mx-auto px-4">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Section Header */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -396,12 +389,8 @@ const ServicesSection: React.FC = () => {;
   const card_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     }
   }
@@ -410,19 +399,13 @@ const ServicesSection: React.FC = () => {;
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: { opacity: 1, coordinate_y: 0 },
   }
-<<<<<<< HEAD
 ;
-=======
-=======
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
       }
     }
-=======
     visible: { opacity: 1, y: 0 },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   };
 
   const cardVariants = {
@@ -430,38 +413,26 @@ const ServicesSection: React.FC = () => {;
     visible: { opacity: 1, y: 0 },
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
       {/* Background Elements */}
-<<<<<<< HEAD
       <div className='absolute inset - 0'>;
         <div className='absolute top - 0 left - 0 w - full h - full bg-[radial - gradient (circle_at_30%_20%, rgba (59, 130, 246, 0.1), transparent_50%)]' />;
         <div className='absolute top - 0 right - 0 w - full h - full bg-[radial - gradient (circle_at_70%_80%, rgba (147, 51, 234, 0.1), transparent_50%)]' />;
       </div>;
       <div className='relative container mx - auto px - 4'>        {/* Section Header */}  }
 ;
-=======
       <div className='absolute inset-0'>
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
       </div>
-<<<<<<< HEAD
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  }
-=======
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
-=======
         {/* Section Header */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden">;
       {/* Background Elements */}
-<<<<<<< HEAD
       <div className="absolute inset - 0">;
         <div className="absolute top - 0 left - 0 w - full h - full bg-[radial - gradient (circle_at_30%_20%, rgba (59, 130, 246, 0.1), transparent_50%)]" />;
         <div className="absolute top - 0 right - 0 w - full h - full bg-[radial - gradient (circle_at_70%_80%, rgba (147, 51, 234, 0.1), transparent_50%)]" />;
@@ -476,14 +447,12 @@ const ServicesSection: React.FC = () => {;
           className='text - center mb - 16'        >          className="text - center mb - 16";
         >;
           <motion.div;
-=======
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]" />
       </div>
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
-=======
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
@@ -494,25 +463,16 @@ const ServicesSection: React.FC = () => {;
 
         {/* Section Header */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='text-center mb-16'        >          className="text-center mb-16"
-=======
           className='text-center mb-16'        >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -523,7 +483,6 @@ const ServicesSection: React.FC = () => {;
           >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
@@ -540,11 +499,8 @@ const ServicesSection: React.FC = () => {;
 
 
             efficiency, and growth for businesses across all industries.          </p>
-=======
             We deliver cutting-edge technology solutions that drive innovation,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             efficiency, and growth for businesses across all industries.          </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth
             for businesses across all industries.
@@ -569,17 +525,11 @@ const ServicesSection: React.FC = () => {;
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth ;
             for businesses across all industries.;
         </motion && motion.div>;
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -621,7 +571,6 @@ const ServicesSection: React.FC = () => {;
 
                 {/* Features */}
 
-=======
                 <ul className="space-y-2 mb-8">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3 text-gray-400">
@@ -629,7 +578,6 @@ const ServicesSection: React.FC = () => {;
                       <span className="text-sm">{feature}</span>
                     </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </h3>;
@@ -672,7 +620,6 @@ const ServicesSection: React.FC = () => {;
                 {/* Hover Effect */}
 
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
-=======
                 </h3>
 
 
@@ -688,7 +635,6 @@ const ServicesSection: React.FC = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </motion.div>
           ))}
@@ -697,12 +643,9 @@ const ServicesSection: React.FC = () => {;
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Bottom CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -720,7 +663,6 @@ const ServicesSection: React.FC = () => {;
               Let&apos;s discuss how our technology solutions can drive your
               success and accelerate your growth.
             </p>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
               href='/contact'
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'>;
@@ -752,7 +694,6 @@ export default ServicesSection;  );
 export default ServicesSection;
 
 
-=======
                   className='inline - flex items - center space - x-2 text - blue - 400 hover:text - blue - 300 transition - colors duration - 300 group - hover:translate - x-1';
                 >;
                   <span className='font - medium'>Learn More</span>;
@@ -815,12 +756,8 @@ export default ServicesSection);
 ;
 export default ServicesSection;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

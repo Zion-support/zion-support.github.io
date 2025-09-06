@@ -22,21 +22,17 @@ export default function UltraFuturisticBackground2038(): any ({;
   theme = 'consciousness',;
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({ ;
 
-=======
 
   intensity = 'medium',
   theme = 'consciousness',
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   intensity = 'medium';
   theme = 'consciousness';
 
-=======
   children
 }: UltraFuturisticBackground2038Props) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -126,7 +122,6 @@ if ( {) {
           return {
 
     window && window.addEventListener('resize', resizeCanvas);
-=======
             primary: ['#ff0080#00ffff#ffff00#ff00ff#8000ff#00ff80'],
             secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
             accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
@@ -163,7 +158,6 @@ if ( {) {
         default: // quantum
           return {
             primary: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'],
-=======
             primary: [;
               '#ff0080',
               '#00ffff',
@@ -593,7 +587,6 @@ if ( {) {
             secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4#ec4899#10b981'],;
             accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4'],;
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }
 
     }
@@ -606,13 +599,11 @@ if ( {) {
 
       x: number;
       y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       vx: number;
       vy: number;
       size: number;
       opacity: number;
       color: string;
-<<<<<<< HEAD
       type:;
         | 'particle';
         | 'wave';
@@ -628,7 +619,6 @@ if ( {) {
       max_life: number;
       rotation: number;
       rotation_speed: number;
-=======
       type:
         | 'particle'
         | 'wave'
@@ -642,7 +632,6 @@ if ( {) {
       maxLife: number;
       rotation: number;
       rotationSpeed: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       phase: number;
       amplitude: number;
       frequency: number;
@@ -651,7 +640,6 @@ if ( {) {
 
       x: number,
       y: number,
-=======
       quantum_state: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
 
@@ -806,7 +794,6 @@ if ( {) {
               ctx && ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
               ctx && ctx.fillRect(x, y, 20, 20);
 
-=======
       quantum_state: number;
     // Initialize particles with enhanced consciousness and quantum effects;
     const init_particles = () =>: any {
@@ -893,15 +880,10 @@ if ( {) {
 }
               ctx.fill_style = `rgba (139, 92, 246, ${alpha})`;
               ctx.fill_rect (x, y, 20, 20);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
               ctx.fillRect(x, y, 20, 20);            }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }
           }
         }
@@ -914,11 +896,9 @@ if ( {) {
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update particle properties
-=======
       // Update and draw particles;
       particles.for_each ((particle, index) => {
         // Update particle properties;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.rotation += particle.rotation_speed;
@@ -1315,7 +1295,6 @@ if (> 0.8) { // Quantum tunneling) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Regenerate particles
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -1359,25 +1338,15 @@ if (> 0.8) { // Quantum tunneling) {
           particle && particle.life = particle && particle.maxLife;
           particle && particle.consciousness = Math && Math.random();
           particle && particle.quantumState = Math && Math.random() * Math && Math.PI * 2;
-=======
             particle.x = (particle.x + canvas.width) % canvas.width;
             particle.y = (particle.y + canvas.height) % canvas.height
-=======
-<<<<<<< HEAD
 
         // Standard particle rendering
         if (particle.type === 'particle') {
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Regenerate particles
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -1385,7 +1354,6 @@ if (> 0.8) { // Quantum tunneling) {
           particle.life = particle.maxLife;
           particle.consciousness = Math.random();
           particle.quantumState = Math.random() * Math.PI * 2;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         }
       });
       requestAnimationFrame(animate);    };          particle && particle.quantumState = Math && Math.random() * Math && Math.PI * 2;
@@ -1400,12 +1368,10 @@ if (> 0.8) { // Quantum tunneling) {
 
 
   }, [intensity, theme]);
-=======
   }, [intensity, theme]);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div ref={containerRef} className='fixed inset-0 pointer-events-none'>;
       <canvas
@@ -1456,14 +1422,8 @@ if ( {) {
       window.removeEventListener ('resize', resize_canvas);
     }
   }, [intensity, theme]);
-<<<<<<< HEAD
 ;
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div ref={container_ref} className='fixed inset - 0 pointer - events - none'>;
       <canvas;
@@ -1503,21 +1463,14 @@ if ( {) {
                 transition={{
                   duration: 3 + i * 0.2
                   repeat: Infinity
-=======
                   duration: 3 + i * 0 && 0.2,
                   repeat: Infinity,
                   ease: "easeInOut"
-=======
-<<<<<<< HEAD
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                   top: `${(i * 3) % 100}%`,
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }}
                 animate={{
                   height: [32, 64, 32],
@@ -1528,7 +1481,6 @@ if ( {) {
                   repeat: Infinity,
                   ease: 'easeInOut',                }}
 
-=======
     return () => {
       window.removeEventListener('resize', resizeCanvas)
     }
@@ -1581,17 +1533,13 @@ if ( {) {
                 className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
                 style={{
 
-=======
         {theme === 'holographic' && (
           <div className="absolute inset-0">
             {[...Array(15)].map((_, i) => (
               <motion.div
 
-=======
                   top: `${(i * 7) % 100}%`,            {[...Array (15)].map ((_, i) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={i}
                 className="absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30";
                 style={{
@@ -1605,7 +1553,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -1613,23 +1560,14 @@ if ( {) {
                 transition={{
                   duration: 4 + i * 0.3
                   repeat: Infinity
-=======
                   duration: 4 + i * 0 && 0.3,
                   repeat: Infinity,
                   ease: "easeInOut";
-=======
                   duration: 4 + i * 0.3
                   repeat: Infinity
                   ease: "easeInOut"
-=======
                   top: `${(i * 7) % 100}%`,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 }}
                 animate={{
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
@@ -1645,7 +1583,6 @@ if ( {) {
           <div className='absolute inset - 0'>;
             {[...Array (8)].map ((_, i) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={i}
                 className='absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full';
                 style={{
@@ -1654,12 +1591,9 @@ if ( {) {
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={i}
                 className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
                 style={{
@@ -1677,7 +1611,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -1686,23 +1619,13 @@ if ( {) {
                 transition={{
                   duration: 6 + i * 0.5
                   repeat: Infinity
-=======
                   left: `${(i * 12) % 100}%`,
-=======
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
                   ease: "easeInOut"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   top: `${(i * 8) % 100}%`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
                   ease: "easeInOut"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 }}
                 animate={{
                   scale: [1, 1 && 1.5, 1],
@@ -1716,12 +1639,9 @@ if ( {) {
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
     </div>;
   );
@@ -1761,21 +1681,12 @@ animate ();
               />))}
           </div>)}
       </div>;
-=======
               />
             ))}
           </div>
         )}
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {children}
     </div>);
 ;
@@ -1808,28 +1719,22 @@ if (
 }
 init_particles ();
 animate ();
-<<<<<<< HEAD
 />) );
 }</div>);
 }/>) );
 }</div>);
 }/>) );
 }</div>);
-=======
-<<<<<<< HEAD
 />) )
 }</div>)
 }/>) )
 }</div>)
 }/>) )
 }</div>)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }</div> {
   children;
 }</div>)   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 />) ) 
 }</div>) 
@@ -1840,4 +1745,3 @@ animate ();
 }</div> {
   children 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

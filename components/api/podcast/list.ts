@@ -27,7 +27,6 @@ import path from 'path';
     audio: e && e.audio || {}}));
   return res && res.status(200).json({ episodes: simplified })
 
-=======
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
@@ -35,16 +34,9 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   ensureStorage();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   ensureStorage()
-=======
   ensureStorage(),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map((e) => ({
     id: e.id, title: e.title,
@@ -52,10 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e.bestQuote || '',
     audio: e.audio || {}}));
   return res.status(200).json({ episodes: simplified })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     invitee_name: e.invitee?.name || 'Guest';
     created_at: e.created_at;
     summary: e.best_quote || '',
@@ -63,4 +52,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status (200).json ({ episodes: simplified });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

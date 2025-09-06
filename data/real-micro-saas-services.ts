@@ -1,7 +1,6 @@
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
     tagline: 'Generate legally compliant documents in seconds with AI'
@@ -1339,10 +1338,8 @@ export const getServicesByCategory = (category: string) => {
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: any {
   return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
-=======
 export const getServicesByCategory = (category: string) => {;
   return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
@@ -1377,13 +1374,10 @@ export const getServicesByCategory = (category: string) => {;
   }
 ];
 // Helper functions
-<<<<<<< HEAD
 export const getServicesByCategory = (category: string) => {
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
-=======
 export const getServicesByCategory = (category: string) => {;
   return realMicroSaasServices.filter(service => service.category === category);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
@@ -1452,7 +1446,6 @@ reviews: 14
 
 
 export const serviceCategories = [
-<<<<<<< HEAD
   'Legal Technology'
   'Customer Service & Support'
   'Digital Marketing & SEO'
@@ -1480,7 +1473,6 @@ export const serviceCategories = [
   'Enterprise IT'
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
-=======
   'Legal Technology',
   'Customer Service & Support',
   'Digital Marketing & SEO',
@@ -1506,7 +1498,6 @@ export const serviceCategories = [
   'Financial Technology',
   'Education Technology',
   'Enterprise IT',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   return realMicroSaasServices.filter(service => service.category === category)
 };
@@ -1522,7 +1513,6 @@ export const getPopularServices = () => {
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
 reviews: 14;
 }
@@ -1560,9 +1550,6 @@ export const service_categories = [;
 ];
 
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1596,9 +1583,6 @@ export const service_categories = [;
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface RealMicroSaasService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

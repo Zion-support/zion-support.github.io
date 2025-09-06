@@ -1,8 +1,6 @@
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -13,7 +11,6 @@ export default function Terms() {
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   return (
     <>
@@ -123,7 +120,6 @@ export default function Terms() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
             <section className="mb-12">;
               <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Contact Information</h2>;
               <p className="text-slate-300 mb-4">;
@@ -151,14 +147,8 @@ function Terms() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com';
   }
-=======
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 import React from 'react';
 ] 
 };
@@ -240,7 +230,6 @@ content: 'In no event shall Zion Tech Group be liable for any damages arising ou
 
 }> <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > Terms of Service </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto" > Please read these terms carefully before using our services. They govern your use of Zion Tech Group's technology solutions. </p> </div> </motion.div> </div> </section> <motion.div initial= {
   {
-<<<<<<< HEAD
   opacity: 0, x: -20 
 
 }whileInView= {
@@ -275,12 +264,6 @@ export default Terms;
   {
   duration: 0.6 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
     title: 'Limitations',
     icon: <Shield className="w-6 h-6 text-purple-400" />,
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
@@ -288,12 +271,9 @@ export default Terms;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Terms() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       <Head>;
@@ -402,7 +382,6 @@ export default function Terms() {
 
 
 
-=======
 import React from 'react';
 ] 
 };
@@ -486,9 +465,7 @@ content: 'In no event shall Zion Tech Group be liable for any damages arising ou
   {
 
 
-=======
 
-=======
     title: 'Limitations',
     icon: <Shield className="w-6 h-6 text-purple-400" />,
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
@@ -496,12 +473,9 @@ content: 'In no event shall Zion Tech Group be liable for any damages arising ou
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Terms() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>;
       <SEO
@@ -1521,7 +1495,6 @@ function Terms() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-=======
 
 
                 className="group cursor-pointer"
@@ -1536,11 +1509,9 @@ function Terms() {
               </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
@@ -1609,7 +1580,6 @@ function Terms() {
                 <div className="bg - gradient - to - br from - gray - 800 / 50 to - black / 50 rounded - 2xl border border - white / 10 hover:border - cyan - 500 / 30 transition - all duration - 300 overflow - hidden">;
                   <div className="h - 24 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify - center">;
                     <div className="w - 12 h - 12 rounded - xl bg - gradient - to - r from - cyan - 500 to - blue - 600 flex items - center justify - center">;
-=======
 
 
                 className="group"
@@ -1617,7 +1587,6 @@ function Terms() {
                 <div className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden">
                   <div className="h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {service.icon}
                     </div>;
                   </div>;
@@ -1696,7 +1665,6 @@ function Terms() {
 
   const limitations = [
     'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party contentService availability subject to changeTechnical support during business hours only'
-=======
 
   const limitations = [;
     'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party contentService availability subject to changeTechnical support during business hours only';
@@ -1756,14 +1724,12 @@ function Terms() {
             <div className="max-w-6xl mx-auto">;
               <div className="grid lg:grid-cols-2 gap-12 items-center">;
                 <motion&& motion.div
-=======
 
 
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
 
@@ -1929,7 +1895,6 @@ function Terms() {
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">;
             <div className="max-w-6xl mx-auto">;
               <motion&& motion.div
-=======
 
 
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
@@ -1948,11 +1913,9 @@ function Terms() {
                         </li>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
               <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
@@ -1995,13 +1958,11 @@ function Terms() {
           <section className="py-20 px-4">;
             <div className="max-w-6xl mx-auto">;
               <motion&& motion.div
-=======
 
 
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
@@ -2045,13 +2006,11 @@ function Terms() {
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">;
             <div className="max-w-4xl mx-auto">;
               <motion&& motion.div
-=======
 
 
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-4xl mx-auto">
               <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
@@ -2514,7 +2473,6 @@ function Terms() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2553,7 +2511,6 @@ function Terms() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="space-y-12"
             >
               <div className="text-center mb-16">
@@ -2837,13 +2794,11 @@ function Terms() {
                 </div>
 
 
->>>>>>> origin/automation-improvements-final
               </div>
             </motion.div>
           </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
             >
               <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -2892,13 +2847,11 @@ export default Terms;
           <section className="py-20 px-4">;
             <div className="max-w-4xl mx-auto text-center">;
               <motion&& motion.div
-=======
 
 
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
@@ -2924,9 +2877,6 @@ export default Terms;
 
 
 
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
 }
 export default TermsPage;
 
@@ -2935,10 +2885,6 @@ export default TermsPage;
 };export default TermsPage;
 
 
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>)
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">;
                     <User className="w-5 h-5" />;
@@ -2958,23 +2904,14 @@ export default TermsPage;
 };export default TermsPage;
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default TermsPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             </motion.div>;
           </div>;
         </section>;
@@ -3049,4 +2986,3 @@ export default TermsPage;
 }> <h2 className="text - 4xl font - bold mb - 6 text - white" > Questions About These Terms? </h2> <p className="text - xl text - gray - 300 mb - 8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <Mail className="w - 5 h - 5" /> Email Us </Link> <a href="/contact" className="border - 2 border - cyan - 400 text - cyan - 400 px - 8 py - 4 rounded - lg font - semibold hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <User className="w - 5 h - 5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>);
 }export default TermsPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

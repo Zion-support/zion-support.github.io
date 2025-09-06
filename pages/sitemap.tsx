@@ -12,7 +12,6 @@ import {
   Settings, 
   Globe, 
   ArrowRight 
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -39,13 +38,8 @@ import { motion } from 'framer-motion';
 
 
 } from 'lucide-react';
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 const sitemapData = [;
@@ -84,7 +78,6 @@ const sitemapData = [;
       { name: 'API Documentation', url: '/api-docs', icon: Settings },;
       { name: 'Guides', url: '/guides', icon: Globe },;
 
-=======
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
@@ -155,7 +148,6 @@ export default function SitemapPage() {
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
       </Head>
       <div className="min-h-screen bg-gray-50">
-=======
 
 export default function SitemapPage() {;
   return (
@@ -218,7 +210,6 @@ export default function SitemapPage() {;
                 </motion && motion.div>;
               ))}
 
-=======
 ;
 export default /**
  * SitemapPage - Function description
@@ -287,30 +278,22 @@ function SitemapPage() {
         </section>;
       </div>;
 
-=======
 
 
 
-=======
     </>);
 }
 
 
-=======
 
 
 
 }
 
 
-=======
 
 
-=======
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {
 
 import { 
@@ -735,7 +718,6 @@ export default function SitemapPage() {;
       <section className='pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
 
-=======
 
   const featuredServices = [
     { href: '/ai-business-intelligence', label: 'AI Business Intelligence', category: 'AI & ML' },
@@ -794,7 +776,6 @@ export default function SitemapPage() {;
         <title>Sitemap | Zion Tech Group</title>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
 
@@ -810,7 +791,6 @@ export default function SitemapPage() {;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
                 href='#main-pages'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'
@@ -822,7 +802,6 @@ export default function SitemapPage() {;
                 href='/search'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
@@ -843,7 +822,6 @@ export default function SitemapPage() {;
                 key={page && page.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -854,11 +832,7 @@ export default function SitemapPage() {;
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Categories */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
@@ -894,8 +868,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={category.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Service Categories;
@@ -910,7 +882,6 @@ export default function SitemapPage() {;
                 key={category && category.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -921,11 +892,7 @@ export default function SitemapPage() {;
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -959,8 +926,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={service.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Featured Services;
@@ -973,7 +938,6 @@ export default function SitemapPage() {;
                 key={service && service.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -984,11 +948,7 @@ export default function SitemapPage() {;
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Resources & Tools */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
@@ -1022,8 +982,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={resource.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Resources & Tools;
@@ -1036,7 +994,6 @@ export default function SitemapPage() {;
                 key={resource && resource.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1047,11 +1004,7 @@ export default function SitemapPage() {;
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* External Resources */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -1085,8 +1038,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={link.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               External Resources;
@@ -1099,7 +1050,6 @@ export default function SitemapPage() {;
                 key={link && link.href}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1110,11 +1060,7 @@ export default function SitemapPage() {;
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-4xl mx-auto'>          <motion&& motion.div
 
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact Information */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto">
@@ -1150,8 +1096,6 @@ export default function SitemapPage() {;
 
               <motion.div
                 key={contact.type}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Contact Information;
@@ -1166,7 +1110,6 @@ export default function SitemapPage() {;
                 key={contact && contact.type}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1188,7 +1131,6 @@ export default function SitemapPage() {;
                 </a>;
               </motion && motion.div>;
 
-=======
                 className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
@@ -1223,7 +1165,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
               Use our search functionality or contact us directly for assistance;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-=======
 
 
       {/* Quick Navigation */}
@@ -1234,7 +1175,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1272,7 +1212,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Need Help Finding Something?
@@ -1281,7 +1220,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
               Use our search functionality or contact us directly for assistance
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href='/search'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -1293,16 +1231,10 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
   )
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }animate= {
   {
   opacity: 1, y: 0
@@ -1324,7 +1256,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
         </div>;
       </section>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <SmartFooter />;
     </div>;
   ),;
@@ -1359,11 +1290,8 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
   );
 }
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           >;
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
               Need Help Finding Something?;
@@ -1397,10 +1325,7 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-<<<<<<< HEAD
       type: 'Address',
       value: 'Middletown, DE',
       action: 'https://maps.google.com/?q = Middletown, DE',
@@ -1769,10 +1694,7 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
   {
   once: true;
 }> Need Help Finding Something? </h2> <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link href="/search" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl" > Search Site <Search className="w - 5 h - 5 ml - 2" /> </Link> <Link href="/contact" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Contact Support <Mail className="w - 5 h - 5 ml - 2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>));
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

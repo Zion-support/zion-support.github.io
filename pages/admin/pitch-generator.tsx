@@ -15,7 +15,6 @@ export default function PitchGenerator() {;
     targetRaise: '',;
     assets: [],;
 
-=======
 
     mission: '',
     fundingStage: '',
@@ -24,17 +23,14 @@ export default function PitchGenerator() {;
     targetRaise: '',
     assets: [],;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
-<<<<<<< HEAD
   const [history, setHistory] = useState<;
     { id: string; createdAt: string, version: string }[];
   >([]);
 
-=======
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -215,7 +211,6 @@ if (return) {
         set_slides (arr =>;
           arr.map ((s, i) =>;
             index === idx;
-=======
   const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),;
   const activeSlide = slides[activeIndex];
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {;
@@ -229,17 +224,11 @@ if (return) {
   };
   const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),;
   const autoFetchMetrics = useCallback(async () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
       const data = await res.json();
       return data;
-<<<<<<< HEAD
     } catch (e) {
       return {}
     } finally {
@@ -287,12 +276,10 @@ if (return) {
         setSlides(arr =>
           arr.map((s, i) =>
             i === idx
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               ? {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
-<<<<<<< HEAD
   const rephraseSlide = useCallback(;
     async (idx: number) => {;
       if (!slides[idx]) return;
@@ -318,7 +305,6 @@ if (return) {
 
   );
   const addSlide = useCallback(async () => {;
-=======
 
     } catch (error) {
       return {  } catch (error) {
@@ -383,8 +369,6 @@ if (return) {
   }, [slides]),;
   const addSlide = useCallback(async () => {;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
@@ -473,26 +457,21 @@ if (return) {
   const renderChartPreview = (slide: Slide) => {;
     if (!slide && slide.chart) return null,;
     const { type, data } = slide && slide.chart;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 
     return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
             <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
-<<<<<<< HEAD
           ))}
-=======
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
@@ -514,10 +493,8 @@ if (return) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {data.map((d) => (
                 <div key={d.label} className="border p-1 rounded">
                   <div className="font-medium">{d.label}</div>
@@ -698,21 +675,15 @@ if (return null, ) {
                 Refresh
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
-=======
         </div>
       </div>
     )
   };
-=======
-<<<<<<< HEAD
         </div>
       </div>
     );
   }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -724,21 +695,13 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </div>
     )
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
-=======
 
 
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -757,9 +720,7 @@ if (return null, ) {
       </div>
     )
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <EnhancedLayout>
       <Head>
         <title>Pitch Generator - Admin</title>
@@ -783,9 +744,6 @@ if (return null, ) {
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>Auto Data</div>
               <button
@@ -795,8 +753,6 @@ if (return null, ) {
                 Refresh
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
@@ -805,7 +761,6 @@ if (return null, ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -821,7 +776,6 @@ if (return null, ) {
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
-=======
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
                 Drag & drop logos, photos here;
                 <div className='text-xs mt-1'>;
@@ -833,7 +787,6 @@ if (return null, ) {
               <div className='font-medium mb-2'>Auto Data</div>;
               <button
                 onClick={autoFetchMetrics}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'>;
                 Refresh;
               </button>;
@@ -854,7 +807,6 @@ if (return null, ) {
                 {history && history.map(h => (;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   <li
                     key={h && h.id}
                     className='flex justify-between border rounded px-2 py-1'>;
@@ -863,7 +815,6 @@ if (return null, ) {
                       {new Date(h && h.createdAt).toLocaleString()}
                     </span>                  </li>;
 
-=======
 
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
@@ -875,7 +826,6 @@ if (return null, ) {
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
                   </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
               </ul>;
@@ -1110,7 +1060,6 @@ if (return null, ) {
                   </button>;
                 </div>              </div>;
 
-=======
 
           <div className="lg:col-span-2 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
@@ -1145,14 +1094,12 @@ if (return null, ) {
             )}
 
 
-=======
 
 
 }
 }
 }
 
-=======
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -1212,7 +1159,6 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </main>;
@@ -1220,7 +1166,6 @@ if (return null, ) {
   );
 
 
-=======
       </div>
     </EnhancedLayout>
   )
@@ -1229,16 +1174,11 @@ if (return null, ) {
                   value={active_slide.content}
                   on_change={e => updateActiveSlide ({ content: e.target.value })}
                   className='w - full mt - 3 border rounded px - 2 py - 1 bg - transparent';
-=======
-<<<<<<< HEAD
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
               <div className='text-xs text-gray-500 dark:text-gray-400'>
-<<<<<<< HEAD
                 Version: {versionTag |'—'}
-=======
                 Version: {versionTag || '—'}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -1302,7 +1242,6 @@ if (return null, ) {
                   value={activeSlide.content}
                   onChange={e => updateActiveSlide({ content: e.target.value })}
                   className='w-full mt-3 border rounded px-2 py-1 bg-transparent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   rows={10}
                 />;
                 <div className='mt - 4 grid grid - cols - 3 gap - 2 text - sm'>;
@@ -1364,9 +1303,6 @@ if (return null, ) {
 </main>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1374,5 +1310,3 @@ if (return null, ) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

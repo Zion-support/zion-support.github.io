@@ -7,7 +7,6 @@ import {v4, as, uuidv4} from 'uuid';
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
@@ -102,7 +101,6 @@ function writeGrant(record: GrantApplication) {
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     res && res.status(405).end('Method Not Allowed');
@@ -125,17 +123,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   const payload = req.body as VotePayload;
-<<<<<<< HEAD
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (!payload?.grantId |!payload?.voter |!payload?.choice) {
-=======
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     res.status(400).json({ error: 'Missing fields' });
     return
   }
@@ -167,9 +157,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ record: g })
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -228,10 +215,6 @@ if ( {) {
   res.status (200).json ({ record: g });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -7,8 +7,17 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 
 export function TalentOnboardingSteps() {;
 
+export function TalentOnboardingSteps() {
+  const { user } = useAuth(),
+  const onboardingStatus = useOnboardingStatus(),
+  
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function TalentOnboardingSteps() {
   const { user } = useAuth();
-
   const onboardingStatus = useOnboardingStatus();
 
 
@@ -36,6 +45,28 @@ export function TalentOnboardingSteps() {;
       link: "/profile/availability"
       action: "Set"
     }
+  const steps: OnboardingStep[] = [
+    {
+      id: "profile",
+      label: "Complete your profile",
+      completed: onboardingStatus.profileCompleted,
+      link: "/profile",
+      action: "Update",
+    },
+    {
+      id: "skills",
+      label: "Add your top skills",
+      completed: onboardingStatus.skillsAdded,
+      link: "/profile/skills",
+      action: "Add Skills",
+    },
+    {
+      id: "availability",
+      label: "Set your availability",
+      completed: onboardingStatus.availabilitySet,
+      link: "/profile/availability",
+      action: "Set",
+    },
     {
 
 
@@ -67,7 +98,6 @@ export function TalentOnboardingSteps() {;
 
 
   return <OnboardingTracker steps={steps} />;
-=======
 
       id: "match",
       label: "Receive your first job match",
@@ -78,13 +108,14 @@ export function TalentOnboardingSteps() {;
   return <OnboardingTracker steps={steps} />
 
   return <OnboardingTracker steps={steps} />;
+      action: "View Matches",
+    },
+  ];
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return <OnboardingTracker steps={steps} />;
 }
 
-=======
 import React from './react';
 import { use_auth  } from '@/hooks / use_auth';
 import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
@@ -130,4 +161,3 @@ function TalentOnboardingSteps() {
 ;
   return <OnboardingTracker steps={steps} />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

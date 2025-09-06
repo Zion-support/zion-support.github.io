@@ -292,7 +292,6 @@ export default function ITSolutionsPage() {;
   return (;
 
     <div className="space-y-8">;
-=======
 "use client",
 import { useState  } from './react';,
 interface ITService {
@@ -307,8 +306,6 @@ interface ITService {
   icon: string,
   features: string[],
   technologies: string[],
-=======
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface ITService {id: string;
@@ -322,7 +319,6 @@ interface ITService {id: string;
   icon: string;
   features: string[];
   technologies: string[];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   industries: string[];
 }
 const it_services: ITService[] = [;
@@ -596,7 +592,6 @@ const it_services: ITService[] = [;
       "Financial Services";
     ];
   }
-<<<<<<< HEAD
 ],
 export default /**
  * ITSolutionsPage - Function description
@@ -604,10 +599,8 @@ export default /**
 function ITSolutionsPage() {
   return (
     <div className="space - y-8">;
-=======
 ];
 export default function ITSolutionsPage() {return (;
-=======
 "use client",;
 import { useState } from "react",;
 interface ITService {;
@@ -899,9 +892,7 @@ const itServices: ITService[] = [;
 ],;
 export default function ITSolutionsPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="space-y-8">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">IT Solutions & Services</h1>;

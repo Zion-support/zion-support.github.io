@@ -1,7 +1,6 @@
 
 
 
-=======
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -45,9 +44,7 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -69,13 +66,11 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 
 
     {
-<<<<<<< HEAD
       name: 'ArrowRight - Generation AI 2026',
       description: 'Revolutionary AI platforms with quantum integration',
       services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
 
 
-=======
     ...innovative2026MicroSaasServicesV2,;
     ...emergingTech2026ServicesV2,;
     ...enterpriseIT2026ServicesV2,;
@@ -145,8 +140,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 }
 
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -164,7 +157,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       variant: 'quantum' as const
       popular: false
       cta: 'Start Free Trial'
-=======
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
         'Mobile App AccessAPI Access (1000 calls/month)'
 
@@ -174,7 +166,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       popular: false,
       cta: 'Start Free Trial',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       color: 'from-blue-500 to-indigo-600'
 
     };
@@ -194,7 +185,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       variant: 'holographic' as const
       popular: true
       cta: 'Start Free Trial'
-=======
         'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features'
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
 
@@ -204,7 +194,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       popular: true,
       cta: 'Start Free Trial',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       color: 'from-purple-500 to-pink-600'
 
     };
@@ -258,10 +247,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       color: 'from-blue-500 to-cyan-600'
     }
   ]
-<<<<<<< HEAD
-=======
 
-=======
         'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance'
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
 
@@ -321,7 +307,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 }
   ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
@@ -339,7 +324,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
@@ -545,8 +529,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -572,7 +554,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
@@ -585,7 +566,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                   }`}
-=======
             <div className="flex items - center justify - center space - x-4 mb - 8">;
               <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>;
               <button;
@@ -607,7 +587,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -665,7 +644,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -706,26 +684,21 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="relative"
                 >
                   <UltraFuturisticCard
-=======
                   className="relative";
                 >;
                   <UltraFuturisticCard;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     variant={tier.variant}
                     className={`h - full ${tier.popular ? 'ring - 2 ring - cyan - 500 ring - opacity - 50' : ''}`}
                   >;
                     {tier.popular && (
 
 
-=======
 
                     
 
-=======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -733,8 +706,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -746,7 +717,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                         </div>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <p className="text-gray-400 mb-6">{tier.description}</p>
                       <div className="mb-6">
                         <span className="text-4xl font-bold text-cyan-400">${tier.price}</span>
@@ -762,7 +732,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
@@ -786,7 +755,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                            } else {
                              window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank')
 
-=======
                       <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                         <div className="bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white px - 4 py - 2 rounded - full text - sm font - semibold">;
                           Most Popular;
@@ -821,7 +789,6 @@ price: billing_cycle === 'monthly' ? 999 : 799,
                           // Check condition
 if ( {) {
   $2
-=======
 
                              } catch (error) {
     console.error("Error:", error);
@@ -874,7 +841,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -887,7 +853,6 @@ if ( {) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCategories.map((category, index) => (
                 <motion.div
-=======
               className="text - center mb - 12";
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
@@ -923,7 +888,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -932,7 +896,6 @@ if ( {) {
                   </UltraFuturisticCard>
                 </motion.div>
 
-=======
                 >;
                   <UltraFuturisticCard variant="quantum - advanced" className="h - full">;
                     <div className="p - 6">;
@@ -1018,7 +981,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1031,7 +993,6 @@ if ( {) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredServices.map((service, index) => (
                 <motion.div
-=======
               className="text - center mb - 12";
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
@@ -1068,7 +1029,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -1077,7 +1037,6 @@ if ( {) {
                           variant="secondary"
                           size="sm"
 
-=======
                 >;
                   <UltraFuturisticCard variant="holographic" className="h - full">;
                     <div className="p - 6">;
@@ -1111,7 +1070,6 @@ if ( {) {
                           variant="secondary";
                           size="sm";
                           on_click={() => window.open (`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`, '_blank')}
-=======
 
                           onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')  } catch (error) {
     console.error("Error:", error);
@@ -1160,7 +1118,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1182,7 +1139,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -1199,7 +1155,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -1215,10 +1170,8 @@ if ( {) {
       </div>
     </UltraFuturisticBackground>
 
-=======
 }
 
-=======
               className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30 text - center";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -1255,9 +1208,5 @@ if ( {) {
       </div>;
     </UltraFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

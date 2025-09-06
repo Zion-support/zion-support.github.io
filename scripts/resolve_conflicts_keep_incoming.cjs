@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");function getAllFiles(dir) { const entries = fs.readdirSync(dir, { withFileTypes: true }); const files = entries.flatMap((entry) => { const fullPath = path.join(dir, entry.name); if (entry.isDirectory()) return getAllFiles(fullPath); return [fullPath]}); return files}function resolveConflictsKeepIncoming(filePath) {" const text = fs.readFileSync(filePath, "utf8");'"'"
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -16,15 +13,12 @@ function getAllFiles(dir) {}
   return files};
 function resolveConflictsKeepIncoming(filePath) {}
   const text = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
       i++;
       // skip the separator
         out.push(lines[i]);
         i++}
       // skip the end marker
       continue}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   if (!text.includes('')) return false;
   const lines = text.split('\n');
   const out = [];
@@ -59,14 +53,11 @@ function main() {}
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
-<<<<<<< HEAD
         }
     } catch (e) {
       console.error(`Failed to process ${f}: ${e.message}`)}
   }
   }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
       console.error(`Failed to process ${f}: ${e.message}`)};
@@ -74,8 +65,5 @@ function main() {}
   console.log(`Done. Files "updated": ${count}`)};
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
-<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

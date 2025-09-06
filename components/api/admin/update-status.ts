@@ -24,7 +24,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : { agents: [] };
 
   const merged = {
-<<<<<<< HEAD
     ...existing,
     ...body,
     updatedAt: new Date().toISOString(),
@@ -34,7 +33,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return
   }
   if (!isInternalAgentRequest(req)) {
@@ -47,7 +45,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!fs && fs.existsSync(dataDir)) fs && fs.mkdirSync(dataDir, { recursive: true });
   const statusPath = path && path.join(dataDir, 'agents-status && status.json');
   const existing = fs && fs.existsSync(statusPath) ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')) : { agents: [] };
-=======
 
 
   const merged = {
@@ -59,7 +56,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
-=======
 import { isInternalAgentRequest } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -126,13 +122,7 @@ if ( {) {
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
 
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

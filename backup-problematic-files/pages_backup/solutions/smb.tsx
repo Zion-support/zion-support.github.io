@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +16,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -66,7 +63,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -143,7 +139,6 @@ export default function SMBSolutionsPage() {;
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
-=======
 import { 
   Building2, 
   Users, 
@@ -162,7 +157,6 @@ export default function SMBSolutionsPage() {
     <Layout
       title="SMB Solutions - Zion Tech Group"
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     >
       <div className="min-h-screen bg-gray-50">
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency.">;
@@ -173,10 +167,7 @@ export default function SMBSolutionsPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -259,13 +250,10 @@ export default function SMBSolutionsPage() {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Services Section */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -294,7 +282,6 @@ export default function SMBSolutionsPage() {
                   <p className="text-gray-600">{service && service.description}</p>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
@@ -379,12 +366,10 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
-=======
             </div>
           </div>
         </section>
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
@@ -404,7 +389,6 @@ export default function SMBSolutionsPage() {
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
   );
 };
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +16,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from '../../components/Layout';
 import {DollarSign,, Shield,, TrendingUp,, Users,, Database} from 'lucide-react';
 import React from 'react';
@@ -53,7 +50,6 @@ import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRigh
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import {motion} from 'framer-motion';
 import {DollarSign,, Shield,, TrendingUp,, Users,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
 import Layout from '../../components/Layout';
@@ -120,7 +116,6 @@ const features = [;
     description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import { motion } from 'framer-motion';
 import { 
   DollarSign, 
@@ -132,7 +127,6 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const features = [
   {
     icon: DollarSign,
@@ -266,7 +260,6 @@ const benefits = [;
   'Reduced operational costs',;
   'Faster transaction processing';
 ];
-<<<<<<< HEAD
 export default function FinanceSolutions() {;
     title: 'User Management',;
     description: 'Secure user management with role-based access control',;
@@ -274,7 +267,6 @@ export default function FinanceSolutions() {;
   }
 ];
 export default function FinanceSolutionsPage() {;
-=======
 export default function FinanceSolutions() {
     title: 'User Management',
     description: 'Secure user management with role-based access control',
@@ -283,7 +275,6 @@ export default function FinanceSolutions() {
 ];
 
 export default function FinanceSolutionsPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
@@ -520,11 +511,8 @@ export default function FinanceSolutions() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -693,7 +681,6 @@ export default function FinanceSolutions() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-blue-600 to-green-700 p-8 rounded-xl text-white">;
@@ -713,7 +700,6 @@ export default function FinanceSolutions() {;
                     {feature && feature.benefits.map((benefit, benefitIndex) => (;
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-=======
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-600 to-green-700 p-8 rounded-xl text-white">
@@ -733,14 +719,12 @@ export default function FinanceSolutions() {;
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {benefit}
                       </div>;
                     ))}
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">;
                     {feature && feature.title}
                   </h3>;
@@ -953,8 +937,6 @@ export default function FinanceSolutions() {;
             </div>;
           </div>;
         </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
@@ -984,7 +966,6 @@ export default function FinanceSolutions() {;
     </Layout>
     </>
     </>
-<<<<<<< HEAD
     </Layout>
   );
 };

@@ -370,7 +370,6 @@ import React, { useState, useEffect } from 'react';
     { name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
   ];
     >
-=======
 
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -732,7 +731,6 @@ import React, { useState, useEffect } from 'react';
 
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Scroll Progress Bar */}
       <div className='absolute top-0 left-0 h-1 w-full bg-transparent'>;
         <div
@@ -759,7 +757,6 @@ import React, { useState, useEffect } from 'react';
                 Zion Tech Group;
               </div>;
               <div className='text-xs text-gray-400'>;
-=======
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import {
@@ -810,7 +807,6 @@ import {
   Bot,
   ChevronRight as ChevronRightIcon,
   Eye,
-<<<<<<< HEAD
   FlaskConical,
   Link as LinkIcon,
 import Button from '../ui / Button';
@@ -1420,20 +1416,16 @@ function NeoFuturisticNavigation() {
 
             </div>;
           </div>;
-=======
   FlaskConical,;
   Link as LinkIcon,;
 import Button from '../ui/Button';
-<<<<<<< HEAD
 export default function NeoFuturisticNavigation() {;
-=======
 
 
           {/* Mobile Menu Button */}
           <button
             className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
             onClick={() => setIsOpen(!isOpen)}
-<<<<<<< HEAD
           >;
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
 
@@ -1461,11 +1453,9 @@ export default function NeoFuturisticNavigation() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
-=======
                   />;
                 </button>;
                 {activeDropdown === 'mobile-services' && (;
@@ -1494,7 +1484,6 @@ export default function NeoFuturisticNavigation() {;
                       </div>;
                     ))}
                     <div className='pt-3'>;
-=======
           >
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
@@ -1516,14 +1505,7 @@ export default function NeoFuturisticNavigation() {;
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
                   />
                 </button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -1552,12 +1534,10 @@ export default function NeoFuturisticNavigation() {;
                       </div>
                     ))}
                     <div className='pt-3'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <Button
                         href='/services'
                         variant='quantum'
                         size='sm'
-<<<<<<< HEAD
                         className='w-full'>;
                         View All Services;
                         <ArrowRight className='w-4 h-4 ml-2' />;
@@ -1569,12 +1549,9 @@ export default function NeoFuturisticNavigation() {;
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Company Section */}
               <div>;
                 <button
@@ -1666,23 +1643,19 @@ export default function NeoFuturisticNavigation() {;
                     href='/services'
                     variant='quantum'
                     size='lg'
-<<<<<<< HEAD
                     className='w-full'>;
                     Explore Services;
                     <ArrowRight className='w-5 h-5 ml-2' />;
                   </Button>;
-=======
                     className='w-full'
                   >
                     Explore Services
                     <ArrowRight className='w-5 h-5 ml-2' />
                   </Button>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <Button
                     href='/contact'
                     variant='secondary'
                     size='lg'
-<<<<<<< HEAD
                     className='w-full'>;
                         <ArrowRight className='w - 4 h - 4 ml - 2' />;
                       </Button>;
@@ -2036,7 +2009,6 @@ export default function NeoFuturisticNavigation() {;
 }</div>)
 }</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>)
 }</nav>) 								<div className="mt-6 space-y-3">
-=======
 import { 
 	Menu;
 	X, 
@@ -2591,7 +2563,6 @@ icon: <Atom className="w-5 h-5" />,
 }
 
 
-=======
         </div>)}
     </nav>);
 ;
@@ -2648,10 +2619,7 @@ icon: <Atom className="w-5 h-5" />,
     </div>)}
   </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 	);
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

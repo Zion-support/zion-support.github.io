@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -29,7 +28,6 @@
 }</AnimatePresence> </div>) )
 }</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>)
 };export default EnhancedSidebar2025;
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -43,7 +41,6 @@ import {
   Target, BookOpen, Truck, BarChart3;
   Sparkles, Eye, Lightbulb, Palette, Code
 } from 'lucide-react';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 interface SidebarItem {
   name: string,
@@ -63,7 +60,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const sidebarItems: SidebarItem[] = [
   {
     name: 'All Services'
@@ -146,7 +142,6 @@ const sidebarItems: SidebarItem[] = [;
       { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },;
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
     ];
-=======
 
 
   };
@@ -561,7 +556,6 @@ const supportLinks = [
     const newExpanded = new Set(expandedSections)
     if (newExpanded.has(title)) {
       newExpanded.delete(title)
-=======
 ;
 const resources = [;
   { name: 'Documentation', href: '/docs', icon: <FileText className="w - 4 h - 4" /> },
@@ -587,7 +581,6 @@ const support_links = [;
   $2
 }
       new_expanded.delete (title);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       new_expanded.add (title);
     }
@@ -720,11 +713,9 @@ const supportLinks = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
-=======
     setExpandedSections (new_expanded);
   }
 ;
@@ -812,8 +803,6 @@ const supportLinks = [
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ],
 
-=======
-=======
   };
   {
     name: 'AI & Consciousness',
@@ -986,7 +975,6 @@ const supportLinks = [
   }
 ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> }
   { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> }
@@ -996,22 +984,18 @@ const resources = [
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
 ];
 const supportLinks = [
-<<<<<<< HEAD
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' }
   { name: 'Documentation', href: '/docs', description: 'Technical guides' }
   { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' }
   { name: 'Status Page', href: '/status', description: 'Service status' }
   { name: 'Training', href: '/training', description: 'Learn our platforms' }
-=======
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },
   { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
   { name: 'Status Page', href: '/status', description: 'Service status' },
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const toggleSection = (title: string) => {
     const newExpanded = new Set(expandedSections)
     if (newExpanded.has(title)) {
@@ -1020,7 +1004,6 @@ const supportLinks = [
       newExpanded.add(title)
     }
     setExpandedSections(newExpanded)
-<<<<<<< HEAD
   },
 
   const _filteredServices = sidebarItems.flatMap(item =>
@@ -1030,7 +1013,6 @@ const supportLinks = [
     ) || []
   ),
 
-=======
   }
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
@@ -1038,12 +1020,10 @@ const supportLinks = [
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) |[]
   );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <motion.aside
       initial={{ x: -300, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-<<<<<<< HEAD
       transition={{ duration: 0.5, ease: &quot;easeOut&quot; }}
       className=&quot;fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent&quot;
     >
@@ -1076,7 +1056,6 @@ const supportLinks = [
           </div>
           <div className=&quot;flex items-center space-x-2&quot;>
             <Globe className=&quot;w-3 h-3 text-cyan-400&quot; />
-=======
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent"
     >
@@ -1108,12 +1087,10 @@ const supportLinks = [
           </div>
           <div className="flex items-center space-x-2">
             <Globe className="w-3 h-3 text-cyan-400" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <span>{contactInfo.website}</span>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Navigation Sections */}
       <div className=&quot;p-4 space-y-2&quot;>
@@ -1130,7 +1107,6 @@ const supportLinks = [
                 <span className=&quot;font-medium&quot;>{section.title}</span>
                 {section.badge && (
                   <span className=&quot;px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full&quot;>
-=======
       {/* Navigation Sections */}
       <div className="p-4 space-y-2">
         {sidebarSections.map((section) => (
@@ -1146,34 +1122,23 @@ const supportLinks = [
                 <span className="font-medium">{section.title}</span>
                 {section.badge && (
                   <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {section.badge}
                   </span>
                 )}
               </div>
               {expandedSections.has(section.title) ? (
-<<<<<<< HEAD
                 <ChevronDown className=&quot;w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200&quot; />
               ) : (
                 <ChevronRight className=&quot;w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200&quot; />
               )}
             </button>
 
-=======
                 <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
               ) : (
                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
               )}
             </button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -1213,21 +1178,18 @@ const supportLinks = [
 
 
               {/* Search Results */}
-<<<<<<< HEAD
               {searchQuery && (;
                 <div className="mt-4 space-y-2">;
                   <h4 className="text-sm font-medium text-gray-300">Search Results</h4>;
                   {filteredServices && filteredServices.length > 0 ? (;
                     <div className="space-y-1">;
                       {filteredServices && filteredServices.slice(0, 5).map((service) => (;
-=======
               {searchQuery && (
                 <div className="mt-4 space-y-2">
                   <h4 className="text-sm font-medium text-gray-300">Search Results</h4>
                   {filteredServices.length > 0 ? (
                     <div className="space-y-1">
                       {filteredServices.slice(0, 5).map((service) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <Link
                           key={service && service.name}
                           href={service && service.href}
@@ -1294,7 +1256,6 @@ const supportLinks = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -1320,7 +1281,6 @@ const supportLinks = [
                 </div>
               </div>
             </div>
-=======
             </div>;
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">;
@@ -1370,12 +1330,9 @@ const supportLinks = [
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -1402,12 +1359,9 @@ const supportLinks = [
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -1445,7 +1399,6 @@ const supportLinks = [
                         <Link;
                           key={service.name}
                           href={service.href}
-<<<<<<< HEAD
                           on_click={on_close}
                           className="block p - 2 rounded - lg hover:bg - gray - 800 / 30 transition - colors duration - 200 group";
                         >;
@@ -1500,7 +1453,6 @@ const supportLinks = [
               <div className="grid grid - cols - 2 gap - 4">;
                 {stats.map ((stat, index) => (
                   <motion.div;
-=======
                           onClick={onClose}
                           className="block p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"
                         >
@@ -1526,14 +1478,7 @@ const supportLinks = [
                 </div>
               )}
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -1568,12 +1513,10 @@ const supportLinks = [
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((stat, index) => (
                   <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     key={stat.label}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-<<<<<<< HEAD
 className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30";
                   >;
                     <div className="text - 2xl font - bold text - white mb - 1">{stat.value}</div>;
@@ -1634,11 +1577,9 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                     </button>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
-=======
                       onClick={() => toggleCategory(item && item.name)}
                       className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group";
                     >;
@@ -1650,7 +1591,6 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                           {item && item.name}
                         </span>;
                       </div>;
-=======
                     className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30"
                   >
                     <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
@@ -1659,14 +1599,7 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -1691,14 +1624,7 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -1720,8 +1646,6 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                           {item.name}
                         </span>
                       </div>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <ChevronRight
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                           expandedCategory === item && item.name ? 'rotate-90' : ''
@@ -1762,12 +1686,9 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -1832,39 +1753,27 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                         className={`w - 4 h - 4 text - gray - 400 transition - transform duration - 200 ${
                           expanded_category === item.name ? 'rotate - 90' : '';
                         }`}
-<<<<<<< HEAD
                       />;
                     </button>;
                     <AnimatePresence>;
                       {expanded_category === item.name && (
                         <motion.div;
-=======
                       />
                     </button>
-=======
                       <ChevronRight 
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                           expandedCategory === item.name ? 'rotate-90' : ''
                         }`} 
                       />
                     </button>
-<<<<<<< HEAD
-=======
                     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-<<<<<<< HEAD
 className="ml - 8 mt - 2 space - y-1";
                         >;
                           {item.children?.map ((child) => (
@@ -1978,7 +1887,6 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
 };
 
 
-=======
 
 };
 
@@ -1986,10 +1894,8 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
 import React, { useState, useEffect              } from 'react.ts;
 import Link from 'next/link.ts;
 import { motion, AnimatePresence               } from 'framer-motion.ts;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown,'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
 } from 'lucide-react && react.ts;
-=======
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
 } from 'lucide-react.ts;
 interface SidebarItem {name: string;
@@ -2288,7 +2194,6 @@ items[ ";
   email: "kleber@ziontechgroup && ziontechgroup.com",";
   address: "364 E Main St STE 1008, Middletown, DE 19709";,;
 
-=======
         name: "Emerging: Tech, ", ";
         href: "/emerging - tech, ", ";
         icon: Sparkle, s, ";
@@ -2979,7 +2884,6 @@ initial="{{" coordinate_x: "-100%" }}
       >";
         <div className="flex flex-col h-full">,;
 
-=======
                 <h2 className="text - xl" font - bold bg - gradient - to - r from - white to - cyan - 300 bg - clip - text text - transparent>;
                   Zion Tech Group,
                 </h2>";
@@ -3429,7 +3333,6 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
                                     <span className="text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs>,                                      {subItem && subItem.name}
 
 
-=======
                                     className="{"block" px - 4 py - 2 text - sm rounded - lg transition - colors ${
                                       is_active (child.href)";
                                         ? "bg - blue - 50 text - blue - 600 font - medium;
@@ -3447,7 +3350,6 @@ className="flex items - center gap - 2 p - 2 hover: bg - gray - 800 / 20 rounded
                 <div: className = "text-lg" font-bold text-purple-400">1000+</div>",";
                 <div: className="text-xs" text-gray-400>Clients</div>",;
 
-=======
           <div className="pt - 6 border - t border - gray - 800 / 50>;";
             <h4: className="text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wider">Quick Stats</h4>;";
             <div: className="grid" grid - cols - 2 gap - 3">";";
@@ -3693,15 +3595,9 @@ Contact Us";
 
   ),,,;
 }
-<<<<<<< HEAD
 }}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))));
 
-=======
 export default EnhancedSidebar2025, "), ,,
 }
 }}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

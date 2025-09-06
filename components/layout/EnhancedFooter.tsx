@@ -3,17 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const company = null;
   ];
   const resources = null;
@@ -86,21 +81,18 @@ const socialLinks = [
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
   const services = [
-<<<<<<< HEAD
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
     { name: 'Micro SaaS', href: '/micro-saas' }
     { name: 'Security', href: '/security' }
     { name: 'Case Studies', href: '/case-studies' }
-=======
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
     { name: 'Micro SaaS', href: '/micro-saas' },;
     { name: 'Security', href: '/security' },;
     { name: 'Case Studies', href: '/case-studies' },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const company = [
     { name: 'About Us', href: '/about' }
@@ -120,9 +112,7 @@ export default function EnhancedFooter() {
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
   ];
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -142,7 +132,6 @@ export default function EnhancedFooter() {
 
             </p>
             <div className="flex space-x-4">
-=======
     <footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -454,7 +443,6 @@ function EnhancedFooter() {
               <div className="flex items-center space-x-2">;
                 <MapPin className="h-4 w-4 text-gray-400" />;
                 <span className="text-gray-300">New York, NY</span>;
-=======
           <div className="space - y-4">;
             <h3 className="text - lg font - semibold">Contact</h3>;
             <div className="space - y-2">;
@@ -499,20 +487,14 @@ function EnhancedFooter() {
         </div>;
       </div>;
 
-=======
 
-=======
     </footer>);
 }
 ;
 export default EnhancedFooter;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 };
 
 export default EnhancedFooter;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

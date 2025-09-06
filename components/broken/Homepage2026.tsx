@@ -39,7 +39,6 @@ import { motion } from 'framer-motion';
 
 
 const Homepage2026: React.FC = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Layout>;
       {/* Main Content */}
@@ -59,20 +58,15 @@ const Homepage2026: React.FC = () => {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
-=======
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Company Badge */}
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight,
   Star,
   Brain,
@@ -104,7 +98,6 @@ const Homepage2026: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Hero Section */}
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
           {/* Background Elements */}
@@ -137,7 +130,6 @@ const Homepage2026: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -324,16 +316,10 @@ const Homepage2026: React.FC = () => {
               </div>;
 
 
-=======
               
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -344,12 +330,10 @@ const Homepage2026: React.FC = () => {
         <section className='py-20 px-4 bg-black/30 relative'>;
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>;
           <div className='max-w-6xl mx-auto relative z-10'>            <motion&& motion.div
-=======
         {/* Company Stats */}
         <section className='py-20 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
           <div className='max-w-6xl mx-auto relative z-10'>            <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -538,11 +522,9 @@ const Homepage2026: React.FC = () => {
         {/* Service Categories */}
         <section className='py-20 px-4'>;
           <div className='max-w-6xl mx-auto'>            <motion&& motion.div
-=======
         {/* Service Categories */}
         <section className='py-20 px-4'>
           <div className='max-w-6xl mx-auto'>            <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -555,7 +537,6 @@ const Homepage2026: React.FC = () => {
 
         {/* Service Categories */}
         <section className="py-20 px-4">
-=======
         {/* Service Categories */}
         <section className='py-20 px-4'>
           <div className='max-w-6xl mx-auto'>            <motion.div
@@ -588,18 +569,14 @@ const Homepage2026: React.FC = () => {
             </motion && motion.div>;
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* AI Automation Services */}
               <motion&& motion.div
-=======
 
 
               {/* AI Automation Services */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
@@ -630,7 +607,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
                   <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>                    Learn More              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl mb-6">🤖</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Automation Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -853,7 +829,6 @@ const Homepage2026: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* IT Infrastructure Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -886,7 +861,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
                   <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>                    Learn More              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl mb-6">🏗️</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -969,13 +943,9 @@ const Homepage2026: React.FC = () => {
                 </Link>;
               </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Micro SAAS Solutions */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -1008,7 +978,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
                   <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors'>                    Learn More              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl mb-6">🚀</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-6">
@@ -1165,7 +1134,6 @@ const Homepage2026: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Cutting-Edge AI Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -1198,7 +1166,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
                   <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>                    Learn More              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl mb-6">🧠</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -1289,11 +1256,9 @@ const Homepage2026: React.FC = () => {
         {/* Contact Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
         {/* Contact Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1334,7 +1299,6 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
 className="space-y-6"
             >
 
@@ -1651,7 +1615,6 @@ export default Homepage2026;  );
 export default Homepage2026;
 
 
-=======
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                 <a;
                   href='mailto:kleber@ziontechgroup.com';
@@ -1688,12 +1651,8 @@ export default Homepage2026);
 ;
 export default Homepage2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

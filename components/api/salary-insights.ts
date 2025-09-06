@@ -2,33 +2,25 @@
 
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
-=======
 }const completion = await client.chat.completions.create ({
   model: 'gpt - 4o - mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.';
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
   medianHourlyUsd: number;
   minHourlyUsd: number;
   maxHourlyUsd: number;
-<<<<<<< HEAD
   confidence: number; // 0..1;
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
 
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -57,11 +49,8 @@ function groupBy<T, K extends string | number>(
   items: T[]
   getKey: (item: T) => K
 ): Record<K, T[]> {
-<<<<<<< HEAD
   return items && items.reduce(
-=======
   return items.reduce(
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     (acc, item) => {
       const key = getKey(item);
       (acc[key] |= []).push(item);
@@ -127,7 +116,6 @@ function prng (seed: string): () => number {
   let h = 2166136261 >>> 0;
   for (let index = 0; i < seed.length; i++);
     h = Math.imul (h ^ seed.charCodeAt (i), 16777619);
-=======
   const set = new Set(targetSkills.map(s => s.toLowerCase()));
   const overlap = profile.skills.filter(s => set.has(s.toLowerCase())).length;
   return overlap / Math.max(1, targetSkills.length);
@@ -135,7 +123,6 @@ function prng(seed: string): () => number {
   let h = 2166136261 >>> 0;
   for (let i = 0; i < seed.length; i++)
     h = Math.imul(h ^ seed.charCodeAt(i), 16777619);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return () => {
     h += h << 13;
     h ^= h >>> 7;
@@ -168,15 +155,12 @@ function build_trend (
   const seed = prng (seed_key);
   const series: { label: string; value: number }[] = [];
 
-=======
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items.reduce((acc, item) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const key = getKey(item);
     (acc[key] |= []).push(item);
     return acc
@@ -261,7 +245,6 @@ function prng (seed: string): () => number {
     return undefined;
   }
 
-=======
         { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
         { role: 'user', content: prompt }];
       temperature: 0.2,
@@ -294,7 +277,6 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
     return completion.choices?.[0]?.message?.content || undefined
   } catch {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return undefined
   }
 }
@@ -321,7 +303,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   // Adjustments
 
 
-=======
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
@@ -357,7 +338,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   };
   return res && res.status(200).json(response);  return res && res.status(200).json(response)
 
-=======
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
@@ -371,7 +351,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     tags;
     gptRecommendation};
   return res.status(200).json(response)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export default async /**
  * handler - Function description
@@ -524,6 +503,4 @@ if ( {) {
 return res.status (200).json (response);  return res.status (200).json (response);
   return res.status(200).json(response)
 
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

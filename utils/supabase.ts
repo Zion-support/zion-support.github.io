@@ -50,7 +50,6 @@ const supabaseConfig: SupabaseConfig = {
 };
 export const supabase = createSupabaseClient(supabaseConfig);
 
-=======
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -63,16 +62,12 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-<<<<<<< HEAD
         single: () => null;
       });
     });
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   });
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

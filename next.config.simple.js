@@ -1,7 +1,6 @@
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
-=======
 
 
   reactStrictMode: true,
@@ -16,6 +15,20 @@ const next_config = {
     formats: ['image / webp', 'image / avif'],
   },
   // Output configuration;
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+
+  // Image optimization
+  images: {
+    domains: [
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
+      "via.placeholder.com",
+    ],
+    formats: ["image/webp", "image/avif"],
+  },
+  // Output configuration
   output: 'standalone',
 
   // Trailing slash
@@ -26,6 +39,22 @@ const next_config = {
   assetPrefix: '',
   // Generate ETags
   generateEtags: true,
+
+  // Output configuration
+  output: "standalone",
+
+  // Trailing slash
+  trailingSlash: false,
+
+  // Base path
+  basePath: "",
+
+  // Asset prefix
+  assetPrefix: "",
+
+  // Generate ETags
+  generateEtags: true,
+
   // Dist directory
   distDir: '.next',
 };

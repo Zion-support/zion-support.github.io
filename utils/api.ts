@@ -5,10 +5,7 @@ interface File extends Blob {
   name: string;
   lastModified: number;
 }
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Blob {
   size: number;
   type: string;
@@ -80,7 +77,6 @@ interface AbortSignal extends EventTarget {
 }
 
 
-=======
 
 
 };
@@ -91,13 +87,10 @@ interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
   success: boolean,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 // Define RequestInit if not available
 interface File extends Blob {
   name: string;
   lastModified: number;
->>>>>>> origin/main
 }
 interface Blob {
   size: number;
@@ -158,7 +151,6 @@ interface AbortController {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
 export class ApiClient {
   private baseURL: string;
@@ -223,12 +215,9 @@ export class ApiClient {
 }};
 
 export const apiClient = new ApiClient();
-=======
 
-=======
 }};
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 export const apiClient = new ApiClient();
 
 // Define AbortSignal if not available
@@ -237,16 +226,10 @@ interface AbortSignal extends EventTarget {
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
 
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
 ;
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
@@ -259,9 +242,7 @@ interface RequestOptions extends RequestInit {
 
 // Add global type definitions for Node && Node.js environment
 
-=======
 // Add global type definitions for Node.js environment;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 declare global {
   interface RequestInit {
     timeout?: number;
@@ -318,32 +299,15 @@ if ( {) {
 
         success: false,
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 
 
 export type { ApiResponse, RequestOptions };
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 export type { ApiResponse, RequestOptions }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 export type { ApiResponse, RequestOptions }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
         error: error instanceof Error ? error.message : 'Unknown error occurred',
       }
     }
@@ -379,4 +343,3 @@ export type { ApiResponse, RequestOptions }
 }
 export const api_client = new ApiClient ();
 export type { ApiResponse, RequestOptions }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

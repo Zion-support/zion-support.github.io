@@ -30,10 +30,8 @@ import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 
-=======
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -42,10 +40,8 @@ import { innovative2030Services } from '../data/2030-innovative-services';
 
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
-=======
 
 
   ArrowRight,
@@ -139,7 +135,6 @@ export default function Revolutionary2030ServicesPage() {
         />;
 
 
-=======
         <meta;
           name='description';
           content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we're building tomorrow's solutions today.";
@@ -220,7 +215,6 @@ export default function Revolutionary2030ServicesPage() {
                 address_country: 'US',
               },
 
-=======
     <UltraFuturisticBackground2030>
       <Head>
         <title>2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining</title>
@@ -242,10 +236,8 @@ export default function Revolutionary2030ServicesPage() {
 {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
         <link rel="canonical" href="https://ziontechgroup.com/2030-revolutionary-services" />
-=======
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -300,7 +292,6 @@ export default function Revolutionary2030ServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/2030-revolutionary-services'
         />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -317,7 +308,6 @@ export default function Revolutionary2030ServicesPage() {
                 "email": "kleber@ziontechgroup.com"
               };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               "address": {
                 "@type": "PostalAddress"
                 "streetAddress": "364 E Main St STE 1008"
@@ -337,18 +327,14 @@ export default function Revolutionary2030ServicesPage() {
 
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />;
-=======
         />
       </Head>
-<<<<<<< HEAD
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -368,7 +354,6 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             className="mb-8"
 
           >
@@ -397,9 +382,7 @@ export default function Revolutionary2030ServicesPage() {
               Technology Services
             </span>
           </motion.h1>
-<<<<<<< HEAD
 <motion.p
-=======
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -426,10 +409,7 @@ export default function Revolutionary2030ServicesPage() {
               Schedule Consultation
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />
             </button>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
               View Pricing
             </button>
@@ -506,7 +486,6 @@ export default function Revolutionary2030ServicesPage() {
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
 
-=======
 
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
@@ -514,8 +493,6 @@ export default function Revolutionary2030ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       {/* Services Showcase */}
       <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -524,8 +501,6 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -539,7 +514,6 @@ export default function Revolutionary2030ServicesPage() {
                 whileHover={{ y: -5 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Description */}
                   <p className='text - gray - 300 leading - relaxed mb - 6'>;
                     {service.description}
@@ -683,17 +657,11 @@ export default function Revolutionary2030ServicesPage() {
             ))}
 
           </div>;
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -716,7 +684,6 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -727,11 +694,6 @@ export default function Revolutionary2030ServicesPage() {
                 {' '}
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -844,7 +806,6 @@ export default function Revolutionary2030ServicesPage() {
     </UltraFuturisticBackground2030>;
   );  );
 
-=======
   )
 }
           </motion.div>;
@@ -926,6 +887,4 @@ export default function Revolutionary2030ServicesPage() {
       {/* Footer */}
       <UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>));
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

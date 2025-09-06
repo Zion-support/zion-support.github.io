@@ -40,10 +40,7 @@ import { useRouter } from 'next/router';
           <li><strong>Automated Quality Control:</strong> Computer vision systems for defect detection</li>
           <li><strong>Intelligent Scheduling:</strong> AI-powered production planning and optimization</li>
         </ul>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Implementation</h2>
         <p>The system was deployed in phases over 6 months:</p>
         <ul>
@@ -52,10 +49,7 @@ import { useRouter } from 'next/router';
           <li><strong>Phase 3:</strong> Integration with existing systems</li>
           <li><strong>Phase 4:</strong> Training and optimization</li>
         </ul>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -64,10 +58,7 @@ import { useRouter } from 'next/router';
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
           <li><strong>30% reduction in operational costs</strong> - Optimized resource allocation and reduced waste</li>
         </ul>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Key Learnings</h2>
         <p>This project revealed several important insights:</p>
         <ul>
@@ -76,11 +67,8 @@ import { useRouter } from 'next/router';
           <li>Gradual implementation reduces resistance and improves adoption</li>
           <li>Continuous monitoring and optimization is essential for long-term success</li>
         </ul>
-<<<<<<< HEAD
 <h2>Conclusion</h2>
-=======
         <h2>Conclusion</h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
@@ -206,10 +194,7 @@ import { useRouter } from 'next/router';
 
 
 
-=======
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -398,11 +383,8 @@ export default function CaseStudyResourcePage(req, res) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!caseStudy) {
     return (
       <>
@@ -410,7 +392,6 @@ export default function CaseStudyResourcePage(req, res) {
           <title>Case Study Resource Not Found | Zion Tech Group</title>
         </Head>
         <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>
@@ -445,7 +426,6 @@ export default function CaseStudyResourcePage(req, res) {
       <Head>
         <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>
         <meta name="description" content={caseStudy.description} />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
         <meta property="og:description" content={caseStudy.description} />
       </Head>
@@ -469,7 +449,6 @@ export default function CaseStudyResourcePage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -496,10 +475,8 @@ export default function CaseStudyResourcePage(req, res) {
       </div>
     </>
 
-=======
 }
 
-=======
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
       full_content: `;
         <h2 > Executive Summary</h2>;
@@ -567,7 +544,6 @@ if ( {) {
             <div className="max - w-4xl mx - auto text - center">;
               <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
               <p className="text - xl text - white / 80 mb - 8">;
-=======
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
   if (!caseStudy) {;
@@ -581,23 +557,18 @@ if ( {) {
             <div className="max-w-4xl mx-auto text-center">;
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>;
               <p className="text-xl text-white/80 mb-8">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
                 href="/resources";
-<<<<<<< HEAD
                 className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-=======
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
                 ← Back to Resources;
               </Link>;
             </div>;
           </main>;
         </div>;
-<<<<<<< HEAD
       </>);
   }
   return (
@@ -640,7 +611,6 @@ if ( {) {
               <Link;
                 href="/contact";
                 className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-=======
       </>;
     );
     } catch (error) {
@@ -697,7 +667,6 @@ if ( {) {
               <Link;
                 href="/contact";
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
                 Get Started with Your Project;
               </Link>;
@@ -705,12 +674,7 @@ if ( {) {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

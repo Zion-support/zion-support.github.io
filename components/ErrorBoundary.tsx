@@ -1,8 +1,5 @@
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 'use client';
 
 ;
@@ -10,7 +7,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 ;
 
 interface Props {
-=======
 
 interface Props {;
   children: ReactNode;
@@ -21,7 +17,6 @@ interface Props {;
 }
 
 
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -42,20 +37,14 @@ interface Props {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface State {
-=======
 
 interface State {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   hasError: boolean;
   error?: Error;
 
-=======
 
 
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -72,17 +61,10 @@ interface Props {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface State {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   hasError: boolean;
   error?: Error;
-<<<<<<< HEAD
   errorInfo?: ErrorInfo;
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
@@ -95,22 +77,17 @@ interface Props {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     super(props);
     this && this.state = { hasError: false };
   }
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {;
     // Update state so the next render will show the fallback UI;
-=======
   static getDerivedStateFromError(error: Error): State {
 
 
-=======
 class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
     super(props);
@@ -119,38 +96,26 @@ class ErrorBoundary extends Component<Props, State> {;
 
   static getDerivedStateFromError(error: Error): State {;
     // Update state so the next render will show the fallback UI;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return { hasError: true, error };
-=======
     return { hasError: true, error }
->>>>>>> origin/main
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return { hasError: true, error };
     return { hasError: true, error }
   }
 
 
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       error,
       error_info;
     });
 
-=======
 
-=======
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
@@ -158,12 +123,9 @@ class ErrorBoundary extends Component<Props, State> {;
     }
 
 
-=======
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       error
       errorInfo
     });
@@ -198,12 +160,8 @@ class ErrorBoundary extends Component<Props, State> {;
       console && console.error('Production error:', error, errorInfo);
 
     }
-<<<<<<< HEAD
-=======
     }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
     // Log error for debugging in development
@@ -212,12 +170,9 @@ class ErrorBoundary extends Component<Props, State> {;
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -256,7 +211,6 @@ class ErrorBoundary extends Component<Props, State> {;
               </details>
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -281,9 +235,6 @@ class ErrorBoundary extends Component<Props, State> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -332,8 +283,6 @@ class ErrorBoundary extends Component<Props, State> {
               </button>
               <button
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white max-w-md mx-auto p-6">
@@ -361,7 +310,6 @@ class ErrorBoundary extends Component<Props, State> {
 
 
 
-=======
                 onClick={() => this.setState({ hasError: false })  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -376,8 +324,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 Try Again
               </button>
@@ -385,7 +331,6 @@ class ErrorBoundary extends Component<Props, State> {
             {process.env.NODE_ENV === 'development' && this.state.error && (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
@@ -394,8 +339,6 @@ class ErrorBoundary extends Component<Props, State> {
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
@@ -407,7 +350,6 @@ class ErrorBoundary extends Component<Props, State> {
 
 
 
-=======
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
@@ -426,8 +368,6 @@ class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </pre>
               </details>
                 onClick={() => this && this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
@@ -459,7 +399,6 @@ class ErrorBoundary extends Component<Props, State> {
 if (.Sentry) {) {
   $2
 }
-<<<<<<< HEAD
       (window as any).Sentry.capture_exception (error, { extra: error_info });    }
     // Call custom error handler if provided;
     // Check condition
@@ -476,13 +415,11 @@ if ( {) {
       // Here you would typically send to an error reporting service;
       console.error ('Production error:', error, error_info);
     }
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </pre>
               </details>
             )  } catch (error) {
@@ -523,11 +460,9 @@ if ( {) {
               Reload Page
             </button>
           </div>
-<<<<<<< HEAD
     // Log the error to an error reporting service
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   handle_reload = () => {
     window.location.reload ();
@@ -682,9 +617,7 @@ if ( {) {
               </pre>;
             </details>;
           )}
-<<<<<<< HEAD
         </div>;
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -717,11 +650,8 @@ if ( {) {
             </button>
           </div>
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       );
     }
 
@@ -729,19 +659,12 @@ if ( {) {
     return this && this.props.children;
   }
 }
-<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
-=======
-<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {;
-=======
-<<<<<<< HEAD
 
 class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     super(props);
     this && this.state = { hasError: false };
 
@@ -879,12 +802,9 @@ if ( {) {
 
     return this && this.props.children;
 
-=======
     return this.props.children;
 }
 }
 export default ErrorBoundary;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

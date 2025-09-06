@@ -24,10 +24,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 } from 'react-icons/si';
 
 interface Service {;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   FaRocket,
   FaBrain,
   FaCloud,
@@ -39,7 +36,6 @@ interface Service {;
   FaMobile,
   FaDatabase,
   FaNetworkWired,
-<<<<<<< HEAD
   FaRobot,
   FaSearch,
 import {
@@ -64,14 +60,12 @@ interface Service {
   id: string;
   title: string;
   description: string;
-<<<<<<< HEAD
   icon: React && React.ReactNode;
   category: string;
   features: string[];
   pricing: {;
     starter: number;
     professional: number;
-=======
   icon: React.ReactNode;
   category: string;
   features: string[];
@@ -79,16 +73,13 @@ interface Service {
     starter: number;
     professional: number;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     enterprise: number;
   }
   technologies: string[];
   benefits: string[];
 
 ;
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface ServiceCategory {
 
   id: string;
@@ -228,10 +219,8 @@ const serviceCategories: ServiceCategory[] = [
     icon: <FaRobot className='w-8 h-8' />
     color: 'from-yellow-500 to-orange-500'
   },    icon: <FaRobot className="w-8 h-8" />
-=======
 
 const serviceCategories: ServiceCategory[] = [
-=======
   color: string;  id: string,
   name: string,
   description: string,
@@ -239,7 +228,6 @@ const serviceCategories: ServiceCategory[] = [
   color: string;
 }
 const service_categories: ServiceCategory[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: 'ai - ml',
     name: 'AI & Machine Learning',
@@ -422,7 +410,6 @@ const serviceCategories: ServiceCategory[] = [;
   },    icon: <FaRobot className="w-8 h-8" />,;
     color: 'from-yellow-500 to-orange-500';
   }
-=======
     id: 'ai-automation-suite',
     title: 'AI-Powered Automation Suite',
     description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
@@ -431,7 +418,6 @@ const serviceCategories: ServiceCategory[] = [;
     features: [
       'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
     ];
-=======
     icon: <FaRobot className='w - 8 h - 8' />,
     color: 'from - yellow - 500 to - orange - 500',
   },    icon: <FaRobot className="w - 8 h - 8" />,
@@ -447,7 +433,6 @@ const services: Service[] = [;
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
     icon: <FaRobot className='w - 6 h - 6' />,
     features: [;
-=======
 
 
       'Intelligent workflow automation',
@@ -465,11 +450,9 @@ const services: Service[] = [;
     },
 
     technologies: [;
-=======
       enterprise: 1999,
     },
     technologies: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'TensorFlow',
       'PyTorch',
       'OpenAI',
@@ -477,23 +460,19 @@ const services: Service[] = [;
       'React',
       'Node.js',
     ],
-<<<<<<< HEAD
     benefits: [;
       'Reduce manual tasks by 80%',
       'Improve accuracy by 95%',
       '24 / 7 automated operations',
-=======
     benefits: [
       'Reduce manual tasks by 80%',
       'Improve accuracy by 95%',
       '24/7 automated operations',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Scalable AI infrastructure',
     ],
   },
 
   {
-<<<<<<< HEAD
     id: 'quantum - computing - platform',
     title: 'Quantum Computing Platform',
 
@@ -504,7 +483,6 @@ const services: Service[] = [;
     features: [;
       'Quantum algorithm optimization',
       'Hybrid classical - quantum computing',
-=======
     id: 'quantum-computing-platform',
     title: 'Quantum Computing Platform',
     description:
@@ -514,7 +492,6 @@ const services: Service[] = [;
     features: [
       'Quantum algorithm optimization',
       'Hybrid classical-quantum computing',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Quantum machine learning',
       'Cryptographic solutions',
       'Quantum simulation tools',
@@ -533,7 +510,6 @@ const services: Service[] = [;
       'Solve previously impossible problems',
       'Exponential speed improvements',
       'Future - proof technology',
-=======
       enterprise: 4999,
     },
     technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
@@ -541,13 +517,11 @@ const services: Service[] = [;
       'Solve previously impossible problems',
       'Exponential speed improvements',
       'Future-proof technology',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Research and development support',
     ],
   },
 
   {
-<<<<<<< HEAD
     id: 'edge - ai - platform',
     title: 'Edge AI Computing Platform',
 
@@ -578,11 +552,8 @@ const services: Service[] = [;
       'Raspberry Pi',
       'Arduino',
     ],
-<<<<<<< HEAD
     benefits: [;
-=======
     benefits: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Reduced latency by 90%',
       'Lower bandwidth costs',
       'Enhanced privacy',
@@ -591,7 +562,6 @@ const services: Service[] = [;
   },
 
   {
-<<<<<<< HEAD
     id: 'quantum - cybersecurity',
     title: 'Quantum Cybersecurity Suite',
 
@@ -606,7 +576,6 @@ const services: Service[] = [;
       'Zero - trust architecture',
       'Compliance frameworks',
       'Real - time monitoring',
-=======
     id: 'quantum-cybersecurity',
     title: 'Quantum Cybersecurity Suite',
     description:
@@ -620,7 +589,6 @@ const services: Service[] = [;
       'Zero-trust architecture',
       'Compliance frameworks',
       'Real-time monitoring',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ],
 
     pricing: {
@@ -634,21 +602,18 @@ const services: Service[] = [;
     benefits: [;
       'Future - proof security',
       'Quantum - resistant encryption',
-=======
       enterprise: 2499,
     },
     technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
     benefits: [
       'Future-proof security',
       'Quantum-resistant encryption',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Comprehensive compliance',
       'Advanced threat protection',
     ],
   },
 
   {
-<<<<<<< HEAD
     id: 'data - fabric - platform',
     title: 'Intelligent Data Fabric Platform',
 
@@ -662,7 +627,6 @@ const services: Service[] = [;
       'Data governance',
       'AI - powered insights',
       'Multi - cloud support',
-=======
     id: 'data-fabric-platform',
     title: 'Intelligent Data Fabric Platform',
     description:
@@ -675,7 +639,6 @@ const services: Service[] = [;
       'Data governance',
       'AI-powered insights',
       'Multi-cloud support',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Data lineage tracking',
     ],
 
@@ -693,20 +656,16 @@ const services: Service[] = [;
       'Databricks',
       'Airflow',
     ],
-<<<<<<< HEAD
     benefits: [;
       'Unified data view',
       'Real - time insights',
-=======
     benefits: [
       'Unified data view',
       'Real-time insights',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Improved data quality',
       'Reduced integration costs',
     ],
   },  {
-<<<<<<< HEAD
     id: 'cloud - native - platform',
     title: 'Cloud - Native Development Platform',
     description: 'Modern cloud - native development and deployment platform',
@@ -715,12 +674,10 @@ const services: Service[] = [;
   }
   {
 
-=======
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 const services: Service[] = [;
   {;
@@ -948,7 +905,6 @@ const services: Service[] = [;
       );
     }    if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(service => service && service.category === selectedCategory);
-=======
     
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
@@ -956,7 +912,6 @@ const services: Service[] = [;
 
     
 
-=======
 
     
     if (searchTerm) {
@@ -967,7 +922,6 @@ const services: Service[] = [;
       )
     }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -983,7 +937,6 @@ const services: Service[] = [;
     setSelectedService(service);
   }
   const closeModal = () => {
-=======
 
     if (searchTerm) {;
       filtered = filtered && filtered.filter(service => ;
@@ -1158,12 +1111,9 @@ if ( {) {
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1173,7 +1123,6 @@ if ( {) {
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <input
                 type='text'
                 placeholder='Search services, technologies, or features...'
@@ -1239,14 +1188,12 @@ if ( {) {
               <option value='price'>Sort by Price</option>;
               <option value='category'>Sort by Category</option>            </select>        >;
 
-=======
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services, technologies, or features..."
@@ -1261,7 +1208,6 @@ if ( {) {
             </select>
           </div>
         </motion.div>
-=======
                 onChange={(e) => setSearchTerm(e && e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
               />;
@@ -1309,7 +1255,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Category Tabs */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1322,7 +1267,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
@@ -1343,7 +1287,6 @@ if ( {) {
                   selectedCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }`}
               >;
                 {category && category.icon}
@@ -1355,12 +1298,9 @@ if ( {) {
         </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1371,7 +1311,6 @@ if ( {) {
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1382,7 +1321,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={() => handleServiceSelect(service)}
             >;
               <div className='flex items-center gap-3 mb-4'>;
@@ -1468,7 +1406,6 @@ if ( {) {
                   <span
                     key={tech}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {tech}
                   </span>
                 ))}
@@ -1521,17 +1458,11 @@ if ( {) {
             </motion && motion.div>;
           ))}
         </motion && motion.div>;
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -1539,18 +1470,14 @@ if ( {) {
             animate={{ opacity: 1 }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
 
       </div>;
 
 
-=======
       </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -1563,14 +1490,11 @@ if ( {) {
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-<<<<<<< HEAD
 className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-=======
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
 
               onClick={e => e.stopPropagation()}
@@ -1593,14 +1517,12 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
                         serviceCategories.find(
                           c => c.id === selectedService.category
                         )?.name
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }
                     </p>                  </div>
                 </div>
                 <button
                   onClick={closeModal}
                   className='p-2 hover:bg-white/10 rounded-lg transition-colors'            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center gap-4">
                   <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
@@ -1647,29 +1569,22 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
 
 
                         {feature}
-<<<<<<< HEAD
                       </li>;
-=======
 
 
                         {feature}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
 
                   </ul>;
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Benefits */}
 
 
@@ -1680,24 +1595,18 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Technologies */}
 
 
-=======
 
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
 
                     >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {tech}
                     </span>;
                   ))}
@@ -1706,12 +1615,9 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Pricing */}
 
 
@@ -1731,7 +1637,6 @@ export default EnhancedServicesShowcase2025;  );
 export default EnhancedServicesShowcase2025;
 
 
-=======
               while_hover={{ coordinate_y: -5, scale: 1.02 }}
               className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300';
               on_click={() => handleServiceSelect (service)}
@@ -1988,11 +1893,7 @@ export default EnhancedServicesShowcase2025);
 ;
 export default EnhancedServicesShowcase2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

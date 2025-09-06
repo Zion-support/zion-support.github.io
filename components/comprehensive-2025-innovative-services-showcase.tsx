@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 
 import {
 
-=======
 
 import React from 'react';
 import SEO from '../components/SEO';
@@ -94,7 +93,6 @@ import { motion } from 'framer-motion';
     return cat ? cat && cat.color : 'from-gray-500 to-gray-600';    return cat ? cat && cat.color : 'from-gray-500 to-gray-600';
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
         <div className='absolute inset-0 pointer-events-none'>;
@@ -118,7 +116,6 @@ import { motion } from 'framer-motion';
             transition={{ duration: 0 && 0.8 }}
             className='space-y-6'            className="space-y-6">;
 
-=======
     <Layout>
       <SEO 
         title="2025 Innovative Services Showcase | Zion Tech Group"
@@ -140,14 +137,12 @@ import { motion } from 'framer-motion';
         </div>
         
         <div className="text-center max-w-6xl mx-auto relative z-10">
-=======
   return (
     <Layout>
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -159,7 +154,6 @@ import { motion } from 'framer-motion';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Enhanced Company Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -308,7 +302,6 @@ import { motion } from 'framer-motion';
 
 
 
-=======
               transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
             >
@@ -323,14 +316,9 @@ import { motion } from 'framer-motion';
               Pioneering the future with cutting-edge micro SAAS services, quantum computing solutions, and autonomous AI platforms
             </p>
             
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Enhanced Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -365,7 +353,6 @@ import { motion } from 'framer-motion';
                 <div className='text-gray-300 text-sm'>
                   Future Possibilities
                 </div>              </div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">
                 <div className="text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">50+</div>
                 <div className="text-gray-300 text-sm">Innovative Services</div>
@@ -445,20 +432,15 @@ import { motion } from 'framer-motion';
         <div className="max-w-7xl mx-auto relative z-10">;
           <motion&& motion.div
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Services Categories */}
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -481,16 +463,10 @@ import { motion } from 'framer-motion';
 
 
 
-=======
               
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-16'>;
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
               Service Categories;
@@ -501,15 +477,9 @@ import { motion } from 'framer-motion';
             </p>;
           </motion && motion.div>;
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
               
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div
                     className={`p-8 rounded-2xl bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>;
                     <div className='text-center'>;
@@ -671,7 +641,6 @@ import { motion } from 'framer-motion';
               const IconComponent = category && category.icon;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               return (
 
 
@@ -683,25 +652,18 @@ import { motion } from 'framer-motion';
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Featured Services */}
       <section className='py-20 px-4'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -776,11 +738,8 @@ import { motion } from 'framer-motion';
       {/* All Services Grid */}
       <section className='py-20 px-4 bg-black/30 relative'>
         <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5'></div>
-<<<<<<< HEAD
         <div className='max-w-7xl mx-auto relative z-10'>      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-16'>;
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
               Featured Services;
@@ -835,7 +794,6 @@ import { motion } from 'framer-motion';
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className='text - center mb - 16';
           >;
             <h2 className='text - 5xl md:text - 6xl font - bold mb - 8 bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent'>;
@@ -963,7 +921,6 @@ import { motion } from 'framer-motion';
         <div className='max-w-7xl mx-auto relative z-10'>      <section className="py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-=======
       {/* All Services Grid */}
       <section className='py-20 px-4 bg-black/30 relative'>
         <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5'></div>
@@ -971,9 +928,7 @@ import { motion } from 'framer-motion';
         <div className='max-w-7xl mx-auto relative z-10'>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -985,7 +940,6 @@ import { motion } from 'framer-motion';
           >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio
             </h2>
@@ -1001,17 +955,12 @@ import { motion } from 'framer-motion';
 
 
 
-=======
               
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>
                     <div className='flex items-start space-x-4'>
-=======
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>;
               Complete Service Portfolio;
             </h2>;
@@ -1050,14 +999,8 @@ import { motion } from 'framer-motion';
 
                     {/* Market Info */}
 
-=======
 
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio
             </h2>
@@ -1069,17 +1012,9 @@ import { motion } from 'framer-motion';
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
               
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>
                     <div className='flex items-start space-x-4'>
@@ -1105,7 +1040,6 @@ import { motion } from 'framer-motion';
                           {service.category}
                         </div>                      </div>                      ))}
                     </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {/* Market Info */}
                     <div className="border-t border-white/10 pt-4 space-y-2">
                       <div className="text-xs text-gray-400">
@@ -1118,7 +1052,6 @@ import { motion } from 'framer-motion';
                   </div>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               );
             })}
 
@@ -1127,12 +1060,9 @@ import { motion } from 'framer-motion';
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Contact CTA */}
       <section className='py-20 px-4'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion && motion.div      {/* All Services Grid */}
@@ -1140,21 +1070,17 @@ import { motion } from 'framer-motion';
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>;
         <div className="max-w-7xl mx-auto relative z-10">;
 
-=======
 
       {/* All Services Grid */}
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
 
-=======
 
 
           <motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1170,8 +1096,6 @@ import { motion } from 'framer-motion';
               can drive your success
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='space-y-8';
           >;
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
@@ -1182,16 +1106,8 @@ import { motion } from 'framer-motion';
               can drive your success;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-=======
             className='space-y-8'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
               Ready to Transform Your Business?
@@ -1201,7 +1117,6 @@ import { motion } from 'framer-motion';
               can drive your success
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <a
                 href='tel:+13024640950'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'>;
@@ -1223,7 +1138,6 @@ import { motion } from 'framer-motion';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
-=======
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                 className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>;
                 Email Us;
@@ -1241,7 +1155,6 @@ import { motion } from 'framer-motion';
               const IconComponent = getCategoryIcon(service && service.category);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               return (
                 <motion&& motion.div
                   key={service && service.id}
@@ -1249,7 +1162,6 @@ import { motion } from 'framer-motion';
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.05 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                   className="group relative">;
                   <div className="p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm">;
                     <div className="flex items-start space-x-4">;
@@ -1416,7 +1328,6 @@ import { motion } from 'framer-motion';
             viewport={{ once: true }}
 
 
-=======
   )
 };
 export default Comprehensive2025InnovativeServicesShowcase;
@@ -1477,11 +1388,9 @@ export default Comprehensive2025InnovativeServicesShowcase;
       </section>;
     </Layout>);
 }export default Comprehensive2025InnovativeServicesShowcase);
-=======
 
 export default Comprehensive2025InnovativeServicesShowcase;
 
-=======
 export default Comprehensive2025InnovativeServicesShowcase;
 
 
@@ -1489,4 +1398,3 @@ export default Comprehensive2025InnovativeServicesShowcase;
 ;
 export default Comprehensive2025InnovativeServicesShowcase;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

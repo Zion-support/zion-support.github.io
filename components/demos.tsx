@@ -24,7 +24,6 @@ import {
 
 
 export default function DemosPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
@@ -91,7 +90,6 @@ export default function DemosPage() {
     }
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -217,7 +215,6 @@ export default function DemosPage() {;
             </p>;
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 href="#demos"
                 size="lg"
@@ -240,7 +237,6 @@ export default function DemosPage() {;
           </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <button
 
 
@@ -253,14 +249,11 @@ export default function DemosPage() {;
                   activeDemo === demo.id
                     ? 'border-blue-500 bg-blue-500/10'
                     : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }`}
               >;
                 <div
 
-=======
               <button
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
             {demos.map (demo => (              <button              Choose a Service to Test;
             </h2>;
@@ -284,20 +277,11 @@ export default function DemosPage() {;
                 <div;
                   className={`w - 12 h - 12 rounded - lg bg - gradient - to - br ${demo.color} flex items - center justify - center mb - 3 group - hover:scale - 110 transition - transform duration - 300`}
                 >;
-=======
               >
                 <div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
                 >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {demo.icon}
                 </div>;
                 <h3 className='font - semibold text - white mb - 2 group - hover:text - blue - 400 transition - colors duration - 300'>;
@@ -305,7 +289,6 @@ export default function DemosPage() {;
                 </h3>;
                 <p className='text - sm text - gray - 400 leading - relaxed'>;
                   {demo.description}
-<<<<<<< HEAD
                 </p>;
                 {active_demo === demo.id && (
                   <div className='mt - 3 flex items - center text - blue - 400 text - sm'>;
@@ -340,11 +323,7 @@ export default function DemosPage() {;
                     Active Demo
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 )}
               </button>;
             ))}
@@ -363,11 +342,9 @@ export default function DemosPage() {;
               Live Demo;
             </div>;
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -377,11 +354,9 @@ export default function DemosPage() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {activeDemoData?.title}
             </h2>;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
@@ -399,7 +374,6 @@ export default function DemosPage() {;
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
               {activeDemoData?.description}
 
-=======
 
 
 
@@ -410,22 +384,15 @@ export default function DemosPage() {;
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4">
               <Play className="w-4 h-4 mr-2" />
               Live Demo
-=======
                 </p>
                 {activeDemo === demo.id && (
                   <div className="mt-3 flex items-center text-blue-400 text-sm">
                     <CheckCircle className="w-4 h-4 mr-2" />
                     Active Demo
-=======
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo
 
                     Active Demo
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 )}
               </button>
@@ -433,28 +400,14 @@ export default function DemosPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-12'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>
               <Play className='w-4 h-4 mr-2' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
@@ -465,9 +418,7 @@ export default function DemosPage() {;
           </div>
           <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>
       </section>
-<<<<<<< HEAD
       {/* Features */}              Live Demo
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 </p>;
@@ -512,8 +463,6 @@ export default function DemosPage() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -530,7 +479,6 @@ export default function DemosPage() {;
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <Play className='w-8 h-8 text-cyan-400' />              </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300">
                 Detailed Results
               </h3>
@@ -569,7 +517,6 @@ export default function DemosPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 </p>;
           </div>;
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
@@ -711,7 +658,6 @@ export default function DemosPage() {;
       </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Get Started;
             </Button>;
           </div>;
@@ -719,19 +665,9 @@ export default function DemosPage() {;
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -20,6 +20,10 @@ function handler() {
     const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
     const items = JSON.parse (raw);
     res.status (200).json ({ items });
+  try {
+    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
+    const items = JSON.parse(raw);
+    res.status(200).json({ items });
   } catch {
     res.status (200).json ({ items: [] });
   }
@@ -32,6 +36,4 @@ function handler() {
 
   }
 }
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

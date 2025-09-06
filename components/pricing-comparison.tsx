@@ -251,7 +251,6 @@ export default function PricingComparisonPage() {
       insight: 'Enterprise-grade reliability without enterprise pricing'
       icon: <Star className="w-6 h-6" />
       color: 'text-yellow-400'
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -326,7 +325,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
               </Button>;
               <Button
 
-=======
     <>
       <Head>
         <title>Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition</title>
@@ -368,10 +366,8 @@ href="/pricing"
                 className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 View Our Pricing
 
-=======
         <meta;
           name='description';
           content="See how Zion's micro SaaS services compare to market leaders. Detailed pricing analysis showing significant cost savings and better value.";
@@ -436,7 +432,6 @@ href="/pricing"
           </div>;
         </section>;
 
-=======
 
         {/* Market Insights */}
         <section className="py-24 bg-gray-900">
@@ -445,7 +440,6 @@ href="/pricing"
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 Why Choose Zion?
               </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Key insights that make Zion the smart choice for your business.
               </p>
@@ -487,26 +481,21 @@ href="/pricing"
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
                     {insight.icon}
-<<<<<<< HEAD
                   </div>;
                   <p className={`text - lg font - semibold ${insight.color}`}>;
-=======
 
 
                     {insight.icon}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {insight.insight}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Detailed Comparison */}
 
         <section id="comparison" className="py-24 bg-gray-800">
@@ -680,12 +669,10 @@ href="/pricing"
                     </Card>;
                   </div>;
 
-=======
 
                   {/* Competitors */}
                   {service.competitors.map((competitor, compIndex) => (
 
-=======
                     <div key={compIndex} className='lg:col-span-1'>
                       <Card className='h-full border border-gray-700'>
                         <div className='text-center p-6'>
@@ -698,8 +685,6 @@ href="/pricing"
                             {[...Array(5)].map((_, i) => (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -724,7 +709,6 @@ href="/pricing"
                               </p>
                               <ul className='text-gray-300 space-y-1'>
                                 {competitor.pros.map((pro, proIndex) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                   <li
                                     key={proIndex}
                                     className='flex items-center'>;
@@ -740,21 +724,11 @@ href="/pricing"
                                   <li key={proIndex} className="flex items-center">;
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
 
-=======
                             <span className="text-sm text-gray-400 ml-2">{competitor.rating}</span>
-=======
                             <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           </div>
                           <div className="mb-4">
                             <p className="text-lg font-semibold text-white">{competitor.pricing}</p>
@@ -771,7 +745,6 @@ href="/pricing"
                                   </li>;
                                 ))}
 
-=======
                               </ul>
                             </div>
                             <div>
@@ -793,7 +766,6 @@ href="/pricing"
                       </Card>
                     </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 </div>;
               </div>;
@@ -814,14 +786,12 @@ href="/pricing"
 
               Ready to Save Money and Get Better Features?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
               choose Zion.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
                 href='/ai-content-generator'
                 variant='secondary'
@@ -841,7 +811,6 @@ href="/pricing"
                 variant='secondary'
                 size='lg'
 
-=======
         <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
@@ -874,10 +843,8 @@ href="/devops-automation"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Try DevOps Automation
 
-=======
                   {/* Competitors */}
                   {service.competitors.map ((competitor, comp_index) => (
                     <div key={comp_index} className='lg:col - span - 1'>;
@@ -1031,11 +998,8 @@ href="/devops-automation"
   );
 }
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                 className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator"
                 variant="secondary"
                 size="lg"
@@ -1045,5 +1009,3 @@ href="/devops-automation"
 
               <Button
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

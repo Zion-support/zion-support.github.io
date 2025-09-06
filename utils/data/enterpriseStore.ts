@@ -8,7 +8,6 @@ import {
 
 
 const generateId = () => Math.random().toString(36).slice(2, 10);
-<<<<<<< HEAD
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
   slug: 'acme';
@@ -106,7 +105,6 @@ const seed_company: CompanyRecord = {
     usage_limits: {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
-=======
 
 
   slug: 'acme',;
@@ -119,7 +117,6 @@ const seed_company: CompanyRecord = {
     usageLimits: {;
       monthlyJobPosts: 50,;
       budgetCapUsd: 10000}},;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },

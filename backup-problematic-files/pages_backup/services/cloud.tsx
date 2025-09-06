@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -20,8 +19,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -76,7 +73,6 @@ export default function CloudServicesPage() {
     <Layout
       title="Cloud Solutions - Zion Tech Group"
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     >
       <div className="min-h-screen bg-gray-50">
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.">;
@@ -87,10 +83,7 @@ export default function CloudServicesPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -174,13 +167,10 @@ export default function CloudServicesPage() {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -214,7 +204,6 @@ export default function CloudServicesPage() {
                   </Link>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
@@ -299,12 +288,10 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
-=======
             </div>
           </div>
         </section>
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
@@ -324,7 +311,6 @@ export default function CloudServicesPage() {
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
   );
 };
 

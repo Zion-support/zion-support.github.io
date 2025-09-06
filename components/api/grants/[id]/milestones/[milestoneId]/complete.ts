@@ -43,7 +43,6 @@ function isAuthorized(req: NextApiRequest) {
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
@@ -105,7 +104,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
-=======
   res.status(200).json({ record: existing })
 }
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
@@ -198,12 +196,7 @@ write_grant (existing);
   existing.milestones = ms,
   existing.updatedAt = new Date().toISOString(),
 
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

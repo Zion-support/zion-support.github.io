@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +16,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from '../../components/Layout';
 import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package} from 'lucide-react';
 import React from 'react';
@@ -51,7 +48,6 @@ const features = [;
     icon: Package,;
     title: 'Supply Chain Optimization,',;
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
-<<<<<<< HEAD
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'',;
 import React from 'react';
 import Head from 'next/head';
@@ -125,7 +121,6 @@ const features = [;
     icon: Package,
     title: 'Supply Chain Optimization,',
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -142,7 +137,6 @@ import {
 const features = [
   {
     icon: ShoppingCart,
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -270,7 +264,6 @@ const benefits = [;
   'Streamlined operations',;
   'Mobile-first customer engagement';
 ];
-<<<<<<< HEAD
 export default function RetailSolutions() {;
     icon: Smartphone,;
     title: 'Mobile Commerce',;
@@ -278,7 +271,6 @@ export default function RetailSolutions() {;
   }
 ];
 export default function RetailSolutionsPage() {;
-=======
 export default function RetailSolutions() {
     icon: Smartphone,
     title: 'Mobile Commerce',
@@ -287,7 +279,6 @@ export default function RetailSolutions() {
 ];
 
 export default function RetailSolutionsPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -506,17 +497,13 @@ export default function RetailSolutions() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -808,8 +795,6 @@ export default function RetailSolutions() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -897,7 +882,6 @@ export default function RetailSolutions() {;
                   Download Retail Guide;
                 </ul>;
               </div>;
-<<<<<<< HEAD
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">;
                 <h3 className="text-2xl font-bold mb-6">Ready to Transform Retail?</h3>;
                 <p className="text-lg mb-6">;
@@ -912,7 +896,6 @@ export default function RetailSolutions() {;
             </div>;
           </div>;
         </section>;
-=======
             </div>;
           </div>;
         </section>;
@@ -954,7 +937,6 @@ export default function RetailSolutions() {;
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
@@ -984,7 +966,6 @@ export default function RetailSolutions() {;
     </Layout>
     </>
     </>
-<<<<<<< HEAD
     </Layout>
   );
 };

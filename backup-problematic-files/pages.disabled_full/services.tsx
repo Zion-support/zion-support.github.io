@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,9 +16,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -1515,7 +1512,6 @@ export default function Services() {;
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
-<<<<<<< HEAD
 								aria-label='Back to homepage'>;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
 							</Link>;
@@ -1527,7 +1523,6 @@ export default function Services() {;
 		</Layout>;
 	),;
 }
-=======
 								aria-label='Back to homepage'
 							>
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
@@ -1540,4 +1535,3 @@ export default function Services() {;
 		</Layout>
 	);
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

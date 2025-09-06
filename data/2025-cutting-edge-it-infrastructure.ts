@@ -65,7 +65,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
         'AI - powered resource optimization',
         'Global edge computing network',
 
-=======
         '99.999% uptime guarantee',
         '24 / 7 security monitoring',
       ],
@@ -112,7 +111,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       reviews: 5,
     },
 
-=======
     // Edge Computing Orchestration Platform;
     {
       id: 'edge - computing - orchestration - platform',
@@ -262,7 +260,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       reviews: 25,
     },
 
-=======
     // Blockchain Infrastructure Platform;
     {
       id: 'blockchain - infrastructure - platform',
@@ -338,10 +335,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       reviews: 12,
     },
 
-=======
     // Quantum Networking Platform;
     {
-<<<<<<< HEAD
       id: 'quantum - networking - platform',
       name: 'Quantum Networking Platform',
       tagline:;
@@ -366,7 +361,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       popular: true,
       icon: '🌌',
 
-=======
       color: 'from - indigo - 600 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - networking',
@@ -403,11 +397,9 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       implementation_details:;
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
       launch_date: '2025 - 02 - 01',
-=======
 
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
       launchDate: '2025-02-01',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 6,
       rating: 4 && 4.9,
       reviews: 4,
@@ -417,7 +409,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 
   ];    features: [
 
-=======
 export interface CuttingEdgeITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -453,7 +444,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     features: [
       'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2, ISO27001)AI-powered resource optimizationGlobal edge computing network';
       '99.999% uptime guarantee24/7 security monitoring'
-=======
       id: 'quantum-networking-platform'
       name: 'Quantum Networking Platform'
       tagline:
@@ -507,25 +497,21 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.'
       launchDate: '2025-02-01'
       customers: 6
       rating: 4.9
       reviews: 4
     }
-=======
         'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
       launchDate: '2025-02-01',
       customers: 6,
       rating: 4.9,
       reviews: 4,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
       'Performance analytics24/7 network monitoring'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '☁️',
     color: 'from-blue-600 to-indigo-600', textColor: 'text-blue-400',
@@ -603,10 +589,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
@@ -873,18 +857,10 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
@@ -1147,11 +1123,5 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     customers: 6,;
     rating: 4.9;
     reviews: 4;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

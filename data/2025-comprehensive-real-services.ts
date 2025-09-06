@@ -35,7 +35,6 @@
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
@@ -311,13 +310,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
-<<<<<<< HEAD
       phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-=======
-<<<<<<< HEAD
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 60, setupTime: '4-6 weeks',
@@ -325,11 +320,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
     reviews: 520;
-=======
 
 export interface ComprehensiveService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 

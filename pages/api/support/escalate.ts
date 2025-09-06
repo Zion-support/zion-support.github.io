@@ -28,12 +28,7 @@ function handler() {
 }
   const { session_id, reason, tag } = req.body as {
     session_id: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
 import { tagOperatorSession } from "../../../utils/operator";
@@ -45,7 +40,6 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   const { sessionId, reason, tag } = req.body as {
     sessionId: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reason?: string;
     tag?: string;
   }
@@ -80,7 +74,6 @@ export default async function handler(
 }
 
     created_at: Date.now (),
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -96,4 +89,3 @@ export default async function handler(
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

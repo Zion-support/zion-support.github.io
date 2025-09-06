@@ -23,34 +23,27 @@ import React, { useEffect, useState } from 'react';
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
-=======
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
-<<<<<<< HEAD
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [data, setData] = useState<any>(null),
-=======
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u)
   }, []);
   useEffect(() => {
     async function load() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
@@ -68,14 +61,12 @@ export default function TrustPage() {;
     });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
       setData(json);
-=======
       setLoading(true);
       const res = await fetch(
         `/api/trust/${encodeURIComponent(userId)}?analyze=true`
       );
       const json = await res.json();
       setData(json);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setLoading(false);
     }
     load();
@@ -142,7 +133,6 @@ export default function TrustPage() {;
                 <RiskIndicator status={data.riskLevel} />
 
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
@@ -189,7 +179,6 @@ export default function TrustPage() {;
                         <span>{Math && Math.round(c && c.raw * 100)} / weighted {c && c.weighted.toFixed(3)}</span>;
                       </li>;
 
-=======
 
 
   }
@@ -197,8 +186,6 @@ export default function TrustPage() {;
     <EnhancedLayout>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </ul>;
                 </div>;
@@ -208,12 +195,9 @@ export default function TrustPage() {;
                 </div>;
               )}
 
-=======
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
-=======
-<<<<<<< HEAD
   }
 
   return (
@@ -221,21 +205,15 @@ export default function TrustPage() {;
 
                       </li>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
                       </li>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     ))}
                   </ul>
                 </div>
               )}
               {data.reasonSummary && (
                 <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
-=======
 
             </div>
 
@@ -250,7 +228,6 @@ export default function TrustPage() {;
   );
 }
 
-=======
   );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -459,8 +436,4 @@ function submit_appeal() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

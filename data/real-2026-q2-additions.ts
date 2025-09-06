@@ -25,17 +25,10 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
 
   },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const real2026Q2Additions = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
 
-=======
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
@@ -71,7 +64,6 @@ export const real2026Q2Additions = [
   },
   {
 
-=======
     id: 'ecommerce - returns - orchestrator',
     name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
@@ -106,7 +98,6 @@ export const real2026Q2Additions = [
   },
   {
 
-=======
     id: 'ai - analytics - observability - kit',
     name: 'AI Analytics Observability Kit',
     category: 'Observability',
@@ -149,7 +140,6 @@ export const real2026Q2Additions = [
   },
   {
 
-=======
     id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     category: 'Cloud & FinOps',
@@ -184,7 +174,6 @@ export const real2026Q2Additions = [
   },
   {
 
-=======
     id: 'secure - pdf - signing - api',
     name: 'Secure PDF Signing API',
     category: 'Developer Tools',
@@ -218,7 +207,6 @@ export const real2026Q2Additions = [
   },
   {
 
-=======
     id: 'status - slo - plus',
     name: 'Status Pages + SLO Pro',
     category: 'Quality & Monitoring',
@@ -288,7 +276,6 @@ export const real2026Q2Additions = [
   },
   {
 
-=======
     id: 'ai - docs - search - answers',
     name: 'AI Docs Search & Answers',
     category: 'Developer Tools',
@@ -322,7 +309,6 @@ export const real2026Q2Additions = [
   },
   {
 
-=======
     id: 'msp - remote - device - ops',
     name: 'MSP Remote Device Ops',
     category: 'Cloud & FinOps',
@@ -339,9 +325,7 @@ export const real2026Q2Additions = [
     ],
     use_cases: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -357,7 +341,6 @@ export const real2026Q2Additions = [
 
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
-=======
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
@@ -365,7 +348,6 @@ export const real2026Q2Additions = [
     features: [
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)'
 
-=======
     period: '/device / month',
     trial_days: 14,
     setup_time: 'Fast',
@@ -374,8 +356,6 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops',
   },
 ];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
@@ -389,17 +369,14 @@ export const real2026Q2Additions = [
 ];
 
 
-=======
     period: '/device / month';
     trial_days: 14;
     setup_time: 'Fast';
     market_position: 'Cost - effective RMM for partners and IT teams';
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops';
-=======
 
 
-=======
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;
@@ -604,25 +581,18 @@ export const real2026Q2Additions = [;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
     period: '/device/month';
     trialDays: 14;
     setupTime: 'Fast';
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;
@@ -825,11 +795,5 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

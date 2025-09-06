@@ -69,7 +69,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: true,
       icon: '🧠',
 
-=======
       color: 'from - purple - 500 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / services / neuromorphic - computing - platform - 2026',
@@ -161,7 +160,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: false,
       icon: '🧬',
 
-=======
       color: 'from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / services / dna - computing - platform - 2026',
@@ -226,7 +224,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 25,
     },
 
-=======
     // Photonic Computing Platform;
     {
       id: 'photonic - computing - platform - 2026',
@@ -253,7 +250,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: true,
       icon: '💡',
 
-=======
       color: 'from - yellow - 500 to - orange - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / services / photonic - computing - platform - 2026',
@@ -318,7 +314,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 60,
     },
 
-=======
     // Holographic Display Platform;
     {
       id: 'holographic - display - platform - 2026',
@@ -344,7 +339,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: false,
       icon: '🌟',
 
-=======
       color: 'from - pink - 500 to - rose - 600',
       text_color: 'text - pink - 400',
       link: 'https://ziontechgroup.com / services / holographic - display - platform - 2026',
@@ -437,7 +431,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: true,
       icon: '🔐',
 
-=======
       color: 'from - blue - 500 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / services / biometric - authentication - platform - 2026',
@@ -496,10 +489,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       reviews: 175,
     },
 
-=======
     // Quantum Internet Platform;
     {
-<<<<<<< HEAD
       id: 'quantum - internet - platform - 2026',
       name: 'Quantum Internet Platform 2026',
       tagline: 'Ultra - secure quantum communication network for the future',
@@ -523,7 +514,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       popular: false,
       icon: '🌐',
 
-=======
       color: 'from - cyan - 500 to - blue - 600',
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / services / quantum - internet - platform - 2026',
@@ -581,9 +571,7 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       },
       real_implementation: true,
       implementation_details:;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launch_date: '2026 - 01 - 25',
       customers: 60,
@@ -598,10 +586,8 @@ export const getPopularEmergingTechServices = () => {;
 
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
-=======
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular);
 };
-=======
       id: 'quantum-internet-platform-2026'
       name: 'Quantum Internet Platform 2026'
       tagline: 'Ultra-secure quantum communication network for the future'
@@ -677,7 +663,6 @@ export const getPopularEmergingTechServices = () => {;
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
       launchDate: '2026-01-25'
       customers: 60
@@ -686,7 +671,6 @@ export const getPopularEmergingTechServices = () => {;
     }
   ];
 export const getPopularEmergingTechServices = () => {
-=======
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launchDate: '2026-01-25',
       customers: 60,
@@ -696,10 +680,8 @@ export const getPopularEmergingTechServices = () => {
   ];
 
 export const getPopularEmergingTechServices = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launchDate: '2026-01-20';
@@ -773,26 +755,20 @@ reviews: 30
 
 }];
 export const getEmergingTechServicesByCategory = (category: string) => {
-<<<<<<< HEAD
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>
     service && service.category.toLowerCase().includes(category && category.toLowerCase())
-=======
   return innovative2026EmergingTechServices.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase());
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(',', ''));
-=======
   return innovative2026EmergingTechServices.filter(service => {;
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
 
   });}
@@ -1028,9 +1004,7 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 };
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-<<<<<<< HEAD
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
@@ -1039,10 +1013,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 
 };
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -1068,5 +1039,3 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

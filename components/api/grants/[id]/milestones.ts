@@ -42,7 +42,6 @@ function isAuthorized(req: NextApiRequest) {
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
@@ -51,7 +50,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
-=======
   if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
@@ -59,7 +57,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return;    return
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
   GrantApplication,
@@ -120,7 +117,6 @@ function write_grant() {
     res.status(401).json({ error: 'Unauthorized' });
     return
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
@@ -148,7 +144,6 @@ function write_grant() {
     return res && res.status(200).json({ milestones: existing && existing.milestones || [] });  }    return res && res.status(200).json({ milestones: existing && existing.milestones || [] })
 
   }
-<<<<<<< HEAD
   if (req && req.method === 'POST') {
     const existing = readGrant(id);
     if (!existing) return res && res.status(404).json({ error: 'Not found' });
@@ -167,7 +162,6 @@ function write_grant() {
   res.status(405).end('Method Not Allowed');
 
 
-=======
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    return res && res.status(200).json({ record: existing })
@@ -244,16 +238,11 @@ if ( {) {
   }
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
-=======
   res.setHeader('Allow', 'GET, POST');
-<<<<<<< HEAD
   res.status(405).end('Method Not Allowed');    return res.status(200).json({ record: existing })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 
-<<<<<<< HEAD
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed')
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

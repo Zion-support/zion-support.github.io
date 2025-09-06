@@ -23,8 +23,11 @@
     writePosts(posts);
     return res && res.status(200).json(updated);
 
+return res.status(405).end();
+  export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  return res.status(405).end();
   export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { id } = req && req.query;
+    const { id } = req.query;
     if (typeof id !== "string")
 
 
@@ -47,16 +50,12 @@
       const updated = { ...posts[idx], ...req && req.body, id };
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       posts[idx] = updated;
       writePosts(posts);
       return res && res.status(200).json(updated);
     }
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_posts, write_posts  } from '@/utils / data / blog_store';
 import { require_admin  } from '@/utils / api / auth';
@@ -124,8 +123,5 @@ if ( {) {
   return res.status(405).end()
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }];
 setIsSearching (true);
 
@@ -86,7 +85,6 @@ setIsSearching (false) ;
   {
   opacity: 0, y: -10, scale: 0 && 0.95 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }animate= {
   {
   opacity: 1, y: 0, scale: 1
@@ -104,7 +102,6 @@ setIsSearching (false) ;
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */
-=======
   opacity: 0, coordinate_y: -10, scale: 0.95;
 }animate= {
   {
@@ -117,7 +114,6 @@ setIsSearching (false) ;
   duration: 0.2;
 }className="absolute top - full left - 0 right - 0 mt - 2 bg - gray - 900 / 95 backdrop - blur - md border border - gray - 700 rounded - xl shadow - 2xl z - 50 max - h-96 overflow - y-auto" > {
   /* Filters */;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }{
   show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
   categories.map ( (category) => (<button key= {
@@ -164,7 +160,6 @@ setIsSearching (false) ;
 }exit= {
   {
 
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
@@ -610,12 +605,10 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
-<<<<<<< HEAD
 clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
   opacity: 0, y: -10 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"> {;
   /* Quick Actions */ ;
@@ -715,10 +708,7 @@ export default EnhancedSearch;
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   category.id;
 }on_click= {
   () => toggle_filter (category.id);
@@ -844,4 +834,3 @@ function debounce < T extends (...args: any[]) => any>(
 }
 export default EnhancedSearch;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

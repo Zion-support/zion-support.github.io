@@ -1,7 +1,6 @@
 
 
 import React from 'react';
-=======
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -10,13 +9,10 @@ import {
   ChartBarIcon,
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react';
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const features = [
   {
     name: 'AI-Powered Research'
@@ -78,7 +74,6 @@ const solutions = [
   }
 ];
 export default function HomePage() {
-=======
   LightBulbIcon,
   CpuChipIcon,
   GlobeAltIcon,
@@ -88,7 +83,6 @@ export default function HomePage() {
 } from '@heroicons / react / 24 / outline';
 ;
 const features = [;
-=======
   LightBulbIcon
   CpuChipIcon
   GlobeAltIcon
@@ -96,9 +90,7 @@ const features = [;
   ChartBarIcon
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react';
-=======
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -107,14 +99,9 @@ import {
   ChartBarIcon,
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const features = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     name: 'AI - Powered Research',
     description: 'Cutting - edge artificial intelligence that accelerates research and discovery across all domains.',
@@ -210,7 +197,6 @@ function HomePage() {
               </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </div>
@@ -249,7 +235,6 @@ function HomePage() {
                     </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </p>
                 </dd>
               </div>
@@ -261,7 +246,6 @@ function HomePage() {
       </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -356,14 +340,11 @@ function HomePage() {
         </div>;
       </div>;
 
-=======
 
           </dl>;
         </div>;
       </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Solutions showcase */}
       <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
         <div className="mx - auto max - w-2xl lg:text - center">;
@@ -402,7 +383,6 @@ function HomePage() {
       </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -427,7 +407,6 @@ function HomePage() {
 
 
   );
-=======
                     </a>;
                   </h3>;
                   <p className="mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300">{solution.description}</p>;
@@ -470,7 +449,6 @@ function HomePage() {
       </div>;
     </div>);
 }
-=======
                     </a>
                   </h3>
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
@@ -487,19 +465,12 @@ function HomePage() {
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </div>
-=======
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -515,35 +486,24 @@ function HomePage() {
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
             >
               Get Started
-<<<<<<< HEAD
             </a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
-=======
             </Link>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
-=======
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

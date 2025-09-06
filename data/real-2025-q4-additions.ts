@@ -82,7 +82,6 @@ const contact = {
     features: [;
       'Multi - speaker diarization',
 
-=======
     customers: 120,
     rating: 4.7,
     reviews: 48,
@@ -97,7 +96,6 @@ const contact = {
       'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.',
     features: [
       'Multi-speaker diarization',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Timestamps and filler removal',
       'Chapter detection and show notes',
       'Embeddings and semantic search',
@@ -139,9 +137,7 @@ const contact = {
   },
   {
 
-=======
     id: 'micro - crm - local - business',
-=======
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
@@ -233,7 +229,6 @@ const contact = {
   },
   {
 
-=======
     id: 'returns - automation - saas',
     name: 'E‑commerce Returns Automation',
     tagline: 'Self - serve returns portal and automated labels',
@@ -243,7 +238,6 @@ const contact = {
       'Plug - and - play returns workflows with label generation, RMA approvals, and status tracking for Shopify / WooCommerce.',
     features: [;
 
-=======
     technology: ['Next.js', 'SQLite/Postgres', 'Twilio'],
     integrations: ['Gmail', 'Outlook', 'Stripe'],
     useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
@@ -270,7 +264,6 @@ const contact = {
     description:
       'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
     features: [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Customer returns portal',
       'Prepaid label generation',
       'RMA approval rules',
@@ -323,9 +316,7 @@ const contact = {
   },
   {
 
-=======
     id: 'it - helpdesk - for - msps',
-=======
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
     useCases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
@@ -409,7 +400,6 @@ const contact = {
 export const real2025Q4Additions = [;
   {
 
-=======
     id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -429,7 +419,6 @@ export const real2025Q4Additions = [;
     popular: true,
     icon: '🧠',
 
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
@@ -460,7 +449,6 @@ export const real2025Q4Additions = [;
   },
   {
 
-=======
     id: 'edge - personalization - engine',
     name: 'Edge Personalization Engine',
     tagline: 'Real - time content and pricing personalization at the edge',
@@ -498,7 +486,6 @@ export const real2025Q4Additions = [;
   },
 ];
 
-=======
 }
 
 export const real2025Q4Additions = [
@@ -561,7 +548,6 @@ export const real2025Q4Additions = [
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
     marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     targetAudience: 'Growth and eCommerce teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -645,7 +631,6 @@ export const real2025Q4Additions = [
   },
   {
 
-=======
     id: 'real - time - log - anomaly - guard',
     name: 'Real - time Log Anomaly Guard',
     tagline: 'Detect anomalies and regressions with LLM - assisted alerts',
@@ -692,7 +677,6 @@ export const real2025Q4Additions = [
   },
   {
 
-=======
     id: 'governed - feature - flags',
     name: 'Governed Feature Flags',
     tagline: 'Audit - ready flags with policies, approvals, and rollbacks',
@@ -852,7 +836,6 @@ export const real2025Q4Additions = [
   },
   {
 
-=======
     id: 'email - sequence - copilot',
     name: 'Email Sequence Copilot',
     tagline: 'On - brand outbound with warm - up, scoring, and safety',
@@ -898,7 +881,6 @@ export const real2025Q4Additions = [
   },
   {
 
-=======
     id: 'data - contracts - guardrails',
     name: 'Data Contracts Guardrails',
     tagline: 'Schema governance, lineage, and backward - compat checks',
@@ -1107,7 +1089,6 @@ export const real2025Q4Additions = [
   },
   {
 
-=======
     id: 'ai - sales - pipeline - insights',
     name: 'AI Sales Pipeline Insights',
     tagline: 'Forecast hygiene, stage risks, and next - best actions',
@@ -1209,9 +1190,7 @@ export const real2025Q4Additions = [
   },
   {
 
-=======
     id: 'secure - webhook - relay',
-=======
     customers: 14,
     rating: 4.5,
     reviews: 10
@@ -1268,9 +1247,7 @@ export const real2025Q4Additions = [
   },
   {
 
-=======
     id: 'managed - postgres - ha - lite',
-=======
     category: 'Developer Tools',
     realService: true,
     technology: ['Queues, HMAC, Workers'],
@@ -1339,7 +1316,6 @@ export const real2025Q4Additions = [
     reviews: 9,
   },
 
-=======
     mobile: string, email: string,
     address: string,
     website: string
@@ -1348,19 +1324,14 @@ export const real2025Q4Additions = [
   launchDate?: string;
   customers?: number;
   rating?: number;
-<<<<<<< HEAD
   reviews?: number
-=======
 
   reviews?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1503,7 +1474,6 @@ export const real2025Q4Additions = [
     features: [
       'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python'
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     icon: '🗄️';
     color: 'from-emerald-600 to-teal-700';
@@ -1533,7 +1503,6 @@ export const real2025Q4Additions = [
 
     rating: 4 && 4.6,
 
-=======
     category: 'Enterprise IT',
     realService: true,
     technology: ['Postgres, Patroni/Cloud-native HA'],
@@ -1550,13 +1519,11 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-11',
     customers: 17,
     rating: 4.6,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 9
   }
 ];
 
 
-=======
 ];      'Automated backups and PITRFailover drills and runbooks_index and bloat maintenance_performance dashboards';
     ];
     icon: '🗄️';
@@ -1587,9 +1554,7 @@ export const real2025Q4Additions = [
   }
 ];
 ;
-=======
 
-=======
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -1828,10 +1793,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     reviews: 28,
   },
 ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -1850,12 +1812,9 @@ export const real2025Q4Additions = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
-<<<<<<< HEAD
     marketPosition:;
       'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
-=======
     marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -2256,5 +2215,3 @@ export const real2025Q4Additions = [
     reviews: 9
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

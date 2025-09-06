@@ -1,17 +1,11 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import fs from 'fs')
 import path from 'path')
-=======
 import fs from 'fs')
 import path from 'path');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const { execSync } = require('child_process');
 class SecurityScanner { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, "automation/logs/security-scanner.log");" this.securityReportFile = path.join(this.projectRoot, "automation/logs/security-report.json"); this.lastScan = null; this.scanInterval = 3600000; / 1 hour; this.isRunning = false; this.setupLogging();" this.log("Security Scanner started")} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage); } async runSecurityAudit() { try {" this.log("Running security audit."); const startTime = Date.now(); / Run npm audit;" const auditOutput = execSync("npm audit --audit-level=moderate", { const endTime = Date.now(); const scanTime = endTime - startTime; this.lastScan = {" timestamp: new Date().toISOString() success: true; scanTime: scanTime; output: auditOutput; vulnerabilities: { critical: 0; high: 0; moderate: 0; low: 0; } };` this.log(`Security audit completed successfully in ${scanTime}ms`); await this.saveSecurityReport(); } catch (error) {"` this.log(`Security audit failed: ${error.message}`); this.lastScan = {" timestamp: new Date().toISOString() success: false; error: error.message; output: output; vulnerabilities: vulnerabilities; }; await this.saveSecurityReport(); await this.handleSecurityIssues(vulnerabilities)} } parseVulnerabilities(output) { const vulnerabilities = { async handleSecurityIssues(vulnerabilities) { const totalIssues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low; " this.log("Only moderate/low severity vulnerabilities found, reporting."); await this.reportSecurityIssues(vulnerabilities); } } else {" this.log("No security vulnerabilities found"); } } async autoFixSecurityIssues() { try {" this.log("Attempting to auto-fix security issues."); / Run npm audit fix;" const fixOutput = execSync("npm audit fix", { "` this.log(`Failed to auto-fix security issues: ${fixError.message}`); await this.reportSecurityFailure(fixError); } } async reportSecurityIssues(vulnerabilities) { const report = {" timestamp: new Date().toISOString() vulnerabilities: vulnerabilities; projectRoot: this.projectRoot; recommendation: this.getSecurityRecommendation(vulnerabilities) " const reportFile = path.join(this.projectRoot, "automation/logs/security-issues-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); " this.log("Security issues reported"); } getSecurityRecommendation(vulnerabilities) {} async saveSecurityReport() { const report = { fs.writeFileSync(this.securityReportFile, JSON.stringify(report, null, 2)); } async reportSecurityFailure(error) { const failureReport = { " const failureFile = path.join(this.projectRoot, "automation/logs/security-failure-report.json"); fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2)); " this.log("Security failure reported"); } async checkDependencyUpdates() { try {" this.log("Checking for dependency updates."); / Check for outdated packages;" const outdatedOutput = execSync("npm outdated", { " cwd: this.projectRoot;" encoding: "utf8" timeout: 60000; };); if (!fs.existsSync(logDir)) {" this.log("Outdated dependencies found")) { ) {" this.log("Outdated dependencies found")} await this.updateDependencies()} else {" this.log("All dependencies are up to date")} } catch (error) { if ( { / npm outdated returns 1 when there are outdated packages) { { / npm outdated returns 1 when there are outdated packages}" this.log("Outdated dependencies found"); await this.updateDependencies()} else {"` this.log(`Dependency check failed: ${error.message}`)} } } async updateDependencies() { try {" this.log("Updating dependencies."); / Update non-breaking dependencies;" execSync("npm update", { " cwd: this.projectRoot; timeout: 300000; }); " this.log("Dependencies updated successfully")} catch (error) {"` this.log(`Failed to update dependencies: ${error.message}`)} } async start() { this.isRunning = true;" this.log("Security Scanner started"); / Initial security scan; await this.runSecurityAudit(); / Check for dependency updates; await this.checkDependencyUpdates(); / Set up interval for regular scans; setInterval(async () => { if ( { await this.runSecurityAudit()) { { await this.runSecurityAudit()} await this.checkDependencyUpdates()} }, this.scanInterval); / Handle graceful shutdown;" process.on("SIGTERM", () => {" this.log("Received SIGTERM, shutting down gracefully"); this.isRunning = false; process.exit(0)}); " process.on("SIGINT", () => {" this.log("Received SIGINT, shutting down gracefully"); this.isRunning = false; process.exit(0)})}}/ Start the security scanner;const scanner = new SecurityScanner;(;);scanner.start().catch(error => {"" console.error("Failed to start security scanner: ", error); process.exit(1)});='"`'"`
 class SecurityScanner {}
@@ -29,7 +23,6 @@ class SecurityScanner {}
     const logDir = path && path.dirname(this && this.logFile);,
     if (!fs && fs.existsSync(logDir)) {}
       fs && fs.mkdirSync(logDir, { "recursive": true })}",
-=======
 
     this.projectRoot = process.cwd();,
     this.logFile = path.join(this.projectRoot, 'automation/logs/security-scanner.log');',
@@ -109,7 +102,6 @@ class SecurityScanner {}
       },
       this.log (`Security audit completed successfully in ${scan_time}ms`);,
       await this.saveSecurityReport ();,
-=======
     _console.log(message);,
     fs.appendFileSync(this.logFile, logMessage);,
   }
@@ -171,7 +163,6 @@ class SecurityScanner {}
   }
   parseVulnerabilities(output) {}
     const vulnerabilities = {}
-=======
 
 
   async handleSecurityIssues(vulnerabilities) {
@@ -189,10 +180,8 @@ class SecurityScanner {}
     } else {}
       this.log ('No security vulnerabilities found');',
 
-=======
       this.log('No security vulnerabilities found');',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   async autoFixSecurityIssues() {}
@@ -204,14 +193,11 @@ class SecurityScanner {}
 ;      this && this.log(`Failed to auto-fix security "issues": ${fixError && fixError.message}`);",
       await this && this.reportSecurityFailure(fixError);,
 
-=======
       this.log ('Attempting to auto - fix security issues...');',
       // Run npm audit fix;
       const fix_output = exec_sync ('npm audit fix', { ',
 ;      this.log (`Failed to auto - fix security "issues": ${fix_error.message}`);",
       await this.reportSecurityFailure (fix_error);,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       this.log('Attempting to auto-fix security issues...');',
       // Run npm audit fix;
@@ -219,7 +205,6 @@ class SecurityScanner {}
 ;      this.log(`Failed to auto-fix security "issues": ${fixError.message}`);",
       await this.reportSecurityFailure(fixError);,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   async reportSecurityIssues (vulnerabilities) {}
@@ -233,7 +218,6 @@ class SecurityScanner {}
     fs && fs.writeFileSync(reportFile, JSON && JSON.stringify(report, null, 2));,
     this && this.log('Security issues reported');';
 
-=======
       "timestamp": new Date ().toISOString ()";
 ;      vulnerabilities: vulnerabilities;, }
       project_root: this.project_root;,
@@ -241,8 +225,6 @@ class SecurityScanner {}
     const report_file = path.join (this.project_root, 'automation / logs / security - issues - report.json');',
     fs.writeFileSync (report_file, JSON.stringify (report, null, 2));,
     this.log ('Security issues reported');';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       "timestamp": new Date().toISOString()";
 ;      vulnerabilities: vulnerabilities;,}
@@ -252,7 +234,6 @@ class SecurityScanner {}
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
 
     this.log('Security issues reported');';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   getSecurityRecommendation (vulnerabilities) {
   }
@@ -268,7 +249,6 @@ class SecurityScanner {}
 
 
     this.log('Security failure reported');';
-=======
   async saveSecurityReport () {}
     const report = {
 ;    fs.writeFileSync (this.securityReportFile, JSON.stringify (report, null, 2));,
@@ -294,7 +274,6 @@ class SecurityScanner {}
   async checkDependencyUpdates() {}
     try {}
       this && this.log('Checking for dependency updates...');',
-=======
 
       this.log('Checking for dependency updates...');',
 
@@ -324,12 +303,10 @@ class SecurityScanner {}
         await this.update_dependencies ()} else {}
         this.log ('All dependencies are up to date')}',
 
-=======
         this.log('Outdated dependencies found')}',
         await this.updateDependencies()} else {}
         this.log('All dependencies are up to date')}',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } catch (error) {}
       // Check condition
 if ( {) {
@@ -342,25 +319,20 @@ if ( {) {
         await this && this.updateDependencies()} else {}
         this && this.log(`Dependency check "failed": ${error && error.message}`)}",
 
-=======
         this.log ('Outdated dependencies found');',
         await this.update_dependencies ()} else {}
         this.log (`Dependency check "failed": ${error.message}`)}",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
         this.log('Outdated dependencies found');',
         await this.updateDependencies()} else {}
         this.log(`Dependency check "failed": ${error.message}`)}",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   async update_dependencies () {}
     try {}
 
       this && this.log('Updating dependencies...');',
-=======
 
       this.log('Updating dependencies...');',
 
@@ -416,7 +388,6 @@ const scanner = new SecurityScanner;(;);
 scanner.start().catch(error => {}),
   _console.error('Failed to start security "scanner": ', error);',
   process.exit(1)});,
-=======
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async runSecurityAudit() {; try {; this.log("Running security audit..."); const output = execSync("npm audit --json", { stdio: 'pipe' }); const auditResult = JSON.parse(output.toString());
@@ -439,7 +410,6 @@ scanner.start().catch(error => {}),
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
@@ -701,7 +671,6 @@ if (vulnerabilities.critical > 0) {
       this.log ('Dependencies updated successfully')} catch (error) {'}
       this.log (`Failed to update "dependencies": ${error.message}`)}",
   }
-<<<<<<< HEAD
   async start () {}
     this.is_running = true;,
     this.log ('Security Scanner started');';,
@@ -712,16 +681,11 @@ if (vulnerabilities.critical > 0) {
     // Set up interval for regular scans;
 
 
-=======
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async runSecurityAudit() {; try {; this.log("Running security audit..."); const output = execSync("npm audit --json", { stdio: 'pipe' }); const auditResult = JSON.parse(output.toString());
@@ -769,9 +733,7 @@ scanner && scanner.start().catch(error => {}),
   process && process.exit(1)});,
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Main execution;
 if (import && import.meta.url = = = `file: //${process ; const scanner = new SecurityScanner(); scanner && scanner.run().catch(console && console.error)};
 export default SecurityScanner;
@@ -792,7 +754,6 @@ export default SecurityScanner;
       this.log("Running security audit..."),
       const output = execSync("npm audit --json", { stdio: 'pipe' }),
 
-=======
 
 
       const auditResult = JSON.parse(output.toString()),
@@ -944,18 +905,13 @@ export default SecurityScanner,
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const scanner = new SecurityScanner(); scanner.run().catch(console.error)}
 export default SecurityScanner;
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 scanner.start().catch(error => {})
   _console.error('Failed to start security "scanner": ', error);'
   process.exit(1)});
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const scanner = new SecurityScanner(); scanner.run().catch(console.error)}
 export default SecurityScanner;
-<<<<<<< HEAD
     set_interval (async () => {}
       // Check condition
 if (, ) {
@@ -993,4 +949,3 @@ export default SecurityScanner;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

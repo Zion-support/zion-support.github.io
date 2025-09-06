@@ -18,7 +18,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
 ;
 const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
 ;
@@ -42,12 +41,8 @@ if ( {) {
   } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
   }  } catch (e) {
-<<<<<<< HEAD
     res.status (500).json ({ error: 'Failed to read content' });
 
-=======
     res.status(500).json({ error: 'Failed to read content' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

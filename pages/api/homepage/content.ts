@@ -13,6 +13,35 @@ async function fetchFromGitHub() {
     if (!response && response.ok) return null;
     const data = await response && response.json();
     return JSON && JSON.parse(Buffer && Buffer.from(data && data.content, "base64").toString());
+    if (!response.ok) return null;
+    const data = await response.json();
+    return JSON.parse(Buffer.from(data.content, "base64").toString());
+  } catch {
+    return null;
+  }
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "GET") {;
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+  try {
+    const localPath = path.join(process.cwd(), "data", "homepage.json");
+    if (fs.existsSync(localPath)) {
+      const local = JSON.parse(fs.readFileSync(localPath, "utf-8"));
+      return res.status(200).json(local);
+    }
+  } catch {
+    // fall back to remote
+  }
+
+  const remote = await fetchFromGitHub();
+  if (remote) return res.status(200).json(remote);
+  return res.status(200).json(null);
+}
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -60,7 +89,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Internal error' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   }
   try {
@@ -94,19 +122,12 @@ return res.status (405).json ({ error: "Method not allowed" });
   return res && res.status(200).json(null);
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const remote = await fetchFromGitHub ();
   if (return res.status (200).json (remote)) {
   $2
 }
   return res.status (200).json (null);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

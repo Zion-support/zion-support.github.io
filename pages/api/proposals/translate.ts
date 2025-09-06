@@ -57,10 +57,8 @@ function handler() {
     });
 
 
-=======
 
       .json({ error: error?.message || "Translation failed" });
-=======
 
 
   }
@@ -72,19 +70,13 @@ function handler() {
       .status (500);
       .json ({ error: error?.message || "Translation failed" });
 
-=======
     return res
       .status(500)
-<<<<<<< HEAD
       .json({ error: error?.message |"Translation failed" });
-=======
-=======
       .json({ error: error?.message || "Translation failed" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 
-=======
 
 }
   } catch (error) {
@@ -106,5 +98,3 @@ function handler() {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

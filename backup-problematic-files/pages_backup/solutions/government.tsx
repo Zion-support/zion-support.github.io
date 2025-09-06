@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +16,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from '../../components/Layout';
 import {Shield,, Users,, FileText,, Globe,, Database} from 'lucide-react';
 import React from 'react';
@@ -53,7 +50,6 @@ import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'luc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import {motion} from 'framer-motion';
 import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
 import Layout from '../../components/Layout';
@@ -120,7 +116,6 @@ const features = [;
     description: 'Government data analytics and business intelligence for informed decision making.'';
 import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -132,7 +127,6 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const features = [
   {
     icon: Building2,
@@ -266,7 +260,6 @@ const benefits = [;
   'Reduced operational costs',;
   'Increased government efficiency';
 ];
-<<<<<<< HEAD
 export default function GovernmentSolutions() {;
     icon: Database,;
     title: 'Data Management',;
@@ -275,7 +268,6 @@ export default function GovernmentSolutions() {;
   }
 ];
 export default function GovernmentSolutionsPage() {;
-=======
 export default function GovernmentSolutions() {
     icon: Database,
     title: 'Data Management',
@@ -285,7 +277,6 @@ export default function GovernmentSolutions() {
 ];
 
 export default function GovernmentSolutionsPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -515,11 +506,8 @@ export default function GovernmentSolutions() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
@@ -689,7 +677,6 @@ export default function GovernmentSolutions() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">;
@@ -709,7 +696,6 @@ export default function GovernmentSolutions() {;
                     {feature && feature.benefits.map((benefit, benefitIndex) => (;
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-=======
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">
@@ -729,14 +715,12 @@ export default function GovernmentSolutions() {;
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {benefit}
                       </div>;
                     ))}
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">;
                     {feature && feature.title}
                   </h3>;
@@ -949,8 +933,6 @@ export default function GovernmentSolutions() {;
             </div>;
           </div>;
         </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
@@ -980,7 +962,6 @@ export default function GovernmentSolutions() {;
     </Layout>
     </>
     </>
-<<<<<<< HEAD
     </Layout>
   );
 };

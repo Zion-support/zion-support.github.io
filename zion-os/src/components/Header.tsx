@@ -15,7 +15,6 @@ function Header() {
     window.addEventListener ('scroll', handle_scroll),
     return () => window.removeEventListener ('scroll', handle_scroll);
   }, []),
-=======
 
 'use client',;
 import { useState, useEffect } from 'react',;
@@ -87,8 +86,6 @@ export default function Header() {;
 
 
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
-=======
-=======
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
 
 
@@ -103,8 +100,6 @@ export default function Header() {;
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Services menu"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 Services
                 <svg className=&quot;ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;>
@@ -115,7 +110,6 @@ export default function Header() {;
                 <div className=&quot;p-6 grid grid-cols-1 gap-3&quot;>
                   {services.map((service) => (
                     <Link
-=======
 <span className=&quot;absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - purple - 400 to - blue - 400 transition - all duration - 300 group - hover:w - full & quot;></span>;
               </Link>))}
             {/* Services Dropdown */}
@@ -147,10 +141,8 @@ export default function Header() {;
                         </svg>;
                       </div>;
                     </Link>))}
-=======
 role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;
-=======
 'use client',;
 import { useState, useEffect } from 'react',;
 import Link from 'next/link',;
@@ -188,19 +180,12 @@ export default function Header() {;
           ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';
           : 'bg-black/60 backdrop-blur-md border-b border-white/10';
       }`}
-<<<<<<< HEAD
       role="banner"
       aria-label="Main navigation"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;
-=======
       role="banner"
       aria-label="Main navigation"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -225,9 +210,7 @@ role=&quot;banner&quot;
                 aria-label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
-<<<<<<< HEAD
 <span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
-<<<<<<< HEAD
               </Link>
             ))}
             {/* Services Dropdown */}
@@ -237,32 +220,20 @@ role=&quot;banner&quot;
                 aria-expanded=&quot;false&quot;
                 aria-haspopup=&quot;true&quot;
                 aria-label=&quot;Services menu&quot;
-=======
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
-=======
-=======
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Link>
             ))}
 ;
             {/* Services Dropdown */}
-<<<<<<< HEAD
             <div className="relative group">
-=======
-<<<<<<< HEAD
 <div className=&quot;relative group&quot;>
-=======
             <div className="relative group">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <button 
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Services menu"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               >
                 Services
                 <svg className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -286,7 +257,6 @@ role=&quot;banner&quot;
                       </div>
                     </Link>
                   ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>;
               </div>;
             </div>;
@@ -311,26 +281,16 @@ role=&quot;banner&quot;
 
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {isMenuOpen ? (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
-=======
-<<<<<<< HEAD
 <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
-=======
           <div className="hidden lg:flex items-center space-x-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -342,15 +302,8 @@ role=&quot;banner&quot;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-<<<<<<< HEAD
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
-=======
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
@@ -361,7 +314,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </svg>;
           </button>;
         </div>;
@@ -380,7 +332,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
             <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
               {navigation.map((item) => (
                 <Link
-=======
           <div;
             id=&quot;mobile - menu & quot;
             className=&quot;lg:hidden border - t border - white / 10 animate - fade - in & quot;
@@ -407,7 +358,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 
                 {services.map((service) => (
                   <Link
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     key={service.name}
                     href={service.href}
                     className=&quot;block px - 3 py - 2 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;
@@ -435,7 +385,6 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
             </div>
           </div>
         )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </header>);
 }

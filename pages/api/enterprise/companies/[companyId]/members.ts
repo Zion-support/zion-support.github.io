@@ -1,5 +1,26 @@
 
 
+  if (req.method === "PATCH") {
+    const { memberId, role } = req.body || {};
+    if (!memberId || !role)
+      return res.status(400).json({ error: "memberId and role required" });
+    const ok = store.updateMemberRole(companyId, memberId, role);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
+  }
+
+  if (req.method === "DELETE") {
+    const { memberId } = req.query;
+    if (!memberId || typeof memberId !== "string")
+      return res.status(400).json({ error: "memberId required" });
+    const ok = store.removeMember(companyId, memberId);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
+  }
+
+  return res.status(405).json({ error: "method_not_allowed" });
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });

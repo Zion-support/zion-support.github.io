@@ -1,8 +1,6 @@
 
 
 export default function KnowledgeGraph({ report }: Props) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
@@ -10,7 +8,6 @@ export default function KnowledgeGraph({ report }: Props) {
 export default function KnowledgeGraph(): any ({ report }: Props) {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
     <div className="space-y-6">;
@@ -46,7 +43,6 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
   );
 }
 
-=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -103,15 +99,9 @@ export default function KnowledgeGraph({ report }: Props) {
         <ul className=&quot;flex flex-wrap gap-2 text-sm&quot;>
           {report.topTerms.map((t, i) => (
             <li key={i} className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{t.term} <span className=&quot;text-gray-500&quot;>({t.count})</span></li>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
@@ -11,15 +10,11 @@ const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Y
 - Guide users through discovering features and how to get started
 - Ask brief clarifying questions when needed but minimize back-and-forth
 - Keep answers succinct, scannable, and actionable
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 Context about Zion AI Marketplace:
 - Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services
 - Users can browse categories, view product pages, compare features, and connect via APIs
 - Vendors can list their AI models/services with pricing, usage tiers, and documentation
-<<<<<<< HEAD
 
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
 1) What is Zion?  → A marketplace to find and integrate AI models and services.
@@ -60,12 +55,9 @@ Style: - Use bullets and short paragraphs
 }
 
 
-=======
 
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
     const prepared_messages = [;
       { role: 'system' as const, content: SYSTEM_PROMPT },
@@ -89,4 +81,3 @@ console.error ('Assistant API error:', error?.message || error);
   }    return res.status (500).json ({ error: 'Assistant request failed' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

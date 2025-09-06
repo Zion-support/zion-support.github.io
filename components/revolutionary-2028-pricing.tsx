@@ -3,13 +3,11 @@ import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
 
-=======
 
 import React from 'react';
 import Head from 'next/head';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
 import { 
@@ -102,7 +100,6 @@ const pricingTiers = [
     description: 'Perfect for small businesses and startups'
     features: [
 
-=======
 
   CheckCircle,
   ArrowRight,
@@ -225,8 +222,6 @@ const pricing_tiers = [;
     color: 'from-indigo-600 to-purple-600'
     cta: 'Contact Sales'
     href: '/contact'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -394,7 +389,6 @@ const servicePricing = [;
     category: '🤖 AI & Machine Learning',;
     services: emergingTech2028Services && emergingTech2028Services.filter(s => s && s.category.includes('AI')).slice(0, 4);
   }
-=======
 
 ];
 
@@ -539,7 +533,6 @@ export default function Revolutionary2028Pricing() {
                 key={tier && tier.name}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -554,13 +547,11 @@ export default function Revolutionary2028Pricing() {
                           <span className="text-purple-200">{feature}</span>;
                         </li>;
                       ))}
-<<<<<<< HEAD
                     </ul>;
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Link
                       href={tier && tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
@@ -576,12 +567,9 @@ export default function Revolutionary2028Pricing() {
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Service Pricing */}
 
 
@@ -673,7 +661,6 @@ export default function Revolutionary2028Pricing() {
                   <motion&& motion.div
                     key={service && service.id}
 
-=======
             <div key={category.category} className="mb-16">
               <h3 className="text-3xl font-bold text-white mb-8 text-center">{category.category}</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -681,7 +668,6 @@ export default function Revolutionary2028Pricing() {
                   <motion.div
                     key={service.id}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
@@ -724,8 +710,6 @@ export default function Revolutionary2028Pricing() {
                       </div>
                     </div>
                   </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 </div>;
             </div>;
@@ -735,12 +719,9 @@ export default function Revolutionary2028Pricing() {
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Value Proposition */}
 
 
@@ -751,7 +732,6 @@ export default function Revolutionary2028Pricing() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               We offer the best value in the market with transparent pricing and unmatched features.
             </p>
@@ -859,13 +839,9 @@ export default function Revolutionary2028Pricing() {
           </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -883,7 +859,6 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className='text-3xl font-bold text-green-400'>30%</div>
               <div className='text-purple-300'>Lower than Market</div>            </motion.div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Target className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Pricing</h3>
               <p className="text-purple-300 mb-6">
@@ -894,8 +869,6 @@ export default function Revolutionary2028Pricing() {
               <div className="text-purple-300">Lower than Market</div>
             </motion.div>
             <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -934,7 +907,6 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className='text-3xl font-bold text-blue-400'>100%</div>
               <div className='text-blue-300'>Transparent Pricing</div>            </motion.div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
@@ -945,8 +917,6 @@ export default function Revolutionary2028Pricing() {
               <div className="text-blue-300">Transparent Pricing</div>
             </motion.div>
             <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'>;
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -985,7 +955,6 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className='text-3xl font-bold text-pink-400'>5x</div>
               <div className='text-pink-300'>ROI Guarantee</div>            </motion.div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Premium Quality</h3>
               <p className="text-pink-300 mb-6">
@@ -1029,19 +998,14 @@ export default function Revolutionary2028Pricing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1050,7 +1014,6 @@ export default function Revolutionary2028Pricing() {
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to{' '}
 
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
@@ -1150,7 +1113,6 @@ export default function Revolutionary2028Pricing() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className='space - y-8';
           >;
             <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -1163,7 +1125,6 @@ export default function Revolutionary2028Pricing() {
             </h2>;
 
 
-=======
   );
 }
             <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
@@ -1205,30 +1166,18 @@ export default function Revolutionary2028Pricing() {
       </section>;
       <UltraFuturisticFooter2028 />;
     </>);
-=======
       <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
 );
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
     </>;
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-=======
 
     </>
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -7,7 +7,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req && req.method !== 'GET') {
     return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed');
   }
@@ -27,7 +26,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
-=======
 
     const base = LOCAL && LOCAL.find((t) => t && t.slug === slug) || null;
     if (!base) return res && res.status(404).json({ error: 'Not found' });
@@ -39,7 +37,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
-=======
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
@@ -156,4 +153,3 @@ if (throw error) {
   }
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

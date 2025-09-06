@@ -1,9 +1,7 @@
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   duration_minutes: number;
@@ -17,7 +15,6 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
   return (
 
 
-=======
   certification_badge: string,
   description?: string;
 export default /**
@@ -63,14 +60,9 @@ function CourseCard() {
 
       </div>
     </div>
-<<<<<<< HEAD
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

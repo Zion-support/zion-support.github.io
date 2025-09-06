@@ -1,6 +1,5 @@
 
 
-=======
 
 
 import Link from 'next/link';
@@ -11,7 +10,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 
-=======
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -23,7 +21,6 @@ export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -45,11 +42,9 @@ export default function Home() {
         </div>
       </div>
 
-=======
 
     ),
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <>;
       <Head>;
@@ -268,8 +263,6 @@ export default function Home() {
           logMetrics={true}
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -393,7 +386,6 @@ if ( {) {
               "same_as":[contact.site];
 
             });
-=======
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -420,7 +412,6 @@ if ( {) {
               },
               "sameAs":[contact && contact.site]
             })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
       </Head>;
@@ -432,7 +423,6 @@ if ( {) {
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState && animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>;
               We deliver cutting-edge technology solutions with 150+ micro SaaS products, ;
 
-=======
         <section className="py - 20 px - 4 text - center" role="banner" aria - labelledby="hero - title">;
           <div className="max - w-4xl mx - auto">;
             <h1 ;
@@ -561,7 +551,6 @@ if ( {) {
             </div>;
           </div>;
         </section>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Contact Section */}
         <section className="py-16 px-4 bg-slate-900/40">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -599,26 +588,20 @@ if ( {) {
           onThresholdExceeded={(metrics) => {;
             console && console.warn('Performance thresholds exceeded:', metrics);
 
-=======
         {/* <PerformanceMonitor ;          show_metrics={process.env.NODE_ENV === 'development'}
           log_metrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn ('Performance thresholds exceeded:', metrics);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
         {/* Services Overview */}
-=======
 
           onThresholdExceeded={(metrics) => {;
             console.warn('Performance thresholds exceeded:', metrics);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
         /> */}
       </ErrorBoundary>;
@@ -647,7 +630,6 @@ function HomePage() {
         </Button>;
       </div>;
 
-=======
 
 
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
@@ -711,7 +693,6 @@ function HomePage() {
           </div>
         </section>
         {/* Services Overview */}
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         <section className="py-16 px-4" role="main">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" id="service-categories">
@@ -811,9 +792,6 @@ function HomePage() {
       </ErrorBoundary>
     </>
   )
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
 
           </div>;
@@ -839,9 +817,6 @@ function HomePage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
 
-=======
-<<<<<<< HEAD
-=======
 
 
 
@@ -883,23 +858,18 @@ function HomePage() {
                 </div>
               ))}
             </motion.div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-          </div>
-        </section>
-<<<<<<< HEAD
-
-
           </div>
         </section>
 
-=======
+
+          </div>
+        </section>
+
 }
           </div>
-=======
 }          </div>
 
         </section>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
@@ -923,14 +893,12 @@ function HomePage() {
 
               </p>
             </motion.div>
-=======
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -939,9 +907,6 @@ function HomePage() {
                   initial={{ opacity: 0, y: 30 }}
 
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="text-4xl mb-4">;
@@ -970,9 +935,7 @@ function HomePage() {
 
             </motion.div>
 
-=======
 
-=======
 
         {/* Featured Services */}
         <section className="py-16 bg-white">
@@ -996,13 +959,11 @@ function HomePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   key={index}
                   className="bg - white rounded - lg shadow - lg p - 8 hover:shadow - xl transition - shadow";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                 >;
                   <div className="text - 3xl mb - 4">{service.icon}</div>;
                   <h3 className="text - xl font - semibold mb - 4 text - gray - 900">{service.title}</h3>;
@@ -1037,7 +998,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
             <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {whyChooseUs.map ((item, index) => (
                 <motion.div;
-=======
                 >
                   <div className="text-3xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
@@ -1049,8 +1009,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
 
 
 
-=======
-=======
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1075,10 +1033,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
                     </ul>
                   </Card>
 
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </motion.div>
               ))}
             </div>
@@ -1098,11 +1052,8 @@ We deliver exceptional results through innovation, expertise, and dedication;
 
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Why Choose Us */}
 
 
@@ -1123,7 +1074,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 
-=======
 
 
             <div className="text-center mb-16">
@@ -1134,8 +1084,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
               </p>
 
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
@@ -1160,13 +1108,11 @@ We deliver exceptional results through innovation, expertise, and dedication;
               {whyChooseUs && whyChooseUs.map((item, index) => (;
                 <motion&& motion.div
 
-=======
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                 >;
                   <div className="bg - blue - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                     <item.icon className="w - 8 h - 8 text - blue - 600" />;
@@ -1215,7 +1161,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
 }
 </main>;
     </>;
-=======
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-8 h-8 text-blue-600" />
@@ -1248,32 +1193,24 @@ We deliver exceptional results through innovation, expertise, and dedication;
                   </Card>
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 <p className="text-gray-600">{item.description}</p>
->>>>>>> origin/main
                 </motion.div>
               ))}
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
             </div>
           </div>
         </section>
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
 
                   <p className="text-gray-600">{item.description}</p>
-=======
-=======
 
 
 
@@ -1394,18 +1331,13 @@ We deliver exceptional results through innovation, expertise, and dedication;
 
 
 
-=======
 <p className="text-gray-600">{item.description}</p>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 </motion.div>
 
-=======
 
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </div>
           </div>
@@ -1413,10 +1345,8 @@ We deliver exceptional results through innovation, expertise, and dedication;
         {/* CTA Section */}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1424,7 +1354,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
             >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -1442,8 +1371,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
                 <Link
                   href="tel:+13024640950"
 
-=======
-<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1452,8 +1379,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
@@ -1469,18 +1394,11 @@ We deliver exceptional results through innovation, expertise, and dedication;
                   Schedule Consultation
                 </Button>
 
->>>>>>> origin/automation-improvements-final
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
-=======
                 </Link>              </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
             </motion.div>
-=======
 
 
 
@@ -1501,11 +1419,8 @@ We deliver exceptional results through innovation, expertise, and dedication;
             </div>
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
 </Link>
-=======
     );
     } catch (error) {
     console.error("Error:", error);
@@ -1775,8 +1690,6 @@ We deliver exceptional results through innovation, expertise, and dedication;
 
           </div>
         </section>
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           </div>
         </section>
 
@@ -1787,30 +1700,17 @@ We deliver exceptional results through innovation, expertise, and dedication;
   );
 }
 
-=======
 
 
 
-=======
       </main>
     </>
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 </main>
     </>
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

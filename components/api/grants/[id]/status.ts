@@ -42,7 +42,6 @@ function isAuthorized(req: NextApiRequest) {
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
@@ -51,7 +50,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
-=======
   if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
@@ -59,13 +57,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return;    return
   }
 
 
   const { id } = req && req.query as { id: string };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!id) {
 
 
@@ -98,13 +94,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ record: existing });  res && res.status(200).json({ record: existing })
 }
 
-=======
   writeGrant(existing);
 
   res.status(200).json({ record: existing });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   writeGrant(existing);
   res.status(200).json({ record: existing })
 }
@@ -126,10 +119,8 @@ if ( {) {
   }
 const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
-<<<<<<< HEAD
   existing.updated_at = new Date ().toISOString ();
   write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

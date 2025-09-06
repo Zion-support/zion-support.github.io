@@ -1,42 +1,15 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { execSync } = require('child_process');
->>>>>>> origin/main
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 console.log('🔍 Starting SEO Optimizer...');
 
 class SEOOptimizer {
@@ -111,7 +84,6 @@ class SEOOptimizer {
     return report;
   }
 }
-<<<<<<< HEAD
 // Generate SEO report
 const report = {
   "timestamp": new Date().toISOString(),
@@ -148,11 +120,8 @@ console.log(' SEO Optimizer Starting...\n')
     "name"
     "name"
     "name"
-<<<<<<< HEAD
     "status"
-=======
     "status"
-=======
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
@@ -281,14 +250,10 @@ class SEOOptimizer {
   }
 }
 
-<<<<<<< HEAD
-=======
 // Run SEO optimization
 const optimizer = new SEOOptimizer();
 optimizer.optimizeSEO().catch(console.error);
-=======
     "status"
-=======
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
@@ -417,26 +382,15 @@ class SEOOptimizer {
   }
 }
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.start().catch(console.error);
 }
-<<<<<<< HEAD
 module.exports = SEOOptimizer;
-=======
 
 module.exports = SEOOptimizer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
 // Run SEO optimization
 const optimizer = new SEOOptimizer();
 optimizer.optimizeSEO().catch(console.error);
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

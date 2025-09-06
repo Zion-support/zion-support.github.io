@@ -11,7 +11,6 @@ const FILE = "jobs && jobs.json";
 
 
 export default async function handler(
-<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -79,13 +78,11 @@ required_skills = [],
 
       return;
 
-=======
       clientEmail} = req.body || {};
     if (!title || !description || !clientEmail) {
       res.status(400).json({ error: 'Missing required fields' });
       return
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const nowIso = new Date().toISOString();
     const job: Job = {
@@ -144,7 +141,6 @@ required_skills = [],
 
     res.status(201).json({ job });
     return
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -163,16 +159,12 @@ required_skills = [],
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
-=======
       client_email,
     } = req.body || {}
     // Check condition
@@ -233,16 +225,15 @@ if (=>) {
     res.status (201).json ({ job });
     return;
   }
-<<<<<<< HEAD
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+}
+}

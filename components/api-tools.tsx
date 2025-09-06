@@ -41,15 +41,11 @@ import React from 'react';
   Zap, ;
   Bot, ;
   BarChart3, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Code,
   Database,
   Globe,
@@ -113,7 +109,6 @@ import {
     'Analytics'
   ];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
-=======
 export default function ApiToolsPage() {;
   const apiTools = [;
     {;
@@ -554,7 +549,6 @@ function ApiToolsPage() {
     : apiTools && apiTools.filter(tool => tool && tool.category === selectedCategory);
 
 
-=======
   ];
   const [selected_category, setSelectedCategory] = React.useState ('All');
 ;
@@ -582,7 +576,6 @@ function ApiToolsPage() {
           </p>
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
             {categories.map(category => (              <button      </Head>
-=======
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
@@ -862,11 +855,7 @@ function ApiToolsPage() {
             {categories && categories.map((category) => (;
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <button
-=======
     <>
       <Head>
 
@@ -874,8 +863,6 @@ function ApiToolsPage() {
               <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${;
@@ -893,12 +880,9 @@ function ApiToolsPage() {
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* API Tools Grid */}
 
 
@@ -911,7 +895,6 @@ function ApiToolsPage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'
@@ -1067,7 +1050,6 @@ function ApiToolsPage() {
                           <Star className="w-4 h-4 fill-current" />
                           <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                         </div>
-<<<<<<< HEAD
                         <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
 
                           {tool.status}
@@ -1205,8 +1187,6 @@ function ApiToolsPage() {
                       {tool && tool.features.slice(0, 3).map((feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {feature}
                         </li>;
                       ))}
@@ -1216,12 +1196,10 @@ function ApiToolsPage() {
 
                       <Button
                         href={tool && tool.website}
-=======
                     </ul>
                     <div className="flex flex-wrap gap-3">
                       <Button
                         href={tool.website}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         variant="primary"
                         size="sm"
 
@@ -1250,15 +1228,12 @@ variant="ghost"
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Developer Resources */}
 
 
@@ -1315,7 +1290,6 @@ variant="ghost"
               <Button href='/sdk' variant='outline' size='sm'>
                 Browse SDKs
                 <ArrowRight className='w-4 h-4 ml-2' />              </Button>                <ArrowRight className="w-4 h-4 ml-2" />
-=======
       <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -1367,18 +1341,15 @@ variant="ghost"
               <Button href="/sdk" variant="outline" size="sm">
                 Browse SDKs
                 <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Button>
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 </div>;
         </div>;
       </section>;
       {/* Developer Resources */}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section className='py-24 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>;
@@ -1387,7 +1358,6 @@ variant="ghost"
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
 
-=======
                         </div>;
                       </div>;
                     </div>;
@@ -1489,7 +1459,6 @@ variant="ghost"
             </h2>;
             <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Everything you need to get started and build amazing applications;
               with our APIs.;
             </p>;
@@ -1524,7 +1493,6 @@ variant="ghost"
       </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Documentation;
             </Button>;
           </div>;
@@ -1532,19 +1500,9 @@ variant="ghost"
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

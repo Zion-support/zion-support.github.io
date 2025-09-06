@@ -396,7 +396,6 @@
     reviews: 1400,
   },
 
-=======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -420,10 +419,7 @@
 }
 
 
-=======
 ];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
@@ -437,30 +433,20 @@
     rating: 4 && 4.7,
 
     reviews: 1400
-<<<<<<< HEAD
     rating: 4.7,
     reviews: 1400;
   }
 
-=======
 
 export interface SpaceMetaverseService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
 export interface SpaceMetaverseService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -722,11 +708,5 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     customers: 1800,;
     rating: 4.7,;
     reviews: 1400;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

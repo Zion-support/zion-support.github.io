@@ -19,15 +19,11 @@
       const flag = await createFlag(init);
       return res.status(201).json({ flag });
     } catch (e: any) {
-<<<<<<< HEAD
       return res.status(400).json({ error: e.message || 'Invalid payload' });
     }
   }
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

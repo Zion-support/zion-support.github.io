@@ -2,8 +2,6 @@
 
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
@@ -624,9 +622,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cybersecurity',
     pricing: '$599 / month',
     features: [;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Identity verification',
       'Access control',
       'Threat detection',
@@ -639,7 +635,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
-=======
 ];      'Identity verification_access control_threat detection_performance monitoring';
     ];
 
@@ -1105,13 +1100,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
 export const advancedITInfrastructureExpansion2025V2 = [;
   {;
     name: 'Autonomous DevOps Platform',;
@@ -1580,11 +1572,5 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

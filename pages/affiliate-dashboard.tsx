@@ -21,13 +21,9 @@
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
-<<<<<<< HEAD
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
-<<<<<<< HEAD
-=======
 
-=======
 
 
   }
@@ -80,8 +76,6 @@ export default function AffiliateDashboard(req, res) {
   }
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!code) {
     return (
       <div className="space-y-4">
@@ -132,7 +126,6 @@ export default function AffiliateDashboard(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
@@ -148,10 +141,8 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
 
-=======
 }
 
-=======
 import { useEffect, useMemo, useState } from 'react',
 ;
 function getRefCode (): string {
@@ -220,7 +211,6 @@ if ( {) {
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;
       <div className="grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4">;
-=======
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
   if (!code) {;
@@ -240,13 +230,11 @@ if ( {) {
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />;
         <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />;
         <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />;
         <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />;
       </div>;
-<<<<<<< HEAD
       <div className="p - 4 rounded border border - gray - 200 dark:border - gray - 800">;
         <div className="flex items - center justify - between">;
           <div>;
@@ -276,9 +264,5 @@ function Stat() {
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'edge - computing - orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -26,7 +25,6 @@
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / edge - computing - orchestrator',
@@ -84,7 +82,6 @@
   },
   {
 
-=======
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero trust security implementation',
@@ -108,7 +105,6 @@
     popular: true,
     icon: '🛡️',
 
-=======
     color: 'from - red - 600 to - orange - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / zero - trust - security - platform',
@@ -190,7 +186,6 @@
     popular: true,
     icon: '⚡',
 
-=======
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - devops - platform',
@@ -250,7 +245,6 @@
   },
   {
 
-=======
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
@@ -274,7 +268,6 @@
     popular: true,
     icon: '🔗',
 
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -332,7 +325,6 @@
   },
   {
 
-=======
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
@@ -356,7 +348,6 @@
     popular: true,
     icon: '🏢',
 
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / quantum - data - center',
@@ -414,7 +405,6 @@
   },
   {
 
-=======
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
@@ -438,7 +428,6 @@
     popular: true,
     icon: '🔒',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - powered - network - security',
@@ -496,7 +485,6 @@
   },
   {
 
-=======
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
@@ -520,7 +508,6 @@
     popular: true,
     icon: '📱',
 
-=======
     color: 'from - green - 600 to - teal - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / quantum - iot - platform',
@@ -578,7 +565,6 @@
   },
   {
 
-=======
     id: 'ai - powered - cloud - migration',
     name: 'AI - Powered Cloud Migration',
     tagline: 'Intelligent cloud migration and optimization',
@@ -602,7 +588,6 @@
     popular: true,
     icon: '☁️',
 
-=======
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - powered - cloud - migration',
@@ -658,7 +643,6 @@
     rating: 4 && 4.8,
     reviews: 45,
   },
-=======
     id: 'ai-powered-cloud-migration'
     name: 'AI-Powered Cloud Migration'
     tagline: 'Intelligent cloud migration and optimization'
@@ -728,22 +712,18 @@
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
     launchDate: '2024-10-01'
     customers: 89
     rating: 4.8
     reviews: 45
   }
-=======
       'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
     launchDate: '2024-10-01',
     customers: 89,
     rating: 4.8,
     reviews: 45,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -757,7 +737,6 @@
 
     rating: 4 && 4.8,
     reviews: 45
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -770,14 +749,9 @@
 
 ];
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface AdvancedITService {;
 
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

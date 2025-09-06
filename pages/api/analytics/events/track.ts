@@ -47,12 +47,10 @@ function handler() {
 
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
 
-=======
     at: at && typeof at === 'string' ? at : now_iso,
     ua: req.headers['user - agent'] || '',
 ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as string},
   try {
-<<<<<<< HEAD
     ensureLogFile (),
     fs.appendFileSync (LOG_FILE, JSON.stringify (event) + '\n');
 
@@ -64,13 +62,8 @@ ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as s
   res.status(200).json({ ok: true })
 }
 
-=======
 res.status (200).json ({ ok: true });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

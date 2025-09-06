@@ -55,7 +55,6 @@ import React from 'react';
   );
 
 
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
@@ -87,26 +86,18 @@ features={[
 	)
 }
 
-=======
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 export default /**
  * AIPoweredDevOpsPlatformPage - Function description
  */
 function AIPoweredDevOpsPlatformPage() {
-=======
-<<<<<<< HEAD
 import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       <Head>;
@@ -140,9 +131,5 @@ export default function AIPoweredDevOpsPlatformPage() {
       />;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

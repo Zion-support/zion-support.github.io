@@ -1,7 +1,6 @@
 
 
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -52,9 +51,7 @@ const features = [
     icon: Shield,
     title: 'Real-time Alerts',
     description: 'Get instant notifications for negative emotions requiring immediate attention'
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -108,7 +105,6 @@ const features = [
 
     icon: Users
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     title: 'Sales Enhancement'
     description: 'Identify customer emotions during sales calls to optimize conversion rates'
@@ -155,7 +151,6 @@ const pricing = [
 
 
 
-=======
 
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone,;
@@ -274,8 +269,6 @@ const pricing = [;
   }
 }
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AIEmotionIntelligencePlatform() {
   return (
     <>
@@ -457,7 +450,6 @@ function AIEmotionIntelligencePlatform() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
@@ -477,7 +469,6 @@ function AIEmotionIntelligencePlatform() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                   AI Emotion Intelligence Platform
@@ -498,7 +489,6 @@ function AIEmotionIntelligencePlatform() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
@@ -517,7 +507,6 @@ function AIEmotionIntelligencePlatform() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.8, delay: 0.8 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
@@ -542,7 +531,6 @@ function AIEmotionIntelligencePlatform() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
               <Link
                 href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
@@ -596,7 +584,6 @@ function AIEmotionIntelligencePlatform() {
               <div className="text-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">35%</div>
                 <div className="text-gray-400 text-sm">Satisfaction Increase</div>
               </div>
@@ -684,7 +671,6 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Features for Emotion Intelligence
@@ -699,7 +685,6 @@ function AIEmotionIntelligencePlatform() {
 
               viewport={{ once: true }} className="text - center mb - 16">;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-=======
 
               transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">;
               <div className="text-center">;
@@ -758,7 +743,6 @@ function AIEmotionIntelligencePlatform() {
                 <motion.div;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   viewport={{ once: true }} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -787,7 +771,6 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business with Emotion AI
@@ -818,7 +801,6 @@ function AIEmotionIntelligencePlatform() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   viewport={{ once: true }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-white" />
@@ -847,7 +829,6 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Plan
@@ -886,11 +867,9 @@ function AIEmotionIntelligencePlatform() {
                   {plan.popular && (
 
 
-=======
 
 
 
-=======
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -898,8 +877,6 @@ function AIEmotionIntelligencePlatform() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="mb-4">
@@ -991,7 +968,6 @@ function AIEmotionIntelligencePlatform() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
@@ -999,14 +975,11 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
-=======
                   </Link>;
                 </motion.div>))}
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Contact Section */}
         <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -1032,7 +1005,6 @@ function AIEmotionIntelligencePlatform() {
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className="flex flex-col items-center">
                   <Mail className="w-8 h-8 text-purple-400 mb-4" />
@@ -1048,7 +1020,6 @@ function AIEmotionIntelligencePlatform() {
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className="flex flex-col items-center">
                   <Globe className="w-8 h-8 text-cyan-400 mb-4" />
@@ -1064,24 +1035,18 @@ function AIEmotionIntelligencePlatform() {
                   </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>
 
-=======
 }
 
-=======
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Get Started?;
@@ -1136,9 +1101,5 @@ function AIEmotionIntelligencePlatform() {
       </UltraFuturisticBackground2030>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

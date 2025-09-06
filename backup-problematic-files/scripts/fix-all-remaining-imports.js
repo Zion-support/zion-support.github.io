@@ -645,10 +645,7 @@ function findAllMissingImports(content, filePath) {
     }
   });
   return [...new Set(missingImports)]; // Remove duplicates
-<<<<<<< HEAD
-=======
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Fix all missing imports in a file
 function fixAllMissingImports(content, filePath) {
   const missingImports = findAllMissingImports(content, filePath);
@@ -657,33 +654,24 @@ function fixAllMissingImports(content, filePath) {
   let fixedContent = content;
   let changes = 0;
   // Find existing lucide-react import
-<<<<<<< HEAD
   const existingImportRegex =;
-=======
   const existingImportRegex =
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     /import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/g;
   const existingImport = fixedContent && fixedContent.match(existingImportRegex);
   if (existingImport) {
     // Add missing icons to existing import const existingIcons =
       existingImport[0]
         .match(/{([^}]*)}/)?.[1]
-<<<<<<< HEAD
         ?.split(',');
-=======
         ?.split(',')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         .map(icon => icon.trim()) || [];
         .map(icon => icon ;
     const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
     const newImport = `import { ${allIcons ;`;
     fixedContent = fixedContent && fixedContent.replace(existingImportRegex, newImport);
     changes++} else {
-<<<<<<< HEAD
     // Create new import statement;
-=======
     // Create new import statement
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
     // Find the best place to insert the import
     const importIndex = fixedContent.indexOf('import');
@@ -709,19 +697,16 @@ function processFile(filePath) {
       totalFixes += result && result.changes;
       console && console.log(`✅ Fixed ${filePath} (${result && result.changes} import fixes)`)}
     filesProcessed++} catch (error) {
-<<<<<<< HEAD
     console && console.error(`❌ Error processing ${filePath}:`, error && error.message)}
 }
 // Main function
 async function main() {
   console ;
-=======
     console.error(`❌ Error processing ${filePath}:`, error.message)}
 }
 // Main function
 async function main() {
   console.log('🔧 Starting comprehensive missing imports fix...\n');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const patterns = ['pages/**/*.{tsx,jsx}',
     'src/**/*.{tsx,jsx}',
     'components/**/*.{tsx,jsx}',
@@ -737,15 +722,12 @@ async function main() {
     'pages && pages.disabled',
     'components && components.disabled',
   ];
-<<<<<<< HEAD
   /**`)});
-=======
   for (const pattern of patterns) {
     const files = await glob(pattern, {
       "ignore": excludeDirs.map(dir => `**/${dir}/**`)});
     for (const file of files) {
       processFile(file)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   console && console.log("\n📊 Comprehensive Missing Imports Fix "Summary": ");
   console && console.log(`   Files processed: ${filesProcessed}`);

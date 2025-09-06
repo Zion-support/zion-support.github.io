@@ -82,10 +82,6 @@ function CaseStudyPage() {
         and reducing operational costs. They required a solution that could adapt to changing production demands 
         and minimize human intervention.</p>
         
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -93,15 +89,11 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyPage() {
   const router = useRouter(),
   const { id } = router.query,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 export default function CaseStudyPage() {
   const router = useRouter()
   const { id } = router.query
@@ -125,7 +117,6 @@ export default function CaseStudyPage() {
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards
         and reducing operational costs. They required a solution that could adapt to changing production demands
         and minimize human intervention.</p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included:</p>
         <ul>
@@ -134,10 +125,7 @@ export default function CaseStudyPage() {
           <li>Automated quality control systems</li>
           <li>Intelligent scheduling and resource allocation</li>
         </ul>
-<<<<<<< HEAD
         
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -145,7 +133,6 @@ export default function CaseStudyPage() {
           <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
         </ul>
-<<<<<<< HEAD
         
         <h2>Implementation Timeline</h2>
         <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
@@ -198,7 +185,6 @@ export default function CaseStudyPage() {
       challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -209,17 +195,13 @@ export default function CaseStudyPage() {
         <p>We designed and implemented a comprehensive cloud optimization system: </p>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
           <li>Cost optimization algorithms</li>
           <li>Performance monitoring and alerting</li>
         </ul>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Results</h2>
         <p>The optimization delivered outstanding results:</p>
         <ul>
@@ -227,11 +209,8 @@ export default function CaseStudyPage() {
           <li><strong>99.9% uptime achieved</strong> - Self-healing systems prevented outages</li>
           <li><strong>3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>
         </ul>
-<<<<<<< HEAD
 <h2>Implementation Timeline</h2>
-=======
         <h2>Implementation Timeline</h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <p>The project was completed in 8 months with careful planning to avoid service disruption.
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
@@ -239,10 +218,7 @@ export default function CaseStudyPage() {
 
 
 
-=======
 
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -373,11 +349,8 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!caseStudy) {
     return (
       <>
@@ -385,7 +358,6 @@ export default function CaseStudyPage(req, res) {
           <title>Case Study Not Found | Zion Tech Group</title>
         </Head>
         <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Not Found</h1>
@@ -443,7 +415,6 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -469,7 +440,6 @@ export default function CaseStudyPage(req, res) {
 
 
               <div className="space-y-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
                   <ul className="space-y-3">
@@ -576,13 +546,11 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </div>
 
 
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
                   <div className="space-y-3">
                     <div>
@@ -615,10 +583,8 @@ export default function CaseStudyPage(req, res) {
       </div>
     </>
 
-=======
 }
 
-=======
       solution: 'Built self - healing, auto - scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
@@ -742,7 +708,6 @@ if ( {) {
                     <div>;
                       <span className="text - white / 60 text - sm">Industry:</span>;
                       <p className="text - white font - medium">{case_study.industry}</p>;
-=======
                   </ul>;
                 </div>;
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
@@ -755,13 +720,11 @@ if ( {) {
                     <div>;
                       <span className="text-white/60 text-sm">Industry:</span>;
                       <p className="text-white font-medium">{caseStudy.industry}</p>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
             <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20 mb - 12">;
               <div;
                 className="prose prose - invert max - w-none";
@@ -772,7 +735,6 @@ if ( {) {
               <Link;
                 href="/contact";
                 className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-=======
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">;
               <div;
                 className="prose prose-invert max-w-none";
@@ -787,7 +749,6 @@ if ( {) {
               <Link;
                 href="/contact";
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
                 Get Started with Your Project;
               </Link>;
@@ -795,12 +756,7 @@ if ( {) {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -47,15 +47,12 @@ interface HeroProps {;
     href: string;
   }
   stats?: Array<{
-<<<<<<< HEAD
   };
   secondaryAction?: {;
     text: string;
     href: string;
   };
   stats?: Array<{;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     value: string;
     label: string;
     color: string;
@@ -71,7 +68,6 @@ const Hero: React.FC<HeroProps> = ({
   primaryAction
   secondaryAction
   stats
-=======
 ;
 const Hero: React.FC < HeroProps> = ({
   title,
@@ -115,7 +111,6 @@ const Hero: React.FC<HeroProps> = ({;
 
     href: string
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   secondaryAction?: {
     text: string
     href: string
@@ -123,15 +118,11 @@ const Hero: React.FC<HeroProps> = ({;
   stats?: Array<{
     value: string
     label: string
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     color: string
   }>
 }
 const Hero: React.FC<HeroProps> = ({
-=======
       />;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         {/* Main Content */}
@@ -160,12 +151,10 @@ const Hero: React.FC<HeroProps> = ({
   }>;
 }
 const Hero: React.FC<HeroProps> = ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title;
   subtitle;
   primaryAction;
   secondaryAction;
-<<<<<<< HEAD
   stats}) => {;
   return (
 
@@ -201,7 +190,6 @@ const Hero: React.FC<HeroProps> = ({;
 
 
 
-=======
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
             {subtitle}
@@ -211,11 +199,8 @@ const Hero: React.FC<HeroProps> = ({;
 
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
-=======
           </p>;
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (;
@@ -226,8 +211,6 @@ const Hero: React.FC<HeroProps> = ({;
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
 
-=======
-=======
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - black'>;
       {/* Background Elements */}
       <div className='absolute inset - 0'>;
@@ -312,12 +295,10 @@ const Hero: React.FC < HeroProps> = ({
           {/* Action Buttons */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
               {secondaryAction && (;
                 <Button
 
-=======
                   href={secondaryAction.href}
                   variant="outline"
                   size="lg"
@@ -328,7 +309,6 @@ const Hero: React.FC < HeroProps> = ({
                   {secondaryAction.text}
                 </Button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
             </div>;
           )}
@@ -336,12 +316,9 @@ const Hero: React.FC < HeroProps> = ({
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Stats Section */}
         {stats && (;
           <div
@@ -352,7 +329,6 @@ const Hero: React.FC < HeroProps> = ({
                 <div className='relative'>;
                   <div
 
-=======
         </div>
         {/* Stats Section */}
         {stats && (
@@ -439,11 +415,8 @@ const Hero: React.FC < HeroProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         )}
@@ -518,24 +491,19 @@ const Hero: React.FC < HeroProps> = ({
 }
 export default Hero;
 
-=======
 
 }
 }
 }
 
 
-=======
       <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
     </section>
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 export default Hero;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 </div>;
               </div>))}
           </div>)}
@@ -586,4 +554,3 @@ export default Hero;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

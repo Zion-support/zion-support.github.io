@@ -4,7 +4,6 @@
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {const contact = {
 	mobile: '+1 302 464 0950';
-<<<<<<< HEAD
 	email: 'kleber@ziontechgroup && ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1899,7 +1898,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     technology: ['Next && Next.jsNode.jsVector DBOCR redaction'],
 
-=======
     real_service: true,
     technology: ['Next.js, Postgres, Email'];
     integrations: ['Zabbix, Datadog, Prometheus email / webhooks'];
@@ -2547,7 +2545,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 ];
     realService: true,
     technology: ['Feast-compatible, PostgreSQL, Redis, Next && Next.js'],
-=======
     market_size: '$1.5B AI governance';
     growth_rate: '21% CAGR';
     variant: 'holographic - matrix';
@@ -2581,7 +2578,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'agentic - browser - recorder - pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows; export resilient agent scripts with retries',
@@ -2678,7 +2674,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'api - performance - optimizer - pro',
     name: 'API Performance Optimizer Pro',
     tagline:;
@@ -2729,7 +2724,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - rag - starter - blueprint',
     name: 'AI RAG Starter Blueprint',
     tagline: 'Production - ready retrieval augmented generation stack with evals',
@@ -2830,7 +2824,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend',
@@ -2878,7 +2871,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'serverless - batch - orchestrator - pro',
     name: 'Serverless Batch Orchestrator',
     tagline:;
@@ -2899,7 +2891,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     popular: false,
     icon: '⏱️',
 
-=======
     color: 'from - sky - 600 to - indigo - 700',
     text_color: 'text - sky - 400',
     link: 'https://ziontechgroup.com / services / serverless - batch - orchestrator - pro',
@@ -2930,7 +2921,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'seo - technical - auditor - pro',
     name: 'SEO Technical Auditor Pro',
     tagline: 'Edge - rendered crawler with Core Web Vitals and schema fixes',
@@ -2980,7 +2970,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'gdpr - cookie - consent - manager - pro',
     name: 'GDPR Cookie Consent Manager Pro',
     tagline: 'Compliant consent banners with IAB TCF and regional policies',
@@ -3081,7 +3070,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - code - migration - assistant - pro',
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation',
@@ -3183,7 +3171,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'multi - cloud - backup - automation - pro',
     name: 'Multi - Cloud Backup Automation',
     tagline: 'Policy - based snapshots, immutability, and cross - cloud recovery',
@@ -3232,7 +3219,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'customer - feedback - insights - pro',
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice - of - customer dashboards',
@@ -3280,7 +3266,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - sales - sequences - pro',
     name: 'AI Sales Sequences',
     tagline: 'Persona - aware sequences with channel optimization',
@@ -3328,7 +3313,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'data - pipeline - optimizer - pro',
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards',
@@ -3376,7 +3360,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'sso - rapid - integration - pro',
     name: 'SSO Rapid Integration',
     tagline: 'One - click SAML / OIDC setup with branded login and SCIM',
@@ -3461,7 +3444,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true
     implementationDetails:
 
-=======
     color: 'from - emerald - 600 to - green - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / finops - cost - anomaly - guard',
@@ -3496,7 +3478,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'gdpr - dsar - automation - suite',
     name: 'GDPR DSAR Automation Suite',
     tagline: 'Automate data subject access requests with auditability',
@@ -3548,7 +3529,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'incident - copilot - pro',
     name: 'Incident Copilot Pro',
     tagline:;
@@ -3599,7 +3579,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - sales - prospecting - studio',
     name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi - channel outreach with compliance and warm - up',
@@ -3648,7 +3627,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'data - contracts - health - monitor',
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams',
@@ -3698,7 +3676,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - powered - email - responder',
     name: 'AI - Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails',
@@ -3747,7 +3724,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'mobile - first - survey - tool',
     name: 'Mobile - First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real - time analytics',
@@ -3794,7 +3770,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ecommerce - returns - management - saas',
     name: 'E‑commerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics',
@@ -3895,7 +3870,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'mobile - first - survey - studio',
     name: 'Mobile‑First Survey Studio',
     tagline: 'Conversational surveys that adapt in real - time',
@@ -3943,7 +3917,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'affiliate - tracking - hub',
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs',
@@ -3990,7 +3963,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters',
@@ -4039,7 +4011,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ecommerce - returns - portal',
     name: 'E‑commerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics',
@@ -4088,7 +4059,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ms_p - it - helpdesk - lite',
     name: 'MSP IT Helpdesk Lite',
     tagline: 'Ticketing, knowledge base, and client portal',
@@ -4136,7 +4106,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - privacy - compliance - copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI',
@@ -4155,7 +4124,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     popular: true,
     icon: '🛡️',
 
-=======
     color: 'from - indigo - 600 to - violet - 700',
     text_color: 'text - indigo - 200',
     link: 'https://ziontechgroup.com / services / ai - privacy - compliance - copilot',
@@ -4190,7 +4158,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'sales - copilot - for - outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notes—done for you',
@@ -4289,7 +4256,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - product - research - analyst',
     name: 'AI Product Research Analyst',
     tagline: 'Summarize markets, competitors, and user feedback automatically',
@@ -4336,7 +4302,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'marketing - brief - generator - pro',
     name: 'Marketing Brief Generator Pro',
     tagline: 'Campaign briefs from goals, audiences, and assets in minutes',
@@ -4433,7 +4398,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'real - time - feature - flags - lite',
     name: 'Real - Time Feature Flags Lite',
     tagline: 'Simple edge - evaluated flags with audit and SDKs',
@@ -4480,7 +4444,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - legal - clause - recommender',
     name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations',
@@ -4528,7 +4491,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - incident - analysis - bot',
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations',
@@ -4547,7 +4509,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     popular: true,
     icon: '🧯',
 
-=======
     color: 'from - red - 600 to - rose - 700',
     text_color: 'text - red - 200',
     link: 'https://ziontechgroup.com / services / ai - incident - analysis - bot',
@@ -4581,7 +4542,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - data - quality - monitor',
     name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously',
@@ -4629,7 +4589,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - ux - copy - optimizer',
     name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
@@ -4677,7 +4636,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   },
   {
 
-=======
     id: 'ai - governance - policy - center',
     name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place',
@@ -4736,7 +4694,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/services/managed-ml-feature-store-starter', marketPosition: 'Accelerates ML platform maturity versus building from scratch.',
     targetAudience: 'ML platform teams and data engineering', trialDays: 14,
     setupTime: '1-3 days', category: 'AI & Data',
-=======
 
     id: 'managed-ml-feature-store-starter',
     name: 'Managed ML Feature Store Starter',
@@ -4744,7 +4701,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     price: '$249',
     period: '/month',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     realService: true,
     technology: ['Feast-compatible, PostgreSQL, Redis, Next.js'];
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'];
@@ -4801,7 +4757,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setupTime: '3-7 days', category: 'Enterprise IT',
     realService: true,
     technology: ['NextAuth, WorkOS/Custom, Node.js'];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     integrations: ['Okta, Azure AD, Google Workspace, OneLogin'];
     useCases: ['SSO rollout, Enterprise pilots, User lifecycle'];
     roi: 'Shorten security review time by 50–70%',
@@ -5309,7 +5264,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     price: '$149', period: '/month',
     description: 'Reduce MTTR with incident detection, guided diagnostics, automated status updates, and post-incident summaries.',
     features: [
-<<<<<<< HEAD
       'Playbook suggestionsAuto status page updatesRoot-cause timelinesSlack/PagerDuty bridgesPostmortem draftsService dependency mapping'
     ];
     popular: false, icon: '🆘',
@@ -7656,7 +7610,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Registry + eval runners + approval flows.', launchDate: '2025-08-15',
     customers: 5, rating: 4.6,
     reviews: 2
-=======
     rating: 4.6,
 
 
@@ -7666,10 +7619,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

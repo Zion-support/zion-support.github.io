@@ -4,16 +4,12 @@ interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'hi
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
   children?: React.ReactNode;
 }
-<<<<<<< HEAD:components/broken/UltraFuturisticBackground2037.tsx
-<<<<<<< HEAD
 export default function UltraFuturisticBackground2037({intensity = 'medium';
   theme = 'quantum-neon';
-=======
 ;
 export default function UltraFuturisticBackground2037({;
   intensity = 'medium',;
   theme = 'quantum-neon',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   children;
 }: UltraFuturisticBackground2037Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;
@@ -306,7 +302,6 @@ export default function UltraFuturisticBackground2037({;
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
               ctx.stroke();
-=======
 
 ;
 export default function UltraFuturisticBackground2037({;
@@ -605,7 +600,6 @@ export default function UltraFuturisticBackground2037({;
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
               ctx.stroke();
-=======
 
 export default function UltraFuturisticBackground2037({ 
   intensity = 'medium',
@@ -958,7 +952,6 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.stroke()
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           });
         });
@@ -996,4 +989,3 @@ ref={canvasRef}
 
 export default UltraFuturisticBackground2037,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

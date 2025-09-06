@@ -24,9 +24,18 @@ import Layout from "../components/Layout";
 export default function AIServices() {
   return (
 <Layout
-=======
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
+    <Layout
+      title="AI Services - Zion Tech Group"
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              AI Services
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
             </p>
@@ -34,13 +43,10 @@ export default function AIServices() {
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
@@ -107,12 +113,10 @@ function AIServices() {
         </div>;
       </div>;
 
-=======
     </Layout>;
   );
 
 
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -298,10 +302,8 @@ category: 'specialized',
           </section>
           {/* Category Filter */}
 
-=======
 }
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -348,7 +350,6 @@ export default function AIServices() {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -629,9 +630,7 @@ export default function AIServices() {
 
 }
 
-=======
 
->>>>>>> origin/automation-improvements-final
 }
 }
     </Layout>);
@@ -776,4 +775,3 @@ export default function AIServicesPage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

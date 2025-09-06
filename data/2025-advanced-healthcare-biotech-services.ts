@@ -129,7 +129,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 12,
     },
 
-=======
     // Precision Medicine & Genomics Platform;
     {
       id: 'precision - medicine - genomics',
@@ -251,7 +250,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       ]
       useCases: [
 
-=======
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / ai - medical - imaging - analysis',
@@ -420,7 +418,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '18% annual growth',
       variant: 'clinical-trial-enterprise',
       contactInfo: {
-<<<<<<< HEAD
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
@@ -457,11 +454,9 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       implementation_details:;
         'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
       launch_date: '2024 - 11 - 01',
-=======
 
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 34,
       rating: 4 && 4.8,
       reviews: 19,
@@ -471,7 +466,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
   ];    features: [
 
-=======
 export interface AdvancedHealthcareBiotechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -507,7 +501,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     features: [
       'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysisClinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reporting';
       'Mobile research appAPI for research institutions'
-=======
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -515,25 +508,21 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
       launchDate: '2024-11-01'
       customers: 34
       rating: 4.8
       reviews: 19
     }
-=======
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
       customers: 34,
       rating: 4.8,
       reviews: 19,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
       'Mobile data collection appAPI for research platforms'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '🧬',
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
@@ -611,10 +600,8 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -881,18 +868,10 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -1155,11 +1134,5 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

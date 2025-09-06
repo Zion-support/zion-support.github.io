@@ -22,35 +22,26 @@ export interface Toast {;
   id: string,;
   type: ToastType,;
   title: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   onRemove: (id: string) => void;
 
   id: string,
   type: ToastType,
   title: string,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   message?: string;
   duration?: number;
 }
 
-=======
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
 
-=======
       setTimeout(() => onRemove(toast.id), 300)
     }, toast.duration || 5000);
 
@@ -88,7 +79,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       default:
 
 
-=======
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
@@ -98,13 +88,10 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getBorderColor = () => {
     switch (toast.type) {
       case 'success':
 
-=======
         return 'border-green-500/20';
       case 'error':
         return 'border-red-500/20';
@@ -112,7 +99,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return 'border-yellow-500/20';
       case 'info':
         return 'border-blue-500/20';
-<<<<<<< HEAD
       default: return 'border-blue-500/20'
     }
 
@@ -147,7 +133,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return 'bg-blue-500/10';
     }
 
-=======
       default:
         return 'border-blue-500/20';    }      default: return 'border-blue-500/20'
     }
@@ -155,7 +140,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const getBackgroundColor = () => {
     switch (toast.type) {
       case 'success':
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         return 'bg-green-500/10';
       case 'error':
         return 'bg-red-500/10';
@@ -163,7 +147,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return 'bg-yellow-500/10';
       case 'info':
         return 'bg-blue-500/10';
-<<<<<<< HEAD
       default: return 'bg-blue-500/10'
     }
 
@@ -202,7 +185,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">;
         <motion&& motion.div
@@ -234,37 +216,27 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
       </div>;
     </motion && motion.div>;
   );
-=======
   return (
 
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
     </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="fixed top-4 right-4 z-50 space-y-3">
       <AnimatePresence>
         {toasts.map((toast) => (
-<<<<<<< HEAD
-=======
   );};
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
-<<<<<<< HEAD
     </div>
   )
 };
@@ -274,7 +246,6 @@ interface ToastContainerProps {;
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {;
   return (
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <div className="fixed top-4 right-4 z-50 space-y-3">;
       <AnimatePresence>;
         {toasts && toasts.map((toast) => (;
@@ -284,7 +255,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
 
 };    toasts;
 
-=======
     const newToast = { ...toast, id };
     setToasts(prev => [...prev, newToast])
   };
@@ -306,7 +276,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
   return {
     toasts;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     showSuccess;
     showError;
     showInfo;
@@ -315,7 +284,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
 
 };
 
-=======
     <div className='fixed top - 4 right - 4 z - 50 space - y-3'>;
       <AnimatePresence>;
         {toasts.map (toast => (          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
@@ -342,7 +310,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
       </div>;
     </motion.div>);
 }
-<<<<<<< HEAD
 ;
 interface ToastContainerProps {
   toasts: Toast[],
@@ -403,4 +370,3 @@ export const use_toast = () =>: any {
     remove_toast}
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

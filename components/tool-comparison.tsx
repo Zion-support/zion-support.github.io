@@ -39,15 +39,11 @@ import React from 'react';
   TrendingUp, ;
   DollarSign, ;
   Users, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Search,
   Filter,
   TrendingUp,
@@ -68,22 +64,16 @@ import {
   TrendingUp,
   DollarSign,
   Users,
-=======
-<<<<<<< HEAD
   Globe,
   Rocket,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Globe,;
   Rocket,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Search;
   Filter
   TrendingUp
   DollarSign
   Users
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Star;
   Check;
   X;
@@ -96,11 +86,9 @@ import {
 
 
 export default function ToolComparisonPage() {
-=======
 
 export default function ToolComparisonPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -378,7 +366,6 @@ function ToolComparisonPage() {
         'Can be expensive'
       ]
       icon: <Globe className='w-6 h-6' />
-=======
       name: 'ChatGPT',
       category: 'AI Assistant',
       pricing: 'Free - $20 / month',
@@ -897,7 +884,6 @@ export default function ToolComparisonPage() {;
     return 'text-gray-400'
 
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -964,7 +950,6 @@ export default function ToolComparisonPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -987,7 +972,6 @@ export default function ToolComparisonPage() {;
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools.length}+
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
             <div className="text-center group">
@@ -1011,7 +995,6 @@ export default function ToolComparisonPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
                 Get Expert Advice;
               </Button>;
@@ -1077,12 +1060,10 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
             {/* Category Filter */}
 
-=======
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
-=======
       {/* Filters and Search */}
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1099,13 +1080,10 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             </div>
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
-<<<<<<< HEAD
               {categories.map(category => (                <button            {/* Search */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search tools, categories, or use cases..."
@@ -1117,7 +1095,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
 
-=======
               {categories.map(category => (                <button
 
               />
@@ -1127,9 +1104,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
-=======
             <div className='flex flex-wrap gap-2'>
 
               {categories.map(category => (                <button
@@ -1142,8 +1117,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                 <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1163,12 +1136,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
-<<<<<<< HEAD
             {/* Sort */}
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
             {/* Sort */}
@@ -1176,8 +1146,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               <Filter className='w-5 h-5 text-gray-400' />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -1336,7 +1304,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                     </td>;
                   </tr>;
 
-=======
                 </tr>
               </thead>
               <tbody>
@@ -1395,19 +1362,16 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                     </td>
                   </tr>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
             <div className="text-center py-20">
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-=======
 
 
 
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
         </div>
       </section>
@@ -1415,7 +1379,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Detailed Comparison Cards */}
 
 
@@ -1423,7 +1386,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               Detailed Analysis
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1432,7 +1394,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
-=======
               </tbody>;
             </table>;
           </div>;
@@ -1464,7 +1425,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           </div>;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
-=======
               </tbody>
             </table>
           </div>
@@ -1480,11 +1440,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-<<<<<<< HEAD
           )}
         </div>
       </section>
-=======
 
             </div>
 
@@ -1492,25 +1450,13 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-<<<<<<< HEAD
-=======
 
               Detailed Analysis
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1519,7 +1465,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1556,7 +1501,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-<<<<<<< HEAD
                         <span>{tool.rating}</span>
 
                       </div>
@@ -1635,7 +1579,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                         </li>;
                       ))}
 
-=======
                     </ul>
                   </div>
                   <div>
@@ -1651,13 +1594,11 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                         >
                           <span className='w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {con}                      Cons
                     </h4>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <ul className="space-y-1">
                       {tool.cons.slice(0, 3).map((con, conIndex) => (
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {con}
                         </li>;
                       ))}
@@ -1690,11 +1631,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                 </div>;
               </Card>;
 
-=======
 
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
-=======
 
 
 
@@ -1709,8 +1648,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                     href={tool.website}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {tool.pricing}
                   </span>
                   <Button
@@ -1722,11 +1659,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1746,14 +1680,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
             Need Help Choosing?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
             perfect combination of tools to accelerate your growth.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               variant='secondary'
@@ -1768,7 +1700,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               size='lg'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Explore All Tools;
             </Button>;
           </div>;
@@ -1776,19 +1707,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

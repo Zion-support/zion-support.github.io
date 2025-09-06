@@ -28,11 +28,8 @@ import Layout from '../components/Layout';
 
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Status() {
   return (
     <Layout
@@ -45,10 +42,8 @@ export default function Status() {
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">System Status</h1>
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               All systems are operational.
             </p>
@@ -58,7 +53,6 @@ export default function Status() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </Layout>
 export default function Status() {;
   return (
@@ -80,8 +74,6 @@ export default function Status() {;
           </div>;
         </div>;
       </div>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </Layout>;
   );
 import React from './react';

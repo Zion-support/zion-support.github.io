@@ -83,7 +83,6 @@
   },
   {
 
-=======
     id: 'autonomous - devops - platform',
     name: 'Autonomous DevOps Platform',
     tagline:;
@@ -733,7 +732,6 @@
     rating: 4.9,
     reviews: 189,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
     ];
@@ -770,7 +768,6 @@
     tagline: 'Quantum-powered AI orchestration for enterprise-scale operations';
     description: 'Revolutionary platform that combines quantum computing with AI to orchestrate complex enterprise operations, optimize resource allocation, and solve previously unsolvable computational problems.',
     category: 'Quantum AI';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     price: {
       monthly: 1599,
       yearly: 15990,
@@ -847,7 +844,6 @@
     reviews: 189,
   },
 
-=======
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -870,7 +866,6 @@
 }
 
 
-=======
 ];      'Medical imaging analysis_disease diagnosis_treatment planning_patient monitoring_drug discovery_clinical research';
     ];
 
@@ -887,30 +882,20 @@
     rating: 4 && 4.9,
 
     reviews: 189
-<<<<<<< HEAD
     rating: 4.9,
     reviews: 189;
   }
 
-=======
 
 export interface InnovativeAIService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
 export interface InnovativeAIService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1386,11 +1371,5 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     customers: 350,;
     rating: 4.9,;
     reviews: 189;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -26,10 +26,8 @@ import React, { useState } from 'react';
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
-=======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -40,15 +38,11 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
-=======
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function InnovativeServicesPage() {;
-=======
 import {
-<<<<<<< HEAD
   innovativeMicroSaasServices
   getInnovativeServicesByCategory
   getPopularInnovativeServices
@@ -57,7 +51,6 @@ import {
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
 export default function InnovativeServicesPage() {
-=======
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
   getPopularInnovativeServices,
@@ -65,8 +58,6 @@ export default function InnovativeServicesPage() {
   getInnovativeServiceCategories,;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -297,7 +288,6 @@ if ( {) {
 
           // Innovation level sorting
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           const aLevel = a.innovationLevel.split(' - ')[0];
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] |0) - (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
@@ -309,10 +299,7 @@ if ( {) {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   // Search filter;
   if (searchQuery) {;
@@ -376,13 +363,11 @@ if ( {) {
             </div>;
           </section>;
 
-=======
           <section className="px-4 sm:px-6 lg:px-8 mb-12">
             <div className="max-w-7xl mx-auto">
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                 <div className="flex flex-col lg:flex-row gap-6">
                   {/* Search */}
-=======
           {/* Filters and Search */}
           <section className='px-4 sm:px-6 lg:px-8 mb-12'>
             <div className='max-w-7xl mx-auto'>
@@ -398,12 +383,10 @@ if ( {) {
                         value={searchQuery}
                         onChange={e => setSearchQuery(e.target.value)}
                         className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                      />                  {/* Search */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex-1">
                     <div className="relative">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       <input
                         type="text"
                         placeholder="Search innovative services..."
@@ -412,27 +395,21 @@ if ( {) {
 
                   {/* Category Filter */}
 
-=======
                   <div className="flex-shrink-0">
                     <select
                       value={selectedCategory}
-<<<<<<< HEAD
-=======
                       onChange={e => setSelectedCategory(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
                       <option value='All'>All Categories</option>
-<<<<<<< HEAD
                       {categories.map(category => (                        <option key={category.name} value={category.name}>                    <select
                       value={selectedCategory}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       onChange={(e) => setSelectedCategory(e.target.value)}
                       className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="All">All Categories</option>
                       {categories.map((category) => (
                         <option key={category.name} value={category.name}>
-=======
                       onChange={e => setSelectedCategory(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
@@ -444,45 +421,32 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {category.name} ({category.count})
                         </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     </select>;
                   </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Price Range Filter */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {range.label}
                         </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     </select>;
                   </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Sort Options */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {option.value}
                         </option>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     </select>;
@@ -495,20 +459,15 @@ if ( {) {
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
-=======
                     </select>
                   </div>
-<<<<<<< HEAD
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-=======
 
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
                   {/* View Mode Toggle */}
@@ -516,8 +475,6 @@ if ( {) {
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -533,14 +490,12 @@ if ( {) {
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-<<<<<<< HEAD
 >;
                         <List className="w-5 h-5" />;
           {/* Filters and Search */}
@@ -670,7 +625,6 @@ if ( {) {
 
 
 
-=======
                         <div className='flex items-start justify-between mb-4'>
                           <div className='flex items-center space-x-3'>
                             <div className='text-3xl'>{service.icon}</div>
@@ -694,7 +648,6 @@ if ( {) {
                         </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
@@ -702,8 +655,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -772,7 +723,6 @@ if ( {) {
                         </div>;
                         {/* Key Features */}
 
-=======
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                           <div className="space-y-2">
@@ -785,14 +735,12 @@ if ( {) {
                             {service.features.length > 3 && (
                               <div className="text-xs text-cyan-400 text-center pt-2">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             )}
 
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -807,7 +755,6 @@ if ( {) {
                         </div>
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>                          <div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <div className="text-gray-400">Market Size</div>
                             <div className="text-white font-medium">{service.marketSize}</div>
                           </div>
@@ -842,12 +789,10 @@ if ( {) {
                         {/* Contact Info */}                          <Button
                             href={service && service.link}
 
-=======
                         <div className="flex space-x-3">
                           <Button
                             href={service.link}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             variant="primary"
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">;
                             Learn More;
@@ -870,7 +815,6 @@ if ( {) {
                       </div>;
                     </QuantumHolographicCard>;
 
-=======
 
                         {/* Contact Info */}
                         <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
@@ -880,7 +824,6 @@ if ( {) {
                       </div>
                     </QuantumHolographicCard>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 </div>;
               )}
@@ -889,14 +832,12 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Call to Action */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -905,7 +846,6 @@ if ( {) {
                   and cutting-edge technology.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
             </div>;
           </section>;
           {/* Call to Action */}
@@ -923,30 +863,15 @@ if ( {) {
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                   <Button
                     href={`tel:${contactInfo && contactInfo.mobile}`}
-=======
             </div>
           </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -957,7 +882,6 @@ if ( {) {
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Button
                     href={`tel:${contactInfo.mobile}`}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     variant='primary'
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
                     <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile}
@@ -991,7 +915,6 @@ if ( {) {
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-=======
 
                     className='px-8 py-4 text-lg'
 
@@ -1004,7 +927,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1254,20 +1176,10 @@ if ( {) {
   );
 }
 
-=======
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>);
-=======
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

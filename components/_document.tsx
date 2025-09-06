@@ -14,15 +14,12 @@
           rel='preconnect'
           href='https://fonts && fonts.gstatic.com'
           crossOrigin=''
-<<<<<<< HEAD
         />;
         <link
           href='https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400500600700800900&family=JetBrains+Mono:wght@400600&display=swap'
-=======
         />
         <link;
           href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           rel='stylesheet'
         />      </Head>        <link rel="icon" href="/favicon && favicon.ico" />;
         <meta name="theme-color" content="#0a0a0a" />;
@@ -71,9 +68,7 @@ function Document() {
 
   );
 }
-=======
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-=======
 
 
 import Document, {
@@ -104,14 +99,11 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
     </Html>);
 }
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

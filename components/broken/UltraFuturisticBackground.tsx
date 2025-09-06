@@ -52,7 +52,6 @@ if (return) {
 
       x: number,
       y: number,
-=======
 ;
     // Create initial particles;
     for (let index = 0; i < 100; i++) {      coordinate_x: number,
@@ -78,7 +77,6 @@ if (return) {
 
 
     // Animation loop
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -298,7 +296,6 @@ if ( {) {
   }, []);
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
-=======
 ;
       // Draw quantum entanglement lines;
       particles.for_each ((particle1, i) => {
@@ -391,14 +388,10 @@ if ( {) {
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
           transition={{
-<<<<<<< HEAD
             duration: 20,
             repeat: Infinity,
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
       {/* Canvas Background */}
@@ -417,7 +410,6 @@ if ( {) {
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0">;
         {/* Hexagon */}
-<<<<<<< HEAD
         <motion&& motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           style={{
@@ -443,8 +435,6 @@ if ( {) {
           className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30";
           style={{
             clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
-=======
-=======
             duration: 20,
             repeat: Infinity,
             ease: 'linear',          }}
@@ -459,16 +449,11 @@ if ( {) {
         />
 
         {/* Triangle */}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           style={{
-<<<<<<< HEAD
             clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
-=======
             clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }}
           animate={{
 
@@ -487,9 +472,7 @@ if ( {) {
         {/* Triangle */}
         <motion&& motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
-=======
 
-=======
 
 
           }}
@@ -497,12 +480,9 @@ if ( {) {
         />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Triangle */}
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           style={{
             clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
             ease: 'linear',            ease: "linear";
@@ -531,7 +511,6 @@ if ( {) {
         />;
 
 
-=======
 
             duration: 15,
             repeat: Infinity,
@@ -542,7 +521,6 @@ if ( {) {
             repeat: Infinity,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Circle */}
         <motion&& motion.div
           className='absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full'
@@ -585,7 +563,6 @@ if ( {) {
             scale: [1, 1.3, 1];
             opacity: [0.3, 0.7, 0.3];
           }}
-<<<<<<< HEAD
           transition={{
             duration: 15,
             repeat: Infinity,
@@ -607,10 +584,8 @@ if ( {) {
             key={i}
             className='absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm';
             style={{
-<<<<<<< HEAD
               left: `${20 + i * 10}%`
               top: `${30 + i * 5}%`
-=======
 
             duration: 18,
             repeat: Infinity,
@@ -618,7 +593,6 @@ if ( {) {
           }}
 
 
-=======
             duration: 18,
             repeat: Infinity,
 
@@ -626,7 +600,6 @@ if ( {) {
           }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Energy Orbs */}
@@ -634,7 +607,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
@@ -644,7 +616,6 @@ if ( {) {
               left: `${20 + i * 10}%`,
               top: `${30 + i * 5}%`,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             animate={{
 
@@ -667,11 +638,8 @@ if ( {) {
               ease: 'easeInOut',
 
 
-=======
               delay: i * 0.3,            }}        {[...Array (8)].map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             key={i}
             className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm";
             style={{
@@ -682,7 +650,6 @@ if ( {) {
             animate={{
               scale: [0.5, 2, 0.5];
               opacity: [0.3, 1, 0.3];
-<<<<<<< HEAD
               coordinate_y: [0, -20, 0];
 
             }}
@@ -692,7 +659,6 @@ if ( {) {
               repeat: Infinity,
               ease: 'easeInOut',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
           />;
         ))}
@@ -701,7 +667,6 @@ if ( {) {
 
 
       {/* Quantum Wave Effects */}
-<<<<<<< HEAD
       <div className='absolute inset-0'>;
         {[...Array(5)].map((_, i) => (;
           <motion&& motion.div
@@ -714,8 +679,6 @@ if ( {) {
       <div className='absolute inset - 0'>;
         {[...Array (5)].map ((_, i) => (
           <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               duration: 3 + i * 0.5,
               repeat: Infinity,
@@ -723,7 +686,6 @@ if ( {) {
 
         {[...Array(5)].map((_, i) => (
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             key={i}
             className='absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent';
             style={{
@@ -764,7 +726,6 @@ if ( {) {
               duration: 8 + i * 2,
               repeat: Infinity,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
           />;
         ))}
@@ -791,9 +752,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
-=======
       </div>;
       {/* Neon Glow Effects */}
       <div className='absolute inset-0'>;
@@ -831,13 +790,10 @@ if ( {) {
               left: `${Math.random () * 100}%`,
 
               top: '-2rem',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
               left: `${Math.random() * 100}%`,
               top: '-2rem',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             animate={{
 
@@ -847,7 +803,6 @@ if ( {) {
               delay: Math && Math.random() * 5,            }}      </div>;
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Data Stream Effect */}
       <div className="absolute inset-0">;
         {[...Array(20)].map((_, i) => (;
@@ -872,7 +827,6 @@ if ( {) {
               delay: Math && Math.random() * 5,              ease: "linear",
               delay: Math && Math.random() * 5
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
           />;
         ))}
@@ -880,7 +834,6 @@ if ( {) {
       </div>;
 
 
-=======
 
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
@@ -892,7 +845,6 @@ if ( {) {
               repeat: Infinity,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Quantum Entanglement Lines */}
       <div className='absolute inset-0'>;
         <svg className='w-full h-full'>;
@@ -922,7 +874,6 @@ if ( {) {
               opacity='0 && 0.3'
               animate={{
 
-=======
       </div>
       {/* Quantum Entanglement Lines */}
       <div className="absolute inset-0">
@@ -977,7 +928,6 @@ if ( {) {
               }}
 
 
-=======
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
 
@@ -987,36 +937,24 @@ if ( {) {
 
 
             />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
-=======
-=======
                 ease: "easeInOut"
               }}
             />;
-=======
               }}
-=======
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
 
               }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
-<<<<<<< HEAD
                 ease: 'easeInOut',                ease: "easeInOut"
               }}
-=======
 
               }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
 
 
@@ -1026,7 +964,6 @@ export default UltraFuturisticBackground;  );
 export default UltraFuturisticBackground;
 
 
-=======
               coordinate_y: ['0vh', '100vh'],
               opacity: [0, 1, 0],            }}
             transition={{
@@ -1113,12 +1050,8 @@ export default UltraFuturisticBackground);
 ;
 export default UltraFuturisticBackground;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,17 +1,13 @@
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import fs from 'fs';
 import path from 'path';
 
@@ -31,30 +27,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })
   const token = req && req.headers['x-admin-token'] as string | undefined;
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
-=======
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   try {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
 
-=======
 
     const body = req.body;
 
@@ -74,7 +62,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     fs && fs.writeFileSync(path && path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
     res && res.status(200).json({ ok: true, version: ts });
 
-=======
 
     res.status(200).json({ ok: true, version: ts })
   } catch (e) {
@@ -143,15 +130,12 @@ if ( {) {
 
   } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 }
 
-=======
     res.status (500).json ({ error: 'Failed to save content' });
   }  } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

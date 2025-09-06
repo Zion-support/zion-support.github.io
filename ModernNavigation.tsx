@@ -9,16 +9,15 @@ class_name?: string;
 
 export default function ModernNavigation() {
 
-=======
 interface ModernNavigationProps {
 
 
-=======
   className?: string;
 }
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function ModernNavigation({
+  className = "",
+}: ModernNavigationProps) {
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
@@ -65,16 +64,10 @@ function ModernNavigation() {
     </div>);
 
 }
-=======
 
 
 
-=======
 
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
-=======
 }
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

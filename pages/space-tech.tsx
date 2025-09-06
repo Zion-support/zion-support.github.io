@@ -61,6 +61,13 @@ return (
             <Globe2 className="w-4 h-4" />{" "}
 
             <span>Explore detailed Space Technology offerings</span>;
+            <span>Explore detailed Space Technology offerings</span>
+          </a>
+        </section>
+      </div>
+    </div>
+  </Layout>
+);
 import React from './react';
 import Head from './next / head';
 import Layout from "../components / layout / Layout";
@@ -126,7 +133,6 @@ return (
     </div>;
 
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -136,12 +142,7 @@ export default function SpaceTechPage() {
     'Mission control dashboards and telemetry pipelinesSatellite operations playbooks and anomaly responseGround station integrations and data delivery SLAsSecure communications and zero-trust segmentation'];
   return (
     <Layout>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
@@ -207,7 +208,6 @@ return (
     </div>
   </Layout>
 );
-=======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
@@ -216,7 +216,6 @@ export default function SpaceTechPage() {
   const features = [
     'Mission control dashboards and telemetry pipelinesSatellite operations playbooks and anomaly responseGround station integrations and data delivery SLAsSecure communications and zero-trust segmentation'],
   return (_<Layout>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <Head>
         <title>Space Technology | Zion Tech Group</title>
         <meta name="description" content="Space mission control, satellite operations, and secure communications consulting." />
@@ -231,13 +230,10 @@ export default function SpaceTechPage() {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Space Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, reliable operations for space and earth observation missions.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-<<<<<<< HEAD
               <a href="/contact" className="px-8 py-4">Discuss a Mission</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
-=======
               <a href="/contact" className="px-8 py-4">Discuss a Mission</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </header>
           <section>
@@ -247,7 +243,6 @@ export default function SpaceTechPage() {
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
-<<<<<<< HEAD
 
   return (_<Layout>
       <Head>
@@ -282,7 +277,6 @@ export default function SpaceTechPage() {
             </div>
           </section>
 
-=======
                 </div>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -291,29 +285,22 @@ export default function SpaceTechPage() {
 }
             </div>
           </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <section className="text-center">
             <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
               <Globe2 className="w-4 h-4" />
               <span>Explore detailed Space Technology offerings</span>
-<<<<<<< HEAD
 </a>
-=======
             </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </section>
         </div>
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 }
 
   </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             </div>;
           </section>;
           <section className="text-center">;
@@ -333,5 +320,3 @@ export default function SpaceTechPage() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

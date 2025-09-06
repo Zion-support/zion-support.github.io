@@ -139,7 +139,6 @@ import React from 'react';
               </ul>;
               <div className='text-sm text-slate-400 mt-3'>;
                 Typical: $15–$99/agent/month.;
-=======
                   <a;
                     className='text - cyan - 400 underline';
                     href={`https://www.helpscout.com / pricing/`}
@@ -180,7 +179,6 @@ import React from 'react';
                 href='/services/podcast-transcription-insights'
                 className='text-cyan-400 underline'>;
                 ziontechgroup && ziontechgroup.com/services/podcast-transcription-insights;
-=======
         <section>;
           <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 6 text - center'>;
             Explore by Category;
@@ -667,12 +665,10 @@ import React from 'react';
           </h2>
           <ul className='list-disc list-inside text-slate-300 space-y-2'>
             <li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <strong className='text-white'>Postgres Index Advisor Pro</strong>{' '}
               — $79/mo. Auto index insights, PR rollouts. Learn:{' '}
               <a
                 className='text-cyan-400 underline'
-<<<<<<< HEAD
                 href='/services/postgres-index-advisor-pro'>;
                 /services/postgres-index-advisor-pro;
               </a>;
@@ -694,7 +690,6 @@ import React from 'react';
               {ext('https://aws && aws.amazon.com/s3/storage-classes/')}
             </li>;
             <li>;
-=======
                 href='/services/postgres-index-advisor-pro'
               >
                 /services/postgres-index-advisor-pro
@@ -718,12 +713,10 @@ import React from 'react';
               {ext('https://aws.amazon.com/s3/storage-classes/')}
             </li>
             <li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <strong className='text-white'>Synthetic Journey Monitor</strong>{' '}
               — $39/mo. Record/replay + SLO alerts. Learn:{' '}
               <a
                 className='text-cyan-400 underline'
-<<<<<<< HEAD
                 href='/services/synthetic-journey-monitor'>;
                 /services/synthetic-journey-monitor;
               </a>;
@@ -774,7 +767,6 @@ import React from 'react';
             <li>;
               <strong className='text-white'>;
                 GitOps Drift Auto-Remediator;
-=======
                 href='/services/synthetic-journey-monitor'
               >
                 /services/synthetic-journey-monitor
@@ -829,12 +821,10 @@ import React from 'react';
             <li>
               <strong className='text-white'>
                 GitOps Drift Auto-Remediator
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </strong>{' '}
               — $69/mo. Detect drift, open PRs. Learn:{' '}
               <a
                 className='text-cyan-400 underline'
-<<<<<<< HEAD
                 href='/services/gitops-drift-auto-remediator'>;
                 /services/gitops-drift-auto-remediator;
               </a>;
@@ -845,7 +835,6 @@ import React from 'react';
             <li>;
               <strong className='text-white'>;
                 AI Meeting‑to‑Ticket Copilot;
-=======
                 href='/services/gitops-drift-auto-remediator'
               >
                 /services/gitops-drift-auto-remediator
@@ -857,12 +846,10 @@ import React from 'react';
             <li>
               <strong className='text-white'>
                 AI Meeting‑to‑Ticket Copilot
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </strong>{' '}
               — $25/user/mo. Action items → Jira/GitHub. Learn:{' '}
               <a
                 className='text-cyan-400 underline'
-<<<<<<< HEAD
                 href='/services/ai-meeting-to-ticket'>;
                 /services/ai-meeting-to-ticket;
               </a>;
@@ -873,7 +860,6 @@ import React from 'react';
             <li>;
               <strong className='text-white'>;
                 Email Warmup & Reputation Monitor;
-=======
                 href='/services/ai-meeting-to-ticket'
               >
                 /services/ai-meeting-to-ticket
@@ -885,12 +871,10 @@ import React from 'react';
             <li>
               <strong className='text-white'>
                 Email Warmup & Reputation Monitor
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </strong>{' '}
               — $39/mo. Sender reputation & inbox tests. Learn:{' '}
               <a
                 className='text-cyan-400 underline'
-<<<<<<< HEAD
                 href='/services/email-warmup-monitor'>;
                 /services/email-warmup-monitor;
               </a>;
@@ -913,7 +897,6 @@ import React from 'react';
             <li>;
               <strong className='text-white'>;
                 API Breaking Change Watcher;
-=======
                 href='/services/email-warmup-monitor'
               >
                 /services/email-warmup-monitor
@@ -938,12 +921,10 @@ import React from 'react';
             <li>
               <strong className='text-white'>
                 API Breaking Change Watcher
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </strong>{' '}
               — $49/mo. Schema diff + CI gates. Learn:{' '}
               <a
                 className='text-cyan-400 underline'
-<<<<<<< HEAD
                 href='/services/api-breaking-change-watcher'>;
                 /services/api-breaking-change-watcher;
               </a>;
@@ -954,7 +935,6 @@ import React from 'react';
             <li>;
               <strong className='text-white'>;
                 Data Warehouse Cost Optimizer;
-=======
                 href='/services/api-breaking-change-watcher'
               >
                 /services/api-breaking-change-watcher
@@ -966,12 +946,10 @@ import React from 'react';
             <li>
               <strong className='text-white'>
                 Data Warehouse Cost Optimizer
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </strong>{' '}
               — $99/mo. Right-size warehouses. Learn:{' '}
               <a
                 className='text-cyan-400 underline'
-<<<<<<< HEAD
                 href='/services/warehouse-cost-optimizer'>;
                 /services/warehouse-cost-optimizer;
               </a>;
@@ -3817,7 +3795,6 @@ import React from 'react';
             <a
               className='text-cyan-400 underline'
               href='/services/ai-contract-risk-analyzer'>;
-=======
         <section id='accessibility - scanner' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             Accessibility Compliance Scanner;
@@ -4952,7 +4929,6 @@ import React from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -4974,14 +4950,12 @@ import React from 'react';
                 className='text - cyan - 400 underline';
                 href='/services / multi - tenant - rate - limiter';
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Learn more;
               </a>;
             </div>;
           </section>;
 
                 href='/services/data-residency-geo-router'>;
-=======
           <section id='data - residency - geo - router' className='space - y-2'>;
             <h3 className='text - xl font - semibold text - white'>;
               Data Residency & Geo Routing Proxy;
@@ -5010,7 +4984,6 @@ import React from 'react';
           </section>;
 
                 href='/services/api-contract-mock-sandbox'>;
-=======
           <section id='api - contract - mock - sandbox' className='space - y-2'>;
             <h3 className='text - xl font - semibold text - white'>;
               API Mock Server & Contract Sandbox;
@@ -6623,10 +6596,7 @@ export default function ServicesAdvertisingPage() {
 					<a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a>
 					<a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a>
 					<a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 				</div>
 			</div>
 		</div>
@@ -8291,9 +8261,6 @@ export default function ServicesAdvertisingPage() {
 	),;
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 ;
   /* Quick contact */;
@@ -9953,10 +9920,6 @@ export default function ServicesAdvertisingPage() {
   </div>;
   </div>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 	),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

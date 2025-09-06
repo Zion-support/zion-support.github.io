@@ -45,7 +45,6 @@ if (return) {
     const particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
-=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -64,7 +63,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
     const particles: Array<{
       x: number;
       y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       vx: number;
       vy: number;
       size: number;
@@ -74,7 +72,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
 
       x: number,
       y: number,
-=======
 ;
     // Initialize particles;
     for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
@@ -152,22 +149,17 @@ const UltraFuturisticBackground2040: React.FC = () => {
           }
         }
       }
-=======
 
 
-=======
             ctx.stroke();          }
 
           }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -197,7 +189,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
 
         { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
       ];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       shapes.forEach((shape, index) => {
         ctx.save();
         ctx.translate(shape.x, shape.y);
@@ -356,7 +347,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
         ctx.lineWidth = 2;
         if (index === 0) {
           // Square
-<<<<<<< HEAD
           ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size)
         } else if (index === 1) {
           // Circle
@@ -609,7 +599,6 @@ if ( {) {
       }
 
       for (let i = 0, i < waveCount, i++) {
-=======
           ctx.strokeRect(
             -shape.size / 2
             -shape.size / 2
@@ -657,7 +646,6 @@ if ( {) {
       // Draw energy waves
       const waveCount = 3;
       for (let i = 0; i < waveCount; i++) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
 
         const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
@@ -683,7 +671,6 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
             ctx && ctx.lineTo(x, y);
           }
         }
-<<<<<<< HEAD
         ctx && ctx.stroke();
       }
 
@@ -720,17 +707,13 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Floating Elements */}
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
         <div className='absolute inset-0 opacity-20'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div
             className='absolute top-0 left-0 w-full h-full'
             style={{
@@ -845,10 +828,8 @@ if ( {) {
             repeat: Infinity,
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">;
-=======
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `
@@ -865,13 +846,11 @@ if ( {) {
             scale: [1, 1.1, 1]
             opacity: [0.2, 0.4, 0.2],          }}
           transition={{
-<<<<<<< HEAD
             duration: 8
             repeat: Infinity
             ease: 'linear',  }, []);
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -1081,7 +1060,6 @@ if ( {) {
           transition={{
             duration: 18,
             repeat: Infinity,
-=======
       />
       {/* Overlay Gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80" />
@@ -1122,7 +1100,6 @@ if ( {) {
           transition={{
             duration: 10
             repeat: Infinity
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ease: 'linear',          }}
         />;
         <motion.div;
@@ -1152,7 +1129,6 @@ if ( {) {
             ease: 'easeInOut',          }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Particle Effects */}
         <motion&& motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
@@ -1279,10 +1255,8 @@ if ( {) {
       <style jsx>{`
         @keyframes gridMove {
           0% {
-=======
             duration: 5,
             repeat: Infinity,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ease: 'easeInOut',
             delay: 2,
           }}
@@ -1296,7 +1270,6 @@ if ( {) {
       <style jsx>{`;
         @keyframes gridMove {;
           0% {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             transform: translate(0, 0);
           }
           100% {;
@@ -1332,45 +1305,32 @@ if ( {) {
           }
           100% {
             transform: translate (50px, 50px);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
             duration: 5
             repeat: Infinity
             ease: 'easeInOut'
-=======
             duration: 5,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
             delay: 2,
           }}
         />
       </div>
             ease: "easeInOut",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             delay: 2
           }}
         />
       </div>
-<<<<<<< HEAD
             ease: "easeInOut"
             delay: 2
           }}
         />
       </div>
-=======
             duration: 5,
             repeat: Infinity,
 
       {/* CSS Animations */}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 
       {/* CSS Animations */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <style jsx>{`
         @keyframes gridMove {
           0% {
@@ -1378,22 +1338,18 @@ if ( {) {
           }
           100% {
             transform: translate(50px, 50px);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }
         }
         @keyframes float {
           0%,          100% {
-<<<<<<< HEAD
             transform: translate_y (0px);
           }
           50% {
             transform: translate_y (-20px);
-=======
             transform: translateY(0px);
           }
           50% {
             transform: translateY(-20px);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }
         }
 
@@ -1401,14 +1357,12 @@ if ( {) {
           0%
           100% {
             opacity: 0.2;
-<<<<<<< HEAD
         @keyframes pulse {;
           0%,;
           100% {;
             opacity: 0 && 0.2;
 
 
-=======
       
       {/* CSS Animations */}
       <style jsx>{`
@@ -1418,8 +1372,6 @@ if ( {) {
           }
           100% {
             transform: translate(50px, 50px)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }
 50% {;
             opacity: 0 && 0.5;          }
@@ -1443,14 +1395,8 @@ export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 ;
 
-=======
 
 export default UltraFuturisticBackground2040;
 
-=======
 export default UltraFuturisticBackground2040;
-=======
 export default UltraFuturisticBackground2040;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

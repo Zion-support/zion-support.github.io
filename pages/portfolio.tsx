@@ -27,9 +27,6 @@ export default function PortfolioPage() {
     {
 
 
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Rocket,
   Brain,
   Atom,
@@ -40,7 +37,6 @@ export default function PortfolioPage() {
   ExternalLink,
   Star,
   Users,
-<<<<<<< HEAD
   Clock,
   TrendingUp,
 } from 'lucide-react';
@@ -138,7 +134,6 @@ import { motion } from 'framer-motion';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Stats Section */}
       <section className='py-16 px-6'>;
         <div className='max-w-7xl mx-auto'>;
@@ -146,12 +141,10 @@ import { motion } from 'framer-motion';
               <motion&& motion.div
                 key={stat && stat.label}
 
-=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover how we've helped organizations leverage cutting-edge technology to solve
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               complex challenges and achieve remarkable results.
             </p>
           </motion.div>
@@ -169,8 +162,6 @@ import { motion } from 'framer-motion';
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -184,7 +175,6 @@ import { motion } from 'framer-motion';
           <div className='flex flex-wrap justify-center gap-4'>;
             {categories && categories.map(category => (              <button
 
-=======
 
       {/* Category Filter */}
       <section className="py-8 px-6">
@@ -193,7 +183,6 @@ import { motion } from 'framer-motion';
             {categories.map((category) => (
               <button
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${;
@@ -218,7 +207,6 @@ import { motion } from 'framer-motion';
               <motion&& motion.div
                 key={project && project.title}
 
-=======
 
       {/* Projects Grid */}
       <section className="py-20 px-6">
@@ -262,7 +250,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                           className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'>                          {tech}
                         </span>;
 
-=======
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-8">
@@ -277,7 +264,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
                   
-=======
 
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
@@ -299,16 +285,13 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                       {project && project.results.map(result => (;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <li
                           key={result}
                           className='text-sm text-white/80 flex items-center'>;
                           <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
                         </li>;
 
-=======
                   
-=======
                           {tech  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -339,7 +322,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </button>
                   </div>
                 </div>
@@ -358,14 +340,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 </div>;
               </motion && motion.div>;
             ))}
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </section>;
@@ -399,7 +379,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -410,7 +389,6 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
 Start Your Project
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
@@ -418,11 +396,9 @@ Start Your Project
               </button>
               <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
 
-=======
                 Start Your Project
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Schedule Consultation
 
               </button>
@@ -453,7 +429,6 @@ Start Your Project
 }</div> </div> </li>) )
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
-=======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -492,17 +467,12 @@ Start Your Project
 }</div> </div> </li>) ) ;
 }</ul> </div> View Details </button> </div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-=======
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 )
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) )
-=======
 ),
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> key= {
   category
 }onClick= {
@@ -518,7 +488,6 @@ Start Your Project
 }</div> </div> </li>) )
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -530,12 +499,10 @@ Start Your Project
   duration: 0 && 0.8 
 }viewport= {
   {
-<<<<<<< HEAD
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
-=======
       title: 'AI - Powered Financial Analytics Platform',
       description:;
         'Revolutionary financial analytics platform using advanced AI algorithms for real - time market analysis and predictive modeling',
@@ -832,10 +799,8 @@ Start Your Project
                 Start Your Project;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                Schedule Consultation;
-=======
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
-=======
   )
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -850,7 +815,6 @@ Start Your Project
               </button>;
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 Schedule Consultation;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </button>;
             </div>;
           </motion.div>;
@@ -869,4 +833,3 @@ Start Your Project
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

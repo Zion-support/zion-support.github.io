@@ -30,7 +30,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
   Search
   HelpCircle
   BookOpen
@@ -43,7 +42,6 @@ import {
   ExternalLink
   ChevronDown
   Cloud
-=======
 
 
 import {
@@ -61,7 +59,6 @@ import {
   ChevronDown,
   Cloud,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 const helpArticles = [
   {
@@ -117,19 +114,13 @@ const help_articles = [;
     description: "Overview of all available services and solutions",
     read_time: "7 min read",
     type: "Overview",
-=======
       {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: "AI Best Practices",
         description: "Tips and best practices for AI development",
         readTime: "6 min read",
         type: "Best Practice",
       },
     ],
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   },
   {
     id: "ai - services",
@@ -168,7 +159,6 @@ const help_articles = [;
     icon: Cloud,
     color: "blue",
 
-=======
       {
 
 
@@ -190,7 +180,6 @@ const help_articles = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     articles: [
       {
         title: "Cloud Migration Guide"
@@ -201,7 +190,6 @@ const help_articles = [;
 
     articles: [;
       {
-<<<<<<< HEAD
         title: "Cloud Migration Guide",
         description: "Step - by - step guide to migrating to the cloud",
         read_time: "12 min read",
@@ -218,12 +206,9 @@ const help_articles = [;
     ]
   }
 
-=======
-=======
       {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -238,7 +223,6 @@ const help_categories = [;
 
   {
 
-=======
 
 
     title: "Getting Started"
@@ -250,7 +234,6 @@ const help_categories = [;
 
 ];
 
-=======
 
 
     color: 'blue',
@@ -340,16 +323,12 @@ const helpCategories = [;
 ];
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
-=======
-<<<<<<< HEAD
 export default function HelpPage() {
-=======
 
   const toggleCategory = (index: number) => {;
 
     setExpandedCategory(expandedCategory === index ? null : index);
 
-=======
 
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
@@ -377,7 +356,6 @@ export default function HelpPage() {
     )
   })).filter(category => category.articles.length > 0);
 
-=======
   const filteredCategories = helpCategories;
     .map((category) => ({;
       ...category,;
@@ -388,16 +366,9 @@ export default function HelpPage() {
       ),;
     }));
     .filter((category) => category && category.articles.length > 0);
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <>;
       <Head>;
