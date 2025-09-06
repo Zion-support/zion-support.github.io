@@ -3,6 +3,7 @@ import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
+import { Zap, Star } from 'lucide-react';
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
     { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
@@ -17,11 +18,11 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   ],
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category),
-    return cat ? cat.icon : Star
+    return cat ? cat.icon : Star;
   };
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.name === category),
-    return cat ? cat.color : 'from-gray-500 to-gray-600'
+    return cat ? cat.color : 'from-gray-500 to-gray-600';
   };
   return (
     <Layout>
@@ -118,8 +119,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
-              const IconComponent = category.icon;
-              return (
+              const IconComponent = category.icon, return (
                 <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -140,7 +140,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              )
+              );
             })}
           </div>
         </div>
@@ -215,7 +215,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              )
+              );
             })}
           </div>
         </div>
@@ -317,6 +317,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         </div>
       </section>
     </Layout>
-  )
+  );
 },
 export default Comprehensive2025InnovativeServicesShowcase;

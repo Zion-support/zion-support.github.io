@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Star } from 'lucide-react';
 interface NavigationItem {
   name: string,
   href: string,
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
-  color?: string
+  icon?: React.ReactNode, description?: string, children?: NavigationItem[];
+  badge?: string, title?: string, featured?: boolean, category?: string, color?: string
 }
 
 const navigationItems: NavigationItem[] = [
@@ -245,7 +240,7 @@ const UltraFuturisticNavigation2047 = () => {
       }
     };
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
     <nav className="relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50">
@@ -437,6 +432,6 @@ const UltraFuturisticNavigation2047 = () => {
         )}
       </AnimatePresence>
     </nav>
-  )
+  );
 },
 export default UltraFuturisticNavigation2047;

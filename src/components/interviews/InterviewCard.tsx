@@ -12,6 +12,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
@@ -22,8 +26,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const isClient = user?.id === interview.client_id;
-  const isTalent = user?.id === interview.talent_id;
+  const isClient = user?.id === interview.client_id, const isTalent = user?.id === interview.talent_id;
   // Format interview date and time
   const interviewDate = parseISO(interview.scheduled_date);
   const formattedDate = format(interviewDate, 'EEEE, MMMM d');
@@ -41,7 +44,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       return `Took place ${formatDistanceToNow(interviewDate)} ago`
     } else {
       return `Starts in ${formatDistanceToNow(interviewDate)}`
-    }
+    };
   };
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
@@ -107,7 +110,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       return interview.talent_name || 'Talent'
     } else {
       return interview.client_name || 'Client'
-    }
+    };
   };
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -260,5 +263,5 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         </DialogContent>
       </Dialog>
     </Card>
-  )
+  );
 }

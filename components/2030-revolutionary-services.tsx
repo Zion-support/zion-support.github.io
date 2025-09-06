@@ -6,6 +6,7 @@ import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';
+import { Zap, Star } from 'lucide-react';
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -13,8 +14,7 @@ export default function Revolutionary2030ServicesPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-  return (
-    <UltraFuturisticBackground2030>
+  return(<UltraFuturisticBackground2030>
       <Head>
         <title>2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining</title>
         <meta name="description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we're building tomorrow's solutions today." />
@@ -63,8 +63,7 @@ export default function Revolutionary2030ServicesPage() {
                 "addressRegion": "DE";
                 "postalCode": "19709";
                 "addressCountry": "US"
-              };
-              "sameAs": [
+              }, "sameAs": [
                 "https://github.com/Zion-Holdings"
               ]
             })

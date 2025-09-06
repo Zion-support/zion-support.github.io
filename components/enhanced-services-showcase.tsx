@@ -12,6 +12,7 @@ import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 import { realMarketServices } from '../data/real-market-services';
 import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
+import { Zap, Star } from 'lucide-react';
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -64,32 +65,26 @@ export default function EnhancedServicesShowcase() {
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
-      return matchesCategory && matchesSearch
+      return matchesCategory && matchesSearch;
     });
     // Sort services
     switch (sortBy) {
       case 'name':
         filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;
-      case 'price-low':
+        break, case 'price-low':
         filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
-        break;
-      case 'price-high':
+        break, case 'price-high':
         filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
-        break;
-      case 'rating':
+        break, case 'rating':
         filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-        break;
-      case 'customers':
+        break, case 'customers':
         filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0));
-        break;
-      case 'popularity':
+        break, case 'popularity':
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
-      default: break
+        break, default: break
     }
 
-    return filtered
+    return filtered;
   }, [allServices, selectedCategory, searchTerm, sortBy]);
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -541,7 +536,7 @@ export default function EnhancedServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticMatrixBackground>
-  )
+  );
 }
 
 // Button component (if not imported)
@@ -550,14 +545,11 @@ const Button = ({
   variant = 'primary';
   size = 'md';
   className = '';
-  children;
-  onClick 
+  children, onClick 
 }: {
-  href?: string;
-  variant?: 'primary' | 'secondary';
+  href?: string, variant?: 'primary' | 'secondary';
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  children: React.ReactNode,
+  className?: string, children: React.ReactNode,
   onClick?: () => void
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',
@@ -583,5 +575,5 @@ const Button = ({
     <button onClick={onClick} className={classes}>
       {children}
     </button>
-  )
+  );
 };

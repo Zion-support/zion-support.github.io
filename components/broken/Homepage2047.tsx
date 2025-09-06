@@ -9,6 +9,7 @@ import { innovative2025ITInfrastructureV2 } from '../data/2025-innovative-it-inf
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
+import { Star } from 'lucide-react';
 const Homepage2047: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -54,11 +55,10 @@ const Homepage2047: React.FC = () => {
   const featuredServices = allInnovativeServices.slice(0, 6);
   // Filter services by category
   const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allInnovativeServices;
-    return allInnovativeServices.filter(service => 
+    if (selectedCategory === 'all') return allInnovativeServices, return allInnovativeServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
-    )
+    );
   };
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
@@ -419,6 +419,6 @@ const Homepage2047: React.FC = () => {
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
-  )
+  );
 },
 export default Homepage2047;

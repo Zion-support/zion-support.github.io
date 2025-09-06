@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ErrorBoundaryState {
   hasError: boolean
   error: Error | null
@@ -93,8 +95,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
 
     this.setState({
-      errorInfo;
-      errorId
+      errorInfo, errorId
     })
   }
 
@@ -413,7 +414,7 @@ export const withErrorBoundary = <P extends object>(
 
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`
   
-  return WrappedComponent
+  return WrappedComponent;
 }
 
 export default GlobalErrorBoundary 

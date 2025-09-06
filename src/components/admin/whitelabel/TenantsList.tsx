@@ -5,6 +5,8 @@ import { toast } from '@/hooks/use-toast';
 import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from 'lucide-react'
 import { format } from 'date-fns';
+import { Badge } from '@/components/ui/badge';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -18,8 +20,7 @@ export function TenantsList() {
         .from('whitelabel_tenants')
         .select('*')
         .order('created_at', { ascending: false }),
-      if (error) throw error;
-      setTenants(data as WhitelabelTenant[])
+      if (error) throw error, setTenants(data as WhitelabelTenant[])
     } catch (error: any) {
       logErrorToProduction('Error loading tenants:', { data: error }),
       toast({
@@ -205,5 +206,5 @@ export function TenantsList() {
         </div>
       )}
     </div>
-  )
+  );
 }

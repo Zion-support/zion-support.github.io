@@ -5,28 +5,20 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
     return fallback
   }
-  return envVar
+  return envVar;
 }
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
   "https: //twitter.com/ZionTechGroup"
 ),
-const LINKEDIN_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL;
-  "https: //linkedin.com/company/ziontechgroup"
+const LINKEDIN_URL = resolveUrl(process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL, "https: //linkedin.com/company/ziontechgroup"
 ),
-const FACEBOOK_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL;
-  "https: //facebook.com/ZionTechGroup"
+const FACEBOOK_URL = resolveUrl(process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL, "https: //facebook.com/ZionTechGroup"
 ),
-const INSTAGRAM_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL;
-  "https: //instagram.com/ZionTechGroup"
+const INSTAGRAM_URL = resolveUrl(process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL, "https: //instagram.com/ZionTechGroup"
 ),
-const GITHUB_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL;
-  "https: //github.com/ZionTechGroup"
+const GITHUB_URL = resolveUrl(process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL, "https: //github.com/ZionTechGroup"
 ),
 export function Footer() {
   return (
@@ -207,5 +199,5 @@ export function Footer() {
         <FeedbackWidget />
       </div>
     </footer>
-  )
+  );
 }

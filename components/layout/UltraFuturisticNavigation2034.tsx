@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -118,7 +119,7 @@ export default function UltraFuturisticNavigation2034() {
       setIsScrolled(window.scrollY > 50)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const toggleDropdown = (category: string) => {
     setActiveDropdown(activeDropdown === category ? null : category)
@@ -342,5 +343,5 @@ export default function UltraFuturisticNavigation2034() {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  )
+  );
 }

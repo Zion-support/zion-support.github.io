@@ -86,5 +86,5 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         </Button>
       )}
     </div>
-  )
+  );
 }

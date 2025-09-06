@@ -21,13 +21,12 @@ export default function WishlistPage() {
     }
   }, [user, isAuthLoading, router]);
   if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
-    return null, // Or a loading spinner
+    return null, // Or a loading spinner;
   }
 
   const { items, dispatch } = useCart();
   const addToCart = (item: { id: string, title?: string, price?: number }) => {
-    if (items.some(i => i.id === item.id)) return;
-    dispatch({
+    if (items.some(i => i.id === item.id)) return, dispatch({
       type: 'ADD_ITEM',
       payload: {
         id: item.id,
@@ -39,12 +38,10 @@ export default function WishlistPage() {
     toast.success(`1× ${item.title || 'Item'} added`)
   };
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {
-    acc[p.id] = p;
-    return acc
+    acc[p.id] = p, return acc;
   }, {});
   const talentMap = TALENT_PROFILES.reduce<Record<string, any>>((acc, t) => {
-    acc[t.id] = t;
-    return acc
+    acc[t.id] = t, return acc;
   }, {});
   const sortedFavorites = [...favorites].sort(
     (a, b) =>
@@ -84,7 +81,7 @@ export default function WishlistPage() {
                     </p>
                   )}
                 </div>
-              ) : null
+              ) : null;
             }
             const item = productMap[fav.item_id];
             return item ? (
@@ -116,5 +113,5 @@ export default function WishlistPage() {
         </div>
       )}
     </div>
-  )
+  );
 }

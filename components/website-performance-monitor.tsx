@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -144,8 +146,7 @@ export default function WebsitePerformanceMonitorPage() {
             Website Performance Monitor
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking;
-            and AI-powered optimization recommendations. Never let performance issues impact your users again.
+            Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations. Never let performance issues impact your users again.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
@@ -418,5 +419,5 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

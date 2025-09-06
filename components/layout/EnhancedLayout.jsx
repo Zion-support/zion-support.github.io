@@ -10,7 +10,7 @@ const EnhancedLayout = ({ children }) => {
       </main>
       <EnhancedFooter />
     </div>
-  )
+  );
 },
 
 export default EnhancedLayout;

@@ -6,11 +6,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface DiscussionPost {
   id: number,
   author: string,
-  avatar?: string;
-  time: string,
+  avatar?: string, time: string,
   title: string,
   body: string
 }
@@ -34,8 +34,7 @@ export const CommunityDiscussion: React.FC = () => {
   const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
   const handleAddPost = () => {
-    if (!newTitle.trim() || !newBody.trim()) return;
-    setPosts([
+    if (!newTitle.trim() || !newBody.trim()) return, setPosts([
       {
         id: Date.now(),
         author: "You",
@@ -137,5 +136,5 @@ export const CommunityDiscussion: React.FC = () => {
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.
       </div>
     </div>
-  )
+  );
 };

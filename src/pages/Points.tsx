@@ -9,6 +9,9 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
@@ -281,5 +284,5 @@ export default function PointsPage() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

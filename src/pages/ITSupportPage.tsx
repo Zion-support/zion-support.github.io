@@ -38,5 +38,5 @@ export default function ITSupportPage() {
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
-  )
+  );
 }

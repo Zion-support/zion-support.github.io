@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+import { Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -62,19 +63,15 @@ const categories = [
 ];
 
 const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-  return 'Other';
+  if (service.category) return service.category, return 'Other';
 };
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+  if (service.pricing?.starter) return service.pricing.starter, if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   return 'Contact for pricing';
 };
 const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return [];
+  if (service.features) return service.features, if (service.keyFeatures) return service.keyFeatures, return [];
 };
 export default function AdvancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -106,7 +103,7 @@ export default function AdvancedServicesShowcase() {
       )
     }
 
-    setFilteredServices(filtered)
+    setFilteredServices(filtered);
   }, [selectedCategory, searchTerm]);
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
@@ -574,5 +571,5 @@ export default function AdvancedServicesShowcase() {
         </div>
       </div>
     </div>
-  )
+  );
 }

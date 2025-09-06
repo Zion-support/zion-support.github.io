@@ -55,6 +55,6 @@ export default function NeoFuturisticFooter() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 

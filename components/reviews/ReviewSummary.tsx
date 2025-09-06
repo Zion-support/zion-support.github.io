@@ -1,6 +1,7 @@
 import React from 'react';
 import type { ReviewsSummary } from '../../types/reviews';
 import StarRating from './StarRating';
+import { Star } from 'lucide-react';
 type Props = {
   summary: ReviewsSummary
 },
@@ -18,6 +19,6 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
         </div>
       </div>
     </div>
-  )
+  );
 },
 export default ReviewSummary;

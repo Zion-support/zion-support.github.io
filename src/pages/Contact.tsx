@@ -13,6 +13,8 @@ import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -20,15 +22,12 @@ export default function Contact() {
     message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    message?: string
+    name?: string, email?: string, message?: string
   }>({});
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value } = e.target, setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   };
   const handleSubmit = (e: React.FormEvent) => {
@@ -131,7 +130,7 @@ export default function Contact() {
         throw new Error('Failed to get response from AI assistant')
       }
 
-      return Promise.resolve()
+      return Promise.resolve();
     } catch (error) {
       logErrorToProduction('Error in AI chat', error);
       toast({
@@ -139,7 +138,7 @@ export default function Contact() {
         description: 'There was an error communicating with our AI assistant. Please try again.',
         variant: 'destructive'}),
       return Promise.resolve()
-    }
+    };
   };
   const offices = [
     {
@@ -182,7 +181,9 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-white mb-2">
+                    <label htmlFor="name" className="block text-white mb-2" htmlFor="input-
+                      Your Name
+                    ">
                       Your Name
                     </label>
                     <Input
@@ -199,7 +200,9 @@ export default function Contact() {
                     )}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-white mb-2">
+                    <label htmlFor="email" className="block text-white mb-2" htmlFor="input-
+                      Email Address
+                    ">
                       Email Address
                     </label>
                     <Input
@@ -221,7 +224,9 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white mb-2">
+                  <label htmlFor="message" className="block text-white mb-2" htmlFor="input-
+                    Message
+                  ">
                     Message
                   </label>
                   <Textarea
@@ -419,5 +424,5 @@ export default function Contact() {
         />
       )}
     </>
-  )
+  );
 }

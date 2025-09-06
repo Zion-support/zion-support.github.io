@@ -13,10 +13,8 @@ interface ChunkErrorStats {
 
 class ChunkErrorHandler {
   private errorStats: Map<string, ChunkErrorStats> = new Map();
-  private readonly MAX_RETRIES = 3;
-  private readonly RETRY_DELAY = 1000, // 1 second
-  private readonly CACHE_CLEAR_THRESHOLD = 2;
-  constructor() {
+  private readonly MAX_RETRIES = 3, private readonly RETRY_DELAY = 1000, // 1 second
+  private readonly CACHE_CLEAR_THRESHOLD = 2, constructor() {
     this.initializeGlobalHandlers()
   }
 
@@ -33,8 +31,7 @@ class ChunkErrorHandler {
   }
 
   private handleScriptError(event: ErrorEvent): void {
-    const { error, filename } = event;
-    if (this.isChunkError(error, filename)) {
+    const { error, filename } = event, if (this.isChunkError(error, filename)) {
       event.preventDefault(), // Prevent the error from bubbling up
       this.handleChunkError(error, { filename, source: 'script' })
     }
@@ -49,8 +46,7 @@ class ChunkErrorHandler {
   }
 
   private isChunkError(error: any, filename?: string): boolean {
-    if (!error) return false;
-    const errorMessage = error.message || String(error);
+    if (!error) return false, const errorMessage = error.message || String(error);
     const errorName = error.name || '';
     const chunkErrorPatterns = [
       'ChunkLoadErrorLoading chunkFailed to fetch dynamically imported moduleFailed to importchunk-vendors-'
@@ -59,7 +55,7 @@ class ChunkErrorHandler {
       errorMessage.includes(pattern) || 
       errorName.includes(pattern) ||
       (filename && filename.includes(pattern))
-    )
+    );
   }
 
   private async handleChunkError(error: Error, context: { filename?: string, source: string }): Promise<void> {
@@ -87,23 +83,19 @@ class ChunkErrorHandler {
   private async attemptRecovery(attemptNumber: number, context: { filename?: string, source: string }): Promise<void> {
     logErrorToProduction(`Attempting ChunkLoadError recovery #${attemptNumber}`, undefined, {
       context: 'chunkErrorRecovery',
-      attemptNumber;
-      recoveryMethod: this.getRecoveryMethod(attemptNumber)
+      attemptNumber, recoveryMethod: this.getRecoveryMethod(attemptNumber)
     }),
     switch (attemptNumber) {
       case 1: // First attempt: Simple retry after short delay
         await this.delay(this.RETRY_DELAY),
         this.reloadPage();
-        break;
-      case 2: // Second attempt: Clear caches and retry
+        break, case 2: // Second attempt: Clear caches and retry
         await this.clearCaches(),
         await this.delay(this.RETRY_DELAY * 2);
         this.reloadPage();
-        break;
-      case 3: // Third attempt: Hard refresh with cache bypass
+        break, case 3: // Third attempt: Hard refresh with cache bypass
         this.hardRefresh(),
-        break;
-      default: this.showFatalErrorMessage()
+        break, default: this.showFatalErrorMessage()
     }
   }
 
@@ -123,7 +115,7 @@ class ChunkErrorHandler {
         const cacheNames = await caches.keys(),
         await Promise.all(
           cacheNames.map(cacheName => caches.delete(cacheName))
-        )
+        );
       }
 
       // Clear localStorage items that might be stale
@@ -233,14 +225,14 @@ class ChunkErrorHandler {
   public triggerRecovery(): void {
     this.clearCaches().then(() => {
       this.reloadPage()
-    })
+    });
   }
 
   // Public method to check if we're in a chunk error state
   public isInErrorState(): boolean {
     const sessionKey = this.getSessionKey(),
     const stats = this.errorStats.get(sessionKey);
-    return stats ? stats.errorCount > 0 : false
+    return stats ? stats.errorCount > 0 : false;
   }
 
   // Public method to reset error state

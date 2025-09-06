@@ -5,6 +5,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
+import { Star } from 'lucide-react';
 export default function InnovativeServicesShowcase() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -403,5 +404,5 @@ export default function InnovativeServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }

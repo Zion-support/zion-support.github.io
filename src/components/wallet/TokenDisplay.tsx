@@ -5,6 +5,8 @@ import { useWallet } from "@/hooks/useWallet";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Skeleton from "@/components/ui/skeleton";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
   return (
@@ -37,5 +39,5 @@ export function TokenDisplay() {
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

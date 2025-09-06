@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Star } from 'lucide-react';
 interface Service {
   id: string,
   name: string,
@@ -13,8 +14,7 @@ interface Service {
   roi: string,
   marketSize: string,
   growthRate: string,
-  popular?: boolean;
-  icon: React.ComponentType<any>,
+  popular?: boolean, icon: React.ComponentType<any>,
   color: string
 }
 
@@ -133,10 +133,9 @@ const EnhancedServicesShowcase: React.FC = () => {
   ],
   const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))],
   const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory, const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
   });
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
@@ -147,7 +146,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       'Emerging Tech': Brain;
       'Quantum AI': Atom
     };
-    return iconMap[category] || Brain
+    return iconMap[category] || Brain;
   };
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">
@@ -335,6 +334,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
       </div>
     </section>
-  )
+  );
 },
 export default EnhancedServicesShowcase;

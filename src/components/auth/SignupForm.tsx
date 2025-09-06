@@ -45,13 +45,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
   const [fieldStates, setFieldStates] = useState<Record<string, FieldValidationState>>({});
   const { signUp } = useAuth();
   const {
-    register;
-    handleSubmit;
-    formState: { errors, isValid, touchedFields };
-    setError;
-    reset;
-    watch;
-    trigger} = useForm<SignupFormData>({
+    register, handleSubmit, formState: { errors, isValid, touchedFields };
+    setError, reset, watch, trigger} = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema),
     mode: 'onChange', // Enable real-time validation
   });
@@ -60,8 +55,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
   useEffect(() => {
     const timeouts: Record<string, NodeJS.Timeout> = {};
     Object.keys(watchedFields).forEach((fieldName) => {
-      const typedFieldName = fieldName as keyof SignupFormData;
-      if (touchedFields[typedFieldName]) {
+      const typedFieldName = fieldName as keyof SignupFormData, if (touchedFields[typedFieldName]) {
         setFieldStates(prev => ({
           ...prev,
           [fieldName]: { 
@@ -86,13 +80,12 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     });
     return () => {
       Object.values(timeouts).forEach(clearTimeout)
-    }
+    };
   }, [watchedFields, touchedFields, trigger, errors]);
   const getFieldValidationIcon = (fieldName: string) => {
     const state = fieldStates[fieldName],
     const isTouched = touchedFields[fieldName as keyof SignupFormData];
-    if (!isTouched) return null;
-    if (state?.isValidating) {
+    if (!isTouched) return null, if (state?.isValidating) {
       return <Loader2 className="h-4 w-4 animate-spin text-blue-500" />
     }
     
@@ -104,7 +97,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       return <AlertCircle className="h-4 w-4 text-red-500" />
     }
     
-    return null
+    return null;
   };
   const getFieldClasses = (fieldName: string) => {
     const state = fieldStates[fieldName],
@@ -122,26 +115,23 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       return 'border-red-500 focus: border-red-500 focus:ring-red-500/20'
     }
     
-    return ''
+    return '';
   },
   const getPasswordStrength = (password: string) => {
     if (!password) return { strength: 0, label: '' },
-    let strength = 0;
-    const checks = [
+    let strength = 0, const checks = [
       password.length >= 8;
       /[A-Z]/.test(password);
       /[a-z]/.test(password);
       /[0-9]/.test(password);
       /[^A-Za-z0-9]/.test(password)];
-    strength = checks.filter(Boolean).length;
-    const labels = ['Very WeakWeakFairGoodStrong'];
+    strength = checks.filter(Boolean).length, const labels = ['Very WeakWeakFairGoodStrong'];
     const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500bg-green-500'];
     return {
-      strength;
-      label: labels[strength - 1] || '',
+      strength, label: labels[strength - 1] || '',
       color: colors[strength - 1] || 'bg-gray-300',
       percentage: (strength / 5) * 100
-    }
+    };
   },
   const passwordStrength = getPasswordStrength(watchedFields.password || '');
   const onSubmit = async (data: SignupFormData) => {
@@ -299,8 +289,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           <div className="space-y-2">
             <div className="flex justify-between text-xs">
               <span>Password Strength</span>
-              <span className={cn('font-medium';
-                passwordStrength.strength >= 4 ? 'text-green-600' :
+              <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>

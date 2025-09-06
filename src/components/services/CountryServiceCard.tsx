@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { Badge } from "@/components/ui/badge";
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
 import { CountryPricing } from "@/data/onsiteServicePricing";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface CountryServiceCardProps {
   country: CountryPricing,
   onSelect: (country: CountryPricing) => void,
@@ -34,7 +36,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       // Default if no flag is found
       "default": "🌐"
     };
-    return emojiMap[countryName] || "🌐"
+    return emojiMap[countryName] || "🌐";
   };
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
@@ -47,7 +49,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       return "6 hours"
     } else {
       return "8-24 hours"
-    }
+    };
   };
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
@@ -117,5 +119,5 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

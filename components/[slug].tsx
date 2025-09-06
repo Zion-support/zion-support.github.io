@@ -25,39 +25,15 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
+import { Star } from 'lucide-react';
 export default function DynamicServicePage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
   const service = useMemo(() => {
-    if (!slug) return undefined;
-    const all: any[] = ([] as any[])
+    if (!slug) return undefined, const all: any[] = ([] as any[])
       .concat(
         enhancedRealMicroSaasServices as any,
-        extraServices as any;
-        additionalEnhancedServices as any;
-        innovativeAIServices as any;
-        quantumSpaceServices as any;
-        enterpriseITServices as any;
-        newRealServices as any;
-        marketReadyServices as any;
-        realMarketServices as any;
-        new2025Services as any;
-        newRealInnovations as any;
-        emergingTechnologyServices as any;
-        comprehensiveITSolutions as any;
-        marketValidatedServices as any;
-        curatedMarketServices as any;
-        cuttingEdgeITServices as any;
-        nextGenerationAIServices as any;
-        nextGenAIServices as any;
-        industryRealServices as any;
-        professionalServices as any;
-        realEnterpriseServices2025 as any;
-        augmentedServicesBatch3 as any;
-        real2025Q3Additions as any;
-        realQ4Services2025 as any;
-        real2026Q1Additions as any;
-        ultimateFuturisticServices2025 as any
+        extraServices as any, additionalEnhancedServices as any, innovativeAIServices as any, quantumSpaceServices as any, enterpriseITServices as any, newRealServices as any, marketReadyServices as any, realMarketServices as any, new2025Services as any, newRealInnovations as any, emergingTechnologyServices as any, comprehensiveITSolutions as any, marketValidatedServices as any, curatedMarketServices as any, cuttingEdgeITServices as any, nextGenerationAIServices as any, nextGenAIServices as any, industryRealServices as any, professionalServices as any, realEnterpriseServices2025 as any, augmentedServicesBatch3 as any, real2025Q3Additions as any, realQ4Services2025 as any, real2026Q1Additions as any, ultimateFuturisticServices2025 as any
       );
     const byLink = all.find(s => {
       try {
@@ -65,12 +41,10 @@ export default function DynamicServicePage() {
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
         return false
-      }
+      };
     });
-    if (byLink) return byLink;
-    const byId = enhancedRealMicroSaasServices.find(s => s.id === slug);
-    if (byId) return byId;
-    return undefined
+    if (byLink) return byLink, const byId = enhancedRealMicroSaasServices.find(s => s.id === slug);
+    if (byId) return byId, return undefined;
   }, [slug]);
   if (!service) {
     return (
@@ -132,15 +106,14 @@ export default function DynamicServicePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 
 // Static export support: generate root-level pages for service slugs
 type Svc = typeof enhancedRealMicroSaasServices[number],
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices
-    .concat(
-      extraServices as Svc[];
+    .concat(extraServices as Svc[];
       additionalEnhancedServices as Svc[];
       innovativeAIServices as Svc[];
       quantumSpaceServices as Svc[];
@@ -151,19 +124,16 @@ function collectAllServices(): Svc[] {
       emergingTechnologyServices as Svc[];
       comprehensiveITSolutions as Svc[];
       marketValidatedServices as Svc[];
-      newRealInnovations as Svc[];
-      realMarketServices as Svc[];
-      realVerifiedServices as unknown as Svc[]
+      newRealInnovations as Svc[], realMarketServices as Svc[], realVerifiedServices as unknown as Svc[]
     )
 }
 
 function normalizeSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
 function extractRootSlugFromLink(link?: string): string | null {
-  if (!link) return null;
-  try {
+  if (!link) return null, try {
     const url = new URL(link);
     const path = url.pathname.replace(/^\/+|\/+$/g, '');
     // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
@@ -171,7 +141,7 @@ function extractRootSlugFromLink(link?: string): string | null {
     return null
   } catch {
     return null
-  }
+  };
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -195,8 +165,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   for (const s of services) {
     const fromLink = extractRootSlugFromLink((s as any).link);
     const slugCandidate = fromLink || (s.id ? normalizeSlug(s.id) : (s.name ? normalizeSlug(s.name) : ''));
-    if (!slugCandidate) continue;
-    if (reservedTopLevelSlugs.has(slugCandidate)) continue, // skip conflicts
+    if (!slugCandidate) continue, if (reservedTopLevelSlugs.has(slugCandidate)) continue, // skip conflicts
     candidateSlugs.add(slugCandidate)
   }
 
@@ -209,5 +178,5 @@ export const getStaticPaths: GetStaticPaths = async () => {
 },
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
-  return { props: {} }
+  return { props: {} };
 },

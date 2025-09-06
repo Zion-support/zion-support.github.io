@@ -3,29 +3,17 @@ import { useRouter } from 'next/router';
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ChevronLeft } from 'lucide-react';
 interface MobileHeaderProps {
   title: string,
-  showBack?: boolean;
-  showNotifications?: boolean;
-  showSettings?: boolean;
-  className?: string;
-  onNotificationsClick?: () => void;
-  onSettingsClick?: () => void
+  showBack?: boolean, showNotifications?: boolean, showSettings?: boolean, className?: string, onNotificationsClick?: () => void, onSettingsClick?: () => void
 }
 
 export function MobileHeader({
-  title;
-  showBack = false;
-  showNotifications = false;
-  showSettings = false;
-  className;
-  onNotificationsClick;
-  onSettingsClick}: MobileHeaderProps) {
+  title, showBack = false, showNotifications = false, showSettings = false, className, onNotificationsClick, onSettingsClick}: MobileHeaderProps) {
   const router = useRouter();
-  return (
-    <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
-      className
+  return(<header className={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border", className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center">

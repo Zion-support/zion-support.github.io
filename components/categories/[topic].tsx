@@ -39,11 +39,11 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
       </div>
     </div>
-  )
+  );
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String(ctx.params?.topic || ''),
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
-  return { props: { topic, posts } }
+  return { props: { topic, posts } };
 };
 export default TopicPage;

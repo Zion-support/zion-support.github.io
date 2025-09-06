@@ -125,15 +125,11 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
 
 interface PageErrorBoundaryProps {
   children: React.ReactNode,
-  pageName?: string;
-  fallback?: React.ComponentType<FallbackProps>
+  pageName?: string, fallback?: React.ComponentType<FallbackProps>
 }
 
 export default function PageErrorBoundary({ 
-  children;
-  pageName;
-  fallback 
-}: PageErrorBoundaryProps) {
+  children, pageName, fallback , }: PageErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error);
     logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {
@@ -157,5 +153,5 @@ export default function PageErrorBoundary({
     >
       {children}
     </ErrorBoundary>
-  )
+  );
 } 

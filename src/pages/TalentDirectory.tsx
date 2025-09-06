@@ -15,8 +15,7 @@ import { TalentProfile } from '@/types/talent';
 export default function TalentDirectory() {
   const router = useRouterReady(), // Use our custom hook
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
-  const [initialized, setInitialized] = useState(false);
+  const itemsPerPage = 10, const [initialized, setInitialized] = useState(false);
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
     setInitialized(false);
@@ -24,34 +23,7 @@ export default function TalentDirectory() {
   });
   // Use our custom hook to manage state
   const {
-    filteredTalents;
-    total;
-    isLoading;
-    searchTerm;
-    setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
-    setPriceRange;
-    experienceRange;
-    setExperienceRange;
-    sortOption;
-    setSortOption;
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selectedTalent;
-    setSelectedTalent;
-    expandedSections;
-    error;
-    isAuthenticated;
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters;
-    toggleSection} = useTalentDirectory(currentPage, itemsPerPage);
+    filteredTalents, total, isLoading, searchTerm, setSearchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, setPriceRange, experienceRange, setExperienceRange, sortOption, setSortOption, isMobileFilterOpen, setIsMobileFilterOpen, isHireModalOpen, setIsHireModalOpen, selectedTalent, setSelectedTalent, expandedSections, error, isAuthenticated, toggleSkill, toggleAvailability, toggleRegion, clearFilters, toggleSection} = useTalentDirectory(currentPage, itemsPerPage);
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
   useEffect(() => {
@@ -61,18 +33,8 @@ export default function TalentDirectory() {
   const paginatedTalents = filteredTalents;
   // Load filters from query parameters on first load
   useEffect(() => {
-    if (!router.isReady || initialized) return;
-    const {
-      search;
-      skills;
-      availability;
-      regions;
-      priceMin;
-      priceMax;
-      expMin;
-      expMax;
-      sort;
-      page} = router.query as Record<string, string>;
+    if (!router.isReady || initialized) return, const {
+      search, skills, availability, regions, priceMin, priceMax, expMin, expMax, sort, page} = router.query as Record<string, string>;
     if (page) setCurrentPage(parseInt(page, 10) || 1);
     if (search) setSearchTerm(search);
     if (skills) skills.split().forEach((s) => toggleSkill(s));
@@ -90,10 +52,8 @@ export default function TalentDirectory() {
 
   // Persist filters to query parameters
   useEffect(() => {
-    if (!initialized || !router.isReady) return;
-    const query: Record<string, string> = {};
-    if (searchTerm) query.search = searchTerm;
-    if (selectedSkills.length) query.skills = selectedSkills.join();
+    if (!initialized || !router.isReady) return, const query: Record<string, string> = {};
+    if (searchTerm) query.search = searchTerm, if (selectedSkills.length) query.skills = selectedSkills.join();
     if (selectedAvailability.length)
       query.availability = selectedAvailability.join();
     if (selectedRegions.length) query.regions = selectedRegions.join();
@@ -105,21 +65,11 @@ export default function TalentDirectory() {
       query.expMin = String(experienceRange[0]);
       query.expMax = String(experienceRange[1])
     }
-    if (sortOption !== 'relevance') query.sort = sortOption;
-    if (currentPage > 1) query.page = String(currentPage);
+    if (sortOption !== 'relevance') query.sort = sortOption, if (currentPage > 1) query.page = String(currentPage);
     router.replace({ pathname: router.pathname, query }, undefined, {
       shallow: true})
   }, [
-    router.isReady;
-    searchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
-    experienceRange;
-    sortOption;
-    currentPage;
-    initialized]), // Fixed dependencies
+    router.isReady, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption, currentPage, initialized]), // Fixed dependencies
 
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent),
@@ -183,7 +133,7 @@ export default function TalentDirectory() {
       <div key={pageKey} className="container mx-auto px-4 py-8">
         <ErrorBanner msg="Unable to load talent profiles." />
       </div>
-    )
+    );
   }
 
   return (
@@ -195,8 +145,7 @@ export default function TalentDirectory() {
               AI & Tech Talent Directory
             </h1>
             <p className="text-zion-slate-light">
-              Connect with expert AI developers, data scientists, ML engineers;
-              and tech professionals for your projects.
+              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
           </div>
           {isAdmin && (
@@ -259,16 +208,7 @@ export default function TalentDirectory() {
                 isAuthenticated={isAuthenticated}
                 activeFiltersProps={{
                   selectedSkills,
-                  toggleSkill;
-                  selectedAvailability;
-                  toggleAvailability;
-                  selectedRegions;
-                  toggleRegion;
-                  priceRange;
-                  setPriceRange;
-                  experienceRange;
-                  setExperienceRange;
-                  clearFilters}}
+                  toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange, setExperienceRange, clearFilters}}
               />
 
               {totalPages > 1 && (

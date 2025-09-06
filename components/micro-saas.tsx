@@ -3,6 +3,8 @@ import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star, Calendar } from 'lucide-react';
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const microSaasServices = [
@@ -1381,16 +1383,7 @@ export default function MicroSaasPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400"> Every Business Need</span>
             </h1>
             <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12">
-              65+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring;
-              SEO automation, chatbots, business intelligence, email marketing, social media management;
-              customer feedback, billing, project management, API infrastructure, e-commerce analytics, legal document generation;
-              HR management, AI customer support, data backup, AI code assistance, cybersecurity monitoring, supply chain analytics;
-              market research, financial planning, CRM systems, learning management, IoT management, analytics dashboards;
-              meeting transcription, invoice automation, churn prediction, lead scoring, real-time analytics, content optimization;
-              predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization;
-              email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics;
-              product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, fraud detection;
-              inventory forecasting, and more. Focused, affordable solutions that deliver specific value 
+              65+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring, SEO automation, chatbots, business intelligence, email marketing, social media management, customer feedback, billing, project management, API infrastructure, e-commerce analytics, legal document generation, HR management, AI customer support, data backup, AI code assistance, cybersecurity monitoring, supply chain analytics, market research, financial planning, CRM systems, learning management, IoT management, analytics dashboards, meeting transcription, invoice automation, churn prediction, lead scoring, real-time analytics, content optimization, predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization, email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics, product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, fraud detection, inventory forecasting, and more. Focused, affordable solutions that deliver specific value 
               without the complexity of enterprise platforms. Start with a free trial and scale as you grow.
             </p>
             
@@ -1773,5 +1766,5 @@ export default function MicroSaasPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

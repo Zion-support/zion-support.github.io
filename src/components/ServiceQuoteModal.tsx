@@ -14,6 +14,9 @@ import { cn } from "@/lib/utils";
 import { ProductListing } from "@/types/listings";
 import { toast } from '@/hooks/use-toast';
 import { supabase } from "@/integrations/supabase/client";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Star, Calendar } from 'lucide-react';
 interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -42,8 +45,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))
+    const { name, value } = e.target, setFormData(prev => ({ ...prev, [name]: value }))
   };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(),
@@ -204,9 +206,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     <PopoverTrigger asChild>
                       <Button
                         variant={"outline"}
-                        className={cn(
-                          "justify-start text-left font-normal w-full";
-                          "bg-zion-blue-dark border-zion-blue-light text-white"
+                        className={cn("justify-start text-left font-normal w-full", "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
                         <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />

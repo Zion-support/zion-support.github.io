@@ -1,15 +1,11 @@
 import React from 'react';
 export type PdfExportButtonProps = {
   targetRef: React.RefObject<HTMLDivElement>,
-  fileName?: string;
-  theme?: 'light' | 'dark'
+  fileName?: string, theme?: 'light' | 'dark'
 };
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {
   const onClick = async () => {
-    if (!targetRef.current) return;
-    const element = targetRef.current;
-    const html2pdf = (await import('html2pdf.js')).default;
-    const opt = {
+    if (!targetRef.current) return, const element = targetRef.current, const html2pdf = (await import('html2pdf.js')).default, const opt = {
       margin: [10, 10, 10, 10];
       filename: fileName,
       image: { type: 'jpeg', quality: 0.98 },
@@ -26,5 +22,5 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     >
       Download as PDF
     </button>
-  )
+  );
 }

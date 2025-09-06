@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Education } from '@/types/resume';
 import { EducationItemProps } from './types';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
   return (
     <Card className="bg-muted/40">
@@ -53,5 +54,5 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

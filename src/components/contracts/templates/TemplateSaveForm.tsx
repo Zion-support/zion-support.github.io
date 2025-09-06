@@ -18,15 +18,11 @@ type FormValues = z.infer<typeof formSchema>;
 interface TemplateSaveFormProps {
   onCancel: () => void,
   onComplete: () => void,
-  editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues
+  editTemplate?: ContractTemplate | null, currentValues?: ContractFormValues
 }
 
 export function TemplateSaveForm({
-  onCancel;
-  onComplete;
-  editTemplate;
-  currentValues
+  onCancel, onComplete, editTemplate, currentValues
 }: TemplateSaveFormProps) {
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
@@ -112,5 +108,5 @@ export function TemplateSaveForm({
         </div>
       </form>
     </Form>
-  )
+  );
 }

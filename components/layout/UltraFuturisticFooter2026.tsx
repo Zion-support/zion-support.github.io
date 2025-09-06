@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Zap, Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -105,8 +106,7 @@ export default function UltraFuturisticFooter2026() {
                 </h3>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Leading provider of revolutionary AI automation, quantum cybersecurity, fintech blockchain;
-                and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
+                Leading provider of revolutionary AI automation, quantum cybersecurity, fintech blockchain, and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
               </p>
               
               {/* Contact Info */}
@@ -297,5 +297,5 @@ export default function UltraFuturisticFooter2026() {
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }

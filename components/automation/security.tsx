@@ -2,11 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
-  raw?: string
+  generatedAt?: string, metadata?: any, vulnerabilities?: any, error?: string, raw?: string
 }
 
 type Props = { report: AuditReport },
@@ -35,5 +31,5 @@ export default function SecurityAudit({ report }: Props) {
 {JSON.stringify(report, null, 2)}
       </pre>
     </div>
-  )
+  );
 }

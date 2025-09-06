@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -73,8 +75,7 @@ export default function CodeQualityCheckerPage() {
     }
   ],
   const handleAnalyzeCode = async () => {
-    if (!codeInput.trim()) return;
-    setIsAnalyzing(true);
+    if (!codeInput.trim()) return, setIsAnalyzing(true);
     // Simulate code analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -123,8 +124,7 @@ export default function CodeQualityCheckerPage() {
             Code Quality Checker
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages;
-            security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
+            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
           </p>
           
           {/* Code Input Form */}
@@ -441,5 +441,5 @@ export default function CodeQualityCheckerPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

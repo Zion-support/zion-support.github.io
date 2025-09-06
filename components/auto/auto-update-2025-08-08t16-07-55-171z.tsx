@@ -5,5 +5,5 @@ export default function AutoUpdatePage1() {
       <h1 className="text-2xl font-semibold">Auto Update</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Generated content.</p>
     </div>
-  )
+  );
 }

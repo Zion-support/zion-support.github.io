@@ -34,13 +34,11 @@ export function AppHeader() {
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
   };
-  return (
-    <>
+  return(<>
       <header
         style={{ "--nav-height": "64px" } as React.CSSProperties}
         className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground";
-          { "bg-red-500": mobileMenuOpen }
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground", { "bg-red-500": mobileMenuOpen }
         )}
       >
         <div className="container flex h-16 items-center px-4 sm: px-6">

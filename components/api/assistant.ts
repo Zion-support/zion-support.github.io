@@ -39,12 +39,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o',
       temperature: 0.3,
-      messages: preparedMessages
-    }),
+      messages: preparedMessages, }),
     const message = completion.choices?.[0]?.message || { role: 'assistant', content: 'Sorry, I could not respond.' };
-    return res.status(200).json({ message })
+    return res.status(200).json({ message });
   } catch (error: any) {
     console.error('Assistant API error:', error?.message || error);
     return res.status(500).json({ error: 'Assistant request failed' })
-  }
+  };
 }

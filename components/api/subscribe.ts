@@ -30,5 +30,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true, data })
   } catch (e: any) {
     return res.status(500).send(e?.message || 'Unexpected error')
-  }
+  };
 }

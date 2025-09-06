@@ -39,8 +39,7 @@ export function DeveloperPortal() {
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
-            const Icon = tab.icon;
-            return (
+            const Icon = tab.icon, return (
               <button
                 key={tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
@@ -74,5 +73,5 @@ export default function ProtectedDeveloperPortal() {
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
-  )
+  );
 }

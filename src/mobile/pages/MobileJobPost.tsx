@@ -6,6 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronLeft, ChevronRight, Zap, Star } from 'lucide-react';
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
   const goToNextStep = () => {
@@ -140,7 +144,7 @@ function DetailsStep() {
         />
       </div>
     </div>
-  )
+  );
 }
 
 function RequirementsStep() {
@@ -361,5 +365,5 @@ function PreviewStep() {
       
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
-  )
+  );
 }

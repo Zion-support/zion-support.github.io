@@ -12,6 +12,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary';
 import { useCurrency } from '@/hooks/useCurrency';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
@@ -220,7 +223,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
         </div>
       </CardContent>
     </Card>
-  )
+  );
 },
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
@@ -251,7 +254,7 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, r
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
 
 // Main component
@@ -262,18 +265,15 @@ function EquipmentPageContent() {
   const [showRecommended, setShowRecommended] = useState(false);
   // Generate a consistent seed based on current filters for deterministic data
   const dataSeed = useMemo(() => {
-    return `equipment-${filterCategory}-${showRecommended}`
+    return `equipment-${filterCategory}-${showRecommended}`;
   }, [filterCategory, showRecommended]);
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
     // Simulate realistic API delay
     await new Promise(resolve => setTimeout(resolve, 300));
     try {
       // Generate consistent virtual dataset using the seed
-      const VIRTUAL_DATASET_SIZE = 150;
-      const baseVirtualEquipment = generateDatacenterEquipment(
-        VIRTUAL_DATASET_SIZE;
-        INITIAL_EQUIPMENT.length;
-        dataSeed
+      const VIRTUAL_DATASET_SIZE = 150, const baseVirtualEquipment = generateDatacenterEquipment(
+        VIRTUAL_DATASET_SIZE, INITIAL_EQUIPMENT.length, dataSeed
       );
       let fullVirtualDataset: ProductListing[] = [
         ...INITIAL_EQUIPMENT,
@@ -288,8 +288,7 @@ function EquipmentPageContent() {
       }
       fullVirtualDataset = Array.from(dedupMap.values());
       // Apply category filtering
-      let processedDataset = fullVirtualDataset;
-      if (filterCategory) {
+      let processedDataset = fullVirtualDataset, if (filterCategory) {
         processedDataset = processedDataset.filter(e => e.category === filterCategory)
       }
 
@@ -309,33 +308,22 @@ function EquipmentPageContent() {
             return (b.rating || 0) - (a.rating || 0);
           default: // 'newest'
             return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
-        }
+        };
       }),
       // Slice for pagination
-      const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
-      const items = processedDataset.slice(startIndex, endIndex);
+      const startIndex = (page - 1) * limit, const endIndex = startIndex + limit, const items = processedDataset.slice(startIndex, endIndex);
       return {
-        items;
-        hasMore: endIndex < processedDataset.length,
+        items, hasMore: endIndex < processedDataset.length,
         total: processedDataset.length
       }
     } catch (error) {
       logErrorToProduction('Error in fetchEquipment:', { data: error }),
       throw new Error('Failed to load equipment data. Please try again.')
-    }
+    };
   }, [sortBy, filterCategory, showRecommended, dataSeed]);
   const {
     items: equipment,
-    loading;
-    error;
-    hasMore;
-    total;
-    isFetching;
-    lastElementRef;
-    refresh;
-    scrollToTop;
-    loadMore
+    loading, error, hasMore, total, isFetching, lastElementRef, refresh, scrollToTop, loadMore
   } = useInfiniteScrollPagination(fetchEquipment, 12);
   // Refresh when filters change
   useEffect(() => {
@@ -343,21 +331,20 @@ function EquipmentPageContent() {
       refresh()
     }, 100), // Small delay to prevent rapid successive refreshes
 
-    return () => clearTimeout(timeoutId)
+    return () => clearTimeout(timeoutId);
   }, [sortBy, filterCategory, showRecommended, refresh]);
   const marketStats = useMemo(() => {
-    if (equipment.length === 0) return null;
-    return getEquipmentMarketStats(equipment)
+    if (equipment.length === 0) return null, return getEquipmentMarketStats(equipment);
   }, [equipment]);
   const categories = useMemo(() => {
     // Use all possible categories, not just from current items
-    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
+    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"];
   }, []);
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   // Loading state
   if (loading && equipment.length === 0) {
@@ -509,5 +496,5 @@ export default function EquipmentPage() {
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
-  )
+  );
 }

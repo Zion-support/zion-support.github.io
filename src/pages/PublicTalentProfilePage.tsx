@@ -10,13 +10,14 @@ import { Button } from "@/components/ui/button";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter();
-  const profileId = router.query.profileId as string;
-  const [profileData, setProfileData] = useState<any>(null);
+  const profileId = router.query.profileId as string, const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   useEffect(() => {
@@ -229,5 +230,5 @@ export default function ProfilePage() {
         </div>
       </div>
     </>
-  )
+  );
 }

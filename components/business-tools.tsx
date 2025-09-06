@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star, Calendar } from 'lucide-react';
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -277,8 +279,7 @@ export default function BusinessToolsPage() {
             Essential Business Tools & Productivity
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            Discover the most powerful business tools that successful companies use to manage projects;
-            communicate effectively, market their products, and grow their operations. Real pricing and features.
+            Discover the most powerful business tools that successful companies use to manage projects, communicate effectively, market their products, and grow their operations. Real pricing and features.
           </p>
         </div>
       </section>
@@ -451,5 +452,5 @@ export default function BusinessToolsPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

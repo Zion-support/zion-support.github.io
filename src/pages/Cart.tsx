@@ -19,6 +19,8 @@ import { useWishlist } from '@/hooks/useWishlist';
 import { toast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export default function CartPage() {
   const { t } = useTranslation();
   const items = useSelector((s: RootState) => s.cart.items),
@@ -57,8 +59,7 @@ export default function CartPage() {
         cartItems: items,
         customer_email: details?.email || user?.email,
         shipping_address: details?.address}),
-      const sessionId = data.sessionId as string | undefined;
-      if (!sessionId) throw new Error('Session ID missing in response');
+      const sessionId = data.sessionId as string | undefined, if (!sessionId) throw new Error('Session ID missing in response');
       const { error } = await stripe.redirectToCheckout({ sessionId });
       if (error) logErrorToProduction('Stripe redirect error:', { data: error.message })
     } catch (err: any) {
@@ -82,8 +83,7 @@ export default function CartPage() {
   const hasPhysicalItems = items.some(item => 
     !item.type || item.type === 'physical' // Default to physical if type not specified
   );
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
-  const total = subtotal + tax + shipping;
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0, const total = subtotal + tax + shipping;
   // Empty cart state
   if (items.length === 0) {
     return (
@@ -325,5 +325,5 @@ export default function CartPage() {
         />
       </div>
     </div>
-  )
+  );
 }

@@ -6,6 +6,7 @@ import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues
@@ -23,11 +24,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         // Convert object to CSV format
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
         const values = [
-          metadata.appTitle;
-          metadata.shortDescription;
-          metadata.longDescription;
-          metadata.version;
-          metadata.platform
+          metadata.appTitle, metadata.shortDescription, metadata.longDescription, metadata.version, metadata.platform
         ];
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
         // Add keywords as additional rows
@@ -39,9 +36,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
-      link.href = url;
-      link.download = fileName;
-      document.body.appendChild(link);
+      link.href = url, link.download = fileName, document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
@@ -91,5 +86,5 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         </div>
       </CardContent>
     </Card>
-  )
+  );
 },

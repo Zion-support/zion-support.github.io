@@ -7,6 +7,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
@@ -29,23 +32,18 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Low Match":
         return "bg-orange-100 text-orange-800";
       default: return "bg-gray-100 text-gray-800"
-    }
+    };
   },
   // Trigger the scoring process
   const handleScore = async () => {
     try {
       setIsScoring(true);
       // Call the trigger_resume_scoring function
-      const { error } = await supabase.rpc(
-        'trigger_resume_scoring';
-        { application_id: application.id }
+      const { error } = await supabase.rpc('trigger_resume_scoring', { application_id: application.id }
       ),
-      if (error) throw error;
-      toast.success("Resume scoring has been initiated");
+      if (error) throw error, toast.success("Resume scoring has been initiated");
       // Poll for results every 3 seconds for up to 30 seconds
-      let attempts = 0;
-      const maxAttempts = 10;
-      const checkScore = async () => {
+      let attempts = 0, const maxAttempts = 10, const checkScore = async () => {
         attempts++;
         const { data, error } = await supabase
           .from("job_applications")
@@ -66,7 +64,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         }
         
         if (attempts < maxAttempts) {
-          setTimeout(checkScore, 3000)
+          setTimeout(checkScore, 3000);
         } else {
           setIsScoring(false);
           toast.info("Scoring is taking longer than expected. Check back later.")
@@ -207,5 +205,5 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

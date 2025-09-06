@@ -16,8 +16,7 @@ interface UrlShortenerRequest {
 
 interface UrlShortenerResponse {
   success: boolean,
-  data?: ShortUrl;
-  error?: string
+  data?: ShortUrl, error?: string
 }
 
 // In-memory storage (in production, use a database)
@@ -49,8 +48,7 @@ export default async function handler(
   if (req.method === 'POST') {
     // Create short URL
     try {
-      const { originalUrl, customCode }: UrlShortenerRequest = req.body;
-      if (!originalUrl) {
+      const { originalUrl, customCode }: UrlShortenerRequest = req.body, if (!originalUrl) {
         return res.status(400).json({
           success: false,
           error: 'Original URL is required'
@@ -84,12 +82,10 @@ export default async function handler(
 
       const shortUrl: ShortUrl = {
         id: Date.now().toString(),
-        originalUrl;
-        shortCode;
-        shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`,
+        originalUrl, shortCode, shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`,
         createdAt: new Date().toISOString(),
         clicks: 0,
-        isActive: true
+        isActive: true;
       },
       urlStorage.set(shortCode, shortUrl);
       res.status(201).json({
@@ -125,7 +121,7 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   if (!shortUrl || !shortUrl.isActive) {
     return {
       notFound: true
-    }
+    };
   }
 
   // Increment click count
@@ -137,5 +133,5 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
       destination: shortUrl.originalUrl,
       permanent: false
     }
-  }
+  };
 }

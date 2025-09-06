@@ -17,8 +17,7 @@ export function Web3Login() {
     try {
       setIsLoading(true);
       // Check if Ethereum provider (e.g., MetaMask) is available
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {
+      const ethereum = (window as any).ethereum, if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
         return
@@ -32,14 +31,12 @@ export function Web3Login() {
       logErrorToProduction('Web3 login error:', { data: error })
     } finally {
       setIsLoading(false)
-    }
+    };
   },
-  const buttonDisabled = isLoading || !isWalletSystemAvailable;
-  const buttonTitle = !isWalletSystemAvailable
+  const buttonDisabled = isLoading || !isWalletSystemAvailable, const buttonTitle = !isWalletSystemAvailable
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
     : "";
-  let buttonContent;
-  if (!isWalletSystemAvailable) {
+  let buttonContent, if (!isWalletSystemAvailable) {
     buttonContent = (
       <>
         <Wallet className="h-5 w-5 mr-2" /> Web3 Login Unavailable
@@ -75,5 +72,5 @@ export function Web3Login() {
     >
       {buttonContent}
     </Button>
-  )
+  );
 }

@@ -7,6 +7,7 @@ import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-rea
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
+import { Star } from 'lucide-react';
 interface Service {
   id: string,
   name: string,
@@ -21,8 +22,7 @@ interface Service {
   marketSize: string,
   growthRate: string,
   launchDate: string,
-  badge?: string;
-  icon?: React.ReactNode
+  badge?: string, icon?: React.ReactNode
 }
 
 const allServices: Service[] = [
@@ -96,23 +96,17 @@ export default function ComprehensiveServicesShowcase2025() {
       filtered = filtered.filter(service => {
         const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
         switch (selectedPriceRange) {
-          case 'under-50': return price < 50;
-          case '50-200': return price >= 50 && price <= 200;
-          case '200-500': return price > 200 && price <= 500;
-          case 'over-500': return price > 500;
-          default: return true
+          case 'under-50': return price < 50, case '50-200': return price >= 50 && price <= 200, case '200-500': return price > 200 && price <= 500, case 'over-500': return price > 500, default: return true
         }
-      })
+      });
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'popular':
-          return b.customers - a.customers;
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
+          return b.customers - a.customers, case 'rating':
+          return b.rating - a.rating, case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         case 'price-low':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
@@ -121,7 +115,7 @@ export default function ComprehensiveServicesShowcase2025() {
         default: return 0
       }
     }),
-    setFilteredServices(filtered)
+    setFilteredServices(filtered);
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -130,7 +124,7 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'Enterprise IT': return 'from-green-500 to-emerald-500';
       case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500';
       default: return 'from-gray-500 to-slate-500'
-    }
+    };
   },
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -139,7 +133,7 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'Enterprise IT': return <Shield className="w-5 h-5" />;
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />;
       default: return <Globe className="w-5 h-5" />
-    }
+    };
   },
   return (
     <Layout>

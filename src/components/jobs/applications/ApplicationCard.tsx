@@ -9,6 +9,8 @@ import Link from "next/link";
 import { StatusBadge } from "./StatusBadge";
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Calendar } from 'lucide-react';
 interface ApplicationCardProps {
   application: JobApplication
 }
@@ -133,5 +135,5 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

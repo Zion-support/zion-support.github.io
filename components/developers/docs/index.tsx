@@ -7,8 +7,7 @@ import CodeBlock from '../../../components/docs/CodeBlock';
 export type Section = {
   id: string,
   title: string,
-  html?: string;
-  code?: { language?: string, content: string }[]
+  html?: string, code?: { language?: string, content: string }[]
 },
 type DocsContent = {
   title: string,
@@ -20,8 +19,7 @@ type PageProps = {
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
   const contentPath = path.join(process.cwd(), 'datadocscontent.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
-  const docs = JSON.parse(raw) as DocsContent;
-  return { props: { docs } }
+  const docs = JSON.parse(raw) as DocsContent, return { props: { docs } }
 },
 export default function ApiDocsPage({ docs }: PageProps) {
   return (
@@ -42,5 +40,5 @@ export default function ApiDocsPage({ docs }: PageProps) {
         </section>
       ))}
     </DocsLayout>
-  )
+  );
 }

@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
 import { Resume } from "@/types/resume";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ResumePreviewCardProps {
   resume: Resume,
   onDownload: () => void,
@@ -63,5 +65,5 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

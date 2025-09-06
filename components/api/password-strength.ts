@@ -27,7 +27,7 @@ export default async function handler(
   try {
     const { password } = req.body,
     if (!password || typeof password !== 'string') {
-      return res.status(400).json({ error: 'Password is required' })
+      return res.status(400).json({ error: 'Password is required' });
     }
 
     // Password analysis
@@ -48,13 +48,8 @@ export default async function handler(
                        (hasNumbers ? 10 : 0) + (hasSymbols ? 32 : 0);
     const entropy = charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0;
     // Calculate score
-    let score = 0;
-    score += Math.min(length * 2, 20), // Length contribution (max 20)
-    score += hasUppercase ? 10 : 0;
-    score += hasLowercase ? 10 : 0;
-    score += hasNumbers ? 10 : 0;
-    score += hasSymbols ? 15 : 0;
-    score += entropy > 50 ? 15 : 0, // High entropy bonus
+    let score = 0, score += Math.min(length * 2, 20), // Length contribution (max 20)
+    score += hasUppercase ? 10 : 0, score += hasLowercase ? 10 : 0, score += hasNumbers ? 10 : 0, score += hasSymbols ? 15 : 0, score += entropy > 50 ? 15 : 0, // High entropy bonus
     score -= hasCommonPatterns ? 20 : 0, // Penalty for common patterns
 
     // Determine strength level
@@ -91,17 +86,10 @@ export default async function handler(
 
     const result: PasswordStrengthResult = {
       password,
-      strength;
-      score: Math.max(0, Math.min(100, score));
-      feedback;
-      details: {
+      strength, score: Math.max(0, Math.min(100, score));
+      feedback, details: {
         length,
-        hasUppercase;
-        hasLowercase;
-        hasNumbers;
-        hasSymbols;
-        hasCommonPatterns;
-        entropy: Math.round(entropy * 100) / 100},
+        hasUppercase, hasLowercase, hasNumbers, hasSymbols, hasCommonPatterns, entropy: Math.round(entropy * 100) / 100},
       suggestions};
     res.status(200).json(result)
   } catch (error) {

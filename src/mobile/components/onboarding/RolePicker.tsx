@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
-type UserRole = "talent" | "client" | null;
-interface RolePickerProps {
+type UserRole = "talent" | "client" | null, interface RolePickerProps {
   onSelect: (role: UserRole) => void
 }
 
@@ -70,5 +70,5 @@ export function RolePicker({ onSelect }: RolePickerProps) {
         </Card>
       </div>
     </div>
-  )
+  );
 }

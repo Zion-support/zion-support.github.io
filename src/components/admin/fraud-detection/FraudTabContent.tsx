@@ -39,5 +39,5 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
         </div>
       ),
     default: return null
-  }
+  };
 },

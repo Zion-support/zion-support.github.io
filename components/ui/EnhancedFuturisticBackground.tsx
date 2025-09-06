@@ -2,11 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode,
-  className?: string;
-  intensity?: 'low' | 'medium' | 'high';
+  className?: string, intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
-  particleCount?: number;
-  animationSpeed?: number
+  particleCount?: number, animationSpeed?: number
 }
 
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
@@ -14,8 +12,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
   className = '';
   intensity = 'medium';
   colorScheme = 'quantum';
-  particleCount = 100;
-  animationSpeed = 1
+  particleCount = 100, animationSpeed = 1
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
@@ -67,13 +64,9 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
   },
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
+    if (!ctx) return, const resizeCanvas = () => {
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -91,26 +84,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       life: number,
       maxLife: number,
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * settings.speed * animationSpeed;
-        this.vy = (Math.random() - 0.5) * settings.speed * animationSpeed;
-        this.size = Math.random() * settings.size + 1;
-        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
-        this.opacity = Math.random() * settings.opacity;
-        this.life = Math.random() * 100;
-        this.maxLife = 100
+        this.x = Math.random() * canvas.width, this.y = Math.random() * canvas.height, this.vx = (Math.random() - 0.5) * settings.speed * animationSpeed, this.vy = (Math.random() - 0.5) * settings.speed * animationSpeed, this.size = Math.random() * settings.size + 1, this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
+        this.opacity = Math.random() * settings.opacity, this.life = Math.random() * 100, this.maxLife = 100
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life--;
+        this.x += this.vx, this.y += this.vy, this.life--;
         // Wrap around edges
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
+        if (this.x < 0) this.x = canvas.width, if (this.x > canvas.width) this.x = 0, if (this.y < 0) this.y = canvas.height, if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
           this.opacity *= 0.95
@@ -124,8 +105,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
+        ctx.fillStyle = gradient, ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore()
@@ -143,8 +123,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       opacity: number,
       constructor(p1: Particle, p2: Particle) {
         this.p1 = p1,
-        this.p2 = p2;
-        this.opacity = 0.1
+        this.p2 = p2, this.opacity = 0.1;
       }
 
       draw() {
@@ -154,9 +133,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         if (distance < 150) {
           ctx.save();
           ctx.globalAlpha = this.opacity * (1 - distance / 150);
-          ctx.strokeStyle = colors.glow;
-          ctx.lineWidth = 0.5;
-          ctx.beginPath();
+          ctx.strokeStyle = colors.glow, ctx.lineWidth = 0.5, ctx.beginPath();
           ctx.moveTo(this.p1.x, this.p1.y);
           ctx.lineTo(this.p2.x, this.p2.y);
           ctx.stroke();
@@ -175,9 +152,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     // Matrix rain effect
     const matrixRain = () => {
       const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-      const fontSize = 12;
-      const columns = canvas.width / fontSize;
-      const drops: number[] = [],
+      const fontSize = 12, const columns = canvas.width / fontSize, const drops: number[] = [],
       for (let i = 0, i < columns, i++) {
         drops[i] = 1
       }
@@ -185,8 +160,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       const drawMatrix = () => {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = colors.primary;
-        ctx.font = `${fontSize}px monospace`;
+        ctx.fillStyle = colors.primary, ctx.font = `${fontSize}px monospace`;
         for (let i = 0, i < drops.length, i++) {
           const text = characters[Math.floor(Math.random() * characters.length)];
           ctx.fillText(text, i * fontSize, drops[i] * fontSize);
@@ -196,14 +170,13 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           drops[i]++
         }
       };
-      return drawMatrix
+      return drawMatrix;
     };
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
       // Clear canvas with fade effect
-      ctx.fillStyle = colors.background;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = colors.background, ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Draw matrix rain
       drawMatrix();
       // Update and draw particles
@@ -235,14 +208,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
       if (Math.random() < 0.02) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        const size = Math.random() * 20 + 10;
-        ctx.save();
-        ctx.globalAlpha = 0.1;
-        ctx.strokeStyle = colors.accent;
-        ctx.lineWidth = 1;
-        if (Math.random() < 0.5) {
+        const x = Math.random() * canvas.width, const y = Math.random() * canvas.height, const size = Math.random() * 20 + 10, ctx.save();
+        ctx.globalAlpha = 0.1, ctx.strokeStyle = colors.accent, ctx.lineWidth = 1, if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath();
           ctx.moveTo(x, y - size);
@@ -275,7 +242,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
-    }
+    };
   }, [colorScheme, intensity, particleCount, animationSpeed]);
   return (
     <div className={`relative min-h-screen ${className}`}>
@@ -298,6 +265,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         {children}
       </div>
     </div>
-  )
+  );
 };
 export default EnhancedFuturisticBackground;

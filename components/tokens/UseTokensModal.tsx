@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { connectMetaMask, getAccounts } from '../../utils/wallet';
 export default function UseTokensModal({
-  isOpen;
-  onClose;
-  serviceId;
-  defaultType}: {
+  isOpen, onClose, serviceId, defaultType}: {
   isOpen: boolean,
   onClose: () => void,
-  serviceId?: string;
-  defaultType?: RedemptionType
+  serviceId?: string, defaultType?: RedemptionType
 }) {
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
@@ -42,8 +38,7 @@ export default function UseTokensModal({
     }
   }
 
-  if (!isOpen) return null;
-  return (
+  if (!isOpen) return null, return (
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
       <div className="relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4">
@@ -86,5 +81,5 @@ export default function UseTokensModal({
         </div>
       </div>
     </div>
-  )
+  );
 }

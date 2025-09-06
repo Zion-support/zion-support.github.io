@@ -32,5 +32,5 @@ export function EnterpriseStickyNav() {
         </div>
       </div>
     </nav>
-  )
+  );
 }

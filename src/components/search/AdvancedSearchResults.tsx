@@ -12,18 +12,15 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/co
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 interface SearchResult {
   id: string,
   title: string,
   description: string,
   type: 'product' | 'talent' | 'blog' | 'service',
-  category?: string;
-  url?: string;
-  image?: string;
-  price?: number;
-  currency?: string;
-  rating?: number;
-  tags?: string[];
+  category?: string, url?: string, image?: string, price?: number, currency?: string, rating?: number, tags?: string[];
   date?: string
 }
 
@@ -47,12 +44,10 @@ interface SearchResponse {
 
 // Highlight search terms in text
 const HighlightText: React.FC<{ text: string, searchTerm: string, className?: string }> = ({ 
-  text;
-  searchTerm;
-  className = '' 
+  text, searchTerm, className = '' 
 }) => {
   if (!searchTerm.trim()) {
-    return <span className={className}>{text}</span>
+    return <span className={className}>{text}</span>;
   }
 
   const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
@@ -68,7 +63,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
         )
       )}
     </span>
-  )
+  );
 };
 // Search Result Card Component
 const SearchResultCard: React.FC<{ 
@@ -144,7 +139,7 @@ const SearchResultCard: React.FC<{
         </div>
       </div>
     </div>
-  )
+  );
 };
 // Filter Sidebar Component
 const FilterSidebar: React.FC<{
@@ -183,7 +178,9 @@ const FilterSidebar: React.FC<{
                 checked={filters.types.includes(option.id)}
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
-              <label htmlFor={option.id} className="text-sm">
+              <label htmlFor={option.id} className="text-sm" htmlFor="input-
+                {option.label}
+              ">
                 {option.label}
               </label>
             </div>
@@ -258,7 +255,7 @@ const FilterSidebar: React.FC<{
 // No Results Component
 const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
   searchTerm,
-  onNewSearch 
+  onNewSearch ;
 }) => {
   const suggestions = [
     "AI & Machine Learning";
@@ -306,7 +303,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         </div>
       </div>
     </div>
-  )
+  );
 },
 // Main Search Results Page Component
 export const AdvancedSearchResults: React.FC = () => {
@@ -334,13 +331,12 @@ export const AdvancedSearchResults: React.FC = () => {
     results.forEach(result => {
       if (result.category) categories.add(result.category)
     });
-    return Array.from(categories).sort()
+    return Array.from(categories).sort();
   }, [results]);
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
-      const urlTerm = router.query.q as string;
-      setSearchTerm(urlTerm)
+      const urlTerm = router.query.q as string, setSearchTerm(urlTerm)
     }
   }, [router.isReady, router.query.q]);
   // Search function
@@ -353,8 +349,7 @@ export const AdvancedSearchResults: React.FC = () => {
 
     setLoading(true);
     try {
-      const searchFilters = newFilters || filters;
-      const params = new URLSearchParams({
+      const searchFilters = newFilters || filters, const params = new URLSearchParams({
         query: term,
         page: page.toString(),
         limit: '20'
@@ -390,8 +385,7 @@ export const AdvancedSearchResults: React.FC = () => {
       setCurrentPage(data.page);
       setHasMore(data.hasMore);
       logInfo('Search completed', { 
-        term;
-        resultCount: data.results.length,
+        term, resultCount: data.results.length,
         totalCount: data.totalCount 
       })
     } catch (error) {
@@ -602,6 +596,6 @@ export const AdvancedSearchResults: React.FC = () => {
         </div>
       )}
     </div>
-  )
+  );
 },
 export default AdvancedSearchResults;

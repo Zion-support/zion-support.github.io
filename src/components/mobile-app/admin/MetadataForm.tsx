@@ -8,14 +8,15 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Badge } from "@/components/ui/badge";
 import { X } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-  const { control, register, watch, setValue } = form;
-  const keywords = watch("keywords");
+  const { control, register, watch, setValue } = form, const keywords = watch("keywords");
   const platform = watch("platform");
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
@@ -33,8 +34,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       keywords.filter((k) => k !== keyword)
     )
   };
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
-  const longDescription = watch("longDescription");
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000, const longDescription = watch("longDescription");
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -152,5 +152,5 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         </Form>
       </CardContent>
     </Card>
-  )
+  );
 },

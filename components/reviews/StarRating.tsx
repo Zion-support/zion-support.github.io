@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { Star } from 'lucide-react';
 type Props = {
   value: number,
   onChange: (val: number) => void,
-  size?: number;
-  readOnly?: boolean
+  size?: number, readOnly?: boolean
 };
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -11,8 +11,7 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
   return (
     <div className="flex items-center gap-1">
       {stars.map((star) => {
-        const active = (hovered ?? value) >= star;
-        return (
+        const active = (hovered ?? value) >= star, return (
           <button
             key={star}
             type="button"
@@ -40,6 +39,6 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
         )
       })}
     </div>
-  )
+  );
 },
 export default StarRating;

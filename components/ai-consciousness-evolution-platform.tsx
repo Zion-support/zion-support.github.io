@@ -360,11 +360,12 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  );
 },
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+import { Zap, Star } from 'lucide-react';
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -674,6 +675,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2030>
-  )
+  );
 },
 export default AIConsciousnessEvolutionPlatform;

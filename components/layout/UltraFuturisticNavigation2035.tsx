@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Star } from 'lucide-react';
 interface NavigationItem {
   name: string,
   href: string,
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean
+  icon?: React.ReactNode, description?: string, children?: NavigationItem[];
+  badge?: string, title?: string, featured?: boolean
 }
 
 const contactInfo = {
@@ -237,7 +234,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
       setIsScrolled(window.scrollY > 10)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name)
@@ -522,6 +519,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         </AnimatePresence>
       </div>
     </nav>
-  )
+  );
 },
 export default UltraFuturisticNavigation2035;

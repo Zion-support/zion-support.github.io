@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -74,7 +75,7 @@ export default function UltraFuturisticNavigation2033() {
       if (e.key === 'Escape') closeMenu()
     },
     document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape);
   }, []);
   return (
     <>
@@ -300,5 +301,5 @@ export default function UltraFuturisticNavigation2033() {
         </AnimatePresence>
       </nav>
     </>
-  )
+  );
 }

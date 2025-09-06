@@ -8,10 +8,9 @@ type ChatMessage = {
 function generateSessionId(): string {
   if (typeof window === 'undefined') return '';
   const existing = window.localStorage.getItem('zion_support_session_id');
-  if (existing) return existing;
-  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`;
+  if (existing) return existing, const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`;
   window.localStorage.setItem('zion_support_session_id', id);
-  return id
+  return id;
 }
 
 export default function ChatWidget() {
@@ -61,8 +60,7 @@ export default function ChatWidget() {
 
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
-    if (!text) return;
-    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() },
+    if (!text) return, const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() },
     setMessages((prev) => [...prev, newUserMessage]);
     setInput('');
     setIsLoading(true);
@@ -73,7 +71,7 @@ export default function ChatWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          messages: [...messages; newUserMessage].map(({ role, content }) => ({ role, content }))})});
+          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
       const data = await res.json();
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
@@ -199,5 +197,5 @@ export default function ChatWidget() {
         </div>
       )}
     </div>
-  )
+  );
 }

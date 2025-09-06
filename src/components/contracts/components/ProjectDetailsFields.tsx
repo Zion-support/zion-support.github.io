@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
+import { Star, Calendar } from 'lucide-react';
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>
 }
@@ -129,5 +130,5 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         />
       </div>
     </>
-  )
+  );
 }

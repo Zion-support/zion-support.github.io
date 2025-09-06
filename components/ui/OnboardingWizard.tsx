@@ -21,8 +21,7 @@ export default function OnboardingWizard() {
     setOpen(false)
   }
 
-  if (!open) return null;
-  return (
+  if (!open) return null, return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
       <div className="w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl">
         <div className="p-4 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between">
@@ -68,5 +67,5 @@ export default function OnboardingWizard() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
+import { Zap, Star } from 'lucide-react';
 interface HeroProps {
   title: string,
   subtitle: string,
@@ -21,10 +22,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({
   title,
-  subtitle;
-  primaryAction;
-  secondaryAction;
-  stats}) => {
+  subtitle, primaryAction, secondaryAction, stats}) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Elements */}
@@ -139,6 +137,6 @@ const Hero: React.FC<HeroProps> = ({
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
     </section>
-  )
+  );
 },
 export default Hero;

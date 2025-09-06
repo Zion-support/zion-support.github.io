@@ -30,8 +30,7 @@ export default function TrustPage() {
 
   async function submitAppeal(e: React.FormEvent) {
     e.preventDefault(),
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
+    const form = e.target as HTMLFormElement, const formData = new FormData(form);
     const message = formData.get('message');
     const contactEmail = formData.get('email');
     await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
@@ -101,5 +100,5 @@ export default function TrustPage() {
         )}
       </div>
     </EnhancedLayout>
-  )
+  );
 }

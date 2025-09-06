@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Brain, MessageSquare, Image, Video, Code, FileText, Zap, Star, ExternalLink, CheckCircle, TrendingUp, Shield } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function AiToolsPage() {
   const aiTools = [
     {
@@ -431,5 +433,5 @@ export default function AiToolsPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

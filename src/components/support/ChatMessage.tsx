@@ -5,6 +5,7 @@ import { format } from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
 import { useTheme } from "@/hooks/useTheme";
+import { Star } from 'lucide-react';
 interface ChatMessageProps {
   message: string,
   isUser: boolean,
@@ -13,8 +14,7 @@ interface ChatMessageProps {
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   message,
-  isUser;
-  timestamp}: ChatMessageProps) => {
+  isUser, timestamp}: ChatMessageProps) => {
   const { theme } = useTheme();
   // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
   // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
@@ -50,9 +50,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
             : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={sanitizedHtml} />
-        <div className={cn(
-          "text-xs mt-1";
-          isUser 
+        <div className={cn("text-xs mt-1", isUser 
             ? "text-white/70" 
             : theme === "dark"
               ? "text-gray-300"
@@ -74,7 +72,7 @@ function escapeHtml(unsafe: string): string {
     .replace(/</g, "&lt,")
     .replace(/>/g, "&gt,")
     .replace(/"/g, "&quot,")
-    .replace(/'/g, "&#039,")
+    .replace(/'/g, "&#039,");
 }
 
 function formatMessageWithLinks(message: string): string {
@@ -82,16 +80,10 @@ function formatMessageWithLinks(message: string): string {
   // markup.
   const safeText = escapeHtml(message);
   // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  let formattedMessage = safeText.replace(
-    urlRegex;
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+  const urlRegex = /(https?:\/\/[^\s]+)/g, let formattedMessage = safeText.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   ),
   // Replace help-center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g;
-  formattedMessage = formattedMessage.replace(
-    helpCenterRegex;
-    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+  const helpCenterRegex = /\[([^\]]+)\]/g, formattedMessage = formattedMessage.replace(helpCenterRegex, '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   ),
-  return formattedMessage
+  return formattedMessage;
 }

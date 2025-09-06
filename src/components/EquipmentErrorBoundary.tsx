@@ -2,6 +2,7 @@ import React from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface Props {
   children: React.ReactNode
 }
@@ -55,5 +56,5 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
     }
 
     return this.props.children
-  }
+  };
 } 

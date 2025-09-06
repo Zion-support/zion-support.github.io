@@ -75,5 +75,5 @@ export default function OnboardingWizard() {
         )}
       </div>
     </div>
-  )
+  );
 }

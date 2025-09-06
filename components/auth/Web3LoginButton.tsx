@@ -7,7 +7,7 @@ async function resolveDisplayName(addr: string): Promise<string | null> {
     const { data } = await r.json();
     const did = data?.payload || {};
     return did.lens || did.ens || null
-  } catch { return null }
+  } catch { return null };
 }
 
 export default function Web3LoginButton() {
@@ -16,10 +16,8 @@ export default function Web3LoginButton() {
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {
-    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
-    if (saved) setUser(JSON.parse(saved));
-    const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
-    setDisplayWeb3(pref === 'true')
+    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null, if (saved) setUser(JSON.parse(saved));
+    const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null, setDisplayWeb3(pref === 'true')
   }, []);
   useEffect(() => {
     (async () => {
@@ -53,5 +51,5 @@ export default function Web3LoginButton() {
       <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
     </>
-  )
+  );
 }

@@ -10,17 +10,14 @@ export const PwaInstallButton: React.FC = () => {
   const [isInstalling, setIsInstalling] = useState(false);
   // Check dismissal flag and register event listener
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const dismissedAt = safeStorage.getItem(DISMISS_KEY);
-    const recentlyDismissed = dismissedAt && Date.now() - Number(dismissedAt) < DISMISS_MS;
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
-    if (recentlyDismissed || inStandalone) return;
-    const handler = (e: BeforeInstallPromptEvent) => {
+    if (typeof window === 'undefined') return, const dismissedAt = safeStorage.getItem(DISMISS_KEY);
+    const recentlyDismissed = dismissedAt && Date.now() - Number(dismissedAt) < DISMISS_MS, const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
+    if (recentlyDismissed || inStandalone) return, const handler = (e: BeforeInstallPromptEvent) => {
       e.preventDefault(),
       setPromptEvent(e)
     };
     window.addEventListener('beforeinstallprompt', handler);
-    return () => window.removeEventListener('beforeinstallprompt', handler)
+    return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
   if (!promptEvent || window.matchMedia('(display-mode: standalone)').matches) {
     return null
@@ -30,13 +27,12 @@ export const PwaInstallButton: React.FC = () => {
     if (!promptEvent) {
       toast('Installation not available', {
         description: 'Your browser does not support app installation.'}),
-      return
+      return;
     }
     try {
       setIsInstalling(true);
       promptEvent.prompt();
-      const result = await promptEvent.userChoice;
-      setIsInstalling(false);
+      const result = await promptEvent.userChoice, setIsInstalling(false);
       if (result.outcome === 'accepted') {
         toast.success('App installed');
         setPromptEvent(null)
@@ -58,6 +54,6 @@ export const PwaInstallButton: React.FC = () => {
         Install App
       </Button>
     </div>
-  )
+  );
 };
 export default PwaInstallButton;

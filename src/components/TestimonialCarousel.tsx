@@ -6,6 +6,7 @@ import { Quote } from 'lucide-react'
 import Link from "next/link";
 import Image from "next/image";
 import { CASE_STUDIES } from "@/data/case-studies";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -77,5 +78,5 @@ export function TestimonialCarousel() {
         </div>
       </div>
     </section>
-  )
+  );
 }

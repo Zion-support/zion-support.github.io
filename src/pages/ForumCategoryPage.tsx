@@ -64,10 +64,7 @@ const iconMap = {
   "Megaphone": Megaphone
 };
 function CategoryContent({
-  categoryId;
-  category;
-  IconComponent;
-  user}: {
+  categoryId, category, IconComponent, user}: {
   categoryId: string,
   category: ForumCategoryInfo,
   IconComponent: React.ComponentType<any>,
@@ -90,8 +87,7 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-    : categoryPosts;
-  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin');
+    : categoryPosts, const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin');
   const { isFollowed, follow, unfollow } = useFollowedCategories();
   const { toast } = useToast();
   const handleFollow = () => {
@@ -103,7 +99,7 @@ function CategoryContent({
       unfollow(categoryId)
     } else {
       follow(categoryId)
-    }
+    };
   };
   logInfo('CategoryContent - categoryId:', { data: categoryId }),
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
@@ -184,7 +180,7 @@ function CategoryContent({
         )}
       </div>
     </div>
-  )
+  );
 }
 
 export default function ForumCategoryPage() {
@@ -192,8 +188,7 @@ export default function ForumCategoryPage() {
   const { categoryId } = router.query as { categoryId: string },
   const { user } = useAuth();
   // Check if the category exists and user has access
-  const category = categoryId ? categoriesInfo[categoryId] : null;
-  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
+  const category = categoryId ? categoriesInfo[categoryId] : null, const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
   // Check access for admin-only categories
   const hasAccess = category && (
     !category.adminOnly || 
@@ -245,5 +240,5 @@ export default function ForumCategoryPage() {
         user={user}
       />
     </>
-  )
+  );
 }

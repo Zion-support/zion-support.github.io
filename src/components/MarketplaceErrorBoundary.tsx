@@ -65,7 +65,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 }
 
 interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
@@ -87,5 +87,5 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     >
       {children}
     </ErrorBoundary>
-  )
+  );
 } 

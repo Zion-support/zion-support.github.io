@@ -4,10 +4,10 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star } from 'lucide-reac
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { Star } from 'lucide-react';
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-brain-computer-interface'));
-  if (!service) return null;
-  return (
+  if (!service) return null, return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
@@ -49,5 +49,5 @@ export default function QuantumAIBCIPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }

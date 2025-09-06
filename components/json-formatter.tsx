@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
@@ -34,8 +36,7 @@ export default function JSONFormatterPage() {
     }
   };
   const minifyJSON = () => {
-    if (!inputJson.trim()) return;
-    try {
+    if (!inputJson.trim()) return, try {
       const parsed = JSON.parse(inputJson);
       const minified = JSON.stringify(parsed);
       setFormattedJson(minified);
@@ -75,9 +76,7 @@ export default function JSONFormatterPage() {
     const blob = new Blob([content], { type: 'application/json' }),
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
+    a.href = url, a.download = filename, document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url)
@@ -114,7 +113,7 @@ export default function JSONFormatterPage() {
   };
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n'),
-    return lines.map((_, index) => index + 1).join('\n')
+    return lines.map((_, index) => index + 1).join('\n');
   };
   return (
     <>
@@ -161,7 +160,7 @@ export default function JSONFormatterPage() {
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center space-x-6">
                 <div className="flex items-center space-x-2">
-                  <label className="text-sm text-gray-300">Indent:</label>
+                  <label className="text-sm text-gray-300" htmlFor="input-Indent:">Indent:</label>
                   <select
                     value={indentSize}
                     onChange={(e) => setIndentSize(Number(e.target.value))}
@@ -181,7 +180,7 @@ export default function JSONFormatterPage() {
                     onChange={(e) => setCompactMode(e.target.checked)}
                     className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500"
                   />
-                  <label htmlFor="compactMode" className="text-sm text-gray-300">Compact mode</label>
+                  <label htmlFor="compactMode" className="text-sm text-gray-300" htmlFor="input-Compact mode">Compact mode</label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
@@ -192,7 +191,7 @@ export default function JSONFormatterPage() {
                     onChange={(e) => setShowLineNumbers(e.target.checked)}
                     className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500"
                   />
-                  <label htmlFor="showLineNumbers" className="text-sm text-gray-300">Line numbers</label>
+                  <label htmlFor="showLineNumbers" className="text-sm text-gray-300" htmlFor="input-Line numbers">Line numbers</label>
                 </div>
               </div>
 
@@ -517,5 +516,5 @@ export default function JSONFormatterPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

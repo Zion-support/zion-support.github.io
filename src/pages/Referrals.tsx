@@ -19,13 +19,7 @@ export default function ReferralsPage() {
   const router = useRouter(), // Changed from navigate
   const { isAuthenticated } = useAuth();
   const {
-    isLoading;
-    referralCode;
-    referrals;
-    rewards;
-    stats;
-    getReferralLink;
-    copyReferralLink;
+    isLoading, referralCode, referrals, rewards, stats, getReferralLink, copyReferralLink;
     shareOnSocialMedia} = useReferrals();
   useEffect(() => {
     if (!isAuthenticated) {
@@ -89,5 +83,5 @@ export default function ReferralsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

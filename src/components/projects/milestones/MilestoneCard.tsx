@@ -8,28 +8,21 @@ import { Check, ArrowDown, X } from 'lucide-react'
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface MilestoneCardProps {
   id: string,
   projectId: string,
   title: string,
-  description?: string;
-  amount: number,
+  description?: string, amount: number,
   status: string,
-  dueDate?: string;
-  onApprove?: (id: string) => Promise<void>,
+  dueDate?: string, onApprove?: (id: string) => Promise<void>,
   onReject?: (id: string) => Promise<void>
 }
 
 export function MilestoneCard({ 
   id,
-  projectId;
-  title;
-  description;
-  amount;
-  status;
-  dueDate;
-  onApprove;
-  onReject
+  projectId, title, description, amount, status, dueDate, onApprove, onReject
 }: MilestoneCardProps) {
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
   function getStatusBadgeColor() {
@@ -112,5 +105,5 @@ export function MilestoneCard({
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
+import { Star } from 'lucide-react';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase(),
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
@@ -16,5 +17,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Notes: ${notes || ''}\n` +
     `Include signature and next steps.`,
   const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
-  return res.status(200).json({ email: text })
+  return res.status(200).json({ email: text });
 }

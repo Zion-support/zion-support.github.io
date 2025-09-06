@@ -7,6 +7,7 @@ import { ProjectCard } from './ProjectCard';
 import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export function PortfolioBuilder() {
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
@@ -109,5 +110,5 @@ export function PortfolioBuilder() {
         )
       )}
     </div>
-  )
+  );
 }

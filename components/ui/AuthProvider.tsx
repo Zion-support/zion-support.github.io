@@ -8,8 +8,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [role, setRoleState] = useState<UserRole>('talent');
   useEffect(() => {
     try {
-      const stored = window.localStorage.getItem('userRole') as UserRole | null;
-      if (stored === 'talent' || stored === 'client') {
+      const stored = window.localStorage.getItem('userRole') as UserRole | null, if (stored === 'talent' || stored === 'client') {
         setRoleState(stored)
       }
     } catch {}
@@ -27,5 +26,5 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 }
 
 export function useAuth() {
-  return useContext(AuthContext)
+  return useContext(AuthContext);
 }

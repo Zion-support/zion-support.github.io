@@ -10,14 +10,13 @@ function ensureDir() {
 }
 
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`)
+  return path.join(GRANTS_DIR, `${id}.json`);
 }
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir(),
   const file = grantPath(id);
-  if (!fs.existsSync(file)) return null;
-  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
+  if (!fs.existsSync(file)) return null, return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
 
 function writeGrant(record: GrantApplication) {
@@ -29,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string },
   if (!id) {
     res.status(400).json({ error: 'Missing id' }),
-    return
+    return;
   }
 
   if (req.method === 'GET') {
@@ -39,7 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return
     }
     res.status(200).json({ record: g }),
-    return
+    return;
   }
 
   if (req.method === 'PUT') {
@@ -48,8 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(404).json({ error: 'Not found' }),
       return
     }
-    const payload = req.body as UpdateGrantPayload;
-    const next: GrantApplication = {
+    const payload = req.body as UpdateGrantPayload, const next: GrantApplication = {
       ...existing,
       ...payload,
       status: payload.submit ? 'Submitted' : existing.status,

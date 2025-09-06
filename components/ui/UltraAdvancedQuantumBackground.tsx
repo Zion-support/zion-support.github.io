@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 interface UltraAdvancedQuantumBackgroundProps {
   children: React.ReactNode,
   className?: string
@@ -11,13 +12,8 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    let animationFrameId: number,
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
+    if (!ctx) return, canvas.width = window.innerWidth, canvas.height = window.innerHeight, let animationFrameId: number,
     let particles: Particle[] = [],
     let quantumFields: QuantumField[] = [],
     let neuralNetworks: NeuralNetwork[] = [],
@@ -31,35 +27,20 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       life: number,
       maxLife: number,
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 2;
-        this.vy = (Math.random() - 0.5) * 2;
-        this.size = Math.random() * 3 + 1;
-        this.color = `hsl(${Math.random() * 360}, 70%, 60%)`;
-        this.life = Math.random() * 100;
-        this.maxLife = 100
+        this.x = Math.random() * canvas.width, this.y = Math.random() * canvas.height, this.vx = (Math.random() - 0.5) * 2, this.vy = (Math.random() - 0.5) * 2, this.size = Math.random() * 3 + 1, this.color = `hsl(${Math.random() * 360}, 70%, 60%)`;
+        this.life = Math.random() * 100, this.maxLife = 100
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life--;
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-        if (this.life <= 0) {
-          this.life = this.maxLife;
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height
+        this.x += this.vx, this.y += this.vy, this.life--;
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1, if (this.y < 0 || this.y > canvas.height) this.vy *= -1, if (this.life <= 0) {
+          this.life = this.maxLife, this.x = Math.random() * canvas.width, this.y = Math.random() * canvas.height
         }
       }
 
       draw() {
-        if (!ctx) return;
-        ctx.save();
-        ctx.globalAlpha = this.life / this.maxLife;
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
+        if (!ctx) return, ctx.save();
+        ctx.globalAlpha = this.life / this.maxLife, ctx.fillStyle = this.color, ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore()
@@ -74,12 +55,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       phase: number,
       color: string,
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.radius = Math.random() * 100 + 50;
-        this.intensity = Math.random() * 0.5 + 0.5;
-        this.phase = Math.random() * Math.PI * 2;
-        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
+        this.x = Math.random() * canvas.width, this.y = Math.random() * canvas.height, this.radius = Math.random() * 100 + 50, this.intensity = Math.random() * 0.5 + 0.5, this.phase = Math.random() * Math.PI * 2, this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
       }
 
       update() {
@@ -87,12 +63,9 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       }
 
       draw() {
-        if (!ctx) return;
-        ctx.save();
+        if (!ctx) return, ctx.save();
         ctx.globalAlpha = this.intensity * (0.5 + 0.5 * Math.sin(this.phase));
-        ctx.strokeStyle = this.color;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
+        ctx.strokeStyle = this.color, ctx.lineWidth = 2, ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.stroke();
         ctx.restore()
@@ -107,12 +80,9 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         this.connections = [];
         // Create neural network structure
         const layers = [5, 8, 6, 4];
-        let nodeIndex = 0;
-        layers.forEach((layerSize, layerIndex) => {
+        let nodeIndex = 0, layers.forEach((layerSize, layerIndex) => {
           for (let i = 0, i < layerSize, i++) {
-            const x = (layerIndex / (layers.length - 1)) * canvas.width;
-            const y = (i / (layerSize - 1)) * canvas.height;
-            this.nodes.push({ x, y, connections: [] }),
+            const x = (layerIndex / (layers.length - 1)) * canvas.width, const y = (i / (layerSize - 1)) * canvas.height, this.nodes.push({ x, y, connections: [] }),
             // Connect to previous layer
             if (layerIndex > 0) {
               const prevLayerStart = nodeIndex - layers[layerIndex - 1];
@@ -132,21 +102,16 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       update() {
         // Animate neural network
         this.nodes.forEach((node, index) => {
-          node.x += (Math.random() - 0.5) * 0.5;
-          node.y += (Math.random() - 0.5) * 0.5
+          node.x += (Math.random() - 0.5) * 0.5, node.y += (Math.random() - 0.5) * 0.5
         })
       }
 
       draw() {
-        if (!ctx) return;
-        ctx.save();
+        if (!ctx) return, ctx.save();
         // Draw connections
         ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)';
-        ctx.lineWidth = 1;
-        this.connections.forEach(connection => {
-          const from = this.nodes[connection.from];
-          const to = this.nodes[connection.to];
-          ctx.beginPath();
+        ctx.lineWidth = 1, this.connections.forEach(connection => {
+          const from = this.nodes[connection.from], const to = this.nodes[connection.to], ctx.beginPath();
           ctx.moveTo(from.x, from.y);
           ctx.lineTo(to.x, to.y);
           ctx.stroke()
@@ -193,8 +158,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       // Draw quantum entanglement effects
       ctx.save();
       ctx.strokeStyle = 'rgba(255, 100, 255, 0.3)';
-      ctx.lineWidth = 1;
-      for (let i = 0, i < particles.length, i += 2) {
+      ctx.lineWidth = 1, for (let i = 0, i < particles.length, i += 2) {
         if (i + 1 < particles.length) {
           const p1 = particles[i];
           const p2 = particles[i + 1];
@@ -212,8 +176,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     };
     animate();
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight
     };
     window.addEventListener('resize', handleResize);
     return () => {

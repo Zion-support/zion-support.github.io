@@ -1,5 +1,6 @@
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
+import { Star } from 'lucide-react';
 
 export type BadgeKey =
   | "first_listing"

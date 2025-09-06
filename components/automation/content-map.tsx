@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: data }, revalidate: 21600 }
   } catch {
     return { props: { report: null }, revalidate: 21600 }
-  }
+  };
 },
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
@@ -45,5 +45,5 @@ export default function ContentMap({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
+  );
 }

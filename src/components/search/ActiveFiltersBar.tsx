@@ -2,6 +2,7 @@ import React from 'react';
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Badge } from '@/components/ui/badge';
 interface SearchFilters {
   types: string[],
   category: string,
@@ -20,9 +21,7 @@ interface ActiveFiltersBarProps {
 
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   filters,
-  onFiltersChange;
-  onClearAll;
-  className = ''
+  onFiltersChange, onClearAll, className = ''
 }) => {
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],
   // Add type filters
@@ -134,6 +133,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
         Clear all
       </Button>
     </div>
-  )
+  );
 },
 export default ActiveFiltersBar;

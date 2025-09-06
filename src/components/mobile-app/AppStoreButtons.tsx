@@ -4,19 +4,14 @@ import { Apple, GithubIcon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { logInfo } from '@/utils/productionLogger';
 interface AppStoreButtonsProps {
-  className?: string;
-  appStoreUrl?: string;
-  googlePlayUrl?: string;
-  onAppStoreClick?: () => void;
-  onGooglePlayClick?: () => void
+  className?: string, appStoreUrl?: string, googlePlayUrl?: string, onAppStoreClick?: () => void, onGooglePlayClick?: () => void
 }
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className,
   appStoreUrl = "#";
   googlePlayUrl = "#";
-  onAppStoreClick;
-  onGooglePlayClick
+  onAppStoreClick, onGooglePlayClick
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
@@ -75,5 +70,5 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         </div>
       </a>
     </div>
-  )
+  );
 },

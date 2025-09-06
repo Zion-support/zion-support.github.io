@@ -37,19 +37,7 @@ export default function SavedTalentsPage() {
           .select(
             `
             talent_profile (
-              id;
-              user_id;
-              full_name;
-              professional_title;
-              profile_picture_url;
-              hourly_rate;
-              bio;
-              years_experience;
-              key_projects;
-              skills;
-              location;
-              availability;
-              is_verified
+              id, user_id, full_name, professional_title, profile_picture_url, hourly_rate, bio, years_experience, key_projects, skills, location, availability, is_verified
             )
           `
           )
@@ -188,5 +176,5 @@ export default function SavedTalentsPage() {
         )}
       </div>
     </>
-  )
+  );
 }

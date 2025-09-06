@@ -5,25 +5,11 @@ import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {
   src: string,
   alt: string,
-  width?: number;
-  height?: number;
-  className?: string;
-  fallbackSrc?: string;
-  priority?: boolean;
-  sizes?: string;
-  quality?: number
+  width?: number, height?: number, className?: string, fallbackSrc?: string, priority?: boolean, sizes?: string, quality?: number
 }
 
 export function SafeImage({
-  src;
-  alt;
-  width;
-  height;
-  className = '';
-  fallbackSrc;
-  priority = false;
-  sizes;
-  quality = 75}: SafeImageProps) {
+  src, alt, width, height, className = '', fallbackSrc, priority = false, sizes, quality = 75}: SafeImageProps) {
   const [hasError, setHasError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState(src);
   const handleError = () => {
@@ -65,5 +51,5 @@ export function SafeImage({
       // Add unoptimized as fallback for problematic images
       unoptimized={hasError}
     />
-  )
+  );
 } 

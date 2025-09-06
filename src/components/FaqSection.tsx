@@ -1,6 +1,7 @@
 
 import { GradientHeading } from "./GradientHeading";
 import { FileText } from 'lucide-react'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const faqs = [
   {
@@ -65,5 +66,5 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

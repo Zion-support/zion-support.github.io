@@ -3,6 +3,7 @@ import React from "react";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+import { Star, PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus();
   const steps: OnboardingStep[] = [
@@ -24,5 +25,5 @@ export function ClientOnboardingSteps() {
       completed: onboardingStatus.responseReceived,
       link: "/client-dashboard",
       action: "Check Dashboard"}],
-  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }

@@ -1,10 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 interface SkeletonProps {
-  className?: string;
-  height?: string;
-  width?: string;
-  rounded?: string
+  className?: string, height?: string, width?: string, rounded?: string
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
@@ -83,6 +80,6 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
         </div>
       </div>
     </div>
-  )
+  );
 };
 export default Skeleton;

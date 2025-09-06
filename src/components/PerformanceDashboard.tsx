@@ -3,6 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 
 interface PerformanceMetrics {
   buildSize: string,
@@ -83,7 +86,7 @@ const PerformanceDashboard: React.FC = () => {
       case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
       case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
       default: return <AlertCircle className="h-4 w-4 text-gray-500" />
-    }
+    };
   },
   const getImpactColor = (impact: string) => {
     switch (impact) {
@@ -91,7 +94,7 @@ const PerformanceDashboard: React.FC = () => {
       case 'medium': return 'bg-yellow-100 text-yellow-800';
       case 'low': return 'bg-green-100 text-green-800';
       default: return 'bg-gray-100 text-gray-800'
-    }
+    };
   },
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -100,7 +103,7 @@ const PerformanceDashboard: React.FC = () => {
       case 'ux': return <Search className="h-4 w-4" />;
       case 'build': return <TrendingUp className="h-4 w-4" />;
       default: return <CheckCircle className="h-4 w-4" />
-    }
+    };
   },
   const completedImprovements = improvements.filter(imp => imp.status === 'completed');
   return (
@@ -209,6 +212,6 @@ const PerformanceDashboard: React.FC = () => {
         </Button>
       </div>
     </div>
-  )
+  );
 },
 export default PerformanceDashboard;

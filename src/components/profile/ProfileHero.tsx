@@ -4,28 +4,17 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
 import { Star } from 'lucide-react'
 import { cn } from "@/lib/utils";
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 interface ProfileHeroProps {
   name: string,
   title: string,
-  avatarUrl?: string;
-  coverImageUrl?: string;
-  location?: string;
-  rating?: number;
-  reviewCount?: number;
-  aiScore?: number;
-  profileType: 'service' | 'talent'
+  avatarUrl?: string, coverImageUrl?: string, location?: string, rating?: number, reviewCount?: number, aiScore?: number, profileType: 'service' | 'talent'
 }
 
 export function ProfileHero({
   name,
-  title;
-  avatarUrl;
-  coverImageUrl;
-  location;
-  rating;
-  reviewCount;
-  aiScore;
-  profileType
+  title, avatarUrl, coverImageUrl, location, rating, reviewCount, aiScore, profileType
 }: ProfileHeroProps) {
   return (
     <div className="w-full overflow-hidden">
@@ -97,5 +86,5 @@ export function ProfileHero({
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -44,12 +44,9 @@ import React from 'react';
     { id: '2024', name: '2024' },
     { id: '2023', name: '2023' }
   ],
-  Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink;
-  TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
-  Clock, BookOpen, Video, Podcast, FileText, Search
+  Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink, TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap, Clock, BookOpen, Video, Podcast, FileText, Search
 import Link from 'next/link';
-  return (
-    <UltraFuturisticBackground>
+  return(<UltraFuturisticBackground>
       <div className="min-h-screen">
         <Head>
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
@@ -64,7 +61,7 @@ import Link from 'next/link';
       date: "2025-01-15",
       readTime: "5 min read",
       image: "/images/news/quantum-ai-launch.jpg",
-      tags: ["Quantum Computing", "AI", "Product Launch"]
+      tags: ["Quantum Computing", "AI", "Product Launch"];
     };
     {
       id: 2,
@@ -109,8 +106,7 @@ import Link from 'next/link';
       readTime: "7 min read",
       image: "/images/news/ai-ethics-framework.jpg",
       tags: ["AI Ethics", "Governance", "Policy"]
-    };
-    {
+    }, {
       id: 6,
       title: "Financial Services Innovation Award Winner",
       excerpt: "Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.",
@@ -369,6 +365,7 @@ export default function NewsPage() {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Zap, Star, Calendar } from 'lucide-react';
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -500,8 +497,7 @@ export default function News() {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory, return matchesSearch && matchesCategory;
   });
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -518,7 +514,7 @@ export default function News() {
       research: 'from-orange-500 to-red-500',
       industry: 'from-indigo-500 to-purple-500'
     },
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
   };
   return (
     <div className="min-h-screen bg-black text-white">
@@ -539,8 +535,7 @@ export default function News() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
           >
-            Stay updated with the latest developments in AI consciousness, quantum computing;
-            and emerging technologies from Zion Tech Group.
+            Stay updated with the latest developments in AI consciousness, quantum computing, and emerging technologies from Zion Tech Group.
           </motion.p>
           
           {/* Search and Filter */}
@@ -569,7 +564,7 @@ export default function News() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white';
                   }`}
                 >
                   {category.name} ({category.count})
@@ -1309,8 +1304,7 @@ export default function News() {
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                For press inquiries, media interviews, or additional information;
-                please contact our communications team.
+                For press inquiries, media interviews, or additional information, please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -1405,7 +1399,7 @@ export default function News() {
       category: "Partnerships",
       author: "Sarah Chen",
       readTime: "2 min read",
-      image: "🤝"
+      image: "🤝";
     },
     {
       id: 3,
@@ -1595,5 +1589,5 @@ export default function News() {
         </main>
       </div>
     </>
-  )
+  );
 }

@@ -1,19 +1,11 @@
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button';
 interface EmptyStateProps {
-  text?: string;
-  description?: string;
-  onRetry?: () => void;
-  showRetry?: boolean;
-  icon?: React.ReactNode
+  text?: string, description?: string, onRetry?: () => void, showRetry?: boolean, icon?: React.ReactNode
 }
 
 export function EmptyState({ 
-  text = "No items available";
-  description;
-  onRetry;
-  showRetry = false;
-  icon
+  text = "No items available", description, onRetry, showRetry = false, icon
 }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
@@ -39,5 +31,5 @@ export function EmptyState({
         </Button>
       )}
     </div>
-  )
+  );
 } 

@@ -15,6 +15,7 @@ import { format } from "date-fns";
 import { CalendarIcon, Loader2 } from 'lucide-react'
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
+import { Star, Calendar } from 'lucide-react';
 // Define form schema
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required");
@@ -27,15 +28,13 @@ const formSchema = z.object({
   location: z.string().optional()}),
 type FormValues = z.infer<typeof formSchema>;
 interface WorkExperienceItemFormProps {
-  initialData?: WorkExperience;
-  onSubmit: (data: WorkExperience) => Promise<void>,
+  initialData?: WorkExperience, onSubmit: (data: WorkExperience) => Promise<void>,
   onCancel: () => void
 }
 
 export function WorkExperienceItemForm({
   initialData,
-  onSubmit;
-  onCancel}: WorkExperienceItemFormProps) {
+  onSubmit, onCancel}: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   // Set up form
   const form = useForm<FormValues>({
@@ -48,8 +47,7 @@ export function WorkExperienceItemForm({
       is_current: initialData?.is_current || false,
       description: initialData?.description || "",
       location: initialData?.location || ""}}),
-  const { isSubmitting } = form.formState;
-  const watchIsCurrent = form.watch("is_current");
+  const { isSubmitting } = form.formState, const watchIsCurrent = form.watch("is_current");
   const watchRoleTitle = form.watch("role_title");
   const watchCompanyName = form.watch("company_name");
   const handleFormSubmit = async (values: FormValues) => {
@@ -132,7 +130,9 @@ export function WorkExperienceItemForm({
                       onCheckedChange={field.onChange}
                       id="current-position"
                     />
-                    <label htmlFor="current-position" className="text-sm text-muted-foreground">
+                    <label htmlFor="current-position" className="text-sm text-muted-foreground" htmlFor="input-
+                      I currently work here
+                    ">
                       I currently work here
                     </label>
                   </div>
@@ -301,5 +301,5 @@ export function WorkExperienceItemForm({
         initialContent={form.getValues("description") || ""}
       />
     </>
-  )
+  );
 }

@@ -18,8 +18,7 @@ export default function GrantsAdminPage() {
     load()
   };
   const saveMilestones = async () => {
-    if (!selected) return;
-    await fetch(`/api/grants/${selected.id}/milestones`, { method: 'POST', headers, body: JSON.stringify({ milestones }) }),
+    if (!selected) return, await fetch(`/api/grants/${selected.id}/milestones`, { method: 'POST', headers, body: JSON.stringify({ milestones }) }),
     alert('Milestones saved')
   };
   const markComplete = async (milestoneId: string) => {
@@ -86,5 +85,5 @@ export default function GrantsAdminPage() {
         </div>
       </div>
     </EnhancedLayout>
-  )
+  );
 }

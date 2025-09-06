@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 const Homepage2026: React.FC = () => {
   return (
     <Layout>
@@ -394,6 +395,6 @@ const Homepage2026: React.FC = () => {
         </section>
       </main>
     </Layout>
-  )
+  );
 },
 export default Homepage2026;

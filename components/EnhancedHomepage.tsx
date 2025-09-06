@@ -16,6 +16,7 @@ import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-
 import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
 import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+import { Star } from 'lucide-react';
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -57,11 +58,10 @@ const EnhancedHomepage: React.FC = () => {
   ],
   // Filter services by category
   const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allRevolutionaryServices;
-    return allRevolutionaryServices.filter(service => 
+    if (selectedCategory === 'all') return allRevolutionaryServices, return allRevolutionaryServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
-    )
+    );
   };
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },
@@ -475,6 +475,6 @@ const EnhancedHomepage: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  )
+  );
 },
 export default EnhancedHomepage;

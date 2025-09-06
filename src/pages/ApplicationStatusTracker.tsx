@@ -5,6 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Briefcase, Inbox } from 'lucide-react'
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
   return (
@@ -44,5 +45,5 @@ export default function ApplicationStatusTracker() {
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
-  )
+  );
 }

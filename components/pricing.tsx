@@ -11,6 +11,7 @@ import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
+import { Star } from 'lucide-react';
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
@@ -50,7 +51,7 @@ export default function PricingPage() {
                         (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||
                         (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) ||
                         (selectedPriceRange === '$20K+' && price >= 20000);
-    return matchesCategory && matchesPrice
+    return matchesCategory && matchesPrice;
   });
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -60,12 +61,11 @@ export default function PricingPage() {
   },
   // Group services by category for better organization
   const servicesByCategory = filteredServices.reduce((acc, service) => {
-    const category = Array.isArray(service.category) ? service.category[0] : service.category;
-    if (!acc[category]) {
+    const category = Array.isArray(service.category) ? service.category[0] : service.category, if (!acc[category]) {
       acc[category] = []
     }
     acc[category].push(service);
-    return acc
+    return acc;
   }, {} as Record<string, typeof filteredServices>);
   const faqs = [
     {
@@ -394,5 +394,5 @@ export default function PricingPage() {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-  )
+  );
 }

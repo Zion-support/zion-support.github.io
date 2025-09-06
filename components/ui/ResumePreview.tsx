@@ -2,29 +2,20 @@ import React, { forwardRef } from 'react';
 export type ResumeData = {
   name: string,
   contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string };
-  summary?: string;
-  skills?: string[];
+  summary?: string, skills?: string[];
   technologies?: string[];
   experience?: Array<{
     title: string,
-    company?: string;
-    start?: string;
-    end?: string;
-    location?: string;
-    bullets?: string[]
+    company?: string, start?: string, end?: string, location?: string, bullets?: string[]
   }>;
   education?: Array<{
     institution: string,
-    degree?: string;
-    start?: string;
-    end?: string
+    degree?: string, start?: string, end?: string
   }>;
   certifications?: string[];
   portfolio?: Array<{
     title: string,
-    description?: string;
-    link?: string;
-    technologies?: string[]
+    description?: string, link?: string, technologies?: string[]
   }>
 };
 export type ResumePreviewProps = {
@@ -198,7 +189,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
           ) : null}
         </div>
       </div>
-    )
+    );
   }
 ),
 ResumePreview.displayName = 'ResumePreview';

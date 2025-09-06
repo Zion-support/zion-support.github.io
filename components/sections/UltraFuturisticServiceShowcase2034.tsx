@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
+import { Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -74,7 +75,7 @@ export default function UltraFuturisticServiceShowcase2034() {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
   });
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -369,5 +370,5 @@ export default function UltraFuturisticServiceShowcase2034() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

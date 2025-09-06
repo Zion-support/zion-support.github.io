@@ -1,28 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
+import { Zap, Star } from 'lucide-react';
 interface Service {
   id: string,
   name: string,
   tagline: string,
   description: string,
   price?: string | {
-    monthly?: number;
-    yearly?: number;
-    currency?: string;
-    trialDays?: number;
-    setupTime?: string
+    monthly?: number, yearly?: number, currency?: string, trialDays?: number, setupTime?: string
   };
-  period?: string;
-  pricing?: any;
-  features: string[],
-  popular?: boolean;
-  category: string,
+  period?: string, pricing?: any, features: string[],
+  popular?: boolean, category: string,
   icon: string,
-  marketPrice?: string;
-  competitors?: string[];
-  targetMarket?: string;
-  useCases?: string[];
+  marketPrice?: string, competitors?: string[];
+  targetMarket?: string, useCases?: string[];
   integration?: string[];
   benefits?: string[]
 }
@@ -114,15 +106,12 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           iconBg: 'bg-gray-500/20',
           iconBorder: 'border-gray-400/30'
         }
-    }
+    };
   },
   const styles = getVariantStyles();
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI')) return Brain,
-    if (category.includes('Quantum')) return Atom;
-    if (category.includes('Space')) return Rocket;
-    if (category.includes('Cybersecurity')) return Shield;
-    return TrendingUp
+    if (category.includes('Quantum')) return Atom, if (category.includes('Space')) return Rocket, if (category.includes('Cybersecurity')) return Shield, return TrendingUp;
   };
   const CategoryIcon = getCategoryIcon(service.category);
   return (
@@ -262,7 +251,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
     </motion.div>
-  )
+  );
 }),
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;

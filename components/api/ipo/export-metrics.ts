@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireSuperadminApi } from '../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-  const rows = [
+  if (!requireSuperadminApi(req, res)) return, const rows = [
     ['MetricValueTrend%'];
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];

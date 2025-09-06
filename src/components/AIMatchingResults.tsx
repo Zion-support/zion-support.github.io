@@ -7,20 +7,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { BriefcaseIcon } from 'lucide-react';
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
-  isLoading?: boolean;
-  projectDescription?: string;
-  serviceType?: string
+  isLoading?: boolean, projectDescription?: string, serviceType?: string
 }
 
 export function AIMatchingResults({
-  matches;
-  onSelectMatch;
-  isLoading = false;
-  projectDescription = "";
-  serviceType: _serviceType = ""
+  matches, onSelectMatch, isLoading = false, projectDescription = "", serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all");
   // Group matches by category
@@ -33,9 +30,7 @@ export function AIMatchingResults({
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase(),
-    if (lowerCategory.includes("talent")) return User;
-    if (lowerCategory.includes("equipment")) return Monitor;
-    return BriefcaseIcon
+    if (lowerCategory.includes("talent")) return User, if (lowerCategory.includes("equipment")) return Monitor, return BriefcaseIcon;
   };
   if (isLoading) {
     return (
@@ -67,7 +62,7 @@ export function AIMatchingResults({
           )}
         </CardContent>
       </Card>
-    )
+    );
   }
   
   return (
@@ -160,5 +155,5 @@ export function AIMatchingResults({
         ))}
       </Tabs>
     </div>
-  )
+  );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -105,8 +106,7 @@ export default function UltraFuturisticHero2032() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
         >
-          Experience the revolution with our cutting-edge AI consciousness, quantum computing;
-          space technology, and emerging tech solutions. Transform your business with 
+          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with 
           technologies that were once science fiction.
         </motion.p>
 

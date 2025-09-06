@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Star, Calendar } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -351,5 +352,5 @@ export default function UltraFuturisticFooter2029V2() {
         </div>
       </motion.div>
     </footer>
-  )
+  );
 }

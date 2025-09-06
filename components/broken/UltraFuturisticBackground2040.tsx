@@ -3,13 +3,8 @@ import { motion } from 'framer-motion';
 const UltraFuturisticBackground2040: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    let animationFrameId: number,
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
+    if (!ctx) return, canvas.width = window.innerWidth, canvas.height = window.innerHeight, let animationFrameId: number,
     let time = 0;
     // Particle system
     const particles: Array<{
@@ -41,33 +36,23 @@ const UltraFuturisticBackground2040: React.FC = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx, particle.y += particle.vy;
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width, if (particle.x > canvas.width) particle.x = 0, if (particle.y < 0) particle.y = canvas.height, if (particle.y > canvas.height) particle.y = 0;
         // Draw particle with glow effect
         ctx.save();
         ctx.globalAlpha = particle.opacity;
         // Glow effect
-        ctx.shadowColor = particle.color;
-        ctx.shadowBlur = 10;
-        ctx.beginPath();
+        ctx.shadowColor = particle.color, ctx.shadowBlur = 10, ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.fill();
+        ctx.fillStyle = particle.color, ctx.fill();
         ctx.restore()
       });
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
-      ctx.lineWidth = 0.5;
-      for (let i = 0, i < particles.length, i++) {
+      ctx.lineWidth = 0.5, for (let i = 0, i < particles.length, i++) {
         for (let j = i + 1, j < particles.length, j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const dx = particles[i].x - particles[j].x, const dy = particles[i].y - particles[j].y, const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -79,10 +64,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
 
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
-      ctx.lineWidth = 0.5;
-      const gridSize = 50;
-      const offset = (time * 20) % gridSize;
-      for (let x = offset, x < canvas.width, x += gridSize) {
+      ctx.lineWidth = 0.5, const gridSize = 50, const offset = (time * 20) % gridSize, for (let x = offset, x < canvas.width, x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
@@ -107,8 +89,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         ctx.translate(shape.x, shape.y);
         ctx.rotate(shape.rotation);
         ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
-        ctx.lineWidth = 2;
-        if (index === 0) {
+        ctx.lineWidth = 2, if (index === 0) {
           // Square
           ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size)
         } else if (index === 1) {
@@ -129,16 +110,12 @@ const UltraFuturisticBackground2040: React.FC = () => {
         ctx.restore()
       });
       // Draw energy waves
-      const waveCount = 3;
-      for (let i = 0, i < waveCount, i++) {
+      const waveCount = 3, for (let i = 0, i < waveCount, i++) {
         const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
-        const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
-        ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`;
-        ctx.lineWidth = 3;
-        ctx.beginPath();
+        const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50, ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`;
+        ctx.lineWidth = 3, ctx.beginPath();
         for (let x = -100, x < canvas.width + 100, x += 5) {
-          const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20;
-          if (x === -100) {
+          const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20, if (x === -100) {
             ctx.moveTo(x, y)
           } else {
             ctx.lineTo(x, y)
@@ -151,8 +128,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
     };
     animate();
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight
     };
     window.addEventListener('resize', handleResize);
     return () => {

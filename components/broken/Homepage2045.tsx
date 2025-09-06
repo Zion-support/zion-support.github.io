@@ -7,6 +7,7 @@ import { innovative2040FuturisticServices } from '../data/innovative-2040-futuri
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
+import { Star } from 'lucide-react';
 // Loading fallback component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -35,7 +36,7 @@ const Homepage2045: React.FC = () => {
       setIsLoading(false);
       setIsVisible(true)
     }, 800);
-    return () => clearTimeout(timer)
+    return () => clearTimeout(timer);
   }, []);
   // Intersection Observer for better performance
   useEffect(() => {
@@ -53,7 +54,7 @@ const Homepage2045: React.FC = () => {
       const sections = document.querySelectorAll('section[id]');
       sections.forEach((section) => observer.observe(section));
       return () => observer.disconnect()
-    }
+    };
   }, []);
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -77,7 +78,7 @@ const Homepage2045: React.FC = () => {
     const colors = [
       'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
     ],
-    return colors[index % colors.length]
+    return colors[index % colors.length];
   };
   if (isLoading) {
     return (
@@ -87,11 +88,10 @@ const Homepage2045: React.FC = () => {
           <p className="text-cyan-400 text-xl">Loading Zion Tech Group...</p>
         </div>
       </div>
-    )
+    );
   }
 
-  return (
-    <Layout>
+  return(<Layout>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         {/* Hero Section */}
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -125,8 +125,7 @@ const Homepage2045: React.FC = () => {
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
               animate={{
                 rotate: [45, 405];
-                scale: [1, 1.15, 1];
-                opacity: [0.3, 0.5, 0.3]}}
+                scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3]}}
               transition={{
                 duration: 10,
                 repeat: Infinity,

@@ -5,17 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight } from 'lucide-react';
 interface BrowseItem {
   id: string,
   title: string,
   subtitle: string,
   description: string,
-  location?: string;
-  badges: string[],
-  price?: string;
-  image?: string;
-  match?: number;
-  timePosted?: string
+  location?: string, badges: string[],
+  price?: string, image?: string, match?: number, timePosted?: string
 }
 
 interface BrowseCardsProps {
@@ -126,5 +125,5 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         </Card>
       ))}
     </div>
-  )
+  );
 }

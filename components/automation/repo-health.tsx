@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: data }, revalidate: 3600 }
   } catch {
     return { props: { report: null }, revalidate: 3600 }
-  }
+  };
 },
 export default function RepoHealth({ report }: Props) {
   if (!report) return <div>No report yet. Check back soon.</div>;
@@ -51,5 +51,5 @@ export default function RepoHealth({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
+  );
 }

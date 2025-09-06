@@ -11,6 +11,8 @@ import { useFavorites } from '@/hooks/useFavorites';
 import { useToast } from "@/hooks/use-toast";
 import { EmptyState } from "@/components/ui/empty-state";
 import Link from 'next/link';
+import { Badge } from '@/components/ui/badge';
+import { Star, UserCheck } from 'lucide-react';
 // Lazy load heavy components to prevent router abort
 const CommunityDiscussion = dynamic(() => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
   loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
@@ -33,12 +35,10 @@ export default function Dashboard() {
   const { user, loading } = useRequireAuth(), // This will handle authentication and redirects
   const { toast } = useToast();
   // Add safe checks for user ID to prevent premature API calls
-  const userId = user?.id;
-  const { data: orders = [], isLoading: ordersLoading } = useGetOrdersQuery(userId),
+  const userId = user?.id, const { data: orders = [], isLoading: ordersLoading } = useGetOrdersQuery(userId),
   const { favorites } = useFavorites();
   // Type assertion to work around Supabase User type limitations
-  const userWithExtendedProps = user as any;
-  const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent';
+  const userWithExtendedProps = user as any, const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent';
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent';
   if (loading) {
     return (
@@ -60,7 +60,7 @@ export default function Dashboard() {
           <p className="text-gray-600">Redirecting to login...</p>
         </div>
       </div>
-    )
+    );
   }
 
   const handleTestNotification = async () => {
@@ -361,5 +361,5 @@ export default function Dashboard() {
       </div>
       <GuidedTour role={roleForTour} />
     </>
-  )
+  );
 }

@@ -12,6 +12,8 @@ import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 
 interface ProductListingCardProps {
   listing: ProductListing,
@@ -21,10 +23,8 @@ interface ProductListingCardProps {
 }
 
 const ProductListingCardComponent = ({
-  listing;
-  view = 'grid';
-  onRequestQuote;
-  detailBasePath = '/marketplace/listing'
+  listing, view = 'grid';
+  onRequestQuote, detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid';
   const router = useRouter();
@@ -54,7 +54,7 @@ const ProductListingCardComponent = ({
   const { formatPrice } = useCurrency();
   const getPrice = () => {
     if (listing.price === null) return "Custom pricing";
-    return formatPrice(listing.price)
+    return formatPrice(listing.price);
   };
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
@@ -80,7 +80,7 @@ const ProductListingCardComponent = ({
       return
     }
     
-    router.push(`${detailBasePath}/${listing.id}`)
+    router.push(`${detailBasePath}/${listing.id}`);
   };
   const dispatch = useDispatch<AppDispatch>();
   const addToCart = () => {
@@ -115,7 +115,7 @@ const ProductListingCardComponent = ({
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault(),
           handleViewListing()
-        }
+        };
       }}
     >
       {/* Image */}

@@ -7,13 +7,8 @@ interface UltraFuturisticBackground2030Props {
 const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    let animationId: number,
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
+    if (!ctx) return, canvas.width = window.innerWidth, canvas.height = window.innerHeight, let animationId: number,
     let particles: Array<{
       x: number,
       y: number,
@@ -43,19 +38,13 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx, particle.y += particle.vy;
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width, if (particle.x > canvas.width) particle.x = 0, if (particle.y < 0) particle.y = canvas.height, if (particle.y > canvas.height) particle.y = 0;
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
+        ctx.fillStyle = particle.color, ctx.globalAlpha = particle.opacity, ctx.fill();
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
@@ -67,23 +56,17 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = particle.color;
-              ctx.globalAlpha = (100 - distance) / 100 * 0.3;
-              ctx.lineWidth = 0.5;
-              ctx.stroke()
+              ctx.strokeStyle = particle.color, ctx.globalAlpha = (100 - distance) / 100 * 0.3, ctx.lineWidth = 0.5, ctx.stroke()
             }
           }
         })
       });
-      ctx.globalAlpha = 1;
-      animationId = requestAnimationFrame(animate)
+      ctx.globalAlpha = 1, animationId = requestAnimationFrame(animate)
     };
     initParticles();
     animate();
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles()
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight, initParticles()
     };
     window.addEventListener('resize', handleResize);
     return () => {

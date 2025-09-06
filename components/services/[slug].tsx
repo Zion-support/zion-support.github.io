@@ -26,7 +26,7 @@ function getPriceValue(price: Service['price']): string {
 	if (typeof price === 'string') {
 		return price
 	}
-	return '99'
+	return '99';
 }
 
 function getAllServices(): Service[] {
@@ -44,7 +44,7 @@ function getAllServices(): Service[] {
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
@@ -57,7 +57,7 @@ function extractServiceSlugFromLink(link: string): string | null {
 		return null
 	} catch {
 		return null
-	}
+	};
 }
 
 export async function getStaticPaths() {
@@ -69,8 +69,7 @@ export async function getStaticPaths() {
 	];
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
-		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
-		if (fromLink && !staticServiceSlugs.includes(fromLink)) {
+		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null, if (fromLink && !staticServiceSlugs.includes(fromLink)) {
 			slugs.add(fromLink);
 			continue
 		}
@@ -88,7 +87,7 @@ export async function getStaticPaths() {
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
-	}
+	};
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
@@ -97,7 +96,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false,
 		const fromLink = extractServiceSlugFromLink(s.link);
-		return fromLink === incomingSlug
+		return fromLink === incomingSlug;
 	});
 	if (!service) {
 		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
@@ -109,12 +108,11 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 	return {
 		props: { service }
-	}
+	};
 }
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
-	return (
-		<Layout>
+	return(<Layout>
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
@@ -125,8 +123,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						__html: JSON.stringify(
 							{
 								"@context": "https://schema.org",
-								"@type": "Service";
-								name: service.name,
+								"@type": "Service", name: service.name,
 								description: service.tagline || service.description,
 								url: service.link,
 								provider: {
@@ -141,8 +138,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 									availability: "https://schema.org/InStock"
 								}
 							},
-							null;
-							2
+							null, 2
 							)
 						}}
 				/>
@@ -291,5 +287,5 @@ const ServiceDetail: NextPage = () => {
     </EnhancedLayout>
   )
 },
-export default ServiceDetail
+export default ServiceDetail;
 }

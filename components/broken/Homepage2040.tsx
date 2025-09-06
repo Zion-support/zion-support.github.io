@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Import new service data
 import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
+import { Zap, Star } from 'lucide-react';
 // Lazy load heavy components for better performance
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 const Homepage2040: React.FC = () => {
@@ -15,7 +16,7 @@ const Homepage2040: React.FC = () => {
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length)
     }, 5000);
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   }, []);
   // Enhanced animation variants for better performance
   const containerVariants = {
@@ -151,7 +152,7 @@ const Homepage2040: React.FC = () => {
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 3}s`
+                    animationDelay: `${Math.random() * 3}s`;
                   }}
                   animate={{
                     scale: [0, 1, 0];

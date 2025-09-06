@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { ThumbsUp, ThumbsDown } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -12,12 +13,10 @@ interface HelpArticleViewProps {
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
   // Find the article in all categories
-  let article;
-  for (const category of HELP_CATEGORIES) {
+  let article, for (const category of HELP_CATEGORIES) {
     const found = category.articles.find(a => a.id === articleId);
     if (found) {
-      article = found;
-      break
+      article = found, break
     }
   }
   
@@ -101,5 +100,5 @@ function formatDate(date: string): string {
     year: "numeric",
     month: "long",
     day: "numeric"
-  })
+  });
 }

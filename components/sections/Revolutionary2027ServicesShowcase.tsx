@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
 import Link from 'next/link';
+import { Zap, Star } from 'lucide-react';
 const Revolutionary2027ServicesShowcase = () => {
   const featuredServices = [
     {
@@ -267,6 +268,6 @@ const Revolutionary2027ServicesShowcase = () => {
         </motion.div>
       </div>
     </section>
-  )
+  );
 },
 export default Revolutionary2027ServicesShowcase;

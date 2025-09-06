@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight, Zap, Star } from 'lucide-react';
 interface SidebarItem {
   name: string,
   href: string,
-  icon?: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
-  isNew?: boolean;
-  isHot?: boolean
+  icon?: React.ReactNode, description?: string, children?: SidebarItem[];
+  badge?: string, isNew?: boolean, isHot?: boolean
 }
 
 const contactInfo = {
@@ -229,7 +226,7 @@ const supportLinks = [
     } else {
       newExpanded.add(title)
     }
-    setExpandedSections(newExpanded)
+    setExpandedSections(newExpanded);
   };
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
@@ -571,6 +568,6 @@ const supportLinks = [
       <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
       <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
     </motion.aside>
-  )
+  );
 },
 export default EnhancedSidebar2025;

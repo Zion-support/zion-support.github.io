@@ -16,13 +16,9 @@ export default function UltraFuturisticBackground2029() {
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
+    if (!ctx) return, const resizeCanvas = () => {
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -58,29 +54,19 @@ export default function UltraFuturisticBackground2029() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2;
-        canvas.height / 2;
-        0;
-        canvas.width / 2;
-        canvas.height / 2;
-        Math.max(canvas.width, canvas.height) / 2
+        canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       );
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
       gradient.addColorStop(0.3, 'rgba(6, 182, 212, 0.1)');
       gradient.addColorStop(0.6, 'rgba(139, 92, 246, 0.05)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = gradient, ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
         // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx, particle.y += particle.vy;
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width, if (particle.x > canvas.width) particle.x = 0, if (particle.y < 0) particle.y = canvas.height, if (particle.y > canvas.height) particle.y = 0;
         // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.opacity;
@@ -88,12 +74,9 @@ export default function UltraFuturisticBackground2029() {
         switch (particle.type) {
           case 'quantum':
             // Quantum particles with glow effect
-            ctx.shadowColor = particle.color;
-            ctx.shadowBlur = 20;
-            ctx.beginPath();
+            ctx.shadowColor = particle.color, ctx.shadowBlur = 20, ctx.beginPath();
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fillStyle = particle.color;
-            ctx.fill();
+            ctx.fillStyle = particle.color, ctx.fill();
             // Quantum entanglement lines
             if (index % 10 === 0) {
               const partner = particlesRef.current[(index + 50) % particlesRef.current.length];
@@ -103,32 +86,23 @@ export default function UltraFuturisticBackground2029() {
                 );
                 if (distance < 100) {
                   ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`;
-                  ctx.lineWidth = 1;
-                  ctx.beginPath();
+                  ctx.lineWidth = 1, ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
                   ctx.stroke()
                 }
               }
             }
-            break;
-          case 'holographic':
+            break, case 'holographic':
             // Holographic particles with rainbow effect
-            const time = Date.now() * 0.001;
-            const hue = (time * 50 + index * 10) % 360;
-            ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
+            const time = Date.now() * 0.001, const hue = (time * 50 + index * 10) % 360, ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
             ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
-            ctx.shadowBlur = 15;
-            ctx.beginPath();
+            ctx.shadowBlur = 15, ctx.beginPath();
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
             ctx.fill();
-            break;
-          case 'neural':
+            break, case 'neural':
             // Neural particles with network connections
-            ctx.fillStyle = particle.color;
-            ctx.shadowColor = particle.color;
-            ctx.shadowBlur = 10;
-            ctx.beginPath();
+            ctx.fillStyle = particle.color, ctx.shadowColor = particle.color, ctx.shadowBlur = 10, ctx.beginPath();
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
             ctx.fill();
             // Neural network connections
@@ -142,21 +116,15 @@ export default function UltraFuturisticBackground2029() {
                   Math.pow(particle.x - connection.x, 2) + Math.pow(particle.y - connection.y, 2)
                 );
                 ctx.strokeStyle = `rgba(16, 185, 129, ${0.4 * (1 - distance / 80)})`;
-                ctx.lineWidth = 0.5;
-                ctx.beginPath();
+                ctx.lineWidth = 0.5, ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(connection.x, connection.y);
                 ctx.stroke()
               })
             }
-            break;
-          case 'cyberpunk':
+            break, case 'cyberpunk':
             // Cyberpunk particles with electric effect
-            ctx.strokeStyle = particle.color;
-            ctx.lineWidth = 2;
-            ctx.shadowColor = particle.color;
-            ctx.shadowBlur = 25;
-            ctx.beginPath();
+            ctx.strokeStyle = particle.color, ctx.lineWidth = 2, ctx.shadowColor = particle.color, ctx.shadowBlur = 25, ctx.beginPath();
             ctx.moveTo(particle.x - particle.size, particle.y - particle.size);
             ctx.lineTo(particle.x + particle.size, particle.y + particle.size);
             ctx.moveTo(particle.x + particle.size, particle.y - particle.size);
@@ -185,17 +153,11 @@ export default function UltraFuturisticBackground2029() {
     const time = Date.now() * 0.0005,
     // Floating hexagons
     for (let i = 0, i < 5, i++) {
-      const x = (width * 0.2) + Math.sin(time + i) * 100;
-      const y = (height * 0.3) + Math.cos(time + i * 0.7) * 80;
-      const size = 20 + Math.sin(time * 2 + i) * 10;
-      ctx.save();
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
+      const x = (width * 0.2) + Math.sin(time + i) * 100, const y = (height * 0.3) + Math.cos(time + i * 0.7) * 80, const size = 20 + Math.sin(time * 2 + i) * 10, ctx.save();
+      ctx.globalAlpha = 0.1, ctx.strokeStyle = '#00ffff';
+      ctx.lineWidth = 1, ctx.beginPath();
       for (let j = 0, j < 6, j++) {
-        const angle = (j * Math.PI) / 3 + time;
-        const px = x + size * Math.cos(angle);
+        const angle = (j * Math.PI) / 3 + time, const px = x + size * Math.cos(angle);
         const py = y + size * Math.sin(angle);
         if (j === 0) ctx.moveTo(px, py);
         else ctx.lineTo(px, py)
@@ -207,17 +169,11 @@ export default function UltraFuturisticBackground2029() {
 
     // Floating triangles
     for (let i = 0, i < 3, i++) {
-      const x = (width * 0.8) + Math.sin(time * 0.8 + i) * 120;
-      const y = (height * 0.7) + Math.cos(time * 1.2 + i) * 100;
-      const size = 15 + Math.sin(time * 1.5 + i) * 8;
-      ctx.save();
-      ctx.globalAlpha = 0.08;
-      ctx.strokeStyle = '#8b5cf6';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
+      const x = (width * 0.8) + Math.sin(time * 0.8 + i) * 120, const y = (height * 0.7) + Math.cos(time * 1.2 + i) * 100, const size = 15 + Math.sin(time * 1.5 + i) * 8, ctx.save();
+      ctx.globalAlpha = 0.08, ctx.strokeStyle = '#8b5cf6';
+      ctx.lineWidth = 1, ctx.beginPath();
       for (let j = 0, j < 3, j++) {
-        const angle = (j * Math.PI * 2) / 3 + time;
-        const px = x + size * Math.cos(angle);
+        const angle = (j * Math.PI * 2) / 3 + time, const px = x + size * Math.cos(angle);
         const py = y + size * Math.sin(angle);
         if (j === 0) ctx.moveTo(px, py);
         else ctx.lineTo(px, py)
@@ -232,15 +188,12 @@ export default function UltraFuturisticBackground2029() {
     // Horizontal energy waves
     for (let i = 0, i < 3, i++) {
       ctx.save();
-      ctx.globalAlpha = 0.05;
-      ctx.strokeStyle = `hsl(${180 + i * 60}, 70%, 60%)`;
-      ctx.lineWidth = 2;
-      ctx.beginPath();
+      ctx.globalAlpha = 0.05, ctx.strokeStyle = `hsl(${180 + i * 60}, 70%, 60%)`;
+      ctx.lineWidth = 2, ctx.beginPath();
       for (let x = 0, x < width, x += 5) {
         const y = height * 0.5 + 
                   Math.sin(x * 0.01 + time + i) * 50 +
-                  Math.sin(x * 0.02 + time * 2 + i) * 25;
-        if (x === 0) ctx.moveTo(x, y);
+                  Math.sin(x * 0.02 + time * 2 + i) * 25, if (x === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y)
       }
       
@@ -251,15 +204,12 @@ export default function UltraFuturisticBackground2029() {
     // Vertical energy waves
     for (let i = 0, i < 2, i++) {
       ctx.save();
-      ctx.globalAlpha = 0.04;
-      ctx.strokeStyle = `hsl(${240 + i * 60}, 70%, 60%)`;
-      ctx.lineWidth = 2;
-      ctx.beginPath();
+      ctx.globalAlpha = 0.04, ctx.strokeStyle = `hsl(${240 + i * 60}, 70%, 60%)`;
+      ctx.lineWidth = 2, ctx.beginPath();
       for (let y = 0, y < height, y += 5) {
         const x = width * 0.5 + 
                   Math.sin(y * 0.01 + time + i) * 60 +
-                  Math.sin(y * 0.015 + time * 1.5 + i) * 30;
-        if (y === 0) ctx.moveTo(x, y);
+                  Math.sin(y * 0.015 + time * 1.5 + i) * 30, if (y === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y)
       }
       
@@ -280,7 +230,7 @@ export default function UltraFuturisticBackground2029() {
         transition={{
           duration: 8,
           repeat: Infinity,
-          ease: 'easeInOut'
+          ease: 'easeInOut';
         }}
       />
       

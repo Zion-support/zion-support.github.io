@@ -4,8 +4,7 @@ import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'l
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {
-  onRetry?: () => void;
-  showSetupButton?: boolean
+  onRetry?: () => void, showSetupButton?: boolean
 }
 
 export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {
@@ -195,7 +194,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default AuthConfigurationError,

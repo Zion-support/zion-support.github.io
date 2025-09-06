@@ -3,6 +3,7 @@ import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
 import { FraudStats } from "@/types/fraud";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
@@ -61,5 +62,5 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
     </div>
-  )
+  );
 },

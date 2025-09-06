@@ -8,7 +8,7 @@ export function BackToTopButton() {
     };
     updateVisibility();
     window.addEventListener("scroll", updateVisibility);
-    return () => window.removeEventListener("scroll", updateVisibility)
+    return () => window.removeEventListener("scroll", updateVisibility);
   }, []);
   const scrollToTop = () => {
     const opts: ScrollToOptions = { top: 0, behavior: "smooth" },
@@ -26,5 +26,5 @@ export function BackToTopButton() {
     >
       <ArrowUp className="h-5 w-5" />
     </button>
-  )
+  );
 }

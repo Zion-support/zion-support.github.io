@@ -13,6 +13,8 @@ import { useResume } from '@/hooks/useResume';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 // Define schema for form validation
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required');
@@ -37,8 +39,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
-    if (typeof dateValue === 'string') return dateValue;
-    return format(dateValue, 'yyyy-MM-dd')
+    if (typeof dateValue === 'string') return dateValue, return format(dateValue, 'yyyy-MM-dd');
   };
   const form = useForm<WorkExperienceFormValues>({
     resolver: zodResolver(workExperienceSchema),
@@ -52,8 +53,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
     try {
       setError(null),
-      let success;
-      const experienceData: WorkExperience = {
+      let success, const experienceData: WorkExperience = {
         company_name: data.company_name, // Required field
         role_title: data.role_title, // Required field
         start_date: data.start_date, // Required field

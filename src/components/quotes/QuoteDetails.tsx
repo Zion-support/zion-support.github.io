@@ -7,6 +7,9 @@ import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 import { format } from "date-fns";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star, Calendar } from 'lucide-react';
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
@@ -14,14 +17,13 @@ interface QuoteDetailsProps {
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
-  if (!quote) return null;
-  const formatDate = (dateString?: string) => {
+  if (!quote) return null, const formatDate = (dateString?: string) => {
     if (!dateString) return 'Not specified';
     try {
       return format(new Date(dateString), 'PPP')
     } catch (e) {
       return dateString
-    }
+    };
   };
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -102,5 +104,5 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 },

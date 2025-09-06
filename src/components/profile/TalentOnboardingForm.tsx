@@ -10,6 +10,7 @@ import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upl
 import { useAuth } from "@/hooks/useAuth";
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
+import { Star, Calendar } from 'lucide-react';
 // Define the form schema with validation
 const talentSchema = z.object({
   // Step 1: Basic Info
@@ -50,8 +51,7 @@ export function TalentOnboardingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
-  const totalSteps = 4;
-  const form = useForm<TalentFormValues>({
+  const totalSteps = 4, const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema),
     defaultValues: {
       basicInfo: {
@@ -108,10 +108,10 @@ export function TalentOnboardingForm() {
     const { data: { publicUrl } } = supabase.storage
       .from('resumes')
       .getPublicUrl(fileName),
-    return publicUrl
+    return publicUrl;
   };
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
 
-  return null
+  return null;
 }

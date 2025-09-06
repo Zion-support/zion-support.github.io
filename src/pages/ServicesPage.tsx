@@ -12,6 +12,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';
 import { SERVICES } from '@/data/servicesData';
 import { useCurrency } from '@/hooks/useCurrency';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 // Initial services from existing data
 const INITIAL_SERVICES: ProductListing[] = SERVICES,
 // Market insights component
@@ -44,13 +47,7 @@ const ServicesMarketInsights = ({ stats }: { stats: any }) => (
 ),
 // Filter controls
 const ServiceFilterControls = ({
-  sortBy;
-  setSortBy;
-  filterCategory;
-  setFilterCategory;
-  categories;
-  showRecommended;
-  setShowRecommended;
+  sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended;
   loading
 }: any) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -120,7 +117,7 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onVi
       </div>
     </CardHeader>
   </Card>
-)
+);
 },
 // Loading grid
 const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
@@ -146,8 +143,7 @@ export default function ServicesPage() {
     const newServices = generateITServices(limit, startId);
     setTotalGenerated(prev => prev + newServices.length);
     allServices = [...allServices, ...newServices],
-    let filteredServices = allServices;
-    if (filterCategory) {
+    let filteredServices = allServices, if (filterCategory) {
       filteredServices = filteredServices.filter(s => s.category === filterCategory)
     }
     
@@ -166,26 +162,17 @@ export default function ServicesPage() {
         case 'ai-score':
           return (b.aiScore || 0) - (a.aiScore || 0);
         default: return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
-      }
+      };
     }),
-    const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
-    const items = filteredServices.slice(startIndex, endIndex);
+    const startIndex = (page - 1) * limit, const endIndex = startIndex + limit, const items = filteredServices.slice(startIndex, endIndex);
     return {
-      items;
-      hasMore: endIndex < filteredServices.length || page < 10,
+      items, hasMore: endIndex < filteredServices.length || page < 10,
       total: filteredServices.length
-    }
+    };
   }, [sortBy, filterCategory, showRecommended, totalGenerated]);
   const {
     items: services,
-    loading;
-    error;
-    hasMore;
-    isFetching;
-    lastElementRef;
-    scrollToTop;
-    refresh;
+    loading, error, hasMore, isFetching, lastElementRef, scrollToTop, refresh;
     total
   } = useInfiniteScrollPagination(fetchServices, 12);
   useEffect(() => {
@@ -193,17 +180,16 @@ export default function ServicesPage() {
     setTotalGenerated(0)
   }, [sortBy, filterCategory, showRecommended]);
   const marketStats = useMemo(() => {
-    if (services.length === 0) return null;
-    return getServicesMarketStats(services)
+    if (services.length === 0) return null, return getServicesMarketStats(services);
   }, [services]);
   const categories = useMemo(() => {
-    return Array.from(new Set(services.map(s => s.category).filter(Boolean)))
+    return Array.from(new Set(services.map(s => s.category).filter(Boolean)));
   }, [services]);
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   if (loading && services.length === 0) {
     return (
@@ -295,5 +281,5 @@ export default function ServicesPage() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }

@@ -8,16 +8,14 @@ export default function OpenApp() {
     const isAndroid = /Android/i.test(navigator.userAgent);
     const now = Date.now();
     const timeout = setTimeout(() => {
-      const elapsed = Date.now() - now;
-      if (elapsed < 2000) {
+      const elapsed = Date.now() - now, if (elapsed < 2000) {
         window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
       }
     }, 1200);
     // Try to open the deep link
     const iframe = document.createElement('iframe');
     iframe.style.display = 'none';
-    iframe.src = DEEP_LINK_URL;
-    document.body.appendChild(iframe);
+    iframe.src = DEEP_LINK_URL, document.body.appendChild(iframe);
     const timer = setTimeout(() => {
       try { document.body.removeChild(iframe) } catch {}
     }, 1500);
@@ -34,5 +32,5 @@ export default function OpenApp() {
         <div className="mt-2 text-sm opacity-70">If nothing happens, you’ll be redirected to the store.</div>
       </div>
     </div>
-  )
+  );
 }

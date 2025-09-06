@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { Star } from 'lucide-react';
 export default function AutomationInsightsPage() {
   const automationTrends = [
     {
@@ -65,7 +66,7 @@ export default function AutomationInsightsPage() {
     {
       metric: '40%',
       label: 'Efficiency Gain',
-      label: 'Average improvement across projects'
+      label: 'Average improvement across projects';
     },
     {
       metric: '2,960+';
@@ -175,5 +176,5 @@ export default function AutomationInsightsPage() {
         </main>
       </div>
     </>
-  )
+  );
 }

@@ -6,22 +6,19 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles, Check } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface MilestoneSuggestionsProps {
   projectName: string,
   scopeSummary: string,
   startDate: Date,
-  endDate?: Date;
-  projectType: string,
+  endDate?: Date, projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 
 export function MilestoneSuggestions({
   projectName,
-  scopeSummary;
-  startDate;
-  endDate;
-  projectType;
-  onMilestonesGenerated
+  scopeSummary, startDate, endDate, projectType, onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -45,7 +42,7 @@ export function MilestoneSuggestions({
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
       return dateString
-    }
+    };
   };
   return (
     <div className="space-y-4">
@@ -109,5 +106,5 @@ export function MilestoneSuggestions({
         </Card>
       )}
     </div>
-  )
+  );
 }

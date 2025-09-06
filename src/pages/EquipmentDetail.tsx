@@ -15,6 +15,8 @@ import { equipmentListings } from '@/data/equipmentData';
 import { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 interface EquipmentSpecification {
   name: string,
   value: string
@@ -26,18 +28,13 @@ interface EquipmentDetails {
   description: string,
   brand: string,
   category: string,
-  subcategory?: string;
-  images: string[],
+  subcategory?: string, images: string[],
   price: number,
   currency: string,
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean,
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[],
+  rating?: number, reviewCount?: number, inStock: boolean,
+  expectedShipping?: string, specifications: EquipmentSpecification[],
   features: string[],
-  warranty?: string;
-  returnPolicy?: string
+  warranty?: string, returnPolicy?: string
 }
 
 // Convert ProductListing to EquipmentDetails format
@@ -63,14 +60,14 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy'
-  }
+  };
 }
 
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
     acc[item.id] = convertProductListingToEquipmentDetails(item);
-    return acc
+    return acc;
   }, {} as { [key: string]: EquipmentDetails }),
 export default function EquipmentDetail() {
   const router = useRouter();
@@ -125,7 +122,7 @@ export default function EquipmentDetail() {
             }
           } catch (storageError) {
             logErrorToProduction('Error reading from sessionStorage:', { data: storageError })
-          }
+          };
         }
 
         // If not found anywhere, set error
@@ -382,7 +379,7 @@ export default function EquipmentDetail() {
               {/* Add to Cart */}
               <div className="space-y-4 pt-6 border-t border-zion-blue-light">
                 <div className="flex items-center gap-4">
-                  <label className="text-white font-medium">Quantity:</label>
+                  <label className="text-white font-medium" htmlFor="input-Quantity:">Quantity:</label>
                   <div className="flex items-center gap-2">
                     <Button
                       variant="outline"
@@ -455,6 +452,6 @@ export default function EquipmentDetail() {
         </div>
       </div>
     </>
-  )
+  );
 }
 

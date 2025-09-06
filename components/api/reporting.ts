@@ -5,8 +5,7 @@ interface ReportingData {
   byTenant: Record<string, {
     funnel: { stage: string, count: number }[],
     timeToHireDays: number,
-    costPerHireUsd?: number;
-    updatedAt: string
+    costPerHireUsd?: number, updatedAt: string
   }>
 }
 
@@ -20,7 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK);
     const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() },
-    return res.status(200).json(entry)
+    return res.status(200).json(entry);
   }
 
   if (method === 'POST') {
@@ -32,10 +31,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays || 0),
         costPerHireUsd: typeof costPerHireUsd === 'number' ? costPerHireUsd : next[tenantId]?.costPerHireUsd,
         updatedAt: new Date().toISOString()},
-      return { byTenant: next }
+      return { byTenant: next };
     }, FALLBACK);
     return res.status(200).json(updated.byTenant[tenantId])
   }
 
-  return res.status(405).json({ error: 'Method not allowed' })
+  return res.status(405).json({ error: 'Method not allowed' });
 }

@@ -6,8 +6,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCw, WifiOff } from 'lucide-react'
 interface ApiErrorBoundaryProps {
   children: ReactNode,
-  queryClient?: QueryClient;
-  fallback?: ReactNode
+  queryClient?: QueryClient, fallback?: ReactNode
 }
 
 interface ApiErrorBoundaryState {
@@ -33,7 +32,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
   static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {
     return {
       hasError: true,
-      error}
+      error};
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
@@ -45,8 +44,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
       Sentry.captureException(error)
     });
     this.setState({
-      error;
-      errorInfo});
+      error, errorInfo});
     logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo)
   }
 
@@ -192,7 +190,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
     }
 
     return this.props.children
-  }
+  };
 }
 
 // Hook for accessing query client in function components
@@ -204,5 +202,5 @@ export const useApiErrorHandler = () => {
       Sentry.captureException(error)
     })
   };
-  return { handleApiError }
+  return { handleApiError };
 };

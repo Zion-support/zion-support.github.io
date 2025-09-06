@@ -3,6 +3,7 @@ import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'luc
 import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Zap } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

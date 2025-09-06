@@ -17,16 +17,12 @@ export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    subject?: string;
-    message?: string
+    name?: string, email?: string, subject?: string, message?: string
   }>({});
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value } = e.target, setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   };
   const handleSubmit = (e: React.FormEvent) => {
@@ -110,7 +106,9 @@ export function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
+                      Name
+                    ">
                       Name
                     </label>
                     <Input
@@ -126,7 +124,9 @@ export function ContactSection() {
                     )}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
+                      Email
+                    ">
                       Email
                     </label>
                     <Input
@@ -144,7 +144,9 @@ export function ContactSection() {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
+                    Subject
+                  ">
                     Subject
                   </label>
                   <Input
@@ -160,7 +162,9 @@ export function ContactSection() {
                   )}
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-
+                    Message
+                  ">
                     Message
                   </label>
                   <Textarea
@@ -194,5 +198,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

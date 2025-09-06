@@ -122,5 +122,5 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </form>
       </Form>
     </div>
-  )
+  );
 }

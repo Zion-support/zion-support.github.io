@@ -9,6 +9,9 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
 import type { QuoteStatus } from "@/types/quotes";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Calendar } from 'lucide-react';
 interface QuotesFilterProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -23,13 +26,7 @@ interface QuotesFilterProps {
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery,
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter;
-  setArchiveFilter;
-  dateRange;
-  setDateRange;
+  setSearchQuery, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, dateRange, setDateRange;
   onReset
 }) => {
   return (
@@ -124,5 +121,5 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>
       </CardContent>
     </Card>
-  )
+  );
 };

@@ -3,21 +3,14 @@ import { motion } from 'framer-motion';
 interface LazyImageProps {
   src: string,
   alt: string,
-  className?: string;
-  placeholder?: string;
-  threshold?: number;
-  width?: number;
-  height?: number
+  className?: string, placeholder?: string, threshold?: number, width?: number, height?: number
 }
 
 export const LazyImage: React.FC<LazyImageProps> = ({
   src,
-  alt;
-  className = '';
-  placeholder = 'data: image/svg+xml; base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
-  threshold = 0.1;
-  width;
-  height
+  alt, className = '';
+  placeholder = 'data: image/svg+xml, base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
+  threshold = 0.1, width, height
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -36,7 +29,7 @@ export const LazyImage: React.FC<LazyImageProps> = ({
       observer.observe(imgRef.current)
     }
 
-    return () => observer.disconnect()
+    return () => observer.disconnect();
   }, [threshold]);
   const handleLoad = () => {
     setIsLoaded(true)
@@ -69,6 +62,6 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         />
       )}
     </div>
-  )
+  );
 };
 export default LazyImage;

@@ -18,14 +18,14 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {
     const response = await fetch(url),
     if (!response.ok) {
       logErrorToProduction('Categories API error:', { data: response.statusText }),
-      return CATEGORIES as CategoryType[]
+      return CATEGORIES as CategoryType[];
     }
     const data = await response.json();
     return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[]
   } catch (err) {
     logErrorToProduction('Categories API fetch failed:', { data: err }),
     return CATEGORIES as CategoryType[]
-  }
+  };
 };
 export interface CategoriesProps {
   categories?: CategoryType[]
@@ -35,8 +35,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {
     fallbackData: initialCategories}),
   const categories = data || [];
-  const isLoading = !data && !error;
-  return (
+  const isLoading = !data && !error, return (
     <>
       <NextSeo
         title="Browse Categories"
@@ -92,5 +91,5 @@ export default function Categories({ categories: initialCategories = [] }: Categ
       </div>
     </div>
     </>
-  )
+  );
 }

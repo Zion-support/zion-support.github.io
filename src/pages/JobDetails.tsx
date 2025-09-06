@@ -12,12 +12,14 @@ import { ApplyToJobModal } from '@/components/messaging/job-application';
 import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components/jobs';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Calendar } from 'lucide-react';
 interface Job {
   id: string,
   title: string,
   description: string,
-  company_name?: string;
-  budget: { min: number, max: number },
+  company_name?: string, budget: { min: number, max: number },
   client_id: string,
   skills?: string[];
   created_at: string,
@@ -28,15 +30,14 @@ interface Job {
 export default function JobDetails() {
   const router = useRouter(), // Init router
   const { jobId: rawJobId } = router.query, // Get jobId from query
-  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
-  const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined, const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
   const { user, isAuthenticated } = useAuth();
   // navigate is now router
   const { isWhitelabel, brandName } = useWhitelabel();
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified",
-    return `$${budget.min} - $${budget.max}`
+    return `$${budget.min} - $${budget.max}`;
   };
   if (isLoading) {
     return <JobDetailsSkeleton />
@@ -52,7 +53,7 @@ export default function JobDetails() {
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
         </div>
       </>
-    )
+    );
   }
 
   const handleApply = () => {
@@ -67,14 +68,13 @@ export default function JobDetails() {
       return
     }
     
-    setIsApplyModalOpen(true)
+    setIsApplyModalOpen(true);
   };
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success("Application submitted successfully!"),
     setIsApplyModalOpen(false)
   };
-  const isOwnJob = user?.id === job.client_id;
-  return (
+  const isOwnJob = user?.id === job.client_id, return (
     <>
       <SEO 
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
@@ -194,5 +194,5 @@ export default function JobDetails() {
         />
       )}
     </>
-  )
+  );
 }

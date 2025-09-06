@@ -10,6 +10,7 @@ import { TemplateManager } from "./templates/TemplateManager";
 import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -20,10 +21,7 @@ interface SmartContractBuilderProps {
 
 export function SmartContractBuilder({
   isOpen,
-  onClose;
-  talent;
-  clientName;
-  onContractGenerated}: SmartContractBuilderProps) {
+  onClose, talent, clientName, onContractGenerated}: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
@@ -44,8 +42,7 @@ export function SmartContractBuilder({
   // Convert ContractFormValues to contract content string
   
   const handleDeployContract = async () => {
-    if (!generatedContract) return;
-    try {
+    if (!generatedContract) return, try {
       setDeployStatus('deploying');
       const contractInfo = await deploySmartContract(generatedContract, deployOptions);
       if (contractInfo) {
@@ -142,5 +139,5 @@ export function SmartContractBuilder({
         />
       </DialogContent>
     </Dialog>
-  )
+  );
 }

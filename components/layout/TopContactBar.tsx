@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Star, Calendar } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -241,6 +242,6 @@ export default function TopContactBar() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
 

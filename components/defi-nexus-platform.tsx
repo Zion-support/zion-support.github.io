@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Layout from '../components/layout/Layout';
+import { Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -273,5 +274,5 @@ export default function DeFiNexusPlatform() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

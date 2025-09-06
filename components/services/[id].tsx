@@ -7,8 +7,7 @@ import Button from '../../components/ui/Button';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 export default function ServiceDetailPage() {
   const router = useRouter();
-  const { id } = router.query;
-  if (!id || typeof id !== 'string') {
+  const { id } = router.query, if (!id || typeof id !== 'string') {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
@@ -20,7 +19,7 @@ export default function ServiceDetailPage() {
           </Button>
         </div>
       </div>
-    )
+    );
   }
 
   const service = getServiceById(id);
@@ -109,5 +108,5 @@ export default function ServiceDetailPage() {
         </section>
       </div>
     </>
-  )
+  );
 }

@@ -11,24 +11,7 @@ import { ExperienceFilter } from "./filters/ExperienceFilter";
 import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 export function FilterSidebar({
-  searchTerm;
-  setSearchTerm;
-  selectedSkills;
-  toggleSkill;
-  selectedAvailability;
-  toggleAvailability;
-  selectedRegions;
-  toggleRegion;
-  priceRange;
-  setPriceRange;
-  experienceRange;
-  setExperienceRange;
-  expandedSections;
-  toggleSection;
-  sortOption;
-  setSortOption;
-  clearFilters;
-  isMobileFilterOpen
+  searchTerm, setSearchTerm, selectedSkills, toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange, setExperienceRange, expandedSections, toggleSection, sortOption, setSortOption, clearFilters, isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
     <>
@@ -108,5 +91,5 @@ export function FilterSidebar({
         </Button>
       )}
     </>
-  )
+  );
 }

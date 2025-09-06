@@ -24,8 +24,7 @@ const projectSchema = z.object({
   pdf_url: z.string().optional()}),
 type ProjectFormValues = z.infer<typeof projectSchema>;
 interface ProjectFormProps {
-  project?: PortfolioProject;
-  onSuccess: () => void,
+  project?: PortfolioProject, onSuccess: () => void,
   onCancel: () => void
 }
 
@@ -33,8 +32,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
-  const isEditing = !!project;
-  const form = useForm<ProjectFormValues>({
+  const isEditing = !!project, const form = useForm<ProjectFormValues>({
     resolver: zodResolver(projectSchema),
     defaultValues: {
       title: project?.title || '',
@@ -58,8 +56,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         github_url: data.github_url || undefined,
         demo_url: data.demo_url || undefined,
         pdf_url: data.pdf_url},
-      let success = false;
-      if (isEditing && project?.id) {
+      let success = false, if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData)
       } else {
         const projectId = await addProject(projectData);
@@ -191,5 +188,5 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         </div>
       </form>
     </Form>
-  )
+  );
 }

@@ -2,6 +2,8 @@
 import React from "react";
 import { Star } from 'lucide-react'
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 const testimonials = [
   {
     name: "Alex Johnson",
@@ -66,5 +68,5 @@ export const AppTestimonials: React.FC = () => {
         </div>
       </div>
     </section>
-  )
+  );
 };

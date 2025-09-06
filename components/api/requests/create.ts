@@ -13,7 +13,7 @@ async function loadRequests(): Promise<any[]> {
 
 async function saveRequests(requests: any[]) {
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true }),
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2))
+  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2));
 }
 
 async function summarizeWithOpenAI(description: string) {
@@ -33,7 +33,7 @@ async function summarizeWithOpenAI(description: string) {
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
-  }
+  };
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -46,10 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const now = new Date().toISOString();
   const id = `req_${Date.now()}`;
   const record = {
-    id;
-    name;
-    email;
-    budget: normalizedBudget,
+    id, name, email, budget: normalizedBudget,
     timeline: String(timeline || ''),
     description: String(description),
     talentSlug: talentSlug || null,
@@ -62,5 +59,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveRequests(requests);
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
-  return res.status(200).json({ id, status: 'ok' })
+  return res.status(200).json({ id, status: 'ok' });
 }

@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
-  isLocal?: boolean;
-  displayName?: string
+  isLocal?: boolean, displayName?: string
 };
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -26,8 +25,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       }
     },
     participant.tracks.forEach(pub => {
-      const track = pub.track;
-      if (track) handleTrackSubscribed(pub, track)
+      const track = pub.track, if (track) handleTrackSubscribed(pub, track)
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
@@ -44,5 +42,5 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
-  )
+  );
 }

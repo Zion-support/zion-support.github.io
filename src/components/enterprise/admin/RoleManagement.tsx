@@ -5,6 +5,7 @@ import { Switch } from "@/components/ui/switch";
 import { toast } from "@/hooks/use-toast";
 import { InfoIcon } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Badge } from '@/components/ui/badge';
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
@@ -237,5 +238,5 @@ export function RoleManagement() {
         </Table>
       </div>
     </div>
-  )
+  );
 }

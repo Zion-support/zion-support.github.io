@@ -7,9 +7,10 @@ import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from 'lucide-react'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 interface AIMatchmakerProps {
-  serviceType?: string;
-  onMatchSelect?: (match: any) => void,
+  serviceType?: string, onMatchSelect?: (match: any) => void,
   className?: string
 }
 
@@ -33,9 +34,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       logInfo("Starting AI matching", { data: { query, serviceType } });
       // Get AI matches
       const results = await findMatches(
-        query;
-        serviceType;
-        3
+        query, serviceType, 3
       );
       logInfo('AI matching results:', { data: results }),
       setMatches(results);
@@ -113,5 +112,5 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

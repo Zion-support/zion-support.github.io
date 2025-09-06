@@ -4,19 +4,17 @@ import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from 'lucide-react'
  
 import { cn } from "@/lib/utils"
+import { ChevronRight } from 'lucide-react';
  
 const Breadcrumb = React.forwardRef<
-  HTMLElement;
-  React.ComponentPropsWithoutRef<"nav"> & {
+  HTMLElement, React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   }
 >(({ className, separator, ...props }, ref) => (
   <nav
     ref={ref}
     aria-label="breadcrumb"
-    className={cn(
-      "inline-flex items-center gap-1 text-sm text-zion-slate-light";
-      className
+    className={cn("inline-flex items-center gap-1 text-sm text-zion-slate-light", className
     )}
     {...props}
   />
@@ -61,7 +59,7 @@ const BreadcrumbLink = React.forwardRef<
       className={cn("transition-colors hover:text-zion-cyan", className)}
       {...props}
     />
-  )
+  );
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
@@ -97,9 +95,4 @@ const BreadcrumbEllipsis = ({
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
  
 export {
-  Breadcrumb;
-  BreadcrumbList;
-  BreadcrumbItem;
-  BreadcrumbLink;
-  BreadcrumbSeparator;
-  BreadcrumbEllipsis}
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbEllipsis}

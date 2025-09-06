@@ -10,7 +10,7 @@ const ScrollToTop: React.FC = () => {
       }
     };
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility)
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
   const scrollToTop = () => {
     window.scrollTo({
@@ -42,6 +42,6 @@ const ScrollToTop: React.FC = () => {
         </button>
       )}
     </>
-  )
+  );
 },
 export default ScrollToTop;

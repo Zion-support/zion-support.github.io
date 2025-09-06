@@ -6,6 +6,7 @@ import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035'
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
+import { Star } from 'lucide-react';
 // Loading fallback component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -33,7 +34,7 @@ const Homepage2035: React.FC = () => {
       setIsLoading(false);
       setIsVisible(true)
     }, 800);
-    return () => clearTimeout(timer)
+    return () => clearTimeout(timer);
   }, []);
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -81,7 +82,7 @@ const Homepage2035: React.FC = () => {
         if (activeCategory === 'cyber') return service.category.includes('Security') || service.category.includes('Cybersecurity');
         if (activeCategory === 'cloud') return service.category.includes('Cloud') || service.category.includes('DevOps');
         if (activeCategory === 'fintech') return service.category.includes('Financial') || service.category.includes('Trading');
-        return true
+        return true;
       });
   if (isLoading) {
     return <LoadingFallback />
@@ -282,7 +283,7 @@ const Homepage2035: React.FC = () => {
                 {
                   icon: <Cloud className="w-12 h-12" />,
                   title: 'Cloud-Native',
-                  description: 'Built for the cloud with scalability, reliability, and performance in mind'
+                  description: 'Built for the cloud with scalability, reliability, and performance in mind';
                 };
                 {
                   icon: <Target className="w-12 h-12" />,

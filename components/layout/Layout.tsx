@@ -1,10 +1,7 @@
 import React from 'react';
 
 interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
+  children: React.ReactNode, title?: string, description?: string, keywords?: string;
 }
 
 export default function Layout({

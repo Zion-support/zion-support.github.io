@@ -21,8 +21,7 @@ function fileToBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = () => resolve(reader.result as string);
-    reader.onerror = reject;
-    reader.readAsDataURL(file)
+    reader.onerror = reject, reader.readAsDataURL(file)
   })
 }
 
@@ -49,7 +48,7 @@ export default function BookBuilder() {
           ) : null}
         </div>
       </div>
-    )
+    );
   }, [project]);
   async function handleGenerateWithAI() {
     setBusy(true);
@@ -78,8 +77,7 @@ export default function BookBuilder() {
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = url;
-      a.download = 'zion-os-book.pdf';
+      a.href = url, a.download = 'zion-os-book.pdf';
       a.click();
       URL.revokeObjectURL(url)
     } finally {
@@ -97,8 +95,7 @@ export default function BookBuilder() {
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = url;
-      a.download = 'zion-os-book.epub';
+      a.href = url, a.download = 'zion-os-book.epub';
       a.click();
       URL.revokeObjectURL(url)
     } finally {
@@ -262,5 +259,5 @@ export default function BookBuilder() {
         </div>
       </section>
     </div>
-  )
+  );
 }

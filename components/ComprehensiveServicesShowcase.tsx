@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+import { Zap, Star } from 'lucide-react';
 export default function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -32,31 +33,28 @@ export default function ComprehensiveServicesShowcase() {
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory, const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch
+      return matchesCategory && matchesSearch;
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return b.popular ? 1 : -1;
-        case 'price':
+          return b.popular ? 1 : -1, case 'price':
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
+          return b.rating - a.rating, case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
       }
     }),
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
-    return categoryData?.icon || '🚀'
+    return categoryData?.icon || '🚀';
   };
   const formatPrice = (price: string) => {
-    return price.replace('$', '').replace(, '')
+    return price.replace('$', '').replace(, '');
   };
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -407,5 +405,5 @@ export default function ComprehensiveServicesShowcase() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

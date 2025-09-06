@@ -4,10 +4,10 @@ import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { formatDate } from "@/utils/dateUtils";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 interface QuotesTableProps {
   quotes: QuoteRequest[],
-  isArchived?: boolean;
-  isLoading: boolean,
+  isArchived?: boolean, isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
@@ -16,12 +16,7 @@ interface QuotesTableProps {
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes,
-  isArchived = false;
-  isLoading;
-  updateStatus;
-  toggleArchive;
-  deleteQuote;
-  onViewDetails
+  isArchived = false, isLoading, updateStatus, toggleArchive, deleteQuote, onViewDetails
 }) => {
   return (
     <div className="overflow-x-auto">
@@ -169,5 +164,5 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
         </TableBody>
       </Table>
     </div>
-  )
+  );
 };

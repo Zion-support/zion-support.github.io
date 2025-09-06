@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -133,24 +135,22 @@ export default function ToolComparisonPage() {
     const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory, return matchesSearch && matchesCategory;
   });
   const sortedTools = [...filteredTools].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
-        return b.rating - a.rating;
-      case 'users':
+        return b.rating - a.rating, case 'users':
         return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, ''));
       case 'name':
         return a.name.localeCompare(b.name);
       default: return 0
-    }
+    };
   }),
   const getPricingColor = (pricing: string) => {
     if (pricing.includes('Free')) return 'text-green-400',
     if (pricing.includes('$')) return 'text-blue-400';
-    return 'text-gray-400'
+    return 'text-gray-400';
   };
   return (
     <>
@@ -511,5 +511,5 @@ export default function ToolComparisonPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

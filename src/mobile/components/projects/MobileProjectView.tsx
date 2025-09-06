@@ -9,6 +9,9 @@ import { Progress } from "@/components/ui/progress";
 import { SeverityIndicator } from "../common/SeverityIndicator";
 import { useRouter } from 'next/router';
 import { toast } from "sonner";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight, Star } from 'lucide-react';
 interface Milestone {
   id: string,
   title: string,
@@ -27,8 +30,7 @@ interface ProjectViewProps {
       avatar?: string
     };
     startDate: string,
-    endDate?: string;
-    status: string,
+    endDate?: string, status: string,
     totalAmount: string,
     progress: number,
     description: string
@@ -178,5 +180,5 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
         </div>
       </section>
     </div>
-  )
+  );
 }

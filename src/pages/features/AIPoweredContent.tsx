@@ -71,5 +71,5 @@ export default function AIPoweredContent() {
         </div>
       </main>
     </>
-  )
+  );
 }

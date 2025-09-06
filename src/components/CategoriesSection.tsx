@@ -9,8 +9,7 @@ import { useTranslation } from "react-i18next";
 interface CategoryType {
   id: string,
   name: string,
-  description?: string;
-  iconName?: string, // Example field if categories have icons
+  description?: string, iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
   link?: string
@@ -55,7 +54,7 @@ const getIcon = (iconName?: string) => {
     case "HardDrive": return <HardDrive className="w-10 h-10" />;
     case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
     default: return <HelpCircle className="w-10 h-10" />, // Default icon
-  }
+  };
 };
 const getSpecialServices = (t: any) => [
   {
@@ -64,17 +63,11 @@ const getSpecialServices = (t: any) => [
   }
 ],
 interface CategoriesSectionProps {
-  showTitle?: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-  categories?: CategoryType[], // Accept categories as a prop
+  showTitle?: boolean, className?: string, style?: React.CSSProperties, categories?: CategoryType[], // Accept categories as a prop
 }
 
 export function CategoriesSection({
-  showTitle = true;
-  className;
-  style;
-  categories: fetchedCategories, // Rename prop for clarity
+  showTitle = true, className, style, categories: fetchedCategories, // Rename prop for clarity
 }: CategoriesSectionProps) {
   const { t } = useTranslation();
   const defaultCategories = getDefaultCategories(t);
@@ -167,5 +160,5 @@ export function CategoriesSection({
         </div>
       </div>
     </section>
-  )
+  );
 }

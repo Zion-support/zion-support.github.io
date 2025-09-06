@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Zap, Star } from 'lucide-react';
 export default function MarketPricing() {
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
   const markets = [
@@ -175,7 +176,7 @@ export default function MarketPricing() {
         key={i} 
         className={`w-4 h-4 ${i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} 
       />
-    ))
+    ));
   };
   return (
     <UltraAdvancedFuturisticBackground>
@@ -853,6 +854,6 @@ export default function MarketPricing() {
         </div>
       </section>
     </div>
-  )
+  );
 },
 export default MarketPricing;

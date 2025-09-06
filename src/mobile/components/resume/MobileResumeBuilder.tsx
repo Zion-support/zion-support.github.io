@@ -5,6 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight, Zap, Star } from 'lucide-react';
 
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 export function MobileResumeBuilder() {
@@ -101,7 +104,7 @@ function BasicsStep() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
 
 function ExperienceStep() {
@@ -170,7 +173,7 @@ function ExperienceStep() {
         <Plus className="h-4 w-4" /> Add Another Experience
       </Button>
     </div>
-  )
+  );
 }
 
 function EducationStep() {
@@ -235,7 +238,7 @@ function EducationStep() {
         <Plus className="h-4 w-4" /> Add Another Education
       </Button>
     </div>
-  )
+  );
 }
 
 function SkillsStep() {
@@ -321,5 +324,5 @@ function SkillsStep() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

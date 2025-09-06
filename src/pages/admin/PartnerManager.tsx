@@ -14,6 +14,9 @@ import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { EmptyState } from "@/components/ui/empty-state";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -23,11 +26,7 @@ interface PartnerProfile {
   niche: string,
   audience_size: string,
   social_media?: Record<string, string>;
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
-  commission_rate?: number
+  website?: string, bio?: string, payout_method?: string, fraud_flags?: number, commission_rate?: number
 }
 
 export default function PartnerManager() {
@@ -48,7 +47,7 @@ export default function PartnerManager() {
       return
     }
 
-    fetchPartners()
+    fetchPartners();
   }, [isAuthenticated, router]);
   const fetchPartners = async () => {
     try {
@@ -200,8 +199,7 @@ export default function PartnerManager() {
       ));
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p);
-        activeTab;
-        searchQuery
+        activeTab, searchQuery
       );
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
@@ -220,16 +218,14 @@ export default function PartnerManager() {
     }
   },
   const handleSaveSettings = async () => {
-    if (!selectedPartner) return;
-    try {
+    if (!selectedPartner) return, try {
       // Update commission rate
       setPartners(partners.map(p => 
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
       )),
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
-        activeTab;
-        searchQuery
+        activeTab, searchQuery
       );
       toast({
         title: "Settings Updated",
@@ -252,7 +248,7 @@ export default function PartnerManager() {
       case '50k-100k': return '50,000 - 100,000';
       case 'over100k': return 'Over 100,000';
       default: return size
-    }
+    };
   },
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -272,7 +268,7 @@ export default function PartnerManager() {
         <Flag className="h-3 w-3" />
         {flags}
       </Badge>
-    )
+    );
   };
   return (
     <div className="container max-w-7xl py-10">
@@ -537,12 +533,14 @@ export default function PartnerManager() {
           {selectedPartner && (
             <div className="space-y-4">
               <div>
-                <label className="text-sm font-medium text-white">Partner Name</label>
+                <label className="text-sm font-medium text-white" htmlFor="input-Partner Name">Partner Name</label>
                 <p className="text-zion-slate-light">{selectedPartner.name}</p>
               </div>
               
               <div>
-                <label className="text-sm font-medium text-white" htmlFor="commission-rate">
+                <label className="text-sm font-medium text-white" htmlFor="commission-rate" htmlFor="input-
+                  Commission Rate (%)
+                ">
                   Commission Rate (%)
                 </label>
                 <Input
@@ -586,12 +584,7 @@ interface PartnerTableProps {
 
 function PartnerTable({ 
   partners,
-  isLoading;
-  onViewDetails;
-  onUpdateStatus;
-  onOpenSettings;
-  getStatusBadge;
-  getFraudFlagBadge
+  isLoading, onViewDetails, onUpdateStatus, onOpenSettings, getStatusBadge, getFraudFlagBadge
 }: PartnerTableProps) {
   if (isLoading) {
     return (
@@ -691,5 +684,5 @@ function PartnerTable({
         ))}
       </TableBody>
     </Table>
-  )
+  );
 }

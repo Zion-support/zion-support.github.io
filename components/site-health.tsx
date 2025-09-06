@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Star } from 'lucide-react';
 export default function SiteHealth() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -89,5 +90,5 @@ export default function SiteHealth() {
         </section>
       </main>
     </div>
-  )
+  );
 }

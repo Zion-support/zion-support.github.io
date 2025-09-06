@@ -1,4 +1,5 @@
 import React from "react";
+import { Star } from 'lucide-react';
 export type Badge = {
   id: string,
   label: string,
@@ -38,5 +39,5 @@ export default function Badges({ balance }: { balance: number }) {
         <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
       )}
     </div>
-  )
+  );
 }

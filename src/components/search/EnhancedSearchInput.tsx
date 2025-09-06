@@ -26,10 +26,7 @@ interface EnhancedSearchInputProps {
 }
 
 export function EnhancedSearchInput({
-  value;
-  onChange;
-  onSelectSuggestion;
-  placeholder = "Search...",
+  value, onChange, onSelectSuggestion, placeholder = "Search...",
   searchSuggestions
 }: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false);
@@ -101,10 +98,10 @@ export function EnhancedSearchInput({
         } else {
           setFilteredSuggestions([])
         }
-        setHighlightedIndex(-1)
+        setHighlightedIndex(-1);
       })
       .catch(() => setFilteredSuggestions([]));
-    return () => controller.abort()
+    return () => controller.abort();
   }, [debounced, searchSuggestions]);
   // Handle clicks outside the component to close suggestions
   useEffect(() => {
@@ -116,7 +113,7 @@ export function EnhancedSearchInput({
     }
     
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
   const router = useRouter();
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
@@ -149,14 +146,12 @@ export function EnhancedSearchInput({
           e.preventDefault(),
           setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)
         }
-        break;
-      case 'ArrowUp':
+        break, case 'ArrowUp':
         if (isFocused && filteredSuggestions.length > 0) {
           e.preventDefault();
           setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length)
         }
-        break;
-      case 'Enter':
+        break, case 'Enter':
         if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {
           e.preventDefault(), // Prevent form submission
           handleSelectSuggestion(filteredSuggestions[highlightedIndex])
@@ -172,15 +167,13 @@ export function EnhancedSearchInput({
           // Prevent empty form submission
           e.preventDefault()
         }
-        break;
-      case 'Escape':
+        break, case 'Escape':
         e.preventDefault();
         setIsFocused(false);
         setHighlightedIndex(-1);
         setValueOnFocus(null);
         inputRef.current?.blur();
-        break;
-      default:
+        break, default:
         // For other keys (character input), reset enterHandledPostFocus
         setEnterHandledPostFocus(false);
         break
@@ -213,14 +206,12 @@ export function EnhancedSearchInput({
           onFocus={(e) => {
             setIsFocused(true);
             setHighlightedIndex(-1), // Explicitly reset on focus
-            const currentVal = e.target.value;
-            setValueOnFocus(currentVal);
+            const currentVal = e.target.value, setValueOnFocus(currentVal);
             setEnterHandledPostFocus(false);
             e.target.setSelectionRange(currentVal.length, currentVal.length)
           }}
           onBlur={(e) => {
-            const relatedTarget = e.relatedTarget as HTMLElement;
-            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
+            const relatedTarget = e.relatedTarget as HTMLElement, if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
               setIsFocused(false);
               setHighlightedIndex(-1)
             }

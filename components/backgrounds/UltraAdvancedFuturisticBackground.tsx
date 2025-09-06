@@ -4,31 +4,18 @@ interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-fusion';
-  particleCount?: number;
-  animationSpeed?: number;
-  enableHolographic?: boolean;
-  enableQuantumEffects?: boolean
+  particleCount?: number, animationSpeed?: number, enableHolographic?: boolean, enableQuantumEffects?: boolean
 }
 
 export default function UltraAdvancedFuturisticBackground({ 
-  children;
-  intensity = 'medium';
-  theme = 'quantum';
-  particleCount = 200;
-  animationSpeed = 1.0;
-  enableHolographic = true;
-  enableQuantumEffects = true
+  children, intensity = 'medium';
+  theme = 'quantum', particleCount = 200, animationSpeed = 1.0, enableHolographic = true, enableQuantumEffects = true
 }: UltraAdvancedFuturisticBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    const particles: Array<{
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
+    if (!ctx) return, canvas.width = window.innerWidth, canvas.height = window.innerHeight, const particles: Array<{
       x: number,
       y: number,
       vx: number,
@@ -78,8 +65,7 @@ export default function UltraAdvancedFuturisticBackground({
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0;
-        canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
+        canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
       );
       if (theme === 'quantum-fusion') {
         gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)');
@@ -92,30 +78,23 @@ export default function UltraAdvancedFuturisticBackground({
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0.98)')
       }
       
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = gradient, ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles with enhanced effects
       particles.forEach((particle, index) => {
         // Update particle life
-        particle.life -= 0.5;
-        if (particle.life <= 0) {
-          particle.life = particle.maxLife;
-          particle.x = Math.random() * canvas.width;
-          particle.y = Math.random() * canvas.height
+        particle.life -= 0.5, if (particle.life <= 0) {
+          particle.life = particle.maxLife, particle.x = Math.random() * canvas.width, particle.y = Math.random() * canvas.height
         }
 
         // Update position with quantum effects
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.rotation += particle.rotationSpeed;
+        particle.x += particle.vx, particle.y += particle.vy, particle.rotation += particle.rotationSpeed;
         // Quantum entanglement effect
         if (enableQuantumEffects && Math.random() < 0.01) {
           const partner = particles[Math.floor(Math.random() * particles.length)];
           if (partner && partner !== particle) {
             ctx.beginPath();
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * particle.opacity})`;
-            ctx.lineWidth = 1;
-            ctx.moveTo(particle.x, particle.y);
+            ctx.lineWidth = 1, ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(partner.x, partner.y);
             ctx.stroke()
           }
@@ -140,10 +119,7 @@ export default function UltraAdvancedFuturisticBackground({
         }
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width, if (particle.x > canvas.width) particle.x = 0, if (particle.y < 0) particle.y = canvas.height, if (particle.y > canvas.height) particle.y = 0;
         // Draw particle with enhanced effects
         ctx.save();
         ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
@@ -156,22 +132,19 @@ export default function UltraAdvancedFuturisticBackground({
           gradient.addColorStop(0.3, particle.color + '80');
           gradient.addColorStop(0.6, particle.color + '40');
           gradient.addColorStop(1, 'transparent');
-          ctx.fillStyle = gradient;
-          ctx.fillRect(-particle.size * 2, -particle.size * 2, particle.size * 4, particle.size * 4);
+          ctx.fillStyle = gradient, ctx.fillRect(-particle.size * 2, -particle.size * 2, particle.size * 4, particle.size * 4);
           // Quantum wave rings
           if (enableQuantumEffects) {
             for (let i = 1, i <= 3, i++) {
               ctx.strokeStyle = particle.color + Math.floor(40 - i * 10).toString(16);
-              ctx.lineWidth = 1;
-              ctx.beginPath();
+              ctx.lineWidth = 1, ctx.beginPath();
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
               ctx.stroke()
             }
           }
         } else if (particle.type === 'holographic' && enableHolographic) {
           // Holographic particle with rainbow effect
-          const hue = (Date.now() * 0.1 + index * 10) % 360;
-          ctx.fillStyle = `hsl(${hue}, 100%, 70%)`;
+          const hue = (Date.now() * 0.1 + index * 10) % 360, ctx.fillStyle = `hsl(${hue}, 100%, 70%)`;
           ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
           // Holographic glitch effect
           if (Math.random() < 0.05) {
@@ -180,21 +153,15 @@ export default function UltraAdvancedFuturisticBackground({
           }
         } else if (particle.type === 'cyberpunk') {
           // Cyberpunk particle with neon glow
-          ctx.fillStyle = particle.color;
-          ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
+          ctx.fillStyle = particle.color, ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
           // Neon glow effect
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = particle.size * 3;
-          ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
+          ctx.shadowColor = particle.color, ctx.shadowBlur = particle.size * 3, ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
           ctx.shadowBlur = 0
         } else {
           // Standard neon particle
-          ctx.fillStyle = particle.color;
-          ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
+          ctx.fillStyle = particle.color, ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
           // Neon glow
-          ctx.shadowColor = particle.color;
-          ctx.shadowBlur = particle.size * 2;
-          ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
+          ctx.shadowColor = particle.color, ctx.shadowBlur = particle.size * 2, ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
           ctx.shadowBlur = 0
         }
         
@@ -202,34 +169,26 @@ export default function UltraAdvancedFuturisticBackground({
       });
       // Add quantum field effects
       if (enableQuantumEffects && theme === 'quantum-fusion') {
-        const time = Date.now() * 0.001;
-        for (let i = 0, i < 5, i++) {
-          const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
-          const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5;
-          ctx.beginPath();
+        const time = Date.now() * 0.001, for (let i = 0, i < 5, i++) {
+          const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5, const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5, ctx.beginPath();
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
-          ctx.lineWidth = 2;
-          ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
+          ctx.lineWidth = 2, ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
           ctx.stroke()
         }
       }
 
       // Add holographic matrix effect
       if (enableHolographic && theme === 'holographic') {
-        const time = Date.now() * 0.001;
-        ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
-        ctx.lineWidth = 1;
-        for (let i = 0, i < 20, i++) {
-          const x = (i * canvas.width / 20 + time * 50) % canvas.width;
-          ctx.beginPath();
+        const time = Date.now() * 0.001, ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
+        ctx.lineWidth = 1, for (let i = 0, i < 20, i++) {
+          const x = (i * canvas.width / 20 + time * 50) % canvas.width, ctx.beginPath();
           ctx.moveTo(x, 0);
           ctx.lineTo(x, canvas.height);
           ctx.stroke()
         }
         
         for (let i = 0, i < 15, i++) {
-          const y = (i * canvas.height / 15 + time * 30) % canvas.height;
-          ctx.beginPath();
+          const y = (i * canvas.height / 15 + time * 30) % canvas.height, ctx.beginPath();
           ctx.moveTo(0, y);
           ctx.lineTo(canvas.width, y);
           ctx.stroke()
@@ -240,8 +199,7 @@ export default function UltraAdvancedFuturisticBackground({
     };
     // Handle window resize
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight
     };
     window.addEventListener('resize', handleResize);
     initParticles();
@@ -278,5 +236,5 @@ export default function UltraAdvancedFuturisticBackground({
       
       {children}
     </div>
-  )
+  );
 }

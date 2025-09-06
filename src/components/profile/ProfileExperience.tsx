@@ -32,5 +32,5 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
         ))}
       </div>
     </div>
-  ),
+  ),;
 }

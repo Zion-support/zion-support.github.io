@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 interface InteractiveFeaturesProps {
-  className?: string;
-  style?: React.CSSProperties
+  className?: string, style?: React.CSSProperties
 }
 
 export function InteractiveFeatures({ className, style }: InteractiveFeaturesProps) {
@@ -91,7 +92,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default InteractiveFeatures;

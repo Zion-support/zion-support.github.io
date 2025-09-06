@@ -6,6 +6,7 @@ import { Resume } from '@/types/resume';
 import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport';
 import { toast } from '@/hooks/use-toast';
 import { FontFamily } from '@/utils/pdf/fontConfig';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 interface PdfExportButtonProps {
   resume: Resume
 }
@@ -16,21 +17,18 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
   const handleExport = async () => {
-    if (isExporting) return;
-    setIsExporting(true);
+    if (isExporting) return, setIsExporting(true);
     try {
       const options: ExportOptions = {
         theme,
-        includePortfolio;
-        maxProjects: 3,
+        includePortfolio, maxProjects: 3,
         fontFamily
       };
       const pdfBlob = await exportResumeToPDF(resume, options);
       // Create download link and trigger download
       const url = URL.createObjectURL(pdfBlob);
       const link = document.createElement('a');
-      link.href = url;
-      link.download = `${resume.basic_info.title || 'Resume'}.pdf`;
+      link.href = url, link.download = `${resume.basic_info.title || 'Resume'}.pdf`;
       document.body.appendChild(link);
       link.click();
       // Clean up
@@ -101,5 +99,5 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

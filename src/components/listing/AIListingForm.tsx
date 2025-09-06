@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from 'lucide-react'
+import { Star } from 'lucide-react';
 
 interface AIListingFormProps {
   onSubmit: (formData: {
@@ -15,10 +16,7 @@ interface AIListingFormProps {
   }) => void,
   isLoading: boolean,
   initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
+    title?: string, category?: string, keyFeatures?: string, targetAudience?: string
   }
 }
 
@@ -39,16 +37,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
     }
 
     onSubmit({
-      title;
-      category;
-      keyFeatures;
-      targetAudience
-    })
+      title, category, keyFeatures, targetAudience
+    });
   };
   return (
     <div className="space-y-4">
       <div className="space-y-2">
-        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Title">Title</label>
         <Input
           id="title"
           value={title}
@@ -59,7 +54,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         />
       </div>
       <div className="space-y-2">
-        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Category">Category</label>
         <Input
           id="category"
           value={category}
@@ -70,7 +65,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         />
       </div>
       <div className="space-y-2">
-        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>
         <Textarea
           id="keyFeatures"
           value={keyFeatures}
@@ -81,7 +76,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         />
       </div>
       <div className="space-y-2">
-        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
+        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Target Audience (Optional)">Target Audience (Optional)</label>
         <Input
           id="targetAudience"
           value={targetAudience}
@@ -106,5 +101,5 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         )}
       </Button>
     </div>
-  )
+  );
 }

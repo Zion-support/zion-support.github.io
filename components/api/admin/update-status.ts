@@ -9,7 +9,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (!isInternalAgentRequest(req)) {
     res.status(401).json({ error: 'Unauthorized' }),
-    return
+    return;
   }
   const body = req.body || {};
   const dataDir = path.join(process.cwd(), 'dataadmin');

@@ -7,6 +7,8 @@ import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
 import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
@@ -326,5 +328,5 @@ export default function DemosPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

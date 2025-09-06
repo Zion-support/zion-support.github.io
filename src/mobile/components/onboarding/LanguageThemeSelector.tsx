@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/useTheme";
 import { Moon, Sun, Check } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface Language {
   code: string,
   name: string,
@@ -91,5 +92,5 @@ export function LanguageThemeSelector() {
         </div>
       </div>
     </div>
-  )
+  );
 }

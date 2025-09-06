@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ForumPost } from "@/types/community";
 import { logInfo } from '@/utils/productionLogger';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean
@@ -18,11 +20,9 @@ interface PostCardProps {
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', { data: post ? post.id : 'NO POST' }),
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-  return (
-    <Card data-testid="post-card" className={cn(
+  return(<Card data-testid="post-card" className={cn(
       "transition-shadow hover: shadow-md",
-      post.isPinned && "border-zion-purple/50";
-      post.isFeatured && "bg-zion-purple/5"
+      post.isPinned && "border-zion-purple/50", post.isFeatured && "bg-zion-purple/5"
     )}>
       <p>DEBUG: PostCard ID: {post?.id}</p>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">

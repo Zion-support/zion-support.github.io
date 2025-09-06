@@ -9,6 +9,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -119,14 +122,10 @@ export default function SupportRequests() {
       return false
     }
     
-    return true
+    return true;
   });
   // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
-  const resetFilters = () => {
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length, const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length, const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length, const totalCount = MOCK_SUPPORT_REQUESTS.length, const resetFilters = () => {
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
@@ -341,5 +340,5 @@ export default function SupportRequests() {
         </Tabs>
       </div>
     </>
-  )
+  );
 }

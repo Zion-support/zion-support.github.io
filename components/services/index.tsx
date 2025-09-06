@@ -18,6 +18,7 @@ import { realOperationalServices } from '../../data/real-operational-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
+import { Star } from 'lucide-react';
 
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug,
@@ -35,8 +36,7 @@ const ServicesPage: NextPage = () => {
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
-    .concat(
-      extraServices as any[];
+    .concat(extraServices as any[];
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
       curatedMarketServices as any[];
@@ -45,9 +45,7 @@ export default function ServicesIndexPage() {
       marketValidatedServices as any[];
       moreRealServices2025 as any[];
       realOperationalServices as any[];
-      verified2025Additions as any[];
-      realServicesQ12025 as any[];
-      newVerifiedServicesQ22025 as any[]
+      verified2025Additions as any[], realServicesQ12025 as any[], newVerifiedServicesQ22025 as any[]
     );
   const byCategory: Record<string, unknown[]> = {};
   for (const c of categories) byCategory[c] = [];
@@ -68,20 +66,18 @@ export default function ServicesIndexPage() {
       if (filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false;
       // Price
       const min = s.priceFromUSD ?? s.priceRangeUSD?.[0];
-      const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD;
-      if (filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters.priceMin)) return false;
-      if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false;
+      const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD, if (filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters.priceMin)) return false, if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false;
       // Rating
       if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false;
       // Delivery time (not available in data, simulate pass-through)
-      return true
+      return true;
     });
     setFiltered(next)
   }, [filters, services]);
   const availableCategories = React.useMemo(() => {
     const set = new Set<string>();
     services.forEach((s) => s.categories.forEach((c) => set.add(c)));
-    return Array.from(set)
+    return Array.from(set);
   }, [services]);
   const handleRequestQuote = (service: ServiceItem) => {
     setSelected(service),
@@ -133,6 +129,6 @@ export default function ServicesIndexPage() {
         onSubmit={handleSubmit}
       />
     </div>
-  )
+  );
 },
 export default ServicesPage;

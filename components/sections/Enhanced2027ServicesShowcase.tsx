@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
+import { Zap, Star } from 'lucide-react';
 const Enhanced2027ServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -23,8 +24,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory, return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -41,7 +41,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
     const colors = {
       'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600'
     },
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
   };
   const getCategoryIcon = (category: string) => {
     const icons = {
@@ -58,7 +58,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       'Materials Science': <Atom className="w-5 h-5" />;
       'Environmental Technology': <Rocket className="w-5 h-5" />
     };
-    return icons[category as keyof typeof icons] || <Zap className="w-5 h-5" />
+    return icons[category as keyof typeof icons] || <Zap className="w-5 h-5" />;
   };
   return (
     <section className="py-20 bg-gray-900">
@@ -385,6 +385,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  )
+  );
 },
 export default Enhanced2027ServicesShowcase;

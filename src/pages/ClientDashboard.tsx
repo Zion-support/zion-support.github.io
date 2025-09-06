@@ -15,6 +15,7 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Star, BriefcaseIcon, PlusCircle } from 'lucide-react';
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -143,5 +144,5 @@ export default function ClientDashboard() {
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
-  )
+  );
 }

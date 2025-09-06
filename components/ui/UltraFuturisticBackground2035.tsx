@@ -4,23 +4,13 @@ interface UltraFuturisticBackground2035Props {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
-  particleCount?: number;
-  animationSpeed?: number;
-  enableHolographic?: boolean;
-  enableQuantumEffects?: boolean;
-  enableNeonEffects?: boolean;
-  enableSpaceTime?: boolean
+  particleCount?: number, animationSpeed?: number, enableHolographic?: boolean, enableQuantumEffects?: boolean, enableNeonEffects?: boolean, enableSpaceTime?: boolean
 }
 
 const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({
   intensity = 'medium',
   colorScheme = 'quantum-fusion';
-  particleCount = 200;
-  animationSpeed = 1.0;
-  enableHolographic = true;
-  enableQuantumEffects = true;
-  enableNeonEffects = true;
-  enableSpaceTime = true
+  particleCount = 200, animationSpeed = 1.0, enableHolographic = true, enableQuantumEffects = true, enableNeonEffects = true, enableSpaceTime = true
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<any[]>([]);
@@ -70,13 +60,9 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
   };
   const colors = getColorScheme();
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
+    if (!ctx) return, const resizeCanvas = () => {
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -100,49 +86,36 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
     initParticles();
     // Animation loop
     const animate = () => {
-      ctx.fillStyle = colors.background;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = colors.background, ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
         // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx, particle.y += particle.vy;
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
+        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1, if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
         // Update life
         particle.life--;
         // Regenerate particle if it dies
         if (particle.life <= 0) {
-          particle.x = Math.random() * canvas.width;
-          particle.y = Math.random() * canvas.height;
-          particle.life = particle.maxLife;
-          particle.type = Math.random() > 0.7 ? 'quantum' : 'normal'
+          particle.x = Math.random() * canvas.width, particle.y = Math.random() * canvas.height, particle.life = particle.maxLife, particle.type = Math.random() > 0.7 ? 'quantum' : 'normal'
         }
 
         // Draw particle
-        const alpha = particle.life / particle.maxLife;
-        ctx.globalAlpha = alpha;
-        if (particle.type === 'quantum' && enableQuantumEffects) {
+        const alpha = particle.life / particle.maxLife, ctx.globalAlpha = alpha, if (particle.type === 'quantum' && enableQuantumEffects) {
           // Quantum particle effect
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
-          ctx.fillStyle = colors.accent;
-          ctx.fill();
+          ctx.fillStyle = colors.accent, ctx.fill();
           // Quantum glow
-          ctx.shadowColor = colors.accent;
-          ctx.shadowBlur = 20;
-          ctx.beginPath();
+          ctx.shadowColor = colors.accent, ctx.shadowBlur = 20, ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fillStyle = colors.glow;
-          ctx.fill();
+          ctx.fillStyle = colors.glow, ctx.fill();
           ctx.shadowBlur = 0
         } else {
           // Normal particle
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fillStyle = particle.color;
-          ctx.fill()
+          ctx.fillStyle = particle.color, ctx.fill()
         }
       });
       // Draw holographic grid
@@ -172,11 +145,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]);
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
     const gridSize = 50,
-    const time = Date.now() * 0.001;
-    ctx.strokeStyle = colors.primary;
-    ctx.lineWidth = 0.5;
-    ctx.globalAlpha = 0.3;
-    for (let x = 0, x < ctx.canvas.width, x += gridSize) {
+    const time = Date.now() * 0.001, ctx.strokeStyle = colors.primary, ctx.lineWidth = 0.5, ctx.globalAlpha = 0.3, for (let x = 0, x < ctx.canvas.width, x += gridSize) {
       ctx.beginPath();
       ctx.moveTo(x, 0);
       ctx.lineTo(x, ctx.canvas.height);
@@ -191,11 +160,8 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
     }
 
     // Animated diagonal lines
-    ctx.strokeStyle = colors.secondary;
-    ctx.globalAlpha = 0.2;
-    for (let i = 0, i < 5, i++) {
-      const offset = (time + i * 0.5) * 100;
-      ctx.beginPath();
+    ctx.strokeStyle = colors.secondary, ctx.globalAlpha = 0.2, for (let i = 0, i < 5, i++) {
+      const offset = (time + i * 0.5) * 100, ctx.beginPath();
       ctx.moveTo(offset, 0);
       ctx.lineTo(offset + 200, ctx.canvas.height);
       ctx.stroke()
@@ -205,39 +171,23 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
     const time = Date.now() * 0.001,
     // Neon orbs
     for (let i = 0, i < 3, i++) {
-      const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
-      const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
-      const size = 30 + Math.sin(time + i) * 10;
+      const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width, const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height, const size = 30 + Math.sin(time + i) * 10;
       // Glow effect
-      ctx.shadowColor = colors.primary;
-      ctx.shadowBlur = 30;
-      ctx.beginPath();
+      ctx.shadowColor = colors.primary, ctx.shadowBlur = 30, ctx.beginPath();
       ctx.arc(x, y, size, 0, Math.PI * 2);
-      ctx.fillStyle = colors.glow;
-      ctx.fill();
+      ctx.fillStyle = colors.glow, ctx.fill();
       // Core
-      ctx.shadowBlur = 0;
-      ctx.beginPath();
+      ctx.shadowBlur = 0, ctx.beginPath();
       ctx.arc(x, y, size * 0.6, 0, Math.PI * 2);
-      ctx.fillStyle = colors.primary;
-      ctx.fill()
+      ctx.fillStyle = colors.primary, ctx.fill()
     }
   };
   const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001,
     // Wormhole effect
-    const centerX = ctx.canvas.width / 2;
-    const centerY = ctx.canvas.height / 2;
-    const maxRadius = Math.min(ctx.canvas.width, ctx.canvas.height) * 0.3;
-    for (let i = 0, i < 20, i++) {
-      const radius = (i / 20) * maxRadius;
-      const angle = time * 2 + i * 0.3;
-      const x = centerX + Math.cos(angle) * radius;
-      const y = centerY + Math.sin(angle) * radius;
-      const alpha = 1 - (i / 20);
-      ctx.globalAlpha = alpha * 0.5;
-      ctx.fillStyle = colors.accent;
-      ctx.beginPath();
+    const centerX = ctx.canvas.width / 2, const centerY = ctx.canvas.height / 2, const maxRadius = Math.min(ctx.canvas.width, ctx.canvas.height) * 0.3, for (let i = 0, i < 20, i++) {
+      const radius = (i / 20) * maxRadius, const angle = time * 2 + i * 0.3, const x = centerX + Math.cos(angle) * radius, const y = centerY + Math.sin(angle) * radius, const alpha = 1 - (i / 20);
+      ctx.globalAlpha = alpha * 0.5, ctx.fillStyle = colors.accent, ctx.beginPath();
       ctx.arc(x, y, 2, 0, Math.PI * 2);
       ctx.fill()
     }

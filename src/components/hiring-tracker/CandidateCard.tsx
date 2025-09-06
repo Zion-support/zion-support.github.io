@@ -6,6 +6,9 @@ import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
 import { JobApplication } from "@/types/jobs";
 import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
+import { Calendar, BriefcaseIcon } from 'lucide-react';
 
 interface CandidateCardProps {
   application: JobApplication,
@@ -195,5 +198,5 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
         onConfirm={handleHireConfirmed}
       />
     </>
-  )
+  );
 }

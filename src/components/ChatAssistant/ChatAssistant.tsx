@@ -7,6 +7,7 @@ import { ChatInput } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react'
+import { Star } from 'lucide-react';
 
 export interface Message {
   id: string,
@@ -22,11 +23,9 @@ export interface ChatAssistantProps {
   recipient: {
     id: string,
     name: string,
-    avatarUrl?: string;
-    role?: string
+    avatarUrl?: string, role?: string
   };
-  conversationId?: string;
-  initialMessages?: Message[];
+  conversationId?: string, initialMessages?: Message[];
   onSendMessage: (message: string, conversationId?: string) => Promise<void>;
   contextHeader?: ReactNode;
   /** Optional canned questions shown when the chat is empty */
@@ -34,14 +33,7 @@ export interface ChatAssistantProps {
 }
 
 export function ChatAssistant({
-  isOpen;
-  onClose;
-  recipient;
-  conversationId;
-  initialMessages = [];
-  onSendMessage;
-  contextHeader;
-  starterQuestions = []}: ChatAssistantProps) {
+  isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader, starterQuestions = []}: ChatAssistantProps) {
   const auth = useContext(AuthContext);
   const isGuest = !auth?.isAuthenticated;
   // Hooks called unconditionally at the top
@@ -72,10 +64,7 @@ export function ChatAssistant({
       }
     }
   }, [
-    isGuest;
-    initialMessages;
-    storedGuestMessages;
-    setStoredGuestMessages;
+    isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages;
     recipient.id]);
   // Effect for logged-in user messages
   useEffect(() => {
@@ -85,28 +74,24 @@ export function ChatAssistant({
     }
   }, [isGuest, initialMessages, recipient.id]);
   // Determine currentMessages and setCurrentMessages based on isGuest
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
-  const setCurrentMessages = (
+  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages, const setCurrentMessages = (
     valueOrFn: Message[] | ((val: Message[]) => Message[]),
   ) => {
     if (isGuest) {
       const newMessages =
         valueOrFn instanceof Function
           ? valueOrFn(displayGuestMessages)
-          : valueOrFn;
-      setDisplayGuestMessages(newMessages);
+          : valueOrFn, setDisplayGuestMessages(newMessages);
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
       const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
-      setLoggedInMessages(newMessages)
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn, setLoggedInMessages(newMessages)
     }
   };
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
   useEffect(() => {
     if (debouncedApiCallParams) {
-      onSendMessage(debouncedApiCallParams.message;
-        debouncedApiCallParams.conversationId)
+      onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)
     }
   }, [debouncedApiCallParams, onSendMessage]);
   useEffect(() => {
@@ -134,8 +119,7 @@ export function ChatAssistant({
     }
   };
   const handleModalSendConfirm = () => {
-    if (!guestMessage) return;
-    const newMessage: Message = {
+    if (!guestMessage) return, const newMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
       message: guestMessage,
@@ -150,18 +134,16 @@ export function ChatAssistant({
     setGuestMessage(null)
   };
   useEffect(() => {
-    if (!isOpen) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
+    if (!isOpen) return, const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.preventDefault(),
         onClose()
       }
     };
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
-  if (!isOpen) return null;
-  return (
+  if (!isOpen) return null, return (
     <div
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
@@ -278,5 +260,5 @@ export function ChatAssistant({
         </div>
       )}
     </div>
-  )
+  );
 }

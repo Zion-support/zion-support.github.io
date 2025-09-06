@@ -30,9 +30,9 @@ export function ITServicePricingTable() {
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? 1 : -1
       }
-      return 0
+      return 0;
     });
-    return filteredData
+    return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
@@ -103,5 +103,5 @@ export function ITServicePricingTable() {
         </Table>
       </div>
     </div>
-  )
+  );
 }

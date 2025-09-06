@@ -17,13 +17,11 @@ import { ResumeStepContent } from './ResumeStepContent';
 import { useResumeProgress } from './useResumeProgress';
 import { ResumeVersionSelector } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export function ResumeWizard() {
   const { user } = useAuth();
   const { 
-    isLoading;
-    error;
-    resume;
-    fetchResume;
+    isLoading, error, resume, fetchResume;
     createResume
   } = useResume();
   const [activeTab, setActiveTab] = useState('basic-info');
@@ -139,5 +137,5 @@ export function ResumeWizard() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

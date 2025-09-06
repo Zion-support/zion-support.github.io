@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: data }, revalidate: 21600 }
   } catch {
     return { props: { report: null }, revalidate: 21600 }
-  }
+  };
 },
 export default function SiteValidator({ report }: Props) {
   if (!report) return <div>No validation report yet.</div>;
@@ -49,5 +49,5 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
-  )
+  );
 }

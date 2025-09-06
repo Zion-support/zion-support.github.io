@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { FileText } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface ProfileProjectsProps {
   projects: ProfileProject[]
@@ -54,5 +56,5 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
         ))}
       </div>
     </div>
-  )
+  );
 }

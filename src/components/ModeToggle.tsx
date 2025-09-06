@@ -24,7 +24,7 @@ export function ModeToggle() {
     if (theme === "system") {
       return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
     }
-    return theme
+    return theme;
   })(),
   const isDarkMode = resolvedTheme === "dark";
   const handleToggle = () => {
@@ -38,8 +38,7 @@ export function ModeToggle() {
       const messages = newTheme === 'dark' ? darkModeMessages : lightModeMessages
       const title = messages[Math.floor(Math.random() * messages.length)]
       toast({
-        title;
-        description: `Theme changed to ${newTheme} mode successfully`}),
+        title, description: `Theme changed to ${newTheme} mode successfully`}),
       // Accessibility announcement for screen readers
       const announcement = `Theme switched to ${newTheme} mode`;
       // Create a live region announcement
@@ -47,8 +46,7 @@ export function ModeToggle() {
       liveRegion.setAttribute('aria-livepolite');
       liveRegion.setAttribute('aria-atomictrue');
       liveRegion.className = 'sr-only';
-      liveRegion.textContent = announcement;
-      document.body.appendChild(liveRegion);
+      liveRegion.textContent = announcement, document.body.appendChild(liveRegion);
       // Clean up the announcement after it's been read
       setTimeout(() => {
         document.body.removeChild(liveRegion)
@@ -123,5 +121,5 @@ export function ModeToggle() {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  )
+  );
 }

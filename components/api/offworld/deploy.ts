@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     if (!fs.existsSync(outDir)) {
-      return res.status(500).json({ error: 'Export failed, no out/ directory found' })
+      return res.status(500).json({ error: 'Export failed, no out/ directory found' });
     }
 
     const { cid, provider } = await addDirectory(outDir);
@@ -26,5 +26,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ cid, provider })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Unknown error' })
-  }
+  };
 }

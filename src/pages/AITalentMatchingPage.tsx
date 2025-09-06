@@ -1,6 +1,7 @@
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react'
+import { Star } from 'lucide-react';
 
 export default function AITalentMatchingPage() {
   const benefits = [
@@ -38,5 +39,5 @@ export default function AITalentMatchingPage() {
       ctaText="Find Your AI Talent"
       ctaLink="/request-quote"
     />
-  )
+  );
 }

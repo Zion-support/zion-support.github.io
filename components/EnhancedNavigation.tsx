@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,7 +11,7 @@ const EnhancedNavigation: React.FC = () => {
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const services = [
     { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
@@ -212,6 +213,6 @@ const EnhancedNavigation: React.FC = () => {
         )}
       </div>
     </nav>
-  )
+  );
 },
 export default EnhancedNavigation;

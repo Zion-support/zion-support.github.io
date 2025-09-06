@@ -2,6 +2,8 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
@@ -91,5 +93,5 @@ export function PartnerDashboard() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

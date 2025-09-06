@@ -16,21 +16,13 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     ];
     // Format quote data for CSV
     const rows = quotes.map(quote => [
-      quote.id;
-      quote.talent_name || 'Unknown';
-      quote.requester_name;
-      quote.requester_email;
-      quote.project_name;
-      quote.project_summary;
-      quote.budget_display || 
+      quote.id, quote.talent_name || 'Unknown', quote.requester_name, quote.requester_email, quote.project_name, quote.project_summary, quote.budget_display || 
         (quote.budget_min && quote.budget_max 
           ? `$${quote.budget_min} - $${quote.budget_max}` 
           : quote.budget_min 
             ? `$${quote.budget_min}` 
             : 'Not specified');
-      quote.timeline;
-      quote.status;
-      new Date(quote.created_at).toLocaleDateString()
+      quote.timeline, quote.status, new Date(quote.created_at).toLocaleDateString()
     ]);
     // Create CSV content
     const csvContent = [
@@ -68,5 +60,5 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       <Download size={16} />
       Export CSV
     </Button>
-  )
+  );
 };

@@ -14,10 +14,7 @@ interface SelectResumeSectionProps {
 
 export function SelectResumeSection({
   resumeOptions,
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
-  isLoading
+  selectedResume, handleResumeSelect, handleDownloadResume, isLoading
 }: SelectResumeSectionProps) {
   return (
     <div className="space-y-2">
@@ -52,5 +49,5 @@ export function SelectResumeSection({
         </>
       )}
     </div>
-  )
+  );
 }

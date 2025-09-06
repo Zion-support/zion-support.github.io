@@ -8,6 +8,7 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
+import { Zap, Star } from 'lucide-react';
 export default function UltraFuturistic2029InnovationsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -124,7 +125,7 @@ export default function UltraFuturistic2029InnovationsPage() {
                   description: 'Quantum computing meets brain-computer interfaces for unprecedented capabilities',
                   icon: Atom,
                   color: 'from-indigo-600 to-purple-600',
-                  services: cuttingEdge2029Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time'))
+                  services: cuttingEdge2029Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time'));
                 },
                 {
                   title: '🚀 Space Colonization & Mining',

@@ -1,8 +1,7 @@
 import React from 'react';
 type Props = {
   message: string,
-  onJoin?: () => void;
-  canJoin?: boolean
+  onJoin?: () => void, canJoin?: boolean
 };
 export default function InviteBanner({ message, onJoin, canJoin = true }: Props) {
   return (
@@ -14,5 +13,5 @@ export default function InviteBanner({ message, onJoin, canJoin = true }: Props)
         </button>
       )}
     </div>
-  )
+  );
 }

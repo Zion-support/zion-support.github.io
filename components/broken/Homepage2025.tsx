@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036ITServices } from '../data/real-2036-it-services';
 import { real2036AIServices } from '../data/real-2036-ai-services';
+import { Star } from 'lucide-react';
 interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
@@ -20,7 +21,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
     }, 5000);
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   }, []);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId),
@@ -670,7 +671,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 {
                   title: 'Innovation First',
                   description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.',
-                  icon: '🚀'
+                  icon: '🚀';
                 },
                 {
                   title: 'Proven Results',

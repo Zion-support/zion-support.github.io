@@ -8,6 +8,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
@@ -96,5 +98,5 @@ export default function ReviewsModeration() {
     <ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>
-  )
+  );
 }

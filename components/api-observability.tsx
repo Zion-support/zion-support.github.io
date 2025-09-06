@@ -4,10 +4,10 @@ import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { Star } from 'lucide-react';
 export default function ApiObservabilityPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
-  if (!service) return null;
-  return (
+  if (!service) return null, return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
@@ -48,6 +48,6 @@ export default function ApiObservabilityPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 

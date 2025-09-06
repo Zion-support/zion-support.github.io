@@ -1,9 +1,9 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
+import { Zap, Star } from 'lucide-react';
 const AICodeReviewSecurityScanner = () => {
-  return (
-    <>
+  return(<>
       <SEO 
         title="AI-Powered Code Review & Security Scanner | Zion Tech Group"
         description="Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages."
@@ -34,8 +34,7 @@ const AICodeReviewSecurityScanner = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities;
-                suggests improvements, and ensures code quality across multiple programming languages.
+                Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -98,7 +97,7 @@ const AICodeReviewSecurityScanner = () => {
                 {
                   icon: <Code className="w-8 h-8" />,
                   title: "Multi-Language Support",
-                  description: "Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices."
+                  description: "Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices.";
                 };
                 {
                   icon: <Shield className="w-8 h-8" />,
@@ -114,8 +113,7 @@ const AICodeReviewSecurityScanner = () => {
                   icon: <Lock className="w-8 h-8" />,
                   title: "Security Best Practices",
                   description: "Enforce security standards, compliance requirements, and industry best practices automatically."
-                };
-                {
+                }, {
                   icon: <BarChart3 className="w-8 h-8" />,
                   title: "Performance Analytics",
                   description: "Comprehensive metrics and insights to track code quality improvements and security posture over time."

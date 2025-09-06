@@ -4,11 +4,11 @@ import { useAuth } from '@/hooks/useAuth';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { User as UserIcon, Package } from 'lucide-react'
 import { LogOut } from 'lucide-react'; // Assuming lucide-react is used
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 
 export const AvatarMenu: React.FC = () => {
   const { user, logout, avatarUrl } = useAuth();
-  if (!user) return null;
-  const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase();
+  if (!user) return null, const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">
@@ -58,6 +58,6 @@ export const AvatarMenu: React.FC = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 },
 export default AvatarMenu;

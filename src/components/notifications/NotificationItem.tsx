@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { ChevronRight } from 'lucide-react';
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -36,8 +38,7 @@ interface NotificationItemProps {
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification,
-  onMarkAsRead;
-  onDismiss}) => {
+  onMarkAsRead, onDismiss}) => {
   const router = useRouter(), // Changed from useNavigate to useRouter
 
   const handleClick = () => {
@@ -47,12 +48,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push
-    }
+    };
   };
-  return (<div
+  return(<div
       className={cn(
-        'p-3 border-b border-zion-blue-light relative group';
-        !notification.read ? 'bg-zion-blue-dark/30' : '')}
+        'p-3 border-b border-zion-blue-light relative group', !notification.read ? 'bg-zion-blue-dark/30' : '')}
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>

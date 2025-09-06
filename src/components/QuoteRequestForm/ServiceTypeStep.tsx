@@ -9,6 +9,7 @@ import Skeleton from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { z } from "zod";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -41,8 +42,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       const url = `/api/public/services?category=${encodeURIComponent(
         formData.serviceType
       )}&q=${encodeURIComponent(debouncedQuery)}`;
-      const maxRetries = 3;
-      for (let attempt = 0, attempt < maxRetries, attempt++) {
+      const maxRetries = 3, for (let attempt = 0, attempt < maxRetries, attempt++) {
         try {
           const response = await fetch(url);
           if (!response.ok) throw new Error('Failed to fetch');
@@ -71,7 +71,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         } finally {
           if (isMounted.current) setLoading(false)
         }
-      }
+      };
     };
     fetchServices()
   }, [formData.serviceType, debouncedQuery, isMounted]);
@@ -85,17 +85,15 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       serviceType: item.category.toLowerCase() as ServiceType
     })
   },
-  const sourceListings = listings;
-  const filteredListings = sourceListings.filter(item => {
+  const sourceListings = listings, const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
       if (!categoryMatch) return false
     }
     
-    if (searchQuery.trim() === "") return true;
-    return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase())
+    if (searchQuery.trim() === "") return true, return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+           item.category.toLowerCase().includes(searchQuery.toLowerCase());
   });
   return (
     <div className="space-y-6">
@@ -194,5 +192,5 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         </div>
       )}
     </div>
-  )
+  );
 }

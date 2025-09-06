@@ -15,14 +15,12 @@ export function FooterNewsletter(): React.ReactElement {
     e.preventDefault(),
     if (honeypot) return, // ignore bots
     const now = Date.now();
-    if (now - lastSubmit.current < 1000) return;
-    lastSubmit.current = now;
-    const trimmedEmail = email.trim();
+    if (now - lastSubmit.current < 1000) return, lastSubmit.current = now, const trimmedEmail = email.trim();
     if (!EMAIL_REGEX.test(trimmedEmail)) {
       setEmailError("Please enter a valid email address.");
       return
     } else {
-      setEmailError("")
+      setEmailError("");
     }
 
     setIsSubmitting(true);
@@ -64,7 +62,9 @@ export function FooterNewsletter(): React.ReactElement {
       onSubmit={handleSubmit}
       className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
     >
-      <label htmlFor="newsletter-email" className="sr-only">
+      <label htmlFor="newsletter-email" className="sr-only" htmlFor="input-
+        Email address for newsletter subscription
+      ">
         Email address for newsletter subscription
       </label>
       <Input
@@ -104,5 +104,5 @@ export function FooterNewsletter(): React.ReactElement {
         )}
       </Button>
     </form>
-  )
+  );
 } 

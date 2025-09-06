@@ -16,6 +16,9 @@ import { useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star, Calendar } from 'lucide-react';
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -91,8 +94,7 @@ export default function ForumPostPage() {
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
   const router = useRouter();
-  const postId = router.query.postId as string;
-  const { user } = useAuth();
+  const postId = router.query.postId as string, const { user } = useAuth();
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
@@ -109,7 +111,7 @@ export default function ForumPostPage() {
           <Link href="/community">Back to Community</Link>
         </Button>
       </div>
-    )
+    );
   }
 
   const handleUpvote = () => {
@@ -125,7 +127,7 @@ export default function ForumPostPage() {
     setPost({ ...post, upvotes: post.upvotes + 1 }),
     toast({
       title: "Vote recorded",
-      description: "You upvoted this post"})
+      description: "You upvoted this post"});
   },
   const handleDownvote = () => {
     if (!user) {
@@ -140,7 +142,7 @@ export default function ForumPostPage() {
     setPost({ ...post, downvotes: post.downvotes + 1 }),
     toast({
       title: "Vote recorded",
-      description: "You downvoted this post"})
+      description: "You downvoted this post"});
   },
   const handleSubmitReply = async (content: string) => {
     if (!user) {
@@ -156,14 +158,13 @@ export default function ForumPostPage() {
     const newReply: ForumReply = {
       id: `reply${Date.now()}`,
       postId: post.id,
-      content;
-      authorId: user.id || 'unknown',
+      content, authorId: user.id || 'unknown',
       authorName: user.displayName || 'Anonymous',
       authorAvatar: user.avatarUrl,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       upvotes: 0,
-      downvotes: 0
+      downvotes: 0;
     },
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 }),
@@ -185,8 +186,7 @@ export default function ForumPostPage() {
     // Update the replies
     const updatedReplies = replies.map(reply => ({
       ...reply,
-      isAnswer: reply.id === replyId
-    })),
+      isAnswer: reply.id === replyId, })),
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),
     toast({
@@ -208,15 +208,13 @@ export default function ForumPostPage() {
       description: "A moderator will review this content"})
   },
   const handlePinPost = () => {
-    if (!isAdminOrMod) return;
-    setPost({ ...post, isPinned: !post.isPinned }),
+    if (!isAdminOrMod) return, setPost({ ...post, isPinned: !post.isPinned }),
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned",
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
   },
   const handleLockPost = () => {
-    if (!isAdminOrMod) return;
-    setPost({ ...post, isLocked: !post.isLocked }),
+    if (!isAdminOrMod) return, setPost({ ...post, isLocked: !post.isLocked }),
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked",
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
@@ -407,5 +405,5 @@ export default function ForumPostPage() {
         </div>
       </div>
     </>
-  )
+  );
 }

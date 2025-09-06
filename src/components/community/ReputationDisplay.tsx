@@ -7,13 +7,11 @@ interface ReputationDisplayProps {
 }
 
 export const ReputationDisplay = ({ 
-  reputation;
-  size = 'md' 
+  reputation, size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
   const currentLevel = Math.floor(reputation / 100);
-  const nextMilestone = (currentLevel + 1) * 100;
-  const progress = ((reputation % 100) / 100) * 100;
+  const nextMilestone = (currentLevel + 1) * 100, const progress = ((reputation % 100) / 100) * 100;
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -44,6 +42,6 @@ export const ReputationDisplay = ({
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up
       </div>
     </div>
-  )
+  );
 };
 export default ReputationDisplay;

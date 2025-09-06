@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../ui/Button';
+import { Star } from 'lucide-react';
 interface Service {
   id: string,
   name: string,
@@ -45,16 +46,13 @@ interface Service {
 interface EnhancedServiceShowcaseProps {
   title: string,
   subtitle: string,
-  showFilters?: boolean;
-  services?: Service[];
+  showFilters?: boolean, services?: Service[];
   maxServices?: number
 }
 
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title,
-  subtitle;
-  showFilters = false;
-  services = [];
+  subtitle, showFilters = false, services = [];
   maxServices = 12
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -95,33 +93,28 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                           (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
                           (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
                           (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
-      return matchesCategory && matchesPrice
+      return matchesCategory && matchesPrice;
     });
     // Sort services
     switch (sortBy) {
       case 'popular':
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
-      case 'rating':
+        break, case 'rating':
         filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-        break;
-      case 'roi':
+        break, case 'roi':
         filtered.sort((a, b) => {
           const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
-          return bROI - aROI
+          return bROI - aROI;
         });
-        break;
-      case 'price-low':
+        break, case 'price-low':
         filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
-        break;
-      case 'price-high':
+        break, case 'price-high':
         filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
-        break;
-      default: break
+        break, default: break
     }
 
-    return filtered.slice(0, maxServices)
+    return filtered.slice(0, maxServices);
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
   const stats = [
     { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' },
@@ -182,7 +175,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Category Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Category</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
@@ -198,7 +191,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                 {/* Price Range Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Price Range</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Price Range">Price Range</label>
                   <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
@@ -214,7 +207,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                 {/* Sort Options */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Sort By</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Sort By">Sort By</label>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
@@ -383,6 +376,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         </motion.div>
       </div>
     </section>
-  )
+  );
 },
 export default EnhancedServiceShowcase;

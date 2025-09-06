@@ -1,5 +1,7 @@
 import { BadgeCheck } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export interface Achievement {
   id: string,
   title: string,
@@ -31,5 +33,5 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
         ))}
       </CardContent>
     </Card>
-  )
+  );
 }

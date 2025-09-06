@@ -7,6 +7,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { revolutionary2026Services } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
+import { Zap, Star } from 'lucide-react';
 export default function ServicesShowcase2026() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -24,17 +25,15 @@ export default function ServicesShowcase2026() {
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-      return matchesSearch && matchesCategory
+      return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
-          return b.rating - a.rating;
-        case 'customers':
-          return b.customers - a.customers;
-        default: return a.name.localeCompare(b.name)
+          return b.rating - a.rating, case 'customers':
+          return b.customers - a.customers, default: return a.name.localeCompare(b.name)
       }
     }),
   const categories = [
@@ -92,8 +91,7 @@ export default function ServicesShowcase2026() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Discover the future of technology with our revolutionary AI, quantum computing;
-                emerging technologies, and comprehensive IT solutions
+                Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
               </p>
               
               {/* Service Statistics */}
@@ -321,5 +319,5 @@ export default function ServicesShowcase2026() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }

@@ -6,6 +6,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
+import { ChevronRight, Star } from 'lucide-react';
 export default function HomePage() {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +16,7 @@ export default function HomePage() {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % 6)
     }, 5000);
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   }, []);
   const features = [
     {
@@ -143,8 +144,7 @@ export default function HomePage() {
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Empowering businesses with cutting-edge AI, quantum computing, cybersecurity;
-              and digital transformation solutions that drive innovation and growth.
+              Empowering businesses with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions that drive innovation and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -333,5 +333,5 @@ export default function HomePage() {
 
       <EnhancedFooter />
     </div>
-  )
+  );
 }

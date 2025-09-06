@@ -27,19 +27,12 @@ export default function ApplyGrantPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           program,
-          projectName;
-          teamInfo;
-          proposalSummary;
-          timeline;
-          budgetAmount: Number(budgetAmount || 0),
-          budgetCurrency;
-          supportingLinks: supportingLinks
+          projectName, teamInfo, proposalSummary, timeline, budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency, supportingLinks: supportingLinks
             .split('\n')
             .map((s) => s.trim())
             .filter(Boolean),
-          pitchDeckUrl;
-          region;
-          sector: (sector as any) || undefined,
+          pitchDeckUrl, region, sector: (sector as any) || undefined,
           submit})});
       const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error || 'Failed');
@@ -109,5 +102,5 @@ export default function ApplyGrantPage() {
         </div>
       </div>
     </EnhancedLayout>
-  )
+  );
 }

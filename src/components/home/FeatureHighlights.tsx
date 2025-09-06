@@ -3,9 +3,9 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react'
 import { cn } from "@/lib/utils";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface FeatureHighlightsProps {
-  className?: string;
-  style?: React.CSSProperties
+  className?: string, style?: React.CSSProperties
 }
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
@@ -73,5 +73,5 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         </div>
       </div>
     </section>
-  )
+  );
 }

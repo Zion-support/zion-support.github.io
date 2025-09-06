@@ -3,13 +3,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 
 interface LeaderboardEntry {
   id: string,
   rank: number,
   name: string,
-  avatar?: string;
-  referrals: number,
+  avatar?: string, referrals: number,
   earnings: number,
   badges: string[]
 }
@@ -195,5 +197,5 @@ export function PartnerLeaderboard() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

@@ -3,14 +3,11 @@ import { motion } from 'framer-motion';
 const UltraFuturisticBackground2034: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
     if (!ctx) return;
     // Set canvas size
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -26,36 +23,21 @@ const UltraFuturisticBackground2034: React.FC = () => {
       life: number,
       maxLife: number,
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.5;
-        this.vy = (Math.random() - 0.5) * 0.5;
-        this.size = Math.random() * 2 + 1;
-        this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
-        this.alpha = Math.random() * 0.5 + 0.3;
-        this.life = Math.random() * 100 + 50;
-        this.maxLife = this.life
+        this.x = Math.random() * canvas.width, this.y = Math.random() * canvas.height, this.vx = (Math.random() - 0.5) * 0.5, this.vy = (Math.random() - 0.5) * 0.5, this.size = Math.random() * 2 + 1, this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
+        this.alpha = Math.random() * 0.5 + 0.3, this.life = Math.random() * 100 + 50, this.maxLife = this.life
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life--;
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-        if (this.life <= 0) {
-          this.life = this.maxLife;
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height
+        this.x += this.vx, this.y += this.vy, this.life--;
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1, if (this.y < 0 || this.y > canvas.height) this.vy *= -1, if (this.life <= 0) {
+          this.life = this.maxLife, this.x = Math.random() * canvas.width, this.y = Math.random() * canvas.height
         }
       }
 
       draw() {
-        if (!ctx) return;
-        ctx.save();
+        if (!ctx) return, ctx.save();
         ctx.globalAlpha = this.alpha * (this.life / this.maxLife);
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
+        ctx.fillStyle = this.color, ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore()
@@ -75,8 +57,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.05)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = gradient, ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
@@ -84,12 +65,9 @@ const UltraFuturisticBackground2034: React.FC = () => {
       });
       // Draw connecting lines
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
-      ctx.lineWidth = 0.5;
-      for (let i = 0, i < particles.length, i++) {
+      ctx.lineWidth = 0.5, for (let i = 0, i < particles.length, i++) {
         for (let j = i + 1, j < particles.length, j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const dx = particles[i].x - particles[j].x, const dy = particles[i].y - particles[j].y, const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 150) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -104,7 +82,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas)
-    }
+    };
   }, []);
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">

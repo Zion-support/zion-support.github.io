@@ -8,6 +8,7 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+import { Zap, Star, Calendar } from 'lucide-react';
 export default function InnovativeServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -57,15 +58,14 @@ export default function InnovativeServicesPage() {
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.price.monthly - b.price.monthly;
-      case 'popularity':
+        return a.price.monthly - b.price.monthly, case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi': {
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi
+        return bRoi - aRoi;
       }
               default: {
           // Innovation level sorting
@@ -74,7 +74,7 @@ export default function InnovativeServicesPage() {
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)
         }
-    }
+    };
   });
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -406,5 +406,5 @@ export default function InnovativeServicesPage() {
         </div>
       </QuantumHolographicBackground>
     </>
-  )
+  );
 }

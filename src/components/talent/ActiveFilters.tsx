@@ -12,24 +12,13 @@ interface ActiveFiltersProps {
   selectedRegions: string[],
   toggleRegion: (region: string) => void,
   priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void
+  setPriceRange: (range: [number, number]) => void, experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void, clearFilters: () => void
 }
 
 export function ActiveFilters({
   selectedSkills,
-  toggleSkill;
-  selectedAvailability;
-  toggleAvailability;
-  selectedRegions;
-  toggleRegion;
-  priceRange;
-  setPriceRange;
-  experienceRange;
-  setExperienceRange;
-  clearFilters
+  toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange, setExperienceRange, clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
   const hasActiveFilters = 
@@ -39,9 +28,7 @@ export function ActiveFilters({
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
-    priceRange[1] !== 200;
-  if (!hasActiveFilters) return null;
-  return (
+    priceRange[1] !== 200, if (!hasActiveFilters) return null, return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>
       
@@ -109,5 +96,5 @@ export function ActiveFilters({
         Clear All
       </Button>
     </div>
-  )
+  );
 }

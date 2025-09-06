@@ -12,6 +12,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
+import { Star } from 'lucide-react';
 // Define schema for form validation
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');
@@ -24,9 +25,7 @@ const educationSchema = z.object({
   location: z.string().optional()}),
 type EducationFormValues = z.infer<typeof educationSchema>;
 export function EducationFormFields({ 
-  isEditing;
-  onSubmit;
-  onCancel 
+  isEditing, onSubmit, onCancel 
 }: EducationFormFieldsProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -208,5 +207,5 @@ export function EducationFormFields({
         </div>
       </form>
     </Form>
-  )
+  );
 }

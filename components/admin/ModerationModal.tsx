@@ -6,8 +6,7 @@ export type ModerationModalProps = {
 };
 export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
   const [adminNotes, setAdminNotes] = useState('');
-  if (!flag) return null;
-  return (
+  if (!flag) return null, return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
       <div className="bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg">
         <div className="p-4 border-b flex items-center justify-between">
@@ -52,7 +51,7 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Admin Notes</label>
+            <label className="block text-sm font-medium mb-1" htmlFor="input-Admin Notes">Admin Notes</label>
             <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className="w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
         </div>
@@ -64,5 +63,5 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
         </div>
       </div>
     </div>
-  )
+  );
 }

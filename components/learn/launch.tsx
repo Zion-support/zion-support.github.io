@@ -6,5 +6,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
       permanent: false}}
 },
 export default function LaunchRedirect() {
-  return null
+  return null;
 }

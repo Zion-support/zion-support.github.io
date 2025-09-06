@@ -14,6 +14,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from 'next/router';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export default function ContentGenerator() {
 
   const { user, isLoading } = useAuth();
@@ -44,12 +46,10 @@ export default function ContentGenerator() {
           keywords: keywordsArray,
           // autoPublish and includeImage are not explicitly used by 'generate-seo-content'
           // but we can leave them here, the backend will ignore them if not needed.
-          autoPublish;
-          includeImage: contentType === 'blog' ? includeImage : false
+          autoPublish, includeImage: contentType === 'blog' ? includeImage : false
         }
       }),
-      if (error) throw error;
-      setPreviewContent(data), // Expecting { generatedContent: "..." }
+      if (error) throw error, setPreviewContent(data), // Expecting { generatedContent: "..." }
       toast.success(`Content for "${contentType}" generated successfully!`)
     } catch (error) {
       logErrorToProduction('Error generating content:', { data: error }),
@@ -77,10 +77,8 @@ export default function ContentGenerator() {
           body: previewContent.body,
           testMode: true,
           testEmail
-        }
-      });
-      if (error) throw error;
-      toast.success(`Test newsletter sent to ${testEmail}!`)
+        }, });
+      if (error) throw error, toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       logErrorToProduction('Error sending test newsletter:', { data: error }),
       toast.error("Failed to send test newsletter. Please try again.")
@@ -291,5 +289,5 @@ export default function ContentGenerator() {
         </div>
       </div>
     </>
-  )
+  );
 }

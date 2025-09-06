@@ -39,5 +39,5 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         </div>
       )}
     </div>
-  )
+  );
 }

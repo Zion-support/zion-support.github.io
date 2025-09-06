@@ -10,24 +10,20 @@ import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ProjectDetailsField } from "./ProjectDetailsField";
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
-  initialJobTitle?: string;
-  userDetails?: {
-    name?: string;
-    email?: string;
-    id?: string
+  initialJobTitle?: string, userDetails?: {
+    name?: string, email?: string, id?: string
   };
   onSubmitSuccess?: () => void
 }
 
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
-    talent;
-    onClose: onSubmitSuccess || onClose,
-    initialJobTitle;
-    userDetails 
+    talent, onClose: onSubmitSuccess || onClose,
+    initialJobTitle, userDetails 
   });
   return (
     <Form {...form}>
@@ -70,5 +66,5 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         </DialogFooter>
       </form>
     </Form>
-  )
+  );
 }

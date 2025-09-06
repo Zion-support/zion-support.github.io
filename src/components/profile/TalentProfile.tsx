@@ -13,6 +13,7 @@ import { ProfileRatings } from "./ProfileRatings";
 import { TalentProfile as TalentProfileType } from "@/types/talent";
 import { useAuth } from "@/hooks/useAuth";
 import { Availability } from "@/types/profile";
+import { Star } from 'lucide-react';
 interface TalentProfileProps {
   profile: TalentProfileType,
   onRequestHire: () => void,
@@ -20,9 +21,7 @@ interface TalentProfileProps {
 }
 
 export function TalentProfile({ 
-  profile;
-  onRequestHire;
-  onMessageTalent
+  profile, onRequestHire, onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
   // Create proper availability object from talent profile
@@ -132,5 +131,5 @@ export function TalentProfile({
         </div>
       </div>
     </div>
-  )
+  );
 }

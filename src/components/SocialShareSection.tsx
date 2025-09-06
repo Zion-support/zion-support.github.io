@@ -87,5 +87,5 @@ export function SocialShareSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       revalidate: 7200}
   } catch {
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
-  }
+  };
 },
 export default function TechRadar({ pypi, crates, github }: Props) {
   const langs = Object.keys(github);
@@ -66,5 +66,5 @@ export default function TechRadar({ pypi, crates, github }: Props) {
         </section>
       ))}
     </div>
-  )
+  );
 }

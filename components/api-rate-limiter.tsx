@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function APIRateLimiterPage() {
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
@@ -27,23 +29,18 @@ export default function APIRateLimiterPage() {
     setApiKey(key)
   };
   const testRateLimiting = async () => {
-    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
-    setIsTesting(true);
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return, setIsTesting(true);
     setTestResults([]);
     const limit = parseInt(rateLimit);
     const results = [];
     // Simulate API calls to test rate limiting
     for (let i = 1, i <= limit + 5, i++) {
       await new Promise(resolve => setTimeout(resolve, 100));
-      const isAllowed = i <= limit;
-      const status = isAllowed ? 'success' : 'rate_limited';
-      const statusCode = isAllowed ? 200 : 429;
-      results.push({
+      const isAllowed = i <= limit, const status = isAllowed ? 'success' : 'rate_limited';
+      const statusCode = isAllowed ? 200 : 429, results.push({
         request: i,
         timestamp: new Date().toLocaleTimeString(),
-        status;
-        statusCode;
-        responseTime: Math.random() * 100 + 50,
+        status, statusCode, responseTime: Math.random() * 100 + 50,
         headers: {
           'X-RateLimit-Limit': limit,
           'X-RateLimit-Remaining': Math.max(0, limit - i);
@@ -66,7 +63,7 @@ export default function APIRateLimiterPage() {
       case 'rate_limited':
         return <AlertTriangle className="w-5 h-5 text-red-400" />;
       default: return <AlertTriangle className="w-5 h-5 text-yellow-400" />
-    }
+    };
   },
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -99,8 +96,7 @@ export default function APIRateLimiterPage() {
             API Rate Limiter
           </h1>
           <p className="text-xl text-green-200 max-w-4xl mx-auto leading-relaxed">
-            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks;
-            and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.
+            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks, and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.
           </p>
         </div>
       </section>
@@ -128,7 +124,9 @@ export default function APIRateLimiterPage() {
               <div className="space-y-6">
                 {/* API Endpoint */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    API Endpoint
+                  ">
                     API Endpoint
                   </label>
                   <input
@@ -142,7 +140,9 @@ export default function APIRateLimiterPage() {
 
                 {/* Rate Limit */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
+                    Rate Limit
+                  ">
                     Rate Limit
                   </label>
                   <div className="grid grid-cols-2 gap-3">
@@ -165,7 +165,9 @@ export default function APIRateLimiterPage() {
 
                 {/* Time Window */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
+                    Time Window
+                  ">
                     Time Window
                   </label>
                   <div className="grid grid-cols-2 gap-3">
@@ -188,7 +190,9 @@ export default function APIRateLimiterPage() {
 
                 {/* API Key Generation */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    API Key
+                  ">
                     API Key
                   </label>
                   <div className="flex space-x-2">
@@ -253,7 +257,7 @@ export default function APIRateLimiterPage() {
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
-                        result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10'
+                        result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10';
                       }`}
                     >
                       <div className="flex items-center justify-between mb-2">

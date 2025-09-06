@@ -6,6 +6,7 @@ import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface LoadingState {
   isLoading: boolean
   error: Error | null
@@ -132,20 +133,13 @@ const useNetworkStatus = () => {
     }
   }, [])
 
-  return isOnline
+  return isOnline;
 }
 
 // Advanced Dynamic Component Loader
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn,
-  fallback;
-  errorFallback;
-  loadingComponent;
-  enableRetry = true;
-  maxRetries = 3;
-  prefetch = false;
-  className;
-  children;
+  fallback, errorFallback, loadingComponent, enableRetry = true, maxRetries = 3, prefetch = false, className, children;
   ...props
 }) => {
   const [loadingState, setLoadingState] = useState<LoadingState>({
@@ -308,7 +302,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
       {...(options || {})}
       {...(props as any)}
     />
-  )
+  );
 }
 
 // Predefined dynamic loaders for common heavy components

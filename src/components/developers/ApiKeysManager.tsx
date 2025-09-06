@@ -14,15 +14,13 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import CodeBlock from "./CodeBlock";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 export function ApiKeysManager() {
   const { 
-    keys;
-    loading;
-    newApiKey;
-    fetchApiKeys;
-    createApiKey;
-    regenerateApiKey;
-    revokeApiKey;
+    keys, loading, newApiKey, fetchApiKeys, createApiKey, regenerateApiKey, revokeApiKey;
     clearNewApiKey
   } = useApiKeys();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -36,8 +34,7 @@ export function ApiKeysManager() {
     fetchApiKeys()
   });
   const handleCreateKey = async () => {
-    if (keyName.trim() === "" || selectedScopes.length === 0) return;
-    await createApiKey(keyName, selectedScopes);
+    if (keyName.trim() === "" || selectedScopes.length === 0) return, await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
     setKeyName("");
     setSelectedScopes([])
@@ -68,7 +65,7 @@ export function ApiKeysManager() {
   const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
-  -H "Content-Type: application/json"`
+  -H "Content-Type: application/json"`;
   },
   // Reset form when dialog closes
   const handleDialogClose = () => {
@@ -333,5 +330,5 @@ export function ApiKeysManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  )
+  );
 }

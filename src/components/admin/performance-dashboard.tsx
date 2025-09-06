@@ -6,6 +6,9 @@ import { Progress } from '@/components/ui/progress';
 import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react'
 import { bundleMonitor } from '@/utils/bundleMonitor';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 interface PerformanceMetrics {
   bundleSize: number,
   loadTime: number,
@@ -34,10 +37,7 @@ export function PerformanceDashboard() {
   const collectMetrics = async () => {
     try {
       // Collect performance metrics
-      const memoryInfo = (performance as any).memory;
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const resourceCount = performance.getEntriesByType('resource').length;
-      const performanceMetrics: PerformanceMetrics = {
+      const memoryInfo = (performance as any).memory, const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming, const resourceCount = performance.getEntriesByType('resource').length, const performanceMetrics: PerformanceMetrics = {
         bundleSize: 0, // This would need to be calculated separately
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,
         performanceScore: 0, // This would need to be calculated
@@ -76,10 +76,8 @@ export function PerformanceDashboard() {
     if (typeof window === 'undefined') return {};
     const vitals: Partial<PerformanceMetrics> = {},
     // Collect navigation timing
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigation) {
-      vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart;
-      vitals.lcp = navigation.loadEventEnd - navigation.fetchStart
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming, if (navigation) {
+      vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart, vitals.lcp = navigation.loadEventEnd - navigation.fetchStart
     }
     
     // Use PerformanceObserver for more accurate metrics
@@ -101,7 +99,7 @@ export function PerformanceDashboard() {
             if (entry.entryType === 'first-input') {
               vitals.fid = (entry as any).processingStart - entry.startTime
             }
-          })
+          });
         });
         observer.observe({ entryTypes: ['paintlargest-contentful-paintlayout-shiftfirst-input'] }),
         // Resolve after a short delay
@@ -112,7 +110,7 @@ export function PerformanceDashboard() {
       })
     }
     
-    return vitals
+    return vitals;
   };
   const collectChunkData = async (): Promise<BundleChunk[]> => {
     if (typeof window === 'undefined') return [];
@@ -126,37 +124,36 @@ export function PerformanceDashboard() {
       loadTime: entry.responseEnd - entry.requestStart,
       cached: entry.transferSize === 0,
       type: categorizeChunk(entry.name)
-    })).sort((a, b) => b.size - a.size)
+    })).sort((a, b) => b.size - a.size);
   };
   const categorizeChunk = (filename: string): string => {
     if (filename.includes('framework')) return 'framework',
     if (filename.includes('vendor')) return 'vendor';
     if (filename.includes('pages')) return 'page';
     if (filename.includes('chunks')) return 'chunk';
-    return 'other'
+    return 'other';
   };
   const formatSize = (bytes: number): string => {
     if (bytes === 0) return '0 B',
-    const k = 1024;
-    const sizes = ['BKBMBGB'];
+    const k = 1024, const sizes = ['BKBMBGB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
   };
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-600',
     if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600'
+    return 'text-red-600';
   };
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />,
     if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />;
-    return <AlertTriangle className="w-4 h-4 text-red-600" />
+    return <AlertTriangle className="w-4 h-4 text-red-600" />;
   };
   useEffect(() => {
     collectMetrics();
     const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds
 
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   }, []);
   return (
     <div className="space-y-6">
@@ -382,5 +379,5 @@ export function PerformanceDashboard() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 } 

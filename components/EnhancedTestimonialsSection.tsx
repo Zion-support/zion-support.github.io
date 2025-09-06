@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 interface Testimonial {
   id: string,
   name: string,
@@ -88,7 +89,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
           i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'
         }`}
       />
-    ))
+    ));
   };
   return (
     <section className="py-24 px-6 relative overflow-hidden">
@@ -220,6 +221,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
         </div>
       </div>
     </section>
-  )
+  );
 },
 export default EnhancedTestimonialsSection;

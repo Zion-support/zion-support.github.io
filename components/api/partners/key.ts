@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const auth = await authenticateRequest(req),
   if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" })
+    return res.status(401).json({ error: "Unauthorized" });
   }
   const { apiKey } = auth,
   const keys = await listApiKeys();
@@ -26,5 +26,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60},
   keys.push(newKey as any);
   await saveApiKeys(keys);
-  return res.status(201).json({ apiKey: newKey.key })
+  return res.status(201).json({ apiKey: newKey.key });
 }

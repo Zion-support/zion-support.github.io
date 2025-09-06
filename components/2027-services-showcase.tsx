@@ -6,6 +6,7 @@ import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovation
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
+import { Star } from 'lucide-react';
 export default function ServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -31,7 +32,7 @@ export default function ServicesShowcase2027() {
                         (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
                         (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
-    return matchesSearch && matchesCategory && matchesPrice
+    return matchesSearch && matchesCategory && matchesPrice;
   });
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -43,7 +44,7 @@ export default function ServicesShowcase2027() {
       case 'roi':
         return parseInt(a.roi.replace(/[^0-9]/g, '')) - parseInt(b.roi.replace(/[^0-9]/g, ''));
       default: return 0
-    }
+    };
   }),
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -180,7 +181,7 @@ export default function ServicesShowcase2027() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Category Filter */}
               <div>
-                <label className="block text-cyan-400 font-medium mb-2">Category</label>
+                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Category">Category</label>
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
@@ -196,7 +197,7 @@ export default function ServicesShowcase2027() {
 
               {/* Price Range Filter */}
               <div>
-                <label className="block text-cyan-400 font-medium mb-2">Price Range</label>
+                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Price Range">Price Range</label>
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
@@ -212,7 +213,7 @@ export default function ServicesShowcase2027() {
 
               {/* Sort By */}
               <div>
-                <label className="block text-cyan-400 font-medium mb-2">Sort By</label>
+                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}

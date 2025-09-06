@@ -3,15 +3,11 @@ import { ReactNode } from "react";
 
 type ModernLayoutProps = {
   children: ReactNode,
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
+  title?: string, description?: string, keywords?: string, canonical?: string;
 };
 
 const ModernLayout = ({
-  children;
-  title = "Zion Tech Group - Revolutionary AI Services & IT Solutions";
+  children, title = "Zion Tech Group - Revolutionary AI Services & IT Solutions";
   description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology.";
   keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
   canonical;
@@ -44,7 +40,7 @@ const ModernLayout = ({
         {children}
       </div>
     </>
-  ),
+  ),;
 };
 
 export default ModernLayout;

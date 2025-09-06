@@ -7,6 +7,7 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+import { Zap, Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -71,8 +72,7 @@ export default function CuttingEdgeServicesShowcase2025() {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory, return matchesSearch && matchesCategory;
   });
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -456,5 +456,5 @@ export default function CuttingEdgeServicesShowcase2025() {
         </section>
       </Layout>
     </>
-  )
+  );
 }

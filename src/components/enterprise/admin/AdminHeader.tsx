@@ -62,5 +62,5 @@ export function AdminHeader() {
         <Button>Customize Workspace</Button>
       </div>
     </div>
-  )
+  );
 }

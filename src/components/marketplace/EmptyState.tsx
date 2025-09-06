@@ -5,9 +5,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',
-  title?: string;
-  description?: string;
-  action?: {
+  title?: string, description?: string, action?: {
     label: string,
     onClick: () => void
   },
@@ -48,18 +46,11 @@ const defaultContent = {
     title: 'Loading...',
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 export function EmptyState({
-  type;
-  title;
-  description;
-  action;
-  icon
+  type, title, description, action, icon
 }: EmptyStateProps) {
   const { t } = useTranslation();
   const content = defaultContent[type];
-  const displayTitle = title || content.title;
-  const displayDescription = description || content.description;
-  const displayIcon = icon || content.icon;
-  return (
+  const displayTitle = title || content.title, const displayDescription = description || content.description, const displayIcon = icon || content.icon, return (
     <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
       <div className="mb-4">
         {displayIcon}
@@ -109,17 +100,14 @@ export function EmptyState({
 // Specific empty state variants for quick use
 export function ProductsEmptyState({
   onRetry,
-  onAddProduct;
-  isAuthenticated = false
+  onAddProduct, isAuthenticated = false
 }: {
-  onRetry?: () => void;
-  onAddProduct?: () => void;
-  isAuthenticated?: boolean
+  onRetry?: () => void, onAddProduct?: () => void, isAuthenticated?: boolean
 }) {
   const action = onAddProduct
     ? { 
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
-        onClick: onAddProduct 
+        onClick: onAddProduct ;
       }
     : onRetry
     ? { label: 'Try Again', onClick: onRetry }
@@ -187,5 +175,5 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       type="error"
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
     />
-  )
+  );
 } 

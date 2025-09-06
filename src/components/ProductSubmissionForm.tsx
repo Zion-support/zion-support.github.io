@@ -234,8 +234,7 @@ export function ProductSubmissionForm() {
               control={form.control}
               name="title"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues, "title"> }) => {
-                const { onChange, onBlur, value, ref } = field;
-                return (
+                const { onChange, onBlur, value, ref } = field, return (
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
@@ -252,7 +251,7 @@ export function ProductSubmissionForm() {
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
-                )
+                );
               }}
             />
 

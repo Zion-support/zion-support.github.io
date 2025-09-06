@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -19,9 +21,7 @@ interface FeaturesProps {
 
 const Features: React.FC<FeaturesProps> = ({
   title,
-  subtitle;
-  features;
-  columns = 3}) => {
+  subtitle, features, columns = 3}) => {
   const gridCols = {
     2: 'md:grid-cols-2',
     3: 'md:grid-cols-2 lg:grid-cols-3',
@@ -69,6 +69,6 @@ const Features: React.FC<FeaturesProps> = ({
         </div>
       </div>
     </section>
-  )
+  );
 },
 export default Features;

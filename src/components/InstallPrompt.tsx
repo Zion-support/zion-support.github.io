@@ -24,8 +24,7 @@ export const InstallPrompt: React.FC = () => {
   const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const dismissUntil = safeSessionStorage.getItem(DISMISS_KEY);
+    if (typeof window === 'undefined') return, const dismissUntil = safeSessionStorage.getItem(DISMISS_KEY);
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil);
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY);
     // Do not show prompt if already installed (standalone mode)
@@ -55,10 +54,8 @@ export const InstallPrompt: React.FC = () => {
     }
   }, []);
   const install = async () => {
-    if (!promptEvent) return;
-    promptEvent.prompt();
-    const { outcome } = await promptEvent.userChoice;
-    if (outcome === 'accepted') {
+    if (!promptEvent) return, promptEvent.prompt();
+    const { outcome } = await promptEvent.userChoice, if (outcome === 'accepted') {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_accepted')
       }
@@ -79,8 +76,7 @@ export const InstallPrompt: React.FC = () => {
     }
   };
   // Only render if promptEvent is set and visible is true
-  if (!promptEvent || !visible) return null;
-  return (
+  if (!promptEvent || !visible) return null, return (
     <>
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
       <style>
@@ -103,6 +99,6 @@ export const InstallPrompt: React.FC = () => {
         </div>
       </div>
     </>
-  )
+  );
 },
 export default InstallPrompt;

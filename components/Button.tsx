@@ -3,20 +3,15 @@ interface ButtonProps {
   children: React.ReactNode,
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
+  className?: string, onClick?: () => void, type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
 }
 
 export default function Button({ 
-  children;
-  variant = 'primary';
+  children, variant = 'primary';
   size = 'md';
   className = '';
-  onClick;
-  type = 'button';
-  disabled = false 
+  onClick, type = 'button', disabled = false 
 }: ButtonProps) {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900',
   const variantClasses = {
@@ -40,5 +35,5 @@ export default function Button({
     >
       {children}
     </button>
-  )
+  );
 }

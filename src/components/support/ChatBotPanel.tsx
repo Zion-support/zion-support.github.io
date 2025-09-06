@@ -118,7 +118,7 @@ export function ChatBotPanel() {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
       }
-    }
+    };
   },
   const suggestEscalation = () => {
     const escalationMessage: Message = {

@@ -7,6 +7,10 @@ import { supabase } from "@/integrations/supabase/client";
 import { Review, ReviewStatus } from "@/types/reviews";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Badge } from '@/components/ui/badge';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
+import { Star } from 'lucide-react';
 interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,
@@ -15,8 +19,7 @@ interface ReviewsModerationTableProps {
 
 export function ReviewsModerationTable({
   reviews,
-  isLoading;
-  onRefresh}: ReviewsModerationTableProps) {
+  isLoading, onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const { mutate: updateReviewStatus, isPending } = useMutation({
@@ -30,8 +33,7 @@ export function ReviewsModerationTable({
         .from("reviews")
         .update({ status })
         .eq("id", reviewId);
-      if (error) throw error;
-      return { reviewId, status }
+      if (error) throw error, return { reviewId, status };
     };
     onSuccess: (data) => {
       toast({
@@ -83,7 +85,7 @@ export function ReviewsModerationTable({
   },
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review),
-    setViewDetailsOpen(true)
+    setViewDetailsOpen(true);
   };
   const renderStars = (rating: number) => {
     return (
@@ -95,7 +97,7 @@ export function ReviewsModerationTable({
           />
         ))}
       </div>
-    )
+    );
   };
   return (
     <>
@@ -339,5 +341,5 @@ export function ReviewsModerationTable({
         </Dialog>
       )}
     </>
-  )
+  );
 }

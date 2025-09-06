@@ -23,8 +23,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank')
   };
   const copyLink = () => {
-    if (typeof window === 'undefined') return;
-    navigator.clipboard
+    if (typeof window === 'undefined') return, navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
@@ -43,5 +42,5 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
         </Button>
       ))}
     </div>
-  )
+  );
 }

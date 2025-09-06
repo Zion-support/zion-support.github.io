@@ -45,13 +45,9 @@ export default function SalaryInsightsPage() {
         body: JSON.stringify({
           roleTitle,
           skills: skills.split().map((s) => s.trim()).filter(Boolean),
-          region;
-          experienceLevel;
-          remote;
-          employmentType})});
+          region, experienceLevel, remote, employmentType})});
       if (!res.ok) throw new Error('Failed to fetch insights');
-      const json = (await res.json()) as InsightResponse;
-      setData(json)
+      const json = (await res.json()) as InsightResponse, setData(json)
     } catch (e: any) {
       setError(e.message || 'Unexpected error')
     } finally {
@@ -78,7 +74,7 @@ export default function SalaryInsightsPage() {
           return
         }
       } catch {
-        // fall back
+        // fall back;
       }
       try {
         const key = 'zion.salary-insights.history';
@@ -92,15 +88,12 @@ export default function SalaryInsightsPage() {
 
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string, value: number }[],
-    const min = data.minHourlyUsd;
-    const median = data.medianHourlyUsd;
-    const max = data.maxHourlyUsd;
-    const lower = Math.max(0, median - min);
+    const min = data.minHourlyUsd, const median = data.medianHourlyUsd, const max = data.maxHourlyUsd, const lower = Math.max(0, median - min);
     const upper = Math.max(0, max - median);
     return [
       { label: 'Below Median', value: lower || 1 },
       { label: 'Median', value: median || 1 },
-      { label: 'Above Median', value: upper || 1 }]
+      { label: 'Above Median', value: upper || 1 }];
   }, [data]);
   return (
     <div>
@@ -116,18 +109,18 @@ export default function SalaryInsightsPage() {
         <div className="lg:col-span-1 space-y-4">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h2 className="font-medium mb-3">Filters</h2>
-            <label className="block text-sm mb-2">Role title</label>
+            <label className="block text-sm mb-2" htmlFor="input-Role title">Role title</label>
             <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g., Senior AI Engineer" />
 
-            <label className="block text-sm mt-3 mb-2">Skills</label>
+            <label className="block text-sm mt-3 mb-2" htmlFor="input-Skills">Skills</label>
             <input value={skills} onChange={(e) => setSkills(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />
 
-            <label className="block text-sm mt-3 mb-2">Region</label>
+            <label className="block text-sm mt-3 mb-2" htmlFor="input-Region">Region</label>
             <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />
 
             <div className="grid grid-cols-2 gap-3 mt-3">
               <div>
-                <label className="block text-sm mb-2">Experience</label>
+                <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>
                 <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option>Junior</option>
                   <option>Mid</option>
@@ -136,7 +129,7 @@ export default function SalaryInsightsPage() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm mb-2">Employment</label>
+                <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option value="contract">Contract</option>
                   <option value="freelance">Freelance</option>
@@ -147,7 +140,7 @@ export default function SalaryInsightsPage() {
 
             <div className="flex items-center gap-2 mt-3">
               <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />
-              <label htmlFor="remote" className="text-sm">Remote role</label>
+              <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>
             </div>
 
             {!isLoggedIn && (
@@ -266,5 +259,5 @@ export default function SalaryInsightsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

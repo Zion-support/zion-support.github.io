@@ -7,21 +7,15 @@ import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
-  buttonText?: string;
-  className?: string;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  buttonText?: string, className?: string, variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   contentLength?: number
 }
 
 export function AIEnhancementButton({
-  options;
-  onEnhanced;
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-  contentLength = 10
+  options, onEnhanced, buttonText = "Enhance with AI";
+  className, variant = "ghost";
+  size = "sm", contentLength = 10
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
@@ -118,5 +112,5 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
-  )
+  );
 }

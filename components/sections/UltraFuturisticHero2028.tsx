@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 export default function UltraFuturisticHero2028() {
   const features = [
     { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' },
@@ -84,8 +85,7 @@ export default function UltraFuturisticHero2028() {
           </h1>
           
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
-            Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation;
-            and Autonomous AI Civilization. We're building tomorrow's solutions today.
+            Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation, and Autonomous AI Civilization. We're building tomorrow's solutions today.
           </p>
         </motion.div>
 
@@ -236,5 +236,5 @@ export default function UltraFuturisticHero2028() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

@@ -23,5 +23,5 @@ export function AuthorBio({ author }: AuthorBioProps) {
         <p>{author.bio}</p>
       </div>
     </div>
-  )
+  );
 }

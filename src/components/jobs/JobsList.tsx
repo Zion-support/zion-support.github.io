@@ -9,9 +9,10 @@ import { Badge } from "@/components/ui/badge";
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns";
 import Link from "next/link";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface JobsListProps {
-  filter?: JobStatus;
-  onSelectJob?: (jobId: string, jobTitle: string) => void
+  filter?: JobStatus, onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
@@ -20,8 +21,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchJobs = async () => {
-      if (!user) return;
-      try {
+      if (!user) return, try {
         let query = supabase
           .from("jobs")
           .select("*")
@@ -31,9 +31,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           query = query.eq("status", filter)
         }
 
-        const { data, error } = await query;
-        if (error) throw error;
-        setJobs(data as Job[])
+        const { data, error } = await query, if (error) throw error, setJobs(data as Job[])
       } catch (error) {
         logErrorToProduction('Error fetching jobs:', { data: error })
       } finally {
@@ -63,7 +61,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           <Link href="/post-job">Post Your First Job</Link>
         </Button>
       </div>
-    )
+    );
   }
 
   const getStatusColor = (status: JobStatus) => {
@@ -144,5 +142,5 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         </Card>
       ))}
     </div>
-  )
+  );
 }

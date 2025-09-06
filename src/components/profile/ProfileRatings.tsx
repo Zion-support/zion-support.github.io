@@ -6,10 +6,10 @@ import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { useReviews } from "@/hooks/useReviews";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Star } from 'lucide-react';
 interface ProfileRatingsProps {
   userId: string,
-  averageRating?: number;
-  ratingCount?: number
+  averageRating?: number, ratingCount?: number
 }
 
 export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {
@@ -77,5 +77,5 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
     {
@@ -374,5 +376,5 @@ export default function SaaSMarketplacePage() {
         </div>
       </section>
     </>
-  )
+  );
 }

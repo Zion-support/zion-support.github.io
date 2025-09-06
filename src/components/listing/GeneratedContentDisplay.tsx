@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -68,5 +70,5 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

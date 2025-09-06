@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { Star } from 'lucide-react';
 const AIEmotionalIntelligencePlatform2029 = () => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -525,6 +526,6 @@ const AIEmotionalIntelligencePlatform2029 = () => {
 
       <UltraFuturisticFooter2028 />
     </>
-  )
+  );
 },
 export default AIEmotionalIntelligencePlatform2029;

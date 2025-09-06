@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Filter } from 'lucide-react'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 interface FraudFiltersProps {
   searchQuery: string,
@@ -19,13 +20,7 @@ interface FraudFiltersProps {
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery,
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  severityFilter;
-  setSeverityFilter;
-  contentTypeFilter;
-  setContentTypeFilter;
+  setSearchQuery, statusFilter, setStatusFilter, severityFilter, setSeverityFilter, contentTypeFilter, setContentTypeFilter;
   resetFilters}) => {
   return (
     <div className="flex flex-col md: flex-row gap-4 mb-6">
@@ -82,5 +77,5 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
     </div>
-  )
+  );
 },

@@ -17,6 +17,9 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { MyApplications } from "@/components/jobs/MyApplications";
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star, BriefcaseIcon, PlusCircle } from 'lucide-react';
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
@@ -25,8 +28,7 @@ function TalentDashboardContent() {
     onboardingStatus.profileCompleted &&
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
-    onboardingStatus.matchReceived;
-  return (
+    onboardingStatus.matchReceived, return (
     <>
       <SEO 
         title="Talent Dashboard | Zion AI Marketplace" 
@@ -196,5 +198,5 @@ export default function TalentDashboard() {
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
-  )
+  );
 }

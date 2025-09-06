@@ -6,6 +6,7 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { StatusBadge } from "./StatusBadge";
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
+import { Calendar } from 'lucide-react';
 
 interface ApplicationRowProps {
   application: JobApplication,
@@ -17,10 +18,7 @@ interface ApplicationRowProps {
 
 export function ApplicationRow({
   application,
-  processingId;
-  onViewApplication;
-  onStatusChange;
-  onViewScore
+  processingId, onViewApplication, onStatusChange, onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application.talent_profile?.full_name || "Unknown";
@@ -93,5 +91,5 @@ export function ApplicationRow({
         />
       </TableCell>
     </TableRow>
-  )
+  );
 }

@@ -12,7 +12,7 @@ export async function getServerSideProps() {
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
   } catch {}
-  return { props: { generatedAt, summaries } }
+  return { props: { generatedAt, summaries } };
 }
 
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
@@ -31,5 +31,5 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
         ))}
       </div>
     </div>
-  )
+  );
 }

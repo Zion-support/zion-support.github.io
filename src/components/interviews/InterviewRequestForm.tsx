@@ -17,6 +17,8 @@ import { format, addDays } from "date-fns";
 import { CalendarIcon } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Calendar } from 'lucide-react';
 interface InterviewRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -137,9 +139,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     <FormControl>
                       <Button
                         variant="outline"
-                        className={cn(
-                          "w-full pl-3 text-left font-normal";
-                          !field.value && "text-muted-foreground"
+                        className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground"
                         )}
                       >
                         {field.value ? (

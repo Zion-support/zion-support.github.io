@@ -8,6 +8,9 @@ import Skeleton from "@/components/ui/skeleton";
 import { Sparkles, ArrowRight } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -21,10 +24,7 @@ interface GeneratedContent {
 interface AIListingGeneratorProps {
   onApplyGenerated?: (content: GeneratedContent) => void,
   initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
+    title?: string, category?: string, keyFeatures?: string, targetAudience?: string
   }
 }
 
@@ -40,14 +40,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     switch(field) {
       case 'title':
         setTitle(e.target.value),
-        break;
-      case 'category':
+        break, case 'category':
         setCategory(e.target.value);
-        break;
-      case 'keyFeatures':
+        break, case 'keyFeatures':
         setKeyFeatures(e.target.value);
-        break;
-      case 'targetAudience':
+        break, case 'targetAudience':
         setTargetAudience(e.target.value);
         break
     }
@@ -114,7 +111,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
+            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Title">Title</label>
             <Input
               id="title"
               value={title}
@@ -125,7 +122,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             />
           </div>
           <div className="space-y-2">
-            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
+            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Category">Category</label>
             <Input
               id="category"
               value={category}
@@ -136,7 +133,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             />
           </div>
           <div className="space-y-2">
-            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
+            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>
             <Textarea
               id="keyFeatures"
               value={keyFeatures}
@@ -147,7 +144,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             />
           </div>
           <div className="space-y-2">
-            <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
+            <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Target Audience (Optional)">Target Audience (Optional)</label>
             <Input
               id="targetAudience"
               value={targetAudience}
@@ -242,5 +239,5 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         </Card>
       )}
     </div>
-  )
+  );
 }

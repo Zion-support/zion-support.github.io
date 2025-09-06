@@ -10,6 +10,8 @@ import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
 import { captureException } from "@/utils/sentry";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Star } from 'lucide-react';
 interface PriceRange {
   min: number,
   max: number
@@ -29,12 +31,8 @@ interface DynamicListingPageProps {
 }
 
 export function DynamicListingPage({
-  title;
-  description;
-  categorySlug;
-  listings: allListings,
-  categoryFilters;
-  initialPrice = { min: 0, max: 10000 },
+  title, description, categorySlug, listings: allListings,
+  categoryFilters, initialPrice = { min: 0, max: 10000 },
   detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
@@ -83,8 +81,7 @@ export function DynamicListingPage({
   >([0, initialPrice.max]);
   const handleSliderChange = (values: number[]) => {
     const [min, max] = values.map(Number);
-    if (min == null || max == null || isNaN(min) || isNaN(max)) return;
-    setCurrentPriceFilter([min, max])
+    if (min == null || max == null || isNaN(min) || isNaN(max)) return, setCurrentPriceFilter([min, max])
   };
   let filteredListings: ProductListing[] = [],
   try {
@@ -131,7 +128,7 @@ export function DynamicListingPage({
         matchesBrand &&
         matchesSpecs &&
         matchesAvailability
-      )
+      );
     });
     filteredListings.sort((a, b) => {
       switch (sortOption) {
@@ -149,7 +146,7 @@ export function DynamicListingPage({
     })
   } catch (error) {
     captureException(error),
-    logErrorToProduction('Listing filter error:', { data: error })
+    logErrorToProduction('Listing filter error:', { data: error });
   }
 
   const handleRequestQuote = (listingId: string) => {
@@ -195,7 +192,9 @@ export function DynamicListingPage({
               </h3>
 
               <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                  Categories
+                ">
                   Categories
                 </label>
                 <div className="space-y-2">
@@ -210,7 +209,9 @@ export function DynamicListingPage({
                       <label
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-                      >
+                       htmlFor="input-
+                        {filter.label}
+                      ">
                         {filter.label}
                       </label>
                     </div>
@@ -220,7 +221,9 @@ export function DynamicListingPage({
 
               {brandOptions.length > 0 && (
                 <div className="mb-6">
-                  <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                  <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                    Brand
+                  ">
                     Brand
                   </label>
                   <Select
@@ -245,7 +248,9 @@ export function DynamicListingPage({
               )}
 
               <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                  Specifications
+                ">
                   Specifications
                 </label>
                 <Input
@@ -261,7 +266,9 @@ export function DynamicListingPage({
 
               {availabilityOptions.length > 0 && (
                 <div className="mb-6">
-                  <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                  <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                    Availability
+                  ">
                     Availability
                   </label>
                   <Select
@@ -288,7 +295,9 @@ export function DynamicListingPage({
               )}
 
               <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                  Price Range
+                ">
                   Price Range
                 </label>
                 <div className="mt-6 px-2">
@@ -310,7 +319,9 @@ export function DynamicListingPage({
               </div>
 
               <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                  Minimum Rating
+                ">
                   Minimum Rating
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -327,7 +338,7 @@ export function DynamicListingPage({
                       className={`{
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
-                          : "border-zion-blue-light text-zion-slate-light"
+                          : "border-zion-blue-light text-zion-slate-light";
                       } focus-visible:ring-zion-purple`}
                     >
                       {rating === null ? (

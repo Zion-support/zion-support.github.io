@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export default function PasswordCheckerPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -39,18 +41,9 @@ export default function PasswordCheckerPage() {
     },
     setChecks(newChecks);
     // Calculate strength score
-    let score = 0;
-    score += newChecks.length ? 15 : 0;
-    score += newChecks.uppercase ? 15 : 0;
-    score += newChecks.lowercase ? 15 : 0;
-    score += newChecks.numbers ? 15 : 0;
-    score += newChecks.symbols ? 20 : 0;
-    score += newChecks.noCommon ? 10 : 0;
-    score += newChecks.noSequential ? 10 : 0;
+    let score = 0, score += newChecks.length ? 15 : 0, score += newChecks.uppercase ? 15 : 0, score += newChecks.lowercase ? 15 : 0, score += newChecks.numbers ? 15 : 0, score += newChecks.symbols ? 20 : 0, score += newChecks.noCommon ? 10 : 0, score += newChecks.noSequential ? 10 : 0;
     // Bonus for length
-    if (pass.length >= 12) score += 10;
-    if (pass.length >= 16) score += 5;
-    setStrength(score);
+    if (pass.length >= 12) score += 10, if (pass.length >= 16) score += 5, setStrength(score);
     // Set strength text and color
     if (score >= 90) {
       setStrengthText('Very Strong');
@@ -76,11 +69,11 @@ export default function PasswordCheckerPage() {
     const commonPasswords = [
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello'
     ];
-    return commonPasswords.includes(pass.toLowerCase())
+    return commonPasswords.includes(pass.toLowerCase());
   };
   const hasSequentialChars = (pass: string) => {
     const sequences = ['123abcqweasdzxc789456'],
-    return sequences.some(seq => pass.toLowerCase().includes(seq))
+    return sequences.some(seq => pass.toLowerCase().includes(seq));
   };
   const generateSuggestions = (checks: any, pass: string) => {
     const suggestions: string[] = [],
@@ -111,8 +104,7 @@ export default function PasswordCheckerPage() {
     setSuggestions([])
   };
   const generateStrongPassword = () => {
-    const length = 16;
-    const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
+    const length = 16, const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
     let result = '';
     // Ensure at least one of each required character type
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Uppercase
@@ -138,7 +130,7 @@ export default function PasswordCheckerPage() {
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
     if (strength >= 30) return 'bg-orange-400';
-    return 'bg-red-400'
+    return 'bg-red-400';
   };
   const getCheckIcon = (passed: boolean) => {
     return passed ? (
@@ -198,7 +190,9 @@ export default function PasswordCheckerPage() {
               <div className="space-y-6">
                 {/* Password Input */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    Enter Password
+                  ">
                     Enter Password
                   </label>
                   <div className="relative">
@@ -498,5 +492,5 @@ export default function PasswordCheckerPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

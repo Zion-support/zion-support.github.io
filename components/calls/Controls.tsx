@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Room } from 'livekit-client';
+import { Star } from 'lucide-react';
 type Props = {
   room: Room | null,
   onLeave: () => void,
@@ -11,18 +12,15 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [sharing, setSharing] = React.useState(false);
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
-    if (!room) return;
-    const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    if (!room) return, const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled)
   };
   const toggleCam = async () => {
-    if (!room) return;
-    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
+    if (!room) return, const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
     setCamEnabled(enabled)
   };
   const toggleScreenShare = async () => {
-    if (!room) return;
-    try {
+    if (!room) return, try {
       const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled)
     } catch (e) {
@@ -42,5 +40,5 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       </button>
       <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
     </div>
-  )
+  );
 }

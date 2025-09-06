@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Upload, Trash2, Plus } from 'lucide-react'
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
@@ -32,9 +33,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
     
     // Limit the number of screenshots
-    const maxScreenshots = platform === "ios" ? 10 : 8;
-    const availableSlots = maxScreenshots - screenshots.length;
-    if (availableSlots <= 0) {
+    const maxScreenshots = platform === "ios" ? 10 : 8, const availableSlots = maxScreenshots - screenshots.length, if (availableSlots <= 0) {
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
       return
     }
@@ -60,7 +59,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       }
       
       return filtered
-    })
+    });
   };
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault(),
@@ -140,5 +139,5 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         </div>
       </CardContent>
     </Card>
-  )
+  );
 },

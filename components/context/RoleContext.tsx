@@ -8,8 +8,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
     try {
-      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
-      if (saved === 'client' || saved === 'talent') {
+      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null, if (saved === 'client' || saved === 'talent') {
         setRole(saved)
       }
     } catch {}
@@ -22,10 +21,10 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children
     } catch {}
   }, [role]);
   const value = useMemo(() => ({ role, setRole }), [role]);
-  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
+  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;
 };
 export function useRole(): RoleContextValue {
   const ctx = useContext(RoleContext);
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
-  return ctx
+  return ctx;
 }

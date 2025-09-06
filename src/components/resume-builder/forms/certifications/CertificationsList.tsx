@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Edit, Trash2 } from 'lucide-react'
 import { format } from 'date-fns';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface CertificationsListProps {
   certifications: Certification[],
   onEdit: (cert: Certification) => void,
@@ -72,5 +73,5 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
         </Card>
       ))}
     </div>
-  )
+  );
 }

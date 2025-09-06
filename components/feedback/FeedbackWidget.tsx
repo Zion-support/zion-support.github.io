@@ -1,8 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 export type FeedbackWidgetProps = {
-  responseId?: string;
-  aiModel?: string
+  responseId?: string, aiModel?: string
 };
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
@@ -24,8 +23,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           responseId: effectiveResponseId,
-          rating;
-          comment: comment.trim(),
+          rating, comment: comment.trim(),
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
           aiModel})});
       if (!res.ok) throw new Error('Failed to submit feedback');
@@ -79,5 +77,5 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         </div>
       )}
     </div>
-  )
+  );
 }

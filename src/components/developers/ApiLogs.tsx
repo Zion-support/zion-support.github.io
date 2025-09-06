@@ -8,6 +8,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { ApiLogsChart } from "./ApiLogsChart";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
@@ -33,13 +36,11 @@ export function ApiLogs() {
       return <Badge className="bg-red-700">Server Error</Badge>
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
-    }
+    };
   },
   // Calculate pagination info
   const totalPages = Math.ceil(totalLogs / pageSize);
-  const hasNextPage = currentPage < totalPages - 1;
-  const hasPrevPage = currentPage > 0;
-  return (
+  const hasNextPage = currentPage < totalPages - 1, const hasPrevPage = currentPage > 0, return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">

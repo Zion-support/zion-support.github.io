@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
+import { Zap, Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -97,8 +98,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory, return matchesSearch && matchesCategory;
   });
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -107,10 +107,8 @@ export default function UltimateFuturisticServicesShowcase2025() {
       case 'price-high':
         return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
       case 'rating':
-        return b.rating - a.rating;
-      case 'customers':
-        return b.customers - a.customers;
-      default: return b.popular ? 1 : -1
+        return b.rating - a.rating, case 'customers':
+        return b.customers - a.customers, default: return b.popular ? 1 : -1
     }
   }),
   const containerVariants = {
@@ -455,5 +453,5 @@ export default function UltimateFuturisticServicesShowcase2025() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

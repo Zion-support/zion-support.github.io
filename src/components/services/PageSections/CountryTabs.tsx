@@ -16,20 +16,14 @@ interface CountryTabsProps {
 
 export function CountryTabs({
   popularCountries,
-  filteredCountries;
-  handleCountrySelect;
-  onQuote;
-  searchQuery;
-  setSearchQuery}: CountryTabsProps) {
+  filteredCountries, handleCountrySelect, onQuote, searchQuery, setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1);
-  const countriesPerPage = 50;
-  useEffect(() => {
+  const countriesPerPage = 50, useEffect(() => {
     setCurrentPage(1)
   }, [searchQuery]);
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
   const paginatedCountries = filteredCountries.slice(
-    (currentPage - 1) * countriesPerPage;
-    currentPage * countriesPerPage
+    (currentPage - 1) * countriesPerPage, currentPage * countriesPerPage
   );
   return (
     <Tabs defaultValue="featured" className="w-full">
@@ -105,7 +99,7 @@ export function CountryTabs({
                     href={`?page=${currentPage - 1}`}
                     onClick={(e) => {
                       e.preventDefault(),
-                      setCurrentPage(Math.max(1, currentPage - 1))
+                      setCurrentPage(Math.max(1, currentPage - 1));
                     }}
                   />
                 </PaginationItem>

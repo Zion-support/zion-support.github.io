@@ -5,8 +5,7 @@ interface Speaker {
   name: string,
   title: string,
   avatar: string,
-  twitter?: string;
-  linkedin?: string
+  twitter?: string, linkedin?: string
 }
 
 const speakers: Speaker[] = [
@@ -65,5 +64,5 @@ export function SpeakersSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -7,7 +7,7 @@ export default function WhitepaperBuilderPage() {
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
   const downloadHref = useMemo(() => {
     if (edition === 'full') return '/docs/zion-protocol.pdf';
-    return `/api/zion-whitepaper-pdf?edition=${edition}`
+    return `/api/zion-whitepaper-pdf?edition=${edition}`;
   }, [edition]);
   return (
     <div className="space-y-6">
@@ -17,7 +17,7 @@ export default function WhitepaperBuilderPage() {
       </div>
 
       <div className="flex flex-wrap gap-3 items-center">
-        <label className="font-medium">Edition</label>
+        <label className="font-medium" htmlFor="input-Edition">Edition</label>
         <select
           value={edition}
           onChange={(e) => setEdition(e.target.value as WhitepaperEdition)}
@@ -49,5 +49,5 @@ export default function WhitepaperBuilderPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }

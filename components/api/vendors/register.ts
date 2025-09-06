@@ -7,15 +7,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' }),
   try {
     const vendor = registerVendor({
-      slug;
-      name;
-      servicesOffered: Array.isArray(servicesOffered) ? servicesOffered : [],
+      slug, name, servicesOffered: Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
-      about;
-      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [],
+      about, verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array.isArray(caseStudies) ? caseStudies : []}),
     res.status(201).json({ vendor })
   } catch (e: any) {
     res.status(500).json({ error: e.message })
-  }
+  };
 }

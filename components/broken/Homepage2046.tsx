@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
+import { Star } from 'lucide-react';
 // Enhanced loading component with quantum effects
 const QuantumLoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
@@ -96,7 +97,7 @@ const Homepage2046: React.FC = () => {
       setIsLoading(false);
       setIsVisible(true)
     }, 2000);
-    return () => clearTimeout(timer)
+    return () => clearTimeout(timer);
   }, []);
   // Intersection Observer for better performance
   useEffect(() => {
@@ -114,10 +115,10 @@ const Homepage2046: React.FC = () => {
       const sections = document.querySelectorAll('section[id]');
       sections.forEach((section) => observer.observe(section));
       return () => observer.disconnect()
-    }
+    };
   }, []);
   if (isLoading) {
-    return <QuantumLoadingFallback />
+    return <QuantumLoadingFallback />;
   }
 
   const allServices = [
@@ -126,10 +127,9 @@ const Homepage2046: React.FC = () => {
     ...innovative2046MicroSAASServices
   ],
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory, const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch
+    return matchesCategory && matchesSearch;
   });
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],
   return (

@@ -3,20 +3,17 @@ import React from "react";
 import { BadgeCheck } from 'lucide-react'
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
+import { Badge } from '@/components/ui/badge';
 interface TalentCardHeaderProps {
   fullName: string,
   professionalTitle: string,
-  profilePicture?: string;
-  availabilityType: string,
+  profilePicture?: string, availabilityType: string,
   yearsExperience: number
 }
 
 export function TalentCardHeader({ 
   fullName,
-  professionalTitle;
-  profilePicture;
-  availabilityType;
-  yearsExperience
+  professionalTitle, profilePicture, availabilityType, yearsExperience
 }: TalentCardHeaderProps) {
   return (
     <div className="flex items-start gap-4 mb-4">
@@ -38,5 +35,5 @@ export function TalentCardHeader({
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>
       </div>
     </div>
-  )
+  );
 }

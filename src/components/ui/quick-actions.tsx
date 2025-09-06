@@ -4,6 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 
 interface QuickAction {
   id: string,
@@ -18,9 +21,8 @@ interface QuickAction {
 export function QuickActions() {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-  if (!isAllowed) {
-    return null
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin, if (!isAllowed) {
+    return null;
   }
 
   const [isVisible, setIsVisible] = useState(false);
@@ -91,8 +93,7 @@ export function QuickActions() {
           link.as = 'font';
           link.type = 'font/woff2';
           link.crossOrigin = 'anonymous';
-          link.href = font;
-          document.head.appendChild(link)
+          link.href = font, document.head.appendChild(link)
         });
         // Preload critical images
         const criticalImages = [
@@ -102,8 +103,7 @@ export function QuickActions() {
           const link = document.createElement('link');
           link.rel = 'preload';
           link.as = 'image';
-          link.href = img;
-          document.head.appendChild(link)
+          link.href = img, document.head.appendChild(link)
         })
       }};
     {
@@ -130,8 +130,7 @@ export function QuickActions() {
         }),
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
-        a.href = url;
-        a.download = `performance-report-${Date.now()}.json`;
+        a.href = url, a.download = `performance-report-${Date.now()}.json`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -241,5 +240,5 @@ export function QuickActions() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 } 

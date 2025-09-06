@@ -284,6 +284,6 @@ const UltraFuturisticFooter2029 = () => {
         </div>
       </div>
     </footer>
-  )
+  );
 },
 export default UltraFuturisticFooter2029;

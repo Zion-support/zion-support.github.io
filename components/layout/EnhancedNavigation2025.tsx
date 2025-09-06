@@ -1,3 +1,4 @@
+import { Zap, Star } from 'lucide-react';
 const navigationItems = [
   {
     name: 'All Services',
@@ -343,7 +344,7 @@ const navigationItems = [
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  address: '364 E Main St STE 1008 Middletown DE 19709';
 },
 export default function EnhancedNavigation2025() {
   const [isOpen, setIsOpen] = useState(false);
@@ -354,7 +355,7 @@ export default function EnhancedNavigation2025() {
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -671,6 +672,6 @@ export default function EnhancedNavigation2025() {
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
-  )
+  );
 },
 export default EnhancedNavigation2025;

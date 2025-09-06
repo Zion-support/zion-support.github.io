@@ -13,6 +13,7 @@ import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export default function AccountSettings() {
 
   const { user } = useAuth();
@@ -41,8 +42,7 @@ export default function AccountSettings() {
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {
+      const ethereum = (window as any).ethereum, if (!ethereum) {
         toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return
       }
@@ -267,5 +267,5 @@ export default function AccountSettings() {
         </div>
       </main>
     </>
-  )
+  );
 }

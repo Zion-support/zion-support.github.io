@@ -8,11 +8,10 @@ const UltraFuturisticBackground2047: React.FC = () => {
   if (!isClient) {
     return (
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-    )
+    );
   }
 
-  return (
-    <>
+  return(<>
       {/* Background Gradient */}
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
 
@@ -65,8 +64,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-1/3 right-1/4 w-20 h-20 opacity-15"
           animate={{
-            y: [0, 40, 0];
-            x: [0, -30, 0]}}
+            y: [0, 40, 0], x: [0, -30, 0]}}
           transition={{
             duration: 12,
             repeat: Infinity as any,

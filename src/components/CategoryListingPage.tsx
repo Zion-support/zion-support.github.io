@@ -7,22 +7,15 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 // Example listing type
 interface Listing {
   id: string,
   title: string,
   description: string,
   category: string,
-  subcategory?: string;
-  image?: string;
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  price?: number | null;
-  createdAt: string
+  subcategory?: string, image?: string, tags?: string[];
+  author?: string, authorImage?: string, aiScore?: number, rating?: number, reviewCount?: number, price?: number | null, createdAt: string
 }
 
 interface CategoryListingPageProps {
@@ -35,8 +28,7 @@ interface CategoryListingPageProps {
 
 export function CategoryListingPage({ 
   title,
-  description;
-  listings: initialListings,
+  description, listings: initialListings,
   sortOptions = [
     { label: 'Newest First', value: 'newest' },
     { label: 'Oldest First', value: 'oldest' },
@@ -64,15 +56,13 @@ export function CategoryListingPage({
     safeStorage.setItem('category_selected_filter', selectedFilter)
   }, [selectedFilter]);
   useEffect(() => {
-    let mounted = true;
-    setIsLoading(true);
+    let mounted = true, setIsLoading(true);
     const timeout = setTimeout(() => {
       if (mounted) setIsLoading(false)
     }, 300);
     return () => {
-      mounted = false;
-      clearTimeout(timeout)
-    }
+      mounted = false, clearTimeout(timeout)
+    };
   }, [searchQuery, selectedSort, selectedFilter]);
   // Process listings based on filters and search
   const processedListings = initialListings
@@ -85,10 +75,7 @@ export function CategoryListingPage({
           tag.toLowerCase().includes(searchQuery.toLowerCase())
         ));
       // Apply category filters
-      if (selectedFilter === 'all') return matchesSearch;
-      if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4;
-      if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85;
-      return matchesSearch
+      if (selectedFilter === 'all') return matchesSearch, if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4, if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85, return matchesSearch;
     })
     .sort((a, b) => {
       // Apply sorting
@@ -225,5 +212,5 @@ export function CategoryListingPage({
         </div>
       </div>
     </>
-  )
+  );
 }

@@ -57,5 +57,5 @@ export function GlobalServiceSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

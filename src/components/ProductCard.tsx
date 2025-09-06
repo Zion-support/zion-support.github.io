@@ -14,6 +14,7 @@ import { Product } from '@/services/marketplace';
 import { useMediaQuery } from 'usehooks-ts';
 import { toast } from '@/hooks/use-toast';
 import { captureException } from '@/utils/sentry';
+import { Badge } from '@/components/ui/badge';
 interface ProductCardProps {
   product: Product,
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure
@@ -48,7 +49,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   useEffect(() => {
     return () => {
       setIsRedirecting(false)
-    }
+    };
   }, []);
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
     captureException(new Error('Invalid product data received by ProductCard'), {
@@ -59,14 +60,13 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         {/* Optionally, provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
       </div>
-    )
+    );
   }
 
   const active = isWishlisted(product.id),
   const dispatch = useDispatch<AppDispatch>();
   // Title is now guaranteed to be a non-empty string by the check above.
-  const productTitle = product.title;
-  const addToCart = () => {
+  const productTitle = product.title, const addToCart = () => {
     if (!isAuthenticated) {
       toast({
         title: 'Login Required',
@@ -83,15 +83,13 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         label: 'View Cart',
         onClick: () => router.push('/cart')}})
   },
-  const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
-  const imageAltText = productTitle;
-  const handleImageError = (error: any) => {
+  const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null, const imageAltText = productTitle, const handleImageError = (error: any) => {
     if (!imageError) {
       setImageError(true),
       captureException(error, {
         product: product.id,
         imageUrl})
-    }
+    };
   };
   const isMobile = useMediaQuery('(max-width: 768px)'),
   const isTablet = useMediaQuery('(max-width: 1200px)'),

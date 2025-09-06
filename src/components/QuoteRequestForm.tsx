@@ -16,6 +16,7 @@ import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";
 import { QuoteFormData } from "@/types/quotes";
 import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 const serviceStepSchema = z.object({
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
@@ -69,30 +70,23 @@ export function QuoteRequestForm() {
         break
       }
       case "details": setCurrentStep("timeline");
-        break;
-      case "timeline":
+        break, case "timeline":
         setCurrentStep("budget");
-        break;
-      case "budget":
+        break, case "budget":
         setCurrentStep("summary");
-        break;
-      default: break
+        break, default: break
     }
   },
   const handleBack = () => {
     switch (currentStep) {
       case "details": setCurrentStep("service");
-        break;
-      case "timeline":
+        break, case "timeline":
         setCurrentStep("details");
-        break;
-      case "budget":
+        break, case "budget":
         setCurrentStep("timeline");
-        break;
-      case "summary":
+        break, case "summary":
         setCurrentStep("budget");
-        break;
-      default: break
+        break, default: break
     }
   },
   const handleSubmit = async () => {
@@ -131,8 +125,7 @@ export function QuoteRequestForm() {
         serviceCategory: category,
         specificItem: itemId
           ? { id: itemId, title: "AI Selected Item", category }
-          : formData.specificItem;
-        timeline: timeline || formData.timeline,
+          : formData.specificItem, timeline: timeline || formData.timeline,
         budget: { ...formData.budget, ...(budget || {}) }}),
       setCurrentStep("summary");
       setAutoFillOpen(false)
@@ -232,5 +225,5 @@ export function QuoteRequestForm() {
         loading={autoFillLoading}
       />
     </div>
-  )
+  );
 }

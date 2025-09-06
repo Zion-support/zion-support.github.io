@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
+import { Zap, Star } from 'lucide-react';
 interface PerformanceMetrics {
   loadTime: number,
   firstContentfulPaint: number,
@@ -29,8 +30,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
   // Measure performance metrics
   const measurePerformance = useCallback(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming, const paintEntries = performance.getEntriesByType('paint');
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
       const newMetrics: PerformanceMetrics = {
@@ -50,8 +50,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     setOptimizationStatus('Optimizing images...'),
     try {
       const images = document.querySelectorAll('img');
-      let optimizedCount = 0;
-      for (const img of Array.from(images)) {
+      let optimizedCount = 0, for (const img of Array.from(images)) {
         if (img.complete && img.naturalWidth > 0) {
           // Add lazy loading
           img.loading = 'lazy';
@@ -168,8 +167,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime;
-            if (lcp > 2500) { // LCP should be under 2.5s
+            const lcp = entry.startTime, if (lcp > 2500) { // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp)
             }
           }
@@ -183,19 +181,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     }
   }, [measurePerformance]);
   const getPerformanceScore = (): number => {
-    let score = 100;
-    if (metrics.firstContentfulPaint > 1800) score -= 20;
-    if (metrics.largestContentfulPaint > 2500) score -= 25;
-    if (metrics.loadTime > 3000) score -= 15;
-    if (metrics.timeToInteractive > 3500) score -= 20;
-    return Math.max(0, score)
+    let score = 100, if (metrics.firstContentfulPaint > 1800) score -= 20, if (metrics.largestContentfulPaint > 2500) score -= 25, if (metrics.loadTime > 3000) score -= 15, if (metrics.timeToInteractive > 3500) score -= 20, return Math.max(0, score);
   };
   const getPerformanceGrade = (score: number): string => {
     if (score >= 90) return 'A',
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
     if (score >= 60) return 'D';
-    return 'F'
+    return 'F';
   };
   const performanceScore = getPerformanceScore();
   const performanceGrade = getPerformanceGrade(performanceScore);
@@ -322,6 +315,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         </ul>
       </div>
     </div>
-  )
+  );
 },
 export default PerformanceOptimizer;

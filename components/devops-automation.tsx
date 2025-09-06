@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = [
     {
@@ -167,8 +169,7 @@ export default function DevOpsAutomationPage() {
               DevOps Automation
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code;
-              and intelligent security automation. Deploy faster, safer, and more reliably.
+              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, and intelligent security automation. Deploy faster, safer, and more reliably.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -430,5 +431,5 @@ export default function DevOpsAutomationPage() {
         </section>
       </div>
     </>
-  )
+  );
 }

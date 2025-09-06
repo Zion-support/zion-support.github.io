@@ -3,10 +3,7 @@ import fs from "fs";
 import path from "path";
 type Experiment = {
   title: string,
-  hypothesis?: string;
-  metric?: string;
-  effort?: number;
-  impact?: number
+  hypothesis?: string, metric?: string, effort?: number, impact?: number
 };
 type Props = {
   updatedAt: string | null,
@@ -48,7 +45,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
         )}
       </div>
     </main>
-  )
+  );
 }
 
 export async function getStaticProps() {
@@ -67,5 +64,5 @@ export async function getStaticProps() {
         updatedAt: null,
         items: []},
       revalidate: 300}
-  }
+  };
 }

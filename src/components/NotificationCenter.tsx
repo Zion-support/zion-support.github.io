@@ -9,13 +9,7 @@ import { FilterType } from '@/components/notifications/NotificationFilter';
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
-    unreadCount;
-    markAsRead;
-    markAllAsRead;
-    dismissNotification;
-    loading;
-    filter;
-    setFilter;
+    unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter;
     fetchNotifications
   } = useNotifications();
   const [open, setOpen] = useState(false);
@@ -87,5 +81,5 @@ export const NotificationCenter: React.FC = () => {
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
-  )
+  );
 };

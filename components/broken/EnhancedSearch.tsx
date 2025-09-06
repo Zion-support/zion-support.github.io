@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
+import { Zap, Star } from 'lucide-react';
 interface SearchResult {
   id: string,
   name: string,
@@ -11,23 +12,19 @@ interface SearchResult {
   relevance: number,
   features?: string[];
   pricing?: {
-    starter?: string;
-    enterprise?: string
+    starter?: string, enterprise?: string
   }
 }
 
 interface SearchProps {
   onSearch: (query: string) => void,
   onResultSelect: (result: SearchResult) => void,
-  placeholder?: string;
-  className?: string;
-  showFilters?: boolean
+  placeholder?: string, className?: string, showFilters?: boolean
 }
 
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch,
-  onResultSelect;
-  placeholder = "Search revolutionary services...",
+  onResultSelect, placeholder = "Search revolutionary services...",
   className = "";
   showFilters = true
 }) => {
@@ -104,7 +101,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                                    result.category.toLowerCase().includes(filter.toLowerCase()) ||
                                    result.type.toLowerCase().includes(filter.toLowerCase())
                                  );
-            return matchesQuery && matchesFilters
+            return matchesQuery && matchesFilters;
           });
           // Sort by relevance
           const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
@@ -422,7 +419,7 @@ function debounce<T extends (...args: any[]) => any>(
   return (...args: Parameters<T>) => {
     clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait)
-  }
+  };
 }
 
 export default EnhancedSearch;

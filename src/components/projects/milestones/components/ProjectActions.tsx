@@ -7,17 +7,13 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
-  disputeId?: string;
-  isTalent: boolean,
+  disputeId?: string, isTalent: boolean,
   onAddMilestone: () => void
 }
 
 export function ProjectActions({
   projectId,
-  isUnderDispute;
-  disputeId;
-  isTalent;
-  onAddMilestone
+  isUnderDispute, disputeId, isTalent, onAddMilestone
 }: ProjectActionsProps) {
   return (
     <div className="flex gap-2">
@@ -40,5 +36,5 @@ export function ProjectActions({
         </Button>
       )}
     </div>
-  )
+  );
 }

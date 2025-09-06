@@ -7,13 +7,8 @@ interface MainLayoutProps {
   title: string,
   description: string,
   children: React.ReactNode,
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  noindex?: boolean;
-  nofollow?: boolean;
-  canonical?: string;
+  keywords?: string, image?: string, url?: string, type?: 'website' | 'article' | 'product';
+  noindex?: boolean, nofollow?: boolean, canonical?: string;
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
@@ -21,12 +16,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   title = "Zion Tech Group - Leading Technology Solutions Provider";
   description = "Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.";
   keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development";
-  image;
-  url;
-  type = 'website';
-  noindex = false;
-  nofollow = false;
-  canonical;
+  image, url, type = 'website';
+  noindex = false, nofollow = false, canonical;
 }) => {
   return (
     <>
@@ -59,7 +50,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <Footer />
       </div>
     </>
-  ),
+  ),;
 };
 
 export default MainLayout;

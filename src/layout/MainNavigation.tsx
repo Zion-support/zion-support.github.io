@@ -12,20 +12,16 @@ import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/h
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal';
 interface MainNavigationProps {
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string
+  isAdmin?: boolean, unreadCount?: number, className?: string
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state
   const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const [loginOpen, setLoginOpen] = useState(false);
+  const isAuthenticated = !!user, const [loginOpen, setLoginOpen] = useState(false);
   const { count } = useFavorites();
   const { items } = useCart();
-  const cartCount = items.length;
-  const router = useRouter(), // Changed from useLocation
+  const cartCount = items.length, const router = useRouter(), // Changed from useLocation
   const { t } = useTranslation();
   const handleCartClick = (e: React.MouseEvent) => {
     if (!isAuthenticated) {
@@ -33,7 +29,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       setLoginOpen(true);
       return
     }
-    setIsMobileMenuOpen(false)
+    setIsMobileMenuOpen(false);
   };
   const baseLinks = [
     {
@@ -106,10 +102,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       >
         <div
           id="main-navbar-collapse"
-          className={cn(
-            "navbar-collapse";
-            { "open": isMobileMenuOpen };
-            "w-full md:flex md:w-auto", // Handles visibility and desktop layout
+          className={cn("navbar-collapse";
+            { "open": isMobileMenuOpen }, "w-full md:flex md:w-auto", // Handles visibility and desktop layout
             !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
           )}
         >

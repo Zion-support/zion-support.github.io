@@ -11,6 +11,9 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
@@ -58,15 +61,7 @@ const TalentFilterControls: React.FC<{
   loading: boolean
 }> = ({
   sortBy,
-  setSortBy;
-  filterSpecialization;
-  setFilterSpecialization;
-  filterAvailability;
-  setFilterAvailability;
-  specializations;
-  showRecommended;
-  setShowRecommended;
-  loading
+  setSortBy, filterSpecialization, setFilterSpecialization, filterAvailability, setFilterAvailability, specializations, showRecommended, setShowRecommended, loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
@@ -233,8 +228,7 @@ export default function TalentsPage() {
     setTotalGenerated(prev => prev + newTalents.length);
     allTalents = [...allTalents, ...newTalents],
     // Apply filters
-    let filteredTalents = allTalents;
-    if (filterSpecialization) {
+    let filteredTalents = allTalents, if (filterSpecialization) {
       filteredTalents = filteredTalents.filter(t => 
         t.professional_title?.toLowerCase().includes(filterSpecialization.toLowerCase())
       )
@@ -263,30 +257,19 @@ export default function TalentsPage() {
           return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0);
         case 'newest':
         default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime()
-      }
+      };
     }),
     // Paginate results
-    const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
-    const items = filteredTalents.slice(startIndex, endIndex);
+    const startIndex = (page - 1) * limit, const endIndex = startIndex + limit, const items = filteredTalents.slice(startIndex, endIndex);
     return {
-      items;
-      hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages
+      items, hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages
       total: filteredTalents.length
-    }
+    };
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]);
   // Use infinite scroll hook
   const {
     items: talents,
-    loading;
-    error;
-    hasMore;
-    total;
-    isFetching;
-    lastElementRef;
-    refresh;
-    scrollToTop;
-    loadMore
+    loading, error, hasMore, total, isFetching, lastElementRef, refresh, scrollToTop, loadMore
   } = useInfiniteScrollPagination(fetchTalents, 16);
   // Refresh when filters change
   useEffect(() => {
@@ -295,12 +278,11 @@ export default function TalentsPage() {
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended]);
   // Calculate market stats
   const marketStats = useMemo(() => {
-    if (talents.length === 0) return null;
-    return getTalentMarketStats(talents)
+    if (talents.length === 0) return null, return getTalentMarketStats(talents);
   }, [talents]);
   // Get unique specializations
   const specializations = useMemo(() => {
-    return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)))
+    return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)));
   }, [talents]);
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -309,7 +291,7 @@ export default function TalentsPage() {
       setShowScrollTop(window.scrollY > 800)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   // Loading state
   if (loading && talents.length === 0) {
@@ -479,5 +461,5 @@ export default function TalentsPage() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }

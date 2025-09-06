@@ -7,6 +7,8 @@ import { ShieldAlert, Info } from 'lucide-react'
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 export function FraudDetectionSettings() {
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
@@ -14,8 +16,7 @@ export function FraudDetectionSettings() {
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const handleSavePreferences = async () => {
-    if (!user?.id) return;
-    setIsSaving(true);
+    if (!user?.id) return, setIsSaving(true);
     try {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
@@ -136,5 +137,5 @@ export function FraudDetectionSettings() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

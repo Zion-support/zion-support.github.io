@@ -10,12 +10,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
   const router = useRouter();
-  const profileId = router.query.profileId as string;
-  const [profileData, setProfileData] = useState<any>(null);
+  const profileId = router.query.profileId as string, const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
@@ -53,7 +54,7 @@ export default function ProfileDetail() {
         setIsLoading(false)
       }
     },
-    fetchProfile()
+    fetchProfile();
   }, [profileId]);
   if (isLoading) {
     return (
@@ -295,5 +296,5 @@ export default function ProfileDetail() {
         </div>
       </div>
     </>
-  )
+  );
 }

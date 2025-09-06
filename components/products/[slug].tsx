@@ -50,6 +50,6 @@ const EquipmentDetail: NextPage = () => {
         </aside>
       </div>
     </EnhancedLayout>
-  )
+  );
 },
 export default EquipmentDetail;

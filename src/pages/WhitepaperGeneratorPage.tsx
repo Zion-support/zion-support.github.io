@@ -28,7 +28,7 @@ const slugify = (text: string): string => {
     .replace(/[^\w-]+/g, '')       // Remove all non-word chars
     .replace(/--+/g, '-')         // Replace multiple - with single -
     .replace(/^-+/, '')             // Trim - from start of text
-    .replace(/-+$/, ''),            // Trim - from end of text
+    .replace(/-+$/, ''),            // Trim - from end of text;
 };
 const WhitepaperGeneratorPage: React.FC = () => {
   const [tokenName, setTokenName] = useState('My Awesome Token');
@@ -62,11 +62,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
   }, [tokenName, tokenSupply, useCases, rewardsLogic, distributionData, governanceLogic, legalDisclaimers, sections]);
   const parseWhitepaperDraft = useCallback((draft: string): WhitepaperSection[] => {
     if (!draft) return [],
-    const sectionRegex = /(?:^|\n)(?:##\s*(.*?)\s*\n|^\*\*(.*?):\*\*\s*\n)([\s\S]*?)(?=\n(?:##\s|\*\*.+:\*\*)|$)/g;
-    const parsed: WhitepaperSection[] = [],
-    let match;
-    let idCounter = 0;
-    while ((match = sectionRegex.exec(draft)) !== null) {
+    const sectionRegex = /(?:^|\n)(?:##\s*(.*?)\s*\n|^\*\*(.*?):\*\*\s*\n)([\s\S]*?)(?=\n(?:##\s|\*\*.+:\*\*)|$)/g, const parsed: WhitepaperSection[] = [],
+    let match, let idCounter = 0, while ((match = sectionRegex.exec(draft)) !== null) {
       const title = (match[1] || match[2] || `Section ${idCounter + 1}`).trim();
       const content = (match[3] || '').trim();
       parsed.push({ id: `section-${idCounter++}-${title.toLowerCase().replace(/\s+/g, '-')}`, title, content })
@@ -74,7 +71,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
     if (parsed.length === 0 && draft.trim().length > 0) {
       parsed.push({ id: 'section-0-full-draft', title: 'Full Draft', content: draft.trim() })
     }
-    return parsed
+    return parsed;
   }, []);
   const handleDistributionChange = (id: string, field: 'name' | 'percentage', value: string) => {
     setDistributionData(prev => prev.map(item => item.id === id ? { ...item, [field]: value } : item))
@@ -90,7 +87,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
       .map(item => ({
         name: item.name || 'Unnamed',
         value: parseFloat(item.percentage) || 0}))
-      .filter(item => item.value > 0)
+      .filter(item => item.value > 0);
   }, [distributionData]);
   const handleGenerateWhitepaper = async () => {
     setIsLoading(true);
@@ -104,7 +101,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         return
     }
      if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {
-        setError(`Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`)
+        setError(`Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`);
     } else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some(d => d.name && d.percentage)) {
         setError("Distribution percentages are all zero or invalid."),
         setIsLoading(false);
@@ -115,10 +112,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
       const apiPayload: any = {
         tokenName,
         tokenSupply: tokenSupply.toString(),
-        useCases;
-        rewardsLogic;
-        governanceLogic;
-        legalDisclaimers;
+        useCases, rewardsLogic, governanceLogic, legalDisclaimers;
         distributionBreakdown};
       if (processedDistData.length > 0) {
         apiPayload.distributionData = processedDistData
@@ -156,8 +150,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
     let mdContent = `# ${tokenName} - Whitepaper\n\n`;
     mdContent += `**Total Supply: ** ${tokenSupply}\n\n`,
     sections.forEach(section => {
-      mdContent += `## ${section.title}\n\n${section.content}\n\n`;
-      if (section.title.toLowerCase().includes('token distribution')) {
+      mdContent += `## ${section.title}\n\n${section.content}\n\n`, if (section.title.toLowerCase().includes('token distribution')) {
         if (distributionChartData.length > 0) {
           mdContent += `### Distribution Details\n\n`;
           distributionChartData.forEach(item => {
@@ -169,7 +162,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         }
       }
     }),
-    return mdContent
+    return mdContent;
   };
   const handleDownloadMarkdown = () => {
     setIsDownloading(true);
@@ -178,8 +171,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
       const blob = new Blob([markdown], { type: 'text/markdown,charset=utf-8' });
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
-      link.href = url;
-      link.download = `${slugify(tokenName || 'whitepaper')}_whitepaper.md`;
+      link.href = url, link.download = `${slugify(tokenName || 'whitepaper')}_whitepaper.md`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -208,8 +200,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
       // For now, we capture what's visible or rely on html2canvas's capabilities with scroll.
 
       const html2canvasModule = await import('html2canvas');
-      const html2canvas = html2canvasModule.default;
-      const { default: jsPDF } = await import('jspdf'),
+      const html2canvas = html2canvasModule.default, const { default: jsPDF } = await import('jspdf'),
       const canvas = await html2canvas(previewPanelRef.current, {
         scale: 2, // Increase scale for better resolution
         useCORS: true, // If there are any external images/fonts (though unlikely here)
@@ -225,14 +216,9 @@ const WhitepaperGeneratorPage: React.FC = () => {
       const pdfWidth = pdf.internal.pageSize.getWidth();
       const pdfHeight = pdf.internal.pageSize.getHeight();
       const imgProps = pdf.getImageProperties(imgData);
-      const imgHeight = (imgProps.height * pdfWidth) / imgProps.width;
-      let heightLeft = imgHeight;
-      let position = 0;
-      pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeight);
-      heightLeft -= pdfHeight;
-      while (heightLeft > 0) {
-        position = heightLeft - imgHeight, // Or position = position - pdfHeight;
-        pdf.addPage();
+      const imgHeight = (imgProps.height * pdfWidth) / imgProps.width, let heightLeft = imgHeight, let position = 0, pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeight);
+      heightLeft -= pdfHeight, while (heightLeft > 0) {
+        position = heightLeft - imgHeight, // Or position = position - pdfHeight, pdf.addPage();
         pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeight);
         heightLeft -= pdfHeight
       }
@@ -258,10 +244,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
     setCurrentSharedWhitepaperIsPublic(null);
     try {
       const whitepaperPayload = {
-        tokenName;
-        tokenSupply;
-        sections;
-        distributionChartData;
+        tokenName, tokenSupply, sections, distributionChartData;
         distributionBreakdown};
       const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
         body: whitepaperPayload}),
@@ -314,9 +297,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
     setIsSubmittingToCounsel(true);
     setError(null);
     try {
-        let linkToSubmit = shareableLink;
-        let whitepaperIdToSubmit = currentSharedWhitepaperId;
-        if (!linkToSubmit || !whitepaperIdToSubmit) {
+        let linkToSubmit = shareableLink, let whitepaperIdToSubmit = currentSharedWhitepaperId, if (!linkToSubmit || !whitepaperIdToSubmit) {
             toast.info("Generating a shareable link first to submit to counsel..."),
             const whitepaperPayload = { tokenName, tokenSupply, sections, distributionChartData, distributionBreakdown };
             const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {
@@ -326,8 +307,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
             if ((linkResponse as any).error) throw new Error(`Error from create-shared-whitepaper function: ${(linkResponse as any).error}`),
             if (!(linkResponse as any).id) throw new Error('Failed to get ID for shareable link for counsel.');
             linkToSubmit = `${window.location.origin}/whitepaper/view/${(linkResponse as any).id}`;
-            whitepaperIdToSubmit = (linkResponse as any).id;
-            setShareableLink(linkToSubmit);
+            whitepaperIdToSubmit = (linkResponse as any).id, setShareableLink(linkToSubmit);
             setCurrentSharedWhitepaperId(whitepaperIdToSubmit);
             setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
         }
@@ -385,19 +365,19 @@ const WhitepaperGeneratorPage: React.FC = () => {
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
            <div>
-            <label htmlFor="tokenName" className="block text-sm font-medium">Token Name:</label>
+            <label htmlFor="tokenName" className="block text-sm font-medium" htmlFor="input-Token Name:">Token Name:</label>
             <Input id="tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} required />
           </div>
           <div>
-            <label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply:</label>
+            <label htmlFor="tokenSupply" className="block text-sm font-medium" htmlFor="input-Token Supply:">Token Supply:</label>
             <Input id="tokenSupply" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} required />
           </div>
           <div>
-            <label htmlFor="useCases" className="block text-sm font-medium">Use Cases:</label>
+            <label htmlFor="useCases" className="block text-sm font-medium" htmlFor="input-Use Cases:">Use Cases:</label>
             <textarea id="useCases" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           <div>
-            <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>
+            <label htmlFor="rewardsLogic" className="block text-sm font-medium" htmlFor="input-Rewards Logic:">Rewards Logic:</label>
             <textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
 
@@ -413,17 +393,17 @@ const WhitepaperGeneratorPage: React.FC = () => {
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
-              <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>
+              <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium" htmlFor="input-Additional Distribution Details (Text):">Additional Distribution Details (Text):</label>
               <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>
             </div>
           </div>
 
           <div>
-            <label htmlFor="governanceLogic" className="block text-sm font-medium">Governance Logic: </label>
+            <label htmlFor="governanceLogic" className="block text-sm font-medium" htmlFor="input-Governance Logic: ">Governance Logic: </label>
             <textarea id="governanceLogic" value={governanceLogic} onChange={(e) => setGovernanceLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           <div>
-            <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
+            <label htmlFor="legalDisclaimers" className="block text-sm font-medium" htmlFor="input-Legal Disclaimers:">Legal Disclaimers:</label>
             <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           {/* END OF INPUT FIELDS */}
@@ -446,7 +426,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
             <div className="mt-4 p-3 border rounded-md bg-green-50">
               <div className="flex justify-between items-center">
-                <label className="block text-sm font-medium text-green-700">Shareable Link:</label>
+                <label className="block text-sm font-medium text-green-700" htmlFor="input-Shareable Link:">Shareable Link:</label>
                 <Button
                     onClick={handleTogglePublicStatus}
                     variant="outline"
@@ -529,6 +509,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
         />
       </div>
     </div>
-  )
+  );
 },
 export default WhitepaperGeneratorPage;

@@ -9,13 +9,11 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
+import { Star } from 'lucide-react';
 export function ConversationDetailView() {
   const { user } = useAuth();
   const { 
-    activeConversation;
-    activeMessages;
-    sendMessage;
-    loadMessages
+    activeConversation, activeMessages, sendMessage, loadMessages
   } = useMessaging();
   const [messageText, setMessageText] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -33,8 +31,7 @@ export function ConversationDetailView() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
   const send = async () => {
-    if (!messageText.trim() || !activeConversation) return;
-    await sendMessage(activeConversation.id, messageText);
+    if (!messageText.trim() || !activeConversation) return, await sendMessage(activeConversation.id, messageText);
     setMessageText('');
     inputRef.current?.focus()
   };
@@ -57,7 +54,7 @@ export function ConversationDetailView() {
           Select a conversation from the list to view and send messages.
         </p>
       </div>
-    )
+    );
   }
   
   // Group messages by date
@@ -183,5 +180,5 @@ export function ConversationDetailView() {
         </form>
       </div>
     </div>
-  )
+  );
 }

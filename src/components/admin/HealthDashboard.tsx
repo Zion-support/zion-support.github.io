@@ -4,6 +4,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical',
@@ -69,7 +71,7 @@ const HealthDashboard: React.FC = () => {
       return () => clearInterval(interval)
     }
     
-    return undefined
+    return undefined;
   }, [autoRefresh]);
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -89,12 +91,12 @@ const HealthDashboard: React.FC = () => {
       <Badge variant={variant} className="ml-2">
         {status.toUpperCase()}
       </Badge>
-    )
+    );
   };
   const formatUptime = (seconds: number) => {
     const hours = Math.floor(seconds / 3600),
     const minutes = Math.floor((seconds % 3600) / 60);
-    return `${hours}h ${minutes}m`
+    return `${hours}h ${minutes}m`;
   };
   const formatBytes = (bytes: number) => {
     return `${bytes.toFixed(1)} MB`
@@ -378,6 +380,6 @@ const HealthDashboard: React.FC = () => {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 };
 export default HealthDashboard;

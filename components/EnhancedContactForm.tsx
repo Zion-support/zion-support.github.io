@@ -158,7 +158,9 @@ const EnhancedContactForm: React.FC = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
+                  Full Name *
+                ">
                   Full Name *
                 </label>
                 <input
@@ -188,7 +190,9 @@ const EnhancedContactForm: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
+                  Email Address *
+                ">
                   Email Address *
                 </label>
                 <input
@@ -220,7 +224,9 @@ const EnhancedContactForm: React.FC = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
+                  Company
+                ">
                   Company
                 </label>
                 <input
@@ -235,7 +241,9 @@ const EnhancedContactForm: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2">
+                <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
+                  Service Interest
+                ">
                   Service Interest
                 </label>
                 <select
@@ -256,7 +264,9 @@ const EnhancedContactForm: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
+                Message *
+              ">
                 Message *
               </label>
               <textarea
@@ -310,6 +320,6 @@ const EnhancedContactForm: React.FC = () => {
         </div>
       </div>
     </section>
-  )
+  );
 },
 export default EnhancedContactForm;

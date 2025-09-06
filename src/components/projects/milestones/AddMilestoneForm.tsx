@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
+import { Star, Calendar } from 'lucide-react';
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required');
   description: z.string().optional(),
@@ -18,21 +19,13 @@ type MilestoneFormValues = z.infer<typeof formSchema>;
 interface AddMilestoneFormProps {
   onSubmit: (data: MilestoneFormValues) => void,
   isSubmitting: boolean,
-  onCancel?: () => void;
-  projectScope?: string;
-  projectStartDate?: string;
-  projectEndDate?: string;
-  projectType?: string
+  onCancel?: () => void, projectScope?: string, projectStartDate?: string, projectEndDate?: string, projectType?: string
 }
 
 export function AddMilestoneForm({
-  onSubmit;
-  isSubmitting;
-  onCancel;
-  projectScope = '';
+  onSubmit, isSubmitting, onCancel, projectScope = '';
   projectStartDate = '';
-  projectEndDate = '';
-  projectType = 'Other'
+  projectEndDate = '', projectType = 'Other'
 }: AddMilestoneFormProps) {
   const form = useForm<MilestoneFormValues>({
     resolver: zodResolver(formSchema),
@@ -67,7 +60,7 @@ export function AddMilestoneForm({
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
-    })
+    });
   };
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
@@ -211,5 +204,5 @@ export function AddMilestoneForm({
         </form>
       </Form>
     </div>
-  )
+  );
 }

@@ -12,5 +12,5 @@ export default function IncubatorPage() {
         </div>
       </div>
     </EnhancedLayout>
-  )
+  );
 }

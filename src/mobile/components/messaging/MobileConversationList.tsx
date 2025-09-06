@@ -6,11 +6,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Search } from 'lucide-react'
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { Badge } from '@/components/ui/badge';
 interface Conversation {
   id: string,
   name: string,
-  avatar?: string;
-  lastMessage: string,
+  avatar?: string, lastMessage: string,
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
@@ -18,14 +18,12 @@ interface Conversation {
 
 interface MobileConversationListProps {
   conversations: Conversation[],
-  activeConversation?: string;
-  onSelectConversation: (id: string) => void
+  activeConversation?: string, onSelectConversation: (id: string) => void
 }
 
 export function MobileConversationList({
   conversations,
-  activeConversation;
-  onSelectConversation
+  activeConversation, onSelectConversation
 }: MobileConversationListProps) {
   return (
     <div className="space-y-4">
@@ -94,5 +92,5 @@ export function MobileConversationList({
         ))}
       </div>
     </div>
-  )
+  );
 }

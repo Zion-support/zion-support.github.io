@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
+import { Star } from 'lucide-react';
 // Simple icons using inline SVG to avoid external assets
 function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
   return (
@@ -57,23 +58,19 @@ function GoogleBadge({ href }: { href: string }) {
         <div className="text-sm font-semibold">Google Play</div>
       </div>
     </a>
-  )
+  );
 }
 
 function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const dismissed = localStorage.getItem('smartBannerDismissed') === '1';
-    if (dismissed) return;
-    const ua = navigator.userAgent || '';
+    if (typeof window === 'undefined') return, const dismissed = localStorage.getItem('smartBannerDismissed') === '1';
+    if (dismissed) return, const ua = navigator.userAgent || '';
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
     if (isMobile) setVisible(true)
   }, []);
-  if (!visible) return null;
-  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const storeUrl = isIOS ? iosUrl : androidUrl;
-  return (
+  if (!visible) return null, const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const storeUrl = isIOS ? iosUrl : androidUrl, return (
     <div className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto max-w-5xl">
         <div className="m-2 rounded-xl bg-white/95 dark:bg-black/80 border border-gray-200 dark:border-gray-800 shadow flex items-center gap-3 px-4 py-3">
@@ -96,7 +93,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
@@ -115,12 +112,12 @@ export default function MobileLaunchPage() {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
     const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000);
-    return () => clearInterval(t)
+    return () => clearInterval(t);
   }, []);
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
     const encoded = encodeURIComponent(target);
-    return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`
+    return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
   }, []);
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault(),
@@ -269,5 +266,5 @@ export default function MobileLaunchPage() {
         </div>
       </section>
     </EnhancedLayout>
-  )
+  );
 }

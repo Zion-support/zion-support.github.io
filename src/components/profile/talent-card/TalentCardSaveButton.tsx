@@ -14,10 +14,7 @@ interface TalentCardSaveButtonProps {
 
 export function TalentCardSaveButton({
   profileId,
-  profileName;
-  isSaved;
-  onToggleSave;
-  isAuthenticated
+  profileName, isSaved, onToggleSave, isAuthenticated
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast();
   const router = useRouter();
@@ -63,5 +60,5 @@ export function TalentCardSaveButton({
         )} 
       />
     </button>
-  )
+  );
 }

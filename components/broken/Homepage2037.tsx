@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
 import { realITServices2025 } from '../data/real-it-services-2025';
 import { realAIServices2025 } from '../data/real-ai-services-2025';
+import { Zap, Star } from 'lucide-react';
 const Homepage2037: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(0, 3);

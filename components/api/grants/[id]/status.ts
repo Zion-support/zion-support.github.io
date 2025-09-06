@@ -4,19 +4,18 @@ import path from 'path';
 import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`)
+  return path.join(GRANTS_DIR, `${id}.json`);
 }
 
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true }),
   const p = grantPath(id);
-  if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+  if (!fs.existsSync(p)) return null, return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true }),
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
+  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8');
 }
 
 function isAuthorized(req: NextApiRequest) {
@@ -34,7 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string },
   if (!id) {
     res.status(400).json({ error: 'Missing id' }),
-    return
+    return;
   }
 
   if (req.method !== 'POST') {
@@ -49,9 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-  const payload = req.body as StatusUpdatePayload;
-  existing.status = payload.status;
-  existing.updatedAt = new Date().toISOString();
+  const payload = req.body as StatusUpdatePayload, existing.status = payload.status, existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
   res.status(200).json({ record: existing })
 }

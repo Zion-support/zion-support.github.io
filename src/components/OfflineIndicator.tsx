@@ -6,8 +6,7 @@ export const OfflineIndicator = () => {
   const [showOfflineAlert, setShowOfflineAlert] = useState(false);
   useEffect(() => {
     const updateOnlineStatus = () => {
-      const online = navigator.onLine;
-      setIsOnline(online);
+      const online = navigator.onLine, setIsOnline(online);
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
@@ -25,8 +24,7 @@ export const OfflineIndicator = () => {
       window.removeEventListener('offline', updateOnlineStatus)
     }
   }, [showOfflineAlert]);
-  if (!showOfflineAlert) return null;
-  return (
+  if (!showOfflineAlert) return null, return (
     <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
       <Alert variant={isOnline ? "default" : "destructive"}>
         <div className="flex items-center gap-2">
@@ -45,5 +43,5 @@ export const OfflineIndicator = () => {
         </div>
       </Alert>
     </div>
-  )
+  );
 };

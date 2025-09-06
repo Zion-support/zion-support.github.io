@@ -1,18 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 const UltraFuturisticBackground2046: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const particlesRef = useRef<any[]>([]);
   const animationRef = useRef<number>();
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
     if (!ctx) return;
     // Set canvas size
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -28,42 +26,27 @@ const UltraFuturisticBackground2046: React.FC = () => {
       maxLife: number,
       type: 'quantum' | 'neural' | 'data' | 'energy',
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 2;
-        this.vy = (Math.random() - 0.5) * 2;
-        this.size = Math.random() * 3 + 1;
-        this.life = Math.random() * 100;
-        this.maxLife = 100;
-        const types = ['quantumneuraldataenergy'];
-        this.type = types[Math.floor(Math.random() * types.length)] as any;
-        switch (this.type) {
+        this.x = Math.random() * canvas.width, this.y = Math.random() * canvas.height, this.vx = (Math.random() - 0.5) * 2, this.vy = (Math.random() - 0.5) * 2, this.size = Math.random() * 3 + 1, this.life = Math.random() * 100, this.maxLife = 100, const types = ['quantumneuraldataenergy'];
+        this.type = types[Math.floor(Math.random() * types.length)] as any, switch (this.type) {
           case 'quantum':
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
-            break;
-          case 'neural':
+            break, case 'neural':
             this.color = `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
-            break;
-          case 'data':
+            break, case 'data':
             this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
-            break;
-          case 'energy':
+            break, case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
             break
         }
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life--;
+        this.x += this.vx, this.y += this.vy, this.life--;
         // Bounce off edges
-        if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1;
-        if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
+        if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1, if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
         // Add some quantum randomness
         if (Math.random() < 0.01) {
-          this.vx += (Math.random() - 0.5) * 0.5;
-          this.vy += (Math.random() - 0.5) * 0.5
+          this.vx += (Math.random() - 0.5) * 0.5, this.vy += (Math.random() - 0.5) * 0.5
         }
 
         // Limit velocity
@@ -72,33 +55,25 @@ const UltraFuturisticBackground2046: React.FC = () => {
       }
 
       draw() {
-        if (!ctx) return;
-        const alpha = this.life / this.maxLife;
-        ctx.save();
-        ctx.globalAlpha = alpha;
-        switch (this.type) {
+        if (!ctx) return, const alpha = this.life / this.maxLife, ctx.save();
+        ctx.globalAlpha = alpha, switch (this.type) {
           case 'quantum':
             // Quantum particles with wave function
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.fill();
+            ctx.fillStyle = this.color, ctx.fill();
             // Wave function rings
             for (let i = 1, i <= 3, i++) {
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size + i * 2, 0, Math.PI * 2);
-              ctx.strokeStyle = this.color;
-              ctx.lineWidth = 1;
-              ctx.globalAlpha = alpha * (0.3 - i * 0.1);
+              ctx.strokeStyle = this.color, ctx.lineWidth = 1, ctx.globalAlpha = alpha * (0.3 - i * 0.1);
               ctx.stroke()
             }
-            break;
-          case 'neural':
+            break, case 'neural':
             // Neural network nodes
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.fill();
+            ctx.fillStyle = this.color, ctx.fill();
             // Neural connections
             particlesRef.current.forEach(particle => {
               if (particle.type === 'neural' && particle !== this) {
@@ -109,38 +84,29 @@ const UltraFuturisticBackground2046: React.FC = () => {
                   ctx.beginPath();
                   ctx.moveTo(this.x, this.y);
                   ctx.lineTo(particle.x, particle.y);
-                  ctx.strokeStyle = this.color;
-                  ctx.lineWidth = 0.5;
-                  ctx.globalAlpha = alpha * (1 - distance / 100);
+                  ctx.strokeStyle = this.color, ctx.lineWidth = 0.5, ctx.globalAlpha = alpha * (1 - distance / 100);
                   ctx.stroke()
                 }
               }
             });
-            break;
-          case 'data':
+            break, case 'data':
             // Data streams
-            ctx.fillStyle = this.color;
-            ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
+            ctx.fillStyle = this.color, ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
             // Data flow lines
             ctx.beginPath();
             ctx.moveTo(this.x, this.y);
             ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10);
-            ctx.strokeStyle = this.color;
-            ctx.lineWidth = 1;
-            ctx.stroke();
-            break;
-          case 'energy':
+            ctx.strokeStyle = this.color, ctx.lineWidth = 1, ctx.stroke();
+            break, case 'energy':
             // Energy particles with glow effect
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.fill();
+            ctx.fillStyle = this.color, ctx.fill();
             // Glow effect
             const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
             gradient.addColorStop(0, this.color);
             gradient.addColorStop(1, 'transparent');
-            ctx.fillStyle = gradient;
-            ctx.fill();
+            ctx.fillStyle = gradient, ctx.fill();
             break
         }
         
@@ -149,7 +115,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
 
       isDead() {
         return this.life <= 0
-      }
+      };
     }
 
     // Initialize particles
@@ -184,17 +150,13 @@ const UltraFuturisticBackground2046: React.FC = () => {
     const drawQuantumField = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
       const time = Date.now() * 0.001,
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
-      ctx.lineWidth = 1;
-      for (let i = 0, i < 20, i++) {
+      ctx.lineWidth = 1, for (let i = 0, i < 20, i++) {
         ctx.beginPath();
-        const x = (i / 20) * width;
-        const y = Math.sin(time + i * 0.5) * 50 + height / 2;
-        ctx.moveTo(x, 0);
+        const x = (i / 20) * width, const y = Math.sin(time + i * 0.5) * 50 + height / 2, ctx.moveTo(x, 0);
         ctx.lineTo(x, height);
         // Add wave interference
         for (let j = 0, j < height, j += 10) {
-          const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
-          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j)
+          const waveY = y + Math.sin(time * 2 + i * 0.3) * 30, ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j)
         }
         
         ctx.stroke()
@@ -204,12 +166,9 @@ const UltraFuturisticBackground2046: React.FC = () => {
     const drawNeuralGrid = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
       const time = Date.now() * 0.002,
       ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
-      ctx.lineWidth = 0.5;
-      const gridSize = 50;
-      for (let x = 0, x < width, x += gridSize) {
+      ctx.lineWidth = 0.5, const gridSize = 50, for (let x = 0, x < width, x += gridSize) {
         for (let y = 0, y < height, y += gridSize) {
-          const offset = Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
-          ctx.beginPath();
+          const offset = Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10, ctx.beginPath();
           ctx.moveTo(x + offset, y);
           ctx.lineTo(x + gridSize + offset, y);
           ctx.moveTo(x, y + offset);
@@ -240,7 +199,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         transition={{
           duration: 10,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut";
         }}
       />
       

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { logWarn } from '@/utils/productionLogger';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ServiceStatus {
   name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
@@ -51,14 +52,13 @@ export default function Status() {
       }
     }, 5000), // 5 second timeout
 
-    return () => clearTimeout(timeout)
+    return () => clearTimeout(timeout);
   }, [externalStatusLoaded]);
   useEffect(() => {
     async function fetchUptime() {
       try {
         const res = await fetch('/api/health');
-        if (!res.ok) return;
-        const data = await res.json();
+        if (!res.ok) return, const data = await res.json();
         if (typeof data.uptime === 'number') {
           setUptime(data.uptime)
         }
@@ -79,7 +79,7 @@ export default function Status() {
       case 'maintenance':
         return <Clock className="h-5 w-5 text-blue-500" />;
       default: return <AlertCircle className="h-5 w-5 text-gray-500" />
-    }
+    };
   },
   const getStatusText = (status: ServiceStatus['status']) => {
     switch (status) {
@@ -92,7 +92,7 @@ export default function Status() {
       case 'maintenance':
         return 'Scheduled Maintenance';
       default: return 'Unknown'
-    }
+    };
   },
   const getStatusColor = (status: ServiceStatus['status']) => {
     switch (status) {
@@ -105,7 +105,7 @@ export default function Status() {
       case 'maintenance':
         return 'text-blue-500';
       default: return 'text-gray-500'
-    }
+    };
   },
   const formatUptime = (seconds: number) => {
     const days = Math.floor(seconds / 86400),
@@ -115,7 +115,7 @@ export default function Status() {
     if (days > 0) parts.push(`${days}d`);
     if (hours > 0) parts.push(`${hours}h`);
     parts.push(`${minutes}m`);
-    return parts.join(' ')
+    return parts.join(' ');
   };
   return (
     <>
@@ -261,5 +261,5 @@ export default function Status() {
         </div>
       </main>
     </>
-  )
+  );
 }

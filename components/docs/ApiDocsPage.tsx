@@ -10,8 +10,7 @@ export default function ApiDocsPage() {
   const allEndpoints: EndpointSpec[] = useMemo(() => spec.sections.flatMap((s) => s.endpoints), [spec]);
   const firstEndpoint = useMemo(() => allEndpoints.find((e) => e.versions.includes(selectedVersion)), [allEndpoints, selectedVersion]);
   const [activeEndpointId, setActiveEndpointId] = useState<string | undefined>(firstEndpoint?.id);
-  const activeEndpoint = allEndpoints.find((e) => e.id === activeEndpointId) || firstEndpoint;
-  return (
+  const activeEndpoint = allEndpoints.find((e) => e.id === activeEndpointId) || firstEndpoint, return (
     <div className="min-h-screen bg-high-contrast-primary text-high-contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>
       <Sidebar
         spec={spec}
@@ -47,7 +46,7 @@ export default function ApiDocsPage() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
 function ChangelogWidget() {
@@ -75,5 +74,5 @@ function ChangelogWidget() {
       </div>
       <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />
     </div>
-  )
+  );
 }

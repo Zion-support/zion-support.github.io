@@ -4,21 +4,17 @@ import { Button } from "@/components/ui/button";
 import { DisputeForm } from "./DisputeForm";
 import { useRouter } from 'next/router';
 import { ShieldAlert } from 'lucide-react'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 
 interface RaiseDisputeButtonProps {
   projectId: string,
-  milestoneId?: string;
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  milestoneId?: string, variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string
 }
 
 export function RaiseDisputeButton({ 
-  projectId;
-  milestoneId;
-  variant = "outline";
-  size;
-  className 
+  projectId, milestoneId, variant = "outline", size, className 
 }: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const router = useRouter();
@@ -56,5 +52,5 @@ export function RaiseDisputeButton({
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }

@@ -9,20 +9,11 @@ import {
 import { AnimatePresence } from 'framer-motion';
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
-  enableRecovery?: boolean;
+  children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void, showDetails?: boolean, enableRecovery?: boolean;
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  retryCount: number;
-  showDetails: boolean;
+  hasError: boolean, error: Error | null, errorInfo: ErrorInfo | null, errorId: string, retryCount: number, showDetails: boolean;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -45,7 +36,7 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo: null,
       errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0,
-      showDetails: false
+      showDetails: false;
     };
   }
 
@@ -124,9 +115,7 @@ class ErrorBoundary extends Component<Props, State> {
   private getErrorType(): string {
     if (!this.state.error) return 'Unknown Error';
     
-    const error = this.state.error;
-    
-    if (error.name === 'TypeError') return 'Type Error';
+    const error = this.state.error, if (error.name === 'TypeError') return 'Type Error';
     if (error.name === 'ReferenceError') return 'Reference Error';
     if (error.name === 'SyntaxError') return 'Syntax Error';
     if (error.name === 'RangeError') return 'Range Error';

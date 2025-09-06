@@ -17,11 +17,9 @@ export default function LanguageSwitchPrompt() {
 
     const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
     const normalized = detected.split('-')[0];
-    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
-    if (suggestion) setSuggested(suggestion)
+    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null, if (suggestion) setSuggested(suggestion)
   }, []);
-  if (!suggested) return null;
-  const accept = async () => {
+  if (!suggested) return null, const accept = async () => {
     await i18n.changeLanguage(suggested!);
     localStorage.setItem('preferredLanguage', suggested!);
     localStorage.setItem('langPromptShown1');
@@ -45,5 +43,5 @@ export default function LanguageSwitchPrompt() {
         </div>
       </div>
     </div>
-  )
+  );
 }

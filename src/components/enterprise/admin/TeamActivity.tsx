@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Badge } from '@/components/ui/badge';
+import { Calendar } from 'lucide-react';
 export function TeamActivity() {
   // Mock activity data
   const activities = [
@@ -64,7 +66,7 @@ export function TeamActivity() {
       return `${diffDays} days ago`
     } else {
       return date.toLocaleDateString()
-    }
+    };
   };
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
@@ -73,7 +75,7 @@ export function TeamActivity() {
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
     const style = categoryStyles[category] || { variant: "default" as const },
-    return <Badge variant={style.variant}>{category}</Badge>
+    return <Badge variant={style.variant}>{category}</Badge>;
   };
   return (
     <div className="space-y-6">
@@ -135,5 +137,5 @@ export function TeamActivity() {
         </Button>
       </div>
     </div>
-  )
+  );
 }

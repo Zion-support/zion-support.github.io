@@ -14,6 +14,7 @@ import { PartnerResources } from "@/components/partners/PartnerResources";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export default function Partners() {
 
   logInfo('PartnersPage rendering');
@@ -229,5 +230,5 @@ export default function Partners() {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }

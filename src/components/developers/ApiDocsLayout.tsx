@@ -6,14 +6,14 @@ import { useRouter } from 'next/router';
 import { Search } from 'lucide-react'
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { cn } from "@/lib/utils";
+import { Star } from 'lucide-react';
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const router = useRouter(),
-  const currentPath = router.pathname;
-  const [searchValue, setSearchValue] = useState("");
+  const currentPath = router.pathname, const [searchValue, setSearchValue] = useState("");
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
@@ -82,7 +82,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       {children}
      </div>
     </div>
-  )
+  );
 }
 
 export default ApiDocsLayout,

@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
 import { supabase } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
@@ -198,5 +200,5 @@ export function ZionGPTModelManager() {
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

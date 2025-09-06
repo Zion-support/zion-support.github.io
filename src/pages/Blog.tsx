@@ -14,6 +14,8 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from 'lucide-react'
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 // Categories for filtering
 const CATEGORIES = [
   "All Categories";
@@ -70,9 +72,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-      selectedCategory === "All Categories" || post.category === selectedCategory;
-    return matchesCategory
-  });
+      selectedCategory === "All Categories" || post.category === selectedCategory, return matchesCategory, });
   // Get featured posts
   const featuredPosts = posts.filter(post => post.isFeatured);
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
@@ -97,8 +97,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
             const featuredPost = featuredPosts[0];
-            if (!featuredPost) return null;
-            return (
+            if (!featuredPost) return null, return (
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
@@ -129,8 +128,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       alt={featuredPost.author.name}
                       className="w-10 h-10 rounded-full mr-3"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg"
+                        const target = e.currentTarget as HTMLImageElement, target.src = "/images/blog-placeholder.svg"
                       }}
                     />
                     <div>
@@ -230,8 +228,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
                         onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg"
+                          const target = e.currentTarget as HTMLImageElement, target.src = "/images/blog-placeholder.svg"
                         }}
                       />
                       <span className="text-sm text-white">{post.author.name}</span>
@@ -266,5 +263,5 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         </div>
       </div>
     </>
-  )
+  );
 }

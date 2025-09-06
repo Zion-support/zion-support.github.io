@@ -7,6 +7,8 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ProjectCardProps {
   project: PortfolioProject,
   onEdit: (project: PortfolioProject) => void,
@@ -116,5 +118,5 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  )
+  );
 }

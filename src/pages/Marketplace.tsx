@@ -20,6 +20,9 @@ import { useAuth } from '@/context/auth/AuthProvider';
 import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 /**
  * Marketplace component props
  */
@@ -64,8 +67,7 @@ const FilterControls: React.FC<{
   setFilterCategory: (category: string) => void,
   categories: string[],
   priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  minAiScore: number,
+  setPriceRange: (range: [number, number]) => void, minAiScore: number,
   setMinAiScore: (score: number) => void,
   minRating: number,
   setMinRating: (rating: number) => void,
@@ -80,25 +82,7 @@ const FilterControls: React.FC<{
   loading: boolean
 }> = ({
   sortBy,
-  setSortBy;
-  filterCategory;
-  setFilterCategory;
-  categories;
-  priceRange;
-  setPriceRange;
-  minAiScore;
-  setMinAiScore;
-  minRating;
-  setMinRating;
-  filterAvailability;
-  setFilterAvailability;
-  availabilityOptions;
-  filterLocation;
-  setFilterLocation;
-  locations;
-  showRecommended;
-  setShowRecommended;
-  loading
+  setSortBy, filterCategory, setFilterCategory, categories, priceRange, setPriceRange, minAiScore, setMinAiScore, minRating, setMinRating, filterAvailability, setFilterAvailability, availabilityOptions, filterLocation, setFilterLocation, locations, showRecommended, setShowRecommended, loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
@@ -257,7 +241,7 @@ export default function Marketplace() {
     }
 
     // Navigate to admin products page
-    router.push('/admin/products')
+    router.push('/admin/products');
   }, [isAuthenticated, user, router, toast]);
   // Fetch function for infinite scroll with AI product generation
   const fetchProducts = useCallback(async (page: number, limit: number) => {
@@ -265,8 +249,7 @@ export default function Marketplace() {
     try {
       // Use static marketplace listings data for now (compatible with ProductListing type)
       const params = {
-        page;
-        limit;
+        page, limit;
         ...(filterCategory && { category: filterCategory }),
         sort: sortBy
       },
@@ -284,10 +267,7 @@ export default function Marketplace() {
       }
 
       items = items.filter((p) => {
-        const price = p.price || 0;
-        const ai = p.aiScore || 0;
-        const rating = p.rating || 0;
-        const location = (p.location || '').toLowerCase();
+        const price = p.price || 0, const ai = p.aiScore || 0, const rating = p.rating || 0, const location = (p.location || '').toLowerCase();
         const availability = (p.availability || '').toLowerCase();
         return (
           price >= priceRange[0] &&
@@ -296,7 +276,7 @@ export default function Marketplace() {
           rating >= minRating &&
           (!filterLocation || location.includes(filterLocation.toLowerCase())) &&
           (!filterAvailability || availability === filterAvailability.toLowerCase())
-        )
+        );
       });
       items.sort((a, b) => {
         switch (sortBy) {
@@ -320,17 +300,15 @@ export default function Marketplace() {
             if (isNaN(timeA)) return 1,  // a is invalid, b comes first
 
             return timeB - timeA, // Both valid, sort by time
-        }
+        };
       });
       // Apply pagination
-      const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
-      const paginatedItems = items.slice(startIndex, endIndex);
+      const startIndex = (page - 1) * limit, const endIndex = startIndex + limit, const paginatedItems = items.slice(startIndex, endIndex);
       return {
         items: paginatedItems,
         hasMore: endIndex < items.length,
         total: items.length
-      }
+      };
     } catch (err: any) {
       // Log the error and allow useInfiniteScrollPagination to handle it
       logErrorToProduction('Error in Marketplace fetchProducts:', { data: err }),
@@ -401,23 +379,20 @@ export default function Marketplace() {
 
   // Calculate market stats
   const marketStats = useMemo(() => {
-    if (products.length === 0) return null;
-    return {
-      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length;
-      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length;
-      totalProducts: products.length,
+    if (products.length === 0) return null, return {
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length, averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length, totalProducts: products.length,
       categoriesCount: Array.from(new Set(products.map(p => p.category))).length
-    }
+    };
   }, [products]);
   // Get unique categories and other filter values
   const categories = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category)))
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.category)));
   }, []);
   const locations = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean)))
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.location).filter(Boolean)));
   }, []).filter(Boolean) as string[];
   const availabilityOptions = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean)))
+    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p) => p.availability).filter(Boolean)));
   }, []).filter(Boolean) as string[];
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -426,7 +401,7 @@ export default function Marketplace() {
       setShowScrollTop(window.scrollY > 800)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   // Loading state with skeleton
   if (loading && products.length === 0) {
@@ -595,7 +570,7 @@ export default function Marketplace() {
                     return, // Stop further execution
                   }
                   try {
-                    await router.push(`/checkout/${product.id}`)
+                    await router.push(`/checkout/${product.id}`);
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({

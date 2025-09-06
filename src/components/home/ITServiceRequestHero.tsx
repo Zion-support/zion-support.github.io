@@ -24,20 +24,14 @@ export function ITServiceRequestHero() {
     if (!name || !email || !location) {
       toast({
         title: "Missing Information",
-        description: "Name, email and location are required.";
-        variant: "destructive"}),
+        description: "Name, email and location are required.", variant: "destructive"}),
       return
     }
 
     setIsSubmitting(true);
     try {
       const res = await axios.post("/api/onsite-request", {
-        name;
-        email;
-        phone;
-        company;
-        location;
-        details});
+        name, email, phone, company, location, details});
       if (res.status === 200) {
         toast({
           title: "Request received",
@@ -140,5 +134,5 @@ export function ITServiceRequestHero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

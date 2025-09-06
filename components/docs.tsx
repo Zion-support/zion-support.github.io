@@ -2,6 +2,8 @@ import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export default function DocsPage() {
   const contact = {
     mobile: '+1 302 464 0950',
@@ -69,8 +71,7 @@ export default function DocsPage() {
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          doc.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory;
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory, return matchesSearch && matchesCategory;
   });
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -138,5 +139,5 @@ export default function DocsPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }

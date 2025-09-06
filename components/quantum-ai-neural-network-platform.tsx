@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
+import { Zap, Star } from 'lucide-react';
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
   const features = [
     "Quantum-enhanced neural network architecture",
@@ -228,6 +229,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  );
 },
 export default QuantumAINeuralNetworkPlatform;

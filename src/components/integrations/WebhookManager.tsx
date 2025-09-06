@@ -9,17 +9,12 @@ import { PlusCircle, Save, Trash } from 'lucide-react'
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { PlusCircle } from 'lucide-react';
 export function WebhookManager() {
   const { 
-    webhooks;
-    loading;
-    error;
-    testResult;
-    fetchWebhooks;
-    createWebhook;
-    toggleWebhook;
-    deleteWebhook;
-    testWebhook
+    webhooks, loading, error, testResult, fetchWebhooks, createWebhook, toggleWebhook, deleteWebhook, testWebhook
   } = useWebhooks();
   const [newWebhook, setNewWebhook] = useState({
     name: "",
@@ -38,16 +33,14 @@ export function WebhookManager() {
     fetchWebhooks()
   }, []);
   const handleAddEvent = () => {
-    if (!newWebhook.selectedEvent) return;
-    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
+    if (!newWebhook.selectedEvent) return, if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return
     }
     
     setNewWebhook({
       ...newWebhook,
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
-      selectedEvent: "" as WebhookEventType
+      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent], selectedEvent: "" as WebhookEventType
     })
   },
   const handleRemoveEvent = (event: WebhookEventType) => {
@@ -63,10 +56,7 @@ export function WebhookManager() {
     }
     
     await createWebhook(
-      newWebhook.name;
-      newWebhook.url;
-      newWebhook.eventTypes;
-      newWebhook.secret || undefined
+      newWebhook.name, newWebhook.url, newWebhook.eventTypes, newWebhook.secret || undefined
     );
     // Reset form
     setNewWebhook({
@@ -278,5 +268,5 @@ export function WebhookManager() {
         )}
       </div>
     </div>
-  )
+  );
 }

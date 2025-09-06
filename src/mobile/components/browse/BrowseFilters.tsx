@@ -8,6 +8,8 @@ import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
 interface BrowseFiltersProps {
   type: "jobs" | "talents"
 }
@@ -165,5 +167,5 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

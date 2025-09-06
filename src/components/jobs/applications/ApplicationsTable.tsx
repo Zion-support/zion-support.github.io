@@ -33,14 +33,10 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
         <User className="h-4 w-4" />
       )}
     </AvatarPrimitive>
-  )
+  );
 };
 export function ApplicationsTable({ 
-  applications;
-  processingId;
-  onViewApplication;
-  onStatusChange;
-  onViewScore
+  applications, processingId, onViewApplication, onStatusChange, onViewScore
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
@@ -132,5 +128,5 @@ export function ApplicationsTable({
         onConfirm={handleHireConfirmed}
       />
     </>
-  )
+  );
 }

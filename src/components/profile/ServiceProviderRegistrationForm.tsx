@@ -16,6 +16,9 @@ import { toast } from "@/components/ui/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 // Define form schema
 const serviceProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long");
@@ -168,9 +171,7 @@ export function ServiceProviderRegistrationForm() {
       }
       
       // Enhance profile if not already done
-      let finalSummary = values.bio;
-      let finalServices = serviceTags;
-      if (values.enhancedProfile && !generatedContent) {
+      let finalSummary = values.bio, let finalServices = serviceTags, if (values.enhancedProfile && !generatedContent) {
         try {
           const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
             body: {
@@ -194,8 +195,7 @@ export function ServiceProviderRegistrationForm() {
           // Continue with submission even if enhancement fails
         }
       } else if (generatedContent) {
-        finalSummary = generatedContent.summary;
-        finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
+        finalSummary = generatedContent.summary, finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
       }
 
       // Get user email for notification
@@ -708,5 +708,5 @@ export function ServiceProviderRegistrationForm() {
         </Form>
       </Card>
     </div>
-  )
+  );
 }

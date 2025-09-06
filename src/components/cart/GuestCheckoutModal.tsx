@@ -5,6 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 interface GuestCheckoutModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -13,8 +14,7 @@ interface GuestCheckoutModalProps {
 
 export default function GuestCheckoutModal({
   open,
-  onOpenChange;
-  onSubmit}: GuestCheckoutModalProps) {
+  onOpenChange, onSubmit}: GuestCheckoutModalProps) {
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -116,5 +116,5 @@ export default function GuestCheckoutModal({
         </form>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

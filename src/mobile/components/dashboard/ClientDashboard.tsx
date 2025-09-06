@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
 import Link from "next/link";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight, UserCheck } from 'lucide-react';
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -166,5 +169,5 @@ export function ClientDashboard() {
         </Card>
       </section>
     </div>
-  )
+  );
 }

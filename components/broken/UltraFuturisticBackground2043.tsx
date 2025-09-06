@@ -3,14 +3,11 @@ import { motion } from 'framer-motion';
 const UltraFuturisticBackground2043: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    const canvas = canvasRef.current, if (!canvas) return, const ctx = canvas.getContext('2d');
     if (!ctx) return;
     // Set canvas size
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+      canvas.width = window.innerWidth, canvas.height = window.innerHeight
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -48,7 +45,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
     },
     // Initialize particles
     for (let i = 0, i < 100, i++) {
-      particles.push(createParticle())
+      particles.push(createParticle());
     }
 
     // Animation loop
@@ -59,11 +56,9 @@ const UltraFuturisticBackground2043: React.FC = () => {
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx, particle.y += particle.vy;
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
+        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1, if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
         // Update life
         particle.life--;
         if (particle.life <= 0) {
@@ -73,23 +68,18 @@ const UltraFuturisticBackground2043: React.FC = () => {
         // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
-        ctx.fillStyle = particle.color;
-        ctx.beginPath();
+        ctx.fillStyle = particle.color, ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore()
       });
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
-      ctx.lineWidth = 0.5;
-      for (let i = 0, i < particles.length, i++) {
+      ctx.lineWidth = 0.5, for (let i = 0, i < particles.length, i++) {
         for (let j = i + 1, j < particles.length, j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const dx = particles[i].x - particles[j].x, const dy = particles[i].y - particles[j].y, const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 100) {
-            ctx.globalAlpha = (100 - distance) / 100 * 0.1;
-            ctx.beginPath();
+            ctx.globalAlpha = (100 - distance) / 100 * 0.1, ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke()
@@ -102,7 +92,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas)
-    }
+    };
   }, []);
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">

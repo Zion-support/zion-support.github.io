@@ -19,9 +19,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     setError(null);
     setLoading(true);
     try {
-      const Web3ModalCtor = (await import('web3modal')).default;
-      const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default;
-      const web3Modal = new Web3ModalCtor({
+      const Web3ModalCtor = (await import('web3modal')).default, const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default, const web3Modal = new Web3ModalCtor({
         cacheProvider: false,
         providerOptions: {
           walletconnect: {
@@ -36,9 +34,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const network = await web3Provider.getNetwork();
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
-      const domain = window.location.host;
-      const origin = window.location.origin;
-      const statement = 'Sign in to Zion with your wallet. No gas required.';
+      const domain = window.location.host, const origin = window.location.origin, const statement = 'Sign in to Zion with your wallet. No gas required.';
       const issuedAt = new Date().toISOString();
       const siweMessage = `${address} wants you to sign in with your Ethereum account: \n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`,
       const signature = await signer.signMessage(siweMessage);
@@ -60,8 +56,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     setError(null);
     setLoading(true);
     try {
-      const provider = (window as any)?.solana;
-      if (!provider || !provider.isPhantom) {
+      const provider = (window as any)?.solana, if (!provider || !provider.isPhantom) {
         throw new Error('Phantom not found. Install the Phantom extension')
       }
       const resp = await provider.connect();
@@ -72,8 +67,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`,
       const encodedMessage = new TextEncoder().encode(message);
       const { signature } = await provider.signMessage(encodedMessage, 'utf8');
-      const bs58 = (await import('bs58')).default;
-      const verifyRes = await fetch('/api/auth/verify-sol', {
+      const bs58 = (await import('bs58')).default, const verifyRes = await fetch('/api/auth/verify-sol', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })});
@@ -87,8 +81,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       setLoading(false)
     }
   }, [onClose, onLoggedIn]);
-  if (!isOpen) return null;
-  return (
+  if (!isOpen) return null, return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
       <div className="w-full max-w-md rounded-xl bg-white dark: bg-neutral-900 p-6 shadow-2xl">
         <div className="mb-4">
@@ -116,5 +109,5 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null,
-  return <ModalInner {...props} />
+  return <ModalInner {...props} />;
 }

@@ -12,6 +12,7 @@ import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export default function TranslationManager() {
 
   const { t, i18n } = useTranslation();
@@ -42,7 +43,7 @@ export default function TranslationManager() {
               acc[`${pre}${key}`] = obj[key]
             }
             return acc
-          }, {} as Record<string, string>)
+          }, {} as Record<string, string>);
         };
         currentTranslations[lang.code] = flattenObject(res)
       }
@@ -120,8 +121,7 @@ export default function TranslationManager() {
     let sourceText = '';
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (translations[lang]?.[key]) {
-        sourceLanguage = lang;
-        sourceText = translations[lang][key];
+        sourceLanguage = lang, sourceText = translations[lang][key];
         break
       }
     }
@@ -135,10 +135,7 @@ export default function TranslationManager() {
     }
     
     try {
-      const { translations: translatedText, error } = await translateContent(
-        sourceText;
-        'general';
-        sourceLanguage
+      const { translations: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage
       );
       if (error) {
         toast({
@@ -151,8 +148,7 @@ export default function TranslationManager() {
       // Update edited translations with auto-translated content
       setEditedTranslations({
         ...editedTranslations,
-        [key]: translatedText
-      });
+        [key]: translatedText, });
       toast({
         title: t('translation.translation_success'),
         description: t('translation.content_translated')})
@@ -347,5 +343,5 @@ export default function TranslationManager() {
         </Card>
       </main>
     </>
-  )
+  );
 }

@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
@@ -165,5 +167,5 @@ export function UsageStats() {
         <Button>Contact Us</Button>
       </div>
     </div>
-  )
+  );
 }

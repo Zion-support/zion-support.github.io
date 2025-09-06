@@ -9,6 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts";
 import { Loader2, ShieldCheck, Download } from 'lucide-react'
 import { toast } from "sonner";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface SmartContractDeploymentProps {
   solidityCode: string,
   onDeploy: (options: DeploymentOptions) => Promise<void>,
@@ -17,8 +18,7 @@ interface SmartContractDeploymentProps {
 
 export function SmartContractDeployment({ 
   solidityCode,
-  onDeploy;
-  isDeploying
+  onDeploy, isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
     network: 'none',
@@ -36,7 +36,7 @@ export function SmartContractDeployment({
       await onDeploy(deploymentOptions)
     } catch (error) {
       logErrorToProduction('Deployment error:', { data: error })
-    }
+    };
   },
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code
@@ -44,8 +44,7 @@ export function SmartContractDeployment({
     const url = URL.createObjectURL(blob);
     // Create a temporary anchor to trigger download
     const a = document.createElement('a');
-    a.href = url;
-    a.download = 'ZionContract.sol';
+    a.href = url, a.download = 'ZionContract.sol';
     document.body.appendChild(a);
     a.click();
     // Clean up
@@ -158,5 +157,5 @@ export function SmartContractDeployment({
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

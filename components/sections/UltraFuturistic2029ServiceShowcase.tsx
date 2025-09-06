@@ -3,11 +3,10 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
+import { Zap, Star } from 'lucide-react';
 interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[],
-  title?: string;
-  subtitle?: string;
-  maxServices?: number
+  title?: string, subtitle?: string, maxServices?: number
 }
 
 const categoryColors: { [key: string]: string } = {
@@ -48,9 +47,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
-          return b.rating - a.rating;
-        default: return 0
-      }
+          return b.rating - a.rating, default: return 0
+      };
     })
     .slice(0, maxServices);
   const containerVariants = {
@@ -235,6 +233,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         </motion.div>
       </div>
     </section>
-  )
+  );
 },
 export default UltraFuturistic2029ServiceShowcase;

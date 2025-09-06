@@ -114,7 +114,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       </Button>
       {response && <CodeBlock code={response} language="json" />}
     </div>
-  )
+  );
 }
 
 export default ApiPlayground,

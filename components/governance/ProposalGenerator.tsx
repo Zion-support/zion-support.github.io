@@ -7,8 +7,7 @@ export type ProposalForm = {
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,
-  language?: string;
-  customPrompt?: string
+  language?: string, customPrompt?: string
 };
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
@@ -88,7 +87,7 @@ export default function ProposalGenerator() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium">Target institution</label>
+            <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
             <input
               className="w-full border rounded px-3 py-2"
               value={form.targetInstitution}
@@ -97,7 +96,7 @@ export default function ProposalGenerator() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium">Type</label>
+            <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
             <select
               className="w-full border rounded px-3 py-2"
               value={form.type}
@@ -110,7 +109,7 @@ export default function ProposalGenerator() {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium">Regional scope</label>
+            <label className="block text-sm font-medium" htmlFor="input-Regional scope">Regional scope</label>
             <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
@@ -119,7 +118,7 @@ export default function ProposalGenerator() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium">Budget / Resolution goals</label>
+            <label className="block text-sm font-medium" htmlFor="input-Budget / Resolution goals">Budget / Resolution goals</label>
             <textarea
               className="w-full border rounded px-3 py-2 min-h-[80px]"
               value={form.budgetOrGoals}
@@ -128,7 +127,7 @@ export default function ProposalGenerator() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium">Supporting multiverse(s)</label>
+            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>
             <input
               className="w-full border rounded px-3 py-2"
               value={form.supportingMultiverses}
@@ -138,7 +137,7 @@ export default function ProposalGenerator() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium">Language</label>
+              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
               <input
                 className="w-full border rounded px-3 py-2"
                 value={form.language}
@@ -147,7 +146,7 @@ export default function ProposalGenerator() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium">GPT Prompt Assist</label>
+              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>
               <textarea
                 className="w-full border rounded px-3 py-2 min-h-[80px]"
                 value={form.customPrompt}
@@ -200,7 +199,7 @@ export default function ProposalGenerator() {
           )}
         </div>
         <div className="space-y-2">
-          <label className="block text-sm font-medium">Draft (Markdown)</label>
+          <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
           <textarea
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
@@ -209,5 +208,5 @@ export default function ProposalGenerator() {
         </div>
       </div>
     </div>
-  )
+  );
 }

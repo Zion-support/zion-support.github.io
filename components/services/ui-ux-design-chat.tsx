@@ -15,6 +15,6 @@ const UiUxDesignChat: NextPage = () => {
         <a href="/services">Back to Services</a>
       </main>
     </div>
-  )
+  );
 },
 export default UiUxDesignChat;

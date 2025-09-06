@@ -7,6 +7,7 @@ import { HireRequestModal } from "@/components/profile/hire-request";
 import { useAuthStatus } from "@/hooks/talent";
 import type { UserProfile } from "@/types/auth";
 import { useRouter } from 'next/router';
+import { Star } from 'lucide-react';
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -100,5 +101,5 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         userDetails={userProfile}
       />
     </>
-  )
+  );
 }

@@ -6,6 +6,10 @@ import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
 import { format, parseISO } from 'date-fns';
 import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
 import { Badge } from '@/components/ui/badge';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Calendar } from 'lucide-react';
 interface AIMilestoneGeneratorProps {
   scope: string,
   startDate: string,
@@ -17,11 +21,7 @@ interface AIMilestoneGeneratorProps {
 
 export function AIMilestoneGenerator({
   scope,
-  startDate;
-  endDate;
-  projectType;
-  onAddMilestones;
-  onAddMilestone
+  startDate, endDate, projectType, onAddMilestones, onAddMilestone
 }: AIMilestoneGeneratorProps) {
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
@@ -32,9 +32,7 @@ export function AIMilestoneGenerator({
 
     const input: MilestoneInput = {
       scope,
-      startDate;
-      endDate;
-      projectType
+      startDate, endDate, projectType;
     };
     await generateMilestones(input);
     // Initially select all milestones
@@ -66,7 +64,7 @@ export function AIMilestoneGenerator({
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
       return dateString
-    }
+    };
   };
   return (
     <div className="space-y-4">
@@ -162,5 +160,5 @@ export function AIMilestoneGenerator({
         </Card>
       )}
     </div>
-  )
+  );
 }

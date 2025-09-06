@@ -67,11 +67,11 @@ export default function TokenIntegrationsPage() {
         <p className="text-sm text-gray-600 dark:text-gray-300">Based on your region and stake, we suggest the best chain for ZION$.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-gray-500">Region</label>
+            <label className="text-xs text-gray-500" htmlFor="input-Region">Region</label>
             <input value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., US, EU, APAC" className="border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-gray-500">Stake (USD)</label>
+            <label className="text-xs text-gray-500" htmlFor="input-Stake (USD)">Stake (USD)</label>
             <input value={stake} onChange={(e) => setStake(e.target.value)} placeholder="e.g., 1000" className="border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
           <div className="flex items-end"><button onClick={runOperator} className="w-full px-4 py-2 rounded bg-indigo-600 text-white">Suggest Chain</button></div>
@@ -97,5 +97,5 @@ export default function TokenIntegrationsPage() {
         </ul>
       </section>
     </div>
-  )
+  );
 }

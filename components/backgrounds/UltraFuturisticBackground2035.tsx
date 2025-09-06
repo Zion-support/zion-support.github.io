@@ -3,12 +3,9 @@ import { motion } from 'framer-motion';
 export default function UltraFuturisticBackground2035() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    const canvas = canvasRef.current, if (!canvas) return, const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+    if (!ctx) return, canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
     canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
     if (ctx) {
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
@@ -27,8 +24,7 @@ export default function UltraFuturisticBackground2035() {
     // Initialize particles
     const initParticles = () => {
       particles = [];
-      const isSmallScreen = window.innerWidth < 768;
-      const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
+      const isSmallScreen = window.innerWidth < 768, const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
       for (let i = 0, i < particleCount, i++) {
         particles.push({
           x: Math.random() * canvas.width / (window.devicePixelRatio || 1),
@@ -45,35 +41,26 @@ export default function UltraFuturisticBackground2035() {
     const updateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx, particle.y += particle.vy;
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1);
-        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
+        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0, if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
         if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0;
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
+        ctx.fillStyle = particle.color, ctx.globalAlpha = particle.opacity, ctx.fill();
         // Draw connections
         const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
         if (maxDistance > 0) {
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
-              const dx = particle.x - otherParticle.x;
-              const dy = particle.y - otherParticle.y;
-              const distance = Math.sqrt(dx * dx + dy * dy);
+              const dx = particle.x - otherParticle.x, const dy = particle.y - otherParticle.y, const distance = Math.sqrt(dx * dx + dy * dy);
               if (distance < maxDistance) {
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
-                ctx.strokeStyle = particle.color;
-                ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08;
-                ctx.lineWidth = 1;
-                ctx.stroke()
+                ctx.strokeStyle = particle.color, ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08, ctx.lineWidth = 1, ctx.stroke()
               }
             }
           })

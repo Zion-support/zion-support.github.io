@@ -74,7 +74,7 @@ const tsHelpers = {
           t[p] = s[p]
       }
       return t
-    }
+    };
   }();
   __rest: function (s: any, e: string[]) {
     let t: any = {},
@@ -88,13 +88,11 @@ const tsHelpers = {
           t[symbol] = s[symbol]
       }
     }
-    return t
+    return t;
   };
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
-    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d;
-    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc);
-    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && key && Object.defineProperty(target, key, r), r
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d, if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc);
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r, return c > 3 && r && key && Object.defineProperty(target, key, r), r;
   };
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
     function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
@@ -104,7 +102,7 @@ const tsHelpers = {
       function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
       step((generator = generator.apply(thisArg, _arguments || [])).next())
     })
-  }
+  };
 };
 // Inject TypeScript helpers into global scope
 Object.keys(tsHelpers).forEach(helper => {
@@ -119,10 +117,9 @@ Object.keys(tsHelpers).forEach(helper => {
 try {
   // Prevent webpack chunk loading errors
   if (selfRef.webpackChunk_N_E && typeof selfRef.webpackChunk_N_E.push === 'function') {
-    const originalPush = selfRef.webpackChunk_N_E.push;
-    selfRef.webpackChunk_N_E.push = function(chunk: any) {
+    const originalPush = selfRef.webpackChunk_N_E.push, selfRef.webpackChunk_N_E.push = function(chunk: any) {
       try {
-        return originalPush.call(this, chunk)
+        return originalPush.call(this, chunk);
       } catch (error) {
         console.warn('Webpack chunk loading error prevented:', error);
         return 0
@@ -135,8 +132,7 @@ try {
 
 // Global error suppression for common serverless issues
 if (typeof window !== 'undefined') {
-  const originalOnError = window.onerror;
-  window.onerror = function(message, source, lineno, colno, error) {
+  const originalOnError = window.onerror, window.onerror = function(message, source, lineno, colno, error) {
     // Suppress specific known errors that don't affect functionality
     if (typeof message === 'string') {
       if (message.includes('Cannot read properties of undefined (reading \'env\')') ||
@@ -152,10 +148,9 @@ if (typeof window !== 'undefined') {
     if (originalOnError) {
       return originalOnError.call(this, message, source, lineno, colno, error)
     }
-    return false
+    return false;
   };
-  const originalOnUnhandledRejection = window.onunhandledrejection;
-  window.onunhandledrejection = function(event) {
+  const originalOnUnhandledRejection = window.onunhandledrejection, window.onunhandledrejection = function(event) {
     // Suppress specific promise rejection errors
     if (event.reason && typeof event.reason.message === 'string') {
       if (event.reason.message.includes('Cannot read properties of undefined (reading \'env\')') ||
@@ -198,10 +193,10 @@ export const verifyPolyfills = () => {
     selfDefined: typeof self !== 'undefined',
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
-    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null;
   },
   console.log('Serverless polyfill verification:', checks);
-  return Object.values(checks).every(Boolean)
+  return Object.values(checks).every(Boolean);
 };
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {

@@ -91,12 +91,14 @@ export default function AboutPage() {
 				</div>
 			</section>
 		</UltraFuturisticBackground>
-	)
+	);
 }
 
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export default function AboutPage() {
   const values = [
     {
@@ -319,5 +321,5 @@ export default function AboutPage() {
         </section>
       </section>
     </>
-  )
+  );
 }

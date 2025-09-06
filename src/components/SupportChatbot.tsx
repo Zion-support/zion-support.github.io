@@ -57,29 +57,24 @@ export function SupportChatbot() {
         setMessages(prev => [...prev, { id: botId, role: 'assistant', message: '' }]),
         const reader = res.body.getReader();
         const decoder = new TextDecoder();
-        let done = false;
-        let buffer = '';
+        let done = false, let buffer = '';
         let accumulated = '';
         while (!done) {
           const result = await reader.read();
-          done = result.done;
-          buffer += decoder.decode(result.value || new Uint8Array());
+          done = result.done, buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
           for (let i = 0, i < lines.length - 1, i++) {
             let line = lines[i]?.trim();
-            if (!line) continue;
-            if (line.startsWith('data:')) {
+            if (!line) continue, if (line.startsWith('data:')) {
               line = line.replace(/^data:\s*/, '');
               if (line === '[DONE]') {
-                done = true;
-                break
+                done = true, break
               }
               try {
                 const json = JSON.parse(line);
                 const token = json.choices?.[0]?.delta?.content || json.choices?.[0]?.text || '';
                 if (token) {
-                  accumulated += token;
-                  setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m))
+                  accumulated += token, setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m))
                 }
               } catch (_) {
                 // ignore parse errors
@@ -154,5 +149,5 @@ export function SupportChatbot() {
         <ChatInput onSend={sendMessage} disabled={loading} />
       </div>
     </div>
-  )
+  );
 }

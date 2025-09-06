@@ -13,6 +13,7 @@ import { advanced2025ITInfrastructureServicesV2 } from '../data/2025-advanced-it
 import { realEnterpriseAIServices2025 } from '../data/2025-real-enterprise-ai-services';
 import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
 import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+import { Star } from 'lucide-react';
 // Lazy load new components for better performance
 const ServiceCard = lazy(() => import('./ServiceCard'));
 const TestimonialsSection = lazy(() => import('./TestimonialsSection'));
@@ -56,11 +57,10 @@ const Homepage2044: React.FC = () => {
     allRevolutionaryServices.slice(0, 6), [allRevolutionaryServices]
   );
   const getFilteredServices = useCallback(() => {
-    if (selectedCategory === 'all') return allRevolutionaryServices;
-    return allRevolutionaryServices.filter(service => 
+    if (selectedCategory === 'all') return allRevolutionaryServices, return allRevolutionaryServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       service.type.toLowerCase().includes(selectedCategory.toLowerCase())
-    )
+    );
   }, [selectedCategory, allRevolutionaryServices]);
   const categories = useMemo(() => [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500' },
@@ -129,8 +129,7 @@ const Homepage2044: React.FC = () => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)
     }, 6000);
     // Track mouse movement for parallax effects with throttling
-    let ticking = false;
-    const handleMouseMove = (e: MouseEvent) => {
+    let ticking = false, const handleMouseMove = (e: MouseEvent) => {
       if (!ticking) {
         requestAnimationFrame(() => {
           setMousePosition({ x: e.clientX, y: e.clientY }),
@@ -142,10 +141,7 @@ const Homepage2044: React.FC = () => {
     window.addEventListener('mousemove', handleMouseMove, { passive: true }),
     // Track scroll progress for performance monitoring
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.body.offsetHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      setScrollProgress(scrollPercent)
+      const scrollTop = window.pageYOffset, const docHeight = document.body.offsetHeight - window.innerHeight, const scrollPercent = (scrollTop / docHeight) * 100, setScrollProgress(scrollPercent)
     };
     window.addEventListener('scroll', handleScroll, { passive: true }),
     return () => {
@@ -169,7 +165,7 @@ const Homepage2044: React.FC = () => {
           </motion.div>
         </div>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -259,8 +255,7 @@ const Homepage2044: React.FC = () => {
     )
   }
 
-  return (
-    <>
+  return(<>
       <Head>
         <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title>
         <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." />
@@ -300,8 +295,7 @@ const Homepage2044: React.FC = () => {
               ],
               "contactPoint": {
                 "@type": "ContactPoint";
-                "contactType": "customer service";
-                "availableLanguage": "English"
+                "contactType": "customer service", "availableLanguage": "English"
               }
             })
           }}

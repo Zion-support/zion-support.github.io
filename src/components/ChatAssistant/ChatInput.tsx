@@ -50,5 +50,5 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         <Send className="h-5 w-5" />
       </Button>
     </form>
-  )
+  );
 }

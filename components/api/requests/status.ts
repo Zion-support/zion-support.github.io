@@ -12,7 +12,7 @@ function readAll() {
 
 function writeAll(items: any[]) {
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true }),
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2))
+  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2));
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

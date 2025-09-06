@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ResourceItem {
   id: string,
   title: string,
@@ -154,5 +155,5 @@ export function PartnerResources() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

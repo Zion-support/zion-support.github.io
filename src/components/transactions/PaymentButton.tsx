@@ -10,20 +10,11 @@ interface PaymentButtonProps {
   amount: number,
   serviceId: string,
   providerId: string,
-  buttonText?: string;
-  className?: string;
-  onPaymentInitiated?: () => void;
-  redirectUrl?: string
+  buttonText?: string, className?: string, onPaymentInitiated?: () => void, redirectUrl?: string
 }
 
 export function PaymentButton({
-  amount;
-  serviceId;
-  providerId;
-  buttonText = "Purchase";
-  className;
-  onPaymentInitiated;
-  redirectUrl}: PaymentButtonProps) {
+  amount, serviceId, providerId, buttonText = "Purchase", className, onPaymentInitiated, redirectUrl}: PaymentButtonProps) {
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
   const router = useRouter();
@@ -47,9 +38,7 @@ export function PaymentButton({
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
           amount,
-          serviceId;
-          providerId;
-          userId: user?.id,
+          serviceId, providerId, userId: user?.id,
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
       if (error) {
@@ -77,13 +66,11 @@ export function PaymentButton({
       }, 1500)
     }
   };
-  return (
-    <Button
+  return(<Button
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-        "relative min-w-[120px]";
-        className
+        "relative min-w-[120px]", className
       )}
     >
       {isProcessing ? (

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
+import { Zap, Star } from 'lucide-react';
 const aiServices = [
   {
     title: 'AI Consciousness Evolution',
@@ -179,5 +180,5 @@ export default function AIServices() {
         </section>
       </div>
     </>
-  )
+  );
 }

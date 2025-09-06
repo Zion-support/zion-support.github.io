@@ -16,7 +16,7 @@ function readEpisodes(): any[] {
 
 function writeEpisodes(episodes: any[]) {
   ensureStorage(),
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
+  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -33,8 +33,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`,
   let generated: any = null,
   try {
-    const apiKey = process.env.OPENAI_API_KEY;
-    let content: string,
+    const apiKey = process.env.OPENAI_API_KEY, let content: string,
     if (apiKey) {
       const openai = new OpenAI({ apiKey });
       const completion = await openai.chat.completions.create({
@@ -69,17 +68,13 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     }
 
     if (!generated || !generated.title || !generated.transcript) {
-      return res.status(500).json({ error: 'Failed to generate structured content' })
+      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
 
     const episodes = readEpisodes(),
     const episode = {
-      id;
-      createdAt: new Date().toISOString(),
-      persona;
-      invitee;
-      topic;
-      title: generated.title,
+      id, createdAt: new Date().toISOString(),
+      persona, invitee, topic, title: generated.title,
       questions: generated.questions || [],
       timeMarkers: generated.timeMarkers || { intro: '00:00', segments: [], closing: '14:30' },
       transcript: generated.transcript,
@@ -93,5 +88,5 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   } catch (error: any) {
     console.error(error),
     return res.status(500).json({ error: error?.message || 'Unknown error' })
-  }
+  };
 }

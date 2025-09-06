@@ -9,13 +9,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       if (hasSupabase) {
         const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false }),
-        if (error) throw error;
-        return res.status(200).json({ items: data as TalentProfile[] })
+        if (error) throw error, return res.status(200).json({ items: data as TalentProfile[] })
       }
       return res.status(200).json({ items: LOCAL })
     } catch (e: any) {
       return res.status(500).json({ error: e.message })
-    }
+    };
   }
 
   if (req.method === 'POST') {
@@ -25,8 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const item: TalentProfile = {
         ...payload,
         id: uuid(),
-        slug;
-        verified: false,
+        slug, verified: false,
         rating: 0,
         reviewsCount: 0,
         createdAt: new Date().toISOString(),
@@ -40,8 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const originalLang = payload.originalLanguage || detectLanguageSimple([item.title, item.summary, item.bio || ''].join('\n'));
       const translations: TalentProfile['translations'] = {},
       for (const lang of SUPPORTED_LANGS) {
-        if (!lang || lang === originalLang) continue;
-        translations.title = translations.title || {};
+        if (!lang || lang === originalLang) continue, translations.title = translations.title || {};
         translations.summary = translations.summary || {};
         translations.bio = translations.bio || {};
         if (item.title) translations.title[lang] = await translateText(item.title, lang, originalLang);
@@ -52,9 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           translations.category[lang] = await translateText(item.category, lang, originalLang)
         }
       }
-      item.originalLanguage = originalLang;
-      item.translations = translations;
-      if (hasSupabase) {
+      item.originalLanguage = originalLang, item.translations = translations, if (hasSupabase) {
         const { error } = await supabaseClient.from('talent_profiles').insert({
           id: item.id,
           slug: item.slug,
@@ -80,8 +75,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           // i18n
           original_language: item.originalLanguage,
           translations: item.translations as any} as any),
-        if (error) throw error;
-        return res.status(201).json({ slug: item.slug })
+        if (error) throw error, return res.status(201).json({ slug: item.slug })
       }
 
       // Fallback: return the slug as if saved
@@ -91,5 +85,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
-  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
+  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }

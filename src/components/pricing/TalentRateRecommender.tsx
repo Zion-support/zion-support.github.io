@@ -8,17 +8,13 @@ import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
-  location?: string;
-  onSuggestionApplied: (value: number) => void,
+  location?: string, onSuggestionApplied: (value: number) => void,
   rateType: "hourly" | "fixed"
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills,
-  yearsExperience;
-  location;
-  onSuggestionApplied;
-  rateType}) => {
+  yearsExperience, location, onSuggestionApplied, rateType}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
@@ -31,8 +27,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
     try {
       const params: TalentRateParams = {
         skills,
-        yearsExperience;
-        location};
+        yearsExperience, location};
       const result = await getTalentRateSuggestion(params);
       setSuggestion(result)
     } catch (error) {
@@ -82,5 +77,5 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
         )}
       </div>
     </div>
-  )
+  );
 };

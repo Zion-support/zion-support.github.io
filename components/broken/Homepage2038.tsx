@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
 import { innovative2038ITServices } from '../data/innovative-2038-it-services';
 import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
+import { Star } from 'lucide-react';
 const Homepage2038: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(0, 3);
@@ -425,6 +426,6 @@ const Homepage2038: React.FC = () => {
         </section>
       </main>
     </Layout>
-  )
+  );
 },
 export default Homepage2038;

@@ -24,14 +24,11 @@ function generateInnovationListing(index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
-  const reviewCount = Math.floor(Math.random() * 50) + 10;
-  return {
+  const reviewCount = Math.floor(Math.random() * 50) + 10, return {
     id: `innovation-auto-${index}`,
-    title;
-    description: `Professional ${title} package with expert support and global delivery. Ideal for businesses seeking modern IT and AI solutions at competitive market rates.`,
+    title, description: `Professional ${title} package with expert support and global delivery. Ideal for businesses seeking modern IT and AI solutions at competitive market rates.`,
     category: "Innovation",
-    price;
-    currency: "$",
+    price, currency: "$",
     tags: ["innovation", "ai", "service"];
     author: {
       name: "AutoGen Solutions",
@@ -39,9 +36,7 @@ function generateInnovationListing(index: number): ProductListing {
     },
     images: ["https://source.unsplash.com/random/800x500?technology"],
     createdAt: new Date().toISOString(),
-    rating;
-    reviewCount;
-    location: "Global",
+    rating, reviewCount, location: "Global",
     availability: "Immediate",
     aiScore: Math.floor(Math.random() * 20) + 80
   }
@@ -59,7 +54,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   // Redirect to categories list if slug is missing
   if (!slug) {
     router.push('/categories');
-    return null
+    return null;
   }
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
@@ -147,8 +142,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         setCategory(currentCategory);
         innovationCounterRef.current = 0;
         // Filter listings by category
-        const categoryTitle = currentCategory.title;
-        const filteredListings = MARKETPLACE_LISTINGS.filter(
+        const categoryTitle = currentCategory.title, const filteredListings = MARKETPLACE_LISTINGS.filter(
           (listing) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
         );
         // If we don't have real listings for this category, generate placeholder listings
@@ -185,15 +179,13 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     load()
   }, [slug]);
   useEffect(() => {
-    if (slug !== 'innovation') return;
-    const interval = setInterval(() => {
-      innovationCounterRef.current += 1;
-      setListings((prev) => [
+    if (slug !== 'innovation') return, const interval = setInterval(() => {
+      innovationCounterRef.current += 1, setListings((prev) => [
         generateInnovationListing(innovationCounterRef.current);
         ...prev])
     }, 120000), // every 2 minutes
 
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   }, [slug]);
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
@@ -264,5 +256,5 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         </div>
       </Suspense>
     </>
-  )
+  );
 }

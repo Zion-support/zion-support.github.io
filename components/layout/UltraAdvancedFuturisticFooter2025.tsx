@@ -2,11 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
+import { Zap } from 'lucide-react';
 interface FooterLink {
   label: string,
   href: string,
-  description?: string;
-  external?: boolean
+  description?: string, external?: boolean
 }
 
 interface FooterSection {
@@ -214,8 +214,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Pioneering the future with revolutionary AI consciousness, quantum computing;
-                and autonomous systems. Transforming businesses through next-generation technology.
+                Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next-generation technology.
               </p>
               
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">

@@ -2,6 +2,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from 'lucide-react'
 import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ServiceDetailsProps {
   country: string
 }
@@ -21,7 +22,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       // Default for other countries
       "default": ["Major metropolitan areas"]
     };
-    return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"]
+    return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"];
   };
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
@@ -36,7 +37,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       // Default placeholder
       "default": "https: //source.unsplash.com/featured/900x700/?datacenter"
     },
-    return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter"
+    return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter";
   },
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
@@ -54,7 +55,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
-           `For remote locations, additional travel fees may apply.`
+           `For remote locations, additional travel fees may apply.`;
   };
   const datacenters = getDatacenters(country);
   return (
@@ -124,5 +125,5 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
         </p>
       </CardFooter>
     </Card>
-  )
+  );
 }

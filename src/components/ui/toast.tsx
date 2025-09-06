@@ -46,7 +46,7 @@ const Toast = React.forwardRef<
       className={cn(toastVariants({ variant }), className)}
       {...props}
     />
-  )
+  );
 })
 Toast.displayName = ToastPrimitives.Root.displayName
 
@@ -113,13 +113,7 @@ type ToastActionElement = React.ReactElement<typeof ToastAction>
 
 export {
   type ToastProps,
-  type ToastActionElement;
-  ToastProvider;
-  ToastViewport;
-  Toast;
-  ToastTitle;
-  ToastDescription;
-  ToastClose;
+  type ToastActionElement, ToastProvider, ToastViewport, Toast, ToastTitle, ToastDescription, ToastClose;
   ToastAction}
 
 // Add useToast hook export

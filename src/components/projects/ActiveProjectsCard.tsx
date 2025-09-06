@@ -7,6 +7,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star, BriefcaseIcon } from 'lucide-react';
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
@@ -98,5 +101,5 @@ export function ActiveProjectsCard() {
         </CardFooter>
       )}
     </Card>
-  )
+  );
 }

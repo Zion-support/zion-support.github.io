@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <guid isPermaLink="false">${e.id}</guid>
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
-    </item>`
+    </item>`;
     })
     .join('\n');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -40,5 +40,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   </channel>
 </rss>`;
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
-  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+  return res.status(200).json({ ok: true, path: '/podcast.xml' });
 }

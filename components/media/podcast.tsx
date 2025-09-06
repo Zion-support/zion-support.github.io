@@ -7,9 +7,7 @@ type EpisodeListItem = {
   createdAt: string,
   summary: string,
   audio?: {
-    mp3Url?: string;
-    wavUrl?: string;
-    mp4Url?: string
+    mp3Url?: string, wavUrl?: string, mp4Url?: string
   }
 };
 export default function PodcastIndexPage() {
@@ -71,5 +69,5 @@ export default function PodcastIndexPage() {
         ))}
       </ul>
     </div>
-  )
+  );
 }

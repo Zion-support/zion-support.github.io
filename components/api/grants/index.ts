@@ -22,14 +22,13 @@ function readAllGrants(): GrantApplication[] {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-    const { status, sector, region, program } = req.query;
-    const list = readAllGrants().filter((g) => {
+    const { status, sector, region, program } = req.query, const list = readAllGrants().filter((g) => {
       return (
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
         (region ? g.region === region : true) &&
         (program ? g.program === program : true)
-      )
+      );
     });
     res.status(200).json({ items: list }),
     return
@@ -37,10 +36,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'POST') {
     try {
-      const payload = req.body as CreateGrantPayload;
-      if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
+      const payload = req.body as CreateGrantPayload, if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
         res.status(400).json({ error: 'Missing required fields' }),
-        return
+        return;
       }
       ensureDir();
       const id = uuidv4();

@@ -9,8 +9,7 @@ export default function ProductPage() {
 
   const router = useRouter();
   const { id: rawId } = router.query,
-  const id = typeof rawId === 'string' ? rawId : undefined;
-  const [product, setProduct] = useState(
+  const id = typeof rawId === 'string' ? rawId : undefined, const [product, setProduct] = useState(
     NEW_PRODUCTS.find((p) => p.id === id) || null
   );
   const { items, dispatch } = useCart();
@@ -24,8 +23,7 @@ export default function ProductPage() {
   }, [id]);
   useEffect(() => {
     const fetchProduct = async () => {
-      if (!id) return;
-      try {
+      if (!id) return, try {
         const res = await fetch(`/api/products/${id}`);
         if (res.ok) {
           const data = await res.json();
@@ -47,13 +45,12 @@ export default function ProductPage() {
   }
 
   if (!product) {
-    return <div className="p-6 text-white">Product not found</div>
+    return <div className="p-6 text-white">Product not found</div>;
   }
 
   const inCart = items.some(i => i.id === product.id),
   const handleAdd = () => {
-    if (inCart) return;
-    setAdding(true);
+    if (inCart) return, setAdding(true);
     dispatch({
       type: 'ADD_ITEM',
       payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
@@ -85,5 +82,5 @@ export default function ProductPage() {
         </Button>
       </div>
     </>
-  )
+  );
 }

@@ -8,17 +8,13 @@ async function summarizeAndTag(input: {
   fullName: string,
   professionalTitle: string,
   bio: string,
-  projects?: string;
-  skills: string,
+  projects?: string, skills: string,
   tools?: string
 }) {
   const openaiApiKey = process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY_ZION || '';
   const combinedText = [
-    input.professionalTitle;
-    input.bio;
-    input.projects || '';
-    input.skills;
-    input.tools || ''].join('\n');
+    input.professionalTitle, input.bio, input.projects || '';
+    input.skills, input.tools || ''].join('\n');
   const basicTags = Array.from(new Set(
     (input.skills +  + (input.tools || ''))
       .split(/[,\n]/)
@@ -28,7 +24,7 @@ async function summarizeAndTag(input: {
   ));
   if (!openaiApiKey) {
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
-    return { summary, tags: basicTags.slice(0, 24) }
+    return { summary, tags: basicTags.slice(0, 24) };
   }
 
   try {
@@ -51,7 +47,7 @@ async function summarizeAndTag(input: {
       // fall through to heuristic
     }
   } catch (err) {
-    // ignore and fallback
+    // ignore and fallback;
   }
 
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
@@ -61,27 +57,15 @@ async function summarizeAndTag(input: {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const id = randomUUID(),
     const {
-      fullName;
-      professionalTitle;
-      profilePicture;
-      bio;
-      projects;
-      yearsOfExperience;
-      skills;
-      tools;
-      availability;
-      timezone;
-      hourlyRate;
-      portfolioLinks;
-      cvFile} = req.body || {};
+      fullName, professionalTitle, profilePicture, bio, projects, yearsOfExperience, skills, tools, availability, timezone, hourlyRate, portfolioLinks, cvFile} = req.body || {};
     if (!fullName || !professionalTitle || !bio || !yearsOfExperience || !skills || !availability || !timezone) {
-      return res.status(400).json({ error: 'Missing required fields' })
+      return res.status(400).json({ error: 'Missing required fields' });
     }
 
     const uploadsDir = path.join(process.cwd(), 'publicuploads');
@@ -113,27 +97,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const { summary, tags } = await summarizeAndTag({
-      fullName;
-      professionalTitle;
-      bio;
-      projects;
-      skills;
-      tools});
+      fullName, professionalTitle, bio, projects, skills, tools});
     const record = {
-      id;
-      createdAt: new Date().toISOString(),
-      fullName;
-      professionalTitle;
-      bio;
-      projects;
+      id, createdAt: new Date().toISOString(),
+      fullName, professionalTitle, bio, projects;
       yearsOfExperience: Number(yearsOfExperience) || 0,
-      skills;
-      tools;
-      availability;
-      timezone;
+      skills, tools, availability, timezone;
       hourlyRate: hourlyRate ? Number(hourlyRate) : null,
-      portfolioLinks;
-      assets: {
+      portfolioLinks, assets: {
         profileImage: savedProfileImagePath,
         cv: savedCvPath},
       ai: {
@@ -159,5 +130,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' })
-  }
+  };
 }

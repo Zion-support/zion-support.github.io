@@ -3,7 +3,7 @@ type NotificationContextValue = {
 };
 const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),
 export function useToast() {
-  return useContext(NotificationContext)
+  return useContext(NotificationContext);
 }
 
 export function NotificationProvider({ children }: { children: ReactNode }) {

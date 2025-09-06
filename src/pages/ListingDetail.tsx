@@ -16,12 +16,14 @@ import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { ProfileContact } from "@/components/profile/ProfileContact";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useCurrency } from '@/hooks/useCurrency';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter();
-  const id = router.query.id as string;
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const id = router.query.id as string, const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -50,7 +52,7 @@ export default function ListingDetail() {
       setIsChatOpen(true)
     } else {
       setIsContactDialogOpen(true)
-    }
+    };
   };
   return (
     <>
@@ -81,9 +83,7 @@ export default function ListingDetail() {
                       <div 
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
-                        className={cn(
-                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
-                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        className={cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2", index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
                       >
                         <ImageWithRetry
@@ -164,9 +164,7 @@ export default function ListingDetail() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={cn(
-                            "h-5 w-5";
-                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                          className={cn("h-5 w-5", i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />
                       ))}

@@ -1,19 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 export type AIAssistantProps = {
-  buttonLabel?: string;
-  title?: string;
-  defaultPrompt: string,
-  systemPrompt?: string;
-  onAccept: (markdown: string) => void,
+  buttonLabel?: string, title?: string, defaultPrompt: string,
+  systemPrompt?: string, onAccept: (markdown: string) => void,
   authorizationToken?: string
 };
 export default function AIAssistant({
   buttonLabel = 'Generate with AI';
-  title = 'AI Writing Assistant';
-  defaultPrompt;
-  systemPrompt;
-  onAccept;
-  authorizationToken}: AIAssistantProps) {
+  title = 'AI Writing Assistant', defaultPrompt, systemPrompt, onAccept, authorizationToken}: AIAssistantProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState('');
@@ -84,7 +77,7 @@ export default function AIAssistant({
 
             <div className="p-4 space-y-3">
               <div>
-                <label className="block text-xs font-medium mb-1">Operator prompt</label>
+                <label className="block text-xs font-medium mb-1" htmlFor="input-Operator prompt">Operator prompt</label>
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
@@ -116,7 +109,7 @@ export default function AIAssistant({
               )}
 
               <div>
-                <label className="block text-xs font-medium mb-1">Output (markdown)</label>
+                <label className="block text-xs font-medium mb-1" htmlFor="input-Output (markdown)">Output (markdown)</label>
                 {isEditing ? (
                   <textarea
                     value={output}
@@ -133,5 +126,5 @@ export default function AIAssistant({
         </div>
       )}
     </>
-  )
+  );
 }

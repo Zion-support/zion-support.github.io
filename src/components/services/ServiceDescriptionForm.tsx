@@ -10,6 +10,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z.string(),
@@ -155,5 +157,5 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         </Form>
       </CardContent>
     </Card>
-  )
+  );
 }

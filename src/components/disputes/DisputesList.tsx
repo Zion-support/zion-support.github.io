@@ -7,6 +7,7 @@ import Skeleton from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from 'lucide-react'
 import Link from "next/link";
+import { Badge } from '@/components/ui/badge';
 type DisputesListProps = {
   disputes: Dispute[],
   isLoading: boolean
@@ -168,5 +169,5 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         </Table>
       </div>
     </div>
-  )
+  );
 }

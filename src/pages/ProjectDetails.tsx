@@ -15,6 +15,9 @@ import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star, Calendar } from 'lucide-react';
 
 function ProjectDetailsContent() {
   const router = useRouter();
@@ -31,8 +34,7 @@ function ProjectDetailsContent() {
   // Load project data
   useEffect(() => {
     async function loadProject() {
-      if (!projectId) return;
-      setIsLoading(true);
+      if (!projectId) return, setIsLoading(true);
       const projectData = await getProjectById(projectId);
       if (projectData) {
         setProject(projectData);
@@ -56,13 +58,11 @@ function ProjectDetailsContent() {
       const { data, error } = await supabase
         .from("project_notes")
         .select(`
-          *;
-          created_by_profile:profiles!user_id(display_name, avatar_url)
+          *, created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
         .order("created_at", { ascending: false }),
-      if (error) throw error;
-      setNotes(data || [])
+      if (error) throw error, setNotes(data || [])
     } catch (err: any) {
       logErrorToProduction('Error fetching project notes:', { data: err }),
       toast({
@@ -72,8 +72,7 @@ function ProjectDetailsContent() {
     }
   },
   const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return;
-    setIsSubmittingNote(true);
+    if (!newNote.trim() || !project || !user) return, setIsSubmittingNote(true);
     try {
       const { data, error } = await supabase
         .from("project_notes")
@@ -159,15 +158,14 @@ function ProjectDetailsContent() {
           </CardContent>
         </Card>
       </div>
-    )
+    );
   }
   
   // Check if user is either the client or the talent
   const isClient = user?.id === project.client_id,
-  const isTalent = user?.id === project.talent_id;
-  if (!isClient && !isTalent) {
+  const isTalent = user?.id === project.talent_id, if (!isClient && !isTalent) {
     router.push("/unauthorized");
-    return null
+    return null;
   }
   
   const isOfferPending = project.status === "offer_sent";
@@ -622,5 +620,5 @@ export default function ProjectDetails() {
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
-  )
+  );
 }

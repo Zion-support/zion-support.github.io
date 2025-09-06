@@ -14,6 +14,8 @@ import { generateContract } from "../utils/contractUtils";
 import { ProjectDetailsFields } from "./ProjectDetailsFields";
 import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Star } from 'lucide-react';
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
@@ -27,17 +29,13 @@ export type ContractFormValues = z.infer<typeof formSchema>;
 interface ContractFormProps {
   talent: TalentProfile,
   clientName: string,
-  initialValues?: ContractFormValues;
-  onFormValuesChange?: (values: ContractFormValues) => void,
+  initialValues?: ContractFormValues, onFormValuesChange?: (values: ContractFormValues) => void,
   onContractGenerated: (contractContent: string) => void
 }
 
 export function ContractForm({
   talent,
-  clientName;
-  initialValues;
-  onFormValuesChange;
-  onContractGenerated}: ContractFormProps) {
+  clientName, initialValues, onFormValuesChange, onContractGenerated}: ContractFormProps) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
@@ -54,8 +52,7 @@ export function ContractForm({
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
-        const typedKey = key as keyof ContractFormValues;
-        form.setValue(typedKey, initialValues[typedKey])
+        const typedKey = key as keyof ContractFormValues, form.setValue(typedKey, initialValues[typedKey])
       })
     }
   }, [initialValues, form]);
@@ -67,7 +64,7 @@ export function ContractForm({
       });
       return () => subscription.unsubscribe()
     }
-    return undefined
+    return undefined;
   }, [form, onFormValuesChange]);
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones),
@@ -84,10 +81,7 @@ export function ContractForm({
     setIsGenerating(true),
     try {
       const contract = await generateContract(
-        values;
-        talent;
-        clientName;
-        generatedMilestones
+        values, talent, clientName, generatedMilestones
       );
       onContractGenerated(contract)
     } catch (error) {
@@ -151,5 +145,5 @@ export function ContractForm({
         </Button>
       </DialogFooter>
     </>
-  )
+  );
 }

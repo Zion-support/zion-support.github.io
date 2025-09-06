@@ -8,12 +8,13 @@ import api from '@/services/apiClient';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { SendIcon } from 'lucide-react';
 interface ContactPublisherModalProps {
   isOpen: boolean,
   onClose: () => void,
   publisherName: string,
-  publisherEmail?: string;
-  productId?: string
+  publisherEmail?: string, productId?: string
 }
 
 type FormValues = {
@@ -32,11 +33,7 @@ const schema: yup.ObjectSchema<FormValues> = yup
       .required('Message is required')})
   .required();
 export function ContactPublisherModal({
-  isOpen;
-  onClose;
-  publisherName;
-  publisherEmail;
-  productId}: ContactPublisherModalProps) {
+  isOpen, onClose, publisherName, publisherEmail, productId}: ContactPublisherModalProps) {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -55,8 +52,7 @@ export function ContactPublisherModal({
     setError(null);
     try {
       await api.post('/api/messages', {
-        productId;
-        subject: values.subject,
+        productId, subject: values.subject,
         body: values.message,
         fromUser: user.id}),
       toast.success('Message sent');
@@ -148,5 +144,5 @@ export function ContactPublisherModal({
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  )
+  );
 }

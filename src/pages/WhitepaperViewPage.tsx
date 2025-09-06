@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 const useAuth = () => {
     // const { user } = useUserContext(), // Example from a real app
     // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user },
-    return { isAdmin: false, isAuthenticated: false }, // Default to non-admin, not authenticated for this example
+    return { isAdmin: false, isAuthenticated: false }, // Default to non-admin, not authenticated for this example;
 };
 interface SharedWhitepaper {
   whitepaper_data: {
@@ -21,8 +21,7 @@ interface SharedWhitepaper {
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter(),
   const { id: rawId } = router.query,
-  const id = typeof rawId === 'string' ? rawId : undefined;
-  const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null);
+  const id = typeof rawId === 'string' ? rawId : undefined, const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { isAdmin } = useAuth(), // Get admin status
@@ -117,6 +116,6 @@ const WhitepaperViewPage: React.FC = () => {
         tokenSupply={whitepaper.tokenSupply}
       />
     </div>
-  )
+  );
 },
 export default WhitepaperViewPage;

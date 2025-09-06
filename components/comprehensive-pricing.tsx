@@ -7,6 +7,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, Star, Calendar } from 'lucide-react';
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
@@ -53,7 +54,7 @@ export default function ComprehensivePricingPage() {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+    );
   }
 
   // Sort services
@@ -68,8 +69,7 @@ export default function ComprehensivePricingPage() {
       case 'roi':
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi;
-      default: return a.name.localeCompare(b.name)
+        return bRoi - aRoi, default: return a.name.localeCompare(b.name)
     }
   }),
   const contactInfo = {
@@ -432,7 +432,7 @@ export default function ComprehensivePricingPage() {
             <motion.div 
               className={viewMode === 'grid' 
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                : "space-y-6"
+                : "space-y-6";
               }
               variants={containerVariants}
               initial="hidden"

@@ -1,28 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Star } from 'lucide-react';
 // TouchEvent types are already defined in DOM
 
 interface MobileOptimizerProps {
   children: React.ReactNode,
-  showDebugInfo?: boolean;
-  enableTouchGestures?: boolean;
-  enableMobileLayout?: boolean;
-  enablePerformanceMode?: boolean
+  showDebugInfo?: boolean, enableTouchGestures?: boolean, enableMobileLayout?: boolean, enablePerformanceMode?: boolean
 }
 
 interface TouchGesture {
   type: 'swipe' | 'pinch' | 'rotate' | 'longPress',
   direction?: 'up' | 'down' | 'left' | 'right';
-  distance?: number;
-  duration?: number
+  distance?: number, duration?: number
 }
 
 const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   children,
-  showDebugInfo = false;
-  enableTouchGestures = true;
-  enableMobileLayout = true;
-  enablePerformanceMode = true
+  showDebugInfo = false, enableTouchGestures = true, enableMobileLayout = true, enablePerformanceMode = true
 }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -59,7 +53,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     };
     checkDevice();
     window.addEventListener('resize', checkDevice);
-    return () => window.removeEventListener('resize', checkDevice)
+    return () => window.removeEventListener('resize', checkDevice);
   }, [enableMobileLayout, enablePerformanceMode]);
   // Detect orientation changes
   useEffect(() => {
@@ -83,8 +77,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   }, []);
   // Touch gesture handling
   useEffect(() => {
-    if (!enableTouchGestures || !isMobile) return;
-    const handleTouchStart = (e: TouchEvent) => {
+    if (!enableTouchGestures || !isMobile) return, const handleTouchStart = (e: TouchEvent) => {
       if (e.touches.length === 1) {
         touchStartRef.current = {
           x: e.touches[0].clientX,
@@ -106,8 +99,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   }, []);
   // Touch gesture optimization
   const optimizeTouchGestures = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    const handleTouchEnd = (e: TouchEvent) => {
+    if (typeof window === 'undefined') return, const handleTouchEnd = (e: TouchEvent) => {
       if (touchStartRef.current && touchMoveRef.current) {
         const gesture = detectTouchGesture(touchStartRef.current, touchMoveRef.current);
         if (gesture) {
@@ -115,8 +107,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           handleGestureAction(gesture)
         }
         
-        touchStartRef.current = null;
-        touchMoveRef.current = null
+        touchStartRef.current = null, touchMoveRef.current = null
       }
     });
     // Optimize fonts for high DPI
@@ -151,14 +142,11 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   }, [enableTouchGestures, isMobile]);
   // Performance monitoring
   useEffect(() => {
-    if (!enablePerformanceMode) return;
-    let animationFrameId: number,
+    if (!enablePerformanceMode) return, let animationFrameId: number,
     const measurePerformance = (currentTime: number) => {
       frameCountRef.current++,
       if (currentTime - lastTimeRef.current >= 1000) {
-        fpsRef.current = frameCountRef.current;
-        frameCountRef.current = 0;
-        lastTimeRef.current = currentTime;
+        fpsRef.current = frameCountRef.current, frameCountRef.current = 0, lastTimeRef.current = currentTime;
         // Update performance metrics
         setPerformanceMetrics(prev => ({
           ...prev,
@@ -172,8 +160,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     // Monitor memory usage
     const memoryInterval = setInterval(() => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        setPerformanceMetrics(prev => ({
+        const memory = (performance as any).memory, setPerformanceMetrics(prev => ({
           ...prev,
           memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) // MB
         }))
@@ -191,13 +178,12 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         updateBatteryLevel();
         battery.addEventListener('levelchange', updateBatteryLevel);
         return () => battery.removeEventListener('levelchange', updateBatteryLevel)
-      })
+      });
     }
 
     // Monitor network speed
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
-      const updateNetworkSpeed = () => {
+      const connection = (navigator as any).connection, const updateNetworkSpeed = () => {
         let speed = 'unknown';
         if (connection.effectiveType) {
           speed = connection.effectiveType
@@ -212,7 +198,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       },
       updateNetworkSpeed();
       connection.addEventListener('change', updateNetworkSpeed);
-      return () => connection.removeEventListener('change', updateNetworkSpeed)
+      return () => connection.removeEventListener('change', updateNetworkSpeed);
     }
 
     return () => {
@@ -222,8 +208,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   }, [enablePerformanceMode]);
   const detectTouchGesture = (start: { x: number, y: number, time: number }, end: { x: number, y: number, time: number }): TouchGesture | null => {
     const deltaX = end.x - start.x,
-    const deltaY = end.y - start.y;
-    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    const deltaY = end.y - start.y, const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
     const duration = end.time - start.time;
     // Minimum distance and duration thresholds
     if (distance < 50 || duration < 100) return null;
@@ -242,7 +227,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         distance: Math.abs(deltaY),
         duration
       }
-    }
+    };
   };
   const handleGestureAction = (gesture: TouchGesture) => {
     switch (gesture.type) {
@@ -308,8 +293,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     // Optimize images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-      img.loading = 'lazy';
-      img.decoding = 'async'
+      img.loading = 'lazy', img.decoding = 'async'
     });
     // Reduce motion for better performance
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -370,13 +354,12 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       mediaQuery.removeEventListener('change', handleMediaQueryChange)
     }
   }, [handleOrientationChange, handleResize]);
-  if (!showPanel || !isVisible) return null;
-  const getDeviceIcon = (type: string) => {
+  if (!showPanel || !isVisible) return null, const getDeviceIcon = (type: string) => {
     switch (type) {
       case 'mobile': return <Smartphone className="w-5 h-5" />,
       case 'tablet': return <Tablet className="w-5 h-5" />;
       default: return <Monitor className="w-5 h-5" />
-    }
+    };
   },
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -451,17 +434,17 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                 <h3 className="text-sm font-medium text-white">Optimizations</h3>
                 
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-gray-300">Touch Gestures</label>
+                  <label className="text-sm text-gray-300" htmlFor="input-Touch Gestures">Touch Gestures</label>
                   <div className={`w-3 h-3 rounded-full ${enableTouchGestures ? 'bg-green-400' : 'bg-gray-400'}`}></div>
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-gray-300">Mobile Layout</label>
+                  <label className="text-sm text-gray-300" htmlFor="input-Mobile Layout">Mobile Layout</label>
                   <div className={`w-3 h-3 rounded-full ${enableMobileLayout ? 'bg-green-400' : 'bg-gray-400'}`}></div>
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-gray-300">Performance Mode</label>
+                  <label className="text-sm text-gray-300" htmlFor="input-Performance Mode">Performance Mode</label>
                   <div className={`w-3 h-3 rounded-full ${enablePerformanceMode ? 'bg-green-400' : 'bg-gray-400'}`}></div>
                 </div>
               </div>
@@ -526,7 +509,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           .mobile-optimized button,
           .mobile-optimized a {
             min-height: 44px,
-            min-width: 44px
+            min-width: 44px;
           }
           
           .mobile-optimized input,

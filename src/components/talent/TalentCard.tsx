@@ -9,6 +9,8 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars } from '@/components/RatingStars';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -18,9 +20,7 @@ export interface TalentCardProps {
 
 const TalentCardComponent = ({
   talent,
-  onViewProfile;
-  onRequestHire;
-  isAuthenticated
+  onViewProfile, onRequestHire, isAuthenticated
 }: TalentCardProps) => {
   const router = useRouter();
   const handleViewProfile = () => {
@@ -157,7 +157,7 @@ const TalentCardComponent = ({
         </div>
       </div>
     </Card>
-  )
+  );
 },
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';

@@ -6,6 +6,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 interface JobMatchProps {
   matchId: string,
   talentId: string,
@@ -24,18 +27,7 @@ interface JobMatchProps {
 
 export function JobMatchCard({ 
   matchId,
-  talentId;
-  name;
-  title;
-  company;
-  avatar;
-  location;
-  category;
-  matchPercent;
-  skills;
-  onApply;
-  onViewDetails;
-  onInvite 
+  talentId, name, title, company, avatar, location, category, matchPercent, skills, onApply, onViewDetails, onInvite 
 }: JobMatchProps) {
   const handleApply = () => {
     if (onApply) {
@@ -133,5 +125,5 @@ export function JobMatchCard({
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

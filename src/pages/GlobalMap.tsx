@@ -61,14 +61,11 @@ export default function GlobalMapPage() {
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress';
       setFeed((f) => [{ id, text }, ...f].slice(0, 5))
     }, 5000);
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   }, []);
-  const width = 800;
-  const height = 400;
-  function project(lat: number, lng: number) {
+  const width = 800, const height = 400, function project(lat: number, lng: number) {
     const x = ((lng + 180) / 360) * width,
-    const y = ((90 - lat) / 180) * height;
-    return { x, y }
+    const y = ((90 - lat) / 180) * height, return { x, y };
   }
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5);
@@ -133,6 +130,6 @@ export default function GlobalMapPage() {
         </div>
       </main>
     </div>
-  )
+  );
 }
 

@@ -35,5 +35,5 @@ export default function InnovationDigest({ items }: Props) {
         ))}
       </ul>
     </div>
-  )
+  );
 }

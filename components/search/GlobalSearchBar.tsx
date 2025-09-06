@@ -22,20 +22,17 @@ export default function GlobalSearchBar() {
       } catch {}
     };
     const id = setTimeout(run, 150);
-    return () => clearTimeout(id)
+    return () => clearTimeout(id);
   }, [query]);
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
-    if (!query.trim()) return;
-    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
+    if (!query.trim()) return, fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
     router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false)
   };
   const startVoice = () => {
-    if (typeof window === 'undefined') return;
-    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
-    if (!Speech) return;
-    const rec = new Speech();
+    if (typeof window === 'undefined') return, const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
+    if (!Speech) return, const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
       const transcript = e.results?.[0]?.[0]?.transcript || '',

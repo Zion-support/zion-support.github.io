@@ -9,13 +9,14 @@ import { InterviewCard } from "@/components/interviews/InterviewCard";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
+import { Calendar } from 'lucide-react';
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
-      await fetchInterviews()
+      await fetchInterviews();
     };
     loadInterviews()
   }, []);
@@ -26,7 +27,7 @@ function InterviewsContent() {
     .filter((interview) => {
       const interviewDate = parseISO(interview.scheduled_date);
       return isAfter(interviewDate, now) && 
-        ['confirmedrequested'].includes(interview.status)
+        ['confirmedrequested'].includes(interview.status);
     })
     .sort((a, b) => 
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
@@ -37,7 +38,7 @@ function InterviewsContent() {
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date);
     return !isAfter(interviewDate, now) || 
-      ['completeddeclinedcancelled'].includes(interview.status)
+      ['completeddeclinedcancelled'].includes(interview.status);
   });
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
@@ -49,7 +50,7 @@ function InterviewsContent() {
       }
       grouped[dateKey].push(interview)
     });
-    return grouped
+    return grouped;
   };
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
@@ -173,5 +174,5 @@ export default function Interviews() {
     <ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>
-  )
+  );
 }

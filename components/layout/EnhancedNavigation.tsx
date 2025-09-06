@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { Zap, Star } from 'lucide-react';
 interface EnhancedNavigationProps {
   className?: string
 }
@@ -14,7 +15,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const navigationItems = [
     {
@@ -288,6 +289,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         )}
       </AnimatePresence>
     </nav>
-  )
+  );
 },
 export default EnhancedNavigation;

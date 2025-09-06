@@ -12,22 +12,21 @@ await app.register(cors, {
       cb(null, true);
       return
     }
-    cb(new Error('Not allowed'), false)
+    cb(new Error('Not allowed'), false);
   };
   methods: ['GETPOSTOPTIONS']
 }),
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' }),
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
 function getUserId(req: any): string | null {
-  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null
+  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null;
 }
 
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {};
-  const prompt = body.prompt as string;
-  if (!prompt) return reply.code(400).send({ error: 'prompt required' }),
+  const prompt = body.prompt as string, if (!prompt) return reply.code(400).send({ error: 'prompt required' }),
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt }),
-  return { text: completion.output_text }
+  return { text: completion.output_text };
 }),
 app.post('/jobs/generate', async (req, reply) => {
   const body = (req.body as any) || {};
@@ -42,12 +41,10 @@ app.post('/jobs/generate', async (req, reply) => {
       [userId, role, description, body.location || null, body.tags || null]
     )
   });
-  return { saved: Boolean(userId), description }
+  return { saved: Boolean(userId), description };
 });
 app.get('/talent/search', async (req, reply) => {
-  const q = (req.query as any).q as string;
-  const country = (req.query as any).country as string | undefined;
-  const userId = getUserId(req);
+  const q = (req.query as any).q as string, const country = (req.query as any).country as string | undefined, const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' }),
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
@@ -60,20 +57,19 @@ app.get('/talent/search', async (req, reply) => {
        LIMIT 25`,
       [country || null, q || null]
     );
-    return res.rows
+    return res.rows;
   });
-  return { results: rows }
+  return { results: rows };
 }),
 app.get('/projects/:name/track', async (req, reply) => {
-  const name = (req.params as any).name as string;
-  const userId = getUserId(req);
+  const name = (req.params as any).name as string, const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' }),
   const project = await withUser(userId, async (client) => {
     const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
-    return res.rows[0]
+    return res.rows[0];
   });
   if (!project) return reply.code(404).send({ error: 'not found' }),
-  return { project }
+  return { project };
 });
 app.get('/notifications', async (req, reply) => {
   const userId = getUserId(req);
@@ -83,9 +79,9 @@ app.get('/notifications', async (req, reply) => {
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
-    return res.rows
+    return res.rows;
   });
-  return { items }
+  return { items };
 });
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err) => {

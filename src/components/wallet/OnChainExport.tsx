@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight } from 'lucide-react';
 export function OnChainExport() {
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
@@ -14,8 +16,7 @@ export function OnChainExport() {
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {
+      const ethereum = (window as any).ethereum, if (!ethereum) {
         toast({
           title: "Wallet not detected",
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
@@ -124,5 +125,5 @@ export function OnChainExport() {
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaRocket, FaBrain, FaCloud, FaShieldAlt, FaChartLine, FaCogs, FaLightbulb, FaGlobe, FaMobile, FaDatabase, FaNetworkWired, FaRobot, FaSearch } from 'react-icons/fa';
 import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiPrisma, SiSupabase, SiVercel, SiDocker, SiKubernetes, SiAws, SiGooglecloud, SiMicrosoftazure } from 'react-icons/si';
+import { Star } from 'lucide-react';
 interface Service {
   id: string,
   title: string,
@@ -192,8 +193,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
   const filteredServices = useMemo(() => {
-    let filtered = services;
-    if (selectedCategory !== 'all') {
+    let filtered = services, if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
     
@@ -208,12 +208,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.pricing.starter - b.pricing.starter;
-        case 'category':
+          return a.pricing.starter - b.pricing.starter, case 'category':
           return a.category.localeCompare(b.category);
         default: return a.title.localeCompare(b.title)
       }
-    })
+    });
   }, [selectedCategory, searchTerm, sortBy]);
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service)
@@ -484,6 +483,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 },
 export default EnhancedServicesShowcase2025;

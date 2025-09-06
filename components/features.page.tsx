@@ -22,5 +22,5 @@ export default function FeaturesPage() {
         </div>
       </div>
     </EnhancedLayout>
-  )
+  );
 }

@@ -13,6 +13,7 @@ import ReactMarkdown from 'react-markdown';
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { ChevronLeft, ChevronRight, Calendar } from 'lucide-react';
 export default function BlogPost() {
 
   const router = useRouter();
@@ -41,7 +42,7 @@ export default function BlogPost() {
         return
       } catch (err) {
         logErrorToProduction('Failed to fetch blog post', { data: err }),
-        setError('Failed to load article')
+        setError('Failed to load article');
       }
 
       const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
@@ -86,7 +87,7 @@ export default function BlogPost() {
         <p>Article not found.</p>
         <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
       </div>
-    )
+    );
   }
 
   // Helper function to get share URL
@@ -102,7 +103,7 @@ export default function BlogPost() {
       case 'linkedin':
         return `https: //www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
       default: return '#'
-    }
+    };
   },
   const articleLd = {
     "@context": "https: //schema.org",
@@ -318,5 +319,5 @@ export default function BlogPost() {
         </div>
       </div>
     </>
-  )
+  );
 }

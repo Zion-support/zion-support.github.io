@@ -8,6 +8,7 @@ import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
 import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services';
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
+import { Zap, Star } from 'lucide-react';
 export default function UltimateServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -52,7 +53,7 @@ export default function UltimateServicesShowcase2029() {
       (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 15000) ||
       (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service.price.replace(/[$]/g, '')) < 30000) ||
       (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 30000);
-    return matchesCategory && matchesSearch && matchesPrice
+    return matchesCategory && matchesSearch && matchesPrice;
   });
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -141,8 +142,7 @@ export default function UltimateServicesShowcase2029() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Experience the future of technology with our revolutionary AI consciousness, quantum computing;
-              space technology, and autonomous systems. Transform your business with innovations that define tomorrow.
+              Experience the future of technology with our revolutionary AI consciousness, quantum computing, space technology, and autonomous systems. Transform your business with innovations that define tomorrow.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -229,7 +229,7 @@ export default function UltimateServicesShowcase2029() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedPriceRange === range.id
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
                   }`}
                 >
                   {range.name}

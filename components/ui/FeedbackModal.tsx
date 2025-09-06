@@ -1,14 +1,9 @@
 import { useState } from 'react';
 export default function FeedbackModal({
-  isOpen;
-  onClose;
-  defaultContext;
-  defaultKind = 'general';
-  userHeaders}: {
+  isOpen, onClose, defaultContext, defaultKind = 'general', userHeaders}: {
   isOpen: boolean,
   onClose: (submitted: boolean) => void,
-  defaultContext?: FeedbackContext;
-  defaultKind?: 'general' | 'bug' | 'feature';
+  defaultContext?: FeedbackContext, defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>
 }) {
   const [rating, setRating] = useState<number>(0);
@@ -16,8 +11,7 @@ export default function FeedbackModal({
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
-  if (!isOpen) return null;
-  async function submit() {
+  if (!isOpen) return null, async function submit() {
     if (rating < 1) return onClose(false);
     setLoading(true);
     try {
@@ -47,11 +41,11 @@ export default function FeedbackModal({
           ))}
         </div>
         <div className="text-sm">
-          <label className="block mb-1">Optional comment</label>
+          <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>
           <textarea value={comment} onChange={(e)=>setComment(e.target.value)} className="w-full border rounded p-2" rows={3} />
         </div>
         <div className="text-sm">
-          <label className="block mb-1">Also</label>
+          <label className="block mb-1" htmlFor="input-Also">Also</label>
           <div className="flex gap-3">
             <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='general'} onChange={()=>setKind('general')} />General</label>
             <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='bug'} onChange={()=>setKind('bug')} />Report a bug</label>
@@ -64,5 +58,5 @@ export default function FeedbackModal({
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -8,6 +8,7 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
+import { Zap, Star } from 'lucide-react';
 interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
@@ -20,7 +21,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
     }, 5000);
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   }, []);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId),
@@ -490,6 +491,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </footer>
     </UltraFuturisticBackground2026>
-  )
+  );
 },
 export default Homepage2025;

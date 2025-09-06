@@ -7,6 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react'
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star, Calendar } from 'lucide-react';
 export default function ProjectRoom() {
   const router = useRouter();
   const { projectId: rawProjectId } = router.query,
@@ -16,11 +18,7 @@ export default function ProjectRoom() {
   const [callParticipants, setCallParticipants] = useState<Array<{
     id: string,
     name: string,
-    avatar?: string;
-    isMuted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
-    isHost?: boolean
+    avatar?: string, isMuted?: boolean, isVideoEnabled?: boolean, isScreenSharing?: boolean, isHost?: boolean
   }>>([
     {
       id: 'user-1',
@@ -224,5 +222,5 @@ export default function ProjectRoom() {
         </Tabs>
       </main>
     </>
-  )
+  );
 }

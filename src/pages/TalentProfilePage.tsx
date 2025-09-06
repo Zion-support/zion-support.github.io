@@ -62,7 +62,7 @@ export default function TalentProfilePage() {
   }
 
   if (error || !profile) {
-    return <ProfileErrorState error={error} />
+    return <ProfileErrorState error={error} />;
   }
 
   const handleRequestHire = () => {
@@ -74,7 +74,7 @@ export default function TalentProfilePage() {
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return
     }
-    setIsHireModalOpen(true)
+    setIsHireModalOpen(true);
   };
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
@@ -85,7 +85,7 @@ export default function TalentProfilePage() {
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return
     }
-    setIsMessageModalOpen(true)
+    setIsMessageModalOpen(true);
   };
   return (
     <>
@@ -141,5 +141,5 @@ export default function TalentProfilePage() {
       />
     </div>
     </>
-  )
+  );
 }

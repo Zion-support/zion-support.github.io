@@ -18,8 +18,7 @@ interface EndpointSectionProps {
   method: string,
   endpoint: string,
   description: string,
-  note?: string;
-  params?: EndpointParam[];
+  note?: string, params?: EndpointParam[];
   codeExamples?: Record<string, string>;
   responseExamples?: { success: string }
 }
@@ -74,8 +73,7 @@ export function ApiDocumentation() {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-}),
+  }, }),
 const data = await response.json();
 logInfo(data),`;
                 python: `import requests
@@ -84,10 +82,8 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 
-response = requests.get(
-    'https: //api.ziontechgroup.com/v1/jobs',
-    params={'limit': 10, 'category': 'development'};
-    headers=headers
+response = requests.get('https: //api.ziontechgroup.com/v1/jobs',
+    params={'limit': 10, 'category': 'development'}, headers=headers
 )
 
 data = response.json()
@@ -250,8 +246,7 @@ payload = {
 
 response = requests.post(
     'https://api.ziontechgroup.com/v1/jobs',
-    headers=headers;
-    data=json.dumps(payload)
+    headers=headers, data=json.dumps(payload)
 )
 
 data = response.json()
@@ -310,10 +305,8 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 
-response = requests.get(
-    'https: //api.ziontechgroup.com/v1/talent',
-    params={'skills': 'react,typescript'};
-    headers=headers
+response = requests.get('https: //api.ziontechgroup.com/v1/talent',
+    params={'skills': 'react,typescript'}, headers=headers
 )
 
 data = response.json()
@@ -463,6 +456,8 @@ const data = await response.json();
 logInfo(data),`;
                 python: `import requests
 import json
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -476,8 +471,7 @@ payload = {
 
 response = requests.post(
     'https: //api.ziontechgroup.com/v1/quotes',
-    headers=headers;
-    data=json.dumps(payload)
+    headers=headers, data=json.dumps(payload)
 )
 
 data = response.json()
@@ -598,9 +592,8 @@ function verifyWebhookSignature(payload, signature, secret) {
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const signature = req.headers['x-zion-signature'];
   const payload = req.body.toString();
-  const webhookSecret = process.env.WEBHOOK_SECRET;
-  if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
-    return res.status(401).send('Invalid signature')
+  const webhookSecret = process.env.WEBHOOK_SECRET, if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
+    return res.status(401).send('Invalid signature');
   }
   
   // Process the webhook event
@@ -767,12 +760,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 // Helper component for API endpoint documentation
 function EndpointSection({
   method,
-  endpoint;
-  description;
-  note;
-  params = [];
-  codeExamples;
-  responseExamples
+  endpoint, description, note, params = [], codeExamples, responseExamples
 }: EndpointSectionProps) {
   const [activeTab, setActiveTab] = useState("curl");
   return (
@@ -868,6 +856,6 @@ function EndpointSection({
         </div>
       )}
     </div>
-  )
+  );
 }
 

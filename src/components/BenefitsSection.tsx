@@ -5,8 +5,7 @@ import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface BenefitsSectionProps {
-  className?: string;
-  style?: React.CSSProperties
+  className?: string, style?: React.CSSProperties
 }
 
 const getBenefits = (t: any) => [
@@ -52,5 +51,5 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -19,7 +19,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     const currentStepOrder = steps.findIndex(s => s.id === currentStep);
     if (stepOrder < currentStepOrder) return "complete";
     if (stepOrder === currentStepOrder) return "current";
-    return "upcoming"
+    return "upcoming";
   };
   return (
     <div className="relative">
@@ -27,7 +27,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
         <div 
           className="absolute h-full bg-zion-purple transition-all duration-500"
           style={{ 
-            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
+            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`;
           }}
         />
       </div>
@@ -35,12 +35,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {
       <div className="flex justify-between relative">
         {steps.map((step) => {
           const status = getStepStatus(step.id),
-          return (
-            <div key={step.id} className="flex flex-col items-center relative">
+          return(<div key={step.id} className="flex flex-col items-center relative">
               <div 
                 className={cn(
-                  "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors";
-                  status === "complete" ? "bg-zion-purple text-white" : 
+                  "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors", status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
                   "bg-zion-blue-light text-zion-slate-light"
                 )}
@@ -52,9 +50,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                 )}
               </div>
               <span 
-                className={cn(
-                  "text-xs mt-2 font-medium";
-                  status === "complete" ? "text-zion-cyan" : 
+                className={cn("text-xs mt-2 font-medium", status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
                 )}

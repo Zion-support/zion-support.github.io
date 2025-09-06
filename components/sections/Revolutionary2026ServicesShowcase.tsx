@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+import { Zap, Star } from 'lucide-react';
 export default function Revolutionary2026ServicesShowcase() {
   // Get featured services from each category
   const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
@@ -375,5 +376,5 @@ export default function Revolutionary2026ServicesShowcase() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

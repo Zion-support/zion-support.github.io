@@ -7,6 +7,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { revolutionary2026Services } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
+import { Zap, Star } from 'lucide-react';
 export default function MarketPricing2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -23,7 +24,7 @@ export default function MarketPricing2026() {
       (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||
       (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 15000) ||
       (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 15000);
-    return matchesCategory && matchesPrice
+    return matchesCategory && matchesPrice;
   });
   const categories = [
     { id: 'all', name: 'All Categories', icon: BarChart3, count: allServices.length },
@@ -49,8 +50,7 @@ export default function MarketPricing2026() {
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: allServices.length,
-    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length;
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
+    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length, lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
     highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
     totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0);
     averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length
@@ -133,7 +133,7 @@ export default function MarketPricing2026() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Category Filter */}
                 <div>
-                  <label className="block text-white font-semibold mb-3">Service Category</label>
+                  <label className="block text-white font-semibold mb-3" htmlFor="input-Service Category">Service Category</label>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     {categories.map(category => (
                       <button
@@ -157,7 +157,7 @@ export default function MarketPricing2026() {
 
                 {/* Price Range Filter */}
                 <div>
-                  <label className="block text-white font-semibold mb-3">Price Range</label>
+                  <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>
                   <div className="space-y-2">
                     {priceRanges.map(range => (
                       <button
@@ -447,5 +447,5 @@ export default function MarketPricing2026() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }

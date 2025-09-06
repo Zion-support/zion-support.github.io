@@ -9,13 +9,11 @@ export default function GrantDetailPage() {
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
   useEffect(() => {
-    if (!id) return;
-    setLoading(true);
+    if (!id) return, setLoading(true);
     fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
   }, [id]);
   const addUpdate = async () => {
-    if (!id || !updateContent.trim()) return;
-    const resp = await fetch(`/api/grants/${id}/updates`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: updateContent }) }),
+    if (!id || !updateContent.trim()) return, const resp = await fetch(`/api/grants/${id}/updates`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: updateContent }) }),
     if (resp.ok) {
       const u = await resp.json();
       setItem((prev) => prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev);
@@ -100,5 +98,5 @@ export default function GrantDetailPage() {
         </aside>
       </div>
     </EnhancedLayout>
-  )
+  );
 }

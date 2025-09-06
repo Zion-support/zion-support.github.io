@@ -8,6 +8,8 @@ import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
 import { ApplicationStatus } from "@/types/jobs";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
   const getStatusBadge = (status: ApplicationStatus) => {
@@ -108,5 +110,5 @@ export function MyApplications() {
         </Card>
       ))}
     </div>
-  )
+  );
 }

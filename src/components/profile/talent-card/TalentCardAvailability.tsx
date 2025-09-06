@@ -17,7 +17,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'project-based':
         return 'bg-blue-500/20 text-blue-400';
       default: return 'bg-gray-500/20 text-gray-400'
-    }
+    };
   },
   // Format availability label
   const getAvailabilityLabel = (status: string) => {
@@ -36,5 +36,5 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <Clock className="h-3 w-3" />
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
-  )
+  );
 }

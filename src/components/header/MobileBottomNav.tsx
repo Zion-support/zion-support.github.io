@@ -15,12 +15,9 @@ interface MobileBottomNavProps {
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const router = useRouter();
   const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length;
-  const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0;
-  if (cartContextValue && cartContextValue.items) {
+  const isAuthenticated = !!user, const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
+  const favoritesCount = wishlistItems.length, const cartContextValue = useCart(), // Call hook at top level
+  let cartCount = 0, if (cartContextValue && cartContextValue.items) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
@@ -108,5 +105,5 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
         ))}
       </div>
     </nav>
-  )
+  );
 }

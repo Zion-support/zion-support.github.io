@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { AIListingForm } from "./AIListingForm";
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -19,10 +20,7 @@ interface GeneratedContent {
 interface AIListingGeneratorProps {
   onApplyGenerated?: (content: GeneratedContent) => void,
   initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
+    title?: string, category?: string, keyFeatures?: string, targetAudience?: string
   }
 }
 
@@ -31,10 +29,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
   const handleGenerate = async ({
-    title;
-    category;
-    keyFeatures;
-    targetAudience
+    title, category, keyFeatures, targetAudience
   }: {
     title: string,
     category: string,
@@ -106,5 +101,5 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
     </div>
-  )
+  );
 }

@@ -8,6 +8,7 @@ import { ContractForm, ContractFormValues } from "./components/ContractForm";
 import { ContractPreview } from "./components/ContractPreview";
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 interface ContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -18,10 +19,7 @@ interface ContractBuilderProps {
 
 export function ContractBuilder({
   isOpen,
-  onClose;
-  talent;
-  clientName;
-  onContractGenerated
+  onClose, talent, clientName, onContractGenerated
 }: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
@@ -119,5 +117,5 @@ export function ContractBuilder({
         />
       </DialogContent>
     </Dialog>
-  )
+  );
 }

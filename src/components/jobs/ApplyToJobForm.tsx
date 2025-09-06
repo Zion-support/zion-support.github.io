@@ -12,6 +12,7 @@ import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns";
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 interface ApplyToJobFormProps {
   job: Job,
   onSuccess?: () => void
@@ -44,10 +45,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     setError(null);
     try {
       const success = await applyToJob(
-        job.id;
-        coverLetter;
-        selectedResumeId || undefined;
-        resumeFile || undefined
+        job.id, coverLetter, selectedResumeId || undefined, resumeFile || undefined
       );
       if (success) {
         toast.success("Your application has been submitted!");
@@ -176,5 +174,5 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         </Button>
       </div>
     </form>
-  )
+  );
 }

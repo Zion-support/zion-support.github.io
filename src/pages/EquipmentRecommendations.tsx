@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link';
 import { ErrorState } from '@/components/jobs/applications';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 export default function EquipmentRecommendations() {
   const { isAuthenticated, user } = useAuth();
   const [listings, setListings] = useState<ProductListing[]>([]);
@@ -55,5 +56,5 @@ export default function EquipmentRecommendations() {
         ))}
       </div>
     </div>
-  )
+  );
 }

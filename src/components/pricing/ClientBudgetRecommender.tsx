@@ -8,18 +8,12 @@ import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
-  timeline?: string;
-  scope?: string;
-  experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void
+  timeline?: string, scope?: string, experienceLevel?: string, onSuggestionApplied: (minValue: number, maxValue: number) => void
 }
 
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
   jobTitle,
-  category;
-  timeline;
-  scope;
-  experienceLevel;
+  category, timeline, scope, experienceLevel;
   onSuggestionApplied}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
@@ -34,10 +28,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       const params: ClientBudgetParams = {
         jobTitle,
         category};
-      if (timeline) params.timeline = timeline;
-      if (scope) params.scope = scope;
-      if (experienceLevel) params.experienceLevel = experienceLevel;
-      const result = await getClientBudgetSuggestion(params);
+      if (timeline) params.timeline = timeline, if (scope) params.scope = scope, if (experienceLevel) params.experienceLevel = experienceLevel, const result = await getClientBudgetSuggestion(params);
       setSuggestion(result)
     } catch (error) {
       logErrorToProduction('Error generating budget suggestion:', { data: error })
@@ -83,5 +74,5 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         )}
       </div>
     </div>
-  )
+  );
 };

@@ -53,26 +53,21 @@ export default async function handler(
     }
 
     if (text.length > 10000) {
-      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' })
+      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
     }
 
     // Basic statistics
-    const characters = text.length;
-    const charactersNoSpaces = text.replace(/\s/g, '').length;
-    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
-    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
-    const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
+    const characters = text.length, const charactersNoSpaces = text.replace(/\s/g, '').length, const words = text.trim().split(/\s+/).filter(word => word.length > 0).length, const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length, const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase(),
-      if (word.length <= 3) return 1;
-      word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
+      if (word.length <= 3) return 1, word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
-      return matches ? matches.length : 1
+      return matches ? matches.length : 1;
     };
     const syllables = text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word)
+      return total + syllableCount(word);
     }, 0);
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
     const readingTime = Math.ceil(words / 200);
@@ -89,10 +84,7 @@ export default async function handler(
     const positiveWords = ['goodgreatexcellentamazingwonderfulfantasticbrilliantoutstanding', 'superbmarvelous'];
     const negativeWords = ['badterribleawfulhorribledreadfulatrociousabysmalappalling', 'dismallousy'];
     const textWords = text.toLowerCase().split(/\s+/);
-    const positiveCount = textWords.filter(word => positiveWords.includes(word)).length;
-    const negativeCount = textWords.filter(word => negativeWords.includes(word)).length;
-    const sentimentScore = positiveCount - negativeCount;
-    let sentimentLabel: TextAnalysisResult['sentiment']['label'],
+    const positiveCount = textWords.filter(word => positiveWords.includes(word)).length, const negativeCount = textWords.filter(word => negativeWords.includes(word)).length, const sentimentScore = positiveCount - negativeCount, let sentimentLabel: TextAnalysisResult['sentiment']['label'],
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';
     else if (sentimentScore <= -1) sentimentLabel = 'negative';
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
@@ -110,9 +102,7 @@ export default async function handler(
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
       .map(([word, count]) => ({
-        word;
-        count;
-        frequency: Math.round((count / words) * 1000) / 10
+        word, count, frequency: Math.round((count / words) * 1000) / 10
       })),
     // Bigrams and trigrams
     const wordsArray = text.toLowerCase().split(/\s+/);
@@ -139,18 +129,11 @@ export default async function handler(
     // Language detection (simplified - assume English for demo)
     const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
-    const confidence = isEnglish ? 0.95 : 0.5;
-    const result: TextAnalysisResult = {
+    const confidence = isEnglish ? 0.95 : 0.5, const result: TextAnalysisResult = {
       text,
       statistics: {
         characters,
-        charactersNoSpaces;
-        words;
-        sentences;
-        paragraphs;
-        syllables;
-        readingTime;
-        speakingTime};
+        charactersNoSpaces, words, sentences, paragraphs, syllables, readingTime, speakingTime};
       readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100,
         fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
@@ -166,12 +149,10 @@ export default async function handler(
         negativeWords: textWords.filter(word => negativeWords.includes(word))},
       language: {
         detectedLanguage,
-        confidence;
-        isEnglish};
+        confidence, isEnglish};
       keywords: {
         topWords,
-        bigrams;
-        trigrams}};
+        bigrams, trigrams}};
     res.status(200).json(result)
   } catch (error) {
     console.error('Text analysis error:', error);

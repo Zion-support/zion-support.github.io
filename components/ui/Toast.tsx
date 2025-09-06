@@ -5,8 +5,7 @@ export interface Toast {
   id: string,
   type: ToastType,
   title: string,
-  message?: string;
-  duration?: number
+  message?: string, duration?: number
 }
 
 interface ToastProps {
@@ -21,7 +20,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       setIsVisible(false);
       setTimeout(() => onRemove(toast.id), 300)
     }, toast.duration || 5000);
-    return () => clearTimeout(timer)
+    return () => clearTimeout(timer);
   }, [toast.id, toast.duration, onRemove]);
   const getIcon = () => {
     switch (toast.type) {
@@ -34,7 +33,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       case 'info':
         return <Info className="w-5 h-5 text-blue-400" />;
       default: return <Info className="w-5 h-5 text-blue-400" />
-    }
+    };
   },
   const getBorderColor = () => {
     switch (toast.type) {
@@ -47,7 +46,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       case 'info':
         return 'border-blue-500/20';
       default: return 'border-blue-500/20'
-    }
+    };
   },
   const getBackgroundColor = () => {
     switch (toast.type) {
@@ -126,7 +125,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
         ))}
       </AnimatePresence>
     </div>
-  )
+  );
 };
 // Hook for managing toasts
 export const useToast = () => {
@@ -152,10 +151,5 @@ export const useToast = () => {
     addToast({ type: 'warning', title, message })
   };
   return {
-    toasts;
-    showSuccess;
-    showError;
-    showInfo;
-    showWarning;
-    removeToast}
+    toasts, showSuccess, showError, showInfo, showWarning, removeToast};
 };

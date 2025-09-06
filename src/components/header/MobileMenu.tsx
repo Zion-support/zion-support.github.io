@@ -6,9 +6,9 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { ModeToggle } from '@/components/ModeToggle';
 import { useTranslation } from 'react-i18next';
+import { BriefcaseIcon } from 'lucide-react';
 export interface MobileMenuProps {
-  unreadCount?: number;
-  onClose: () => void,
+  unreadCount?: number, onClose: () => void,
   openLoginModal: (returnToPath: string) => void, // Added from plan
 }
 
@@ -22,14 +22,13 @@ const protectedRoutes = [
 ];
 function isProtectedRoute(href: string): boolean {
   // Also check against the item's own authRequired flag if present
-  return protectedRoutes.some(route => href.startsWith(route))
+  return protectedRoutes.some(route => href.startsWith(route));
 }
 
 export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
   const router = useRouter();
   const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { t } = useTranslation();
+  const isAuthenticated = !!user, const { t } = useTranslation();
   const baseItems = [
     {
       key: 'home',

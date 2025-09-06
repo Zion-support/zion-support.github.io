@@ -7,42 +7,24 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 interface ValidationRule {
-  required?: boolean;
-  minLength?: number;
-  maxLength?: number;
-  pattern?: RegExp;
-  custom?: (value: any) => string | null
+  required?: boolean, minLength?: number, maxLength?: number, pattern?: RegExp, custom?: (value: any) => string | null
 }
 
 interface ValidatedFormFieldProps {
   name: string,
   label: string,
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
-  placeholder?: string;
-  description?: string;
-  validation?: ValidationRule;
-  options?: { value: string, label: string }[],
+  placeholder?: string, description?: string, validation?: ValidationRule, options?: { value: string, label: string }[],
   form: any, // React Hook Form control
-  className?: string;
-  disabled?: boolean;
-  showValidIcon?: boolean;
-  debounceMs?: number
+  className?: string, disabled?: boolean, showValidIcon?: boolean, debounceMs?: number
 }
 
 export function ValidatedFormField({
-  name;
-  label;
-  type = 'text';
-  placeholder;
-  description;
-  validation = {};
-  options = [];
-  form;
-  className;
-  disabled = false;
-  showValidIcon = true;
-  debounceMs = 300}: ValidatedFormFieldProps) {
+  name, label, type = 'text';
+  placeholder, description, validation = {};
+  options = [], form, className, disabled = false, showValidIcon = true, debounceMs = 300}: ValidatedFormFieldProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle');
   const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null);
@@ -57,7 +39,7 @@ export function ValidatedFormField({
     }
 
     if (debounceTimer) {
-      clearTimeout(debounceTimer)
+      clearTimeout(debounceTimer);
     }
 
     setValidationState('validating');
@@ -68,7 +50,7 @@ export function ValidatedFormField({
     setDebounceTimer(timer);
     return () => {
       if (timer) clearTimeout(timer)
-    }
+    };
   }, [fieldValue, isTouched, debounceMs]);
   const validateField = (value: any): string | null => {
     if (validation.required && (!value || (typeof value === 'string' && value.trim() === ''))) {
@@ -93,11 +75,10 @@ export function ValidatedFormField({
       return validation.custom(value)
     }
 
-    return null
+    return null;
   },
   const getValidationIcon = () => {
-    if (!showValidIcon || !isTouched || validationState === 'idle') return null;
-    switch (validationState) {
+    if (!showValidIcon || !isTouched || validationState === 'idle') return null, switch (validationState) {
       case 'validating':
         return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />;
       case 'valid':
@@ -105,7 +86,7 @@ export function ValidatedFormField({
       case 'invalid':
         return <AlertCircle className="h-4 w-4 text-red-500" />;
       default: return null
-    }
+    };
   },
   const getFieldClasses = () => {
     if (!isTouched) return '';
@@ -115,7 +96,7 @@ export function ValidatedFormField({
       case 'invalid':
         return 'border-red-500 focus: border-red-500 focus:ring-red-500/20',
       default: return ''
-    }
+    };
   },
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className);
@@ -166,7 +147,9 @@ export function ValidatedFormField({
             <label
               htmlFor={name}
               className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70"
-            >
+             htmlFor="input-
+              {label}
+            ">
               {label}
             </label>
             {getValidationIcon()}
@@ -272,7 +255,7 @@ export function ValidatedFormField({
         </FormItem>
       )}
     />
-  )
+  );
 }
 
 // Validation helpers for common patterns
@@ -302,7 +285,7 @@ export const commonValidations = {
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character'
       }
       return null
-    }
+    };
   };
   phone: {
     pattern: validationPatterns.phone,
@@ -311,5 +294,5 @@ export const commonValidations = {
         return 'Please enter a valid phone number'
       }
       return null
-    }
+    };
   }},

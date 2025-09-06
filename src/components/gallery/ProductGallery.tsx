@@ -1,15 +1,15 @@
 import React, { useState, Suspense } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 const ModelViewer = React.lazy(async () => {
   await import('@google/model-viewer');
   return {
     default: (props: any) => (
       React.createElement('model-viewer', props)
-    )}
+    )};
 });
 interface ProductGalleryProps {
   images: string[],
-  videoUrl?: string;
-  modelUrl?: string
+  videoUrl?: string, modelUrl?: string
 }
 
 export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryProps) {
@@ -104,5 +104,5 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
       </DialogContent>
     )}
     </Dialog>
-  )
+  );
 }

@@ -7,8 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const data = readOrgData(),
   const parseArray = (v?: string | string[]) => {
-    if (!v) return undefined;
-    return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
+    if (!v) return undefined, return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean);
   };
   const filters: OrgFilters = {
     view: (req.query.view as OrgFilters['view']) || 'all',
@@ -21,5 +20,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     search: (req.query.search as string) || undefined,
     teamOnly: req.query.teamOnly === 'true' ? true : undefined},
   const filtered = filterOrgData(data, filters);
-  return res.status(200).json(filtered)
+  return res.status(200).json(filtered);
 }

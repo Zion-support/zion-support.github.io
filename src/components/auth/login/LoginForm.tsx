@@ -86,7 +86,7 @@ export function LoginForm() {
       form.setError('root', { message: 'Please enter your email address.' }),
       return
     }
-    router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+    router.push(`/verify-status?email=${encodeURIComponent(email)}`);
   };
   return (
     <Form {...form}>
@@ -97,8 +97,7 @@ export function LoginForm() {
       )}
       <form
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
-          if (firstError) {
+          const firstError = Object.keys(errors)[0] as keyof LoginFormValues, if (firstError) {
             form.setFocus(firstError)
           }
         })}
@@ -233,5 +232,5 @@ export function LoginForm() {
         </p>
       </form>
     </Form>
-  )
+  );
 }

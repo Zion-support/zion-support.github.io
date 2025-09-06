@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 interface ApplicationActionsProps {
   application: JobApplication,
   processingId: string | null,
@@ -9,9 +10,7 @@ interface ApplicationActionsProps {
 
 export function ApplicationActions({
   application,
-  processingId;
-  onViewApplication;
-  onStatusChange
+  processingId, onViewApplication, onStatusChange
 }: ApplicationActionsProps) {
   return (
     <div className="flex items-center justify-end gap-2">
@@ -73,5 +72,5 @@ export function ApplicationActions({
         </Link>
       </Button>
     </div>
-  )
+  );
 }

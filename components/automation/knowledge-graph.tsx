@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: data }, revalidate: 86400 }
   } catch {
     return { props: { report: null }, revalidate: 86400 }
-  }
+  };
 },
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
@@ -48,5 +48,5 @@ export default function KnowledgeGraph({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
+  );
 }

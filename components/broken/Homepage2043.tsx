@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
+import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 const Homepage2043: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -201,8 +202,7 @@ const Homepage2043: React.FC = () => {
 
               {/* Enhanced Subtitle */}
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Experience the world's most advanced AI consciousness platforms, quantum computing solutions;
-                and autonomous systems that redefine what's possible in technology.
+                Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.
               </p>
 
               {/* Enhanced CTA Buttons */}

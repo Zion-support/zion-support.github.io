@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
+import { Zap, Star } from 'lucide-react';
 interface QuantumHolographicCardProps {
   service: {
     id: string,
@@ -275,6 +276,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         </div>
       </div>
     </motion.div>
-  )
+  );
 },
 export default QuantumHolographicCard;

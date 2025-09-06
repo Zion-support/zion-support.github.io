@@ -64,5 +64,5 @@ export default function Internationalization() {
         </div>
       </main>
     </>
-  )
+  );
 }

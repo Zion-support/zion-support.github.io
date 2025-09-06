@@ -8,8 +8,7 @@ export default function VendorProfilePage({ vendor }: Props) {
   if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
   async function submitLead(e: FormEvent<HTMLFormElement>) {
     e.preventDefault(),
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+    const form = e.currentTarget, const formData = new FormData(form);
     const title = String(formData.get('title') || 'New lead');
     setLoading(true);
     setMessage(null);
@@ -101,12 +100,11 @@ export default function VendorProfilePage({ vendor }: Props) {
 
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  )
+  );
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug || ''),
   const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } }
+  const vendor = slug ? getVendorBySlug(slug) || null : null, return { props: { vendor } };
 },

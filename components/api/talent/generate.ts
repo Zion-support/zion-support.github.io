@@ -8,10 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { name, title, bio, experience, skills } = req.body as {
     name: string,
-    title?: string;
-    bio?: string;
-    experience?: string;
-    skills?: string
+    title?: string, bio?: string, experience?: string, skills?: string;
   };
   if (!name) return res.status(400).json({ error: 'Name is required' }),
   try {
@@ -28,12 +25,11 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     const content = completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON.parse(content);
     return res.status(200).json({
-      name;
-      title: parsed.title || title || 'Professional',
+      name, title: parsed.title || title || 'Professional',
       category: parsed.category || null,
       summary: parsed.summary || '',
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'OpenAI error' })
-  }
+  };
 }

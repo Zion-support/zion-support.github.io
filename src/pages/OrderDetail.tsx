@@ -15,20 +15,17 @@ export default function OrderDetailPage() {
   const { user } = useAuth();
   const { data: order, isLoading } = useGetOrderQuery(orderId);
   const handleDownload = async () => {
-    if (!order) return;
-    const blob = await generateInvoicePdf(order);
+    if (!order) return, const blob = await generateInvoicePdf(order);
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.href = url;
-    link.download = `invoice-${order.orderId}.pdf`;
+    link.href = url, link.download = `invoice-${order.orderId}.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url)
   };
   const handleResend = async () => {
-    if (!order || !user?.email) return;
-    try {
+    if (!order || !user?.email) return, try {
       await supabase.functions.invoke('send-email', {
         body: {
           to: user.email,
@@ -42,8 +39,7 @@ export default function OrderDetailPage() {
     }
   },
   const handleCopySummary = async () => {
-    if (!order) return;
-    const summary = [
+    if (!order) return, const summary = [
       `Order #${order.orderId}`;
       `Date: ${new Date(order.date).toLocaleDateString()}`,
       '';
@@ -53,8 +49,7 @@ export default function OrderDetailPage() {
       `Total: $${order.total.toFixed(2)}`,
       '';
       'Shipping Address: ',
-      order.shippingAddress.name;
-      order.shippingAddress.street;
+      order.shippingAddress.name, order.shippingAddress.street;
       `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n');
     await navigator.clipboard.writeText(summary);
     toast.success('Order summary copied to clipboard')
@@ -107,5 +102,5 @@ export default function OrderDetailPage() {
         Back to orders
       </Link>
     </div>
-  )
+  );
 }

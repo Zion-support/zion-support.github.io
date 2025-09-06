@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight, Zap, Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -109,12 +110,11 @@ export default function UltraFuturisticNavigation2027() {
     setIsClient(true)
   }, []);
   useEffect(() => {
-    if (!isClient) return;
-    const handleScroll = () => {
+    if (!isClient) return, const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [isClient]);
   const navigation = [
     {
@@ -625,6 +625,6 @@ export default function UltraFuturisticNavigation2027() {
         )}
       </AnimatePresence>
     </header>
-  )
+  );
 },
 export default UltraFuturisticNavigation2027;

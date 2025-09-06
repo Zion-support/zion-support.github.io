@@ -11,6 +11,7 @@ import { ResumePreviewCard } from './ResumePreviewCard';
 import { UploadSection } from './UploadSection';
 import { SelectResumeSection } from './SelectResumeSection';
 import { ResumeOption, ResumeSelectorProps } from './types';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
@@ -90,7 +91,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         id: 'custom-upload',
         title: file.name,
         type: 'custom_upload',
-        file: file
+        file: file;
       },
       setCustomFile(file);
       setSelectedResume(customOption);
@@ -109,8 +110,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       // Create download link
       const url = URL.createObjectURL(pdfBlob);
       const link = document.createElement('a');
-      link.href = url;
-      link.download = `${selectedResume.title || 'Resume'}.pdf`;
+      link.href = url, link.download = `${selectedResume.title || 'Resume'}.pdf`;
       document.body.appendChild(link);
       link.click();
       // Clean up
@@ -197,5 +197,5 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         </Button>
       </div>
     </div>
-  )
+  );
 }

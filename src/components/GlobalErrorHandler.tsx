@@ -4,9 +4,7 @@ import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
 import * as Sentry from '@sentry/nextjs';
 interface ErrorContextType {
-  reportError: (error: Error, context?: any) => void;
-  showRetryableError: (error: Error, retryAction?: () => void) => void;
-  showNetworkError: (retryAction?: () => void) => void,
+  reportError: (error: Error, context?: any) => void, showRetryableError: (error: Error, retryAction?: () => void) => void, showNetworkError: (retryAction?: () => void) => void,
   showAuthError: (loginAction?: () => void) => void,
   clearAllErrors: () => void
 }
@@ -36,9 +34,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     }
   }, []);
   const showRetryableError = useCallback((error: Error, retryAction?: () => void) => {
-    const errorKey = error.message;
-    const currentRetryCount = retryCount[errorKey] || 0;
-    reportError(error, { retryCount: currentRetryCount }),
+    const errorKey = error.message, const currentRetryCount = retryCount[errorKey] || 0, reportError(error, { retryCount: currentRetryCount }),
     // Show user-friendly error message with retry option
     toast({
       title: "Something went wrong",
@@ -56,8 +52,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       } : undefined})
   }, [retryCount, reportError]);
   const showNetworkError = useCallback((retryAction?: () => void) => {
-    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
-    toast({
+    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true, toast({
       title: isOnline ? "Connection Issue" : "No Internet Connection",
       description: isOnline 
         ? "Unable to connect to our servers. Please check your connection and try again."
@@ -84,15 +79,12 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   }, []);
   const contextValue: ErrorContextType = {
     reportError,
-    showRetryableError;
-    showNetworkError;
-    showAuthError;
-    clearAllErrors};
+    showRetryableError, showNetworkError, showAuthError, clearAllErrors};
   return (
     <ErrorContext.Provider value={contextValue}>
       {children}
     </ErrorContext.Provider>
-  )
+  );
 }
 
 export function useGlobalErrorHandler(): ErrorContextType {
@@ -135,7 +127,7 @@ function getErrorMessage(error: Error): string {
   }
 
   // Fallback for unknown errors
-  return "An unexpected error occurred. Please try again."
+  return "An unexpected error occurred. Please try again.";
 }
 
 // Utility hook for common error scenarios
@@ -154,8 +146,7 @@ export function useErrorHandler() {
     operation: () => Promise<T>,
     options?: {
       onError?: (error: Error) => void,
-      retryAction?: () => void;
-      successMessage?: string
+      retryAction?: () => void, successMessage?: string
     }
   ): Promise<T | null> => {
     try {
@@ -176,10 +167,8 @@ export function useErrorHandler() {
       }
       
       return null
-    }
+    };
   }, [reportError, handleApiError]);
   return {
-    reportError;
-    handleApiError;
-    handleAsyncOperation}
+    reportError, handleApiError, handleAsyncOperation};
 } 

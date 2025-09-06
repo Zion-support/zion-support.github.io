@@ -15,17 +15,14 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 export function WebhooksManager() {
   const {
-    webhooks;
-    loading;
-    testResult;
-    fetchWebhooks;
-    createWebhook;
-    toggleWebhook;
-    deleteWebhook;
-    testWebhook;
-    clearTestResult
+    webhooks, loading, testResult, fetchWebhooks, createWebhook, toggleWebhook, deleteWebhook, testWebhook, clearTestResult
   } = useWebhooks();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
@@ -42,12 +39,8 @@ export function WebhooksManager() {
     fetchWebhooks()
   }, []);
   const handleCreateWebhook = async () => {
-    if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return;
-    await createWebhook(
-      webhookName;
-      webhookUrl;
-      selectedEvents;
-      webhookSecret.trim() === "" ? undefined : webhookSecret
+    if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return, await createWebhook(
+      webhookName, webhookUrl, selectedEvents, webhookSecret.trim() === "" ? undefined : webhookSecret
     );
     setShowCreateDialog(false);
     resetWebhookForm()
@@ -189,7 +182,7 @@ export function WebhooksManager() {
                 <Button onClick={handleCreateWebhook} disabled={
                   webhookName.trim() === "" || 
                   webhookUrl.trim() === "" || 
-                  selectedEvents.length === 0
+                  selectedEvents.length === 0;
                 }>
                   Create Webhook
                 </Button>

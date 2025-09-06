@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export default function URLShortenerPage() {
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
@@ -10,8 +12,7 @@ export default function URLShortenerPage() {
   const [isShortening, setIsShortening] = useState(false);
   const [showQR, setShowQR] = useState<string | null>(null);
   const generateShortUrl = async () => {
-    if (!longUrl.trim()) return;
-    setIsShortening(true);
+    if (!longUrl.trim()) return, setIsShortening(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     const alias = customAlias.trim() || generateRandomAlias();
@@ -19,9 +20,7 @@ export default function URLShortenerPage() {
     const newShortUrl = {
       id: Date.now(),
       longUrl: longUrl.trim(),
-      shortUrl;
-      alias;
-      clicks: 0,
+      shortUrl, alias, clicks: 0,
       createdAt: new Date().toISOString(),
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     },
@@ -36,7 +35,7 @@ export default function URLShortenerPage() {
     for (let i = 0, i < 6, i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length))
     }
-    return result
+    return result;
   };
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text)
@@ -52,10 +51,10 @@ export default function URLShortenerPage() {
     setShortenedUrls(prev => prev.filter(url => url.id !== id))
   },
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)
+    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
   };
   const getTotalUrls = () => {
-    return shortenedUrls.length
+    return shortenedUrls.length;
   };
   return (
     <>
@@ -108,7 +107,9 @@ export default function URLShortenerPage() {
               <div className="space-y-6">
                 {/* Long URL Input */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    Long URL
+                  ">
                     Long URL
                   </label>
                   <input
@@ -122,7 +123,9 @@ export default function URLShortenerPage() {
 
                 {/* Custom Alias */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    Custom Alias (Optional)
+                  ">
                     Custom Alias (Optional)
                   </label>
                   <div className="flex space-x-2">
@@ -503,5 +506,5 @@ export default function URLShortenerPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

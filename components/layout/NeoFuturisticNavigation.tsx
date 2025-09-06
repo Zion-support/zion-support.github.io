@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Button from '../ui/Button';
+import { ChevronRight, Zap, Star } from 'lucide-react';
 export default function NeoFuturisticNavigation() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +19,7 @@ export default function NeoFuturisticNavigation() {
 			setIsScrolled(window.scrollY > 20)
 		};
 		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 	const toggleDropdown = (dropdown: string) => {
 		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
@@ -439,5 +440,5 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-	)
+	);
 }

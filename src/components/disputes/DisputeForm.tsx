@@ -9,6 +9,7 @@ import { disputeReasonLabels } from "@/types/disputes";
 import { useDisputes } from "@/hooks/useDisputes";
 import { toast } from "sonner";
 import { FileText } from 'lucide-react'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const formSchema = z.object({
   reason_code: z.string()
@@ -18,15 +19,11 @@ const formSchema = z.object({
   attachments: z.array(z.any()).optional()}),
 type DisputeFormProps = {
   projectId: string,
-  milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void,
+  milestoneId?: string, onDisputeCreated?: (disputeId: string) => void,
   onCancel?: () => void
 };
 export function DisputeForm({ 
-  projectId;
-  milestoneId;
-  onDisputeCreated;
-  onCancel 
+  projectId, milestoneId, onDisputeCreated, onCancel 
 }: DisputeFormProps) {
   const { createDispute } = useDisputes();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -177,5 +174,5 @@ export function DisputeForm({
         </form>
       </Form>
     </div>
-  )
+  );
 }

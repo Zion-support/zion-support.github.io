@@ -6,6 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Loader2, Info, ThumbsUp } from 'lucide-react'
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
   isLoading: boolean,
@@ -15,9 +17,7 @@ interface PricingSuggestionBoxProps {
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
-  isLoading;
-  onApplySuggestion;
-  rateType}) => {
+  isLoading, onApplySuggestion, rateType}) => {
   if (isLoading) {
     return (
       <Card className="border border-dashed border-muted">
@@ -89,5 +89,5 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
         </p>
       </CardContent>
     </Card>
-  )
+  );
 };

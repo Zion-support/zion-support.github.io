@@ -9,6 +9,8 @@ import Skeleton from '@/components/ui/skeleton';
 import { SEO } from '@/components/SEO';
 import { useRouter } from 'next/router';
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { ChevronRight, UserCheck } from 'lucide-react';
 const getNotificationIcon = (type: NotificationType,
   className: string = 'h-5 w-5') => {
   switch (type) {
@@ -32,7 +34,7 @@ const getNotificationIcon = (type: NotificationType,
       return <Package className={cn(className, 'text-orange-500')} />;
     default:
       return <Bell className={cn(className, 'text-gray-500')} />
-  }
+  };
 };
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
@@ -65,8 +67,7 @@ const NotificationCard: React.FC<{
     type: NotificationType,
     read: boolean,
     created_at: string,
-    action_url?: string;
-    action_text?: string
+    action_url?: string, action_text?: string;
   };
   onMarkAsRead: (id: string) => Promise<void>,
   onDismiss: (id: string) => Promise<void>
@@ -81,10 +82,9 @@ const NotificationCard: React.FC<{
       router.push(notification.action_url)
     }
   };
-  return (<div
+  return(<div
       className={cn(
-        'border rounded-lg shadow-sm p-4 mb-3 group transition-colors';
-        notification.read
+        'border rounded-lg shadow-sm p-4 mb-3 group transition-colors', notification.read
           ? 'border-zion-blue-light bg-zion-blue-dark/10'
           : 'border-zion-cyan bg-zion-blue-dark/30')}
     >
@@ -157,15 +157,8 @@ const NotificationCard: React.FC<{
 },
 export default function NotificationsPage() {
   const {
-    filteredNotifications;
-    unreadCount;
-    markAsRead;
-    markAllAsRead;
-    dismissNotification;
-    loading;
-    filter;
-    setFilter} = useNotifications() as NotificationContextType;
-  return (
+    filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter;
+    setFilter} = useNotifications() as NotificationContextType, return (
     <>
       <SEO
         title="Notifications | Zion AI Marketplace"
@@ -244,5 +237,5 @@ export default function NotificationsPage() {
         </div>
       </main>
     </>
-  )
+  );
 }

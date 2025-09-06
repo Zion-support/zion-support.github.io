@@ -5,21 +5,20 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
-  className?: string;
-  showText?: boolean;
-  text?: string
+  className?: string, showText?: boolean, text?: string
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   variant = 'default';
-  className;
-  showText = false;
-  text = 'Loading...'
+  className, showText = false, text = 'Loading...'
 }) => {
   const sizeClasses = {
     sm: 'h-4 w-4',
@@ -39,25 +38,20 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])} />
       {showText && <span className="text-sm text-muted-foreground">{text}</span>}
     </div>
-  )
+  );
 };
 // Progressive loading component
 interface ProgressiveLoadingProps {
   steps: Array<{ id: string, label: string, duration?: number }>;
-  currentStep?: number;
-  showProgress?: boolean;
-  onComplete?: () => void
+  currentStep?: number, showProgress?: boolean, onComplete?: () => void
 }
 
 export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   steps,
-  currentStep = 0;
-  showProgress = true;
-  onComplete
+  currentStep = 0, showProgress = true, onComplete
 }) => {
   const [activeStep, setActiveStep] = useState(0);
-  const progress = ((activeStep + 1) / steps.length) * 100;
-  useEffect(() => {
+  const progress = ((activeStep + 1) / steps.length) * 100, useEffect(() => {
     if (currentStep !== undefined) {
       setActiveStep(currentStep)
     }
@@ -84,9 +78,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
         {steps.map((step, index) => (
           <motion.div
             key={step.id}
-            className={cn(
-              'flex items-center gap-3 p-2 rounded-md';
-              index === activeStep ? 'bg-primary/10' : 'opacity-50'
+            className={cn('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50'
             )}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
@@ -110,8 +102,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
 },
 // Enhanced skeleton loader
 interface SkeletonProps {
-  className?: string;
-  variant?: 'text' | 'circular' | 'rectangular' | 'card';
+  className?: string, variant?: 'text' | 'circular' | 'rectangular' | 'card';
   animation?: 'pulse' | 'wave' | 'none';
   lines?: number
 }
@@ -140,12 +131,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         {Array.from({ length: lines }).map((_, i) => (
           <div
             key={i}
-            className={cn(
-              baseClasses;
-              variantClasses.text;
-              animationClasses[animation];
-              i === lines - 1 ? 'w-3/4' : 'w-full';
-              className
+            className={cn(baseClasses, variantClasses.text, animationClasses[animation];
+              i === lines - 1 ? 'w-3/4' : 'w-full', className
             )}
           />
         ))}
@@ -153,23 +140,17 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     )
   }
 
-  return (
-    <div
+  return(<div
       className={cn(
-        baseClasses;
-        variantClasses[variant];
-        animationClasses[animation];
-        className
+        baseClasses, variantClasses[variant];
+        animationClasses[animation], className
       )}
     />
   )
 };
 // Enhanced error state component
 interface ErrorStateProps {
-  error?: Error | string | null;
-  title?: string;
-  description?: string;
-  action?: {
+  error?: Error | string | null, title?: string, description?: string, action?: {
     label: string,
     onClick: () => void
   },
@@ -178,25 +159,13 @@ interface ErrorStateProps {
     onClick: () => void
   },
   variant?: 'network' | 'generic' | 'timeout' | 'permission';
-  showRetry?: boolean;
-  retryCount?: number;
-  maxRetries?: number;
-  onRetry?: () => void;
-  className?: string
+  showRetry?: boolean, retryCount?: number, maxRetries?: number, onRetry?: () => void, className?: string
 }
 
 export const ErrorState: React.FC<ErrorStateProps> = ({
   error,
-  title;
-  description;
-  action;
-  secondaryAction;
-  variant = 'generic';
-  showRetry = true;
-  retryCount = 0;
-  maxRetries = 3;
-  onRetry;
-  className
+  title, description, action, secondaryAction, variant = 'generic';
+  showRetry = true, retryCount = 0, maxRetries = 3, onRetry, className
 }) => {
   const [isOnline, setIsOnline] = useState(true);
   useEffect(() => {
@@ -212,7 +181,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
       }
     }
     
-    return undefined
+    return undefined;
   }, []);
   const getErrorConfig = () => {
     switch (variant) {
@@ -246,12 +215,10 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           description: description || 'An unexpected error occurred. Please try again.',
           color: 'text-red-500'
         }
-    }
+    };
   },
   const config = getErrorConfig();
-  const Icon = config.icon;
-  const canRetry = showRetry && onRetry && retryCount < maxRetries;
-  return (
+  const Icon = config.icon, const canRetry = showRetry && onRetry && retryCount < maxRetries, return (
     <Card className={cn('border-destructive/20', className)}>
       <CardContent className="p-8 text-center">
         <motion.div
@@ -306,20 +273,17 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
         </motion.div>
       </CardContent>
     </Card>
-  )
+  );
 },
 // Loading state for lists/grids
 interface LoadingGridProps {
-  count?: number;
-  columns?: number;
-  variant?: 'card' | 'list' | 'table';
+  count?: number, columns?: number, variant?: 'card' | 'list' | 'table';
   className?: string
 }
 
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
-  columns = 4;
-  variant = 'card';
+  columns = 4, variant = 'card';
   className
 }) => {
   const gridClasses = {
@@ -373,26 +337,21 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
         </Card>
       ))}
     </div>
-  )
+  );
 };
 // Performance indicator
 interface PerformanceIndicatorProps {
-  isLoading?: boolean;
-  loadTime?: number;
-  itemCount?: number;
-  className?: string
+  isLoading?: boolean, loadTime?: number, itemCount?: number, className?: string
 }
 
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
-  loadTime;
-  itemCount;
-  className
+  loadTime, itemCount, className
 }) => {
   const getPerformanceColor = (time: number) => {
     if (time < 100) return 'text-green-500',
     if (time < 300) return 'text-yellow-500';
-    return 'text-red-500'
+    return 'text-red-500';
   };
   if (isLoading) {
     return (
@@ -415,5 +374,5 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         <span>{itemCount} items loaded</span>
       )}
     </div>
-  )
+  );
 };

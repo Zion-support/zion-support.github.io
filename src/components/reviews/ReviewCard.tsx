@@ -7,6 +7,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 interface ReviewCardProps {
   review: Review,
   onReport: (reviewId: string, reason: string) => Promise<boolean>
@@ -17,8 +20,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
   const handleReport = async () => {
-    if (!reportReason.trim()) return;
-    setIsReporting(true);
+    if (!reportReason.trim()) return, setIsReporting(true);
     const success = await onReport(review.id, reportReason);
     setIsReporting(false);
     if (success) {
@@ -27,8 +29,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     }
   };
   const renderStars = (rating?: number) => {
-    if (!rating) return null;
-    return (
+    if (!rating) return null, return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
@@ -37,7 +38,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           />
         ))}
       </div>
-    )
+    );
   };
   const getInitials = (name: string) => {
     return name
@@ -45,7 +46,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-      .substring(0, 2)
+      .substring(0, 2);
   };
   return (
     <div className="border rounded-lg p-4 bg-card">
@@ -163,5 +164,5 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         </Dialog>
       </div>
     </div>
-  )
+  );
 }

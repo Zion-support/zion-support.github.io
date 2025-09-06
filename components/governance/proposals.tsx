@@ -27,5 +27,5 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
         {(!data.proposals || data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
       </ul>
     </div>
-  )
+  );
 }

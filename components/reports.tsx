@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { Zap, Calendar } from 'lucide-react';
 const ReportsPage: React.FC = () => {
   const reports = [
     {
@@ -355,6 +356,6 @@ const ReportsPage: React.FC = () => {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 },
 export default ReportsPage;

@@ -6,8 +6,7 @@ type Props = {
   role: 'client' | 'talent' | 'admin',
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
 },
-const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
-export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
+const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const, export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
   const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
@@ -101,5 +100,5 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         )}
       </div>
     </div>
-  )
+  );
 }

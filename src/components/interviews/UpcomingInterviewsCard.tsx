@@ -8,6 +8,8 @@ import { format, isPast, parseISO } from "date-fns";
 import Link from "next/link";
 import { Calendar, Clock, Video } from 'lucide-react'
 import { Avatar } from "@/components/ui/avatar";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star, Calendar } from 'lucide-react';
 export function UpcomingInterviewsCard() {
 
   const { fetchInterviews } = useInterviews();
@@ -83,7 +85,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   return (
@@ -150,5 +152,5 @@ export function UpcomingInterviewsCard() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

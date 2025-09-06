@@ -3,28 +3,19 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
+import { Badge } from '@/components/ui/badge';
 interface ListingCardProps {
-  id?: string;
-  title: string,
+  id?: string, title: string,
   description: string,
   images?: string[];
   category: string,
   tags?: string[];
   author?: { name: string, id?: string, avatarUrl?: string, email?: string };
-  className?: string;
-  profileType?: 'service' | 'talent'
+  className?: string, profileType?: 'service' | 'talent'
 }
 
 export function ListingCard({ 
-  id;
-  title;
-  description;
-  images;
-  category;
-  tags;
-  author;
-  className;
-  profileType = 'service'
+  id, title, description, images, category, tags, author, className, profileType = 'service'
 }: ListingCardProps) {
   // Generate a profile ID based on the listing data
   // In a real app, this would be a proper ID from the database
@@ -79,5 +70,5 @@ export function ListingCard({
         )}
       </div>
     </Link>
-  )
+  );
 }

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Download, FileText, Search } from 'lucide-react'
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
+import { Badge } from '@/components/ui/badge';
 export function InvoiceHistory() {
   // Mock invoice data
   const invoices = [
@@ -133,5 +134,5 @@ export function InvoiceHistory() {
         </Button>
       </div>
     </div>
-  )
+  );
 }

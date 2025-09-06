@@ -27,5 +27,5 @@ export default function CodeSamples({ samples }: Props) {
         <code>{sampleMap[active] || ''}</code>
       </pre>
     </div>
-  )
+  );
 }

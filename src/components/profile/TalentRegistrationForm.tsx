@@ -15,6 +15,8 @@ import { toast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 // Define form schema
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long");
@@ -134,8 +136,7 @@ export function TalentRegistrationForm() {
             programming: ["JavaScript", "TypeScript", "React"];
             devops: ["Docker", "CI/CD", "AWS"];
             platforms: ["Node.js", "Next.js", "Vercel"];
-            softSkills: ["Communication", "Problem Solving", "Team Leadership"];
-            other: ["Project Management", "Technical Writing"]
+            softSkills: ["Communication", "Problem Solving", "Team Leadership"], other: ["Project Management", "Technical Writing"]
           }
         });
         toast({
@@ -158,8 +159,7 @@ export function TalentRegistrationForm() {
     if (generatedContent) {
       form.setValue("bio", generatedContent.summary);
       // Extract all skills from categorized skills and properly type cast them
-      const allCategorizedSkills = generatedContent.categorizedSkills;
-      const newSkills: string[] = [],
+      const allCategorizedSkills = generatedContent.categorizedSkills, const newSkills: string[] = [],
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
@@ -217,7 +217,7 @@ export function TalentRegistrationForm() {
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
-      return
+      return;
     }
 
     setIsSubmitting(true);
@@ -229,8 +229,7 @@ export function TalentRegistrationForm() {
       
       // Enhance profile if not already done
       let finalSummary = "";
-      let finalSkills = skillTags;
-      if (values.enhancedProfile && !generatedContent) {
+      let finalSkills = skillTags, if (values.enhancedProfile && !generatedContent) {
         try {
           const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
             body: {
@@ -246,8 +245,7 @@ export function TalentRegistrationForm() {
           if (aiData) {
             finalSummary = (aiData as EnhancedProfile).summary;
             // Safely merge AI suggested skills with user-provided skills
-            const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills;
-            const aiSkills: string[] = [],
+            const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills, const aiSkills: string[] = [],
             // Extract skills from each category and ensure they're strings
             Object.values(categorizedSkills).forEach(categorySkills => {
               if (Array.isArray(categorySkills)) {
@@ -733,5 +731,5 @@ export function TalentRegistrationForm() {
         </Form>
       </Card>
     </div>
-  )
+  );
 }

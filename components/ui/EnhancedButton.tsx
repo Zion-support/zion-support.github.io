@@ -15,16 +15,14 @@ const variantStyles: Record<NonNullable<EnhancedButtonProps['variant']>, string>
   secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100',
   ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100'},
 export default function EnhancedButton({
-  className;
-  variant = 'primary';
+  className, variant = 'primary';
   size = 'md';
-  fullWidth;
-  ...props
+  fullWidth, ...props
 }: EnhancedButtonProps) {
   return (
     <button
       className={clsx(baseStyles, sizeStyles[size], variantStyles[variant], fullWidth && 'w-full', className)}
       {...props}
     />
-  )
+  );
 }

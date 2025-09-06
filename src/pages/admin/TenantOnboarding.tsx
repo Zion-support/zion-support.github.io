@@ -14,6 +14,9 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
 import { logErrorToProduction } from '@/utils/productionLogger';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
@@ -36,8 +39,7 @@ export default function TenantOnboarding() {
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))
+    const { name, value } = e.target, setFormData(prev => ({ ...prev, [name]: value }));
   };
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -75,8 +77,7 @@ export default function TenantOnboarding() {
         })
         .select('id, brand_name, subdomain')
         .single();
-      if (error) throw error;
-      toast.success("Tenant created successfully!", {
+      if (error) throw error, toast.success("Tenant created successfully!", {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       }),
       // Reset form
@@ -311,5 +312,5 @@ export default function TenantOnboarding() {
         </div>
       </main>
     </>
-  )
+  );
 }

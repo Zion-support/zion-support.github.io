@@ -1,5 +1,6 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -22,5 +23,5 @@ export default function ServicesPage() {
         </section>
       </div>
     </EnhancedLayout>
-  )
+  );
 }

@@ -30,7 +30,7 @@ function highlight(text: string, term: string) {
         )
       )}
     </>
-  )
+  );
 }
 
 export default function SearchPage() {
@@ -53,8 +53,7 @@ export default function SearchPage() {
   const marketplaceResults = [...productResults, ...talentResults],
   // Sync query with URL parameter changes
   useEffect(() => {
-    if (!router.isReady) return;
-    const urlQuery = (router.query.q as string) || "";
+    if (!router.isReady) return, const urlQuery = (router.query.q as string) || "";
     if (urlQuery !== query) {
       setQuery(urlQuery)
     }
@@ -62,8 +61,7 @@ export default function SearchPage() {
 
   // Fetch results when query changes
   useEffect(() => {
-    if (!router.isReady) return;
-    if (query.trim()) {
+    if (!router.isReady) return, if (query.trim()) {
       fetchResults(query.trim())
     } else {
       setResults([])

@@ -110,8 +110,7 @@ export default function Signup() {
           data: res.data 
         }),
         if (res.status === 201) {
-          const data = res.data;
-          if (data.emailVerificationRequired) {
+          const data = res.data, if (data.emailVerificationRequired) {
             // Email verification is required
             setEmailVerificationRequired(true);
             const message = isPartnerSignup 
@@ -216,7 +215,7 @@ export default function Signup() {
       }, 3000);
       return () => clearTimeout(timer)
     }
-    return undefined
+    return undefined;
   }, [emailVerificationRequired, formik.values.email, router]);
   // Show loading state only during initial health check
   if (healthCheckLoading) {
@@ -290,7 +289,9 @@ export default function Signup() {
           )}
           
           <div>
-            <label htmlFor="name" className="block text-sm font-medium">
+            <label htmlFor="name" className="block text-sm font-medium" htmlFor="input-
+              Full Name
+            ">
               Full Name
             </label>
             <Input
@@ -307,7 +308,9 @@ export default function Signup() {
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-medium">
+            <label htmlFor="email" className="block text-sm font-medium" htmlFor="input-
+              Email address
+            ">
               Email address
             </label>
             <Input
@@ -325,7 +328,9 @@ export default function Signup() {
           </div>
           
           <div>
-            <label htmlFor="password" className="block text-sm font-medium">
+            <label htmlFor="password" className="block text-sm font-medium" htmlFor="input-
+              Password
+            ">
               Password
             </label>
           <Input
@@ -344,7 +349,9 @@ export default function Signup() {
         </div>
           
           <div>
-            <label htmlFor="confirm" className="block text-sm font-medium">
+            <label htmlFor="confirm" className="block text-sm font-medium" htmlFor="input-
+              Confirm Password
+            ">
               Confirm Password
             </label>
             <Input
@@ -448,5 +455,5 @@ export default function Signup() {
         </div>
       </div>
     </AuthLayout>
-  )
+  );
 }

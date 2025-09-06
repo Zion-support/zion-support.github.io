@@ -37,5 +37,5 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         Price includes transportation and first hour onsite. Additional hours billed separately.
       </p>
     </div>
-  )
+  );
 }

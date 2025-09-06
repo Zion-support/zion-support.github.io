@@ -11,15 +11,14 @@ const app = new App({
 function helpText(): string {
   return [
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
-  ].join('\n')
+  ].join('\n');
 }
 
 app.command('/zion', async ({ command, ack, respond }) => {
   await ack();
   const text = (command.text || '').trim();
   const [sub, ...rest] = text.split(' '),
-  const userId = command.user_id;
-  try {
+  const userId = command.user_id, try {
     if (!sub || sub.toLowerCase() === 'help') {
       await respond({ response_type: 'ephemeral', text: helpText() }),
       return
@@ -31,8 +30,7 @@ app.command('/zion', async ({ command, ack, respond }) => {
         headers: { 'content-type': 'application/jsonx-user-id': userId },
         body: JSON.stringify({ role })
       }),
-      const data = (await res.json()) as any;
-      await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` }),
+      const data = (await res.json()) as any, await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` }),
       return
     }
     if (sub === 'suggest-talent') {
@@ -40,8 +38,7 @@ app.command('/zion', async ({ command, ack, respond }) => {
       const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`, {
         headers: { 'x-user-id': userId }
       }),
-      const data = (await res.json()) as any;
-      const lines = (data.results || []).slice(0, 5).map((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice(0,3).join() || ''}`);
+      const data = (await res.json()) as any, const lines = (data.results || []).slice(0, 5).map((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice(0,3).join() || ''}`);
       await respond({ response_type: 'ephemeral', text: lines.length ? lines.join('\n') : 'No matches yet.' }),
       return
     }
@@ -50,8 +47,7 @@ app.command('/zion', async ({ command, ack, respond }) => {
       const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {
         headers: { 'x-user-id': userId }
       }),
-      const data = (await res.json()) as any;
-      if (!data.project) {
+      const data = (await res.json()) as any, if (!data.project) {
         await respond({ response_type: 'ephemeral', text: 'Project not found.' }),
         return
       }
@@ -62,7 +58,7 @@ app.command('/zion', async ({ command, ack, respond }) => {
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` })
-  }
+  };
 }),
 (async () => {
   const port = Number(process.env.SLACK_PORT || 3001);

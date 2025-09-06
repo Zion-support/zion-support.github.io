@@ -57,11 +57,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     // Complete any missing translations with auto-translation
     await ensureAllTranslations();
     onSubmit({
-      title;
-      description;
-      requirements;
-      budget;
-      deadline})
+      title, description, requirements, budget, deadline})
   };
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: string) => {
@@ -78,16 +74,13 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (field === 'title' && title[lang]) {
         content = title[lang];
-        sourceLanguage = lang;
-        break
+        sourceLanguage = lang, break
       } else if (field === 'description' && description[lang]) {
         content = description[lang];
-        sourceLanguage = lang;
-        break
+        sourceLanguage = lang, break
       } else if (field === 'requirements' && requirements[lang]) {
         content = requirements[lang];
-        sourceLanguage = lang;
-        break
+        sourceLanguage = lang, break
       }
     }
     
@@ -126,13 +119,12 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
         variant: "destructive"})
-    }
+    };
   },
   // Ensure all translations are available
   const ensureAllTranslations = async () => {
     const promises = [];
-    if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return;
-    if (!description.en && !description.es && !description.fr && !description.pt && !description.ar) return;
+    if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return, if (!description.en && !description.es && !description.fr && !description.pt && !description.ar) return;
     // Title translations
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
       promises.push(autoTranslate('title'))
@@ -164,7 +156,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       <div className="space-y-4">
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <label htmlFor="title" className="text-lg font-medium">
+            <label htmlFor="title" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.job_title')}
+            ">
               {t('jobs.job_title')}
             </label>
             <Button
@@ -211,7 +205,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <label htmlFor="description" className="text-lg font-medium">
+            <label htmlFor="description" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.job_description')}
+            ">
               {t('jobs.job_description')}
             </label>
             <Button
@@ -256,7 +252,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <label htmlFor="requirements" className="text-lg font-medium">
+            <label htmlFor="requirements" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.skills_required')}
+            ">
               {t('jobs.skills_required')}
             </label>
             <Button
@@ -301,7 +299,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label htmlFor="budget" className="text-lg font-medium">
+            <label htmlFor="budget" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.budget')}
+            ">
               {t('jobs.budget')}
             </label>
             <Input
@@ -313,7 +313,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
             />
           </div>
           <div className="space-y-1">
-            <label htmlFor="deadline" className="text-lg font-medium">
+            <label htmlFor="deadline" className="text-lg font-medium" htmlFor="input-
+              {t('jobs.deadline')}
+            ">
               {t('jobs.deadline')}
             </label>
             <Input
@@ -344,5 +346,5 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         </Button>
       </div>
     </form>
-  )
+  );
 }

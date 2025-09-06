@@ -24,7 +24,7 @@ const InteractiveNavigation = () => {
         </div>
       </div>
     </nav>
-  ),
+  ),;
 };
 
 export default InteractiveNavigation;

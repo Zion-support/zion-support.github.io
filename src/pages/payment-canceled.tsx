@@ -37,5 +37,5 @@ export default function PaymentCanceled() {
         </div>
         </div>
       </div>
-  )
+  );
 }

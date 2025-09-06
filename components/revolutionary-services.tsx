@@ -6,6 +6,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, Star, Calendar } from 'lucide-react';
 export default function RevolutionaryServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -63,15 +64,14 @@ export default function RevolutionaryServicesPage() {
       case 'roi':
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi;
-      default: return a.name.localeCompare(b.name)
+        return bRoi - aRoi, default: return a.name.localeCompare(b.name)
     }
   }),
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com';
   },
   const popularServices = getPopularRevolutionaryServices();
   // Enhanced service categories with better descriptions
@@ -472,7 +472,7 @@ export default function RevolutionaryServicesPage() {
             <motion.div 
               className={viewMode === 'grid' 
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                : "space-y-6"
+                : "space-y-6";
               }
               variants={containerVariants}
               initial="hidden"

@@ -15,6 +15,6 @@ const CybersecurityChat: NextPage = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  )
+  );
 },
 export default CybersecurityChat;

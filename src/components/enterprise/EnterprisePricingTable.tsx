@@ -3,6 +3,8 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Check, X } from 'lucide-react'
 import { Badge } from "@/components/ui/badge";
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -123,5 +125,5 @@ export function EnterprisePricingTable() {
         </div>
       </div>
     </section>
-  )
+  );
 }

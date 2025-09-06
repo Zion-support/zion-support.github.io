@@ -55,7 +55,7 @@ import React from 'react';
             linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px',
+          backgroundSize: '50px 50px',;
         }}
       />
     </div>

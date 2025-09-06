@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import StarRating from './StarRating';
+import { Star } from 'lucide-react';
 export type ReviewFormValues = {
   projectId: string,
   fromRole: 'client' | 'talent',
@@ -7,10 +8,7 @@ export type ReviewFormValues = {
   rating: number,
   text: string,
   categories?: {
-    communication?: number;
-    qualityOfWork?: number;
-    timeliness?: number;
-    wouldWorkWithAgain?: boolean
+    communication?: number, qualityOfWork?: number, timeliness?: number, wouldWorkWithAgain?: boolean
   };
   anonymous?: boolean
 };
@@ -39,14 +37,9 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           projectId: initial.projectId,
           fromRole: initial.fromRole,
           fromId: initial.fromId,
-          rating;
-          text;
-          anonymous;
-          categories: {
+          rating, text, anonymous, categories: {
             communication,
-            qualityOfWork;
-            timeliness;
-            wouldWorkWithAgain}})});
+            qualityOfWork, timeliness, wouldWorkWithAgain}})});
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to submit');
       setMessage('Review submitted! Pending admin approval.')
@@ -60,12 +53,12 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className="block text-sm font-medium mb-2">Overall Rating</label>
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
         <StarRating value={rating} onChange={setRating} />
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">Your Review</label>
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
@@ -77,7 +70,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 
       <div className="flex items-center gap-3">
         <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
-        <label htmlFor="anonymous">Submit anonymously</label>
+        <label htmlFor="anonymous" htmlFor="input-Submit anonymously">Submit anonymously</label>
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
@@ -121,6 +114,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 
       {message && <p className="text-sm">{message}</p>}
     </form>
-  )
+  );
 },
 export default ReviewForm;

@@ -8,15 +8,11 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { Star } from 'lucide-react';
 export default function MessagingInbox() {
 
   const { 
-    conversations;
-    activeConversation;
-    setActiveConversation;
-    markAsRead;
-    fetchConversations;
-    isLoading
+    conversations, activeConversation, setActiveConversation, markAsRead, fetchConversations, isLoading
   } = useMessaging();
   const isMobile = useIsMobile();
   const router = useRouter(), // Changed from navigate
@@ -95,5 +91,5 @@ export default function MessagingInbox() {
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
-  )
+  );
 }

@@ -45,5 +45,5 @@ export const DownloadSection: React.FC = () => {
         </div>
       </div>
     </section>
-  )
+  );
 },

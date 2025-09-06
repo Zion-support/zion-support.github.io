@@ -45,12 +45,9 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       setIsSubmitting(true);
       // First submit the application to the job applications table
       const applicationSuccess = await applyToJob(
-        job.id;
-        message;
-        selectedResume && selectedResume.type === 'ai_resume'
+        job.id, message, selectedResume && selectedResume.type === 'ai_resume'
           ? selectedResumeId || undefined
-          : undefined;
-        selectedResume && selectedResume.type === 'custom_upload'
+          : undefined, selectedResume && selectedResume.type === 'custom_upload'
           ? selectedResume.file
           : undefined
       );
@@ -59,8 +56,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       }
       
       // Format message with proposal link if provided
-      let fullMessage = message;
-      if (proposalLink) {
+      let fullMessage = message, if (proposalLink) {
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
       }
       
@@ -80,12 +76,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         } : null
       },
       // Create conversation with the job client
-      await createConversation(
-        job.client_id;
-        fullMessage;
-        'job';
-        job.id;
-        contextData
+      await createConversation(job.client_id, fullMessage;
+        'job', job.id, contextData
       );
       // Call onApplySuccess to update job status in the UI
       if (onApplySuccess) {
@@ -162,5 +154,5 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         </Button>
       </div>
     </>
-  )
+  );
 }

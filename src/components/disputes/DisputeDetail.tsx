@@ -14,6 +14,9 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 export function DisputeDetail() {
   const router = useRouter();
   const { disputeId } = router.query as { disputeId?: string };
@@ -32,8 +35,7 @@ export function DisputeDetail() {
   // Check if user is admin (placeholder - implement proper admin check)
   const isAdmin = user?.userType === "admin";
   useEffect(() => {
-    if (!disputeId) return;
-    const loadDisputeData = async () => {
+    if (!disputeId) return, const loadDisputeData = async () => {
       setIsLoading(true);
       try {
         const disputeData = await getDisputeById(disputeId);
@@ -65,8 +67,7 @@ export function DisputeDetail() {
     }
   },
   const handleResolveDispute = async () => {
-    if (!disputeId) return;
-    if (!resolution.summary) {
+    if (!disputeId) return, if (!resolution.summary) {
       toast.error("Please provide a resolution summary");
       return
     }
@@ -82,11 +83,10 @@ export function DisputeDetail() {
         resolved_at: new Date().toISOString()})
     } else {
       toast.error("Failed to resolve dispute")
-    }
+    };
   },
   const handleSendMessage = async () => {
-    if (!disputeId || !message.trim()) return;
-    setIsSending(true);
+    if (!disputeId || !message.trim()) return, setIsSending(true);
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin);
       if (success) {
@@ -118,7 +118,7 @@ export function DisputeDetail() {
           Back to Disputes
         </Button>
       </div>
-    )
+    );
   }
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
@@ -306,7 +306,7 @@ export function DisputeDetail() {
                                 <p className="whitespace-pre-wrap">{msg.message}</p>
                               </div>
                             </div>
-                          )
+                          );
                         })
                     )}
                   </div>
@@ -393,7 +393,7 @@ export function DisputeDetail() {
                           
                           <div className="grid grid-cols-2 gap-4">
                             <div>
-                              <label className="text-sm font-medium mb-1 block">Resolution Type</label>
+                              <label className="text-sm font-medium mb-1 block" htmlFor="input-Resolution Type">Resolution Type</label>
                               <select
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}

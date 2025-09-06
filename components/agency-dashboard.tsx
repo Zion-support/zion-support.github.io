@@ -24,8 +24,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   }
 
   function addPackage() {
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
-    const packages = [...(activeVendor.packages || []), {
+    if (!pkgTitle || !pkgPrice || !activeVendor) return, const packages = [...(activeVendor.packages || []), {
       id: `pkg_${Date.now()}`,
       title: pkgTitle,
       description: pkgDesc,
@@ -47,15 +46,15 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         <h2 className="text-lg font-medium">Profile</h2>
         <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm mb-1">Agency Name</label>
+            <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>
             <input name="name" defaultValue={activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
-            <label className="block text-sm mb-1">About</label>
+            <label className="block text-sm mb-1" htmlFor="input-About">About</label>
             <textarea name="about" defaultValue={activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
-            <label className="block text-sm mb-1">Services Offered</label>
+            <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>
             <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join() || ''} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
@@ -92,7 +91,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  )
+  );
 }
 
 function Pipeline({ vendorId }: { vendorId: string }) {
@@ -138,5 +137,5 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../utils/vendor-store'),
   const vendor = listVendors()[0] || null, // tie to auth later
-  return { props: { vendor } }
+  return { props: { vendor } };
 },

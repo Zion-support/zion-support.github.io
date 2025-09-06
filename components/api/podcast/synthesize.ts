@@ -17,15 +17,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const idx = episodes.findIndex((e) => e.id === episodeId);
   if (idx === -1) return res.status(404).json({ error: 'Episode not found' }),
   const episode = episodes[idx];
-  const text = episode.transcript as string;
-  const elevenKey = process.env.ELEVENLABS_API_KEY;
-  const playhtKey = process.env.PLAYHT_API_KEY;
-  const baseFilename = `${episode.id}-${Date.now()}`;
+  const text = episode.transcript as string, const elevenKey = process.env.ELEVENLABS_API_KEY, const playhtKey = process.env.PLAYHT_API_KEY, const baseFilename = `${episode.id}-${Date.now()}`;
   const mp3Path = path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
   const wavPath = path.join(PUBLIC_DIR, `${baseFilename}.wav`);
   const mp4Path = path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
-  let mp3Created = false;
-  try {
+  let mp3Created = false, try {
     if (elevenKey) {
       const voiceId = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM';
       const resp = await axios.post(
@@ -55,16 +51,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path))
     }
 
-    const publicBase = '/podcast/' + baseFilename;
-    episode.audio = {
+    const publicBase = '/podcast/' + baseFilename, episode.audio = {
       mp3Url: publicBase + '.mp3',
       wavUrl: publicBase + '.wav',
       mp4Url: publicBase + '.mp4'},
-    episodes[idx] = episode;
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    episodes[idx] = episode, fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
     return res.status(200).json({ episode })
   } catch (error: any) {
     console.error(error),
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })
-  }
+  };
 }

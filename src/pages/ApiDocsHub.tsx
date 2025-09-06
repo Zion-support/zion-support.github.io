@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react'
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { Zap, Star } from 'lucide-react';
 export function ApiDocsHub() {
   const sections = [
     {
@@ -78,7 +79,7 @@ export function ApiDocsHub() {
         </div>
       </div>
     </ApiDocsLayout>
-  )
+  );
 }
 
 export default ApiDocsHub,

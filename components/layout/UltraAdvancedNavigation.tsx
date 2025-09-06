@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { Zap, Star } from 'lucide-react';
 const UltraAdvancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,7 +11,7 @@ const UltraAdvancedNavigation: React.FC = () => {
       setIsScrolled(window.scrollY > 50)
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const navigationItems = [
     {
@@ -430,6 +431,6 @@ const UltraAdvancedNavigation: React.FC = () => {
         )}
       </AnimatePresence>
     </nav>
-  )
+  );
 },
 export default UltraAdvancedNavigation;

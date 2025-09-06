@@ -23,8 +23,7 @@ export function SignUpForm() {
   const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
   const [showVerificationMessage, setShowVerificationMessage] = useState(false);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value } = e.target, setFormData(prev => ({ ...prev, [name]: value }));
     setError("");
     setFieldErrors(prev => ({ ...prev, [name]: "" }))
   };
@@ -72,7 +71,7 @@ export function SignUpForm() {
         } else {
           // Only navigate if email verification is not required
           router.push("/mobile")
-        }
+        };
       } else {
         const { error } = await login(formData.email, formData.password);
         if (error) {
@@ -234,5 +233,5 @@ export function SignUpForm() {
         </Link>
       </p>
     </div>
-  )
+  );
 }

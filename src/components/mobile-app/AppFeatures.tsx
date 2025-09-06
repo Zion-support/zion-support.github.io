@@ -2,6 +2,8 @@
 import React from "react";
 import { Brain, Clock, Award, Zap } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />,
@@ -50,5 +52,5 @@ export const AppFeatures: React.FC = () => {
         </div>
       </div>
     </section>
-  )
+  );
 },

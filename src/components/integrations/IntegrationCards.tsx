@@ -5,23 +5,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface IntegrationCardProps {
   title: string,
   description: string,
   icon: React.ReactNode,
   status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void
+  href?: string, onConnect?: () => void
 }
 
 export function IntegrationCard({
-  title;
-  description;
-  icon;
-  status = "disconnected";
-  href;
-  onConnect}: IntegrationCardProps) {
+  title, description, icon, status = "disconnected", href, onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-2">
@@ -90,5 +86,5 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Teams clicked')}
       />
     </div>
-  )
+  );
 }

@@ -64,5 +64,5 @@ export default function TalentMarketplace() {
         </div>
       </main>
     </>
-  )
+  );
 }

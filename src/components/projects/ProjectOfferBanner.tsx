@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Calendar } from 'lucide-react';
 export function ProjectOfferBanner() {
   const router = useRouter();
   const { projects, isLoading } = useProjects();
@@ -23,7 +25,7 @@ export function ProjectOfferBanner() {
       const updated = new Set(prev);
       updated.add(projectId);
       return updated
-    })
+    });
   };
   const handleViewOffer = (projectId: string) => {
     router.push(`/project/${projectId}`)
@@ -71,5 +73,5 @@ export function ProjectOfferBanner() {
           </Card>
         ))}
     </div>
-  )
+  );
 }

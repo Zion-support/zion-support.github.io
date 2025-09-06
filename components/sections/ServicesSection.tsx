@@ -1,3 +1,4 @@
+import { Zap, Star } from 'lucide-react';
 const ServicesSection: React.FC = () => {
   const services = [
     {
@@ -188,6 +189,6 @@ const ServicesSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  )
+  );
 },
 export default ServicesSection;

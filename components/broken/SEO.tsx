@@ -1,20 +1,10 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string | string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean
+  title?: string, description?: string, keywords?: string | string[];
+  image?: string, url?: string, type?: 'website' | 'article' | 'product';
+  publishedTime?: string, modifiedTime?: string, author?: string, section?: string, tags?: string[];
+  structuredData?: any, noindex?: boolean, nofollow?: boolean
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -24,14 +14,9 @@ const SEO: React.FC<SEOProps> = ({
   image = '/images/zion-tech-group-og-image.jpg';
   url = 'https: //ziontechgroup.com',
   type = 'website';
-  publishedTime;
-  modifiedTime;
-  author = 'Zion Tech Group';
-  section;
-  tags = [];
-  structuredData;
-  noindex = false;
-  nofollow = false}) => {
+  publishedTime, modifiedTime, author = 'Zion Tech Group';
+  section, tags = [];
+  structuredData, noindex = false, nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https: //ziontechgroup.com${url}`,
   const fullImage = image.startsWith('http') ? image : `https: //ziontechgroup.com${image}`,
@@ -136,8 +121,7 @@ const SEO: React.FC<SEOProps> = ({
                 {
                   "@type": "Offer";
                   "itemOffered": {
-                    "@type": "Service";
-                    "name": "Space Technology Solutions"
+                    "@type": "Service", "name": "Space Technology Solutions"
                   }
                 }
               ]

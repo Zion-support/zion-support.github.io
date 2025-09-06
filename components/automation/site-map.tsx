@@ -38,5 +38,5 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
         </table>
       </div>
     </div>
-  )
+  );
 }

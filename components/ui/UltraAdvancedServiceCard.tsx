@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, Star } from 'lucide-react';
 interface UltraAdvancedServiceCardProps {
   service: {
     id: string,
@@ -54,7 +55,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     if (category.includes('Finance') || category.includes('Trading')) return <DollarSign className="w-4 h-4" />;
     if (category.includes('Security') || category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
     if (category.includes('Internet') || category.includes('Network')) return <Globe className="w-4 h-4" />;
-    return <Zap className="w-4 h-4" />
+    return <Zap className="w-4 h-4" />;
   };
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -98,7 +99,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       {/* Glow Effect */}
       <div 
         className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
-          isHovered ? 'opacity-100' : 'opacity-50'
+          isHovered ? 'opacity-100' : 'opacity-50';
         }`}
         style={{
           background: `linear-gradient(135deg, ${service.color})`;

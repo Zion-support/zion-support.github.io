@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from 'lucide-react'
 import { AppPlatform } from "./MetadataManager";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
@@ -31,8 +32,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     changes: ""
   }),
   const handleAddEntry = () => {
-    if (!newEntry.version || !newEntry.changes) return;
-    const entry: ChangelogEntry = {
+    if (!newEntry.version || !newEntry.changes) return, const entry: ChangelogEntry = {
       ...newEntry,
       id: Math.random().toString(36).substring(2, 9)
     };
@@ -47,8 +47,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setEntries(entries.filter(entry => entry.id !== id))
   },
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setNewEntry(prev => ({ ...prev, [name]: value }))
+    const { name, value } = e.target, setNewEntry(prev => ({ ...prev, [name]: value }))
   };
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
@@ -120,5 +119,5 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
         </div>
       </CardContent>
     </Card>
-  )
+  );
 },

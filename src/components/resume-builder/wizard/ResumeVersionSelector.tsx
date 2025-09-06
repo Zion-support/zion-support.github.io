@@ -6,6 +6,8 @@ import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '
 import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
 import { Resume } from '@/types/resume';
 import { useResume } from '@/hooks/useResume';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 interface ResumeVersionSelectorProps {
   currentResume: Resume,
   onResumeChange: (resumeId: string) => void
@@ -93,5 +95,5 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DialogContent>
       </Dialog>
     </div>
-  )
+  );
 }

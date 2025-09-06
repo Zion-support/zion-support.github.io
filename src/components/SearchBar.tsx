@@ -62,10 +62,10 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         } else {
           setSuggestions([])
         }
-        setHighlightedIndex(-1)
+        setHighlightedIndex(-1);
       })
       .catch(() => setSuggestions([]));
-    return () => controller.abort()
+    return () => controller.abort();
   }, [debounced]);
   useOnClickOutside(containerRef, () => {
     setFocused(false);
@@ -107,8 +107,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           }}
           onBlur={(e) => {
             // Only blur if not clicking on suggestions
-            const relatedTarget = e.relatedTarget as HTMLElement;
-            if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {
+            const relatedTarget = e.relatedTarget as HTMLElement, if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {
               setFocused(false);
               setHighlightedIndex(-1)
             }
@@ -140,12 +139,10 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               case 'ArrowDown':
                 e.preventDefault();
                 setHighlightedIndex((prev) => (prev + 1) % suggestions.length);
-                break;
-              case 'ArrowUp':
+                break, case 'ArrowUp':
                 e.preventDefault();
                 setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length);
-                break;
-              case 'Enter':
+                break, case 'Enter':
                 if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
                   e.preventDefault();
                   handleSelect(suggestions[highlightedIndex])
@@ -158,14 +155,12 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                   setFocused(false);
                   inputRef.current?.blur()
                 }
-                break;
-              case 'Escape':
+                break, case 'Escape':
                 e.preventDefault();
                 setFocused(false);
                 setHighlightedIndex(-1);
                 inputRef.current?.blur();
-                break;
-              default: break
+                break, default: break
             }
           }}
         />

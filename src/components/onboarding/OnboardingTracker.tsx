@@ -14,8 +14,7 @@ export interface OnboardingStep {
 
 interface OnboardingTrackerProps {
   steps: OnboardingStep[],
-  title?: string;
-  className?: string
+  title?: string, className?: string
 }
 
 export function OnboardingTracker({ 
@@ -23,8 +22,7 @@ export function OnboardingTracker({
   title = "Complete Your Profile",
   className 
 }: OnboardingTrackerProps) {
-  const completedSteps = steps.filter(step => step.completed).length;
-  const progress = Math.round((completedSteps / steps.length) * 100);
+  const completedSteps = steps.filter(step => step.completed).length, const progress = Math.round((completedSteps / steps.length) * 100);
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">
@@ -70,5 +68,5 @@ export function OnboardingTracker({
         ))}
       </div>
     </div>
-  )
+  );
 }

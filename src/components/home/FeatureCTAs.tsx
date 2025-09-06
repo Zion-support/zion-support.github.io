@@ -7,9 +7,11 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
 import { cn } from "@/lib/utils";
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Calendar } from 'lucide-react';
 interface FeatureCTAsProps {
-  className?: string;
-  style?: React.CSSProperties
+  className?: string, style?: React.CSSProperties
 }
 
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
@@ -97,11 +99,9 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       badge: 'premium'
     }
   ],
-  return (
-    <section
+  return(<section
       className={cn(
-        "py-16 bg-gradient-to-b from-background to-background/90";
-        className
+        "py-16 bg-gradient-to-b from-background to-background/90", className
       )}
       style={style}
     >

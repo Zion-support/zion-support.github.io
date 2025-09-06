@@ -24,14 +24,12 @@ export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const { user } = useAuth();
-  const isLoggedIn = !!user;
-  const isMobile = useIsMobile();
+  const isLoggedIn = !!user, const isMobile = useIsMobile();
   const { t } = useTranslation();
   const router = useRouter();
   const [query, setQuery] = useState('');
   const suggestions = generateSearchSuggestions();
-  let unreadCount = 0;
-  try {
+  let unreadCount = 0, try {
     const messaging = useMessaging();
     unreadCount = messaging.unreadCount
   } catch {
@@ -195,5 +193,5 @@ export function PrimaryNav() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  )
+  );
 }

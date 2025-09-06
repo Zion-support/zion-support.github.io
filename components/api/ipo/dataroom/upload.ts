@@ -10,8 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' }),
     const section = String(fields.section || 'General');
-    const file = files.file as formidable.File | undefined;
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' }),
+    const file = files.file as formidable.File | undefined, if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' }),
     const targetDir = resolveDataPath(path.join('dataroom', section));
     if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true }),
     const targetPath = path.join(targetDir, file.originalFilename || path.basename(file.filepath));

@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { Star } from 'lucide-react';
 export default function AISolutionsPage() {
   const aiSolutions = [
     {
@@ -230,5 +231,5 @@ export default function AISolutionsPage() {
         </main>
       </div>
     </>
-  )
+  );
 }

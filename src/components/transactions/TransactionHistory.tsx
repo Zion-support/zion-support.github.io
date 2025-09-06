@@ -11,6 +11,8 @@ import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertC
 import { formatDistanceToNow } from "date-fns";
 import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency } from '@/hooks/useCurrency';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 interface Transaction {
   id: string,
   user_id: string,
@@ -21,10 +23,7 @@ interface Transaction {
   status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
   in_escrow: boolean,
   created_at: string,
-  completed_at?: string;
-  refunded_at?: string;
-  cancelled_at?: string;
-  provider?: {
+  completed_at?: string, refunded_at?: string, cancelled_at?: string, provider?: {
     display_name?: string
   };
   service?: {
@@ -42,15 +41,13 @@ export function TransactionHistory() {
     safeStorage.setItem('transaction_filter', filter)
   }, [filter]);
   const { data: transactions, isLoading, error, refetch } = useQuery({
-    queryKey: ['transactions', user?.id, filter];
-    queryFn: async () => {
+    queryKey: ['transactions', user?.id, filter], queryFn: async () => {
       if (!user) return [],
       // Build the query based on filters
       let query = supabase
         .from('transactions')
         .select(`
-          *;
-          provider: profiles!provider_id(display_name),
+          *, provider: profiles!provider_id(display_name),
           service:services(title)
         `)
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
@@ -63,9 +60,7 @@ export function TransactionHistory() {
       }
       
       query = query.order('created_at', { ascending: false }),
-      const { data, error } = await query;
-      if (error) throw error;
-      return data as Transaction[]
+      const { data, error } = await query, if (error) throw error, return data as Transaction[];
     };
     enabled: !!user}),
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
@@ -73,8 +68,7 @@ export function TransactionHistory() {
       const { data, error } = await supabase.functions.invoke('manage-transaction', {
         body: { transactionId, action }
       });
-      if (error) throw error;
-      toast({
+      if (error) throw error, toast({
         title: "Success",
         description: (data as any)?.message || "Transaction updated successfully"}),
       refetch()
@@ -139,7 +133,7 @@ export function TransactionHistory() {
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown
           </Badge>
         )
-    }
+    };
   },
   const { formatPrice } = useCurrency();
   const formatCurrency = (amount: number) => {
@@ -158,7 +152,7 @@ export function TransactionHistory() {
           </Button>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -227,13 +221,9 @@ export function TransactionHistory() {
         ) : transactions && transactions.length > 0 ? (
           <div className="space-y-4">
             {transactions.map((transaction) => {
-              const isClient = user?.id === transaction.user_id;
-              const isPending =
+              const isClient = user?.id === transaction.user_id, const isPending =
                 transaction.status === 'pending' || transaction.status === 'in_escrow';
-              const isInEscrow = transaction.in_escrow;
-              const canRelease = !isClient && isPending && isInEscrow;
-              const canCancel = isClient && isPending;
-              const canRefund = isClient && transaction.status === 'released';
+              const isInEscrow = transaction.in_escrow, const canRelease = !isClient && isPending && isInEscrow, const canCancel = isClient && isPending, const canRefund = isClient && transaction.status === 'released';
               const counterpartyName = isClient 
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client';
@@ -342,5 +332,5 @@ export function TransactionHistory() {
         )}
       </div>
     </div>
-  )
+  );
 }

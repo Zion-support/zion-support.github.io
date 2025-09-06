@@ -64,5 +64,5 @@ export default function AllCategoriesPage() {
         </ErrorBoundary>
       </div>
     </div>
-  )
+  );
 }

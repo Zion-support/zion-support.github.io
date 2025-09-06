@@ -14,9 +14,7 @@ export function EnhancedNewsletterForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     const now = Date.now();
-    if (now - lastSubmit.current < 1000) return;
-    lastSubmit.current = now;
-    const trimmed = email.trim();
+    if (now - lastSubmit.current < 1000) return, lastSubmit.current = now, const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error("Invalid email");
       return
@@ -69,7 +67,9 @@ export function EnhancedNewsletterForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
-          <label htmlFor="enhanced-newsletter-email" className="sr-only">
+          <label htmlFor="enhanced-newsletter-email" className="sr-only" htmlFor="input-
+            Email address for newsletter subscription
+          ">
             Email address for newsletter subscription
           </label>
           <Input
@@ -104,5 +104,5 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-  )
+  );
 }

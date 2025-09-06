@@ -39,5 +39,5 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
         <option value="false">Paid</option>
       </select>
     </div>
-  )
+  );
 }

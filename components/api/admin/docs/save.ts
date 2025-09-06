@@ -14,14 +14,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const token = req.headers['x-admin-token'] as string | undefined,
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' })
+    return res.status(403).json({ error: 'Forbidden' });
   }
 
   try {
     ensureDir(DOCS_DIR),
     ensureDir(VERSIONS_DIR);
-    const body = req.body;
-    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+    const body = req.body, const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
     const ts = new Date()
       .toISOString()
       .replace(/[-:T.Z]/g, '')

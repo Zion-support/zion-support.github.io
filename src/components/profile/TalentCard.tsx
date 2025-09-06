@@ -3,6 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import Link from "next/link";
 import { TalentProfile } from "@/types/talent";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 
 export interface TalentCardProps {
   talent: TalentProfile,
@@ -15,11 +17,7 @@ export interface TalentCardProps {
 
 export function TalentCard({
   talent,
-  onViewProfile;
-  onRequestHire;
-  isSaved;
-  onToggleSave;
-  isAuthenticated
+  onViewProfile, onRequestHire, isSaved, onToggleSave, isAuthenticated
 }: TalentCardProps) {
   const [avatarError, setAvatarError] = useState(false);
   const handleViewProfile = () => {
@@ -159,5 +157,5 @@ export function TalentCard({
         </div>
       </div>
     </Card>
-  )
+  );
 }

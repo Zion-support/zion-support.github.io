@@ -6,6 +6,7 @@ import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026'
 import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices } from '../data/innovative-2041-it-services';
 import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
+import { Zap, Star } from 'lucide-react';
 const Homepage2041: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const handleSearch = (e: React.FormEvent) => {

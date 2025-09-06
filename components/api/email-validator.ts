@@ -25,7 +25,7 @@ export default async function handler(
   try {
     const { email } = req.body,
     if (!email || typeof email !== 'string') {
-      return res.status(400).json({ error: 'Email is required' })
+      return res.status(400).json({ error: 'Email is required' });
     }
 
     // Basic email format validation
@@ -50,12 +50,7 @@ export default async function handler(
     ];
     const isFreeProvider = freeProviders.some(provider => domain === provider);
     // Calculate score (0-100)
-    let score = 100;
-    if (!hasValidFormat) score -= 50;
-    if (!hasValidDomain) score -= 20;
-    if (isDisposable) score -= 30;
-    if (isRoleBased) score -= 15;
-    if (isFreeProvider) score -= 10;
+    let score = 100, if (!hasValidFormat) score -= 50, if (!hasValidDomain) score -= 20, if (isDisposable) score -= 30, if (isRoleBased) score -= 15, if (isFreeProvider) score -= 10;
     // Generate suggestions
     const suggestions: string[] = [],
     if (!hasValidFormat) {
@@ -75,14 +70,10 @@ export default async function handler(
       email,
       isValid: score >= 70,
       score: Math.max(0, score);
-      suggestions;
-      details: {
+      suggestions, details: {
         hasValidFormat,
-        hasValidDomain;
-        hasValidMX: true, // Simplified for demo
-        isDisposable;
-        isRoleBased;
-        isFreeProvider}
+        hasValidDomain, hasValidMX: true, // Simplified for demo
+        isDisposable, isRoleBased, isFreeProvider}
     };
     res.status(200).json(result)
   } catch (error) {

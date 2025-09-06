@@ -13,6 +13,7 @@ import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
 import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+import { Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -129,8 +130,7 @@ export default function InnovativeServicesShowcase2025() {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
-        return a.pricing.starter.price - b.pricing.starter.price;
-      case 'category':
+        return a.pricing.starter.price - b.pricing.starter.price, case 'category':
         return a.category.localeCompare(b.category);
       default: return 0
     }
@@ -424,5 +424,5 @@ export default function InnovativeServicesShowcase2025() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

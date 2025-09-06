@@ -30,5 +30,5 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         allowFullScreen
       />
     </div>
-  )
+  );
 }

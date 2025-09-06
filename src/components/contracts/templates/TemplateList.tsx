@@ -10,6 +10,8 @@ import { useAuth } from "@/hooks/useAuth";
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
 import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -19,9 +21,7 @@ interface TemplateListProps {
 
 export function TemplateList({
   templates,
-  isLoading;
-  onSelect;
-  onEdit
+  isLoading, onSelect, onEdit
 }: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
@@ -42,7 +42,7 @@ export function TemplateList({
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
       return
     }
-    await setDefaultTemplate.mutateAsync(templateId)
+    await setDefaultTemplate.mutateAsync(templateId);
   };
   if (isLoading) {
     return (
@@ -157,5 +157,5 @@ export function TemplateList({
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  )
+  );
 }

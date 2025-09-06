@@ -44,7 +44,7 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h2>
             <p className="text-gray-600 mb-6">
-              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos, re sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <button
               onClick={this.handleRetry}
@@ -65,7 +65,7 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      ),
+      ),;
     }
 
     return this.props.children;

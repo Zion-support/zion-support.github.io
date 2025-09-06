@@ -26,8 +26,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   // Helper function to format dates as strings for form inputs
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
-    if (typeof dateValue === 'string') return dateValue;
-    return format(dateValue, 'yyyy-MM-dd')
+    if (typeof dateValue === 'string') return dateValue, return format(dateValue, 'yyyy-MM-dd');
   };
   const form = useForm<CertificationFormValues>({
     resolver: zodResolver(certificationSchema),
@@ -41,8 +40,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
       setError(null),
-      let success;
-      const certData: Certification = {
+      let success, const certData: Certification = {
         name: data.name,
         issuing_organization: data.issuing_organization,
         issue_date: data.issue_date || undefined,
@@ -146,5 +144,5 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         </Form>
       </div>
     </div>
-  )
+  );
 }

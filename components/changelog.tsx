@@ -21,7 +21,7 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
         </div>
       )}
     </main>
-  )
+  );
 }
 
 export async function getStaticProps() {
@@ -31,5 +31,5 @@ export async function getStaticProps() {
     return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
-  }
+  };
 }

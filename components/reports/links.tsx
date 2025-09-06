@@ -5,5 +5,5 @@ export default function LinksReportRedirect() {
       window.location.replace('/reports/links/index.html')
     }
   }, []);
-  return null
+  return null;
 }

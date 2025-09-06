@@ -6,14 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
+import { Star } from 'lucide-react';
 interface ReviewFormValues {
-  rating?: number;
-  review_text?: string;
-  communication_rating?: number;
-  quality_rating?: number;
-  timeliness_rating?: number;
-  would_work_again?: boolean;
-  is_anonymous?: boolean
+  rating?: number, review_text?: string, communication_rating?: number, quality_rating?: number, timeliness_rating?: number, would_work_again?: boolean, is_anonymous?: boolean
 }
 
 interface ReviewFormProps {
@@ -21,17 +16,12 @@ interface ReviewFormProps {
   revieweeId: string,
   revieweeName: string,
   onSubmit: (data: any) => Promise<boolean>,
-  defaultValues?: Review;
-  isSubmitting: boolean
+  defaultValues?: Review, isSubmitting: boolean
 }
 
 export function ReviewForm({
   projectId,
-  revieweeId;
-  revieweeName;
-  onSubmit;
-  defaultValues;
-  isSubmitting}: ReviewFormProps) {
+  revieweeId, revieweeName, onSubmit, defaultValues, isSubmitting}: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0);
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
@@ -295,5 +285,5 @@ export function ReviewForm({
         </Button>
       </form>
     </Form>
-  )
+  );
 }

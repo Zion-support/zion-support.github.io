@@ -4,33 +4,19 @@ import { Button } from "@/components/ui/button";
 import { StarIcon } from 'lucide-react'
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 
 interface ListingScoreCardProps {
   title: string,
   description: string,
-  image?: string;
-  category: string,
+  image?: string, category: string,
   tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  className?: string
+  author?: string, authorImage?: string, aiScore?: number, rating?: number, reviewCount?: number, className?: string
 }
 
 export function ListingScoreCard({ 
-  title;
-  description;
-  image;
-  category;
-  tags;
-  author;
-  authorImage;
-  aiScore;
-  rating = 0;
-  reviewCount = 0;
-  className
+  title, description, image, category, tags, author, authorImage, aiScore, rating = 0, reviewCount = 0, className
 }: ListingScoreCardProps) {
   const [mainImageError, setMainImageError] = useState(false);
   const [authorImageError, setAuthorImageError] = useState(false);
@@ -82,9 +68,7 @@ export function ListingScoreCard({
               {[1, 2, 3, 4, 5].map((star) => (
                 <StarIcon 
                   key={star}
-                  className={cn(
-                    "h-4 w-4";
-                    star <= Math.round(rating) 
+                  className={cn("h-4 w-4", star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
                   )}
